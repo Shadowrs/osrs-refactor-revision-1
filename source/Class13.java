@@ -97,7 +97,7 @@ public final class Class13 implements Runnable {
 			}
 	}
 
-	public void method52() {
+	public void destory() {
 		if (!aBool77) {
 			synchronized (this) {
 				aBool77 = true;
@@ -160,7 +160,7 @@ public final class Class13 implements Runnable {
 
 	@Override
 	public void finalize() {
-		method52();
+		destory();
 	}
 
 	public int method55() throws IOException {

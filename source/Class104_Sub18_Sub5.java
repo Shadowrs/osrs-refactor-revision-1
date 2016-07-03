@@ -16,7 +16,7 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 	public static Class56 aClass56_1305 = new Class56(64);
 	public static Class56 aClass56_1318 = new Class56(30);
 
-	void method730(final Class104_Sub21 var1) {
+	void method730(final RSBuf var1) {
 		while (true) {
 			final int var2 = var1.method570();
 			if (var2 == 0)
@@ -26,7 +26,7 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 		}
 	}
 
-	void method731(final Class104_Sub21 var1, final int var2) {
+	void method731(final RSBuf var1, final int var2) {
 		if (var2 == 1)
 			anInt1309 = var1.method571();
 		else if (var2 == 2)

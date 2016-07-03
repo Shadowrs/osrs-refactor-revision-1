@@ -3,13 +3,13 @@ public class Class104_Sub18_Sub14 extends Class104_Sub18 {
 	public static Class56 aClass56_1462 = new Class56(64);
 	public int anInt1464 = 0;
 
-	void method783(final Class104_Sub21 var1, final int var2) {
+	void method783(final RSBuf var1, final int var2) {
 		if (var2 == 2)
 			anInt1464 = var1.method571();
 
 	}
 
-	public void method784(final Class104_Sub21 var1) {
+	public void method784(final RSBuf var1) {
 		while (true) {
 			final int var2 = var1.method570();
 			if (var2 == 0)

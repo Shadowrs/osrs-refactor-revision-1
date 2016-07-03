@@ -18,14 +18,14 @@ public class Class74 {
 		anIntArray588[1] = '\uffff';
 	}
 
-	final void method337(final Class104_Sub21 var1) {
+	final void method337(final RSBuf var1) {
 		anInt586 = var1.method570();
 		anInt596 = var1.method574();
 		anInt590 = var1.method574();
 		method338(var1);
 	}
 
-	final void method338(final Class104_Sub21 var1) {
+	final void method338(final RSBuf var1) {
 		anInt589 = var1.method570();
 		anIntArray587 = new int[anInt589];
 		anIntArray588 = new int[anInt589];

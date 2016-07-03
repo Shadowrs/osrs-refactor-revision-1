@@ -17,7 +17,7 @@ public class Class102_Sub1 extends Class102 {
 		Class100.aBool799 = true;
 		client.aBool1945 = true;
 		Class105.aClass59_825 = new Class59();
-		client.aClass104_Sub21_Sub1_1825.anInt1172 = 0;
+		client.secureBuf.anInt1172 = 0;
 		client.aClass104_Sub21_Sub1_1963.anInt1172 = 0;
 		client.anInt1790 = -1;
 		client.anInt1837 = -1;

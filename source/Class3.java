@@ -17,7 +17,7 @@ public abstract class Class3 {
 			else {
 				final byte[] var0 = Class76.aClass70_617.method324();
 				if (null != var0) {
-					final Class104_Sub21 var1 = new Class104_Sub21(var0);
+					final RSBuf var1 = new RSBuf(var0);
 					Class66.anInt542 = var1.method571();
 					Class96.aClass57Array758 = new Class57[Class66.anInt542];
 

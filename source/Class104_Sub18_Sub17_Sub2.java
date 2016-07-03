@@ -172,7 +172,7 @@ public abstract class Class104_Sub18_Sub17_Sub2 extends Class104_Sub18_Sub17 {
 		return var4;
 	}
 
-	public void method863(final String var1, final int var2, final int var3, final int var4, final int var5) {
+	public void drawstr(final String var1, final int var2, final int var3, final int var4, final int var5) {
 		if (var1 != null) {
 			method878(var4, var5);
 			method886(var1, var2, var3);

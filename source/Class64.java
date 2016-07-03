@@ -121,7 +121,7 @@ public class Class64 implements Runnable {
 			var1 = new Class104_Sub18_Sub2();
 			var1.anInt1228 = var0;
 			if (null != var2)
-				var1.method674(new Class104_Sub21(var2));
+				var1.method674(new RSBuf(var2));
 
 			var1.method673();
 			Class104_Sub18_Sub2.aClass56_1231.method238(var1, var0);

@@ -153,13 +153,13 @@ public class Class84 {
 	public static void method379(final boolean var0) {
 		if (null != Class66.aClass13_547)
 			try {
-				final Class104_Sub21 var1 = new Class104_Sub21(4);
-				var1.method561(var0 ? 2 : 3);
+				final RSBuf var1 = new RSBuf(4);
+				var1.writebyte(var0 ? 2 : 3);
 				var1.method587(0);
 				Class66.aClass13_547.method54(var1.aByteArray1174, 0, 4);
 			} catch (final IOException var4) {
 				try {
-					Class66.aClass13_547.method52();
+					Class66.aClass13_547.destory();
 				} catch (final Exception var3) {
 					;
 				}
@@ -191,19 +191,19 @@ public class Class84 {
 							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var9, var10, true, 0, 0, 0,
 							0, 0, 1);
 					if (var11) {
-						client.aClass104_Sub21_Sub1_1825.method561(var2);
-						client.aClass104_Sub21_Sub1_1825.method561(var3);
-						client.aClass104_Sub21_Sub1_1825.method603(client.anInt1866);
-						client.aClass104_Sub21_Sub1_1825.method561(57);
-						client.aClass104_Sub21_Sub1_1825.method561(client.anInt1862);
-						client.aClass104_Sub21_Sub1_1825.method561(client.anInt1921);
-						client.aClass104_Sub21_Sub1_1825.method561(89);
-						client.aClass104_Sub21_Sub1_1825
-								.method603(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695);
-						client.aClass104_Sub21_Sub1_1825
-								.method603(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694);
-						client.aClass104_Sub21_Sub1_1825.method561(client.anInt1850);
-						client.aClass104_Sub21_Sub1_1825.method561(63);
+						client.secureBuf.writebyte(var2);
+						client.secureBuf.writebyte(var3);
+						client.secureBuf.writeShort(client.anInt1866);
+						client.secureBuf.writebyte(57);
+						client.secureBuf.writebyte(client.anInt1862);
+						client.secureBuf.writebyte(client.anInt1921);
+						client.secureBuf.writebyte(89);
+						client.secureBuf
+								.writeShort(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695);
+						client.secureBuf
+								.writeShort(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694);
+						client.secureBuf.writebyte(client.anInt1850);
+						client.secureBuf.writebyte(63);
 					}
 				}
 			}
@@ -306,7 +306,7 @@ public class Class84 {
 			final byte[] var2 = Class104_Sub18_Sub9.aClass61_1391.method259(3, var0);
 			var1 = new Class104_Sub18_Sub9();
 			if (var2 != null)
-				var1.method761(new Class104_Sub21(var2));
+				var1.method761(new RSBuf(var2));
 
 			Class104_Sub18_Sub9.aClass56_1393.method238(var1, var0);
 			return var1;

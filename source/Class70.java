@@ -39,7 +39,7 @@ public class Class70 {
 
 					anInt570 += aDataInputStream568.read(aByteArray573, anInt570, var1);
 					if (anInt570 == 4) {
-						final int var2 = (new Class104_Sub21(aByteArray573)).method574();
+						final int var2 = (new RSBuf(aByteArray573)).method574();
 						aByteArray566 = new byte[var2];
 						anInt567 = 2;
 					}
@@ -74,7 +74,7 @@ public class Class70 {
 		String dir = null;
 		String var5 = null;
 		boolean var6 = false;
-		Class104_Sub21 var8;
+		RSBuf var8;
 		int var12;
 		File var27;
 		if (Class24.settings.exists()) {
@@ -82,7 +82,7 @@ public class Class70 {
 				final Class94 var7 = new Class94(Class24.settings, "rw", 10000L);
 
 				int var9;
-				for (var8 = new Class104_Sub21(
+				for (var8 = new RSBuf(
 						(int) var7.method419()); var8.anInt1172 < var8.aByteArray1174.length; var8.anInt1172 += var9) {
 					var9 = var7.method420(var8.aByteArray1174, var8.anInt1172,
 							var8.aByteArray1174.length - var8.anInt1172);
@@ -206,9 +206,9 @@ public class Class70 {
 
 			try {
 				final Class94 var33 = new Class94(Class24.settings, "rw", 10000L);
-				final Class104_Sub21 var31 = new Class104_Sub21(500);
-				var31.method561(3);
-				var31.method561(null != var8 ? 1 : 0);
+				final RSBuf var31 = new RSBuf(500);
+				var31.writebyte(3);
+				var31.writebyte(null != var8 ? 1 : 0);
 				var31.method564(var26.getPath());
 				var33.method417(var31.aByteArray1174, 0, var31.anInt1172);
 				var33.method418();
@@ -232,7 +232,7 @@ public class Class70 {
 			final byte[] var2 = Class106.aClass61_829.method259(12, var0);
 			var1 = new Class104_Sub18_Sub3();
 			if (var2 != null)
-				var1.method681(new Class104_Sub21(var2));
+				var1.method681(new RSBuf(var2));
 
 			var1.method683();
 			Class104_Sub18_Sub3.aClass56_1260.method238(var1, var0);

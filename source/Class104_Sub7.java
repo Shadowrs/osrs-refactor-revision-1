@@ -26,9 +26,9 @@ public class Class104_Sub7 extends Class104 {
 							Class22.aClass104_Sub12ArrayArray228[var0][var2] = new Class104_Sub12();
 							Class22.aClass104_Sub12ArrayArray228[var0][var2].anInt978 = var2 + (var0 << 16);
 							if (var3[0] == -1)
-								Class22.aClass104_Sub12ArrayArray228[var0][var2].method528(new Class104_Sub21(var3));
+								Class22.aClass104_Sub12ArrayArray228[var0][var2].method528(new RSBuf(var3));
 							else
-								Class22.aClass104_Sub12ArrayArray228[var0][var2].method527(new Class104_Sub21(var3));
+								Class22.aClass104_Sub12ArrayArray228[var0][var2].method527(new RSBuf(var3));
 						}
 					}
 

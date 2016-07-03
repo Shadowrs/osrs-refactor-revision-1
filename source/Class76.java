@@ -24,7 +24,7 @@ public final class Class76 {
 	static int anInt599 = (int) (Math.random() * 17.0D) - 8;
 	static int anInt616 = (int) (Math.random() * 33.0D) - 16;
 
-	public static void method343(final Class104_Sub21 var0) {
+	public static void method343(final RSBuf var0) {
 		final byte[] var1 = new byte[24];
 
 		try {
@@ -42,7 +42,7 @@ public final class Class76 {
 				var1[var4] = -1;
 		}
 
-		var0.method615(var1, 0, 24);
+		var0.appendBytes(var1, 0, 24);
 	}
 
 	static final void method344() {

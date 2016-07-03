@@ -10,7 +10,7 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 	public String[] aStringArray1411;
 	public int[] anIntArray1410;
 
-	void method765(final Class104_Sub21 var1) {
+	void method765(final RSBuf var1) {
 		while (true) {
 			final int var2 = var1.method570();
 			if (var2 == 0)
@@ -20,7 +20,7 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 		}
 	}
 
-	void method766(final Class104_Sub21 var1, final int var2) {
+	void method766(final RSBuf var1, final int var2) {
 		if (var2 == 1)
 			anInt1404 = var1.method570();
 		else if (var2 == 2)

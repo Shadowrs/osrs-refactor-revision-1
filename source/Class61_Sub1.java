@@ -90,7 +90,7 @@ public class Class61_Sub1 extends Class61 {
 				aCRC32_889.reset();
 				aCRC32_889.update(var3, 0, var3.length);
 				var5 = (int) aCRC32_889.getValue();
-				final Class104_Sub21 var6 = new Class104_Sub21(Class57.method240(var3));
+				final RSBuf var6 = new RSBuf(Class57.method240(var3));
 				final int var7 = var6.method570();
 				if ((var7 != 5) && (var7 != 6))
 					throw new RuntimeException("");
@@ -255,9 +255,9 @@ public class Class61_Sub1 extends Class61 {
 	}
 
 	static final void method494() {
-		if (Class20.aClass13_205 != null) {
-			Class20.aClass13_205.method52();
-			Class20.aClass13_205 = null;
+		if (Class20.stream != null) {
+			Class20.stream.destory();
+			Class20.stream = null;
 		}
 
 		Class33.method158();

@@ -2,7 +2,7 @@ import java.util.zip.CRC32;
 
 public class Class87 {
 	static boolean aBool689;
-	static Class104_Sub21 aClass104_Sub21_691;
+	static RSBuf aClass104_Sub21_691;
 	static int anInt699;
 	static int anInt686 = 0;
 	static Class58 aClass58_681 = new Class58(4096);
@@ -14,7 +14,7 @@ public class Class87 {
 	public static int anInt687 = 0;
 	static Class58 aClass58_694 = new Class58(4096);
 	public static int anInt692 = 0;
-	static Class104_Sub21 aClass104_Sub21_690 = new Class104_Sub21(8);
+	static RSBuf aClass104_Sub21_690 = new RSBuf(8);
 	static int anInt696 = 0;
 	static CRC32 aCRC32_680 = new CRC32();
 	static Class61_Sub1[] aClass61_Sub1Array695 = new Class61_Sub1[256];

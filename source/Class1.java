@@ -14,7 +14,7 @@ public abstract class Class1 {
 				if (((var9 + var2) > 0) && ((var9 + var2) < 103) && ((var10 + var3) > 0) && ((var10 + var3) < 103))
 					var8[var1].anIntArrayArray553[var9 + var2][var10 + var3] &= -16777217;
 
-		final Class104_Sub21 var11 = new Class104_Sub21(var0);
+		final RSBuf var11 = new RSBuf(var0);
 
 		for (var10 = 0; var10 < 4; ++var10)
 			for (int var12 = 0; var12 < 64; ++var12)
@@ -81,7 +81,7 @@ public abstract class Class1 {
 					if (((var1 + var7) > 0) && ((var7 + var1) < 103) && ((var8 + var2) > 0) && ((var8 + var2) < 103))
 						var5[var6].anIntArrayArray553[var1 + var7][var2 + var8] &= -16777217;
 
-		final Class104_Sub21 var9 = new Class104_Sub21(var0);
+		final RSBuf var9 = new RSBuf(var0);
 
 		for (var7 = 0; var7 < 4; ++var7)
 			for (var8 = 0; var8 < 64; ++var8)
@@ -91,7 +91,7 @@ public abstract class Class1 {
 	}
 
 	static final void method17() {
-		client.aClass104_Sub21_Sub1_1825.method623(185);
-		client.aClass104_Sub21_Sub1_1825.method561(0);
+		client.secureBuf.method623(185);
+		client.secureBuf.writebyte(0);
 	}
 }

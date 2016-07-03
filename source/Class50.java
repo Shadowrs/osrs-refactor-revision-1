@@ -10,7 +10,7 @@ public class Class50 {
 			'\u2018', '\u2019', '\u201c', '\u201d', '\u2022', '\u2013', '\u2014', '\u02dc', '\u2122', '\u0161',
 			'\u203a', '\u0153', '\u0000', '\u017e', '\u0178' };
 
-	public static String method224(final Class104_Sub21 var0) {
+	public static String method224(final RSBuf var0) {
 		String var4;
 		try {
 			int var1 = var0.method599();

@@ -82,20 +82,20 @@ public class Class85 {
 			method383((int[]) null, anIntArray662, var1, -1);
 	}
 
-	public void method387(final Class104_Sub21 var1) {
-		var1.method561(aBool661 ? 1 : 0);
+	public void method387(final RSBuf var1) {
+		var1.writebyte(aBool661 ? 1 : 0);
 
 		int var2;
 		for (var2 = 0; var2 < 7; ++var2) {
 			final int var3 = anIntArray667[anIntArray669[var2]];
 			if (var3 == 0)
-				var1.method561(-1);
+				var1.writebyte(-1);
 			else
-				var1.method561(var3 - 256);
+				var1.writebyte(var3 - 256);
 		}
 
 		for (var2 = 0; var2 < 5; ++var2)
-			var1.method561(anIntArray662[var2]);
+			var1.writebyte(anIntArray662[var2]);
 
 	}
 

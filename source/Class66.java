@@ -666,7 +666,7 @@ public class Class66 {
 													/ 150;
 											Class104_Sub18_Sub17.method792((client.anInt1999 + var12) - 50, var13,
 													var12 + client.anInt1999 + 50, var13 + var20);
-											Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.method863(var39,
+											Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.drawstr(var39,
 													(50 + client.anInt1999 + var12) - var71, var13 + client.anInt1894,
 													var40, 0);
 											Class104_Sub18_Sub17.method800(var12, var13, var12 + var19, var20 + var13);
@@ -1512,7 +1512,7 @@ public class Class66 {
 															var27 = (var24 * (115 + var10.anInt1038)) + var12;
 															var28 = ((var10.anInt1032 + 12) * var23) + var13;
 															if (var10.anInt1059 == 0)
-																var79.method863(var56, var27, var28, var10.anInt1017,
+																var79.drawstr(var56, var27, var28, var10.anInt1017,
 																		var10.aBool1030 ? 0 : -1);
 															else if (var10.anInt1059 == 1)
 																var79.method882(var56, (var10.anInt987 / 2) + var27,
@@ -1580,7 +1580,7 @@ public class Class66 {
 														var51 = "";
 													}
 
-													var75.method863(var54, var26 + 3, var28, 0, -1);
+													var75.drawstr(var54, var26 + 3, var28, 0, -1);
 												}
 											}
 

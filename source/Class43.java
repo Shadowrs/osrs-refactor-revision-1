@@ -19,13 +19,13 @@ public final class Class43 {
 				return;
 
 			var0.method623(var1);
-			var0.method561(0);
+			var0.writebyte(0);
 			final int var3 = var0.anInt1172;
-			var0.method619(var2.anInt1128);
+			var0.writeInt(var2.anInt1128);
 
 			for (int var4 = 0; var4 < var2.anInt1127; ++var4)
 				if (var2.anIntArray1129[var4] != 0)
-					var0.method561(var2.anIntArray1129[var4]);
+					var0.writebyte(var2.anIntArray1129[var4]);
 				else
 					try {
 						final int var5 = var2.anIntArray1132[var4];
@@ -34,17 +34,17 @@ public final class Class43 {
 						if (var5 == 0) {
 							var6 = var2.aFieldArray1126[var4];
 							var7 = var6.getInt((Object) null);
-							var0.method561(0);
-							var0.method619(var7);
+							var0.writebyte(0);
+							var0.writeInt(var7);
 						} else if (var5 == 1) {
 							var6 = var2.aFieldArray1126[var4];
 							var6.setInt((Object) null, var2.anIntArray1130[var4]);
-							var0.method561(0);
+							var0.writebyte(0);
 						} else if (var5 == 2) {
 							var6 = var2.aFieldArray1126[var4];
 							var7 = var6.getModifiers();
-							var0.method561(0);
-							var0.method619(var7);
+							var0.writebyte(0);
+							var0.writeInt(var7);
 						}
 
 						Method var26;
@@ -52,8 +52,8 @@ public final class Class43 {
 							if (var5 == 4) {
 								var26 = var2.aMethodArray1133[var4];
 								var7 = var26.getModifiers();
-								var0.method561(0);
-								var0.method619(var7);
+								var0.writebyte(0);
+								var0.writeInt(var7);
 							}
 						} else {
 							var26 = var2.aMethodArray1133[var4];
@@ -68,40 +68,40 @@ public final class Class43 {
 
 							final Object var12 = var26.invoke((Object) null, var9);
 							if (var12 == null)
-								var0.method561(0);
+								var0.writebyte(0);
 							else if (var12 instanceof Number) {
-								var0.method561(1);
-								var0.method562(((Number) var12).longValue());
+								var0.writebyte(1);
+								var0.writeLong(((Number) var12).longValue());
 							} else if (var12 instanceof String) {
-								var0.method561(2);
-								var0.method563((String) var12);
+								var0.writebyte(2);
+								var0.writeString((String) var12);
 							} else
-								var0.method561(4);
+								var0.writebyte(4);
 						}
 					} catch (final ClassNotFoundException var14) {
-						var0.method561(-10);
+						var0.writebyte(-10);
 					} catch (final InvalidClassException var15) {
-						var0.method561(-11);
+						var0.writebyte(-11);
 					} catch (final StreamCorruptedException var16) {
-						var0.method561(-12);
+						var0.writebyte(-12);
 					} catch (final OptionalDataException var17) {
-						var0.method561(-13);
+						var0.writebyte(-13);
 					} catch (final IllegalAccessException var18) {
-						var0.method561(-14);
+						var0.writebyte(-14);
 					} catch (final IllegalArgumentException var19) {
-						var0.method561(-15);
+						var0.writebyte(-15);
 					} catch (final InvocationTargetException var20) {
-						var0.method561(-16);
+						var0.writebyte(-16);
 					} catch (final SecurityException var21) {
-						var0.method561(-17);
+						var0.writebyte(-17);
 					} catch (final IOException var22) {
-						var0.method561(-18);
+						var0.writebyte(-18);
 					} catch (final NullPointerException var23) {
-						var0.method561(-19);
+						var0.writebyte(-19);
 					} catch (final Exception var24) {
-						var0.method561(-20);
+						var0.writebyte(-20);
 					} catch (final Throwable var25) {
-						var0.method561(-21);
+						var0.writebyte(-21);
 					}
 
 			var0.method583(var3);

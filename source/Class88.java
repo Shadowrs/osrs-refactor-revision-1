@@ -79,16 +79,16 @@ public class Class88 {
 								&& (var3 <= (var7 + 20))) {
 							Class66.aString543 = Class66.aString543.trim();
 							if (Class66.aString543.length() == 0) {
-								Class104_Sub18_Sub2.method680("", "Please enter your username/email address.", "");
+								Class104_Sub18_Sub2.drawlogin("", "Please enter your username/email address.", "");
 								return;
 							}
 
 							if (Class66.aString522.length() == 0) {
-								Class104_Sub18_Sub2.method680("", "Please enter your password.", "");
+								Class104_Sub18_Sub2.drawlogin("", "Please enter your password.", "");
 								return;
 							}
 
-							Class104_Sub18_Sub2.method680("", "Connecting to server...", "");
+							Class104_Sub18_Sub2.drawlogin("", "Connecting to server...", "");
 							Class10.method40(20);
 							return;
 						}
@@ -150,17 +150,17 @@ public class Class88 {
 									if ((client.anInt1792 == 2) && (Class80.anInt633 == 84)) {
 										Class66.aString543 = Class66.aString543.trim();
 										if (Class66.aString543.length() == 0) {
-											Class104_Sub18_Sub2.method680("",
+											Class104_Sub18_Sub2.drawlogin("",
 													"Please enter your username/email address.", "");
 											return;
 										}
 
 										if (Class66.aString522.length() == 0) {
-											Class104_Sub18_Sub2.method680("", "Please enter your password.", "");
+											Class104_Sub18_Sub2.drawlogin("", "Please enter your password.", "");
 											return;
 										}
 
-										Class104_Sub18_Sub2.method680("", "Connecting to server...", "");
+										Class104_Sub18_Sub2.drawlogin("", "Connecting to server...", "");
 										Class10.method40(20);
 										return;
 									}

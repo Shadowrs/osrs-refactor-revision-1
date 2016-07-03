@@ -925,7 +925,7 @@ public class Class46 {
 									}
 
 									if (var44 == 3103) {
-										client.aClass104_Sub21_Sub1_1825.method623(129);
+										client.secureBuf.method623(129);
 
 										for (Class104_Sub9 var83 = (Class104_Sub9) client.aClass58_1795
 												.method245(); null != var83; var83 = (Class104_Sub9) client.aClass58_1795
@@ -949,26 +949,26 @@ public class Class46 {
 											var24 = var17;
 										}
 
-										client.aClass104_Sub21_Sub1_1825.method623(27);
-										client.aClass104_Sub21_Sub1_1825.method619(var24);
+										client.secureBuf.method623(27);
+										client.secureBuf.writeInt(var24);
 										continue;
 									}
 
 									if (var44 == 3105) {
 										--var5;
 										var80 = Class90.aStringArray712[var5];
-										client.aClass104_Sub21_Sub1_1825.method623(223);
-										client.aClass104_Sub21_Sub1_1825.method561(var80.length() + 1);
-										client.aClass104_Sub21_Sub1_1825.method563(var80);
+										client.secureBuf.method623(223);
+										client.secureBuf.writebyte(var80.length() + 1);
+										client.secureBuf.writeString(var80);
 										continue;
 									}
 
 									if (var44 == 3106) {
 										--var5;
 										var80 = Class90.aStringArray712[var5];
-										client.aClass104_Sub21_Sub1_1825.method623(127);
-										client.aClass104_Sub21_Sub1_1825.method561(var80.length() + 1);
-										client.aClass104_Sub21_Sub1_1825.method563(var80);
+										client.secureBuf.method623(127);
+										client.secureBuf.writebyte(var80.length() + 1);
+										client.secureBuf.writeString(var80);
 										continue;
 									}
 
@@ -1087,7 +1087,7 @@ public class Class46 {
 											final byte[] var67 = Class104_Sub18_Sub14.aClass61_1463.method259(5, var15);
 											var25 = new Class104_Sub18_Sub14();
 											if (null != var67)
-												var25.method784(new Class104_Sub21(var67));
+												var25.method784(new RSBuf(var67));
 
 											Class104_Sub18_Sub14.aClass56_1462.method238(var25, var15);
 											var56 = var25;
@@ -1333,11 +1333,11 @@ public class Class46 {
 											var80 = Class90.aStringArray712[var5];
 											--var4;
 											var24 = Class90.anIntArray706[var4];
-											client.aClass104_Sub21_Sub1_1825.method623(252);
-											client.aClass104_Sub21_Sub1_1825
-													.method561(Class104_Sub21_Sub1.method630(var80) + 1);
-											client.aClass104_Sub21_Sub1_1825.method563(var80);
-											client.aClass104_Sub21_Sub1_1825.method585(var24);
+											client.secureBuf.method623(252);
+											client.secureBuf
+													.writebyte(Class104_Sub21_Sub1.method630(var80) + 1);
+											client.secureBuf.writeString(var80);
+											client.secureBuf.method585(var24);
 											continue;
 										}
 
@@ -1398,10 +1398,10 @@ public class Class46 {
 																+ var28];
 
 													client.anInt1846 = client.anInt1978;
-													client.aClass104_Sub21_Sub1_1825.method623(248);
-													client.aClass104_Sub21_Sub1_1825
-															.method561(Class104_Sub21_Sub1.method630(var80));
-													client.aClass104_Sub21_Sub1_1825.method563(var80);
+													client.secureBuf.method623(248);
+													client.secureBuf
+															.writebyte(Class104_Sub21_Sub1.method630(var80));
+													client.secureBuf.writeString(var80);
 													continue label2280;
 												}
 
@@ -1490,10 +1490,10 @@ public class Class46 {
 											--var5;
 											var80 = Class90.aStringArray712[var5];
 											if (null != Class104_Sub13.aClass104_Sub7Array1099) {
-												client.aClass104_Sub21_Sub1_1825.method623(245);
-												client.aClass104_Sub21_Sub1_1825
-														.method561(Class104_Sub21_Sub1.method630(var80));
-												client.aClass104_Sub21_Sub1_1825.method563(var80);
+												client.secureBuf.method623(245);
+												client.secureBuf
+														.writebyte(Class104_Sub21_Sub1.method630(var80));
+												client.secureBuf.writeString(var80);
 											}
 											continue;
 										}
@@ -2187,10 +2187,10 @@ public class Class46 {
 												Class21.aClass27_222 = Class27.aClass27_260;
 
 											client.anInt2005 = Class90.anIntArray706[var4 + 2];
-											client.aClass104_Sub21_Sub1_1825.method623(167);
-											client.aClass104_Sub21_Sub1_1825.method561(client.anInt2004);
-											client.aClass104_Sub21_Sub1_1825.method561(Class21.aClass27_222.anInt261);
-											client.aClass104_Sub21_Sub1_1825.method561(client.anInt2005);
+											client.secureBuf.method623(167);
+											client.secureBuf.writebyte(client.anInt2004);
+											client.secureBuf.writebyte(Class21.aClass27_222.anInt261);
+											client.secureBuf.writebyte(client.anInt2005);
 											continue;
 										}
 
@@ -2200,12 +2200,12 @@ public class Class46 {
 											var4 -= 2;
 											var24 = Class90.anIntArray706[var4];
 											var17 = Class90.anIntArray706[1 + var4];
-											client.aClass104_Sub21_Sub1_1825.method623(96);
-											client.aClass104_Sub21_Sub1_1825
-													.method561(Class104_Sub21_Sub1.method630(var80) + 2);
-											client.aClass104_Sub21_Sub1_1825.method563(var80);
-											client.aClass104_Sub21_Sub1_1825.method561(var24 - 1);
-											client.aClass104_Sub21_Sub1_1825.method561(var17);
+											client.secureBuf.method623(96);
+											client.secureBuf
+													.writebyte(Class104_Sub21_Sub1.method630(var80) + 2);
+											client.secureBuf.writeString(var80);
+											client.secureBuf.writebyte(var24 - 1);
+											client.secureBuf.writebyte(var17);
 											continue;
 										}
 
@@ -2360,14 +2360,14 @@ public class Class46 {
 														var80 = var80.substring("slide:".length());
 													}
 
-												client.aClass104_Sub21_Sub1_1825.method623(205);
-												client.aClass104_Sub21_Sub1_1825.method561(0);
-												var19 = client.aClass104_Sub21_Sub1_1825.anInt1172;
-												client.aClass104_Sub21_Sub1_1825.method561(var61);
-												client.aClass104_Sub21_Sub1_1825.method561(var66);
-												Class41.method183(client.aClass104_Sub21_Sub1_1825, var80);
-												client.aClass104_Sub21_Sub1_1825
-														.method613(client.aClass104_Sub21_Sub1_1825.anInt1172 - var19);
+												client.secureBuf.method623(205);
+												client.secureBuf.writebyte(0);
+												var19 = client.secureBuf.anInt1172;
+												client.secureBuf.writebyte(var61);
+												client.secureBuf.writebyte(var66);
+												Class41.method183(client.secureBuf, var80);
+												client.secureBuf
+														.method613(client.secureBuf.anInt1172 - var19);
 											}
 											continue;
 										}
@@ -2376,13 +2376,13 @@ public class Class46 {
 											var5 -= 2;
 											var80 = Class90.aStringArray712[var5];
 											var16 = Class90.aStringArray712[1 + var5];
-											client.aClass104_Sub21_Sub1_1825.method623(211);
-											client.aClass104_Sub21_Sub1_1825.method603(0);
-											var17 = client.aClass104_Sub21_Sub1_1825.anInt1172;
-											client.aClass104_Sub21_Sub1_1825.method563(var80);
-											Class41.method183(client.aClass104_Sub21_Sub1_1825, var16);
-											client.aClass104_Sub21_Sub1_1825
-													.method610(client.aClass104_Sub21_Sub1_1825.anInt1172 - var17);
+											client.secureBuf.method623(211);
+											client.secureBuf.writeShort(0);
+											var17 = client.secureBuf.anInt1172;
+											client.secureBuf.writeString(var80);
+											Class41.method183(client.secureBuf, var16);
+											client.secureBuf
+													.method610(client.secureBuf.anInt1172 - var17);
 											continue;
 										}
 
@@ -2908,7 +2908,7 @@ public class Class46 {
 				Class102_Sub1.aClass99_895 = Class71.method329(Applet_Sub1.aClass11_1760, Class57.aCanvas468, 1, 2048);
 				Class79.aClass104_Sub8_Sub2_630 = new Class104_Sub8_Sub2();
 				Class102_Sub1.aClass99_895.method458(Class79.aClass104_Sub8_Sub2_630);
-				Class104_Sub21.aClass84_1175 = new Class84(22050, Class99.anInt777);
+				RSBuf.aClass84_1175 = new Class84(22050, Class99.anInt777);
 				Class66.aString540 = "Prepared sound engine";
 				Class66.anInt534 = 35;
 				client.anInt1816 = 50;

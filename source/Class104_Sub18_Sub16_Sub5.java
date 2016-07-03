@@ -803,13 +803,13 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 	}
 
 	void method906(final byte[] var1) {
-		final Class104_Sub21 var2 = new Class104_Sub21(var1);
-		final Class104_Sub21 var3 = new Class104_Sub21(var1);
-		final Class104_Sub21 var4 = new Class104_Sub21(var1);
-		final Class104_Sub21 var5 = new Class104_Sub21(var1);
-		final Class104_Sub21 var6 = new Class104_Sub21(var1);
-		final Class104_Sub21 var7 = new Class104_Sub21(var1);
-		final Class104_Sub21 var8 = new Class104_Sub21(var1);
+		final RSBuf var2 = new RSBuf(var1);
+		final RSBuf var3 = new RSBuf(var1);
+		final RSBuf var4 = new RSBuf(var1);
+		final RSBuf var5 = new RSBuf(var1);
+		final RSBuf var6 = new RSBuf(var1);
+		final RSBuf var7 = new RSBuf(var1);
+		final RSBuf var8 = new RSBuf(var1);
 		var2.anInt1172 = var1.length - 23;
 		final int var9 = var2.method571();
 		final int var10 = var2.method571();
@@ -1170,11 +1170,11 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 	void method908(final byte[] var1) {
 		boolean var2 = false;
 		boolean var3 = false;
-		final Class104_Sub21 var4 = new Class104_Sub21(var1);
-		final Class104_Sub21 var5 = new Class104_Sub21(var1);
-		final Class104_Sub21 var6 = new Class104_Sub21(var1);
-		final Class104_Sub21 var7 = new Class104_Sub21(var1);
-		final Class104_Sub21 var8 = new Class104_Sub21(var1);
+		final RSBuf var4 = new RSBuf(var1);
+		final RSBuf var5 = new RSBuf(var1);
+		final RSBuf var6 = new RSBuf(var1);
+		final RSBuf var7 = new RSBuf(var1);
+		final RSBuf var8 = new RSBuf(var1);
 		var4.anInt1172 = var1.length - 18;
 		final int var9 = var4.method571();
 		final int var10 = var4.method571();

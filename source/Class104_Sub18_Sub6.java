@@ -52,7 +52,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 	static Class104_Sub18_Sub16_Sub5[] aClass104_Sub18_Sub16_Sub5Array1329 = new Class104_Sub18_Sub16_Sub5[4];
 	public String[] aStringArray1349 = new String[5];
 
-	void method740(final Class104_Sub21 var1) {
+	void method740(final RSBuf var1) {
 		while (true) {
 			final int var2 = var1.method570();
 			if (var2 == 0)
@@ -137,7 +137,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		return (Class104_Sub18_Sub16) var9;
 	}
 
-	void method744(final Class104_Sub21 var1, final int var2) {
+	void method744(final RSBuf var1, final int var2) {
 		int var3;
 		int var4;
 		if (var2 == 1) {

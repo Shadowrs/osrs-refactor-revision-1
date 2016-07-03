@@ -13,8 +13,8 @@ public class Class5 {
 
 	Class5(final byte[] var1, final Class104_Sub23 var2) {
 		aClass104_Sub23_23 = var2;
-		final Class104_Sub21 var3 = new Class104_Sub21(var1);
-		final Class104_Sub21 var4 = new Class104_Sub21(var1);
+		final RSBuf var3 = new RSBuf(var1);
+		final RSBuf var4 = new RSBuf(var1);
 		var3.anInt1172 = 2;
 		final int var5 = var3.method570();
 		int var6 = -1;

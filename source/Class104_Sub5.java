@@ -35,7 +35,7 @@ public class Class104_Sub5 extends Class104 {
 	static int[] anIntArray901;
 
 	void method498(final byte[] var1) {
-		final Class104_Sub21 var2 = new Class104_Sub21(var1);
+		final RSBuf var2 = new RSBuf(var1);
 		anInt902 = var2.method574();
 		anInt924 = var2.method574();
 		anInt930 = var2.method574();

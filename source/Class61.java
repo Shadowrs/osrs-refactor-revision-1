@@ -23,11 +23,11 @@ public abstract class Class61 {
 
 		int var4;
 		for (var4 = 0; var4 < var2; ++var4)
-			var3 = (var3 >>> 8) ^ Class104_Sub21.anIntArray1173[(var3 ^ var1[var4]) & 255];
+			var3 = (var3 >>> 8) ^ RSBuf.anIntArray1173[(var3 ^ var1[var4]) & 255];
 
 		var3 = ~var3;
 		anInt489 = var3;
-		final Class104_Sub21 var7 = new Class104_Sub21(Class57.method240(var1));
+		final RSBuf var7 = new RSBuf(Class57.method240(var1));
 		var3 = var7.method570();
 		if ((var3 >= 5) && (var3 <= 7)) {
 			if (var3 >= 6)
@@ -253,7 +253,7 @@ public abstract class Class61 {
 				byte[] var8;
 				if ((null != var2) && ((var2[0] != 0) || (var2[1] != 0) || (var2[2] != 0) || (var2[3] != 0))) {
 					var8 = Class90.method407(anObjectArray492[var1], true);
-					final Class104_Sub21 var9 = new Class104_Sub21(var8);
+					final RSBuf var9 = new RSBuf(var8);
 					var9.method605(var2, 5, var9.aByteArray1174.length);
 				} else
 					var8 = Class90.method407(anObjectArray492[var1], false);
@@ -267,7 +267,7 @@ public abstract class Class61 {
 					--var10;
 					final int var11 = var20[var10] & 255;
 					var10 -= var11 * var3 * 4;
-					final Class104_Sub21 var12 = new Class104_Sub21(var20);
+					final RSBuf var12 = new RSBuf(var20);
 					final int[] var13 = new int[var3];
 					var12.anInt1172 = var10;
 
@@ -453,9 +453,9 @@ public abstract class Class61 {
 							.equals(var1))
 						Class15.method60(0, "", "You can\'t add yourself to your own friend list");
 					else {
-						client.aClass104_Sub21_Sub1_1825.method623(203);
-						client.aClass104_Sub21_Sub1_1825.method561(Class104_Sub21_Sub1.method630(var0));
-						client.aClass104_Sub21_Sub1_1825.method563(var0);
+						client.secureBuf.method623(203);
+						client.secureBuf.writebyte(Class104_Sub21_Sub1.method630(var0));
+						client.secureBuf.writeString(var0);
 					}
 				}
 			} else

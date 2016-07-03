@@ -125,7 +125,7 @@ public class Class104_Sub12 extends Class104 {
 	public int anInt1093 = -1;
 	public int anInt1094 = -1;
 
-	void method527(final Class104_Sub21 var1) {
+	void method527(final RSBuf var1) {
 		aBool977 = false;
 		anInt980 = var1.method570();
 		anInt981 = var1.method570();
@@ -352,7 +352,7 @@ public class Class104_Sub12 extends Class104 {
 
 	}
 
-	void method528(final Class104_Sub21 var1) {
+	void method528(final RSBuf var1) {
 		var1.method570();
 		aBool977 = true;
 		anInt980 = var1.method570();
@@ -468,7 +468,7 @@ public class Class104_Sub12 extends Class104 {
 		anIntArray1063 = method529(var1);
 	}
 
-	int[] method529(final Class104_Sub21 var1) {
+	int[] method529(final RSBuf var1) {
 		final int var2 = var1.method570();
 		if (var2 == 0)
 			return null;
@@ -617,7 +617,7 @@ public class Class104_Sub12 extends Class104 {
 			return null;
 	}
 
-	Object[] method534(final Class104_Sub21 var1) {
+	Object[] method534(final RSBuf var1) {
 		final int var2 = var1.method570();
 		if (var2 == 0)
 			return null;
@@ -1144,7 +1144,7 @@ public class Class104_Sub12 extends Class104 {
 				var12.method841(0, 0);
 
 			if (!var4 && ((var8.anInt1431 == 1) || (var1 != 1)) && (var1 != -1))
-				Class31.aClass104_Sub18_Sub17_Sub2_Sub1_290.method863(Class27.method136(var1), 0, 9, 16776960, 1);
+				Class31.aClass104_Sub18_Sub17_Sub2_Sub1_290.drawstr(Class27.method136(var1), 0, 9, 16776960, 1);
 
 			if (!var4)
 				Class104_Sub18_Sub12.aClass56_1417.method238(var7, var5);

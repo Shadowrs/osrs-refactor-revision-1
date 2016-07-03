@@ -9,7 +9,7 @@ public class Class104_Sub23 extends Class104 {
 
 	Class104_Sub23(final int var1, final byte[] var2) {
 		anInt1180 = var1;
-		final Class104_Sub21 var3 = new Class104_Sub21(var2);
+		final RSBuf var3 = new RSBuf(var2);
 		anInt1178 = var3.method570();
 		anIntArray1179 = new int[anInt1178];
 		anIntArrayArray1177 = new int[anInt1178][];
@@ -163,7 +163,7 @@ public class Class104_Sub23 extends Class104 {
 			final byte[] var2 = Class12.aClass61_76.method259(16, var0);
 			var1 = new Class104_Sub18_Sub11();
 			if (var2 != null)
-				var1.method767(new Class104_Sub21(var2));
+				var1.method767(new RSBuf(var2));
 
 			Class104_Sub18_Sub11.aClass56_1413.method238(var1, var0);
 			return var1;

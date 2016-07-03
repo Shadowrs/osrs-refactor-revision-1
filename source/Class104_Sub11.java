@@ -10,7 +10,7 @@ public class Class104_Sub11 extends Class104 {
 	int anInt961;
 
 	Class104_Sub11(final byte[] var1) {
-		final Class104_Sub21 var2 = new Class104_Sub21(var1);
+		final RSBuf var2 = new RSBuf(var1);
 
 		int var3;
 		for (var3 = 0; var2.aByteArray1174[var3 + var2.anInt1172] != 0; ++var3)

@@ -53,63 +53,63 @@ public class Class29 {
 				final boolean var9 = ((var7 >> (var8 + 1)) & 1) != 0;
 				if (var9) {
 					if (var0 == 1) {
-						client.aClass104_Sub21_Sub1_1825.method623(63);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(63);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 2) {
-						client.aClass104_Sub21_Sub1_1825.method623(87);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(87);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 3) {
-						client.aClass104_Sub21_Sub1_1825.method623(238);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(238);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 4) {
-						client.aClass104_Sub21_Sub1_1825.method623(240);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(240);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 5) {
-						client.aClass104_Sub21_Sub1_1825.method623(153);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(153);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 6) {
-						client.aClass104_Sub21_Sub1_1825.method623(232);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(232);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 7) {
-						client.aClass104_Sub21_Sub1_1825.method623(168);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(168);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 8) {
-						client.aClass104_Sub21_Sub1_1825.method623(239);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(239);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 9) {
-						client.aClass104_Sub21_Sub1_1825.method623(254);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(254);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 10) {
-						client.aClass104_Sub21_Sub1_1825.method623(169);
-						client.aClass104_Sub21_Sub1_1825.method619(var1);
-						client.aClass104_Sub21_Sub1_1825.method603(var2);
+						client.secureBuf.method623(169);
+						client.secureBuf.writeInt(var1);
+						client.secureBuf.writeShort(var2);
 					}
 
 				}

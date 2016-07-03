@@ -27,7 +27,7 @@ public class Class92 {
 	int[] anIntArray726 = new int[] { 0, 0, 0, 0, 0 };
 	int[] anIntArray727 = new int[] { 0, 0, 0, 0, 0 };
 
-	final void method413(final Class104_Sub21 var1) {
+	final void method413(final RSBuf var1) {
 		aClass74_729 = new Class74();
 		aClass74_729.method337(var1);
 		aClass74_718 = new Class74();

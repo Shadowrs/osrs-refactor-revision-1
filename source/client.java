@@ -133,16 +133,16 @@ public final class client extends Applet_Sub1 {
 	static boolean aBool1979 = true;
 	static boolean aBool1798 = true;
 	static boolean aBool1860 = false;
-	static Class104_Sub21 aClass104_Sub21_1885 = new Class104_Sub21(new byte[5000]);
+	static RSBuf aClass104_Sub21_1885 = new RSBuf(new byte[5000]);
 	static int anInt1816 = 0;
-	static int anInt1823 = 0;
+	static int step = 0;
 	static int anInt1824 = 0;
 	static int anInt1968 = 0;
 	static int anInt1826 = 0;
 	static Class104_Sub18_Sub16_Sub7_Sub2[] aClass104_Sub18_Sub16_Sub7_Sub2Array1828 = new Class104_Sub18_Sub16_Sub7_Sub2['\u8000'];
 	static int[] anIntArray1830 = new int['\u8000'];
-	static Class104_Sub21_Sub1 aClass104_Sub21_Sub1_1825 = new Class104_Sub21_Sub1(5000);
-	static Class104_Sub21_Sub1 aClass104_Sub21_Sub1_2002 = new Class104_Sub21_Sub1(5000);
+	static Class104_Sub21_Sub1 secureBuf = new Class104_Sub21_Sub1(5000);
+	static Class104_Sub21_Sub1 loginbuf = new Class104_Sub21_Sub1(5000);
 	static Class104_Sub21_Sub1 aClass104_Sub21_Sub1_1963 = new Class104_Sub21_Sub1(5000);
 	static int anInt1988 = 0;
 	static Class67[] aClass67Array1975 = new Class67[4];
@@ -181,7 +181,7 @@ public final class client extends Applet_Sub1 {
 	static int anInt1994;
 	static int[] anIntArray1909;
 	static int[] anIntArray1911;
-	static Class104_Sub21[] aClass104_Sub21Array2030;
+	static RSBuf[] aClass104_Sub21Array2030;
 	static int anInt1874;
 	static int anInt1990;
 	static int[] anIntArray2048;
@@ -561,7 +561,7 @@ final void method943(final byte var1) {
 				Class88.method401(this);
 			else if(anInt1806 == 20) {
                Class88.method401(this);
-               Class104_Sub8_Sub4.method737();
+               Class104_Sub8_Sub4.login();
             } else if(anInt1806 == 25) {
                Class20.method121(false);
                anInt1842 = 0;
@@ -818,8 +818,8 @@ final void method943(final byte var1) {
 
                      Class104_Sub18_Sub6.aClass56_1326.method239();
                      if(Class53.aFrame435 != null) {
-                        aClass104_Sub21_Sub1_1825.method623(210);
-                        aClass104_Sub21_Sub1_1825.method619(1057001181);
+                        secureBuf.method623(210);
+                        secureBuf.writeInt(1057001181);
                      }
 
                      if(!aBool1847) {
@@ -839,7 +839,7 @@ final void method943(final byte var1) {
                      Class10.method40(30);
                      Class101.method465();
                      Class36.method172();
-                     aClass104_Sub21_Sub1_1825.method623(197);
+                     secureBuf.method623(197);
                      Class36.method171();
                   }
                }
@@ -858,8 +858,8 @@ final void method943(final byte var1) {
 					Class61_Sub1.method494();
 				else {
                      Class10.method40(40);
-                     Class57.aClass13_467 = Class20.aClass13_205;
-                     Class20.aClass13_205 = null;
+                     Class57.aClass13_467 = Class20.stream;
+                     Class20.stream = null;
                   }
                } else {
                   Class104_Sub12 var7;
@@ -871,20 +871,20 @@ final void method943(final byte var1) {
                   Class104_Sub12 var120;
                   for(var8 = 0; var8 < 100; ++var8) {
                      boolean var87;
-                     if(null == Class20.aClass13_205)
+                     if(null == Class20.stream)
 						var87 = false;
 					else
 						label3291: {
                            String var82;
                            try {
-                              var11 = Class20.aClass13_205.method53();
+                              var11 = Class20.stream.method53();
                               if(var11 == 0) {
                                  var87 = false;
                                  break label3291;
                               }
 
                               if(anInt1790 == -1) {
-                                 Class20.aClass13_205.method51(aClass104_Sub21_Sub1_1963.aByteArray1174, 0, 1);
+                                 Class20.stream.method51(aClass104_Sub21_Sub1_1963.aByteArray1174, 0, 1);
                                  aClass104_Sub21_Sub1_1963.anInt1172 = 0;
                                  anInt1790 = aClass104_Sub21_Sub1_1963.method628();
                                  anInt1929 = Class95.anIntArray746[anInt1790];
@@ -897,7 +897,7 @@ final void method943(final byte var1) {
                                     break label3291;
                                  }
 
-                                 Class20.aClass13_205.method51(aClass104_Sub21_Sub1_1963.aByteArray1174, 0, 1);
+                                 Class20.stream.method51(aClass104_Sub21_Sub1_1963.aByteArray1174, 0, 1);
                                  anInt1929 = aClass104_Sub21_Sub1_1963.aByteArray1174[0] & 255;
                                  --var11;
                               }
@@ -908,7 +908,7 @@ final void method943(final byte var1) {
                                     break label3291;
                                  }
 
-                                 Class20.aClass13_205.method51(aClass104_Sub21_Sub1_1963.aByteArray1174, 0, 2);
+                                 Class20.stream.method51(aClass104_Sub21_Sub1_1963.aByteArray1174, 0, 2);
                                  aClass104_Sub21_Sub1_1963.anInt1172 = 0;
                                  anInt1929 = aClass104_Sub21_Sub1_1963.method571();
                                  var11 -= 2;
@@ -920,7 +920,7 @@ final void method943(final byte var1) {
                               }
 
                               aClass104_Sub21_Sub1_1963.anInt1172 = 0;
-                              Class20.aClass13_205.method51(aClass104_Sub21_Sub1_1963.aByteArray1174, 0, anInt1929);
+                              Class20.stream.method51(aClass104_Sub21_Sub1_1963.aByteArray1174, 0, anInt1929);
                               anInt1834 = 0;
                               anInt1815 = anInt2042;
                               anInt2042 = anInt1837;
@@ -2478,8 +2478,8 @@ final void method943(final byte var1) {
 								Class61_Sub1.method494();
 							else {
                                  Class10.method40(40);
-                                 Class57.aClass13_467 = Class20.aClass13_205;
-                                 Class20.aClass13_205 = null;
+                                 Class57.aClass13_467 = Class20.stream;
+                                 Class20.stream = null;
                               }
                            } catch (final Exception var69) {
                               var82 = "" + anInt1790 + "," + anInt2042 + "," + anInt1815 + "," + anInt1929 + "," + (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0] + Class53.anInt436) + "," + (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0] + Class20.anInt206) + ",";
@@ -2499,18 +2499,18 @@ final void method943(final byte var1) {
                   }
 
                   if(anInt1806 == 30) {
-                     Class43.method185(aClass104_Sub21_Sub1_1825, 108);
+                     Class43.method185(secureBuf, 108);
                      final Object var76 = Class2_Sub2.aClass72_865.anObject583;
                      synchronized(var76) {
                         if(!aBool1979)
 							Class2_Sub2.aClass72_865.anInt581 = 0;
 						else if((Class14.anInt100 != 0) || (Class2_Sub2.aClass72_865.anInt581 >= 40)) {
-                           aClass104_Sub21_Sub1_1825.method623(72);
-                           aClass104_Sub21_Sub1_1825.method561(0);
-                           var5 = aClass104_Sub21_Sub1_1825.anInt1172;
+                           secureBuf.method623(72);
+                           secureBuf.writebyte(0);
+                           var5 = secureBuf.anInt1172;
                            var11 = 0;
 
-                           for(var9 = 0; (var9 < Class2_Sub2.aClass72_865.anInt581) && ((aClass104_Sub21_Sub1_1825.anInt1172 - var5) < 240); ++var9) {
+                           for(var9 = 0; (var9 < Class2_Sub2.aClass72_865.anInt581) && ((secureBuf.anInt1172 - var5) < 240); ++var9) {
                               ++var11;
                               var10 = Class2_Sub2.aClass72_865.anIntArray580[var9];
                               if(var10 < 0)
@@ -2542,19 +2542,19 @@ final void method943(final byte var1) {
                                  if((anInt1803 < 8) && (var15 >= -32) && (var15 <= 31) && (var16 >= -32) && (var16 <= 31)) {
                                     var15 += 32;
                                     var16 += 32;
-                                    aClass104_Sub21_Sub1_1825.method603(var16 + (anInt1803 << 12) + (var15 << 6));
+                                    secureBuf.writeShort(var16 + (anInt1803 << 12) + (var15 << 6));
                                     anInt1803 = 0;
                                  } else if(anInt1803 < 8) {
-                                    aClass104_Sub21_Sub1_1825.method587(var14 + (anInt1803 << 19) + 8388608);
+                                    secureBuf.method587(var14 + (anInt1803 << 19) + 8388608);
                                     anInt1803 = 0;
                                  } else {
-                                    aClass104_Sub21_Sub1_1825.method619((anInt1803 << 19) + -1073741824 + var14);
+                                    secureBuf.writeInt((anInt1803 << 19) + -1073741824 + var14);
                                     anInt1803 = 0;
                                  }
                               }
                            }
 
-                           aClass104_Sub21_Sub1_1825.method613(aClass104_Sub21_Sub1_1825.anInt1172 - var5);
+                           secureBuf.method613(secureBuf.anInt1172 - var5);
                            if(var11 >= Class2_Sub2.aClass72_865.anInt581)
 							Class2_Sub2.aClass72_865.anInt581 = 0;
 						else {
@@ -2592,8 +2592,8 @@ final void method943(final byte var1) {
 							var128 = 1;
 
                         var14 = (int)var52;
-                        aClass104_Sub21_Sub1_1825.method623(161);
-                        aClass104_Sub21_Sub1_1825.method612((var14 << 20) + (var128 << 19) + var10);
+                        secureBuf.method623(161);
+                        secureBuf.method612((var14 << 20) + (var128 << 19) + var10);
                      }
 
                      if(anInt1878 > 0)
@@ -2605,21 +2605,21 @@ final void method943(final byte var1) {
                      if(aBool1791 && (anInt1878 <= 0)) {
                         anInt1878 = 20;
                         aBool1791 = false;
-                        aClass104_Sub21_Sub1_1825.method623(79);
-                        aClass104_Sub21_Sub1_1825.method606(anInt1962);
-                        aClass104_Sub21_Sub1_1825.method591(anInt1866);
+                        secureBuf.method623(79);
+                        secureBuf.method606(anInt1962);
+                        secureBuf.method591(anInt1866);
                      }
 
                      if(Class100.aBool799 && !aBool1945) {
                         aBool1945 = true;
-                        aClass104_Sub21_Sub1_1825.method623(178);
-                        aClass104_Sub21_Sub1_1825.method561(1);
+                        secureBuf.method623(178);
+                        secureBuf.writebyte(1);
                      }
 
                      if(!Class100.aBool799 && aBool1945) {
                         aBool1945 = false;
-                        aClass104_Sub21_Sub1_1825.method623(178);
-                        aClass104_Sub21_Sub1_1825.method561(0);
+                        secureBuf.method623(178);
+                        secureBuf.writebyte(0);
                      }
 
                      if(aBool1794 && (anInt1988 != Class12.anInt73))
@@ -2773,7 +2773,7 @@ final void method943(final byte var1) {
 									var11 = anInt1827;
 
                                  if(var11 > 0) {
-                                    final Class104_Sub4_Sub1 var93 = var72.method356().method689(Class104_Sub21.aClass84_1175);
+                                    final Class104_Sub4_Sub1 var93 = var72.method356().method689(RSBuf.aClass84_1175);
                                     final Class104_Sub8_Sub3 var91 = Class104_Sub8_Sub3.method727(var93, 100, var11);
                                     var91.method692(anIntArray1875[var8] - 1);
                                     Class79.aClass104_Sub8_Sub2_630.method666(var91);
@@ -2809,8 +2809,8 @@ final void method943(final byte var1) {
 							Class61_Sub1.method494();
 						else {
                               Class10.method40(40);
-                              Class57.aClass13_467 = Class20.aClass13_205;
-                              Class20.aClass13_205 = null;
+                              Class57.aClass13_467 = Class20.stream;
+                              Class20.stream = null;
                            }
                         } else {
                            Class104_Sub12.method537();
@@ -2874,11 +2874,11 @@ final void method943(final byte var1) {
                                        } else
 										var79.method530(anInt1924, anInt1901);
 
-                                       aClass104_Sub21_Sub1_1825.method623(2);
-                                       aClass104_Sub21_Sub1_1825.method612(Class67.aClass104_Sub12_556.anInt978);
-                                       aClass104_Sub21_Sub1_1825.method592(anInt1924);
-                                       aClass104_Sub21_Sub1_1825.method585(var134);
-                                       aClass104_Sub21_Sub1_1825.method606(anInt1901);
+                                       secureBuf.method623(2);
+                                       secureBuf.method612(Class67.aClass104_Sub12_556.anInt978);
+                                       secureBuf.method592(anInt1924);
+                                       secureBuf.method585(var134);
+                                       secureBuf.method606(anInt1901);
                                     }
                                  } else if(((anInt1920 == 1) || Class43.method187(anInt1805 - 1)) && (anInt1805 > 2))
 									Class36.method170();
@@ -3199,7 +3199,7 @@ final void method943(final byte var1) {
 													            if((var11 > 15000) && (var10 > 15000)) {
 													               anInt1836 = 250;
 													               Class104_Sub16.method553(14500);
-													               aClass104_Sub21_Sub1_1825.method623(38);
+													               secureBuf.method623(38);
 													            }
 
 													            ++anInt1861;
@@ -3259,12 +3259,12 @@ final void method943(final byte var1) {
 
 													            ++anInt1835;
 													            if(anInt1835 > 50)
-																	aClass104_Sub21_Sub1_1825.method623(228);
+																	secureBuf.method623(228);
 
 													            try {
-													               if((null != Class20.aClass13_205) && (aClass104_Sub21_Sub1_1825.anInt1172 > 0)) {
-													                  Class20.aClass13_205.method54(aClass104_Sub21_Sub1_1825.aByteArray1174, 0, aClass104_Sub21_Sub1_1825.anInt1172);
-													                  aClass104_Sub21_Sub1_1825.anInt1172 = 0;
+													               if((null != Class20.stream) && (secureBuf.anInt1172 > 0)) {
+													                  Class20.stream.method54(secureBuf.aByteArray1174, 0, secureBuf.anInt1172);
+													                  secureBuf.anInt1172 = 0;
 													                  anInt1835 = 0;
 													                  return;
 													               }
@@ -3273,8 +3273,8 @@ final void method943(final byte var1) {
 																	Class61_Sub1.method494();
 																else {
 													                  Class10.method40(40);
-													                  Class57.aClass13_467 = Class20.aClass13_205;
-													                  Class20.aClass13_205 = null;
+													                  Class57.aClass13_467 = Class20.stream;
+													                  Class20.stream = null;
 													               }
 
 													               return;
@@ -3323,7 +3323,7 @@ final void method943(final byte var1) {
                   }
                }
             } else if(anInt1806 == 40)
-				Class104_Sub8_Sub4.method737();
+				Class104_Sub8_Sub4.login();
 
             return;
          }
@@ -3529,7 +3529,7 @@ final void method943(final byte var1) {
 				Class104_Sub18_Sub17.method805(var4, var11, var13, var14, var12);
 				Class104_Sub18_Sub17.method805(1 + var4, 1 + var11, var13 - 2, 16, 0);
 				Class104_Sub18_Sub17.method806(1 + var4, 18 + var11, var13 - 2, var14 - 19, 0);
-				Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.method863("Choose Option", var4 + 3, var11 + 14, var12, -1);
+				Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.drawstr("Choose Option", var4 + 3, var11 + 14, var12, -1);
 				var9 = Class14.anInt91;
 				var10 = Class14.anInt95;
 
@@ -3542,7 +3542,7 @@ final void method943(final byte var1) {
 					if ((var9 > var4) && (var9 < (var13 + var4)) && (var10 > (var16 - 13)) && (var10 < (var16 + 3)))
 						var17 = 16776960;
 
-					Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.method863(Class79.method349(var15), 3 + var4, var16,
+					Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.drawstr(Class79.method349(var15), 3 + var4, var16,
 							var17, 0);
 				}
 
@@ -3608,9 +3608,9 @@ final void method943(final byte var1) {
 			Class2_Sub2.aClass72_865.aBool579 = false;
 
 		Class2_Sub2.aClass72_865 = null;
-		if (Class20.aClass13_205 != null) {
-			Class20.aClass13_205.method52();
-			Class20.aClass13_205 = null;
+		if (Class20.stream != null) {
+			Class20.stream.destory();
+			Class20.stream = null;
 		}
 
 		Class104_Sub7.method509();
@@ -3629,7 +3629,7 @@ final void method943(final byte var1) {
 			Class102_Sub1.aClass99_895.method459();
 
 		if (null != Class66.aClass13_547)
-			Class66.aClass13_547.method52();
+			Class66.aClass13_547.destory();
 
 		Class46.method207();
 		Class91.method409();
@@ -3679,9 +3679,9 @@ final void method943(final byte var1) {
 
 					if (anInt1954 == 2) {
 						Class43.aClass13_374 = new Class13((Socket) Class76.aClass8_618.anObject50, aClass11_1760);
-						final Class104_Sub21 var1 = new Class104_Sub21(5);
-						var1.method561(15);
-						var1.method619(1);
+						final RSBuf var1 = new RSBuf(5);
+						var1.writebyte(15);
+						var1.writeInt(1);
 						Class43.aClass13_374.method54(var1.aByteArray1174, 0, 5);
 						++anInt1954;
 						aLong1819 = Class71.method332();
@@ -3775,7 +3775,7 @@ final void method943(final byte var1) {
 		anIntArray1909 = new int[2048];
 		anInt1910 = 0;
 		anIntArray1911 = new int[2048];
-		aClass104_Sub21Array2030 = new Class104_Sub21[2048];
+		aClass104_Sub21Array2030 = new RSBuf[2048];
 		anInt1874 = -1;
 		anInt1990 = 0;
 		anInt1904 = 0;

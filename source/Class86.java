@@ -22,7 +22,7 @@ public class Class86 {
 	public static void method394(final Class13 var0, final boolean var1) {
 		if (Class66.aClass13_547 != null) {
 			try {
-				Class66.aClass13_547.method52();
+				Class66.aClass13_547.destory();
 			} catch (final Exception var6) {
 				;
 			}
@@ -45,14 +45,14 @@ public class Class86 {
 					if (null == var2) {
 						if (Class87.aByte697 != 0)
 							try {
-								final Class104_Sub21 var7 = new Class104_Sub21(4);
-								var7.method561(4);
-								var7.method561(Class87.aByte697);
-								var7.method603(0);
+								final RSBuf var7 = new RSBuf(4);
+								var7.writebyte(4);
+								var7.writebyte(Class87.aByte697);
+								var7.writeShort(0);
 								Class66.aClass13_547.method54(var7.aByteArray1174, 0, 4);
 							} catch (final IOException var5) {
 								try {
-									Class66.aClass13_547.method52();
+									Class66.aClass13_547.destory();
 								} catch (final Exception var4) {
 									;
 								}
@@ -126,7 +126,7 @@ public class Class86 {
 			final byte[] var2 = Class104_Sub18_Sub8.aClass61_1389.method259(14, var0);
 			var1 = new Class104_Sub18_Sub8();
 			if (null != var2)
-				var1.method757(new Class104_Sub21(var2));
+				var1.method757(new RSBuf(var2));
 
 			Class104_Sub18_Sub8.aClass56_1387.method238(var1, var0);
 			return var1;

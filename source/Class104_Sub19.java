@@ -162,7 +162,7 @@ public class Class104_Sub19 extends Class104 {
 		}
 	}
 
-	Class104_Sub19(final Class104_Sub21 var1) {
+	Class104_Sub19(final RSBuf var1) {
 		anInt1139 = var1.method571();
 		aBool1138 = var1.method570() == 1;
 		final int var2 = var1.method570();

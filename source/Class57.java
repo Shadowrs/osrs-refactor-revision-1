@@ -13,7 +13,7 @@ public class Class57 {
 	public static Canvas aCanvas468;
 
 	static final byte[] method240(final byte[] var0) {
-		final Class104_Sub21 var1 = new Class104_Sub21(var0);
+		final RSBuf var1 = new RSBuf(var0);
 		final int var2 = var1.method570();
 		final int var3 = var1.method574();
 		if ((var3 >= 0) && ((Class61.anInt490 == 0) || (var3 <= Class61.anInt490))) {

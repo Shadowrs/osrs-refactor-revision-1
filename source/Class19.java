@@ -3,7 +3,7 @@ public class Class19 {
 
 	static final boolean method119(final byte[] var0, final int var1, final int var2) {
 		boolean var3 = true;
-		final Class104_Sub21 var4 = new Class104_Sub21(var0);
+		final RSBuf var4 = new RSBuf(var0);
 		int var5 = -1;
 
 		label57: while (true) {

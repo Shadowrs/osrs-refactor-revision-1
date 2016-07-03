@@ -303,11 +303,11 @@ public class Class49 {
 					throw new IOException();
 				else {
 					Class104_Sub18_Sub13 var3;
-					Class104_Sub21 var4;
+					RSBuf var4;
 					while ((Class87.anInt684 < 20) && (Class87.anInt682 > 0)) {
 						var3 = (Class104_Sub18_Sub13) Class87.aClass58_681.method245();
-						var4 = new Class104_Sub21(4);
-						var4.method561(1);
+						var4 = new RSBuf(4);
+						var4.writebyte(1);
 						var4.method587((int) var3.aLong824);
 						Class66.aClass13_547.method54(var4.aByteArray1174, 0, 4);
 						Class87.aClass58_683.method242(var3, var3.aLong824);
@@ -317,8 +317,8 @@ public class Class49 {
 
 					while ((Class87.anInt692 < 20) && (Class87.anInt687 > 0)) {
 						var3 = (Class104_Sub18_Sub13) Class87.aClass63_685.method293();
-						var4 = new Class104_Sub21(4);
-						var4.method561(0);
+						var4 = new RSBuf(4);
+						var4.writebyte(0);
 						var4.method587((int) var3.aLong824);
 						Class66.aClass13_547.method54(var4.aByteArray1174, 0, 4);
 						var3.method555();
@@ -382,10 +382,10 @@ public class Class49 {
 
 								final int var16 = var11 == 0 ? 5 : 9;
 								Class48.aClass104_Sub18_Sub13_410 = var15;
-								Class87.aClass104_Sub21_691 = new Class104_Sub21(
+								Class87.aClass104_Sub21_691 = new RSBuf(
 										var16 + var12 + Class48.aClass104_Sub18_Sub13_410.aByte1459);
-								Class87.aClass104_Sub21_691.method561(var11);
-								Class87.aClass104_Sub21_691.method619(var12);
+								Class87.aClass104_Sub21_691.writebyte(var11);
+								Class87.aClass104_Sub21_691.writeInt(var12);
 								Class87.anInt696 = 8;
 								Class87.aClass104_Sub21_690.anInt1172 = 0;
 							} else if (Class87.anInt696 == 0)
@@ -432,7 +432,7 @@ public class Class49 {
 									var10 = (int) Class87.aCRC32_680.getValue();
 									if (var10 != Class48.aClass104_Sub18_Sub13_410.anInt1460) {
 										try {
-											Class66.aClass13_547.method52();
+											Class66.aClass13_547.destory();
 										} catch (final Exception var20) {
 											;
 										}
@@ -474,7 +474,7 @@ public class Class49 {
 				}
 			} catch (final IOException var21) {
 				try {
-					Class66.aClass13_547.method52();
+					Class66.aClass13_547.destory();
 				} catch (final Exception var19) {
 					;
 				}

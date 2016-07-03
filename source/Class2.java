@@ -7,7 +7,7 @@ public abstract class Class2 {
 	Image anImage4;
 	int anInt5;
 	int anInt6;
-	static Class104_Sub21 aClass104_Sub21_7;
+	static RSBuf aClass104_Sub21_7;
 	static Class101 aClass101_8;
 	static Class61_Sub1 aClass61_Sub1_9;
 

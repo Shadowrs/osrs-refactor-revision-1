@@ -15,8 +15,8 @@ public class Class104_Sub13 extends Class104 {
 					Class61_Sub1.method494();
 				else {
 					Class10.method40(40);
-					Class57.aClass13_467 = Class20.aClass13_205;
-					Class20.aClass13_205 = null;
+					Class57.aClass13_467 = Class20.stream;
+					Class20.stream = null;
 				}
 
 			if (var0.equalsIgnoreCase("::fpson"))
@@ -35,9 +35,9 @@ public class Class104_Sub13 extends Class104 {
 				throw new RuntimeException();
 		}
 
-		client.aClass104_Sub21_Sub1_1825.method623(30);
-		client.aClass104_Sub21_Sub1_1825.method561(var0.length() - 1);
-		client.aClass104_Sub21_Sub1_1825.method563(var0.substring(2));
+		client.secureBuf.method623(30);
+		client.secureBuf.writebyte(var0.length() - 1);
+		client.secureBuf.writeString(var0.substring(2));
 	}
 
 	static final boolean method543(final int var0, final int var1, final int var2, final int var3, final boolean var4,
@@ -256,18 +256,18 @@ public class Class104_Sub13 extends Class104 {
 			final int var28 = client.anIntArray1853[var14];
 			var21 = client.anIntArray1854[var14];
 			if (var10 == 0) {
-				client.aClass104_Sub21_Sub1_1825.method623(176);
-				client.aClass104_Sub21_Sub1_1825.method561(3 + var16 + var16);
+				client.secureBuf.method623(176);
+				client.secureBuf.writebyte(3 + var16 + var16);
 			}
 
 			if (var10 == 1) {
-				client.aClass104_Sub21_Sub1_1825.method623(60);
-				client.aClass104_Sub21_Sub1_1825.method561(14 + 3 + var16 + var16);
+				client.secureBuf.method623(60);
+				client.secureBuf.writebyte(14 + 3 + var16 + var16);
 			}
 
 			if (var10 == 2) {
-				client.aClass104_Sub21_Sub1_1825.method623(214);
-				client.aClass104_Sub21_Sub1_1825.method561(3 + var16 + var16);
+				client.secureBuf.method623(214);
+				client.secureBuf.writebyte(3 + var16 + var16);
 			}
 
 			client.anInt2018 = client.anIntArray1853[0];
@@ -275,13 +275,13 @@ public class Class104_Sub13 extends Class104 {
 
 			for (var22 = 1; var22 < var16; ++var22) {
 				--var14;
-				client.aClass104_Sub21_Sub1_1825.method584(client.anIntArray1853[var14] - var28);
-				client.aClass104_Sub21_Sub1_1825.method586(client.anIntArray1854[var14] - var21);
+				client.secureBuf.method584(client.anIntArray1853[var14] - var28);
+				client.secureBuf.method586(client.anIntArray1854[var14] - var21);
 			}
 
-			client.aClass104_Sub21_Sub1_1825.method592(Class20.anInt206 + var21);
-			client.aClass104_Sub21_Sub1_1825.method561(Class25.aBoolArray249[82] ? 1 : 0);
-			client.aClass104_Sub21_Sub1_1825.method603(var28 + Class53.anInt436);
+			client.secureBuf.method592(Class20.anInt206 + var21);
+			client.secureBuf.writebyte(Class25.aBoolArray249[82] ? 1 : 0);
+			client.secureBuf.writeShort(var28 + Class53.anInt436);
 			return true;
 		}
 	}

@@ -61,7 +61,7 @@ public class Class104_Sub16 extends Class104 {
 			final byte[] var2 = Class104_Sub18_Sub10.aClass61_1403.method259(8, var0);
 			var1 = new Class104_Sub18_Sub10();
 			if (var2 != null)
-				var1.method765(new Class104_Sub21(var2));
+				var1.method765(new RSBuf(var2));
 
 			Class104_Sub18_Sub10.aClass56_1406.method238(var1, var0);
 			return var1;

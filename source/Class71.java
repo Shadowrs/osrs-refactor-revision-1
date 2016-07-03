@@ -88,7 +88,7 @@ public class Class71 {
 			var1 = new Class104_Sub18_Sub5();
 			var1.anInt1308 = var0;
 			if (var2 != null)
-				var1.method730(new Class104_Sub21(var2));
+				var1.method730(new RSBuf(var2));
 
 			Class104_Sub18_Sub5.aClass56_1305.method238(var1, var0);
 			return var1;

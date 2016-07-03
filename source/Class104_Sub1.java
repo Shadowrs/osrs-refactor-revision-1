@@ -82,9 +82,9 @@ public final class Class104_Sub1 extends Class104 {
 		var0.method882("Select a world", 62, 15, 0, -1);
 		if (null != Class48.aClass104_Sub18_Sub17_Sub3Array409) {
 			Class48.aClass104_Sub18_Sub17_Sub3Array409[1].method889(140, 1);
-			var1.method863("Members only world", 152, 10, 16777215, -1);
+			var1.drawstr("Members only world", 152, 10, 16777215, -1);
 			Class48.aClass104_Sub18_Sub17_Sub3Array409[0].method889(140, 12);
-			var1.method863("Free world", 152, 21, 16777215, -1);
+			var1.drawstr("Free world", 152, 21, 16777215, -1);
 		}
 
 		if (Class21.aClass104_Sub18_Sub17_Sub3Array223 != null) {
@@ -99,7 +99,7 @@ public final class Class104_Sub1 extends Class104 {
 			else
 				Class21.aClass104_Sub18_Sub17_Sub3Array223[1].method889(var2 + 15, 4);
 
-			var0.method863("World", var2 + 32, 17, 16777215, -1);
+			var0.drawstr("World", var2 + 32, 17, 16777215, -1);
 			final short var3 = 390;
 			if ((Class66.anIntArray519[0] == 1) && (Class66.anIntArray545[0] == 0))
 				Class21.aClass104_Sub18_Sub17_Sub3Array223[2].method889(var3, 4);
@@ -111,7 +111,7 @@ public final class Class104_Sub1 extends Class104 {
 			else
 				Class21.aClass104_Sub18_Sub17_Sub3Array223[1].method889(15 + var3, 4);
 
-			var0.method863("Players", 32 + var3, 17, 16777215, -1);
+			var0.drawstr("Players", 32 + var3, 17, 16777215, -1);
 			final short var4 = 500;
 			if ((Class66.anIntArray519[0] == 2) && (Class66.anIntArray545[0] == 0))
 				Class21.aClass104_Sub18_Sub17_Sub3Array223[2].method889(var4, 4);
@@ -123,7 +123,7 @@ public final class Class104_Sub1 extends Class104 {
 			else
 				Class21.aClass104_Sub18_Sub17_Sub3Array223[1].method889(15 + var4, 4);
 
-			var0.method863("Location", 32 + var4, 17, 16777215, -1);
+			var0.drawstr("Location", 32 + var4, 17, 16777215, -1);
 			final short var5 = 610;
 			if ((Class66.anIntArray519[0] == 3) && (Class66.anIntArray545[0] == 0))
 				Class21.aClass104_Sub18_Sub17_Sub3Array223[2].method889(var5, 4);
@@ -135,7 +135,7 @@ public final class Class104_Sub1 extends Class104 {
 			else
 				Class21.aClass104_Sub18_Sub17_Sub3Array223[1].method889(var5 + 15, 4);
 
-			var0.method863("Type", var5 + 32, 17, 16777215, -1);
+			var0.drawstr("Type", var5 + 32, 17, 16777215, -1);
 		}
 
 		Class104_Sub18_Sub17.method805(708, 4, 50, 16, 0);

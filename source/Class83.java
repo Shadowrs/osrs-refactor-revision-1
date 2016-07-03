@@ -20,7 +20,7 @@ public class Class83 {
 			(byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 2, (byte) 0, (byte) 1, (byte) 2, (byte) 1, (byte) 0,
 			(byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0,
 			(byte) 0 };
-	Class104_Sub21 aClass104_Sub21_653 = new Class104_Sub21((byte[]) null);
+	RSBuf aClass104_Sub21_653 = new RSBuf((byte[]) null);
 
 	void method360(final byte[] var1) {
 		aClass104_Sub21_653.aByteArray1174 = var1;

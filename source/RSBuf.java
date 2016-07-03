@@ -1,16 +1,16 @@
 import java.math.BigInteger;
 
-public class Class104_Sub21 extends Class104 {
+public class RSBuf extends Class104 {
 	static Class84 aClass84_1175;
 	public int anInt1172;
 	public static int[] anIntArray1173 = new int[256];
 	public byte[] aByteArray1174;
 
-	public void method561(final int var1) {
+	public void writebyte(final int var1) {
 		aByteArray1174[++anInt1172 - 1] = (byte) var1;
 	}
 
-	public void method562(final long var1) {
+	public void writeLong(final long var1) {
 		aByteArray1174[++anInt1172 - 1] = (byte) ((int) (var1 >> 56));
 		aByteArray1174[++anInt1172 - 1] = (byte) ((int) (var1 >> 48));
 		aByteArray1174[++anInt1172 - 1] = (byte) ((int) (var1 >> 40));
@@ -21,7 +21,7 @@ public class Class104_Sub21 extends Class104 {
 		aByteArray1174[++anInt1172 - 1] = (byte) ((int) var1);
 	}
 
-	public void method563(final String var1) {
+	public void writeString(final String var1) {
 		final int var2 = var1.indexOf(0);
 		if (var2 >= 0)
 			throw new IllegalArgumentException("");
@@ -56,9 +56,9 @@ public class Class104_Sub21 extends Class104 {
 
 	public void method568(final int var1) {
 		if ((var1 >= 0) && (var1 < 128))
-			method561(var1);
+			writebyte(var1);
 		else if ((var1 >= 0) && (var1 < '\u8000'))
-			method603(var1 + '\u8000');
+			writeShort(var1 + '\u8000');
 		else
 			throw new IllegalArgumentException();
 	}
@@ -68,18 +68,18 @@ public class Class104_Sub21 extends Class104 {
 			if ((var1 & -16384) != 0) {
 				if ((var1 & -2097152) != 0) {
 					if ((var1 & -268435456) != 0)
-						method561((var1 >>> 28) | 128);
+						writebyte((var1 >>> 28) | 128);
 
-					method561((var1 >>> 21) | 128);
+					writebyte((var1 >>> 21) | 128);
 				}
 
-				method561((var1 >>> 14) | 128);
+				writebyte((var1 >>> 14) | 128);
 			}
 
-			method561((var1 >>> 7) | 128);
+			writebyte((var1 >>> 7) | 128);
 		}
 
-		method561(var1 & 127);
+		writebyte(var1 & 127);
 	}
 
 	public int method570() {
@@ -208,17 +208,17 @@ public class Class104_Sub21 extends Class104 {
 		}
 	}
 
-	public void method582(final BigInteger var1, final BigInteger var2) {
+	public void doRSA(final BigInteger var1, final BigInteger var2) {
 		final int var3 = anInt1172;
 		anInt1172 = 0;
 		final byte[] var4 = new byte[var3];
 		method577(var4, 0, var3);
 		final BigInteger var5 = new BigInteger(var4);
-		final BigInteger var6 = var5.modPow(var1, var2);
+		final BigInteger var6 = var5; // .modPow(var1, var2); // uncommented disabled rsa being applied
 		final byte[] var7 = var6.toByteArray();
 		anInt1172 = 0;
-		method603(var7.length);
-		method615(var7, 0, var7.length);
+		writeShort(var7.length);
+		appendBytes(var7, 0, var7.length);
 	}
 
 	public int method583(final int var1) {
@@ -230,7 +230,7 @@ public class Class104_Sub21 extends Class104 {
 			var4 = (var4 >>> 8) ^ anIntArray1173[(var4 ^ var2[var5]) & 255];
 
 		var4 = ~var4;
-		method619(var4);
+		writeInt(var4);
 		return var4;
 	}
 
@@ -362,7 +362,7 @@ public class Class104_Sub21 extends Class104 {
 		return var4 == var3;
 	}
 
-	public void method603(final int var1) {
+	public void writeShort(final int var1) {
 		aByteArray1174[++anInt1172 - 1] = (byte) (var1 >> 8);
 		aByteArray1174[++anInt1172 - 1] = (byte) var1;
 	}
@@ -392,8 +392,8 @@ public class Class104_Sub21 extends Class104 {
 			}
 
 			anInt1172 -= 8;
-			method619(var7);
-			method619(var8);
+			writeInt(var7);
+			writeInt(var8);
 		}
 
 		anInt1172 = var4;
@@ -456,7 +456,7 @@ public class Class104_Sub21 extends Class104 {
 				+ ((aByteArray1174[anInt1172 - 3] & 255) << 16);
 	}
 
-	public void method615(final byte[] var1, final int var2, final int var3) {
+	public void appendBytes(final byte[] var1, final int var2, final int var3) {
 		for (int var4 = var2; var4 < (var3 + var2); ++var4)
 			aByteArray1174[++anInt1172 - 1] = var1[var4];
 
@@ -501,26 +501,26 @@ public class Class104_Sub21 extends Class104 {
 			}
 
 			anInt1172 -= 8;
-			method619(var7);
-			method619(var8);
+			writeInt(var7);
+			writeInt(var8);
 		}
 
 		anInt1172 = var4;
 	}
 
-	public Class104_Sub21(final int var1) {
+	public RSBuf(final int var1) {
 		aByteArray1174 = Class46.method202(var1, 1985237951);
 		anInt1172 = 0;
 	}
 
-	public void method619(final int var1) {
+	public void writeInt(final int var1) {
 		aByteArray1174[++anInt1172 - 1] = (byte) (var1 >> 24);
 		aByteArray1174[++anInt1172 - 1] = (byte) (var1 >> 16);
 		aByteArray1174[++anInt1172 - 1] = (byte) (var1 >> 8);
 		aByteArray1174[++anInt1172 - 1] = (byte) var1;
 	}
 
-	public Class104_Sub21(final byte[] var1) {
+	public RSBuf(final byte[] var1) {
 		aByteArray1174 = var1;
 		anInt1172 = 0;
 	}

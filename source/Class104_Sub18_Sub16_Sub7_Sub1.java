@@ -90,7 +90,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 		return null != aClass85_1770;
 	}
 
-	final void method950(final Class104_Sub21 var1) {
+	final void method950(final RSBuf var1) {
 		var1.anInt1172 = 0;
 		final int var2 = var1.method570();
 		anInt1771 = var1.method565();

@@ -3,7 +3,7 @@ public class Class105 {
 
 	static final void method472(final byte[] var0, final int var1, final int var2, final Class17 var3,
 			final Class67[] var4) {
-		final Class104_Sub21 var5 = new Class104_Sub21(var0);
+		final RSBuf var5 = new RSBuf(var0);
 		int var6 = -1;
 
 		while (true) {

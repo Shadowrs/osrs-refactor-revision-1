@@ -37,7 +37,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 	void method673() {
 	}
 
-	void method674(final Class104_Sub21 var1) {
+	void method674(final RSBuf var1) {
 		while (true) {
 			final int var2 = var1.method570();
 			if (var2 == 0)
@@ -159,7 +159,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 				? Class64.method296(anIntArray1230[var1]) : null;
 	}
 
-	void method678(final Class104_Sub21 var1, final int var2) {
+	void method678(final RSBuf var1, final int var2) {
 		int var3;
 		int var4;
 		if (var2 == 1) {
@@ -269,7 +269,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 		}
 	}
 
-	static void method680(final String var0, final String var1, final String var2) {
+	static void drawlogin(final String var0, final String var1, final String var2) {
 		Class66.aString537 = var0;
 		Class66.aString516 = var1;
 		Class66.aString539 = var2;

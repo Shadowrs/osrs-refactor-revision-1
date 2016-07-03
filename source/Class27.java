@@ -28,7 +28,7 @@ public class Class27 {
 			var1 = new Class104_Sub18_Sub12();
 			var1.anInt1418 = var0;
 			if (var2 != null)
-				var1.method771(new Class104_Sub21(var2));
+				var1.method771(new RSBuf(var2));
 
 			var1.method772();
 			if (var1.anInt1433 != -1)

@@ -10,13 +10,13 @@ public class Class10 {
 			}
 
 			if ((var0 == 20) || (var0 == 40)) {
-				client.anInt1823 = 0;
+				client.step = 0;
 				client.anInt1824 = 0;
 				client.anInt1968 = 0;
 			}
 
 			if ((var0 != 20) && (var0 != 40) && (null != Class57.aClass13_467)) {
-				Class57.aClass13_467.method52();
+				Class57.aClass13_467.destory();
 				Class57.aClass13_467 = null;
 			}
 

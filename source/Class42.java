@@ -13,7 +13,7 @@ public class Class42 {
 				return null;
 			else {
 				var1 = new Class104_Sub18_Sub4();
-				final Class104_Sub21 var3 = new Class104_Sub21(var2);
+				final RSBuf var3 = new RSBuf(var2);
 				var3.anInt1172 = var3.aByteArray1174.length - 12;
 				final int var4 = var3.method574();
 				var1.anInt1279 = var3.method571();

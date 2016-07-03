@@ -207,7 +207,7 @@ public class Class104_Sub15 extends Class104 {
 				if ((var3 & 2) != 0) {
 					var4 = client.aClass104_Sub21_Sub1_1963.method588();
 					final byte[] var12 = new byte[var4];
-					final Class104_Sub21 var13 = new Class104_Sub21(var12);
+					final RSBuf var13 = new RSBuf(var12);
 					client.aClass104_Sub21_Sub1_1963.method617(var12, 0, var4);
 					client.aClass104_Sub21Array2030[var1] = var13;
 					var10.method950(var13);

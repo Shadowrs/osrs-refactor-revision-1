@@ -57,8 +57,8 @@ public final class Class104_Sub20 extends Class104 {
 				client.aClass85_2047.method386(true);
 
 			if (var1 == 326) {
-				client.aClass104_Sub21_Sub1_1825.method623(71);
-				client.aClass85_2047.method387(client.aClass104_Sub21_Sub1_1825);
+				client.secureBuf.method623(71);
+				client.aClass85_2047.method387(client.secureBuf);
 				return true;
 			} else
 				return false;

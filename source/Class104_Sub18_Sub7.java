@@ -22,7 +22,7 @@ public class Class104_Sub18_Sub7 extends Class104_Sub18 {
 		method754(anInt1376);
 	}
 
-	void method753(final Class104_Sub21 var1, final int var2) {
+	void method753(final RSBuf var1, final int var2) {
 		if (var2 == 1)
 			anInt1376 = var1.method614();
 		else if (var2 == 2)
@@ -88,7 +88,7 @@ public class Class104_Sub18_Sub7 extends Class104_Sub18 {
 
 	}
 
-	void method755(final Class104_Sub21 var1, final int var2) {
+	void method755(final RSBuf var1, final int var2) {
 		while (true) {
 			final int var3 = var1.method570();
 			if (var3 == 0)

@@ -86,7 +86,7 @@ public class Class53 {
 	}
 
 	static void method234(final byte[] var0) {
-		final Class104_Sub21 var1 = new Class104_Sub21(var0);
+		final RSBuf var1 = new RSBuf(var0);
 		var1.anInt1172 = var0.length - 2;
 		Class12.anInt67 = var1.method571();
 		Class12.anIntArray70 = new int[Class12.anInt67];
@@ -190,9 +190,9 @@ public class Class53 {
 							.equals(var2))
 						Class15.method60(0, "", "You can\'t add yourself to your own ignore list");
 					else {
-						client.aClass104_Sub21_Sub1_1825.method623(231);
-						client.aClass104_Sub21_Sub1_1825.method561(Class104_Sub21_Sub1.method630(var0));
-						client.aClass104_Sub21_Sub1_1825.method563(var0);
+						client.secureBuf.method623(231);
+						client.secureBuf.writebyte(Class104_Sub21_Sub1.method630(var0));
+						client.secureBuf.writeString(var0);
 					}
 				}
 			}

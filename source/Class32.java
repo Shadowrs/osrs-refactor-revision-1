@@ -120,19 +120,19 @@ public final class Class32 {
 				var0.method882(Class66.aString539, 382, var21, 16776960, 0);
 				var21 += 15;
 				var21 += 10;
-				var0.method863("Login: ", 272, var21, 16777215, 0);
+				var0.drawstr("Login: ", 272, var21, 16777215, 0);
 				var22 = 200;
 
 				for (var4 = Class66.aString543; var0.method883(var4) > var22; var4 = var4.substring(0,
 						var4.length() - 1))
 					;
 
-				var0.method863(Class104_Sub18_Sub17_Sub2.method879(var4), 312, var21, 16777215, 0);
+				var0.drawstr(Class104_Sub18_Sub17_Sub2.method879(var4), 312, var21, 16777215, 0);
 				var21 += 15;
 				var6 = "Password: ";
 				var7 = Class66.aString522;
 				var8 = Class29.method140('\u002a', var7.length());
-				var0.method863(var6 + var8, 274, var21, 16777215, 0);
+				var0.drawstr(var6 + var8, 274, var21, 16777215, 0);
 				var21 += 15;
 			}
 
@@ -159,13 +159,13 @@ public final class Class32 {
 					var0.method882(Class66.aString539, 382, var21, 16776960, 0);
 					var21 += 15;
 					var21 += 10;
-					var0.method863("Login: ", 272, var21, 16777215, 0);
+					var0.drawstr("Login: ", 272, var21, 16777215, 0);
 					var22 = 200;
 
 					for (var4 = Class66.aString543; var0.method883(var4) > var22; var4 = var4.substring(1))
 						;
 
-					var0.method863(Class104_Sub18_Sub17_Sub2.method879(var4)
+					var0.drawstr(Class104_Sub18_Sub17_Sub2.method879(var4)
 							+ ((Class66.anInt535 == 0) & ((client.anInt1799 % 40) < 20)
 									? Class70.method326(16776960) + "|" : ""),
 							312, var21, 16777215, 0);
@@ -173,7 +173,7 @@ public final class Class32 {
 					var6 = "Password: ";
 					var7 = Class66.aString522;
 					var8 = Class29.method140('\u002a', var7.length());
-					var0.method863(var6 + var8 + ((Class66.anInt535 == 1) & ((client.anInt1799 % 40) < 20)
+					var0.drawstr(var6 + var8 + ((Class66.anInt535 == 1) & ((client.anInt1799 % 40) < 20)
 							? Class70.method326(16776960) + "|" : ""), 274, var21, 16777215, 0);
 					var21 += 15;
 					short var10 = 302;

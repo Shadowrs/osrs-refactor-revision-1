@@ -44,7 +44,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 	public String[] aStringArray1434 = new String[] { null, null, "Take", null, null };
 	public String[] aStringArray1435 = new String[] { null, null, null, null, "Drop" };
 
-	void method771(final Class104_Sub21 var1) {
+	void method771(final RSBuf var1) {
 		while (true) {
 			final int var2 = var1.method570();
 			if (var2 == 0)
@@ -57,7 +57,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 	void method772() {
 	}
 
-	void method773(final Class104_Sub21 var1, final int var2) {
+	void method773(final RSBuf var1, final int var2) {
 		if (var2 == 1)
 			anInt1419 = var1.method571();
 		else if (var2 == 2)
@@ -404,7 +404,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 			var1 = new Class104_Sub18_Sub6();
 			var1.anInt1330 = var0;
 			if (null != var2)
-				var1.method740(new Class104_Sub21(var2));
+				var1.method740(new RSBuf(var2));
 
 			var1.method741();
 			if (var1.aBool1368) {

@@ -37,7 +37,7 @@ public final class Class65 {
 			final byte[] var2 = Class49.aClass61_418.method259(4, var0);
 			var1 = new Class104_Sub18_Sub7();
 			if (null != var2)
-				var1.method755(new Class104_Sub21(var2), var0);
+				var1.method755(new RSBuf(var2), var0);
 
 			var1.method752();
 			Class104_Sub18_Sub7.aClass56_1381.method238(var1, var0);

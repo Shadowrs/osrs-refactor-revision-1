@@ -4,7 +4,7 @@ public class Class106 {
 	static Class104_Sub12[] aClass104_Sub12Array828;
 	static Class61 aClass61_829;
 
-	static final void method474(final Class104_Sub21 var0, final int var1, final int var2, final int var3,
+	static final void method474(final RSBuf var0, final int var1, final int var2, final int var3,
 			final int var4, final int var5, final int var6) {
 		int var7;
 		if ((var2 >= 0) && (var2 < 104) && (var3 >= 0) && (var3 < 104)) {

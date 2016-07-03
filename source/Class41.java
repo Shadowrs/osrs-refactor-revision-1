@@ -19,7 +19,7 @@ public class Class41 implements Interface3 {
 		return anInt367;
 	}
 
-	public static int method183(final Class104_Sub21 var0, final String var1) {
+	public static int method183(final RSBuf var0, final String var1) {
 		final int var2 = var0.anInt1172;
 		final byte[] var3 = Class67.method316(var1);
 		var0.method568(var3.length);
