@@ -396,36 +396,35 @@ public final class client extends Applet_Sub1 {
 				Class90.aString716 = Class64.aString513.toLowerCase();
 
 				try {
-					Class104_Sub23.aString1181 = System.getProperty("user.home");
-					if (null != Class104_Sub23.aString1181)
-						Class104_Sub23.aString1181 = Class104_Sub23.aString1181 + "/";
+					Class104_Sub23.HOME = System.getProperty("user.home");
+					if (null != Class104_Sub23.HOME)
+						Class104_Sub23.HOME = Class104_Sub23.HOME + "/";
 				} catch (final Exception var19) {
 					;
 				}
 
 				try {
 					if (Class90.aString716.startsWith("win")) {
-						if (Class104_Sub23.aString1181 == null)
-							Class104_Sub23.aString1181 = System.getenv("USERPROFILE");
-					} else if (null == Class104_Sub23.aString1181)
-						Class104_Sub23.aString1181 = System.getenv("HOME");
+						if (Class104_Sub23.HOME == null)
+							Class104_Sub23.HOME = System.getenv("USERPROFILE");
+					} else if (null == Class104_Sub23.HOME)
+						Class104_Sub23.HOME = System.getenv("HOME");
 
-					if (Class104_Sub23.aString1181 != null)
-						Class104_Sub23.aString1181 = Class104_Sub23.aString1181 + "/";
+					if (Class104_Sub23.HOME != null)
+						Class104_Sub23.HOME = Class104_Sub23.HOME + "/";
 				} catch (final Exception var18) {
 					;
 				}
 
-				if (null == Class104_Sub23.aString1181)
-					Class104_Sub23.aString1181 = "~/";
+				if (null == Class104_Sub23.HOME)
+					Class104_Sub23.HOME = "~/";
 
-				Class49.aStringArray415 = new String[] { "c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/",
-						Class104_Sub23.aString1181, "/tmp/", "" };
-				Class7.aStringArray40 = new String[] { ".jagex_cache_" + Class16.anInt116,
-						".file_store_" + Class16.anInt116 };
+				// DIRECTORIES
+				Class49.targets = new String[] { /*"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/",*/ Class104_Sub23.HOME, /*"/tmp/", "" */};
+				Class7.store = new String[] { "os-rev1", /*".jagex_cache_" + Class16.anInt116, ".file_store_" + Class16.anInt116 */};
 
 				label129: for (var3 = 0; var3 < 4; ++var3) {
-					Class24.aFile239 = Class70.method325("oldschool", var22, var3);
+					Class24.aFile239 = Class70.method325("gamename", var22, var3);
 					if (!Class24.aFile239.exists())
 						Class24.aFile239.mkdirs();
 

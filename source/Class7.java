@@ -2,7 +2,7 @@ public class Class7 {
 	int anInt37;
 	int anInt38;
 	int anInt39;
-	public static String[] aStringArray40;
+	public static String[] store;
 	static int[][] anIntArrayArray41;
 	static int anInt42;
 	static Class61 aClass61_43;

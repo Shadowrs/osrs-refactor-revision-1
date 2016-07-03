@@ -70,16 +70,16 @@ public class Class70 {
 
 	public static File method325(final String var0, final String var1, final int var2) {
 		final String var3 = var2 == 0 ? "" : "" + var2;
-		Class24.aFile240 = new File(Class104_Sub23.aString1181, "jagex_cl_" + var0 + "_" + var1 + var3 + ".dat");
-		String var4 = null;
+		Class24.settings = new File(Class104_Sub23.HOME, "jagex_cl_" + var0 + "_" + var1 + var3 + ".dat");
+		String dir = null;
 		String var5 = null;
 		boolean var6 = false;
 		Class104_Sub21 var8;
 		int var12;
 		File var27;
-		if (Class24.aFile240.exists()) {
+		if (Class24.settings.exists()) {
 			try {
-				final Class94 var7 = new Class94(Class24.aFile240, "rw", 10000L);
+				final Class94 var7 = new Class94(Class24.settings, "rw", 10000L);
 
 				int var9;
 				for (var8 = new Class104_Sub21(
@@ -100,11 +100,11 @@ public class Class70 {
 					var10 = var8.method570();
 
 				if (var9 <= 2) {
-					var4 = var8.method616();
+					dir = var8.method616();
 					if (var10 == 1)
 						var5 = var8.method616();
 				} else {
-					var4 = var8.method581();
+					dir = var8.method581();
 					if (var10 == 1)
 						var5 = var8.method581();
 				}
@@ -114,14 +114,14 @@ public class Class70 {
 				var25.printStackTrace();
 			}
 
-			if (var4 != null) {
-				var27 = new File(var4);
+			if (dir != null) {
+				var27 = new File(dir);
 				if (!var27.exists())
-					var4 = null;
+					dir = null;
 			}
 
-			if (var4 != null) {
-				var27 = new File(var4, "test.dat");
+			if (dir != null) {
+				var27 = new File(dir, "test.dat");
 
 				boolean var28;
 				try {
@@ -138,50 +138,49 @@ public class Class70 {
 				}
 
 				if (!var28)
-					var4 = null;
+					dir = null;
 			}
 		}
 
-		if ((var4 == null) && (var2 == 0))
-			label125: for (int var13 = 0; var13 < Class7.aStringArray40.length; ++var13)
-				for (int var14 = 0; var14 < Class49.aStringArray415.length; ++var14) {
-					final File var15 = new File(Class49.aStringArray415[var14] + Class7.aStringArray40[var13]
-							+ File.separatorChar + var0 + File.separatorChar);
+		if ((dir == null) && (var2 == 0))
+			label125: for (int var13 = 0; var13 < Class7.store.length; ++var13)
+				for (int var14 = 0; var14 < Class49.targets.length; ++var14) {
+					final File var15 = new File(Class49.targets[var14] + Class7.store[var13] + File.separatorChar + var0 + File.separatorChar);
 					if (var15.exists()) {
-						final File var16 = new File(var15, "test.dat");
+						final File test = new File(var15, "test.dat");
 
 						boolean var30;
 						try {
-							final RandomAccessFile var17 = new RandomAccessFile(var16, "rw");
+							final RandomAccessFile var17 = new RandomAccessFile(test, "rw");
 							final int var18 = var17.read();
 							var17.seek(0L);
 							var17.write(var18);
 							var17.seek(0L);
 							var17.close();
-							var16.delete();
+							test.delete();
 							var30 = true;
 						} catch (final Exception var22) {
 							var30 = false;
 						}
 
 						if (var30) {
-							var4 = var15.toString();
+							dir = var15.toString();
 							var6 = true;
 							break label125;
 						}
 					}
 				}
 
-		if (null == var4) {
-			var4 = Class104_Sub23.aString1181 + File.separatorChar + "jagexcache" + var3 + File.separatorChar + var0
-					+ File.separatorChar + var1 + File.separatorChar;
+		if (null == dir) {
+			// jagexcache
+			dir = Class104_Sub23.HOME + File.separatorChar + "timelord" + var3 + File.separatorChar + var0 + File.separatorChar + var1 + File.separatorChar;
 			var6 = true;
 		}
 
 		File var26;
 		if (var5 != null) {
 			var26 = new File(var5);
-			var27 = new File(var4);
+			var27 = new File(dir);
 
 			try {
 				final File[] var32 = var26.listFiles();
@@ -202,11 +201,11 @@ public class Class70 {
 		}
 
 		if (var6) {
-			var26 = new File(var4);
+			var26 = new File(dir);
 			var8 = null;
 
 			try {
-				final Class94 var33 = new Class94(Class24.aFile240, "rw", 10000L);
+				final Class94 var33 = new Class94(Class24.settings, "rw", 10000L);
 				final Class104_Sub21 var31 = new Class104_Sub21(500);
 				var31.method561(3);
 				var31.method561(null != var8 ? 1 : 0);
@@ -217,8 +216,8 @@ public class Class70 {
 				var21.printStackTrace();
 			}
 		}
-
-		return new File(var4);
+		System.out.println("file at : "+dir);
+		return new File(dir);
 	}
 
 	static String method326(final int var0) {

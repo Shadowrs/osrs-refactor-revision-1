@@ -3,7 +3,7 @@ import java.io.File;
 public class Class24 {
 	public static int anInt238;
 	public static File aFile239;
-	static File aFile240;
+	static File settings;
 	static int[] anIntArray244;
 	static Class96 aClass96_241 = null;
 	public static Class96 aClass96_242 = null;
