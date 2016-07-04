@@ -186,7 +186,7 @@ public class Class104_Sub15 extends Class104 {
 									var7);
 							client.aClass104_Sub21_1885.pos = 0;
 							final String var11 = Class104_Sub18_Sub17_Sub2
-									.method879(Class80.method351(Class50.method224(client.aClass104_Sub21_1885)));
+									.method879(Class80.method351(Class50.huffmanDecode(client.aClass104_Sub21_1885)));
 							var10.aString1723 = var11.trim();
 							var10.anInt1731 = var4 >> 8;
 							var10.anInt1749 = var4 & 255;
@@ -269,7 +269,7 @@ public class Class104_Sub15 extends Class104 {
 				}
 
 				if ((var3 & 1) != 0) {
-					var10.aString1723 = client.gamecon.method608();
+					var10.aString1723 = client.gamecon.readString();
 					if (var10.aString1723.charAt(0) == 126) {
 						var10.aString1723 = var10.aString1723.substring(1);
 						Class15.method60(2, var10.aString1780, var10.aString1723);

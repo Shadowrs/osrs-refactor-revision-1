@@ -50,7 +50,7 @@ public abstract class Class47 {
 	}
 
 	public static void method213(final Class49 var0) {
-		Class106.aClass49_826 = var0;
+		Class106.huffman = var0;
 	}
 
 	public static Class104_Sub18_Sub17_Sub2_Sub1 method214(final Class61 var0, final Class61 var1, final String var2,

@@ -1,5 +1,5 @@
 public class Class104_Sub13 extends Class104 {
-	public Class16 aClass16_1095;
+	public JagFS2 aClass16_1095;
 	public byte[] aByteArray1096;
 	int anInt1097;
 	public Class61_Sub1 aClass61_Sub1_1098;
@@ -279,7 +279,7 @@ public class Class104_Sub13 extends Class104 {
 				client.secureBuf.method586(client.anIntArray1854[var14] - var21);
 			}
 
-			client.secureBuf.method592(Class20.anInt206 + var21);
+			client.secureBuf.writeLEShortA(Class20.anInt206 + var21);
 			client.secureBuf.writebyte(Class25.aBoolArray249[82] ? 1 : 0);
 			client.secureBuf.writeShort(var28 + Class53.anInt436);
 			return true;

@@ -169,7 +169,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			for (var4 = 0; var4 < var3; ++var4)
 				anIntArray1249[var4] = var1.readLEShort();
 		} else if (var2 == 2)
-			aString1229 = var1.method608();
+			aString1229 = var1.readString();
 		else if (var2 == 12)
 			anInt1240 = var1.readUByte();
 		else if (var2 == 13)
@@ -186,7 +186,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			anInt1251 = var1.readLEShort();
 			anInt1239 = var1.readLEShort();
 		} else if ((var2 >= 30) && (var2 < 35)) {
-			aStringArray1225[var2 - 30] = var1.method608();
+			aStringArray1225[var2 - 30] = var1.readString();
 			if (aStringArray1225[var2 - 30].equalsIgnoreCase("Hidden"))
 				aStringArray1225[var2 - 30] = null;
 		} else if (var2 == 40) {

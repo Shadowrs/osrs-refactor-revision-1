@@ -160,7 +160,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 		if (anInt1705 == '\uffff')
 			anInt1705 = -1;
 
-		aString1780 = var1.method608();
+		aString1780 = var1.readString();
 		if (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644 == this)
 			RuntimeException_Sub1.aString1478 = aString1780;
 

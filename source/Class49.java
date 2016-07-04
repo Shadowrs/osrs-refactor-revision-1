@@ -9,16 +9,16 @@ public class Class49 {
 	byte[] aByteArray412;
 	int[] anIntArray414;
 
-	public int method218(final byte[] var1, final int var2, final byte[] var3, int var4, int var5) {
-		if (var5 == 0)
+	public int decihper(final byte[] from, final int start, final byte[] to, int offset, int size) {
+		if (size == 0)
 			return 0;
 		else {
 			int var6 = 0;
-			var5 += var4;
-			int var7 = var2;
+			size += offset;
+			int var7 = start;
 
 			while (true) {
-				final byte var8 = var1[var7];
+				final byte var8 = from[var7];
 				if (var8 < 0)
 					var6 = anIntArray414[var6];
 				else
@@ -26,8 +26,8 @@ public class Class49 {
 
 				int var9;
 				if ((var9 = anIntArray414[var6]) < 0) {
-					var3[var4++] = (byte) (~var9);
-					if (var4 >= var5)
+					to[offset++] = (byte) (~var9);
+					if (offset >= size)
 						break;
 
 					var6 = 0;
@@ -39,8 +39,8 @@ public class Class49 {
 					++var6;
 
 				if ((var9 = anIntArray414[var6]) < 0) {
-					var3[var4++] = (byte) (~var9);
-					if (var4 >= var5)
+					to[offset++] = (byte) (~var9);
+					if (offset >= size)
 						break;
 
 					var6 = 0;
@@ -52,8 +52,8 @@ public class Class49 {
 					++var6;
 
 				if ((var9 = anIntArray414[var6]) < 0) {
-					var3[var4++] = (byte) (~var9);
-					if (var4 >= var5)
+					to[offset++] = (byte) (~var9);
+					if (offset >= size)
 						break;
 
 					var6 = 0;
@@ -65,8 +65,8 @@ public class Class49 {
 					++var6;
 
 				if ((var9 = anIntArray414[var6]) < 0) {
-					var3[var4++] = (byte) (~var9);
-					if (var4 >= var5)
+					to[offset++] = (byte) (~var9);
+					if (offset >= size)
 						break;
 
 					var6 = 0;
@@ -78,8 +78,8 @@ public class Class49 {
 					++var6;
 
 				if ((var9 = anIntArray414[var6]) < 0) {
-					var3[var4++] = (byte) (~var9);
-					if (var4 >= var5)
+					to[offset++] = (byte) (~var9);
+					if (offset >= size)
 						break;
 
 					var6 = 0;
@@ -91,8 +91,8 @@ public class Class49 {
 					++var6;
 
 				if ((var9 = anIntArray414[var6]) < 0) {
-					var3[var4++] = (byte) (~var9);
-					if (var4 >= var5)
+					to[offset++] = (byte) (~var9);
+					if (offset >= size)
 						break;
 
 					var6 = 0;
@@ -104,8 +104,8 @@ public class Class49 {
 					++var6;
 
 				if ((var9 = anIntArray414[var6]) < 0) {
-					var3[var4++] = (byte) (~var9);
-					if (var4 >= var5)
+					to[offset++] = (byte) (~var9);
+					if (offset >= size)
 						break;
 
 					var6 = 0;
@@ -117,8 +117,8 @@ public class Class49 {
 					++var6;
 
 				if ((var9 = anIntArray414[var6]) < 0) {
-					var3[var4++] = (byte) (~var9);
-					if (var4 >= var5)
+					to[offset++] = (byte) (~var9);
+					if (offset >= size)
 						break;
 
 					var6 = 0;
@@ -127,7 +127,7 @@ public class Class49 {
 				++var7;
 			}
 
-			return (1 + var7) - var2;
+			return (1 + var7) - start;
 		}
 	}
 

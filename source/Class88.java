@@ -1,6 +1,6 @@
 public class Class88 {
 	static int[] anIntArray700;
-	static Class16 aClass16_701;
+	static JagFS2 aClass16_701;
 
 	static void method401(final Applet_Sub1 var0) {
 		if (Class66.aBool541)

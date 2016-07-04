@@ -1,7 +1,7 @@
 import java.io.EOFException;
 import java.io.IOException;
 
-public final class Class16 {
+public final class JagFS2 {
 	public static int anInt116;
 	static byte[] aByteArray113 = new byte[520];
 	FSManager aClass96_111 = null;
@@ -120,7 +120,7 @@ public final class Class16 {
 		}
 	}
 
-	public Class16(final int var1, final FSManager var2, final FSManager var3, final int var4) {
+	public JagFS2(final int var1, final FSManager var2, final FSManager var3, final int var4) {
 		anInt114 = var1;
 		aClass96_111 = var2;
 		aClass96_112 = var3;

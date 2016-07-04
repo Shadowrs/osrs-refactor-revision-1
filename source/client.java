@@ -387,7 +387,7 @@ public final class client extends Applet_Sub1 {
 
 			try {
 				Class24.idxCount = 16;
-				Class16.anInt116 = var14;
+				JagFS2.anInt116 = var14;
 
 				try {
 					Class64.osName = System.getProperty("os.name");
@@ -562,7 +562,7 @@ final void method943(final byte var1) {
                Class88.method401(this);
                Class104_Sub8_Sub4.login();
             } else if(loadstage == 25) {
-               Class20.method121(false);
+               Class20.writePkt228(false);
                mapfails = 0;
                boolean valid = true;
 
@@ -654,7 +654,7 @@ final void method943(final byte var1) {
                      }
 
                      Class104_Sub1.aClass59_849.method247();
-                     Class20.method121(true);
+                     Class20.writePkt228(true);
                      if(!dynamicRegion) {
                         byte[] var12;
                         for(var11 = 0; var11 < map; ++var11) {
@@ -677,7 +677,7 @@ final void method943(final byte var1) {
                            }
                         }
 
-                        Class20.method121(true);
+                        Class20.writePkt228(true);
 
                         for(var11 = 0; var11 < map; ++var11) {
                            final byte[] var6 = Class70.landscapedata[var11];
@@ -703,7 +703,7 @@ final void method943(final byte var1) {
 										Nodee.method519(8 * var11, 8 * localx, 8, 8);
                                  }
 
-                              Class20.method121(true);
+                              Class20.writePkt228(true);
                               var11 = 0;
 
                               while(true) {
@@ -785,11 +785,11 @@ final void method943(final byte var1) {
                         }
                      }
 
-                     Class20.method121(true);
+                     Class20.writePkt228(true);
                      Class33.method158();
                      Class101.method465();
                      Class104_Sub18_Sub14.method785(Class81.aClass17_643, aClass67Array1975);
-                     Class20.method121(true);
+                     Class20.writePkt228(true);
                      var11 = Class76.anInt601;
                      if(var11 > Class12.anInt73)
 						var11 = Class12.anInt73;
@@ -940,10 +940,10 @@ final void method943(final byte var1) {
                                  break label3291;
                               }
 
-                              String var112;
-                              String var117;
+                              String str0;
+                              String str1;
                               if(pktOpc == 168) {
-                                 var82 = gamecon.method608();
+                                 var82 = gamecon.readString();
                                  final GameBuf var104 = gamecon;
 
                                  try {
@@ -952,15 +952,15 @@ final void method943(final byte var1) {
 										var15 = 32767;
 
                                     final byte[] var114 = new byte[var15];
-                                    var104.pos += Class106.aClass49_826.method218(var104.backing, var104.pos, var114, 0, var15);
-                                    var112 = ObjectDefinition.method751(var114, 0, var15);
-                                    var117 = var112;
+                                    var104.pos += Class106.huffman.decihper(var104.backing, var104.pos, var114, 0, var15);
+                                    str0 = client.decodeStr(var114, 0, var15);
+                                    str1 = str0;
                                  } catch (final Exception var58) {
-                                    var117 = "Cabbage";
+                                    str1 = "Cabbage";
                                  }
 
-                                 var117 = Class104_Sub18_Sub17_Sub2.method879(Class80.method351(var117));
-                                 Class15.method60(6, var82, var117);
+                                 str1 = Class104_Sub18_Sub17_Sub2.method879(Class80.method351(str1));
+                                 Class15.method60(6, var82, str1);
                                  pktOpc = -1;
                                  var87 = true;
                                  break label3291;
@@ -1001,7 +1001,7 @@ final void method943(final byte var1) {
 
                               String var83;
                               if(pktOpc == 100) {
-                                 var82 = gamecon.method608();
+                                 var82 = gamecon.readString();
                                  if(var82.endsWith(":tradereq:")) {
                                     var83 = Class33.method155(var82.substring(0, var82.indexOf(":")), Class2.aClass101_8);
                                     var95 = false;
@@ -1025,8 +1025,8 @@ final void method943(final byte var1) {
 										var95 = true;
 
                                     if(!var95 && (anInt1906 == 0)) {
-                                       var117 = var82.substring(var82.indexOf(":") + 1, var82.length() - 9);
-                                       Class15.method60(8, var83, var117);
+                                       str1 = var82.substring(var82.indexOf(":") + 1, var82.length() - 9);
+                                       Class15.method60(8, var83, str1);
                                     }
                                  } else if(var82.endsWith(":assistreq:")) {
                                     var83 = Class33.method155(var82.substring(0, var82.indexOf(":")), Class2.aClass101_8);
@@ -1117,7 +1117,7 @@ final void method943(final byte var1) {
                               long var25;
                               long var27;
                               if(pktOpc == 86) {
-                                 var82 = gamecon.method608();
+                                 var82 = gamecon.readString();
                                  var25 = gamecon.readLEShort();
                                  var27 = gamecon.method614();
                                  var16 = gamecon.readUByte();
@@ -1145,8 +1145,8 @@ final void method943(final byte var1) {
 										var32 = 32767;
 
                                        final byte[] var132 = new byte[var32];
-                                       var129.pos += Class106.aClass49_826.method218(var129.backing, var129.pos, var132, 0, var32);
-                                       final String var34 = ObjectDefinition.method751(var132, 0, var32);
+                                       var129.pos += Class106.huffman.decihper(var129.backing, var129.pos, var132, 0, var32);
+                                       final String var34 = client.decodeStr(var132, 0, var32);
                                        var133 = var34;
                                     } catch (final Exception var57) {
                                        var133 = "Cabbage";
@@ -1495,12 +1495,12 @@ final void method943(final byte var1) {
                               }
 
                               if(pktOpc == 92) { // client script
-                                 var82 = gamecon.method608();
+                                 var82 = gamecon.readString();
                                  final Object[] var86 = new Object[var82.length() + 1];
 
                                  for(var13 = var82.length() - 1; var13 >= 0; --var13)
 									if(var82.charAt(var13) == 115)
-										var86[var13 + 1] = gamecon.method608();
+										var86[var13 + 1] = gamecon.readString();
 									else
 										var86[var13 + 1] = new Integer(gamecon.readLEInt());
 
@@ -1576,7 +1576,7 @@ final void method943(final byte var1) {
                               }
 
                               if(pktOpc == 164) {
-                                 var82 = gamecon.method608();
+                                 var82 = gamecon.readString();
                                  localy = gamecon.method576();
                                  var13 = gamecon.method588();
                                  if((localy >= 1) && (localy <= 8)) {
@@ -1645,7 +1645,7 @@ final void method943(final byte var1) {
 
                               boolean var98;
                               if(pktOpc == 140) {
-                                 var82 = gamecon.method608();
+                                 var82 = gamecon.readString();
                                  localy = gamecon.readLEShort();
                                  final byte var102 = gamecon.method565();
                                  var98 = false;
@@ -1674,7 +1674,7 @@ final void method943(final byte var1) {
                                        Class104_Sub13.aClass104_Sub7Array1099[Class89.anInt704] = null;
                                     }
                                  } else {
-                                    gamecon.method608();
+                                    gamecon.readString();
                                     final Class104_Sub7 var126 = new Class104_Sub7();
                                     var126.aString947 = var82;
                                     var126.aString948 = Class33.method155(var126.aString947, Class2.aClass101_8);
@@ -1742,13 +1742,13 @@ final void method943(final byte var1) {
                                        String var110;
                                        if((var15 != 0) && (var15 != 1) && (var15 != 2)) {
                                           if((var15 == 3) || (var15 == 4)) {
-                                             var110 = new String(var85.method608());
-                                             var112 = new String(var85.method608());
+                                             var110 = new String(var85.readString());
+                                             str0 = new String(var85.readString());
                                              var18 = var85.readUByte();
                                              final String[] var43 = new String[var18];
 
                                              for(var20 = 0; var20 < var18; ++var20)
-												var43[var20] = new String(var85.method608());
+												var43[var20] = new String(var85.readString());
 
                                              final byte[][] var135 = new byte[var18][];
                                              if(var15 == 3)
@@ -1764,19 +1764,19 @@ final void method943(final byte var1) {
                                              for(var45 = 0; var45 < var18; ++var45)
 												var31[var45] = Class78.method347(var43[var45]);
 
-                                             var99.aMethodArray1133[var14] = Class78.method347(var110).getDeclaredMethod(var112, var31);
+                                             var99.aMethodArray1133[var14] = Class78.method347(var110).getDeclaredMethod(str0, var31);
                                              var99.aByteArrayArrayArray1131[var14] = var135;
                                           }
                                        } else {
-                                          var110 = new String(var85.method608());
-                                          var112 = new String(var85.method608());
+                                          var110 = new String(var85.readString());
+                                          str0 = new String(var85.readString());
                                           var18 = 0;
                                           if(var15 == 1)
 											var18 = var85.readLEInt();
 
                                           var99.anIntArray1132[var14] = var15;
                                           var99.anIntArray1130[var14] = var18;
-                                          var99.aFieldArray1126[var14] = Class78.method347(var110).getDeclaredField(var112);
+                                          var99.aFieldArray1126[var14] = Class78.method347(var110).getDeclaredField(str0);
                                        }
                                     } catch (final ClassNotFoundException var63) {
                                        var99.anIntArray1129[var14] = -1;
@@ -1906,7 +1906,7 @@ final void method943(final byte var1) {
 
                               boolean var44;
                               if(pktOpc == 57) {
-                                 var82 = gamecon.method608();
+                                 var82 = gamecon.readString();
                                  var25 = gamecon.readLELong();
                                  var27 = gamecon.readLEShort();
                                  var38 = gamecon.method614();
@@ -1935,8 +1935,8 @@ final void method943(final byte var1) {
 										var46 = 32767;
 
                                        final byte[] var47 = new byte[var46];
-                                       var36.pos += Class106.aClass49_826.method218(var36.backing, var36.pos, var47, 0, var46);
-                                       final String var48 = ObjectDefinition.method751(var47, 0, var46);
+                                       var36.pos += Class106.huffman.decihper(var36.backing, var36.pos, var47, 0, var46);
+                                       final String var48 = client.decodeStr(var47, 0, var46);
                                        var33 = var48;
                                     } catch (final Exception var56) {
                                        var33 = "Cabbage";
@@ -1962,20 +1962,20 @@ final void method943(final byte var1) {
                                  boolean var115;
                                  for(; gamecon.pos < pktSize;) {
                                     var115 = gamecon.readUByte() == 1;
-                                    var83 = gamecon.method608();
-                                    var94 = gamecon.method608();
+                                    var83 = gamecon.readString();
+                                    var94 = gamecon.readString();
                                     var14 = gamecon.readLEShort();
                                     var15 = gamecon.readUByte();
                                     var16 = gamecon.readUByte();
                                     final boolean var105 = (var16 & 2) != 0;
                                     final boolean var111 = (var16 & 1) != 0;
                                     if(var14 > 0) {
-                                       gamecon.method608();
+                                       gamecon.readString();
                                        gamecon.readUByte();
                                        gamecon.readLEInt();
                                     }
 
-                                    gamecon.method608();
+                                    gamecon.readString();
 
                                     for(var19 = 0; var19 < anInt1935; ++var19) {
                                        final Class86 var37 = aClass86Array1972[var19];
@@ -2070,7 +2070,7 @@ final void method943(final byte var1) {
                                     break label3291;
                                  }
 
-                                 aString2012 = gamecon.method608();
+                                 aString2012 = gamecon.readString();
                                  final long var49 = gamecon.readLELong();
                                  aString1829 = Class36.method169(var49);
                                  Class103.aByte820 = gamecon.method565();
@@ -2086,11 +2086,11 @@ final void method943(final byte var1) {
 
                                  for(var15 = 0; var15 < Class89.anInt704; ++var15) {
                                     var119[var15] = new Class104_Sub7();
-                                    var119[var15].aString947 = gamecon.method608();
+                                    var119[var15].aString947 = gamecon.readString();
                                     var119[var15].aString948 = Class33.method155(var119[var15].aString947, Class2.aClass101_8);
                                     var119[var15].anInt950 = gamecon.readLEShort();
                                     var119[var15].aByte949 = gamecon.method565();
-                                    gamecon.method608();
+                                    gamecon.readString();
                                     if(var119[var15].aString947.equals(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aString1780))
 										Class97.aByte766 = var119[var15].aByte949;
                                  }
@@ -2295,22 +2295,22 @@ final void method943(final byte var1) {
                                  while(gamecon.pos < pktSize) {
                                     localx = gamecon.readUByte();
                                     var103 = (localx & 1) == 1;
-                                    var94 = gamecon.method608();
-                                    var117 = gamecon.method608();
-                                    gamecon.method608();
+                                    var94 = gamecon.readString();
+                                    str1 = gamecon.readString();
+                                    gamecon.readString();
 
                                     for(var15 = 0; var15 < anInt2045; ++var15) {
                                        final Class78 var21 = aClass78Array2046[var15];
                                        if(var103) {
-                                          if(var117.equals(var21.aString625)) {
+                                          if(str1.equals(var21.aString625)) {
                                              var21.aString625 = var94;
-                                             var21.aString624 = var117;
+                                             var21.aString624 = str1;
                                              var92 = null;
                                              break;
                                           }
                                        } else if(var94.equals(var21.aString625)) {
                                           var21.aString625 = var94;
-                                          var21.aString624 = var117;
+                                          var21.aString624 = str1;
                                           var92 = null;
                                           break;
                                        }
@@ -2459,7 +2459,7 @@ final void method943(final byte var1) {
                               }
 
                               if(pktOpc == 197) {
-                                 var82 = gamecon.method608();
+                                 var82 = gamecon.readString();
                                  localy = gamecon.method573();
                                  var92 = Class47.method210(localy);
                                  if(!var82.equals(var92.aString1025)) {
@@ -2500,7 +2500,8 @@ final void method943(final byte var1) {
                   }
 
                   if(loadstage == 30) {
-                     Class43.method185(secureBuf, 108);
+                	  System.out.println("class check packet");
+                     Class43.writeClasscheckPacket(secureBuf, 108);
                      final Object var76 = Class2_Sub2.aClass72_865.anObject583;
                      synchronized(var76) {
                         if(!aBool1979)
@@ -2594,7 +2595,7 @@ final void method943(final byte var1) {
 
                         var14 = (int)var52;
                         secureBuf.putOpcode(161);
-                        secureBuf.method612((var14 << 20) + (var128 << 19) + localy);
+                        secureBuf.writeLEIntA((var14 << 20) + (var128 << 19) + localy);
                      }
 
                      if(anInt1878 > 0)
@@ -2607,8 +2608,8 @@ final void method943(final byte var1) {
                         anInt1878 = 20;
                         aBool1791 = false;
                         secureBuf.putOpcode(79);
-                        secureBuf.method606(anInt1962);
-                        secureBuf.method591(anInt1866);
+                        secureBuf.writeLEShort(anInt1962);
+                        secureBuf.writeShortA(anInt1866);
                      }
 
                      if(Class100.aBool799 && !aBool1945) {
@@ -2876,10 +2877,10 @@ final void method943(final byte var1) {
 										var79.method530(anInt1924, anInt1901);
 
                                        secureBuf.putOpcode(2);
-                                       secureBuf.method612(Class67.aClass104_Sub12_556.anInt978);
-                                       secureBuf.method592(anInt1924);
-                                       secureBuf.method585(var134);
-                                       secureBuf.method606(anInt1901);
+                                       secureBuf.writeLEIntA(Class67.aClass104_Sub12_556.anInt978);
+                                       secureBuf.writeLEShortA(anInt1924);
+                                       secureBuf.writeByteA(var134);
+                                       secureBuf.writeLEShort(anInt1901);
                                     }
                                  } else if(((anInt1920 == 1) || Class43.method187(anInt1805 - 1)) && (anInt1805 > 2))
 									Class36.method170();
@@ -3956,13 +3957,35 @@ final void method943(final byte var1) {
 		if (Class25.aClass3_257 != null)
 			Class25.aClass3_257.method23(Class57.aCanvas468, 1813162168);
 
-		Class88.aClass16_701 = new Class16(255, Class24.maindata, Class24.idx255, 500000);
+		Class88.aClass16_701 = new JagFS2(255, Class24.maindata, Class24.idx255, 500000);
 		if (anInt1792 != 0)
 			aBool1860 = true;
 
 	}
 
-	public static int method147(final int var0, final int var1, int var2, int var3, int var4, final int var5) {
+	public static String decodeStr(final byte[] var0, final int var1, final int size) {
+		final char[] result = new char[size];
+		int count = 0;
+	
+		for (int var5 = 0; var5 < size; ++var5) {
+			int last = var0[var1 + var5] & 255;
+			if (last != 0) {
+				if ((last >= 128) && (last < 160)) {
+					char c = Class50.characters[last - 128];
+					if (c == 0)
+						c = 63;
+	
+					last = c;
+				}
+	
+				result[count++] = (char) last;
+			}
+		}
+	
+		return new String(result, 0, count);
+	}
+
+	public static int typeFor(final int var0, final int var1, int var2, int var3, int var4, final int var5) {
 		if ((var5 & 1) == 1) {
 			final int var6 = var3;
 			var3 = var4;

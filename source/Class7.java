@@ -91,7 +91,7 @@ public class Class7 {
 			}
 
 			if ((var3 & 32) != 0) {
-				var2.aString1723 = client.gamecon.method608();
+				var2.aString1723 = client.gamecon.readString();
 				var2.anInt1713 = 100;
 			}
 
@@ -136,7 +136,7 @@ public class Class7 {
 						&& (var15 < (8 + var6))) {
 					final ObjectDefinition var21 = Class104_Sub18_Sub12.forId(var11);
 					final int var22 = var2
-							+ client.method147(var16 & 7, var15 & 7, var7, var21.anInt1365, var21.anInt1339, var20);
+							+ client.typeFor(var16 & 7, var15 & 7, var7, var21.anInt1365, var21.anInt1339, var20);
 					final int var23 = var3
 							+ BZip2Context.method152(var16 & 7, var15 & 7, var7, var21.anInt1365, var21.anInt1339, var20);
 					if ((var22 > 0) && (var23 > 0) && (var22 < 103) && (var23 < 103)) {

@@ -58,7 +58,7 @@ public final class Class104_Sub20 extends Class104 {
 
 			if (var1 == 326) {
 				client.secureBuf.putOpcode(71);
-				client.aClass85_2047.method387(client.secureBuf);
+				client.aClass85_2047.writeAppearance(client.secureBuf);
 				return true;
 			} else
 				return false;

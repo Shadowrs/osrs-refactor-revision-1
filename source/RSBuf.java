@@ -238,7 +238,7 @@ public class RSBuf extends Class104 {
 		backing[++pos - 1] = (byte) (0 - var1);
 	}
 
-	public void method585(final int var1) {
+	public void writeByteA(final int var1) {
 		backing[++pos - 1] = (byte) (var1 + 128);
 	}
 
@@ -264,12 +264,12 @@ public class RSBuf extends Class104 {
 		return (byte) (128 - backing[++pos - 1]);
 	}
 
-	public void method591(final int var1) {
+	public void writeShortA(final int var1) {
 		backing[++pos - 1] = (byte) (var1 >> 8);
 		backing[++pos - 1] = (byte) (128 + var1);
 	}
 
-	public void method592(final int var1) {
+	public void writeLEShortA(final int var1) {
 		backing[++pos - 1] = (byte) (128 + var1);
 		backing[++pos - 1] = (byte) (var1 >> 8);
 	}
@@ -371,7 +371,7 @@ public class RSBuf extends Class104 {
 			++pos;
 			return null;
 		} else
-			return method608();
+			return readString();
 	}
 
 	public void method605(final int[] var1, final int var2, final int var3) {
@@ -398,7 +398,7 @@ public class RSBuf extends Class104 {
 		pos = var4;
 	}
 
-	public void method606(final int var1) {
+	public void writeLEShort(final int var1) {
 		backing[++pos - 1] = (byte) var1;
 		backing[++pos - 1] = (byte) (var1 >> 8);
 	}
@@ -407,14 +407,14 @@ public class RSBuf extends Class104 {
 		return (0 - backing[++pos - 1]) & 255;
 	}
 
-	public String method608() {
-		final int var1 = pos;
+	public String readString() {
+		final int start = pos;
 
 		while (backing[++pos - 1] != 0)
 			;
 
-		final int var2 = pos - var1 - 1;
-		return var2 == 0 ? "" : ObjectDefinition.method751(backing, var1, var2);
+		final int next = pos - start - 1;
+		return next == 0 ? "" : client.decodeStr(backing, start, next);
 	}
 
 	public void writeIntLE(final int var1) {
@@ -438,7 +438,7 @@ public class RSBuf extends Class104 {
 		return var1;
 	}
 
-	public void method612(final int var1) {
+	public void writeLEIntA(final int var1) {
 		backing[++pos - 1] = (byte) (var1 >> 8);
 		backing[++pos - 1] = (byte) var1;
 		backing[++pos - 1] = (byte) (var1 >> 24);
@@ -472,7 +472,7 @@ public class RSBuf extends Class104 {
 				;
 
 			final int var3 = pos - var2 - 1;
-			return var3 == 0 ? "" : ObjectDefinition.method751(backing, var2, var3);
+			return var3 == 0 ? "" : client.decodeStr(backing, var2, var3);
 		}
 	}
 

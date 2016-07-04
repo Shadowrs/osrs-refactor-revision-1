@@ -23,7 +23,7 @@ public class Class41 implements Interface3 {
 		final int var2 = var0.pos;
 		final byte[] var3 = Class67.method316(var1);
 		var0.method568(var3.length);
-		var0.pos += Class106.aClass49_826.method219(var3, 0, var3.length, var0.backing, var0.pos);
+		var0.pos += Class106.huffman.method219(var3, 0, var3.length, var0.backing, var0.pos);
 		return var0.pos - var2;
 	}
 }

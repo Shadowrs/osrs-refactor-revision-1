@@ -1,5 +1,5 @@
 public class Class106 {
-	public static Class49 aClass49_826;
+	public static Class49 huffman;
 	static Class61_Sub1 aClass61_Sub1_827;
 	static Widget[] aClass104_Sub12Array828;
 	static Class61 aClass61_829;

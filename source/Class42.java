@@ -31,7 +31,7 @@ public class Class42 {
 						- 12); var1.opcodeHeaders[var5++] = var6) {
 					var6 = var3.readLEShort();
 					if (var6 == 3)
-						var1.aStringArray1280[var5] = var3.method608();
+						var1.aStringArray1280[var5] = var3.readString();
 					else if ((var6 < 100) && (var6 != 21) && (var6 != 38) && (var6 != 39))
 						var1.numberValuesToUse[var5] = var3.readLEInt();
 					else

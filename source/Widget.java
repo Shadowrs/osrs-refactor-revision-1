@@ -225,7 +225,7 @@ public class Widget extends Class104 {
 			aStringArray1028 = new String[5];
 
 			for (var8 = 0; var8 < 5; ++var8) {
-				final String var10 = var1.method608();
+				final String var10 = var1.readString();
 				if (var10.length() > 0) {
 					aStringArray1028[var8] = var10;
 					anInt1037 |= 1 << (23 + var8);
@@ -248,8 +248,8 @@ public class Widget extends Class104 {
 		}
 
 		if (anInt980 == 4) {
-			aString1025 = var1.method608();
-			aString1004 = var1.method608();
+			aString1025 = var1.readString();
+			aString1004 = var1.readString();
 		}
 
 		if ((anInt980 == 1) || (anInt980 == 3) || (anInt980 == 4))
@@ -309,7 +309,7 @@ public class Widget extends Class104 {
 			aStringArray1028 = new String[5];
 
 			for (var5 = 0; var5 < 5; ++var5) {
-				final String var11 = var1.method608();
+				final String var11 = var1.readString();
 				if (var11.length() > 0) {
 					aStringArray1028[var5] = var11;
 					anInt1037 |= 1 << (var5 + 23);
@@ -318,17 +318,17 @@ public class Widget extends Class104 {
 		}
 
 		if (anInt980 == 8)
-			aString1025 = var1.method608();
+			aString1025 = var1.readString();
 
 		if ((anInt981 == 2) || (anInt980 == 2)) {
-			aString1036 = var1.method608();
-			aString1078 = var1.method608();
+			aString1036 = var1.readString();
+			aString1078 = var1.readString();
 			var4 = var1.readLEShort() & 63;
 			anInt1037 |= var4 << 11;
 		}
 
 		if ((anInt981 == 1) || (anInt981 == 4) || (anInt981 == 5) || (anInt981 == 6)) {
-			aString1054 = var1.method608();
+			aString1054 = var1.readString();
 			if (aString1054.length() == 0) {
 				if (anInt981 == 1)
 					aString1054 = "Ok";
@@ -412,7 +412,7 @@ public class Widget extends Class104 {
 			if (anInt1024 == '\uffff')
 				anInt1024 = -1;
 
-			aString1025 = var1.method608();
+			aString1025 = var1.readString();
 			anInt1027 = var1.readUByte();
 			anInt1059 = var1.readUByte();
 			anInt1029 = var1.readUByte();
@@ -432,19 +432,19 @@ public class Widget extends Class104 {
 		}
 
 		anInt1037 = var1.method614();
-		aString990 = var1.method608();
+		aString990 = var1.readString();
 		final int var2 = var1.readUByte();
 		if (var2 > 0) {
 			aStringArray1039 = new String[var2];
 
 			for (int var3 = 0; var3 < var2; ++var3)
-				aStringArray1039[var3] = var1.method608();
+				aStringArray1039[var3] = var1.readString();
 		}
 
 		anInt1041 = var1.readUByte();
 		anInt1082 = var1.readUByte();
 		aBool1053 = var1.readUByte() == 1;
-		aString1036 = var1.method608();
+		aString1036 = var1.readString();
 		opcodeKeys = method534(var1);
 		anObjectArray1051 = method534(var1);
 		anObjectArray1033 = method534(var1);
@@ -629,7 +629,7 @@ public class Widget extends Class104 {
 				if (var5 == 0)
 					var3[var4] = new Integer(var1.readLEInt());
 				else if (var5 == 1)
-					var3[var4] = var1.method608();
+					var3[var4] = var1.readString();
 			}
 
 			aBool1008 = true;

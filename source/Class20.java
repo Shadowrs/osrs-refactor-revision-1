@@ -14,17 +14,15 @@ public final class Class20 {
 	public int anInt200 = 0;
 	int anInt204 = 0;
 
-	static final void method121(final boolean var0) {
+	static final void writePkt228(final boolean var0) {
 		Class101.method465();
 		++client.anInt1835;
 		if ((client.anInt1835 >= 50) || var0) {
 			client.anInt1835 = 0;
 			if (!client.aBool1840 && (stream != null)) {
 				client.secureBuf.putOpcode(228);
-
 				try {
-					stream.flushbytes(client.secureBuf.backing, 0,
-							client.secureBuf.pos);
+					stream.flushbytes(client.secureBuf.backing, 0, client.secureBuf.pos);
 					client.secureBuf.pos = 0;
 				} catch (final IOException var2) {
 					client.aBool1840 = true;

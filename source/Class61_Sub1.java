@@ -9,8 +9,8 @@ public class Class61_Sub1 extends Class61 {
 	int crc;
 	int anInt887;
 	boolean aBool886 = false;
-	Class16 aClass16_888;
-	Class16 aClass16_883;
+	JagFS2 aClass16_888;
+	JagFS2 aClass16_883;
 	int anInt884;
 
 	@Override
@@ -25,7 +25,7 @@ public class Class61_Sub1 extends Class61 {
 
 			if (aClass16_883 != null) {
 				final int var5 = anInt884;
-				final Class16 var6 = aClass16_883;
+				final JagFS2 var6 = aClass16_883;
 				final Class104_Sub13 var7 = new Class104_Sub13();
 				var7.anInt1097 = 0;
 				var7.nodeId = var5;
@@ -51,7 +51,7 @@ public class Class61_Sub1 extends Class61 {
 			var2[var2.length - 2] = (byte) (anIntArray493[var1] >> 8);
 			var2[var2.length - 1] = (byte) anIntArray493[var1];
 			if (null != aClass16_888) {
-				final Class16 var11 = aClass16_888;
+				final JagFS2 var11 = aClass16_888;
 				final Class104_Sub13 var18 = new Class104_Sub13();
 				var18.anInt1097 = 0;
 				var18.nodeId = var1;
@@ -79,7 +79,7 @@ public class Class61_Sub1 extends Class61 {
 
 	}
 
-	public void method488(final Class16 var1, final int var2, final byte[] data, final boolean var4) {
+	public void method488(final JagFS2 var1, final int var2, final byte[] data, final boolean var4) {
 		int ucrc;
 		if (var1 == aClass16_883) {
 			if (aBool885)
@@ -150,7 +150,7 @@ public class Class61_Sub1 extends Class61 {
 
 			for (var1 = 0; var1 < aBoolArray882.length; ++var1)
 				if (anIntArray485[var1] > 0) {
-					final Class16 var2 = aClass16_888;
+					final JagFS2 var2 = aClass16_888;
 					final Class104_Sub13 var4 = new Class104_Sub13();
 					var4.anInt1097 = 1;
 					var4.nodeId = var1;
@@ -220,7 +220,7 @@ public class Class61_Sub1 extends Class61 {
 
 	}
 
-	public Class61_Sub1(final Class16 var1, final Class16 var2, final int var3, final boolean var4, final boolean var5,
+	public Class61_Sub1(final JagFS2 var1, final JagFS2 var2, final int var3, final boolean var4, final boolean var5,
 			final boolean var6) {
 		super(var4, var5);
 		aClass16_888 = var1;

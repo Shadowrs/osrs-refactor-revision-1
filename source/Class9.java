@@ -75,7 +75,7 @@ public final class Class9 {
 				final int var26 = (var11 << 7) + (var18 << 6);
 				final Class104_Sub18_Sub16_Sub4 var27 = var16.method750(var3, var4, var23, var25, var24, var26);
 				if (null != var27) {
-					Class16.method67(Class12.anInt73, var10, var11, var5, -1, 0, 0, 1 + var7, var0 + 1);
+					JagFS2.method67(Class12.anInt73, var10, var11, var5, -1, 0, 0, 1 + var7, var0 + 1);
 					var15.anInt1776 = var7 + client.anInt1799;
 					var15.anInt1777 = client.anInt1799 + var0;
 					var15.aClass104_Sub18_Sub16_Sub4_1785 = var27;
@@ -252,7 +252,7 @@ public final class Class9 {
 					var6 = ((var5 >> 4) & 7) + Class19.anInt195;
 					var7 = (var5 & 7) + Class93.anInt742;
 					if ((var6 >= 0) && (var7 >= 0) && (var6 < 104) && (var7 < 104))
-						Class16.method67(Class12.anInt73, var6, var7, var4, var0, var2, var3, 0, -1);
+						JagFS2.method67(Class12.anInt73, var6, var7, var4, var0, var2, var3, 0, -1);
 
 				} else if (client.pktOpc == 20) {
 					var0 = client.gamecon.readUByte();
@@ -325,7 +325,7 @@ public final class Class9 {
 					var5 = ((var4 >> 4) & 7) + Class19.anInt195;
 					var6 = Class93.anInt742 + (var4 & 7);
 					if ((var5 >= 0) && (var6 >= 0) && (var5 < 104) && (var6 < 104))
-						Class16.method67(Class12.anInt73, var5, var6, var3, -1, var35, var2, 0, -1);
+						JagFS2.method67(Class12.anInt73, var5, var6, var3, -1, var35, var2, 0, -1);
 
 				}
 			} else {

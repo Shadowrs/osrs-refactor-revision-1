@@ -51,7 +51,7 @@ public final class GameBuf extends RSBuf {
 		pos = (7 + anInt1184) / 8;
 	}
 
-	public static int strlen(final String var0) {
+	public static int lengthOf(final String var0) {
 		return var0.length() + 1;
 	}
 }

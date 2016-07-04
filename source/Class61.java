@@ -453,8 +453,8 @@ public abstract class Class61 {
 							.equals(var1))
 						Class15.method60(0, "", "You can\'t add yourself to your own friend list");
 					else {
-						client.secureBuf.putOpcode(203);
-						client.secureBuf.writebyte(GameBuf.strlen(var0));
+						client.secureBuf.putOpcode(203); // add friend, ovbs. see above. 
+						client.secureBuf.writebyte(GameBuf.lengthOf(var0));
 						client.secureBuf.writeString(var0);
 					}
 				}

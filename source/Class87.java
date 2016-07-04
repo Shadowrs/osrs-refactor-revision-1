@@ -22,7 +22,7 @@ public class Class87 {
 	public static int anInt693 = 0;
 	public static int anInt698 = 0;
 
-	static void method397(final int var0, final Class16 var1, final Class61_Sub1 var2) {
+	static void method397(final int var0, final JagFS2 var1, final Class61_Sub1 var2) {
 		byte[] var3 = null;
 		final Class59 var4 = Class52.aClass59_429;
 		synchronized (var4) {

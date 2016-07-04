@@ -27,7 +27,7 @@ public abstract class Class3 {
 						final int var4 = var1.readLEShort();
 						var3.anInt463 = var4 & 32767;
 						var3.aBool464 = (var4 & '\u8000') != 0;
-						var3.aString459 = var1.method608();
+						var3.aString459 = var1.readString();
 						var3.anInt462 = var1.readUByte();
 						var3.anInt460 = var1.method572();
 					}

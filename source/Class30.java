@@ -35,7 +35,7 @@ public class Class30 {
 			if (var0.anInt1738 == 3)
 				var0.anInt1698 = 512;
 		} else if (var0.anInt1737 >= client.anInt1799)
-			Class16.method66(var0);
+			JagFS2.method66(var0);
 		else
 			Class104_Sub18_Sub5.method734(var0);
 

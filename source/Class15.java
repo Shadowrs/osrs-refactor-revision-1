@@ -61,10 +61,10 @@ public class Class15 {
 					client.secureBuf.writeShort(client.anIntArray1909[var6]);
 				} else if (var0 == 6) {
 					client.secureBuf.putOpcode(111);
-					client.secureBuf.method592(client.anIntArray1909[var6]);
+					client.secureBuf.writeLEShortA(client.anIntArray1909[var6]);
 				} else if (var0 == 7) {
 					client.secureBuf.putOpcode(119);
-					client.secureBuf.method592(client.anIntArray1909[var6]);
+					client.secureBuf.writeLEShortA(client.anIntArray1909[var6]);
 				}
 
 				var5 = true;
@@ -81,20 +81,20 @@ public class Class15 {
 		Class43.method188(var0, var1, var2, (String) null);
 	}
 
-	static final void method61(final String var0) {
-		if (null != var0) {
-			final String var1 = Class33.method155(var0, Class2.aClass101_8);
+	static final void method61(final String string) {
+		if (null != string) {
+			final String var1 = Class33.method155(string, Class2.aClass101_8);
 			if (null != var1)
 				for (int var2 = 0; var2 < client.anInt1935; ++var2) {
 					final Class86 var3 = client.aClass86Array1972[var2];
 					final String var4 = var3.aString675;
 					final String var5 = Class33.method155(var4, Class2.aClass101_8);
 					boolean var6;
-					if ((var0 != null) && (var4 != null)) {
-						if (!var0.startsWith("#") && !var4.startsWith("#"))
+					if ((string != null) && (var4 != null)) {
+						if (!string.startsWith("#") && !var4.startsWith("#"))
 							var6 = var1.equals(var5);
 						else
-							var6 = var0.equals(var4);
+							var6 = string.equals(var4);
 					} else
 						var6 = false;
 
@@ -106,8 +106,8 @@ public class Class15 {
 
 						client.anInt1846 = client.anInt1978;
 						client.secureBuf.putOpcode(41);
-						client.secureBuf.writebyte(GameBuf.strlen(var0));
-						client.secureBuf.writeString(var0);
+						client.secureBuf.writebyte(GameBuf.lengthOf(string)); // the size of this variable-length packet. 
+						client.secureBuf.writeString(string);
 						break;
 					}
 				}

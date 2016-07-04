@@ -10,7 +10,7 @@ public class Class36 {
 	public static boolean method168(final char var0) {
 		if (((var0 <= 0) || (var0 >= 128)) && ((var0 < 160) || (var0 > 255))) {
 			if (var0 != 0) {
-				final char[] var1 = Class50.aCharArray419;
+				final char[] var1 = Class50.characters;
 
 				for (final char var3 : var1) {
 					if (var3 == var0)

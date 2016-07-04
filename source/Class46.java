@@ -1335,9 +1335,9 @@ public class Class46 {
 											var24 = Class90.anIntArray706[var4];
 											client.secureBuf.putOpcode(252);
 											client.secureBuf
-													.writebyte(GameBuf.strlen(var80) + 1);
+													.writebyte(GameBuf.lengthOf(var80) + 1);
 											client.secureBuf.writeString(var80);
-											client.secureBuf.method585(var24);
+											client.secureBuf.writeByteA(var24);
 											continue;
 										}
 
@@ -1400,7 +1400,7 @@ public class Class46 {
 													client.anInt1846 = client.anInt1978;
 													client.secureBuf.putOpcode(248);
 													client.secureBuf
-															.writebyte(GameBuf.strlen(var80));
+															.writebyte(GameBuf.lengthOf(var80));
 													client.secureBuf.writeString(var80);
 													continue label2280;
 												}
@@ -1492,7 +1492,7 @@ public class Class46 {
 											if (null != Class104_Sub13.aClass104_Sub7Array1099) {
 												client.secureBuf.putOpcode(245);
 												client.secureBuf
-														.writebyte(GameBuf.strlen(var80));
+														.writebyte(GameBuf.lengthOf(var80));
 												client.secureBuf.writeString(var80);
 											}
 											continue;
@@ -1511,7 +1511,7 @@ public class Class46 {
 										}
 
 										if (var44 == 3620) {
-											Class1.method17();
+											Class1.writePkt185();
 											continue;
 										}
 
@@ -2202,7 +2202,7 @@ public class Class46 {
 											var17 = Class90.anIntArray706[1 + var4];
 											client.secureBuf.putOpcode(96);
 											client.secureBuf
-													.writebyte(GameBuf.strlen(var80) + 2);
+													.writebyte(GameBuf.lengthOf(var80) + 2);
 											client.secureBuf.writeString(var80);
 											client.secureBuf.writebyte(var24 - 1);
 											client.secureBuf.writebyte(var17);

@@ -155,7 +155,7 @@ public class ObjectDefinition extends Class104_Sub18 {
 					}
 				}
 		} else if (var2 == 2)
-			aString1331 = var1.method608();
+			aString1331 = var1.readString();
 		else if (var2 == 5) {
 			var3 = var1.readUByte();
 			if (var3 > 0)
@@ -198,7 +198,7 @@ public class ObjectDefinition extends Class104_Sub18 {
 		else if (var2 == 39)
 			anInt1347 = var1.method565() * 25;
 		else if ((var2 >= 30) && (var2 < 35)) {
-			aStringArray1349[var2 - 30] = var1.method608();
+			aStringArray1349[var2 - 30] = var1.readString();
 			if (aStringArray1349[var2 - 30].equalsIgnoreCase("Hidden"))
 				aStringArray1349[var2 - 30] = null;
 		} else if (var2 == 40) {
@@ -489,27 +489,5 @@ public class ObjectDefinition extends Class104_Sub18 {
 			var9 = var9.method831(var3, var4, var5, var6, true, anInt1343);
 
 		return var9;
-	}
-
-	public static String method751(final byte[] var0, final int var1, final int var2) {
-		final char[] var3 = new char[var2];
-		int var4 = 0;
-
-		for (int var5 = 0; var5 < var2; ++var5) {
-			int var6 = var0[var1 + var5] & 255;
-			if (var6 != 0) {
-				if ((var6 >= 128) && (var6 < 160)) {
-					char var7 = Class50.aCharArray419[var6 - 128];
-					if (var7 == 0)
-						var7 = 63;
-
-					var6 = var7;
-				}
-
-				var3[var4++] = (char) var6;
-			}
-		}
-
-		return new String(var3, 0, var4);
 	}
 }

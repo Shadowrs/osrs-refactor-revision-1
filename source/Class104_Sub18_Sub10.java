@@ -26,7 +26,7 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 		else if (var2 == 2)
 			aChar1405 = (char) var1.readUByte();
 		else if (var2 == 3)
-			aString1409 = var1.method608();
+			aString1409 = var1.readString();
 		else if (var2 == 4)
 			anInt1407 = var1.readLEInt();
 		else {
@@ -38,7 +38,7 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 
 				for (var3 = 0; var3 < anInt1408; ++var3) {
 					anIntArray1402[var3] = var1.readLEInt();
-					aStringArray1411[var3] = var1.method608();
+					aStringArray1411[var3] = var1.readString();
 				}
 			} else if (var2 == 6) {
 				anInt1408 = var1.readLEShort();

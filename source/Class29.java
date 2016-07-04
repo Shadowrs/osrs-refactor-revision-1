@@ -54,8 +54,9 @@ public class Class29 {
 				if (var9) {
 					if (var0 == 1) {
 						client.secureBuf.putOpcode(63);
-						client.secureBuf.writeInt(var1);
-						client.secureBuf.writeShort(var2);
+						client.secureBuf.writeInt(var1); // 4 bytes
+						client.secureBuf.writeShort(var2); // 2 bytes
+						// total 6
 					}
 
 					if (var0 == 2) {

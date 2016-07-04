@@ -82,9 +82,9 @@ public final class JagFS {
 	}
 
 	static Class61_Sub1 method423(final int var0, final boolean var1, final boolean var2, final boolean var3) {
-		Class16 var4 = null;
+		JagFS2 var4 = null;
 		if (null != Class24.maindata)
-			var4 = new Class16(var0, Class24.maindata, Class22.managers[var0], 1000000);
+			var4 = new JagFS2(var0, Class24.maindata, Class22.managers[var0], 1000000);
 
 		return new Class61_Sub1(var4, Class88.aClass16_701, var0, var1, var2, var3);
 	}

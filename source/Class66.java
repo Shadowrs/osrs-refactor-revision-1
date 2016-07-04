@@ -1104,7 +1104,7 @@ public class Class66 {
 													var10.anInt978);
 									}
 
-									var50 = Class16.method68(var10);
+									var50 = JagFS2.method68(var10);
 									if (var50 != null)
 										Class60.method256(var50, var10.aString990, 25, 0, var10.anInt1018,
 												var10.anInt978);
