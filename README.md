@@ -14,6 +14,8 @@ Additionally, you can find a majorly renamed revision 60 client by Leanbow in th
 + [1221 revision 16 xteas](https://www.rune-server.org/runescape-development/rs2-server/configuration/504222-1221-oldschool-rs-r16-xteas.html)
 + [Massive OSRS gamepack, cache and deob archive](https://www.rune-server.org/runescape-development/rs2-client/downloads/605119-osrs-gamepack-cache-archive.html)
 + [Leanbow's revision 1-57 cache archive](https://www.mediafire.com/folder/791h1ctwb18st/468)
++ Leon's landscape image generator [github](https://github.com/im-frizzy/OpenRS/blob/master/source/net/openrs/cache/tools/MapImageDumper.java)
++ OpenRS with additions for OSRS by Leon [github](https://github.com/im-frizzy/OpenRS)
 
 ### Image
 
