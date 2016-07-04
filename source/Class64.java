@@ -117,7 +117,7 @@ public class Class64 implements Runnable {
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class104_Sub18_Sub2.aClass61_1238.method259(9, var0);
+			final byte[] var2 = Class104_Sub18_Sub2.aClass61_1238.decompress(9, var0);
 			var1 = new Class104_Sub18_Sub2();
 			var1.anInt1228 = var0;
 			if (null != var2)

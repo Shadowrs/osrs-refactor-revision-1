@@ -3,12 +3,12 @@ import java.awt.Component;
 public class Class91 {
 	public static void method409() {
 		try {
-			Class24.aClass96_242.method432(-883153307);
+			Class24.maindata.method432(-883153307);
 
 			for (int var0 = 0; var0 < Class24.anInt238; ++var0)
 				Class22.aClass96Array227[var0].method432(-883153307);
 
-			Class24.aClass96_243.method432(-883153307);
+			Class24.idx255.method432(-883153307);
 			Class24.aClass96_241.method432(-883153307);
 		} catch (final Exception var2) {
 			;

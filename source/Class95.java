@@ -174,6 +174,6 @@ public class Class95 {
 
 	public static void method426(final Class61 var0) {
 		Class12.aClass61_76 = var0;
-		Class104_Sub18_Sub6.anInt1373 = Class12.aClass61_76.method266(16);
+		Class104_Sub18_Sub6.anInt1373 = Class12.aClass61_76.leng(16);
 	}
 }

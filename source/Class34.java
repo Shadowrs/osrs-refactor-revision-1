@@ -50,10 +50,10 @@ public class Class34 implements Interface2 {
 		anInt347 = var6;
 		final int[] var7 = var1.method265(0);
 		final int var8 = var7.length;
-		aClass104_Sub19Array345 = new Class104_Sub19[var1.method266(0)];
+		aClass104_Sub19Array345 = new Class104_Sub19[var1.leng(0)];
 
 		for (int var9 = 0; var9 < var8; ++var9) {
-			final RSBuf var10 = new RSBuf(var1.method259(0, var7[var9]));
+			final RSBuf var10 = new RSBuf(var1.decompress(0, var7[var9]));
 			aClass104_Sub19Array345[var7[var9]] = new Class104_Sub19(var10);
 		}
 

@@ -65,7 +65,7 @@ public class Class53 {
 	public Class104_Sub4_Sub1 method232(final int var1, final int[] var2) {
 		if (aClass61_434.method267() == 1)
 			return method230(0, var1, var2);
-		else if (aClass61_434.method266(var1) == 1)
+		else if (aClass61_434.leng(var1) == 1)
 			return method230(var1, 0, var2);
 		else
 			throw new RuntimeException();
@@ -74,7 +74,7 @@ public class Class53 {
 	public Class104_Sub4_Sub1 method233(final int var1, final int[] var2) {
 		if (aClass61_432.method267() == 1)
 			return method231(0, var1, var2);
-		else if (aClass61_432.method266(var1) == 1)
+		else if (aClass61_432.leng(var1) == 1)
 			return method231(var1, 0, var2);
 		else
 			throw new RuntimeException();

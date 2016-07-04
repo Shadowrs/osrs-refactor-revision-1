@@ -354,7 +354,7 @@ public final class Class9 {
 	}
 
 	static final void doWidgetOp(final int hash, final int op) {
-		if (Class104_Sub7.laoded(hash))
+		if (Class104_Sub7.loaded(hash))
 			Class15.loadWidget(Class22.widgets[hash], op);
 	}
 

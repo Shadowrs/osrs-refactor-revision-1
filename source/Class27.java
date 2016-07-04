@@ -24,7 +24,7 @@ public class Class27 {
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class104_Sub18_Sub12.aClass61_1432.method259(10, var0);
+			final byte[] var2 = Class104_Sub18_Sub12.aClass61_1432.decompress(10, var0);
 			var1 = new Class104_Sub18_Sub12();
 			var1.anInt1418 = var0;
 			if (var2 != null)

@@ -1,6 +1,6 @@
 public final class Class103 {
 	static boolean aBool816;
-	public static boolean[] aBoolArray817;
+	public static boolean[] loaded;
 	static Class61_Sub1 aClass61_Sub1_818;
 	static Class104_Sub18_Sub17_Sub1 aClass104_Sub18_Sub17_Sub1_819;
 	static byte aByte820;

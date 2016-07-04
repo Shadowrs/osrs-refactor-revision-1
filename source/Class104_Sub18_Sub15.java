@@ -6,12 +6,12 @@ public class Class104_Sub18_Sub15 extends Class104_Sub18 {
 
 	public Class104_Sub18_Sub15(final Class61 var1, final Class61 var2, final int var3, final boolean var4) {
 		final Class59 var5 = new Class59();
-		final int var6 = var1.method266(var3);
+		final int var6 = var1.leng(var3);
 		aClass5Array1465 = new Class5[var6];
 		final int[] var7 = var1.method265(var3);
 
 		for (int var8 = 0; var8 < var7.length; ++var8) {
-			final byte[] var9 = var1.method259(var3, var7[var8]);
+			final byte[] var9 = var1.decompress(var3, var7[var8]);
 			Class104_Sub23 var10 = null;
 			final int var11 = ((var9[0] & 255) << 8) | (var9[1] & 255);
 

@@ -3,19 +3,19 @@ import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public final class Class94 {
+public final class JagFS {
 	RandomAccessFile aRandomAccessFile745;
 	long aLong744;
 	long aLong743;
 
-	public Class94(final File var1, final String var2, long var3) throws IOException {
+	public JagFS(final File f, final String var2, long var3) throws IOException {
 		if (-1L == var3)
 			var3 = Long.MAX_VALUE;
 
-		if (var1.length() >= var3)
-			var1.delete();
+		if (f.length() >= var3)
+			f.delete();
 
-		aRandomAccessFile745 = new RandomAccessFile(var1, var2);
+		aRandomAccessFile745 = new RandomAccessFile(f, var2);
 		aLong744 = var3;
 		aLong743 = 0L;
 		final int var5 = aRandomAccessFile745.read();
@@ -25,6 +25,7 @@ public final class Class94 {
 		}
 
 		aRandomAccessFile745.seek(0L);
+		System.out.println("JagFS at "+f.getAbsolutePath());
 	}
 
 	final void method416(final long var1) throws IOException {
@@ -82,8 +83,8 @@ public final class Class94 {
 
 	static Class61_Sub1 method423(final int var0, final boolean var1, final boolean var2, final boolean var3) {
 		Class16 var4 = null;
-		if (null != Class24.aClass96_242)
-			var4 = new Class16(var0, Class24.aClass96_242, Class22.aClass96Array227[var0], 1000000);
+		if (null != Class24.maindata)
+			var4 = new Class16(var0, Class24.maindata, Class22.aClass96Array227[var0], 1000000);
 
 		return new Class61_Sub1(var4, Class88.aClass16_701, var0, var1, var2, var3);
 	}

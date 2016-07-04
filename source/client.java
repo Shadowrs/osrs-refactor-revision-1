@@ -291,10 +291,10 @@ public final class client extends Applet_Sub1 {
 					Class54.aClass54_440, Class54.aClass54_439 };
 			final Class54[] var2 = var1;
 
-			int var3;
+			int yo;
 			int var9;
-			for (var3 = 0; var3 < var2.length; ++var3) {
-				final Class54 var4 = var2[var3];
+			for (yo = 0; yo < var2.length; ++yo) {
+				final Class54 var4 = var2[yo];
 				final String var5 = getParameter(var4.aString437);
 				if (var5 != null)
 					switch (Integer.parseInt(var4.aString437)) {
@@ -425,23 +425,23 @@ public final class client extends Applet_Sub1 {
 				Class49.targets = new String[] { /*"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/",*/ Class104_Sub23.HOME, /*"/tmp/", "" */};
 				Class7.store = new String[] { "os-rev4", /*".jagex_cache_" + Class16.anInt116, ".file_store_" + Class16.anInt116 */};
 
-				label129: for (var3 = 0; var3 < 4; ++var3) {
-					Class24.aFile239 = Class70.method325("gamename", var22, var3);
+				label129: for (yo = 0; yo < 4; ++yo) {
+					Class24.aFile239 = Class70.method325("gamename", var22, yo);
 					if (!Class24.aFile239.exists())
 						Class24.aFile239.mkdirs();
 
-					final File[] var23 = Class24.aFile239.listFiles();
-					if (var23 == null)
+					final File[] child = Class24.aFile239.listFiles();
+					if (child == null)
 						break;
 
-					final File[] var24 = var23;
+					final File[] child2 = child;
 					int var16 = 0;
 
 					while (true) {
-						if (var16 >= var24.length)
+						if (var16 >= child2.length)
 							break label129;
 
-						final File var29 = var24[var16];
+						final File var29 = child2[var16];
 
 						boolean var30;
 						try {
@@ -465,15 +465,13 @@ public final class client extends Applet_Sub1 {
 
 				Class72.method333(Class24.aFile239);
 				Class89.method406();
-				Class24.aClass96_242 = new Class96(
-						new Class94(Class75.method341("main_file_cache.dat2"), "rw", 1048576000L), 5200, 0);
-				Class24.aClass96_243 = new Class96(
-						new Class94(Class75.method341("main_file_cache.idx255"), "rw", 1048576L), 6000, 0);
+				Class24.maindata = new Class96( new JagFS(Class75.method341("main_file_cache.dat2"), "rw", 1048576000L), 5200, 0);
+				Class24.idx255 = new Class96(new JagFS(Class75.method341("main_file_cache.idx255"), "rw", 1048576L), 6000, 0);
 				Class22.aClass96Array227 = new Class96[Class24.anInt238];
 
-				for (var3 = 0; var3 < Class24.anInt238; ++var3)
-					Class22.aClass96Array227[var3] = new Class96(
-							new Class94(Class75.method341("main_file_cache.idx" + var3), "rw", 1048576L), 6000, 0);
+				for (yo = 0; yo < Class24.anInt238; ++yo)
+					Class22.aClass96Array227[yo] = new Class96(
+							new JagFS(Class75.method341("main_file_cache.idx" + yo), "rw", 1048576L), 6000, 0);
 			} catch (final Exception var21) {
 				Nodee.method520((String) null, var21);
 			}
@@ -571,7 +569,7 @@ final void method943(final byte var1) {
 
                for(var5 = 0; var5 < Class104_Sub15.aByteArrayArray1124.length; ++var5) {
                   if((Class40.mapFileIds[var5] != -1) && (null == Class104_Sub15.aByteArrayArray1124[var5])) {
-                     Class104_Sub15.aByteArrayArray1124[var5] = Class67.fs.method259(Class40.mapFileIds[var5], 0);
+                     Class104_Sub15.aByteArrayArray1124[var5] = Class67.fs.decompress(Class40.mapFileIds[var5], 0);
                      if(null == Class104_Sub15.aByteArrayArray1124[var5]) {
                         valid = false;
                         ++anInt1842;
@@ -927,6 +925,7 @@ final void method943(final byte var1) {
                               anInt1815 = anInt2042;
                               anInt2042 = anInt1837;
                               anInt1837 = pktOpc;
+                              System.out.println("inc opcode "+pktOpc+" size "+pktSize);
                               if(pktOpc == 180) {
                                  var9 = gamecon.readShortN();
                                  var10 = gamecon.readLEInt();
@@ -1211,6 +1210,7 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 147) {
                                  var9 = gamecon.readShort();
+                                 System.out.println("pane: "+var9);
                                  currentWidget = var9;
                                  Class80.empty(var9);
                                  Class88.handleCSCodes(currentWidget);
@@ -3449,8 +3449,8 @@ final void method943(final byte var1) {
 
 			if (currentWidget != -1) {
 				var4 = currentWidget;
-				if (Class104_Sub7.laoded(var4))
-					Class97.method439(Class22.widgets[var4], -1);
+				if (Class104_Sub7.loaded(var4))
+					Class97.drawwid(Class22.widgets[var4], -1);
 			}
 
 			for (var4 = 0; var4 < anInt1982; ++var4) {
@@ -3957,7 +3957,7 @@ final void method943(final byte var1) {
 		if (Class25.aClass3_257 != null)
 			Class25.aClass3_257.method23(Class57.aCanvas468, 1813162168);
 
-		Class88.aClass16_701 = new Class16(255, Class24.aClass96_242, Class24.aClass96_243, 500000);
+		Class88.aClass16_701 = new Class16(255, Class24.maindata, Class24.idx255, 500000);
 		if (anInt1792 != 0)
 			aBool1860 = true;
 
@@ -3979,7 +3979,7 @@ final void method943(final byte var1) {
 		if (null != var1)
 			return var1;
 		else {
-			final byte[] var2 = Class104_Sub18_Sub1.aClass61_1191.method259(1, var0);
+			final byte[] var2 = Class104_Sub18_Sub1.aClass61_1191.decompress(1, var0);
 			var1 = new Class104_Sub18_Sub1();
 			if (null != var2)
 				var1.method632(new RSBuf(var2), var0);

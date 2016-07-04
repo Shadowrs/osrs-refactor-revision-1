@@ -8,7 +8,7 @@ public class Class42 {
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class85.aClass61_Sub1_671.method259(var0, 0);
+			final byte[] var2 = Class85.aClass61_Sub1_671.decompress(var0, 0);
 			if (null == var2)
 				return null;
 			else {

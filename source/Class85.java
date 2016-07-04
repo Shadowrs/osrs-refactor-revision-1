@@ -299,6 +299,6 @@ public class Class85 {
 	public static void method392(final Class61 var0, final Class61 var1) {
 		Class104_Sub18_Sub9.aClass61_1391 = var0;
 		Class104_Sub18_Sub9.aClass61_1394 = var1;
-		Class104_Sub2.anInt862 = Class104_Sub18_Sub9.aClass61_1391.method266(3);
+		Class104_Sub2.anInt862 = Class104_Sub18_Sub9.aClass61_1391.leng(3);
 	}
 }

@@ -14,7 +14,7 @@ public class Class96 {
 	long aLong755;
 	long aLong756 = -1L;
 	int anInt753 = 0;
-	Class94 aClass94_748;
+	JagFS aClass94_748;
 	long aLong757;
 	byte[] aByteArray752;
 	byte[] aByteArray751;
@@ -188,7 +188,7 @@ public class Class96 {
 
 	}
 
-	public Class96(final Class94 var1, final int var2, final int var3) throws IOException {
+	public Class96(final JagFS var1, final int var2, final int var3) throws IOException {
 		aClass94_748 = var1;
 		aLong757 = aLong755 = var1.method419();
 		aByteArray752 = new byte[var2];

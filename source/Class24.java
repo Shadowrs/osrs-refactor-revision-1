@@ -6,8 +6,8 @@ public class Class24 {
 	static File settings;
 	static int[] anIntArray244;
 	static Class96 aClass96_241 = null;
-	public static Class96 aClass96_242 = null;
-	public static Class96 aClass96_243 = null;
+	public static Class96 maindata = null;
+	public static Class96 idx255 = null;
 
 	public static boolean method125() {
 		try {
@@ -47,12 +47,12 @@ public class Class24 {
 	}
 
 	public static void method126(final Class61 var0, final Class61 var1, final Class61 var2, final Class61 var3) {
-		Widget.aClass61_1001 = var0;
+		Widget.requester = var0;
 		Widget.aClass61_971 = var1;
 		Class1_Sub1.aClass61_837 = var2;
 		Widget.aClass61_995 = var3;
-		Class22.widgets = new Widget[Widget.aClass61_1001.method267()][];
-		Class103.aBoolArray817 = new boolean[Widget.aClass61_1001.method267()];
+		Class22.widgets = new Widget[Widget.requester.method267()][];
+		Class103.loaded = new boolean[Widget.requester.method267()];
 	}
 
 	static String method127(final Widget var0, final int var1) {

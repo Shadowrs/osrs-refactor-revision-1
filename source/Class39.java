@@ -38,7 +38,7 @@ public final class Class39 {
 	}
 
 	public static boolean method181(final Class61 var0, final int var1, final int var2) {
-		final byte[] var3 = var0.method259(var1, var2);
+		final byte[] var3 = var0.decompress(var1, var2);
 		if (null == var3)
 			return false;
 		else {

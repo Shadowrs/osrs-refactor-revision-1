@@ -303,7 +303,7 @@ public class Class84 {
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class104_Sub18_Sub9.aClass61_1391.method259(3, var0);
+			final byte[] var2 = Class104_Sub18_Sub9.aClass61_1391.decompress(3, var0);
 			var1 = new Class104_Sub18_Sub9();
 			if (var2 != null)
 				var1.method761(new RSBuf(var2));

@@ -160,7 +160,7 @@ public class Class104_Sub23 extends Class104 {
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class12.aClass61_76.method259(16, var0);
+			final byte[] var2 = Class12.aClass61_76.decompress(16, var0);
 			var1 = new Class104_Sub18_Sub11();
 			if (var2 != null)
 				var1.method767(new RSBuf(var2));

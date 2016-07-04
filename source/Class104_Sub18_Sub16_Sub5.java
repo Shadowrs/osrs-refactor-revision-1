@@ -1565,7 +1565,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 	}
 
 	public static Class104_Sub18_Sub16_Sub5 method913(final Class61 var0, final int var1, final int var2) {
-		final byte[] var3 = var0.method259(var1, var2);
+		final byte[] var3 = var0.decompress(var1, var2);
 		return var3 == null ? null : new Class104_Sub18_Sub16_Sub5(var3);
 	}
 }

@@ -381,7 +381,7 @@ public class Class104_Sub14 extends Class104 {
 	}
 
 	static Class104_Sub14 method547(final Class61 var0, final int var1, final int var2) {
-		final byte[] var3 = var0.method259(var1, var2);
+		final byte[] var3 = var0.decompress(var1, var2);
 		return var3 == null ? null : new Class104_Sub14(new RSBuf(var3));
 	}
 }

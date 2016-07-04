@@ -1084,7 +1084,7 @@ public class Class46 {
 										if (null != var25)
 											var56 = var25;
 										else {
-											final byte[] var67 = Class104_Sub18_Sub14.aClass61_1463.method259(5, var15);
+											final byte[] var67 = Class104_Sub18_Sub14.aClass61_1463.decompress(5, var15);
 											var25 = new Class104_Sub18_Sub14();
 											if (null != var67)
 												var25.method784(new RSBuf(var67));
@@ -1919,7 +1919,7 @@ public class Class46 {
 											var4 -= 2;
 											var24 = Class90.anIntArray706[var4];
 											var17 = Class90.anIntArray706[1 + var4];
-											var63 = Class65.aClass61_Sub1_515.method259(var17, 0);
+											var63 = Class65.aClass61_Sub1_515.decompress(var17, 0);
 											var74 = new Class104_Sub18_Sub17_Sub2_Sub1(var63);
 											Class90.anIntArray706[var4++] = var74.method885(var80, var24);
 											continue;
@@ -1931,7 +1931,7 @@ public class Class46 {
 											var4 -= 2;
 											var24 = Class90.anIntArray706[var4];
 											var17 = Class90.anIntArray706[var4 + 1];
-											var63 = Class65.aClass61_Sub1_515.method259(var17, 0);
+											var63 = Class65.aClass61_Sub1_515.decompress(var17, 0);
 											var74 = new Class104_Sub18_Sub17_Sub2_Sub1(var63);
 											Class90.anIntArray706[var4++] = var74.method862(var80, var24);
 											continue;
@@ -2850,22 +2850,22 @@ public class Class46 {
 				Class66.anInt534 = 10;
 				client.anInt1816 = 30;
 			} else if (client.anInt1816 == 30) {
-				Class27.aClass61_Sub1_263 = Class94.method423(0, false, true, true);
-				Class104_Sub20.aClass61_Sub1_1171 = Class94.method423(1, false, true, true);
-				Class52.aClass61_Sub1_430 = Class94.method423(2, true, false, true);
-				Class29.aClass61_Sub1_278 = Class94.method423(3, false, true, true);
-				Class103.aClass61_Sub1_818 = Class94.method423(4, false, true, true);
-				Class67.fs = Class94.method423(5, true, true, true);
-				Class27.aClass61_Sub1_264 = Class94.method423(6, true, true, false);
-				Class1.aClass61_Sub1_2 = Class94.method423(7, false, true, true);
-				client.aClass61_Sub1_1820 = Class94.method423(8, false, true, true);
-				client.aClass61_Sub1_1838 = Class94.method423(9, false, true, true);
-				Class2.aClass61_Sub1_9 = Class94.method423(10, false, true, true);
-				Class106.aClass61_Sub1_827 = Class94.method423(11, false, true, true);
-				Class85.aClass61_Sub1_671 = Class94.method423(12, false, true, true);
-				Class65.aClass61_Sub1_515 = Class94.method423(13, true, false, true);
-				Class104_Sub18_Sub6.aClass61_Sub1_1374 = Class94.method423(14, false, true, false);
-				Class100.aClass61_Sub1_800 = Class94.method423(15, false, true, true);
+				Class27.aClass61_Sub1_263 = JagFS.method423(0, false, true, true);
+				Class104_Sub20.aClass61_Sub1_1171 = JagFS.method423(1, false, true, true);
+				Class52.aClass61_Sub1_430 = JagFS.method423(2, true, false, true);
+				Class29.aClass61_Sub1_278 = JagFS.method423(3, false, true, true);
+				Class103.aClass61_Sub1_818 = JagFS.method423(4, false, true, true);
+				Class67.fs = JagFS.method423(5, true, true, true);
+				Class27.aClass61_Sub1_264 = JagFS.method423(6, true, true, false);
+				Class1.aClass61_Sub1_2 = JagFS.method423(7, false, true, true);
+				client.aClass61_Sub1_1820 = JagFS.method423(8, false, true, true);
+				client.aClass61_Sub1_1838 = JagFS.method423(9, false, true, true);
+				Class2.aClass61_Sub1_9 = JagFS.method423(10, false, true, true);
+				Class106.aClass61_Sub1_827 = JagFS.method423(11, false, true, true);
+				Class85.aClass61_Sub1_671 = JagFS.method423(12, false, true, true);
+				Class65.aClass61_Sub1_515 = JagFS.method423(13, true, false, true);
+				Class104_Sub18_Sub6.aClass61_Sub1_1374 = JagFS.method423(14, false, true, false);
+				Class100.aClass61_Sub1_800 = JagFS.method423(15, false, true, true);
 				Class66.aString540 = "Connecting to update server";
 				Class66.anInt534 = 20;
 				client.anInt1816 = 40;
@@ -2987,7 +2987,7 @@ public class Class46 {
 					} else {
 						final Class61_Sub1 var19 = Class52.aClass61_Sub1_430;
 						Class49.aClass61_418 = var19;
-						Class94.method422(Class52.aClass61_Sub1_430);
+						JagFS.method422(Class52.aClass61_Sub1_430);
 						Class85.method392(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2);
 						Class22.method124(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2, client.aBool1794);
 						Class49.method223(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2);
@@ -2998,7 +2998,7 @@ public class Class46 {
 						Class104_Sub18_Sub12.aClass61_1432 = var6;
 						Class27.aClass61_265 = var7;
 						Class79.aBool632 = var22;
-						Class104_Sub18_Sub12.aClass61_1432.method266(10);
+						Class104_Sub18_Sub12.aClass61_1432.leng(10);
 						client.aClass104_Sub18_Sub17_Sub2_Sub1_290 = var8;
 						Class9.method38(Class52.aClass61_Sub1_430, Class27.aClass61_Sub1_263,
 								Class104_Sub20.aClass61_Sub1_1171);

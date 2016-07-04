@@ -5,34 +5,34 @@ public class Class104_Sub7 extends Class104 {
 	int anInt950;
 	static Class104_Sub18_Sub17_Sub2_Sub1 aClass104_Sub18_Sub17_Sub2_Sub1_951;
 
-	public static boolean laoded(final int var0) {
-		if (Class103.aBoolArray817[var0])
+	public static boolean loaded(final int hash) {
+		if (Class103.loaded[hash])
 			return true;
-		else if (!Widget.aClass61_1001.method278(var0))
+		else if (!Widget.requester.requested(hash))
 			return false;
 		else {
-			final int var1 = Widget.aClass61_1001.method266(var0);
-			if (var1 == 0) {
-				Class103.aBoolArray817[var0] = true;
+			final int len = Widget.requester.leng(hash);
+			if (len == 0) {
+				Class103.loaded[hash] = true;
 				return true;
 			} else {
-				if (Class22.widgets[var0] == null)
-					Class22.widgets[var0] = new Widget[var1];
+				if (Class22.widgets[hash] == null)
+					Class22.widgets[hash] = new Widget[len];
 
-				for (int var2 = 0; var2 < var1; ++var2)
-					if (null == Class22.widgets[var0][var2]) {
-						final byte[] var3 = Widget.aClass61_1001.method259(var0, var2);
-						if (null != var3) {
-							Class22.widgets[var0][var2] = new Widget();
-							Class22.widgets[var0][var2].anInt978 = var2 + (var0 << 16);
-							if (var3[0] == -1)
-								Class22.widgets[var0][var2].method528(new RSBuf(var3));
+				for (int child = 0; child < len; ++child)
+					if (null == Class22.widgets[hash][child]) {
+						final byte[] data = Widget.requester.decompress(hash, child);
+						if (null != data) {
+							Class22.widgets[hash][child] = new Widget();
+							Class22.widgets[hash][child].anInt978 = child + (hash << 16);
+							if (data[0] == -1)
+								Class22.widgets[hash][child].decode1(new RSBuf(data));
 							else
-								Class22.widgets[var0][var2].method527(new RSBuf(var3));
+								Class22.widgets[hash][child].decode2(new RSBuf(data));
 						}
 					}
 
-				Class103.aBoolArray817[var0] = true;
+				Class103.loaded[hash] = true;
 				return true;
 			}
 		}

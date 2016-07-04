@@ -87,8 +87,8 @@ public class Class102_Sub1 extends Class102 {
 
 		if (client.currentWidget != -1) {
 			var0 = client.currentWidget;
-			if ((var0 != -1) && Class103.aBoolArray817[var0]) {
-				Widget.aClass61_1001.method276(var0, -1405441036);
+			if ((var0 != -1) && Class103.loaded[var0]) {
+				Widget.requester.method276(var0, -1405441036);
 				if (null != Class22.widgets[var0]) {
 					boolean var5 = true;
 
@@ -102,7 +102,7 @@ public class Class102_Sub1 extends Class102 {
 					if (var5)
 						Class22.widgets[var0] = null;
 
-					Class103.aBoolArray817[var0] = false;
+					Class103.loaded[var0] = false;
 				}
 			}
 		}

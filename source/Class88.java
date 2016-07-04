@@ -201,7 +201,7 @@ public class Class88 {
 
 	static void handleCSCodes(final int hash) {
 		if (hash != -1)
-			if (Class104_Sub7.laoded(hash)) {
+			if (Class104_Sub7.loaded(hash)) {
 				final Widget[] wid = Class22.widgets[hash];
 
 				for (final Widget children : wid) {

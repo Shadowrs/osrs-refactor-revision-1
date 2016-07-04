@@ -1638,7 +1638,7 @@ public class Class66 {
 		for (Nodee var0 = (Nodee) client.aClass58_1795
 				.method245(); null != var0; var0 = (Nodee) client.aClass58_1795.method243()) {
 			final int var1 = var0.rsfaceID;
-			if (Class104_Sub7.laoded(var1)) {
+			if (Class104_Sub7.loaded(var1)) {
 				boolean var2 = true;
 				final Widget[] var3 = Class22.widgets[var1];
 

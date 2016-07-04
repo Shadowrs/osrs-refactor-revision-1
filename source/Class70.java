@@ -68,8 +68,8 @@ public class Class70 {
 		aLong571 = Class71.method332() + 30000L;
 	}
 
-	public static File method325(final String var0, final String var1, final int var2) {
-		final String var3 = var2 == 0 ? "" : "" + var2;
+	public static File method325(final String var0, final String var1, final int type) {
+		final String var3 = type == 0 ? "" : "" + type;
 		Class24.settings = new File(Class104_Sub23.HOME, "jagex_cl_" + var0 + "_" + var1 + var3 + ".dat");
 		String dir = null;
 		String var5 = null;
@@ -79,7 +79,7 @@ public class Class70 {
 		File var27;
 		if (Class24.settings.exists()) {
 			try {
-				final Class94 var7 = new Class94(Class24.settings, "rw", 10000L);
+				final JagFS var7 = new JagFS(Class24.settings, "rw", 10000L);
 
 				int var9;
 				for (var8 = new RSBuf(
@@ -142,7 +142,7 @@ public class Class70 {
 			}
 		}
 
-		if ((dir == null) && (var2 == 0))
+		if ((dir == null) && (type == 0))
 			label125: for (int var13 = 0; var13 < Class7.store.length; ++var13)
 				for (int var14 = 0; var14 < Class49.targets.length; ++var14) {
 					final File var15 = new File(Class49.targets[var14] + Class7.store[var13] + File.separatorChar + var0 + File.separatorChar);
@@ -205,7 +205,7 @@ public class Class70 {
 			var8 = null;
 
 			try {
-				final Class94 var33 = new Class94(Class24.settings, "rw", 10000L);
+				final JagFS var33 = new JagFS(Class24.settings, "rw", 10000L);
 				final RSBuf var31 = new RSBuf(500);
 				var31.writebyte(3);
 				var31.writebyte(null != var8 ? 1 : 0);
@@ -216,7 +216,7 @@ public class Class70 {
 				var21.printStackTrace();
 			}
 		}
-		System.out.println("file at : "+dir);
+		System.out.println("Dir at : "+dir);
 		return new File(dir);
 	}
 
@@ -229,7 +229,7 @@ public class Class70 {
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class106.aClass61_829.method259(12, var0);
+			final byte[] var2 = Class106.aClass61_829.decompress(12, var0);
 			var1 = new Class104_Sub18_Sub3();
 			if (var2 != null)
 				var1.method681(new RSBuf(var2));

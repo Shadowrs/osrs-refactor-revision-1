@@ -123,7 +123,7 @@ public class Class86 {
 		if (null != var1)
 			return var1;
 		else {
-			final byte[] var2 = Class104_Sub18_Sub8.aClass61_1389.method259(14, var0);
+			final byte[] var2 = Class104_Sub18_Sub8.aClass61_1389.decompress(14, var0);
 			var1 = new Class104_Sub18_Sub8();
 			if (null != var2)
 				var1.method757(new RSBuf(var2));

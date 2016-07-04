@@ -400,7 +400,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class72.aClass61_584.method259(6, var0);
+			final byte[] var2 = Class72.aClass61_584.decompress(6, var0);
 			var1 = new Class104_Sub18_Sub6();
 			var1.anInt1330 = var0;
 			if (null != var2)

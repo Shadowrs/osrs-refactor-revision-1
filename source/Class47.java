@@ -12,7 +12,7 @@ public abstract class Class47 {
 		final int var2 = var0 & '\uffff';
 		if ((null == Class22.widgets[var1])
 				|| (Class22.widgets[var1][var2] == null)) {
-			final boolean var3 = Class104_Sub7.laoded(var1);
+			final boolean var3 = Class104_Sub7.loaded(var1);
 			if (!var3)
 				return null;
 		}
@@ -61,7 +61,7 @@ public abstract class Class47 {
 		if (!Class39.method181(var0, var4, var5))
 			var6 = null;
 		else
-			var6 = Class99.method461(var1.method259(var4, var5));
+			var6 = Class99.method461(var1.decompress(var4, var5));
 
 		return var6;
 	}

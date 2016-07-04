@@ -34,7 +34,7 @@ public final class Class65 {
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class49.aClass61_418.method259(4, var0);
+			final byte[] var2 = Class49.aClass61_418.decompress(4, var0);
 			var1 = new Class104_Sub18_Sub7();
 			if (null != var2)
 				var1.method755(new RSBuf(var2), var0);

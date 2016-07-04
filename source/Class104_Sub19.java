@@ -21,7 +21,7 @@ public class Class104_Sub19 extends Class104 {
 		anIntArray1146 = new int[var5];
 
 		for (int var6 = 0; var6 < anIntArray1147.length; ++var6) {
-			final Class104_Sub18_Sub17_Sub3 var7 = Class94.method421(var4, anIntArray1147[var6]);
+			final Class104_Sub18_Sub17_Sub3 var7 = JagFS.method421(var4, anIntArray1147[var6]);
 			var7.method887();
 			final byte[] var8 = var7.aByteArray1616;
 			final int[] var9 = var7.anIntArray1617;

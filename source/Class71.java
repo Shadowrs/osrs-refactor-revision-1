@@ -84,7 +84,7 @@ public class Class71 {
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class104_Sub18_Sub5.aClass61_1307.method259(13, var0);
+			final byte[] var2 = Class104_Sub18_Sub5.aClass61_1307.decompress(13, var0);
 			var1 = new Class104_Sub18_Sub5();
 			var1.anInt1308 = var0;
 			if (var2 != null)

@@ -2,7 +2,7 @@ public class Widget extends Class104 {
 	static Class61 aClass61_971;
 	public Object[] anObjectArray972;
 	static Class61 aClass61_995;
-	public static Class61 aClass61_1001;
+	public static Class61 requester;
 	public Object[] anObjectArray1014;
 	public Widget[] aClass104_Sub12Array1020;
 	public Object[] anObjectArray1067;
@@ -125,7 +125,7 @@ public class Widget extends Class104 {
 	public int anInt1093 = -1;
 	public int anInt1094 = -1;
 
-	void method527(final RSBuf var1) {
+	void decode2(final RSBuf var1) {
 		isHeaderless = false;
 		anInt980 = var1.readUByte();
 		anInt981 = var1.readUByte();
@@ -352,7 +352,7 @@ public class Widget extends Class104 {
 
 	}
 
-	void method528(final RSBuf var1) {
+	void decode1(final RSBuf var1) {
 		var1.readUByte();
 		isHeaderless = true;
 		anInt980 = var1.readUByte();
@@ -508,7 +508,7 @@ public class Widget extends Class104 {
 				if (!Class39.method181(var2, var4, 0))
 					var5 = null;
 				else
-					var5 = Class99.method461(var3.method259(var4, 0));
+					var5 = Class99.method461(var3.decompress(var4, 0));
 
 				aBool1065 = true;
 				return var5;

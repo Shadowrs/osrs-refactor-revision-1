@@ -141,7 +141,7 @@ public abstract class Class61 {
 	void method258(final int var1, final byte var2) {
 	}
 
-	public byte[] method259(final int var1, final int var2) {
+	public byte[] decompress(final int var1, final int var2) {
 		return filedata(var1, var2, (int[]) null);
 	}
 
@@ -209,7 +209,7 @@ public abstract class Class61 {
 		return anIntArrayArray486[var1];
 	}
 
-	public int method266(final int var1) {
+	public int leng(final int var1) {
 		return fileArray[var1].length;
 	}
 
@@ -328,7 +328,7 @@ public abstract class Class61 {
 		var2 = var2.toLowerCase();
 		final int var3 = aClass73_482.method336(Class67.method319(var1));
 		final int var4 = aClass73Array488[var3].method336(Class67.method319(var2));
-		return method259(var3, var4);
+		return decompress(var3, var4);
 	}
 
 	public int method273(final int var1, String var2) {
@@ -379,14 +379,14 @@ public abstract class Class61 {
 
 	public byte[] method277(final int var1) {
 		if (fileArray.length == 1)
-			return method259(0, var1);
+			return decompress(0, var1);
 		else if (fileArray[var1].length == 1)
-			return method259(var1, 0);
+			return decompress(var1, 0);
 		else
 			throw new RuntimeException();
 	}
 
-	public boolean method278(final int var1) {
+	public boolean requested(final int var1) {
 		if (anObjectArray492[var1] != null)
 			return true;
 		else {

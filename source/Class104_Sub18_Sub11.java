@@ -24,7 +24,7 @@ public class Class104_Sub18_Sub11 extends Class104_Sub18 {
 
 	static final void method770(final int var0, final int var1, final int var2, final int var3, final int var4,
 			final int var5, final int var6, final int var7) {
-		if (Class104_Sub7.laoded(var0)) {
+		if (Class104_Sub7.loaded(var0)) {
 			Class106.aClass104_Sub12Array828 = null;
 			Class66.method300(Class22.widgets[var0], -1, var1, var2, var3, var4, var5, var6, var7);
 			if (null != Class106.aClass104_Sub12Array828) {

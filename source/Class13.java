@@ -171,8 +171,8 @@ public final class Class13 implements Runnable {
 		final int var2 = var0.rsfaceID;
 		final int var3 = (int) var0.nodeId;
 		var0.method470();
-		if (var1 && (var2 != -1) && Class103.aBoolArray817[var2]) {
-			Widget.aClass61_1001.method276(var2, -130954046);
+		if (var1 && (var2 != -1) && Class103.loaded[var2]) {
+			Widget.requester.method276(var2, -130954046);
 			if (null != Class22.widgets[var2]) {
 				boolean var4 = true;
 
@@ -186,7 +186,7 @@ public final class Class13 implements Runnable {
 				if (var4)
 					Class22.widgets[var2] = null;
 
-				Class103.aBoolArray817[var2] = false;
+				Class103.loaded[var2] = false;
 			}
 		}
 

@@ -370,7 +370,7 @@ public class Class104_Sub5 extends Class104 {
 
 	static boolean method503(final Class61 var0) {
 		if (!aBool918) {
-			final byte[] var1 = var0.method259(0, 0);
+			final byte[] var1 = var0.decompress(0, 0);
 			if (var1 == null)
 				return false;
 
@@ -386,7 +386,7 @@ public class Class104_Sub5 extends Class104 {
 			var0.method260(var1, var2);
 			return null;
 		} else {
-			final byte[] var3 = var0.method259(var1, var2);
+			final byte[] var3 = var0.decompress(var1, var2);
 			return var3 == null ? null : new Class104_Sub5(var3);
 		}
 	}

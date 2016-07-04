@@ -69,7 +69,7 @@ public class Class82 {
 	}
 
 	public static Class82 method359(final Class61 var0, final int var1, final int var2) {
-		final byte[] var3 = var0.method259(var1, var2);
+		final byte[] var3 = var0.decompress(var1, var2);
 		return var3 == null ? null : new Class82(new RSBuf(var3));
 	}
 

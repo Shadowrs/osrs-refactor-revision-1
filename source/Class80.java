@@ -69,7 +69,7 @@ public class Class80 {
 	}
 
 	static final void empty(final int var0) {
-		if (Class104_Sub7.laoded(var0)) {
+		if (Class104_Sub7.loaded(var0)) {
 			final Widget[] var1 = Class22.widgets[var0];
 
 			for (final Widget element : var1) {
