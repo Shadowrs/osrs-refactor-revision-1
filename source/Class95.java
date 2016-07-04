@@ -26,12 +26,12 @@ public class Class95 {
 			var2 = client.gamecon.readShort(); // L X
 			var3 = (client.pktSize - client.gamecon.pos) / 16;
 			Class13.xteakeys = new int[var3][4];
-			System.out.println("regions: "+var3);
+			System.out.println("region count: "+var3);
 
 			for (var4 = 0; var4 < var3; ++var4) {
 				for (var5 = 0; var5 < 4; ++var5)
 					Class13.xteakeys[var4][var5] = client.gamecon.readIntV1();
-				System.out.printf("region %d/%d (%d) xteas: "+Arrays.toString(Class13.xteakeys[var4])+" \n", var4, var3);
+				System.out.printf("region %d/%d xteas: "+Arrays.toString(Class13.xteakeys[var4])+" \n", var4, var3);
 			}
 
 			var4 = client.gamecon.readByteN(); // HEIGHT
@@ -56,6 +56,7 @@ public class Class95 {
 					regionid = (xx << 8) + yy;
 					if (!var7 || ((yy != 49) && (yy != 149) && (yy != 147) && (xx != 50)
 							&& ((xx != 49) || (yy != 47)))) {
+						System.out.println("region id "+regionid);
 						Class47.regionId[var3] = regionid;
 						Class40.mapFileIds[var3] = Class67.fs.getArchiveIDForName("m" + xx + "_" + yy);
 						Class75.landscapeFileIds[var3] = Class67.fs.getArchiveIDForName("l" + xx + "_" + yy);
