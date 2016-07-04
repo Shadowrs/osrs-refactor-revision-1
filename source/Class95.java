@@ -74,10 +74,10 @@ public class Class95 {
 			for (var2 = 0; var2 < 4; ++var2)
 				for (count = 0; count < 13; ++count)
 					for (var4 = 0; var4 < 13; ++var4) {
-						cx = client.gamecon.method625(1);
+						cx = client.gamecon.readbits(1);
 						if (cx == 1)
 							client.anIntArrayArrayArray1848[var2][count][var4] = client.gamecon
-									.method625(26);
+									.readbits(26);
 						else
 							client.anIntArrayArrayArray1848[var2][count][var4] = -1;
 					}

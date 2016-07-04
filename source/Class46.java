@@ -498,7 +498,7 @@ public class Class46 {
 									var17 = Class90.anIntArray706[1 + var4];
 									var21.anInt986 = var24;
 									var21.anInt1083 = var17;
-									final Class104_Sub18_Sub12 var79 = Class27.method137(var24);
+									final ItemDef var79 = Class27.forId(var24);
 									var21.anInt1043 = var79.anInt1426;
 									var21.anInt1019 = var79.anInt1427;
 									var21.anInt1012 = var79.anInt1446;
@@ -519,7 +519,7 @@ public class Class46 {
 
 								if (var44 == 1202) {
 									var21.anInt1010 = 3;
-									var21.anInt1011 = Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aClass85_1770
+									var21.anInt1011 = Class81.pf.aClass85_1770
 											.method390();
 									continue;
 								}
@@ -919,7 +919,7 @@ public class Class46 {
 
 									if (var44 == 3101) {
 										var4 -= 2;
-										Class75.method342(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644,
+										Class75.method342(Class81.pf,
 												Class90.anIntArray706[var4], Class90.anIntArray706[var4 + 1]);
 										continue;
 									}
@@ -1121,8 +1121,8 @@ public class Class46 {
 									if (var44 == 3308) {
 										var15 = Class12.anInt73;
 										var24 = Class53.anInt436
-												+ (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 >> 7);
-										var17 = (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 >> 7)
+												+ (Class81.pf.anInt1695 >> 7);
+										var17 = (Class81.pf.anInt1694 >> 7)
 												+ Class20.anInt206;
 										Class90.anIntArray706[var4++] = var17 + (var24 << 14) + (var15 << 28);
 										continue;
@@ -1553,7 +1553,7 @@ public class Class46 {
 													&& (var15 < Class89.anInt704)
 													&& Class104_Sub13.aClass104_Sub7Array1099[var15].aString947
 															.equalsIgnoreCase(
-																	Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aString1780)) {
+																	Class81.pf.aString1780)) {
 												Class90.anIntArray706[var4++] = 1;
 												continue;
 											}
@@ -1765,8 +1765,8 @@ public class Class46 {
 											var5 -= 2;
 											var80 = Class90.aStringArray712[var5];
 											var16 = Class90.aStringArray712[1 + var5];
-											if ((null != Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aClass85_1770)
-													&& Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aClass85_1770.aBool661) {
+											if ((null != Class81.pf.aClass85_1770)
+													&& Class81.pf.aClass85_1770.aBool661) {
 												Class90.aStringArray712[var5++] = var16;
 												continue;
 											}
@@ -2070,16 +2070,16 @@ public class Class46 {
 										if (var44 == 4200) {
 											--var4;
 											var15 = Class90.anIntArray706[var4];
-											Class90.aStringArray712[var5++] = Class27.method137(var15).aString1444;
+											Class90.aStringArray712[var5++] = Class27.forId(var15).aString1444;
 											continue;
 										}
 
-										Class104_Sub18_Sub12 var58;
+										ItemDef var58;
 										if (var44 == 4201) {
 											var4 -= 2;
 											var15 = Class90.anIntArray706[var4];
 											var24 = Class90.anIntArray706[var4 + 1];
-											var58 = Class27.method137(var15);
+											var58 = Class27.forId(var15);
 											if ((var24 >= 1) && (var24 <= 5)
 													&& (var58.aStringArray1434[var24 - 1] != null)) {
 												Class90.aStringArray712[var5++] = var58.aStringArray1434[var24 - 1];
@@ -2094,7 +2094,7 @@ public class Class46 {
 											var4 -= 2;
 											var15 = Class90.anIntArray706[var4];
 											var24 = Class90.anIntArray706[1 + var4];
-											var58 = Class27.method137(var15);
+											var58 = Class27.forId(var15);
 											if ((var24 >= 1) && (var24 <= 5)
 													&& (null != var58.aStringArray1435[var24 - 1])) {
 												Class90.aStringArray712[var5++] = var58.aStringArray1435[var24 - 1];
@@ -2108,23 +2108,23 @@ public class Class46 {
 										if (var44 == 4203) {
 											--var4;
 											var15 = Class90.anIntArray706[var4];
-											Class90.anIntArray706[var4++] = Class27.method137(var15).anInt1453;
+											Class90.anIntArray706[var4++] = Class27.forId(var15).anInt1453;
 											continue;
 										}
 
 										if (var44 == 4204) {
 											--var4;
 											var15 = Class90.anIntArray706[var4];
-											Class90.anIntArray706[var4++] = Class27.method137(var15).anInt1431 == 1 ? 1
+											Class90.anIntArray706[var4++] = Class27.forId(var15).anInt1431 == 1 ? 1
 													: 0;
 											continue;
 										}
 
-										Class104_Sub18_Sub12 var50;
+										ItemDef var50;
 										if (var44 == 4205) {
 											--var4;
 											var15 = Class90.anIntArray706[var4];
-											var50 = Class27.method137(var15);
+											var50 = Class27.forId(var15);
 											if ((var50.anInt1433 == -1) && (var50.anInt1442 >= 0)) {
 												Class90.anIntArray706[var4++] = var50.anInt1442;
 												continue;
@@ -2137,7 +2137,7 @@ public class Class46 {
 										if (var44 == 4206) {
 											--var4;
 											var15 = Class90.anIntArray706[var4];
-											var50 = Class27.method137(var15);
+											var50 = Class27.forId(var15);
 											if ((var50.anInt1433 >= 0) && (var50.anInt1442 >= 0)) {
 												Class90.anIntArray706[var4++] = var50.anInt1442;
 												continue;
@@ -2150,7 +2150,7 @@ public class Class46 {
 										if (var44 == 4207) {
 											--var4;
 											var15 = Class90.anIntArray706[var4];
-											Class90.anIntArray706[var4++] = Class27.method137(var15).aBool1440 ? 1 : 0;
+											Class90.anIntArray706[var4++] = Class27.forId(var15).aBool1440 ? 1 : 0;
 											continue;
 										}
 									} else if (var44 < 5100) {
@@ -2415,9 +2415,9 @@ public class Class46 {
 										}
 
 										if (var44 == 5015) {
-											if ((Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644 != null)
-													&& (null != Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aString1780))
-												var80 = Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aString1780;
+											if ((Class81.pf != null)
+													&& (null != Class81.pf.aString1780))
+												var80 = Class81.pf.aString1780;
 											else
 												var80 = "";
 
@@ -2995,10 +2995,10 @@ public class Class46 {
 						var7 = Class1.aClass61_Sub1_2;
 						final boolean var22 = client.aBool1852;
 						final Class104_Sub18_Sub17_Sub2_Sub1 var8 = Class104_Sub7.aClass104_Sub18_Sub17_Sub2_Sub1_951;
-						Class104_Sub18_Sub12.aClass61_1432 = var6;
+						ItemDef.aClass61_1432 = var6;
 						Class27.aClass61_265 = var7;
 						Class79.aBool632 = var22;
-						Class104_Sub18_Sub12.aClass61_1432.leng(10);
+						ItemDef.aClass61_1432.leng(10);
 						client.aClass104_Sub18_Sub17_Sub2_Sub1_290 = var8;
 						Class9.method38(Class52.aClass61_Sub1_430, Class27.aClass61_Sub1_263,
 								Class104_Sub20.aClass61_Sub1_1171);

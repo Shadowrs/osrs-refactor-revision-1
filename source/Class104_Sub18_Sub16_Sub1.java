@@ -35,7 +35,7 @@ public class Class104_Sub18_Sub16_Sub1 extends Class104_Sub18_Sub16 {
 			anInt1480 = client.anInt1799 - var2;
 		}
 
-		ObjectDefinition var3 = Class104_Sub18_Sub12.forId(anInt1488);
+		ObjectDefinition var3 = ItemDef.forId(anInt1488);
 		if (null != var3.anIntArray1338)
 			var3 = var3.method747();
 

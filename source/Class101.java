@@ -48,6 +48,6 @@ public class Class101 {
 	}
 
 	public static void method466() {
-		Class104_Sub18_Sub12.aClass56_1417.method239();
+		ItemDef.aClass56_1417.method239();
 	}
 }

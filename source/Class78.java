@@ -15,12 +15,12 @@ public class Class78 {
 			if (var3 >= 2000)
 				var3 -= 2000;
 
-			Class104_Sub18_Sub16_Sub7_Sub1 var5;
+			Player var5;
 			if (var3 == 45) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -45,8 +45,8 @@ public class Class78 {
 			if (var3 == 8) {
 				var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var11.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
 							var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -60,10 +60,10 @@ public class Class78 {
 			}
 
 			if (var3 == 51) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -119,10 +119,10 @@ public class Class78 {
 			}
 
 			if (var3 == 47) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -146,10 +146,10 @@ public class Class78 {
 			}
 
 			if (var3 == 46) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -162,12 +162,12 @@ public class Class78 {
 
 			boolean var7;
 			if (var3 == 20) {
-				var7 = Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-						Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+						Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -183,8 +183,8 @@ public class Class78 {
 			if (var3 == 12) {
 				var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var11.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
 							var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -196,10 +196,10 @@ public class Class78 {
 			}
 
 			if (var3 == 14) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -233,10 +233,10 @@ public class Class78 {
 			}
 
 			if (var3 == 50) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -261,10 +261,10 @@ public class Class78 {
 			}
 
 			if (var3 == 48) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -304,10 +304,10 @@ public class Class78 {
 			}
 
 			if (var3 == 15) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -321,12 +321,12 @@ public class Class78 {
 			}
 
 			if (var3 == 18) {
-				var7 = Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-						Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+						Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -348,12 +348,12 @@ public class Class78 {
 			}
 
 			if (var3 == 16) {
-				var7 = Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-						Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+						Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -405,10 +405,10 @@ public class Class78 {
 				Class29.method143(var4, var2, var1, client.aStringArray1936[var0]);
 
 			if (var3 == 44) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -420,12 +420,12 @@ public class Class78 {
 			}
 
 			if (var3 == 22) {
-				var7 = Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-						Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+						Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -453,8 +453,8 @@ public class Class78 {
 			if (var3 == 9) {
 				var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var11.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
 							var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -466,10 +466,10 @@ public class Class78 {
 			}
 
 			if (var3 == 49) {
-				var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var5.anIntArray1745[0],
+					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
 							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -532,8 +532,8 @@ public class Class78 {
 				if (var3 == 10) {
 					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 					if (var11 != null) {
-						Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-								Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var11.anIntArray1745[0],
+						Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+								Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
 								var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
 						client.anInt1896 = Class14.anInt102;
@@ -585,8 +585,8 @@ public class Class78 {
 				if (var3 == 13) {
 					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 					if (null != var11) {
-						Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-								Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var11.anIntArray1745[0],
+						Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+								Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
 								var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
 						client.anInt1896 = Class14.anInt102;
@@ -600,8 +600,8 @@ public class Class78 {
 				if (var3 == 11) {
 					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 					if (null != var11) {
-						Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-								Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var11.anIntArray1745[0],
+						Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+								Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
 								var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
 						client.anInt1896 = Class14.anInt102;
@@ -613,12 +613,12 @@ public class Class78 {
 				}
 
 				if (var3 == 17) {
-					var7 = Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0, 0,
+					var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0,
 							0, 0, 2);
 					if (!var7)
-						Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-								Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0,
+						Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+								Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0,
 								1, 1, 0, 2);
 
 					client.anInt1895 = Class14.anInt101;
@@ -649,7 +649,7 @@ public class Class78 {
 					Class14.anInt105 = var2;
 					Class7.anInt42 = var4;
 					Class79.setflags(var12);
-					client.aString1942 = Class70.method326(16748608) + Class27.method137(var4).aString1444
+					client.aString1942 = Class70.method326(16748608) + Class27.forId(var4).aString1444
 							+ Class70.method326(16777215);
 					if (null == client.aString1942)
 						client.aString1942 = "null";
@@ -693,12 +693,12 @@ public class Class78 {
 					}
 
 					if (var3 == 19) {
-						var7 = Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-								Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0,
+						var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+								Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0,
 								0, 0, 0, 2);
 						if (!var7)
-							Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-									Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0,
+							Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+									Class81.pf.anIntArray1746[0], var1, var2, false, 0,
 									0, 1, 1, 0, 2);
 
 						client.anInt1895 = Class14.anInt101;
@@ -725,7 +725,7 @@ public class Class78 {
 						var12 = Class47.method210(var2);
 						if ((null != var12) && (var12.anIntArray1081[var1] >= 100000))
 							Class15.method60(0, "",
-									var12.anIntArray1081[var1] + " x " + Class27.method137(var4).aString1444);
+									var12.anIntArray1081[var1] + " x " + Class27.forId(var4).aString1444);
 						else {
 							client.secureBuf.putOpcode(49);
 							client.secureBuf.writeLEShort(var4);
@@ -739,8 +739,8 @@ public class Class78 {
 					if (var3 == 7) {
 						var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 						if (null != var11) {
-							Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-									Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0],
+							Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+									Class81.pf.anIntArray1746[0],
 									var11.anIntArray1745[0], var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 							client.anInt1895 = Class14.anInt101;
 							client.anInt1896 = Class14.anInt102;
@@ -755,12 +755,12 @@ public class Class78 {
 					}
 
 					if (var3 == 21) {
-						var7 = Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-								Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0, 0,
+						var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+								Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0,
 								0, 0, 0, 2);
 						if (!var7)
-							Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-									Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var1, var2, false, 0,
+							Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+									Class81.pf.anIntArray1746[0], var1, var2, false, 0,
 									0, 1, 1, 0, 2);
 
 						client.anInt1895 = Class14.anInt101;

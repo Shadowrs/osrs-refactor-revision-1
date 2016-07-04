@@ -293,9 +293,9 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 						client.anInt2021 = 0;
 						client.anInt2018 = 0;
 
-						for (var2 = 0; var2 < client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937.length; ++var2)
-							if (client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var2] != null)
-								client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var2].anInt1716 = -1;
+						for (var2 = 0; var2 < client.localNpcs.length; ++var2)
+							if (client.localNpcs[var2] != null)
+								client.localNpcs[var2].anInt1716 = -1;
 
 						for (var2 = 0; var2 < client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828.length; ++var2)
 							if (client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var2] != null)

@@ -17,25 +17,25 @@ public final class GameBuf extends RSBuf {
 		anInt1184 = pos * 8;
 	}
 
-	public int method625(int var1) {
+	public int readbits(int bits) {
 		int var2 = anInt1184 >> 3;
 		int var3 = 8 - (anInt1184 & 7);
 		int var4 = 0;
 
-		for (anInt1184 += var1; var1 > var3; var3 = 8) {
-			var4 += (backing[var2++] & anIntArray1185[var3]) << (var1 - var3);
-			var1 -= var3;
+		for (anInt1184 += bits; bits > var3; var3 = 8) {
+			var4 += (backing[var2++] & anIntArray1185[var3]) << (bits - var3);
+			bits -= var3;
 		}
 
-		if (var1 == var3)
+		if (bits == var3)
 			var4 += backing[var2] & anIntArray1185[var3];
 		else
-			var4 += (backing[var2] >> (var3 - var1)) & anIntArray1185[var1];
+			var4 += (backing[var2] >> (var3 - bits)) & anIntArray1185[bits];
 
 		return var4;
 	}
 
-	public int method626(final int var1) {
+	public int availbits(final int var1) {
 		return (8 * var1) - anInt1184;
 	}
 

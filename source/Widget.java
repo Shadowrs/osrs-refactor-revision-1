@@ -571,7 +571,7 @@ public class Widget extends Class104 {
 				}
 
 				if (var5 == 4) {
-					final Class104_Sub18_Sub12 var9 = Class27.method137(var6);
+					final ItemDef var9 = Class27.forId(var6);
 					var8 = var9.method775(10);
 					if (null == var8) {
 						aBool1065 = true;
@@ -704,14 +704,14 @@ public class Widget extends Class104 {
 	}
 
 	static final void method537() {
-		for (int var0 = -1; var0 < client.anInt1994; ++var0) {
+		for (int var0 = -1; var0 < client.toUpdate; ++var0) {
 			int var1;
 			if (var0 == -1)
 				var1 = 2047;
 			else
-				var1 = client.anIntArray1909[var0];
+				var1 = client.localPlayerIndexs[var0];
 
-			final Class104_Sub18_Sub16_Sub7_Sub1 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var1];
+			final Player var2 = client.localNpcs[var1];
 			if (var2 != null)
 				Class30.method144(var2);
 		}
@@ -1080,12 +1080,12 @@ public class Widget extends Class104 {
 		final long var5 = ((long) var2 << 38) + var0 + ((long) var1 << 16) + ((long) var3 << 40);
 		Class104_Sub18_Sub17_Sub1 var7;
 		if (!var4) {
-			var7 = (Class104_Sub18_Sub17_Sub1) Class104_Sub18_Sub12.aClass56_1417.method236(var5);
+			var7 = (Class104_Sub18_Sub17_Sub1) ItemDef.aClass56_1417.method236(var5);
 			if (null != var7)
 				return var7;
 		}
 
-		Class104_Sub18_Sub12 var8 = Class27.method137(var0);
+		ItemDef var8 = Class27.forId(var0);
 		if ((var1 > 1) && (null != var8.anIntArray1450)) {
 			int var9 = -1;
 
@@ -1094,7 +1094,7 @@ public class Widget extends Class104 {
 					var9 = var8.anIntArray1450[var10];
 
 			if (var9 != -1)
-				var8 = Class27.method137(var9);
+				var8 = Class27.forId(var9);
 		}
 
 		final Class104_Sub18_Sub16_Sub4 var11 = var8.method779(1);
@@ -1147,7 +1147,7 @@ public class Widget extends Class104 {
 				client.aClass104_Sub18_Sub17_Sub2_Sub1_290.drawstr(Class27.method136(var1), 0, 9, 16776960, 1);
 
 			if (!var4)
-				Class104_Sub18_Sub12.aClass56_1417.method238(var7, var5);
+				ItemDef.aClass56_1417.method238(var7, var5);
 
 			Class104_Sub18_Sub17.method790(var13, var14, var15);
 			Class104_Sub18_Sub17.method801(var16);

@@ -51,7 +51,7 @@ public class Class26 {
 						var9 += var2[var4++];
 						var10 = Class47.method210(var9);
 						var11 = var2[var4++];
-						if ((var11 != -1) && (!Class27.method137(var11).aBool1440 || client.aBool1852))
+						if ((var11 != -1) && (!Class27.forId(var11).aBool1440 || client.aBool1852))
 							for (var12 = 0; var12 < var10.anIntArray1080.length; ++var12)
 								if ((1 + var11) == var10.anIntArray1080[var12])
 									var7 += var10.anIntArray1081[var12];
@@ -67,7 +67,7 @@ public class Class26 {
 						var7 = (Class71.anIntArray576[var2[var4++]] * 100) / '\ub71b';
 
 					if (var6 == 8)
-						var7 = Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1773;
+						var7 = Class81.pf.anInt1773;
 
 					if (var6 == 9)
 						for (var9 = 0; var9 < 25; ++var9)
@@ -79,7 +79,7 @@ public class Class26 {
 						var9 += var2[var4++];
 						var10 = Class47.method210(var9);
 						var11 = var2[var4++];
-						if ((var11 != -1) && (!Class27.method137(var11).aBool1440 || client.aBool1852))
+						if ((var11 != -1) && (!Class27.forId(var11).aBool1440 || client.aBool1852))
 							for (var12 = 0; var12 < var10.anIntArray1080.length; ++var12)
 								if (var10.anIntArray1080[var12] == (var11 + 1)) {
 									var7 = 999999999;
@@ -114,10 +114,10 @@ public class Class26 {
 						var8 = 3;
 
 					if (var6 == 18)
-						var7 = Class53.anInt436 + (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 >> 7);
+						var7 = Class53.anInt436 + (Class81.pf.anInt1695 >> 7);
 
 					if (var6 == 19)
-						var7 = Class20.anInt206 + (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 >> 7);
+						var7 = Class20.anInt206 + (Class81.pf.anInt1694 >> 7);
 
 					if (var6 == 20)
 						var7 = var2[var4++];
@@ -152,8 +152,8 @@ public class Class26 {
 				Class49.aClass104_Sub18_Sub17_Sub3_417.anInt1619 + var1);
 		if ((client.anInt2021 != 2) && (client.anInt2021 != 5)) {
 			final int var3 = (client.anInt1862 + client.anInt1866) & 2047;
-			final int var4 = 48 + (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
-			final int var5 = 464 - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
+			final int var4 = 48 + (Class81.pf.anInt1695 / 32);
+			final int var5 = 464 - (Class81.pf.anInt1694 / 32);
 			Class104_Sub2.aClass104_Sub18_Sub17_Sub1_861.method848(var0 + 25, 5 + var1, 146, 151, var4, var5, var3,
 					256 + client.anInt1921, Class42.anIntArray373, Class54.anIntArray448);
 
@@ -162,9 +162,9 @@ public class Class26 {
 			int var8;
 			for (var6 = 0; var6 < client.anInt2014; ++var6) {
 				var7 = (2 + (client.anIntArray2015[var6] * 4))
-						- (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
+						- (Class81.pf.anInt1695 / 32);
 				var8 = (2 + (4 * client.anIntArray2016[var6]))
-						- (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
+						- (Class81.pf.anInt1694 / 32);
 				Class66.method302(var0, var1, var7, var8, client.aClass104_Sub18_Sub17_Sub1Array2017[var6]);
 			}
 
@@ -174,8 +174,8 @@ public class Class26 {
 				for (var7 = 0; var7 < 104; ++var7) {
 					final Class59 var9 = client.aClass59ArrayArrayArray1952[Class12.anInt73][var6][var7];
 					if (var9 != null) {
-						var10 = ((4 * var6) + 2) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
-						var11 = ((var7 * 4) + 2) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
+						var10 = ((4 * var6) + 2) - (Class81.pf.anInt1695 / 32);
+						var11 = ((var7 * 4) + 2) - (Class81.pf.anInt1694 / 32);
 						Class66.method302(var0, var1, var10, var11, Class44.aClass104_Sub18_Sub17_Sub1Array394[0]);
 					}
 				}
@@ -188,25 +188,25 @@ public class Class26 {
 						var15 = var15.method677();
 
 					if ((var15 != null) && var15.aBool1255 && var15.aBool1257) {
-						var10 = (var12.anInt1695 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
-						var11 = (var12.anInt1694 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
+						var10 = (var12.anInt1695 / 32) - (Class81.pf.anInt1695 / 32);
+						var11 = (var12.anInt1694 / 32) - (Class81.pf.anInt1694 / 32);
 						Class66.method302(var0, var1, var10, var11, Class44.aClass104_Sub18_Sub17_Sub1Array394[1]);
 					}
 				}
 			}
 
-			for (var6 = 0; var6 < client.anInt1994; ++var6) {
-				final Class104_Sub18_Sub16_Sub7_Sub1 var17 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[client.anIntArray1909[var6]];
+			for (var6 = 0; var6 < client.toUpdate; ++var6) {
+				final Player var17 = client.localNpcs[client.localPlayerIndexs[var6]];
 				if ((var17 != null) && var17.method936(1531790724)) {
-					var8 = (var17.anInt1695 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
-					var10 = (var17.anInt1694 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
+					var8 = (var17.anInt1695 / 32) - (Class81.pf.anInt1695 / 32);
+					var10 = (var17.anInt1694 / 32) - (Class81.pf.anInt1694 / 32);
 					boolean var16 = false;
 					if (BZip2Context.method154(var17.aString1780))
 						var16 = true;
 
 					boolean var13 = false;
-					if ((Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1787 != 0) && (var17.anInt1787 != 0)
-							&& (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1787 == var17.anInt1787))
+					if ((Class81.pf.anInt1787 != 0) && (var17.anInt1787 != 0)
+							&& (Class81.pf.anInt1787 == var17.anInt1787))
 						var13 = true;
 
 					if (var16)
@@ -223,34 +223,34 @@ public class Class26 {
 						&& (client.anInt1808 < client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828.length)) {
 					final Class104_Sub18_Sub16_Sub7_Sub2 var14 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[client.anInt1808];
 					if (var14 != null) {
-						var7 = (var14.anInt1695 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
-						var8 = (var14.anInt1694 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
+						var7 = (var14.anInt1695 / 32) - (Class81.pf.anInt1695 / 32);
+						var8 = (var14.anInt1694 / 32) - (Class81.pf.anInt1694 / 32);
 						Class11.method49(var0, var1, var7, var8, Class42.aClass104_Sub18_Sub17_Sub1Array372[1]);
 					}
 				}
 
 				if (client.anInt1797 == 2) {
 					var6 = (((client.anInt1810 * 4) - (Class53.anInt436 * 4)) + 2)
-							- (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
+							- (Class81.pf.anInt1695 / 32);
 					var7 = (((client.anInt1811 * 4) - (Class20.anInt206 * 4)) + 2)
-							- (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
+							- (Class81.pf.anInt1694 / 32);
 					Class11.method49(var0, var1, var6, var7, Class42.aClass104_Sub18_Sub17_Sub1Array372[1]);
 				}
 
 				if ((client.anInt1797 == 10) && (client.anInt1809 >= 0)
-						&& (client.anInt1809 < client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937.length)) {
-					final Class104_Sub18_Sub16_Sub7_Sub1 var18 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[client.anInt1809];
+						&& (client.anInt1809 < client.localNpcs.length)) {
+					final Player var18 = client.localNpcs[client.anInt1809];
 					if (var18 != null) {
-						var7 = (var18.anInt1695 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
-						var8 = (var18.anInt1694 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
+						var7 = (var18.anInt1695 / 32) - (Class81.pf.anInt1695 / 32);
+						var8 = (var18.anInt1694 / 32) - (Class81.pf.anInt1694 / 32);
 						Class11.method49(var0, var1, var7, var8, Class42.aClass104_Sub18_Sub17_Sub1Array372[1]);
 					}
 				}
 			}
 
 			if (client.anInt2018 != 0) {
-				var6 = ((client.anInt2018 * 4) + 2) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
-				var7 = ((client.anInt1880 * 4) + 2) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
+				var6 = ((client.anInt2018 * 4) + 2) - (Class81.pf.anInt1695 / 32);
+				var7 = ((client.anInt1880 * 4) + 2) - (Class81.pf.anInt1694 / 32);
 				Class66.method302(var0, var1, var6, var7, Class42.aClass104_Sub18_Sub17_Sub1Array372[0]);
 			}
 

@@ -186,7 +186,7 @@ public class Class53 {
 						}
 					}
 
-					if (Class33.method155(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aString1780, Class2.aClass101_8)
+					if (Class33.method155(Class81.pf.aString1780, Class2.aClass101_8)
 							.equals(var2))
 						Class15.method60(0, "", "You can\'t add yourself to your own ignore list");
 					else {

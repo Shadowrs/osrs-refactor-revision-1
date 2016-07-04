@@ -100,8 +100,8 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 
 	static final void method483() {
 		while (true) {
-			if (client.gamecon.method626(client.pktSize) >= 27) {
-				final int var0 = client.gamecon.method625(15);
+			if (client.gamecon.availbits(client.pktSize) >= 27) {
+				final int var0 = client.gamecon.readbits(15);
 				if (var0 != 32767) {
 					boolean var1 = false;
 					if (null == client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0]) {
@@ -112,21 +112,21 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 					final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0];
 					client.anIntArray1830[++client.anInt1832 - 1] = var0;
 					var2.anInt1739 = client.anInt1799;
-					final int var3 = client.anIntArray1817[client.gamecon.method625(3)];
+					final int var3 = client.anIntArray1817[client.gamecon.readbits(3)];
 					if (var1)
 						var2.anInt1698 = var2.anInt1725 = var3;
 
-					int var4 = client.gamecon.method625(5);
+					int var4 = client.gamecon.readbits(5);
 					if (var4 > 15)
 						var4 -= 32;
 
-					final int var5 = client.gamecon.method625(1);
+					final int var5 = client.gamecon.readbits(1);
 					if (var5 == 1)
 						client.anIntArray1911[++client.anInt1910 - 1] = var0;
 
-					final int var6 = client.gamecon.method625(1);
-					var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.gamecon.method625(14));
-					int var7 = client.gamecon.method625(5);
+					final int var6 = client.gamecon.readbits(1);
+					var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.gamecon.readbits(14));
+					int var7 = client.gamecon.readbits(5);
 					if (var7 > 15)
 						var7 -= 32;
 
@@ -142,8 +142,8 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 					var2.anInt1702 = var2.aClass104_Sub18_Sub2_1788.anInt1233;
 					var2.anInt1699 = var2.aClass104_Sub18_Sub2_1788.anInt1244;
 					var2.anInt1700 = var2.aClass104_Sub18_Sub2_1788.anInt1235;
-					var2.method933(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0] + var7,
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0] + var4, var6 == 1);
+					var2.placeEntity(Class81.pf.anIntArray1745[0] + var7,
+							Class81.pf.anIntArray1746[0] + var4, var6 == 1);
 					continue;
 				}
 			}
@@ -156,13 +156,13 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 	static final void method484() {
 		int var0;
 		int var1;
-		for (var0 = -1; var0 < client.anInt1994; ++var0) {
+		for (var0 = -1; var0 < client.toUpdate; ++var0) {
 			if (var0 == -1)
 				var1 = 2047;
 			else
-				var1 = client.anIntArray1909[var0];
+				var1 = client.localPlayerIndexs[var0];
 
-			final Class104_Sub18_Sub16_Sub7_Sub1 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var1];
+			final Player var2 = client.localNpcs[var1];
 			if ((null != var2) && (var2.anInt1713 > 0)) {
 				--var2.anInt1713;
 				if (var2.anInt1713 == 0)

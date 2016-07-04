@@ -50,7 +50,7 @@ public class Class30 {
 			var0.method932();
 		}
 
-		if ((var0 == Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644) && ((var0.anInt1695 < 1536) || (var0.anInt1694 < 1536)
+		if ((var0 == Class81.pf) && ((var0.anInt1695 < 1536) || (var0.anInt1694 < 1536)
 				|| (var0.anInt1695 >= 11776) || (var0.anInt1694 >= 11776))) {
 			var0.anInt1722 = -1;
 			var0.anInt1727 = -1;

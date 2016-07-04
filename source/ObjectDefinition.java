@@ -416,7 +416,7 @@ public class ObjectDefinition extends Class104_Sub18 {
 			var1 = Class71.anIntArray576[anInt1367];
 
 		return (var1 >= 0) && (var1 < anIntArray1338.length) && (anIntArray1338[var1] != -1)
-				? Class104_Sub18_Sub12.forId(anIntArray1338[var1]) : null;
+				? ItemDef.forId(anIntArray1338[var1]) : null;
 	}
 
 	public boolean method748() {
@@ -425,7 +425,7 @@ public class ObjectDefinition extends Class104_Sub18 {
 		else {
 			for (final int element : anIntArray1338)
 				if (element != -1) {
-					final ObjectDefinition var2 = Class104_Sub18_Sub12.forId(element);
+					final ObjectDefinition var2 = ItemDef.forId(element);
 					if ((var2.anInt1333 != -1) || (var2.anIntArray1372 != null))
 						return true;
 				}

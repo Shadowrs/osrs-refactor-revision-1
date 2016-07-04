@@ -1,4 +1,4 @@
-public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_Sub7 {
+public final class Player extends Class104_Sub18_Sub16_Sub7 {
 	int anInt1769;
 	int anInt1772;
 	int anInt1775;
@@ -7,8 +7,8 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 	int anInt1782;
 	int anInt1783;
 	int anInt1786;
-	int anInt1771 = -1;
-	int anInt1784 = -1;
+	int skull = -1;
+	int pray = -1;
 	int anInt1773 = 0;
 	int anInt1774 = 0;
 	int anInt1776 = 0;
@@ -90,85 +90,85 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 		return null != aClass85_1770;
 	}
 
-	final void method950(final RSBuf var1) {
-		var1.pos = 0;
-		final int var2 = var1.readUByte();
-		anInt1771 = var1.method565();
-		anInt1784 = var1.method565();
+	final void decodeAppearance(final RSBuf cachedAppearance) {
+		cachedAppearance.pos = 0;
+		final int gender = cachedAppearance.readUByte();
+		skull = cachedAppearance.method565();
+		pray = cachedAppearance.method565();
 		int var3 = -1;
 		anInt1787 = 0;
-		final int[] var4 = new int[12];
+		final int[] equipment = new int[12];
 
-		int var6;
-		int var7;
+		int temp;
+		int shortt;
 		for (int var5 = 0; var5 < 12; ++var5) {
-			var6 = var1.readUByte();
-			if (var6 == 0)
-				var4[var5] = 0;
+			temp = cachedAppearance.readUByte();
+			if (temp == 0)
+				equipment[var5] = 0;
 			else {
-				var7 = var1.readUByte();
-				var4[var5] = var7 + (var6 << 8);
-				if ((var5 == 0) && (var4[0] == '\uffff')) {
-					var3 = var1.readLEShort();
+				shortt = cachedAppearance.readUByte();
+				equipment[var5] = shortt + (temp << 8);
+				if ((var5 == 0) && (equipment[0] == '\uffff')) {
+					var3 = cachedAppearance.readLEShort();
 					break;
 				}
 
-				if (var4[var5] >= 512) {
-					final int var8 = Class27.method137(var4[var5] - 512).anInt1420;
+				if (equipment[var5] >= 512) {
+					final int var8 = Class27.forId(equipment[var5] - 512).anInt1420;
 					if (var8 != 0)
 						anInt1787 = var8;
 				}
 			}
 		}
 
-		final int[] var9 = new int[5];
+		final int[] skin = new int[5];
 
-		for (var6 = 0; var6 < 5; ++var6) {
-			var7 = var1.readUByte();
-			if ((var7 < 0) || (var7 >= Class47.aShortArrayArray405[var6].length))
-				var7 = 0;
+		for (temp = 0; temp < 5; ++temp) {
+			shortt = cachedAppearance.readUByte();
+			if ((shortt < 0) || (shortt >= Class47.skinCols[temp].length))
+				shortt = 0;
 
-			var9[var6] = var7;
+			skin[temp] = shortt;
 		}
 
-		anInt1702 = var1.readLEShort();
+		anInt1702 = cachedAppearance.readLEShort();
 		if (anInt1702 == '\uffff')
 			anInt1702 = -1;
 
-		anInt1699 = var1.readLEShort();
+		anInt1699 = cachedAppearance.readLEShort();
 		if (anInt1699 == '\uffff')
 			anInt1699 = -1;
 
 		anInt1700 = anInt1699;
-		anInt1701 = var1.readLEShort();
+		anInt1701 = cachedAppearance.readLEShort();
 		if (anInt1701 == '\uffff')
 			anInt1701 = -1;
 
-		anInt1743 = var1.readLEShort();
+		anInt1743 = cachedAppearance.readLEShort();
 		if (anInt1743 == '\uffff')
 			anInt1743 = -1;
 
-		anInt1703 = var1.readLEShort();
+		anInt1703 = cachedAppearance.readLEShort();
 		if (anInt1703 == '\uffff')
 			anInt1703 = -1;
 
-		anInt1704 = var1.readLEShort();
+		anInt1704 = cachedAppearance.readLEShort();
 		if (anInt1704 == '\uffff')
 			anInt1704 = -1;
 
-		anInt1705 = var1.readLEShort();
+		anInt1705 = cachedAppearance.readLEShort();
 		if (anInt1705 == '\uffff')
 			anInt1705 = -1;
 
-		aString1780 = var1.readString();
-		if (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644 == this)
+		aString1780 = cachedAppearance.readString();
+		if (Class81.pf == this)
 			RuntimeException_Sub1.aString1478 = aString1780;
 
-		anInt1773 = var1.readUByte();
-		anInt1774 = var1.readLEShort();
+		anInt1773 = cachedAppearance.readUByte();
+		anInt1774 = cachedAppearance.readLEShort();
 		if (aClass85_1770 == null)
 			aClass85_1770 = new Class85();
 
-		aClass85_1770.method383(var4, var9, var2 == 1, var3);
+		aClass85_1770.method383(equipment, skin, gender == 1, var3);
 	}
 }

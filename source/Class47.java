@@ -1,5 +1,5 @@
 public abstract class Class47 {
-	public static short[][] aShortArrayArray405;
+	public static short[][] skinCols;
 	static int[] mapCoordinates;
 	static boolean aBool404 = false;
 

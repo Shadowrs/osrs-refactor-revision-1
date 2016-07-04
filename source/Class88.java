@@ -234,11 +234,11 @@ public class Class88 {
 
 					if (var0.anInt1505 < 0) {
 						final int var2 = -var0.anInt1505 - 1;
-						Class104_Sub18_Sub16_Sub7_Sub1 var3;
+						Player var3;
 						if (client.anInt1874 == var2)
-							var3 = Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644;
+							var3 = Class81.pf;
 						else
-							var3 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var2];
+							var3 = client.localNpcs[var2];
 
 						if ((var3 != null) && (var3.anInt1695 >= 0) && (var3.anInt1695 < 13312) && (var3.anInt1694 >= 0)
 								&& (var3.anInt1694 < 13312))

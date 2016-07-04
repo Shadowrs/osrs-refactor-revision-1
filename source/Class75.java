@@ -46,7 +46,7 @@ public class Class75 {
 		}
 	}
 
-	static void method342(final Class104_Sub18_Sub16_Sub7_Sub1 var0, final int var1, final int var2) {
+	static void method342(final Player var0, final int var1, final int var2) {
 		if ((var0.anInt1722 == var1) && (var1 != -1)) {
 			final int var3 = Class70.method327(var1).anInt1275;
 			if (var3 == 1) {

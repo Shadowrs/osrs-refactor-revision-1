@@ -451,7 +451,7 @@ public final class BZip2Context {
 				if (var0.equalsIgnoreCase(client.aClass86Array1972[var1].aString675))
 					return true;
 
-			if (var0.equalsIgnoreCase(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aString1780))
+			if (var0.equalsIgnoreCase(Class81.pf.aString1780))
 				return true;
 			else
 				return false;

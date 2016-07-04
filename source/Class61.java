@@ -224,7 +224,7 @@ public abstract class Class61 {
 			method258(var2, (byte) 75);
 	}
 
-	public void method269() {
+	public void clearFiles() {
 		for (int var1 = 0; var1 < fileArray.length; ++var1)
 			if (fileArray[var1] != null)
 				for (int var2 = 0; var2 < fileArray[var1].length; ++var2)
@@ -449,7 +449,7 @@ public abstract class Class61 {
 						}
 					}
 
-					if (Class33.method155(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.aString1780, Class2.aClass101_8)
+					if (Class33.method155(Class81.pf.aString1780, Class2.aClass101_8)
 							.equals(var1))
 						Class15.method60(0, "", "You can\'t add yourself to your own friend list");
 					else {

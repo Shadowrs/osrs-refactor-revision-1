@@ -63,7 +63,7 @@ public class Class105 {
 				if (client.anInt1874 == var4)
 					var4 = 2047;
 
-				final Class104_Sub18_Sub16_Sub7_Sub1 var5 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var4];
+				final Player var5 = client.localNpcs[var4];
 				if (null != var5) {
 					var3 = var0.anInt1695 - var5.anInt1695;
 					final int var6 = var0.anInt1694 - var5.anInt1694;

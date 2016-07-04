@@ -78,7 +78,7 @@ public final class Class44 {
 			final int[] var10 = Class104_Sub2.aClass104_Sub18_Sub17_Sub1_861.anIntArray1592;
 			var11 = (4 * var1) + 24624 + ((103 - var2) * 2048);
 			var12 = (var5 >> 14) & 32767;
-			final ObjectDefinition var13 = Class104_Sub18_Sub12.forId(var12);
+			final ObjectDefinition var13 = ItemDef.forId(var12);
 			if (var13.anInt1341 != -1) {
 				final Class104_Sub18_Sub17_Sub3 var14 = Class99.aClass104_Sub18_Sub17_Sub3Array794[var13.anInt1341];
 				if (var14 != null) {
@@ -151,7 +151,7 @@ public final class Class44 {
 			var7 = (var6 >> 6) & 3;
 			var8 = var6 & 31;
 			var9 = (var5 >> 14) & 32767;
-			final ObjectDefinition var23 = Class104_Sub18_Sub12.forId(var9);
+			final ObjectDefinition var23 = ItemDef.forId(var9);
 			int var18;
 			if (var23.anInt1341 != -1) {
 				final Class104_Sub18_Sub17_Sub3 var17 = Class99.aClass104_Sub18_Sub17_Sub3Array794[var23.anInt1341];
@@ -184,7 +184,7 @@ public final class Class44 {
 		var5 = Class81.aClass17_643.method88(var0, var1, var2);
 		if (var5 != 0) {
 			var6 = (var5 >> 14) & 32767;
-			final ObjectDefinition var20 = Class104_Sub18_Sub12.forId(var6);
+			final ObjectDefinition var20 = ItemDef.forId(var6);
 			if (var20.anInt1341 != -1) {
 				final Class104_Sub18_Sub17_Sub3 var21 = Class99.aClass104_Sub18_Sub17_Sub3Array794[var20.anInt1341];
 				if (null != var21) {

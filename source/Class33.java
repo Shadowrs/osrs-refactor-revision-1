@@ -236,9 +236,9 @@ public final class Class33 {
 		Class104_Sub18_Sub9.aClass56_1393.method239();
 		Class26.method135();
 		Class103.method469();
-		Class104_Sub18_Sub12.aClass56_1415.method239();
-		Class104_Sub18_Sub12.aClass56_1416.method239();
-		Class104_Sub18_Sub12.aClass56_1417.method239();
+		ItemDef.aClass56_1415.method239();
+		ItemDef.aClass56_1416.method239();
+		ItemDef.aClass56_1417.method239();
 		Class87.method398();
 		Class104_Sub18_Sub5.aClass56_1305.method239();
 		Class104_Sub18_Sub5.aClass56_1318.method239();
@@ -248,18 +248,18 @@ public final class Class33 {
 		Class61.method281();
 		((Class34) Class104_Sub18_Sub17_Sub4.anInterface2_1686).method160();
 		CS2.aClass56_1278.method239();
-		Class27.aClass61_Sub1_263.method269();
-		Class104_Sub20.aClass61_Sub1_1171.method269();
-		Class29.aClass61_Sub1_278.method269();
-		Class103.aClass61_Sub1_818.method269();
-		Class67.fs.method269();
-		Class27.aClass61_Sub1_264.method269();
-		Class1.aClass61_Sub1_2.method269();
-		client.aClass61_Sub1_1820.method269();
-		client.aClass61_Sub1_1838.method269();
-		Class2.aClass61_Sub1_9.method269();
-		Class106.aClass61_Sub1_827.method269();
-		Class85.aClass61_Sub1_671.method269();
+		Class27.aClass61_Sub1_263.clearFiles();
+		Class104_Sub20.aClass61_Sub1_1171.clearFiles();
+		Class29.aClass61_Sub1_278.clearFiles();
+		Class103.aClass61_Sub1_818.clearFiles();
+		Class67.fs.clearFiles();
+		Class27.aClass61_Sub1_264.clearFiles();
+		Class1.aClass61_Sub1_2.clearFiles();
+		client.aClass61_Sub1_1820.clearFiles();
+		client.aClass61_Sub1_1838.clearFiles();
+		Class2.aClass61_Sub1_9.clearFiles();
+		Class106.aClass61_Sub1_827.clearFiles();
+		Class85.aClass61_Sub1_671.clearFiles();
 	}
 
 	static void method159(final Class57[] var0, final int var1, final int var2, final int[] var3, final int[] var4) {

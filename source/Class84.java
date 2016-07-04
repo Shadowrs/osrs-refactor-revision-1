@@ -184,11 +184,11 @@ public class Class84 {
 					var6 = ((client.anInt1921 + 256) * var6) >> 8;
 					final int var7 = ((var3 * var5) + (var2 * var6)) >> 11;
 					final int var8 = ((var3 * var6) - (var2 * var5)) >> 11;
-					final int var9 = (var7 + Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695) >> 7;
-					final int var10 = (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 - var8) >> 7;
+					final int var9 = (var7 + Class81.pf.anInt1695) >> 7;
+					final int var10 = (Class81.pf.anInt1694 - var8) >> 7;
 					final boolean var11 = Class104_Sub13.method543(
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-							Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var9, var10, true, 0, 0, 0,
+							Class81.pf.anIntArray1745[0],
+							Class81.pf.anIntArray1746[0], var9, var10, true, 0, 0, 0,
 							0, 0, 1);
 					if (var11) {
 						client.secureBuf.writebyte(var2);
@@ -199,9 +199,9 @@ public class Class84 {
 						client.secureBuf.writebyte(client.anInt1921);
 						client.secureBuf.writebyte(89);
 						client.secureBuf
-								.writeShort(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695);
+								.writeShort(Class81.pf.anInt1695);
 						client.secureBuf
-								.writeShort(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694);
+								.writeShort(Class81.pf.anInt1694);
 						client.secureBuf.writebyte(client.anInt1850);
 						client.secureBuf.writebyte(63);
 					}

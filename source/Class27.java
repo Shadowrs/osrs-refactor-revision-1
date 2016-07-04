@@ -19,20 +19,20 @@ public class Class27 {
 						: "<col=00ff80>" + (var0 / 1000000) + "M" + "</col>");
 	}
 
-	public static Class104_Sub18_Sub12 method137(final int var0) {
-		Class104_Sub18_Sub12 var1 = (Class104_Sub18_Sub12) Class104_Sub18_Sub12.aClass56_1415.method236(var0);
+	public static ItemDef forId(final int var0) {
+		ItemDef var1 = (ItemDef) ItemDef.aClass56_1415.method236(var0);
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class104_Sub18_Sub12.aClass61_1432.decompress(10, var0);
-			var1 = new Class104_Sub18_Sub12();
+			final byte[] var2 = ItemDef.aClass61_1432.decompress(10, var0);
+			var1 = new ItemDef();
 			var1.anInt1418 = var0;
 			if (var2 != null)
 				var1.method771(new RSBuf(var2));
 
 			var1.method772();
 			if (var1.anInt1433 != -1)
-				var1.method774(method137(var1.anInt1433), method137(var1.anInt1442));
+				var1.method774(forId(var1.anInt1433), forId(var1.anInt1442));
 
 			if (!Class79.aBool632 && var1.aBool1440) {
 				var1.aString1444 = "Members object";
@@ -41,7 +41,7 @@ public class Class27 {
 				var1.anInt1420 = 0;
 			}
 
-			Class104_Sub18_Sub12.aClass56_1415.method238(var1, var0);
+			ItemDef.aClass56_1415.method238(var1, var0);
 			return var1;
 		}
 	}

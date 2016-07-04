@@ -8,28 +8,28 @@ public class Class104_Sub2 extends Class104 {
 	int[] anIntArray858 = new int[] { 0 };
 
 	static final void method479(final boolean var0) {
-		if ((client.anInt2018 == (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 >> 7))
-				&& (client.anInt1880 == (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 >> 7)))
+		if ((client.anInt2018 == (Class81.pf.anInt1695 >> 7))
+				&& (client.anInt1880 == (Class81.pf.anInt1694 >> 7)))
 			client.anInt2018 = 0;
 
-		int var1 = client.anInt1994;
+		int var1 = client.toUpdate;
 		if (var0)
 			var1 = 1;
 
 		for (int var2 = 0; var2 < var1; ++var2) {
-			Class104_Sub18_Sub16_Sub7_Sub1 var3;
+			Player var3;
 			int var4;
 			if (var0) {
-				var3 = Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644;
+				var3 = Class81.pf;
 				var4 = 33538048;
 			} else {
-				var3 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[client.anIntArray1909[var2]];
-				var4 = client.anIntArray1909[var2] << 14;
+				var3 = client.localNpcs[client.localPlayerIndexs[var2]];
+				var4 = client.localPlayerIndexs[var2] << 14;
 			}
 
 			if ((var3 != null) && var3.method936(1531790724)) {
 				var3.aBool1779 = false;
-				if (((client.lowmvm && (client.anInt1994 > 50)) || (client.anInt1994 > 200)) && !var0
+				if (((client.lowmvm && (client.toUpdate > 50)) || (client.toUpdate > 200)) && !var0
 						&& (var3.anInt1702 == var3.anInt1719))
 					var3.aBool1779 = true;
 

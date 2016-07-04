@@ -252,15 +252,15 @@ public class RSBuf extends Class104 {
 		backing[++pos - 1] = (byte) var1;
 	}
 
-	public int method588() {
+	public int readUByteS() {
 		return (128 - backing[++pos - 1]) & 255;
 	}
 
-	public byte method589() {
+	public byte readByteA() {
 		return (byte) (backing[++pos - 1] - 128);
 	}
 
-	public byte method590() {
+	public byte readByteS() {
 		return (byte) (128 - backing[++pos - 1]);
 	}
 

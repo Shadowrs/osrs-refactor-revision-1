@@ -66,10 +66,10 @@ public class Class85 {
 		if (!var2) {
 			--var3;
 			if (var3 < 0)
-				var3 = Class47.aShortArrayArray405[var1].length - 1;
+				var3 = Class47.skinCols[var1].length - 1;
 		} else {
 			++var3;
-			if (var3 >= Class47.aShortArrayArray405[var1].length)
+			if (var3 >= Class47.skinCols[var1].length)
 				var3 = 0;
 		}
 
@@ -168,7 +168,7 @@ public class Class85 {
 					if ((var12 >= 256) && (var12 < 512) && !Class84.method382(var12 - 256).method759())
 						var10 = true;
 
-					if ((var12 >= 512) && !Class27.method137(var12 - 512).method780(aBool661))
+					if ((var12 >= 512) && !Class27.forId(var12 - 512).method780(aBool661))
 						var10 = true;
 				}
 
@@ -195,7 +195,7 @@ public class Class85 {
 						}
 
 						if (var15 >= 512) {
-							var16 = Class27.method137(var15 - 512).method777(aBool661);
+							var16 = Class27.forId(var15 - 512).method777(aBool661);
 							if (null != var16)
 								var13[var12++] = var16;
 						}
@@ -204,9 +204,9 @@ public class Class85 {
 					final Class104_Sub18_Sub16_Sub5 var17 = new Class104_Sub18_Sub16_Sub5(var13, var12);
 
 					for (var15 = 0; var15 < 5; ++var15) {
-						if (skin[var15] < Class47.aShortArrayArray405[var15].length)
+						if (skin[var15] < Class47.skinCols[var15].length)
 							var17.method899(Class57.aShortArray465[var15],
-									Class47.aShortArrayArray405[var15][skin[var15]]);
+									Class47.skinCols[var15][skin[var15]]);
 
 						if (skin[var15] < aShortArrayArray668[var15].length)
 							var17.method899(aShortArray663[var15], aShortArrayArray668[var15][skin[var15]]);
@@ -253,7 +253,7 @@ public class Class85 {
 				if ((var3 >= 256) && (var3 < 512) && !Class84.method382(var3 - 256).method760())
 					var1 = true;
 
-				if ((var3 >= 512) && !Class27.method137(var3 - 512).method781(aBool661))
+				if ((var3 >= 512) && !Class27.forId(var3 - 512).method781(aBool661))
 					var1 = true;
 			}
 
@@ -274,7 +274,7 @@ public class Class85 {
 					}
 
 					if (var6 >= 512) {
-						var7 = Class27.method137(var6 - 512).method778(aBool661);
+						var7 = Class27.forId(var6 - 512).method778(aBool661);
 						if (null != var7)
 							var4[var3++] = var7;
 					}
@@ -283,9 +283,9 @@ public class Class85 {
 				final Class104_Sub18_Sub16_Sub5 var8 = new Class104_Sub18_Sub16_Sub5(var4, var3);
 
 				for (var6 = 0; var6 < 5; ++var6) {
-					if (skin[var6] < Class47.aShortArrayArray405[var6].length)
+					if (skin[var6] < Class47.skinCols[var6].length)
 						var8.method899(Class57.aShortArray465[var6],
-								Class47.aShortArrayArray405[var6][skin[var6]]);
+								Class47.skinCols[var6][skin[var6]]);
 
 					if (skin[var6] < aShortArrayArray668[var6].length)
 						var8.method899(aShortArray663[var6], aShortArrayArray668[var6][skin[var6]]);

@@ -32,7 +32,7 @@ public final class Class9 {
 		int var11;
 		if (client.pktOpc == 245) {
 			var0 = client.gamecon.readLEShort();
-			byte var1 = client.gamecon.method589();
+			byte var1 = client.gamecon.readByteA();
 			var2 = client.gamecon.readByteN();
 			var3 = var2 >> 2;
 			var4 = var2 & 3;
@@ -40,20 +40,20 @@ public final class Class9 {
 			var6 = client.gamecon.method594();
 			var7 = client.gamecon.readShort();
 			var8 = client.gamecon.readLEShort();
-			var9 = client.gamecon.method588();
+			var9 = client.gamecon.readUByteS();
 			var10 = ((var9 >> 4) & 7) + Class19.anInt195;
 			var11 = Class93.anInt742 + (var9 & 7);
-			byte var12 = client.gamecon.method589();
+			byte var12 = client.gamecon.readByteA();
 			byte var13 = client.gamecon.method565();
 			byte var14 = client.gamecon.method565();
-			Class104_Sub18_Sub16_Sub7_Sub1 var15;
+			Player var15;
 			if (var8 == client.anInt1874)
-				var15 = Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644;
+				var15 = Class81.pf;
 			else
-				var15 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var8];
+				var15 = client.localNpcs[var8];
 
 			if (null != var15) {
-				final ObjectDefinition var16 = Class104_Sub18_Sub12.forId(var6);
+				final ObjectDefinition var16 = ItemDef.forId(var6);
 				int var17;
 				int var18;
 				if ((var4 != 1) && (var4 != 3)) {
@@ -139,10 +139,10 @@ public final class Class9 {
 				var7 = client.gamecon.readUByte();
 				if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104)) {
 					var8 = 1 + var5;
-					if ((Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0] >= (var35 - var8))
-							&& (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0] <= (var8 + var35))
-							&& (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0] >= (var2 - var8))
-							&& (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0] <= (var2 + var8))
+					if ((Class81.pf.anIntArray1745[0] >= (var35 - var8))
+							&& (Class81.pf.anIntArray1745[0] <= (var8 + var35))
+							&& (Class81.pf.anIntArray1746[0] >= (var2 - var8))
+							&& (Class81.pf.anIntArray1746[0] <= (var2 + var8))
 							&& (client.anInt2026 != 0) && (var6 > 0) && (client.anInt2028 < 50)) {
 						client.anIntArray2029[client.anInt2028] = var3;
 						client.anIntArray1875[client.anInt2028] = var6;
@@ -159,7 +159,7 @@ public final class Class9 {
 				var35 = client.gamecon.readByteN();
 				var2 = ((var35 >> 4) & 7) + Class19.anInt195;
 				var3 = Class93.anInt742 + (var35 & 7);
-				var4 = client.gamecon.method588();
+				var4 = client.gamecon.readUByteS();
 				var5 = var4 >> 2;
 				var6 = var4 & 3;
 				var7 = client.anIntArray1849[var5];
@@ -317,7 +317,7 @@ public final class Class9 {
 					}
 
 				} else if (client.pktOpc == 7) {
-					var0 = client.gamecon.method588();
+					var0 = client.gamecon.readUByteS();
 					var35 = var0 >> 2;
 					var2 = var0 & 3;
 					var3 = client.anIntArray1849[var35];

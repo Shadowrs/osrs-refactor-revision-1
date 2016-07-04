@@ -33,276 +33,274 @@ public class Class104_Sub15 extends Class104 {
 		aClass104_Sub8_Sub3_1120 = null;
 	}
 
-	static final void method549() {
+	static final void playerUpdate() {
 		client.anInt1904 = 0;
 		client.anInt1910 = 0;
 		client.gamecon.initbits();
-		int var0 = client.gamecon.method625(1);
-		int var1;
-		int var2;
-		int var3;
-		int var4;
-		int var5;
-		if (var0 != 0) {
-			var1 = client.gamecon.method625(2);
-			if (var1 == 0)
+		int needsUpdate = client.gamecon.readbits(1);
+		int movetype;
+		int move;
+		int maskflag;
+		int update;
+		int updateFlag;
+		if (needsUpdate != 0) {
+			movetype = client.gamecon.readbits(2);
+			if (movetype == 0)
 				client.anIntArray1911[++client.anInt1910 - 1] = 2047;
-			else if (var1 == 1) {
-				var2 = client.gamecon.method625(3);
-				Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.method934(var2, false);
-				var3 = client.gamecon.method625(1);
-				if (var3 == 1)
+			else if (movetype == 1) {
+				move = client.gamecon.readbits(3);
+				Class81.pf.step(move, false);
+				maskflag = client.gamecon.readbits(1);
+				if (maskflag == 1)
 					client.anIntArray1911[++client.anInt1910 - 1] = 2047;
-			} else if (var1 == 2) {
-				var2 = client.gamecon.method625(3);
-				Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.method934(var2, true);
-				var3 = client.gamecon.method625(3);
-				Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.method934(var3, true);
-				var4 = client.gamecon.method625(1);
-				if (var4 == 1)
+			} else if (movetype == 2) {
+				move = client.gamecon.readbits(3);
+				Class81.pf.step(move, true);
+				maskflag = client.gamecon.readbits(3);
+				Class81.pf.step(maskflag, true);
+				update = client.gamecon.readbits(1);
+				if (update == 1)
 					client.anIntArray1911[++client.anInt1910 - 1] = 2047;
-			} else if (var1 == 3) {
-				Class12.anInt73 = client.gamecon.method625(2);
-				var2 = client.gamecon.method625(7);
-				var3 = client.gamecon.method625(1);
-				if (var3 == 1)
+			} else if (movetype == 3) { // teleport
+				Class12.anInt73 = client.gamecon.readbits(2);
+				move = client.gamecon.readbits(7);
+				maskflag = client.gamecon.readbits(1);
+				if (maskflag == 1)
 					client.anIntArray1911[++client.anInt1910 - 1] = 2047;
 
-				var4 = client.gamecon.method625(7);
-				var5 = client.gamecon.method625(1);
-				Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.method933(var2, var4, var5 == 1);
+				update = client.gamecon.readbits(7);
+				updateFlag = client.gamecon.readbits(1);
+				Class81.pf.placeEntity(move, update, updateFlag == 1);
 			}
 		}
 
-		var0 = client.gamecon.method625(8);
-		if (var0 < client.anInt1994)
-			for (var1 = var0; var1 < client.anInt1994; ++var1)
-				client.anIntArray2048[++client.anInt1904 - 1] = client.anIntArray1909[var1];
+		needsUpdate = client.gamecon.readbits(8);
+		if (needsUpdate < client.toUpdate)
+			for (movetype = needsUpdate; movetype < client.toUpdate; ++movetype)
+				client.anIntArray2048[++client.anInt1904 - 1] = client.localPlayerIndexs[movetype];
 
-		if (var0 > client.anInt1994)
+		if (needsUpdate > client.toUpdate)
 			throw new RuntimeException("");
 		else {
-			client.anInt1994 = 0;
+			client.toUpdate = 0;
 
-			int var7;
-			int var8;
-			for (var1 = 0; var1 < var0; ++var1) {
-				var2 = client.anIntArray1909[var1];
-				final Class104_Sub18_Sub16_Sub7_Sub1 var6 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var2];
-				var4 = client.gamecon.method625(1);
-				if (var4 == 0) {
-					client.anIntArray1909[++client.anInt1994 - 1] = var2;
-					var6.anInt1739 = client.anInt1799;
+			int movee;
+			int move2;
+			for (movetype = 0; movetype < needsUpdate; ++movetype) {
+				move = client.localPlayerIndexs[movetype];
+				final Player entity = client.localNpcs[move];
+				update = client.gamecon.readbits(1);
+				if (update == 0) {
+					client.localPlayerIndexs[++client.toUpdate - 1] = move;
+					entity.anInt1739 = client.anInt1799;
 				} else {
-					var5 = client.gamecon.method625(2);
-					if (var5 == 0) {
-						client.anIntArray1909[++client.anInt1994 - 1] = var2;
-						var6.anInt1739 = client.anInt1799;
-						client.anIntArray1911[++client.anInt1910 - 1] = var2;
-					} else if (var5 == 1) {
-						client.anIntArray1909[++client.anInt1994 - 1] = var2;
-						var6.anInt1739 = client.anInt1799;
-						var7 = client.gamecon.method625(3);
-						var6.method934(var7, false);
-						var8 = client.gamecon.method625(1);
-						if (var8 == 1)
-							client.anIntArray1911[++client.anInt1910 - 1] = var2;
-					} else if (var5 == 2) {
-						client.anIntArray1909[++client.anInt1994 - 1] = var2;
-						var6.anInt1739 = client.anInt1799;
-						var7 = client.gamecon.method625(3);
-						var6.method934(var7, true);
-						var8 = client.gamecon.method625(3);
-						var6.method934(var8, true);
-						final int var9 = client.gamecon.method625(1);
+					updateFlag = client.gamecon.readbits(2);
+					if (updateFlag == 0) {
+						client.localPlayerIndexs[++client.toUpdate - 1] = move;
+						entity.anInt1739 = client.anInt1799;
+						client.anIntArray1911[++client.anInt1910 - 1] = move;
+					} else if (updateFlag == 1) {
+						client.localPlayerIndexs[++client.toUpdate - 1] = move;
+						entity.anInt1739 = client.anInt1799;
+						movee = client.gamecon.readbits(3);
+						entity.step(movee, false);
+						move2 = client.gamecon.readbits(1);
+						if (move2 == 1)
+							client.anIntArray1911[++client.anInt1910 - 1] = move;
+					} else if (updateFlag == 2) {
+						client.localPlayerIndexs[++client.toUpdate - 1] = move;
+						entity.anInt1739 = client.anInt1799;
+						movee = client.gamecon.readbits(3);
+						entity.step(movee, true);
+						move2 = client.gamecon.readbits(3);
+						entity.step(move2, true);
+						final int var9 = client.gamecon.readbits(1);
 						if (var9 == 1)
-							client.anIntArray1911[++client.anInt1910 - 1] = var2;
-					} else if (var5 == 3)
-						client.anIntArray2048[++client.anInt1904 - 1] = var2;
+							client.anIntArray1911[++client.anInt1910 - 1] = move;
+					} else if (updateFlag == 3)
+						client.anIntArray2048[++client.anInt1904 - 1] = move;
 				}
 			}
 
-			Class104_Sub18_Sub16_Sub7_Sub1 var10;
-			for (; client.gamecon.method626(client.pktSize) >= 11; var10.method933(
-					var5 + Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-					var3 + Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var7 == 1)) {
-				var0 = client.gamecon.method625(11);
-				if (var0 == 2047)
+			Player entity;
+			// new npcs
+			for (; client.gamecon.availbits(client.pktSize) >= 11; entity.placeEntity( updateFlag + Class81.pf.anIntArray1745[0], maskflag + Class81.pf.anIntArray1746[0], movee == 1)) {
+				needsUpdate = client.gamecon.readbits(11);
+				if (needsUpdate == 2047) // break flag
 					break;
 
-				boolean var14 = false;
-				if (null == client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var0]) {
-					client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var0] = new Class104_Sub18_Sub16_Sub7_Sub1();
-					if (null != client.aClass104_Sub21Array2030[var0])
-						client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var0]
-								.method950(client.aClass104_Sub21Array2030[var0]);
+				boolean hasCachedAppearance = false;
+				if (null == client.localNpcs[needsUpdate]) {
+					client.localNpcs[needsUpdate] = new Player();
+					if (null != client.cachedAppearances[needsUpdate])
+						client.localNpcs[needsUpdate] .decodeAppearance(client.cachedAppearances[needsUpdate]);
 
-					var14 = true;
+					hasCachedAppearance = true;
 				}
 
-				client.anIntArray1909[++client.anInt1994 - 1] = var0;
-				var10 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var0];
-				var10.anInt1739 = client.anInt1799;
-				var3 = client.gamecon.method625(5);
-				if (var3 > 15)
-					var3 -= 32;
+				client.localPlayerIndexs[++client.toUpdate - 1] = needsUpdate;
+				entity = client.localNpcs[needsUpdate];
+				entity.anInt1739 = client.anInt1799;
+				maskflag = client.gamecon.readbits(5);
+				if (maskflag > 15)
+					maskflag -= 32;
 
-				var4 = client.anIntArray1817[client.gamecon.method625(3)];
-				if (var14)
-					var10.anInt1698 = var10.anInt1725 = var4;
+				update = client.anIntArray1817[client.gamecon.readbits(3)];
+				if (hasCachedAppearance)
+					entity.anInt1698 = entity.anInt1725 = update;
 
-				var5 = client.gamecon.method625(5);
-				if (var5 > 15)
-					var5 -= 32;
+				updateFlag = client.gamecon.readbits(5);
+				if (updateFlag > 15)
+					updateFlag -= 32;
 
-				var7 = client.gamecon.method625(1);
-				var8 = client.gamecon.method625(1);
-				if (var8 == 1)
-					client.anIntArray1911[++client.anInt1910 - 1] = var0;
+				movee = client.gamecon.readbits(1);
+				move2 = client.gamecon.readbits(1);
+				if (move2 == 1)
+					client.anIntArray1911[++client.anInt1910 - 1] = needsUpdate;
 			}
 
 			client.gamecon.endbits();
 
-			for (var0 = 0; var0 < client.anInt1910; ++var0) {
-				var1 = client.anIntArray1911[var0];
-				var10 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var1];
-				var3 = client.gamecon.readUByte();
-				if ((var3 & 64) != 0)
-					var3 += client.gamecon.readUByte() << 8;
+			for (needsUpdate = 0; needsUpdate < client.anInt1910; ++needsUpdate) {
+				movetype = client.anIntArray1911[needsUpdate];
+				entity = client.localNpcs[movetype];
+				maskflag = client.gamecon.readUByte();
+				if ((maskflag & 64) != 0)
+					maskflag += client.gamecon.readUByte() << 8;
 
-				if ((var3 & 4) != 0) {
-					var4 = client.gamecon.readLEShort();
-					var5 = client.gamecon.readUByte();
-					var7 = client.gamecon.readUByte();
-					var8 = client.gamecon.pos;
-					if ((null != var10.aString1780) && (var10.aClass85_1770 != null)) {
+				if ((maskflag & 4) != 0) {
+					update = client.gamecon.readLEShort();
+					updateFlag = client.gamecon.readUByte();
+					movee = client.gamecon.readUByte();
+					move2 = client.gamecon.pos;
+					if ((null != entity.aString1780) && (entity.aClass85_1770 != null)) {
 						boolean var15 = false;
-						if ((var5 <= 1) && Class34.method166(var10.aString1780))
+						if ((updateFlag <= 1) && Class34.method166(entity.aString1780))
 							var15 = true;
 
 						if (!var15 && (client.anInt1906 == 0)) {
-							client.aClass104_Sub21_1885.pos = 0;
-							client.gamecon.readBytes(client.aClass104_Sub21_1885.backing, 0,
-									var7);
-							client.aClass104_Sub21_1885.pos = 0;
+							client.somebuf.pos = 0;
+							client.gamecon.readBytes(client.somebuf.backing, 0,
+									movee);
+							client.somebuf.pos = 0;
 							final String var11 = Class104_Sub18_Sub17_Sub2
-									.method879(Class80.method351(Class50.huffmanDecode(client.aClass104_Sub21_1885)));
-							var10.aString1723 = var11.trim();
-							var10.anInt1731 = var4 >> 8;
-							var10.anInt1749 = var4 & 255;
-							var10.anInt1713 = 150;
-							if ((var5 != 2) && (var5 != 3)) {
-								if (var5 == 1)
-									Class15.method60(1, Class72.method335(0) + var10.aString1780, var11);
+									.method879(Class80.method351(Class50.huffmanDecode(client.somebuf)));
+							entity.aString1723 = var11.trim();
+							entity.anInt1731 = update >> 8;
+							entity.anInt1749 = update & 255;
+							entity.anInt1713 = 150;
+							if ((updateFlag != 2) && (updateFlag != 3)) {
+								if (updateFlag == 1)
+									Class15.method60(1, Class72.method335(0) + entity.aString1780, var11);
 								else
-									Class15.method60(2, var10.aString1780, var11);
+									Class15.method60(2, entity.aString1780, var11);
 							} else
-								Class15.method60(1, Class72.method335(1) + var10.aString1780, var11);
+								Class15.method60(1, Class72.method335(1) + entity.aString1780, var11);
 						}
 					}
 
-					client.gamecon.pos = var8 + var7;
+					client.gamecon.pos = move2 + movee;
 				}
 
-				if ((var3 & 2) != 0) {
-					var4 = client.gamecon.method588();
-					final byte[] var12 = new byte[var4];
-					final RSBuf var13 = new RSBuf(var12);
-					client.gamecon.method617(var12, 0, var4);
-					client.aClass104_Sub21Array2030[var1] = var13;
-					var10.method950(var13);
+				if ((maskflag & 2) != 0) {
+					update = client.gamecon.readUByteS();
+					final byte[] data = new byte[update];
+					final RSBuf buf = new RSBuf(data);
+					client.gamecon.method617(data, 0, update);
+					client.cachedAppearances[movetype] = buf;
+					entity.decodeAppearance(buf);
 				}
 
-				if ((var3 & 256) != 0) {
-					var10.anInt1697 = client.gamecon.readUByte();
-					var10.anInt1734 = client.gamecon.readByteN();
-					var10.anInt1733 = client.gamecon.readUByte();
-					var10.anInt1721 = client.gamecon.method576();
-					var10.anInt1708 = client.gamecon.method594() + client.anInt1799;
-					var10.anInt1737 = client.gamecon.readLEShort() + client.anInt1799;
-					var10.anInt1738 = client.gamecon.readByteN();
-					var10.anInt1744 = 1;
-					var10.anInt1735 = 0;
+				if ((maskflag & 256) != 0) {
+					entity.anInt1697 = client.gamecon.readUByte();
+					entity.anInt1734 = client.gamecon.readByteN();
+					entity.anInt1733 = client.gamecon.readUByte();
+					entity.anInt1721 = client.gamecon.method576();
+					entity.anInt1708 = client.gamecon.method594() + client.anInt1799;
+					entity.anInt1737 = client.gamecon.readLEShort() + client.anInt1799;
+					entity.anInt1738 = client.gamecon.readByteN();
+					entity.anInt1744 = 1;
+					entity.anInt1735 = 0;
 				}
 
-				if ((var3 & 32) != 0) {
-					var10.anInt1716 = client.gamecon.readShortN();
-					if (var10.anInt1716 == '\uffff')
-						var10.anInt1716 = -1;
+				if ((maskflag & 32) != 0) {
+					entity.anInt1716 = client.gamecon.readShortN();
+					if (entity.anInt1716 == '\uffff')
+						entity.anInt1716 = -1;
 				}
 
-				if ((var3 & 128) != 0) {
-					var10.anInt1717 = client.gamecon.method594();
-					var10.anInt1718 = client.gamecon.readShort();
+				if ((maskflag & 128) != 0) {
+					entity.anInt1717 = client.gamecon.method594();
+					entity.anInt1718 = client.gamecon.readShort();
 				}
 
-				if ((var3 & 16) != 0) {
-					var4 = client.gamecon.method594();
-					if (var4 == '\uffff')
-						var4 = -1;
+				if ((maskflag & 16) != 0) {
+					update = client.gamecon.method594();
+					if (update == '\uffff')
+						update = -1;
 
-					var5 = client.gamecon.readByteN();
-					Class75.method342(var10, var4, var5);
+					updateFlag = client.gamecon.readByteN();
+					Class75.method342(entity, update, updateFlag);
 				}
 
-				if ((var3 & 512) != 0) {
-					var10.anInt1727 = client.gamecon.readShort();
-					var4 = client.gamecon.readLEInt();
-					var10.anInt1709 = var4 >> 16;
-					var10.anInt1730 = client.anInt1799 + (var4 & '\uffff');
-					var10.anInt1728 = 0;
-					var10.anInt1729 = 0;
-					if (var10.anInt1730 > client.anInt1799)
-						var10.anInt1728 = -1;
+				if ((maskflag & 512) != 0) {
+					entity.anInt1727 = client.gamecon.readShort();
+					update = client.gamecon.readLEInt();
+					entity.anInt1709 = update >> 16;
+					entity.anInt1730 = client.anInt1799 + (update & '\uffff');
+					entity.anInt1728 = 0;
+					entity.anInt1729 = 0;
+					if (entity.anInt1730 > client.anInt1799)
+						entity.anInt1728 = -1;
 
-					if (var10.anInt1727 == '\uffff')
-						var10.anInt1727 = -1;
+					if (entity.anInt1727 == '\uffff')
+						entity.anInt1727 = -1;
 				}
 
-				if ((var3 & 1024) != 0) {
-					var4 = client.gamecon.method576();
-					var5 = client.gamecon.method588();
-					var10.method935(var4, var5, client.anInt1799);
-					var10.anInt1714 = client.anInt1799 + 300;
-					var10.anInt1693 = client.gamecon.readUByte();
-					var10.anInt1715 = client.gamecon.readByteN();
+				if ((maskflag & 1024) != 0) {
+					update = client.gamecon.method576();
+					updateFlag = client.gamecon.readUByteS();
+					entity.method935(update, updateFlag, client.anInt1799);
+					entity.anInt1714 = client.anInt1799 + 300;
+					entity.anInt1693 = client.gamecon.readUByte();
+					entity.anInt1715 = client.gamecon.readByteN();
 				}
 
-				if ((var3 & 1) != 0) {
-					var10.aString1723 = client.gamecon.readString();
-					if (var10.aString1723.charAt(0) == 126) {
-						var10.aString1723 = var10.aString1723.substring(1);
-						Class15.method60(2, var10.aString1780, var10.aString1723);
-					} else if (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644 == var10)
-						Class15.method60(2, var10.aString1780, var10.aString1723);
+				if ((maskflag & 1) != 0) {
+					entity.aString1723 = client.gamecon.readString();
+					if (entity.aString1723.charAt(0) == 126) {
+						entity.aString1723 = entity.aString1723.substring(1);
+						Class15.method60(2, entity.aString1780, entity.aString1723);
+					} else if (Class81.pf == entity)
+						Class15.method60(2, entity.aString1780, entity.aString1723);
 
-					var10.anInt1731 = 0;
-					var10.anInt1749 = 0;
-					var10.anInt1713 = 150;
+					entity.anInt1731 = 0;
+					entity.anInt1749 = 0;
+					entity.anInt1713 = 150;
 				}
 
-				if ((var3 & 8) != 0) {
-					var4 = client.gamecon.method576();
-					var5 = client.gamecon.method588();
-					var10.method935(var4, var5, client.anInt1799);
-					var10.anInt1714 = 300 + client.anInt1799;
-					var10.anInt1693 = client.gamecon.method576();
-					var10.anInt1715 = client.gamecon.readUByte();
+				if ((maskflag & 8) != 0) {
+					update = client.gamecon.method576();
+					updateFlag = client.gamecon.readUByteS();
+					entity.method935(update, updateFlag, client.anInt1799);
+					entity.anInt1714 = 300 + client.anInt1799;
+					entity.anInt1693 = client.gamecon.method576();
+					entity.anInt1715 = client.gamecon.readUByte();
 				}
 			}
 
-			for (var0 = 0; var0 < client.anInt1904; ++var0) {
-				var1 = client.anIntArray2048[var0];
-				if (client.anInt1799 != client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var1].anInt1739)
-					client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var1] = null;
+			for (needsUpdate = 0; needsUpdate < client.anInt1904; ++needsUpdate) {
+				movetype = client.anIntArray2048[needsUpdate];
+				if (client.anInt1799 != client.localNpcs[movetype].anInt1739)
+					client.localNpcs[movetype] = null;
 			}
 
 			if (client.gamecon.pos != client.pktSize)
 				throw new RuntimeException(client.gamecon.pos + "," + client.pktSize);
 			else
-				for (var0 = 0; var0 < client.anInt1994; ++var0)
-					if (client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[client.anIntArray1909[var0]] == null)
-						throw new RuntimeException(var0 + "," + client.anInt1994);
+				for (needsUpdate = 0; needsUpdate < client.toUpdate; ++needsUpdate)
+					if (client.localNpcs[client.localPlayerIndexs[needsUpdate]] == null)
+						throw new RuntimeException(needsUpdate + "," + client.toUpdate);
 		}
 	}
 

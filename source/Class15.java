@@ -47,24 +47,24 @@ public class Class15 {
 		var3 = var3;
 		boolean var5 = false;
 
-		for (int var6 = 0; var6 < client.anInt1994; ++var6) {
-			final Class104_Sub18_Sub16_Sub7_Sub1 var7 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[client.anIntArray1909[var6]];
+		for (int var6 = 0; var6 < client.toUpdate; ++var6) {
+			final Player var7 = client.localNpcs[client.localPlayerIndexs[var6]];
 			if ((null != var7) && (var7.aString1780 != null) && var7.aString1780.equalsIgnoreCase(var3)) {
-				Class104_Sub13.method543(Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
-						Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var7.anIntArray1745[0],
+				Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
+						Class81.pf.anIntArray1746[0], var7.anIntArray1745[0],
 						var7.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 				if (var0 == 1) {
 					client.secureBuf.putOpcode(246);
-					client.secureBuf.writeShort(client.anIntArray1909[var6]);
+					client.secureBuf.writeShort(client.localPlayerIndexs[var6]);
 				} else if (var0 == 4) {
 					client.secureBuf.putOpcode(78);
-					client.secureBuf.writeShort(client.anIntArray1909[var6]);
+					client.secureBuf.writeShort(client.localPlayerIndexs[var6]);
 				} else if (var0 == 6) {
 					client.secureBuf.putOpcode(111);
-					client.secureBuf.writeLEShortA(client.anIntArray1909[var6]);
+					client.secureBuf.writeLEShortA(client.localPlayerIndexs[var6]);
 				} else if (var0 == 7) {
 					client.secureBuf.putOpcode(119);
-					client.secureBuf.writeLEShortA(client.anIntArray1909[var6]);
+					client.secureBuf.writeLEShortA(client.localPlayerIndexs[var6]);
 				}
 
 				var5 = true;

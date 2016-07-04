@@ -29,7 +29,7 @@ public class Class19 {
 					final int var13 = var1 + var11;
 					final int var14 = var10 + var2;
 					if ((var13 > 0) && (var14 > 0) && (var13 < 103) && (var14 < 103)) {
-						final ObjectDefinition obj = Class104_Sub18_Sub12.forId(objId);
+						final ObjectDefinition obj = ItemDef.forId(objId);
 						if ((var12 != 22) || !client.lowmvm || (obj.anInt1342 != 0) || (obj.anInt1363 == 1)
 								|| obj.aBool1362) {
 							if (!obj.valid()) {
@@ -87,7 +87,7 @@ public class Class19 {
 			}
 
 			for (var9 = 0; var9 < 2048; ++var9) {
-				final Class104_Sub18_Sub16_Sub7_Sub1 var23 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var9];
+				final Player var23 = client.localNpcs[var9];
 				if (null != var23) {
 					for (var11 = 0; var11 < 10; ++var11) {
 						var23.anIntArray1745[var11] -= var7;
@@ -100,7 +100,7 @@ public class Class19 {
 			}
 
 			Class12.anInt73 = var2;
-			Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.method933(var3, var4, false);
+			Class81.pf.placeEntity(var3, var4, false);
 			byte var22 = 0;
 			byte var12 = 104;
 			byte var24 = 1;

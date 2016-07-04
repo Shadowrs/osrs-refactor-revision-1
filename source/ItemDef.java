@@ -1,4 +1,4 @@
-public class Class104_Sub18_Sub12 extends Class104_Sub18 {
+public class ItemDef extends Class104_Sub18 {
 	public int anInt1418;
 	public static Class61 aClass61_1432;
 	int anInt1419;
@@ -161,7 +161,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 
 	}
 
-	void method774(final Class104_Sub18_Sub12 var1, final Class104_Sub18_Sub12 var2) {
+	void method774(final ItemDef var1, final ItemDef var2) {
 		anInt1419 = var1.anInt1419;
 		anInt1425 = var1.anInt1425;
 		anInt1426 = var1.anInt1426;
@@ -189,7 +189,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 					var2 = anIntArray1450[var3];
 
 			if (var2 != -1)
-				return Class27.method137(var2).method775(1);
+				return Class27.forId(var2).method775(1);
 		}
 
 		final Class104_Sub18_Sub16_Sub5 var4 = Class104_Sub18_Sub16_Sub5.method913(Class27.aClass61_265, anInt1419, 0);
@@ -211,7 +211,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 		}
 	}
 
-	public Class104_Sub18_Sub12 method776(final int var1) {
+	public ItemDef method776(final int var1) {
 		if ((null != anIntArray1450) && (var1 > 1)) {
 			int var2 = -1;
 
@@ -220,7 +220,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 					var2 = anIntArray1450[var3];
 
 			if (var2 != -1)
-				return Class27.method137(var2);
+				return Class27.forId(var2);
 		}
 
 		return this;
@@ -314,7 +314,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 					var2 = anIntArray1450[var3];
 
 			if (var2 != -1)
-				return Class27.method137(var2).method779(1);
+				return Class27.forId(var2).method779(1);
 		}
 
 		Class104_Sub18_Sub16_Sub4 var4 = (Class104_Sub18_Sub16_Sub4) aClass56_1416.method236(anInt1418);

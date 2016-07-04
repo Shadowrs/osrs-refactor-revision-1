@@ -62,7 +62,7 @@ public abstract class Class104_Sub18_Sub16_Sub7 extends Class104_Sub18_Sub16 {
 		anInt1735 = 0;
 	}
 
-	final void method933(final int var1, final int var2, final boolean var3) {
+	final void placeEntity(final int var1, final int var2, final boolean var3) {
 		if ((anInt1722 != -1) && (Class70.method327(anInt1722).anInt1274 == 1))
 			anInt1722 = -1;
 
@@ -95,7 +95,7 @@ public abstract class Class104_Sub18_Sub16_Sub7 extends Class104_Sub18_Sub16 {
 		anInt1694 = (128 * anIntArray1746[0]) + (anInt1736 * 64);
 	}
 
-	final void method934(final int var1, final boolean var2) {
+	final void step(final int var1, final boolean var2) {
 		int var3 = anIntArray1745[0];
 		int var4 = anIntArray1746[0];
 		if (var1 == 0) {

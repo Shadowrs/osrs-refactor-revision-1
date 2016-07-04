@@ -21,8 +21,8 @@ public class Class104_Sub16 extends Class104 {
 					.method841(client.anInt1895 - 8, client.anInt1896 - 8);
 
 		client.anInt1906 = 0;
-		int var2 = Class53.anInt436 + (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 >> 7);
-		int var3 = Class20.anInt206 + (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 >> 7);
+		int var2 = Class53.anInt436 + (Class81.pf.anInt1695 >> 7);
+		int var3 = Class20.anInt206 + (Class81.pf.anInt1694 >> 7);
 		if ((var2 >= 3053) && (var2 <= 3156) && (var3 >= 3056) && (var3 <= 3136))
 			client.anInt1906 = 1;
 

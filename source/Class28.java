@@ -9,7 +9,7 @@ public class Class28 {
 
 	static final void method139(final int var0, final int var1, final int var2, final int var3, final int var4,
 			final int var5, final int var6, final Class17 var7, final Class67 var8) {
-		final ObjectDefinition var9 = Class104_Sub18_Sub12.forId(var4);
+		final ObjectDefinition var9 = ItemDef.forId(var4);
 		int var10;
 		int var11;
 		if ((var5 != 1) && (var5 != 3)) {
@@ -159,7 +159,7 @@ public class Class28 {
 						var23 = 16;
 						var26 = var7.method85(var0, var2, var3);
 						if (var26 != 0)
-							var23 = Class104_Sub18_Sub12.forId((var26 >> 14) & 32767).anInt1348;
+							var23 = ItemDef.forId((var26 >> 14) & 32767).anInt1348;
 
 						if ((var9.anInt1346 == -1) && (var9.anIntArray1338 == null))
 							var25 = var9.method750(4, var5, var16, var18, var17, var19);
@@ -174,7 +174,7 @@ public class Class28 {
 						var23 = 8;
 						var26 = var7.method85(var0, var2, var3);
 						if (var26 != 0)
-							var23 = Class104_Sub18_Sub12.forId((var26 >> 14) & 32767).anInt1348 / 2;
+							var23 = ItemDef.forId((var26 >> 14) & 32767).anInt1348 / 2;
 
 						if ((var9.anInt1346 == -1) && (null == var9.anIntArray1338))
 							var25 = var9.method750(4, var5 + 4, var16, var18, var17, var19);
@@ -199,7 +199,7 @@ public class Class28 {
 						var23 = 8;
 						var26 = var7.method85(var0, var2, var3);
 						if (var26 != 0)
-							var23 = Class104_Sub18_Sub12.forId((var26 >> 14) & 32767).anInt1348 / 2;
+							var23 = ItemDef.forId((var26 >> 14) & 32767).anInt1348 / 2;
 
 						final int var27 = (var5 + 2) & 3;
 						Object var28;

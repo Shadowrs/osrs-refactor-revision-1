@@ -4,6 +4,6 @@ public final class Class104_Sub18_Sub16_Sub6 extends Class104_Sub18_Sub16 {
 
 	@Override
 	final Class104_Sub18_Sub16_Sub4 method788(final int var1) {
-		return Class27.method137(anInt1691).method779(anInt1692);
+		return Class27.forId(anInt1691).method779(anInt1692);
 	}
 }
