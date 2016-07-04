@@ -141,9 +141,9 @@ public final class client extends Applet_Sub1 {
 	static int anInt1826 = 0;
 	static Class104_Sub18_Sub16_Sub7_Sub2[] aClass104_Sub18_Sub16_Sub7_Sub2Array1828 = new Class104_Sub18_Sub16_Sub7_Sub2['\u8000'];
 	static int[] anIntArray1830 = new int['\u8000'];
-	static Class104_Sub21_Sub1 secureBuf = new Class104_Sub21_Sub1(5000);
-	static Class104_Sub21_Sub1 loginbuf = new Class104_Sub21_Sub1(5000);
-	static Class104_Sub21_Sub1 gamecon = new Class104_Sub21_Sub1(5000);
+	static GameBuf secureBuf = new GameBuf(5000);
+	static GameBuf loginbuf = new GameBuf(5000);
+	static GameBuf gamecon = new GameBuf(5000);
 	static int anInt1988 = 0;
 	static Class67[] aClass67Array1975 = new Class67[4];
 	static boolean dynamicRegion = false;
@@ -817,7 +817,7 @@ final void method943(final byte var1) {
 
                      ObjectDefinition.aClass56_1326.method239();
                      if(Class53.aFrame435 != null) {
-                        secureBuf.method623(210);
+                        secureBuf.putOpcode(210);
                         secureBuf.writeInt(1057001181);
                      }
 
@@ -838,7 +838,7 @@ final void method943(final byte var1) {
                      Class10.method40(30);
                      Class101.method465();
                      Class36.method172();
-                     secureBuf.method623(197);
+                     secureBuf.putOpcode(197);
                      Class36.method171();
                   }
                }
@@ -944,7 +944,7 @@ final void method943(final byte var1) {
                               String var117;
                               if(pktOpc == 168) {
                                  var82 = gamecon.method608();
-                                 final Class104_Sub21_Sub1 var104 = gamecon;
+                                 final GameBuf var104 = gamecon;
 
                                  try {
                                     var15 = var104.readsmart();
@@ -1136,7 +1136,7 @@ final void method943(final byte var1) {
                                  if(!var108 && (anInt1906 == 0)) {
                                     aLongArray2006[anInt2007] = var29;
                                     anInt2007 = (anInt2007 + 1) % 100;
-                                    final Class104_Sub21_Sub1 var129 = gamecon;
+                                    final GameBuf var129 = gamecon;
 
                                     String var133;
                                     try {
@@ -1724,7 +1724,7 @@ final void method943(final byte var1) {
                               }
 
                               if(pktOpc == 25) {
-                                 final Class104_Sub21_Sub1 var85 = gamecon;
+                                 final GameBuf var85 = gamecon;
                                  localy = pktSize;
                                  final Class104_Sub16 var99 = new Class104_Sub16();
                                  var99.anInt1127 = var85.readUByte();
@@ -1926,7 +1926,7 @@ final void method943(final byte var1) {
                                  if(!var44 && (anInt1906 == 0)) {
                                     aLongArray2006[anInt2007] = var41;
                                     anInt2007 = (1 + anInt2007) % 100;
-                                    final Class104_Sub21_Sub1 var36 = gamecon;
+                                    final GameBuf var36 = gamecon;
 
                                     String var33;
                                     try {
@@ -2388,7 +2388,7 @@ final void method943(final byte var1) {
                               if(pktOpc == 167) {
                                  anInt1904 = 0;
                                  anInt1910 = 0;
-                                 gamecon.method624();
+                                 gamecon.initbits();
                                  localx = gamecon.method625(8);
                                  if(localx < anInt1832)
 									for(localy = localx; localy < anInt1832; ++localy)
@@ -2506,7 +2506,7 @@ final void method943(final byte var1) {
                         if(!aBool1979)
 							Class2_Sub2.aClass72_865.anInt581 = 0;
 						else if((Class14.anInt100 != 0) || (Class2_Sub2.aClass72_865.anInt581 >= 40)) {
-                           secureBuf.method623(72);
+                           secureBuf.putOpcode(72);
                            secureBuf.writebyte(0);
                            map = secureBuf.pos;
                            var11 = 0;
@@ -2593,7 +2593,7 @@ final void method943(final byte var1) {
 							var128 = 1;
 
                         var14 = (int)var52;
-                        secureBuf.method623(161);
+                        secureBuf.putOpcode(161);
                         secureBuf.method612((var14 << 20) + (var128 << 19) + localy);
                      }
 
@@ -2606,20 +2606,20 @@ final void method943(final byte var1) {
                      if(aBool1791 && (anInt1878 <= 0)) {
                         anInt1878 = 20;
                         aBool1791 = false;
-                        secureBuf.method623(79);
+                        secureBuf.putOpcode(79);
                         secureBuf.method606(anInt1962);
                         secureBuf.method591(anInt1866);
                      }
 
                      if(Class100.aBool799 && !aBool1945) {
                         aBool1945 = true;
-                        secureBuf.method623(178);
+                        secureBuf.putOpcode(178);
                         secureBuf.writebyte(1);
                      }
 
                      if(!Class100.aBool799 && aBool1945) {
                         aBool1945 = false;
-                        secureBuf.method623(178);
+                        secureBuf.putOpcode(178);
                         secureBuf.writebyte(0);
                      }
 
@@ -2875,7 +2875,7 @@ final void method943(final byte var1) {
                                        } else
 										var79.method530(anInt1924, anInt1901);
 
-                                       secureBuf.method623(2);
+                                       secureBuf.putOpcode(2);
                                        secureBuf.method612(Class67.aClass104_Sub12_556.anInt978);
                                        secureBuf.method592(anInt1924);
                                        secureBuf.method585(var134);
@@ -3200,7 +3200,7 @@ final void method943(final byte var1) {
 													            if((var11 > 15000) && (localy > 15000)) {
 													               anInt1836 = 250;
 													               Class104_Sub16.method553(14500);
-													               secureBuf.method623(38);
+													               secureBuf.putOpcode(38);
 													            }
 
 													            ++anInt1861;
@@ -3260,7 +3260,7 @@ final void method943(final byte var1) {
 
 													            ++anInt1835;
 													            if(anInt1835 > 50)
-																	secureBuf.method623(228);
+																	secureBuf.putOpcode(228);
 
 													            try {
 													               if((null != Class20.stream) && (secureBuf.pos > 0)) {

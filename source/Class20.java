@@ -20,7 +20,7 @@ public final class Class20 {
 		if ((client.anInt1835 >= 50) || var0) {
 			client.anInt1835 = 0;
 			if (!client.aBool1840 && (stream != null)) {
-				client.secureBuf.method623(228);
+				client.secureBuf.putOpcode(228);
 
 				try {
 					stream.flushbytes(client.secureBuf.backing, 0,

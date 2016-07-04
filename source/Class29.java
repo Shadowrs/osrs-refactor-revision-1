@@ -53,61 +53,61 @@ public class Class29 {
 				final boolean var9 = ((var7 >> (var8 + 1)) & 1) != 0;
 				if (var9) {
 					if (var0 == 1) {
-						client.secureBuf.method623(63);
+						client.secureBuf.putOpcode(63);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 2) {
-						client.secureBuf.method623(87);
+						client.secureBuf.putOpcode(87);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 3) {
-						client.secureBuf.method623(238);
+						client.secureBuf.putOpcode(238);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 4) {
-						client.secureBuf.method623(240);
+						client.secureBuf.putOpcode(240);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 5) {
-						client.secureBuf.method623(153);
+						client.secureBuf.putOpcode(153);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 6) {
-						client.secureBuf.method623(232);
+						client.secureBuf.putOpcode(232);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 7) {
-						client.secureBuf.method623(168);
+						client.secureBuf.putOpcode(168);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 8) {
-						client.secureBuf.method623(239);
+						client.secureBuf.putOpcode(239);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 9) {
-						client.secureBuf.method623(254);
+						client.secureBuf.putOpcode(254);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}
 
 					if (var0 == 10) {
-						client.secureBuf.method623(169);
+						client.secureBuf.putOpcode(169);
 						client.secureBuf.writeInt(var1);
 						client.secureBuf.writeShort(var2);
 					}

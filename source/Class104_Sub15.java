@@ -36,7 +36,7 @@ public class Class104_Sub15 extends Class104 {
 	static final void method549() {
 		client.anInt1904 = 0;
 		client.anInt1910 = 0;
-		client.gamecon.method624();
+		client.gamecon.initbits();
 		int var0 = client.gamecon.method625(1);
 		int var1;
 		int var2;

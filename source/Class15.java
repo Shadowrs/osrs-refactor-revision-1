@@ -54,16 +54,16 @@ public class Class15 {
 						Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var7.anIntArray1745[0],
 						var7.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
 				if (var0 == 1) {
-					client.secureBuf.method623(246);
+					client.secureBuf.putOpcode(246);
 					client.secureBuf.writeShort(client.anIntArray1909[var6]);
 				} else if (var0 == 4) {
-					client.secureBuf.method623(78);
+					client.secureBuf.putOpcode(78);
 					client.secureBuf.writeShort(client.anIntArray1909[var6]);
 				} else if (var0 == 6) {
-					client.secureBuf.method623(111);
+					client.secureBuf.putOpcode(111);
 					client.secureBuf.method592(client.anIntArray1909[var6]);
 				} else if (var0 == 7) {
-					client.secureBuf.method623(119);
+					client.secureBuf.putOpcode(119);
 					client.secureBuf.method592(client.anIntArray1909[var6]);
 				}
 
@@ -105,8 +105,8 @@ public class Class15 {
 							client.aClass86Array1972[var7] = client.aClass86Array1972[1 + var7];
 
 						client.anInt1846 = client.anInt1978;
-						client.secureBuf.method623(41);
-						client.secureBuf.writebyte(Class104_Sub21_Sub1.strlen(var0));
+						client.secureBuf.putOpcode(41);
+						client.secureBuf.writebyte(GameBuf.strlen(var0));
 						client.secureBuf.writeString(var0);
 						break;
 					}

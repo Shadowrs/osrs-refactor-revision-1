@@ -26,13 +26,13 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(146);
+					client.secureBuf.putOpcode(146);
 					client.secureBuf.writeShort(var4);
 				}
 			}
 
 			if (var3 == 35) {
-				client.secureBuf.method623(76);
+				client.secureBuf.putOpcode(76);
 				client.secureBuf.method606(var1);
 				client.secureBuf.method612(var2);
 				client.secureBuf.method606(var4);
@@ -52,7 +52,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(190);
+					client.secureBuf.putOpcode(190);
 					client.secureBuf.writeInt(anInt628);
 					client.secureBuf.method591(var4);
 					client.secureBuf.method591(client.anInt1970);
@@ -69,7 +69,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(145);
+					client.secureBuf.putOpcode(145);
 					client.secureBuf.method606(var4);
 				}
 			}
@@ -77,7 +77,7 @@ public class Class78 {
 			int var6;
 			Widget var12;
 			if (var3 == 28) {
-				client.secureBuf.method623(155);
+				client.secureBuf.putOpcode(155);
 				client.secureBuf.writeInt(var2);
 				var12 = Class47.method210(var2);
 				if ((null != var12.anIntArrayArray1069) && (var12.anIntArrayArray1069[0][0] == 5)) {
@@ -92,12 +92,12 @@ public class Class78 {
 				client.anInt1896 = Class14.anInt102;
 				client.anInt1898 = 2;
 				client.anInt1897 = 0;
-				client.secureBuf.method623(162);
+				client.secureBuf.putOpcode(162);
 				client.secureBuf.method591((var4 >> 14) & 32767);
 			}
 
 			if (var3 == 31) {
-				client.secureBuf.method623(70);
+				client.secureBuf.putOpcode(70);
 				client.secureBuf.method606(var4);
 				client.secureBuf.method606(Class7.anInt42);
 				client.secureBuf.writeShort(Class7.anInt44);
@@ -114,7 +114,7 @@ public class Class78 {
 				client.anInt1896 = Class14.anInt102;
 				client.anInt1898 = 2;
 				client.anInt1897 = 0;
-				client.secureBuf.method623(49);
+				client.secureBuf.putOpcode(49);
 				client.secureBuf.method606(var4);
 			}
 
@@ -128,13 +128,13 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(78);
+					client.secureBuf.putOpcode(78);
 					client.secureBuf.writeShort(var4);
 				}
 			}
 
 			if (var3 == 32) {
-				client.secureBuf.method623(218);
+				client.secureBuf.putOpcode(218);
 				client.secureBuf.method606(client.anInt1970);
 				client.secureBuf.writeShort(var1);
 				client.secureBuf.writeShort(var4);
@@ -155,7 +155,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(102);
+					client.secureBuf.putOpcode(102);
 					client.secureBuf.method606(var4);
 				}
 			}
@@ -174,7 +174,7 @@ public class Class78 {
 				client.anInt1896 = Class14.anInt102;
 				client.anInt1898 = 2;
 				client.anInt1897 = 0;
-				client.secureBuf.method623(224);
+				client.secureBuf.putOpcode(224);
 				client.secureBuf.method591(var4);
 				client.secureBuf.method592(Class53.anInt436 + var1);
 				client.secureBuf.method591(var2 + Class20.anInt206);
@@ -190,7 +190,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(95);
+					client.secureBuf.putOpcode(95);
 					client.secureBuf.method606(var4);
 				}
 			}
@@ -205,7 +205,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(226);
+					client.secureBuf.putOpcode(226);
 					client.secureBuf.method591(Class7.anInt42);
 					client.secureBuf.method606(Class7.anInt44);
 					client.secureBuf.method591(var4);
@@ -214,7 +214,7 @@ public class Class78 {
 			}
 
 			if ((var3 == 2) && Class97.method442(var1, var2, var4)) {
-				client.secureBuf.method623(247);
+				client.secureBuf.putOpcode(247);
 				client.secureBuf.putIntV2(anInt628);
 				client.secureBuf.writeShort(var2 + Class20.anInt206);
 				client.secureBuf.method606(client.anInt1970);
@@ -223,7 +223,7 @@ public class Class78 {
 			}
 
 			if (var3 == 41) {
-				client.secureBuf.method623(6);
+				client.secureBuf.putOpcode(6);
 				client.secureBuf.method606(var1);
 				client.secureBuf.method598(var2);
 				client.secureBuf.method592(var4);
@@ -242,13 +242,13 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(119);
+					client.secureBuf.putOpcode(119);
 					client.secureBuf.method592(var4);
 				}
 			}
 
 			if (var3 == 29) {
-				client.secureBuf.method623(155);
+				client.secureBuf.putOpcode(155);
 				client.secureBuf.writeInt(var2);
 				var12 = Class47.method210(var2);
 				if ((null != var12.anIntArrayArray1069) && (var12.anIntArrayArray1069[0][0] == 5)) {
@@ -270,13 +270,13 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(117);
+					client.secureBuf.putOpcode(117);
 					client.secureBuf.method591(var4);
 				}
 			}
 
 			if (var3 == 33) {
-				client.secureBuf.method623(135);
+				client.secureBuf.putOpcode(135);
 				client.secureBuf.method612(var2);
 				client.secureBuf.method592(var4);
 				client.secureBuf.method592(var1);
@@ -286,7 +286,7 @@ public class Class78 {
 			}
 
 			if ((var3 == 1) && Class97.method442(var1, var2, var4)) {
-				client.secureBuf.method623(241);
+				client.secureBuf.putOpcode(241);
 				client.secureBuf.method598(Class14.anInt105);
 				client.secureBuf.writeShort(Class7.anInt44);
 				client.secureBuf.writeShort((var4 >> 14) & 32767);
@@ -297,7 +297,7 @@ public class Class78 {
 
 			if (var3 == 6) {
 				Class97.method442(var1, var2, var4);
-				client.secureBuf.method623(83);
+				client.secureBuf.putOpcode(83);
 				client.secureBuf.method591(Class53.anInt436 + var1);
 				client.secureBuf.method592(var2 + Class20.anInt206);
 				client.secureBuf.method592((var4 >> 14) & 32767);
@@ -313,7 +313,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(183);
+					client.secureBuf.putOpcode(183);
 					client.secureBuf.method591(client.anInt1970);
 					client.secureBuf.writeInt(anInt628);
 					client.secureBuf.method606(var4);
@@ -333,7 +333,7 @@ public class Class78 {
 				client.anInt1896 = Class14.anInt102;
 				client.anInt1898 = 2;
 				client.anInt1897 = 0;
-				client.secureBuf.method623(243);
+				client.secureBuf.putOpcode(243);
 				client.secureBuf.method606(var4);
 				client.secureBuf.writeShort(var1 + Class53.anInt436);
 				client.secureBuf.method592(Class20.anInt206 + var2);
@@ -341,7 +341,7 @@ public class Class78 {
 
 			if (var3 == 5) {
 				Class97.method442(var1, var2, var4);
-				client.secureBuf.method623(133);
+				client.secureBuf.putOpcode(133);
 				client.secureBuf.method591(Class53.anInt436 + var1);
 				client.secureBuf.method591(var2 + Class20.anInt206);
 				client.secureBuf.method592((var4 >> 14) & 32767);
@@ -360,7 +360,7 @@ public class Class78 {
 				client.anInt1896 = Class14.anInt102;
 				client.anInt1898 = 2;
 				client.anInt1897 = 0;
-				client.secureBuf.method623(235);
+				client.secureBuf.putOpcode(235);
 				client.secureBuf.writeShort(var2 + Class20.anInt206);
 				client.secureBuf.method591(Class7.anInt42);
 				client.secureBuf.method606(var1 + Class53.anInt436);
@@ -371,14 +371,14 @@ public class Class78 {
 
 			if (var3 == 1001) {
 				Class97.method442(var1, var2, var4);
-				client.secureBuf.method623(56);
+				client.secureBuf.putOpcode(56);
 				client.secureBuf.writeShort(Class53.anInt436 + var1);
 				client.secureBuf.method606((var4 >> 14) & 32767);
 				client.secureBuf.method591(Class20.anInt206 + var2);
 			}
 
 			if (var3 == 26) {
-				client.secureBuf.method623(129);
+				client.secureBuf.putOpcode(129);
 
 				for (Nodee var15 = (Nodee) client.aClass58_1795
 						.method245(); null != var15; var15 = (Nodee) client.aClass58_1795.method243())
@@ -392,7 +392,7 @@ public class Class78 {
 			}
 
 			if (var3 == 37) {
-				client.secureBuf.method623(19);
+				client.secureBuf.putOpcode(19);
 				client.secureBuf.writeShort(var4);
 				client.secureBuf.writeInt(var2);
 				client.secureBuf.method591(var1);
@@ -414,7 +414,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(246);
+					client.secureBuf.putOpcode(246);
 					client.secureBuf.writeShort(var4);
 				}
 			}
@@ -432,7 +432,7 @@ public class Class78 {
 				client.anInt1896 = Class14.anInt102;
 				client.anInt1898 = 2;
 				client.anInt1897 = 0;
-				client.secureBuf.method623(77);
+				client.secureBuf.putOpcode(77);
 				client.secureBuf.writeShort(Class53.anInt436 + var1);
 				client.secureBuf.method591(var2 + Class20.anInt206);
 				client.secureBuf.method592(var4);
@@ -445,7 +445,7 @@ public class Class78 {
 					var13 = Class104_Sub20.method559(var12);
 
 				if (var13) {
-					client.secureBuf.method623(155);
+					client.secureBuf.putOpcode(155);
 					client.secureBuf.writeInt(var2);
 				}
 			}
@@ -460,7 +460,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(84);
+					client.secureBuf.putOpcode(84);
 					client.secureBuf.method592(var4);
 				}
 			}
@@ -475,7 +475,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(111);
+					client.secureBuf.putOpcode(111);
 					client.secureBuf.method592(var4);
 				}
 			}
@@ -520,7 +520,7 @@ public class Class78 {
 
 			} else {
 				if (var3 == 42) {
-					client.secureBuf.method623(186);
+					client.secureBuf.putOpcode(186);
 					client.secureBuf.writeShort(var1);
 					client.secureBuf.writeInt(var2);
 					client.secureBuf.writeShort(var4);
@@ -539,13 +539,13 @@ public class Class78 {
 						client.anInt1896 = Class14.anInt102;
 						client.anInt1898 = 2;
 						client.anInt1897 = 0;
-						client.secureBuf.method623(13);
+						client.secureBuf.putOpcode(13);
 						client.secureBuf.method591(var4);
 					}
 				}
 
 				if (var3 == 34) {
-					client.secureBuf.method623(179);
+					client.secureBuf.putOpcode(179);
 					client.secureBuf.method592(var1);
 					client.secureBuf.method591(var4);
 					client.secureBuf.method598(var2);
@@ -555,7 +555,7 @@ public class Class78 {
 				}
 
 				if (var3 == 43) {
-					client.secureBuf.method623(40);
+					client.secureBuf.putOpcode(40);
 					client.secureBuf.method606(var4);
 					client.secureBuf.method598(var2);
 					client.secureBuf.method591(var1);
@@ -576,7 +576,7 @@ public class Class78 {
 							var10 = var10.method677();
 
 						if (var10 != null) {
-							client.secureBuf.method623(52);
+							client.secureBuf.putOpcode(52);
 							client.secureBuf.writeShort(var10.anInt1228);
 						}
 					}
@@ -592,7 +592,7 @@ public class Class78 {
 						client.anInt1896 = Class14.anInt102;
 						client.anInt1898 = 2;
 						client.anInt1897 = 0;
-						client.secureBuf.method623(88);
+						client.secureBuf.putOpcode(88);
 						client.secureBuf.writeShort(var4);
 					}
 				}
@@ -607,7 +607,7 @@ public class Class78 {
 						client.anInt1896 = Class14.anInt102;
 						client.anInt1898 = 2;
 						client.anInt1897 = 0;
-						client.secureBuf.method623(67);
+						client.secureBuf.putOpcode(67);
 						client.secureBuf.method606(var4);
 					}
 				}
@@ -625,7 +625,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					client.secureBuf.method623(81);
+					client.secureBuf.putOpcode(81);
 					client.secureBuf.method592(var4);
 					client.secureBuf.writeShort(Class20.anInt206 + var2);
 					client.secureBuf.putIntV2(anInt628);
@@ -635,7 +635,7 @@ public class Class78 {
 
 				if (var3 == 3) {
 					Class97.method442(var1, var2, var4);
-					client.secureBuf.method623(73);
+					client.secureBuf.putOpcode(73);
 					client.secureBuf.method591((var4 >> 14) & 32767);
 					client.secureBuf.writeShort(Class53.anInt436 + var1);
 					client.secureBuf.writeShort(var2 + Class20.anInt206);
@@ -656,7 +656,7 @@ public class Class78 {
 
 				} else {
 					if (var3 == 58) {
-						client.secureBuf.method623(251);
+						client.secureBuf.putOpcode(251);
 						client.secureBuf.method591(client.anInt1970);
 						client.secureBuf.method591(var1);
 						client.secureBuf.writeInt(anInt628);
@@ -664,7 +664,7 @@ public class Class78 {
 					}
 
 					if ((var3 == 30) && (client.aClass104_Sub12_1951 == null)) {
-						client.secureBuf.method623(242);
+						client.secureBuf.putOpcode(242);
 						client.secureBuf.method591(var1);
 						client.secureBuf.writeInt(var2);
 						client.aClass104_Sub12_1951 = Class29.method141(var2, var1);
@@ -676,14 +676,14 @@ public class Class78 {
 
 					if (var3 == 4) {
 						Class97.method442(var1, var2, var4);
-						client.secureBuf.method623(90);
+						client.secureBuf.putOpcode(90);
 						client.secureBuf.method592(Class20.anInt206 + var2);
 						client.secureBuf.method592(Class53.anInt436 + var1);
 						client.secureBuf.method591((var4 >> 14) & 32767);
 					}
 
 					if (var3 == 36) {
-						client.secureBuf.method623(220);
+						client.secureBuf.putOpcode(220);
 						client.secureBuf.putIntV2(var2);
 						client.secureBuf.method591(var1);
 						client.secureBuf.method606(var4);
@@ -705,14 +705,14 @@ public class Class78 {
 						client.anInt1896 = Class14.anInt102;
 						client.anInt1898 = 2;
 						client.anInt1897 = 0;
-						client.secureBuf.method623(177);
+						client.secureBuf.putOpcode(177);
 						client.secureBuf.writeShort(Class20.anInt206 + var2);
 						client.secureBuf.method592(var4);
 						client.secureBuf.writeShort(Class53.anInt436 + var1);
 					}
 
 					if (var3 == 40) {
-						client.secureBuf.method623(202);
+						client.secureBuf.putOpcode(202);
 						client.secureBuf.method606(var4);
 						client.secureBuf.method612(var2);
 						client.secureBuf.method606(var1);
@@ -727,7 +727,7 @@ public class Class78 {
 							Class15.method60(0, "",
 									var12.anIntArray1081[var1] + " x " + Class27.method137(var4).aString1444);
 						else {
-							client.secureBuf.method623(49);
+							client.secureBuf.putOpcode(49);
 							client.secureBuf.method606(var4);
 						}
 
@@ -746,7 +746,7 @@ public class Class78 {
 							client.anInt1896 = Class14.anInt102;
 							client.anInt1898 = 2;
 							client.anInt1897 = 0;
-							client.secureBuf.method623(106);
+							client.secureBuf.putOpcode(106);
 							client.secureBuf.method591(Class7.anInt44);
 							client.secureBuf.writeInt(Class14.anInt105);
 							client.secureBuf.method606(var4);
@@ -767,14 +767,14 @@ public class Class78 {
 						client.anInt1896 = Class14.anInt102;
 						client.anInt1898 = 2;
 						client.anInt1897 = 0;
-						client.secureBuf.method623(139);
+						client.secureBuf.putOpcode(139);
 						client.secureBuf.method606(var2 + Class20.anInt206);
 						client.secureBuf.method606(var1 + Class53.anInt436);
 						client.secureBuf.method592(var4);
 					}
 
 					if (var3 == 39) {
-						client.secureBuf.method623(21);
+						client.secureBuf.putOpcode(21);
 						client.secureBuf.writeShort(var1);
 						client.secureBuf.method612(var2);
 						client.secureBuf.method606(var4);

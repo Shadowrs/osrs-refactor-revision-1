@@ -12,13 +12,13 @@ public final class Class43 {
 	static Class13 aClass13_374;
 	static int anInt375;
 
-	public static void method185(final Class104_Sub21_Sub1 var0, final int var1) {
+	public static void method185(final GameBuf var0, final int var1) {
 		while (true) {
 			final Class104_Sub16 var2 = (Class104_Sub16) Class105.aClass59_825.method251();
 			if (null == var2)
 				return;
 
-			var0.method623(var1);
+			var0.putOpcode(var1);
 			var0.writebyte(0);
 			final int var3 = var0.pos;
 			var0.writeInt(var2.anInt1128);

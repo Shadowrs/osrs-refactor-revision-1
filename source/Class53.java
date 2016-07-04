@@ -190,8 +190,8 @@ public class Class53 {
 							.equals(var2))
 						Class15.method60(0, "", "You can\'t add yourself to your own ignore list");
 					else {
-						client.secureBuf.method623(231);
-						client.secureBuf.writebyte(Class104_Sub21_Sub1.strlen(var0));
+						client.secureBuf.putOpcode(231);
+						client.secureBuf.writebyte(GameBuf.strlen(var0));
 						client.secureBuf.writeString(var0);
 					}
 				}

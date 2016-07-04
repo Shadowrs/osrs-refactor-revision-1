@@ -35,7 +35,7 @@ public class Class104_Sub13 extends Class104 {
 				throw new RuntimeException();
 		}
 
-		client.secureBuf.method623(30);
+		client.secureBuf.putOpcode(30);
 		client.secureBuf.writebyte(var0.length() - 1);
 		client.secureBuf.writeString(var0.substring(2));
 	}
@@ -256,17 +256,17 @@ public class Class104_Sub13 extends Class104 {
 			final int var28 = client.anIntArray1853[var14];
 			var21 = client.anIntArray1854[var14];
 			if (var10 == 0) {
-				client.secureBuf.method623(176);
+				client.secureBuf.putOpcode(176);
 				client.secureBuf.writebyte(3 + var16 + var16);
 			}
 
 			if (var10 == 1) {
-				client.secureBuf.method623(60);
+				client.secureBuf.putOpcode(60);
 				client.secureBuf.writebyte(14 + 3 + var16 + var16);
 			}
 
 			if (var10 == 2) {
-				client.secureBuf.method623(214);
+				client.secureBuf.putOpcode(214);
 				client.secureBuf.writebyte(3 + var16 + var16);
 			}
 

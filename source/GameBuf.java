@@ -1,19 +1,19 @@
-public final class Class104_Sub21_Sub1 extends RSBuf {
+public final class GameBuf extends RSBuf {
 	int anInt1184;
 	static int[] anIntArray1185 = new int[] { 0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383,
 			32767, '\uffff', 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863,
 			134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1 };
 	ISAAC isaac;
 
-	public void method623(final int var1) {
-		backing[++pos - 1] = (byte) (var1 + isaac.nextKey());
+	public void putOpcode(final int code) {
+		backing[++pos - 1] = (byte) (code + isaac.nextKey());
 	}
 
-	public Class104_Sub21_Sub1(final int var1) {
+	public GameBuf(final int var1) {
 		super(var1);
 	}
 
-	public void method624() {
+	public void initbits() {
 		anInt1184 = pos * 8;
 	}
 

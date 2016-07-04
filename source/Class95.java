@@ -69,7 +69,7 @@ public class Class95 {
 			Class19.method120(cx, cz, var4, var2, var1);
 		} else {
 			var1 = client.gamecon.readShortN();
-			client.gamecon.method624();
+			client.gamecon.initbits();
 
 			for (var2 = 0; var2 < 4; ++var2)
 				for (count = 0; count < 13; ++count)
