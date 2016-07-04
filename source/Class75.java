@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.RandomAccessFile;
 
 public class Class75 {
-	static int[] landscapeInfo;
+	static int[] landscapeFileIds;
 	static int anInt598;
 
 	public static File method341(final String var0) {

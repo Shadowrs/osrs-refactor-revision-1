@@ -7,7 +7,7 @@ public class Class104_Sub18_Sub8 extends Class104_Sub18 {
 
 	void method757(final RSBuf var1) {
 		while (true) {
-			final int var2 = var1.method570();
+			final int var2 = var1.readUByte();
 			if (var2 == 0)
 				return;
 
@@ -18,8 +18,8 @@ public class Class104_Sub18_Sub8 extends Class104_Sub18 {
 	void method758(final RSBuf var1, final int var2) {
 		if (var2 == 1) {
 			anInt1388 = var1.readLEShort();
-			anInt1386 = var1.method570();
-			anInt1390 = var1.method570();
+			anInt1386 = var1.readUByte();
+			anInt1390 = var1.readUByte();
 		}
 
 	}

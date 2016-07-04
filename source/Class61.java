@@ -7,7 +7,7 @@ public abstract class Class61 {
 	int[] anIntArray485;
 	int[][] anIntArrayArray486;
 	Object[] anObjectArray492;
-	Object[][] anObjectArrayArray484;
+	Object[][] fileArray;
 	int[] anIntArray481;
 	Class73 aClass73_482;
 	int[][] anIntArrayArray487;
@@ -28,12 +28,12 @@ public abstract class Class61 {
 		var3 = ~var3;
 		anInt489 = var3;
 		final RSBuf var7 = new RSBuf(Class57.method240(var1));
-		var3 = var7.method570();
+		var3 = var7.readUByte();
 		if ((var3 >= 5) && (var3 <= 7)) {
 			if (var3 >= 6)
-				var7.method574();
+				var7.readIntt();
 
-			var4 = var7.method570();
+			var4 = var7.readUByte();
 			if (var3 >= 7)
 				anInt495 = var7.method579();
 			else
@@ -61,21 +61,21 @@ public abstract class Class61 {
 			anIntArray485 = new int[var9 + 1];
 			anIntArrayArray486 = new int[1 + var9][];
 			anObjectArray492 = new Object[var9 + 1];
-			anObjectArrayArray484 = new Object[var9 + 1][];
+			fileArray = new Object[var9 + 1][];
 			if (var4 != 0) {
 				anIntArray481 = new int[var9 + 1];
 
 				for (var10 = 0; var10 < anInt495; ++var10)
-					anIntArray481[anIntArray479[var10]] = var7.method574();
+					anIntArray481[anIntArray479[var10]] = var7.readIntt();
 
 				aClass73_482 = new Class73(anIntArray481);
 			}
 
 			for (var10 = 0; var10 < anInt495; ++var10)
-				anIntArray483[anIntArray479[var10]] = var7.method574();
+				anIntArray483[anIntArray479[var10]] = var7.readIntt();
 
 			for (var10 = 0; var10 < anInt495; ++var10)
-				anIntArray493[anIntArray479[var10]] = var7.method574();
+				anIntArray493[anIntArray479[var10]] = var7.readIntt();
 
 			for (var10 = 0; var10 < anInt495; ++var10)
 				anIntArray485[anIntArray479[var10]] = var7.readLEShort();
@@ -99,7 +99,7 @@ public abstract class Class61 {
 							var13 = var15;
 					}
 
-					anObjectArrayArray484[var11] = new Object[1 + var13];
+					fileArray[var11] = new Object[1 + var13];
 				}
 			else
 				for (var10 = 0; var10 < anInt495; ++var10) {
@@ -115,7 +115,7 @@ public abstract class Class61 {
 							var13 = var15;
 					}
 
-					anObjectArrayArray484[var11] = new Object[1 + var13];
+					fileArray[var11] = new Object[1 + var13];
 				}
 
 			if (var4 != 0) {
@@ -125,10 +125,10 @@ public abstract class Class61 {
 				for (var10 = 0; var10 < anInt495; ++var10) {
 					var11 = anIntArray479[var10];
 					var12 = anIntArray485[var11];
-					anIntArrayArray487[var11] = new int[anObjectArrayArray484[var11].length];
+					anIntArrayArray487[var11] = new int[fileArray[var11].length];
 
 					for (var13 = 0; var13 < var12; ++var13)
-						anIntArrayArray487[var11][anIntArrayArray486[var11][var13]] = var7.method574();
+						anIntArrayArray487[var11][anIntArrayArray486[var11][var13]] = var7.readIntt();
 
 					aClass73Array488[var11] = new Class73(anIntArrayArray487[var11]);
 				}
@@ -142,18 +142,18 @@ public abstract class Class61 {
 	}
 
 	public byte[] method259(final int var1, final int var2) {
-		return decode(var1, var2, (int[]) null);
+		return filedata(var1, var2, (int[]) null);
 	}
 
 	public boolean method260(final int var1, final int var2) {
-		if ((var1 >= 0) && (var1 < anObjectArrayArray484.length) && (anObjectArrayArray484[var1] != null) && (var2 >= 0)
-				&& (var2 < anObjectArrayArray484[var1].length)) {
-			if (anObjectArrayArray484[var1][var2] != null)
+		if ((var1 >= 0) && (var1 < fileArray.length) && (fileArray[var1] != null) && (var2 >= 0)
+				&& (var2 < fileArray[var1].length)) {
+			if (fileArray[var1][var2] != null)
 				return true;
 			else if (null != anObjectArray492[var1])
 				return true;
 			else {
-				method264(var1, (byte) 87);
+				submitArchiveRequest(var1, (byte) 87);
 				return null != anObjectArray492[var1];
 			}
 		} else
@@ -165,7 +165,7 @@ public abstract class Class61 {
 
 		for (final int var3 : anIntArray479) {
 			if (anObjectArray492[var3] == null) {
-				method264(var3, (byte) 27);
+				submitArchiveRequest(var3, (byte) 27);
 				if (null == anObjectArray492[var3])
 					var1 = false;
 			}
@@ -175,34 +175,34 @@ public abstract class Class61 {
 	}
 
 	public byte[] method262(final int var1, final int var2) {
-		if ((var1 >= 0) && (var1 < anObjectArrayArray484.length) && (anObjectArrayArray484[var1] != null) && (var2 >= 0)
-				&& (var2 < anObjectArrayArray484[var1].length)) {
-			if (null == anObjectArrayArray484[var1][var2]) {
+		if ((var1 >= 0) && (var1 < fileArray.length) && (fileArray[var1] != null) && (var2 >= 0)
+				&& (var2 < fileArray[var1].length)) {
+			if (null == fileArray[var1][var2]) {
 				boolean var3 = method270(var1, (int[]) null);
 				if (!var3) {
-					method264(var1, (byte) 121);
+					submitArchiveRequest(var1, (byte) 121);
 					var3 = method270(var1, (int[]) null);
 					if (!var3)
 						return null;
 				}
 			}
 
-			final byte[] var4 = Class90.method407(anObjectArrayArray484[var1][var2], false);
+			final byte[] var4 = Class90.fileToByteArray(fileArray[var1][var2], false);
 			return var4;
 		} else
 			return null;
 	}
 
 	public byte[] method263(final int var1) {
-		if (anObjectArrayArray484.length == 1)
+		if (fileArray.length == 1)
 			return method262(0, var1);
-		else if (anObjectArrayArray484[var1].length == 1)
+		else if (fileArray[var1].length == 1)
 			return method262(var1, 0);
 		else
 			throw new RuntimeException();
 	}
 
-	void method264(final int var1, final byte var2) {
+	void submitArchiveRequest(final int var1, final byte var2) {
 	}
 
 	public int[] method265(final int var1) {
@@ -210,11 +210,11 @@ public abstract class Class61 {
 	}
 
 	public int method266(final int var1) {
-		return anObjectArrayArray484[var1].length;
+		return fileArray[var1].length;
 	}
 
 	public int method267() {
-		return anObjectArrayArray484.length;
+		return fileArray.length;
 	}
 
 	public void method268(String var1) {
@@ -225,10 +225,10 @@ public abstract class Class61 {
 	}
 
 	public void method269() {
-		for (int var1 = 0; var1 < anObjectArrayArray484.length; ++var1)
-			if (anObjectArrayArray484[var1] != null)
-				for (int var2 = 0; var2 < anObjectArrayArray484[var1].length; ++var2)
-					anObjectArrayArray484[var1][var2] = null;
+		for (int var1 = 0; var1 < fileArray.length; ++var1)
+			if (fileArray[var1] != null)
+				for (int var2 = 0; var2 < fileArray[var1].length; ++var2)
+					fileArray[var1][var2] = null;
 
 	}
 
@@ -238,7 +238,7 @@ public abstract class Class61 {
 		else {
 			final int var3 = anIntArray485[var1];
 			final int[] var4 = anIntArrayArray486[var1];
-			final Object[] var5 = anObjectArrayArray484[var1];
+			final Object[] var5 = fileArray[var1];
 			boolean var6 = true;
 
 			for (int var7 = 0; var7 < var3; ++var7)
@@ -252,11 +252,11 @@ public abstract class Class61 {
 			else {
 				byte[] var8;
 				if ((null != var2) && ((var2[0] != 0) || (var2[1] != 0) || (var2[2] != 0) || (var2[3] != 0))) {
-					var8 = Class90.method407(anObjectArray492[var1], true);
+					var8 = Class90.fileToByteArray(anObjectArray492[var1], true);
 					final RSBuf var9 = new RSBuf(var8);
 					var9.method605(var2, 5, var9.aByteArray1174.length);
 				} else
-					var8 = Class90.method407(anObjectArray492[var1], false);
+					var8 = Class90.fileToByteArray(anObjectArray492[var1], false);
 
 				final byte[] var20 = Class57.method240(var8);
 				if (aBool480)
@@ -277,7 +277,7 @@ public abstract class Class61 {
 						var15 = 0;
 
 						for (var16 = 0; var16 < var3; ++var16) {
-							var15 += var12.method574();
+							var15 += var12.readIntt();
 							var13[var16] += var15;
 						}
 					}
@@ -296,7 +296,7 @@ public abstract class Class61 {
 						int var18 = 0;
 
 						for (int var19 = 0; var19 < var3; ++var19) {
-							var18 += var12.method574();
+							var18 += var12.readIntt();
 							System.arraycopy(var20, var15, var17[var19], var13[var19], var18);
 							var13[var19] += var18;
 							var15 += var18;
@@ -318,7 +318,7 @@ public abstract class Class61 {
 		}
 	}
 
-	public int method271(String filename) {
+	public int getArchiveIDForName(String filename) {
 		filename = filename.toLowerCase();
 		return aClass73_482.method336(Class67.method319(filename));
 	}
@@ -349,22 +349,22 @@ public abstract class Class61 {
 		aBool494 = var2;
 	}
 
-	public byte[] decode(final int var1, final int var2, final int[] keys) {
-		if ((var1 >= 0) && (var1 < anObjectArrayArray484.length) && (null != anObjectArrayArray484[var1]) && (var2 >= 0)
-				&& (var2 < anObjectArrayArray484[var1].length)) {
-			if (null == anObjectArrayArray484[var1][var2]) {
-				boolean var4 = method270(var1, keys);
+	public byte[] filedata(final int archiveID, final int fileID, final int[] keys) {
+		if ((archiveID >= 0) && (archiveID < fileArray.length) && (null != fileArray[archiveID]) && (fileID >= 0)
+				&& (fileID < fileArray[archiveID].length)) {
+			if (null == fileArray[archiveID][fileID]) {
+				boolean var4 = method270(archiveID, keys);
 				if (!var4) {
-					method264(var1, (byte) 124);
-					var4 = method270(var1, keys);
+					submitArchiveRequest(archiveID, (byte) 124);
+					var4 = method270(archiveID, keys);
 					if (!var4)
 						return null;
 				}
 			}
 
-			final byte[] var5 = Class90.method407(anObjectArrayArray484[var1][var2], false);
+			final byte[] var5 = Class90.fileToByteArray(fileArray[archiveID][fileID], false);
 			if (aBool494)
-				anObjectArrayArray484[var1][var2] = null;
+				fileArray[archiveID][fileID] = null;
 
 			return var5;
 		} else
@@ -372,15 +372,15 @@ public abstract class Class61 {
 	}
 
 	public void method276(final int var1, final int var2) {
-		for (int var3 = 0; var3 < anObjectArrayArray484[var1].length; ++var3)
-			anObjectArrayArray484[var1][var3] = null;
+		for (int var3 = 0; var3 < fileArray[var1].length; ++var3)
+			fileArray[var1][var3] = null;
 
 	}
 
 	public byte[] method277(final int var1) {
-		if (anObjectArrayArray484.length == 1)
+		if (fileArray.length == 1)
 			return method259(0, var1);
-		else if (anObjectArrayArray484[var1].length == 1)
+		else if (fileArray[var1].length == 1)
 			return method259(var1, 0);
 		else
 			throw new RuntimeException();
@@ -390,7 +390,7 @@ public abstract class Class61 {
 		if (anObjectArray492[var1] != null)
 			return true;
 		else {
-			method264(var1, (byte) 24);
+			submitArchiveRequest(var1, (byte) 24);
 			return null != anObjectArray492[var1];
 		}
 	}

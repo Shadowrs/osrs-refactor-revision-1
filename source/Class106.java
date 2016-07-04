@@ -11,7 +11,7 @@ public class Class106 {
 			Class76.aByteArrayArrayArray600[var1][var2][var3] = 0;
 
 			while (true) {
-				var7 = var0.method570();
+				var7 = var0.readUByte();
 				if (var7 == 0) {
 					if (var1 == 0)
 						Class76.anIntArrayArrayArray611[0][var2][var3] = -Class104_Sub18_Sub7
@@ -23,7 +23,7 @@ public class Class106 {
 				}
 
 				if (var7 == 1) {
-					int var8 = var0.method570();
+					int var8 = var0.readUByte();
 					if (var8 == 1)
 						var8 = 0;
 
@@ -46,17 +46,17 @@ public class Class106 {
 			}
 		} else
 			while (true) {
-				var7 = var0.method570();
+				var7 = var0.readUByte();
 				if (var7 == 0)
 					break;
 
 				if (var7 == 1) {
-					var0.method570();
+					var0.readUByte();
 					break;
 				}
 
 				if (var7 <= 49)
-					var0.method570();
+					var0.readUByte();
 			}
 
 	}

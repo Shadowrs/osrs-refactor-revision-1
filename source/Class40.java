@@ -1,6 +1,6 @@
 public class Class40 {
 	static long aLong359;
-	static int[] mapInfo;
+	static int[] mapFileIds;
 
 	static boolean method182(final Class104_Sub12 var0) {
 		if (client.aBool1956) {

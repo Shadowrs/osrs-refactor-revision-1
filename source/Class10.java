@@ -104,7 +104,7 @@ public class Class10 {
 
 					if (!Class66.aBool527) {
 						final Class61_Sub1 var6 = Class27.aClass61_Sub1_264;
-						final int var7 = var6.method271("scape main");
+						final int var7 = var6.getArchiveIDForName("scape main");
 						final int var8 = var6.method273(var7, "");
 						Class86.method393(2, var6, var7, var8, 255, false);
 					} else {

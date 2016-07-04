@@ -33,8 +33,8 @@ public class Class95 {
 			var5 = client.gamecon.readLEShort(); // C X
 			var6 = client.gamecon.readShortN(); // C Y
 			Class47.regionId = new int[var3];
-			Class40.mapInfo = new int[var3];
-			Class75.landscapeInfo = new int[var3];
+			Class40.mapFileIds = new int[var3];
+			Class75.landscapeFileIds = new int[var3];
 			Class104_Sub15.aByteArrayArray1124 = new byte[var3][];
 			Class70.landscapedata = new byte[var3][];
 			boolean var7 = false;
@@ -52,8 +52,8 @@ public class Class95 {
 					if (!var7 || ((yy != 49) && (yy != 149) && (yy != 147) && (xx != 50)
 							&& ((xx != 49) || (yy != 47)))) {
 						Class47.regionId[var3] = regionid;
-						Class40.mapInfo[var3] = Class67.fs.method271("m" + xx + "_" + yy);
-						Class75.landscapeInfo[var3] = Class67.fs.method271("l" + xx + "_" + yy);
+						Class40.mapFileIds[var3] = Class67.fs.getArchiveIDForName("m" + xx + "_" + yy);
+						Class75.landscapeFileIds[var3] = Class67.fs.getArchiveIDForName("l" + xx + "_" + yy);
 						++var3;
 					}
 				}
@@ -89,8 +89,8 @@ public class Class95 {
 			var5 = client.gamecon.readShort();
 			var6 = client.gamecon.readShortN();
 			Class47.regionId = new int[var2];
-			Class40.mapInfo = new int[var2];
-			Class75.landscapeInfo = new int[var2];
+			Class40.mapFileIds = new int[var2];
+			Class75.landscapeFileIds = new int[var2];
 			Class104_Sub15.aByteArrayArray1124 = new byte[var2][];
 			Class70.landscapedata = new byte[var2][];
 			var2 = 0;
@@ -115,10 +115,10 @@ public class Class95 {
 								Class47.regionId[var2] = var13;
 								var14 = (var13 >> 8) & 255;
 								final int var15 = var13 & 255;
-								Class40.mapInfo[var2] = Class67.fs
-										.method271("m" + var14 + "_" + var15);
-								Class75.landscapeInfo[var2] = Class67.fs
-										.method271("l" + var14 + "_" + var15);
+								Class40.mapFileIds[var2] = Class67.fs
+										.getArchiveIDForName("m" + var14 + "_" + var15);
+								Class75.landscapeFileIds[var2] = Class67.fs
+										.getArchiveIDForName("l" + var14 + "_" + var15);
 								++var2;
 							}
 						}

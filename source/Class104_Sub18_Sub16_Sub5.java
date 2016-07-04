@@ -813,13 +813,13 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 		var2.pos = var1.length - 23;
 		final int var9 = var2.readLEShort();
 		final int var10 = var2.readLEShort();
-		final int var11 = var2.method570();
-		final int var12 = var2.method570();
-		final int var13 = var2.method570();
-		final int var14 = var2.method570();
-		final int var15 = var2.method570();
-		final int var16 = var2.method570();
-		final int var17 = var2.method570();
+		final int var11 = var2.readUByte();
+		final int var12 = var2.readUByte();
+		final int var13 = var2.readUByte();
+		final int var14 = var2.readUByte();
+		final int var15 = var2.readUByte();
+		final int var16 = var2.readUByte();
+		final int var17 = var2.readUByte();
 		final int var18 = var2.readLEShort();
 		final int var19 = var2.readLEShort();
 		final int var20 = var2.readLEShort();
@@ -962,7 +962,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 		int var54;
 		int var55;
 		for (var51 = 0; var51 < var9; ++var51) {
-			var52 = var2.method570();
+			var52 = var2.readUByte();
 			var53 = 0;
 			if ((var52 & 1) != 0)
 				var53 = var3.method578();
@@ -982,7 +982,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 			var49 = anIntArray1625[var51];
 			var50 = anIntArray1627[var51];
 			if (var17 == 1)
-				anIntArray1666[var51] = var6.method570();
+				anIntArray1666[var51] = var6.readUByte();
 		}
 
 		var2.pos = var37;
@@ -1005,13 +1005,13 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 				aByteArray1662[var51] = var5.method565();
 
 			if (var15 == 1)
-				anIntArray1652[var51] = var6.method570();
+				anIntArray1652[var51] = var6.readUByte();
 
 			if (var16 == 1)
 				aShortArray1658[var51] = (short) (var7.readLEShort() - 1);
 
 			if ((aByteArray1635 != null) && (aShortArray1658[var51] != -1))
-				aByteArray1635[var51] = (byte) (var8.method570() - 1);
+				aByteArray1635[var51] = (byte) (var8.readUByte() - 1);
 		}
 
 		var2.pos = var34;
@@ -1023,7 +1023,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 
 		int var56;
 		for (var55 = 0; var55 < var10; ++var55) {
-			var56 = var3.method570();
+			var56 = var3.readUByte();
 			if (var56 == 1) {
 				var51 = var2.method578() + var54;
 				var52 = var2.method578() + var51;
@@ -1118,13 +1118,13 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 		}
 
 		var2.pos = var26;
-		var55 = var2.method570();
+		var55 = var2.readUByte();
 		if (var55 != 0) {
 			new Class10();
 			var2.readLEShort();
 			var2.readLEShort();
 			var2.readLEShort();
-			var2.method574();
+			var2.readIntt();
 		}
 
 	}
@@ -1178,12 +1178,12 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 		var4.pos = var1.length - 18;
 		final int var9 = var4.readLEShort();
 		final int var10 = var4.readLEShort();
-		final int var11 = var4.method570();
-		final int var12 = var4.method570();
-		final int var13 = var4.method570();
-		final int var14 = var4.method570();
-		final int var15 = var4.method570();
-		final int var16 = var4.method570();
+		final int var11 = var4.readUByte();
+		final int var12 = var4.readUByte();
+		final int var13 = var4.readUByte();
+		final int var14 = var4.readUByte();
+		final int var15 = var4.readUByte();
+		final int var16 = var4.readUByte();
 		final int var17 = var4.readLEShort();
 		final int var18 = var4.readLEShort();
 		final int var19 = var4.readLEShort();
@@ -1274,7 +1274,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 		int var41;
 		int var42;
 		for (var38 = 0; var38 < var9; ++var38) {
-			var39 = var4.method570();
+			var39 = var4.readUByte();
 			var40 = 0;
 			if ((var39 & 1) != 0)
 				var40 = var5.method578();
@@ -1294,7 +1294,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 			var36 = anIntArray1625[var38];
 			var37 = anIntArray1627[var38];
 			if (var16 == 1)
-				anIntArray1666[var38] = var8.method570();
+				anIntArray1666[var38] = var8.readUByte();
 		}
 
 		var4.pos = var30;
@@ -1306,7 +1306,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 		for (var38 = 0; var38 < var10; ++var38) {
 			aShortArray1657[var38] = (short) var4.readLEShort();
 			if (var12 == 1) {
-				var39 = var5.method570();
+				var39 = var5.readUByte();
 				if ((var39 & 1) == 1) {
 					aByteArray1632[var38] = 1;
 					var2 = true;
@@ -1332,7 +1332,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 				aByteArray1662[var38] = var7.method565();
 
 			if (var15 == 1)
-				anIntArray1652[var38] = var8.method570();
+				anIntArray1652[var38] = var8.readUByte();
 		}
 
 		var4.pos = var29;
@@ -1345,7 +1345,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 		int var43;
 		int var44;
 		for (var42 = 0; var42 < var10; ++var42) {
-			var43 = var5.method570();
+			var43 = var5.readUByte();
 			if (var43 == 1) {
 				var38 = var4.method578() + var41;
 				var39 = var4.method578() + var38;

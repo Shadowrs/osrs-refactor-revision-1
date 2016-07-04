@@ -166,14 +166,14 @@ public class Class104_Sub15 extends Class104 {
 			for (var0 = 0; var0 < client.anInt1910; ++var0) {
 				var1 = client.anIntArray1911[var0];
 				var10 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var1];
-				var3 = client.gamecon.method570();
+				var3 = client.gamecon.readUByte();
 				if ((var3 & 64) != 0)
-					var3 += client.gamecon.method570() << 8;
+					var3 += client.gamecon.readUByte() << 8;
 
 				if ((var3 & 4) != 0) {
 					var4 = client.gamecon.readLEShort();
-					var5 = client.gamecon.method570();
-					var7 = client.gamecon.method570();
+					var5 = client.gamecon.readUByte();
+					var7 = client.gamecon.readUByte();
 					var8 = client.gamecon.pos;
 					if ((null != var10.aString1780) && (var10.aClass85_1770 != null)) {
 						boolean var15 = false;
@@ -182,7 +182,7 @@ public class Class104_Sub15 extends Class104 {
 
 						if (!var15 && (client.anInt1906 == 0)) {
 							client.aClass104_Sub21_1885.pos = 0;
-							client.gamecon.method577(client.aClass104_Sub21_1885.aByteArray1174, 0,
+							client.gamecon.readBytes(client.aClass104_Sub21_1885.aByteArray1174, 0,
 									var7);
 							client.aClass104_Sub21_1885.pos = 0;
 							final String var11 = Class104_Sub18_Sub17_Sub2
@@ -214,9 +214,9 @@ public class Class104_Sub15 extends Class104 {
 				}
 
 				if ((var3 & 256) != 0) {
-					var10.anInt1697 = client.gamecon.method570();
+					var10.anInt1697 = client.gamecon.readUByte();
 					var10.anInt1734 = client.gamecon.readByteN();
-					var10.anInt1733 = client.gamecon.method570();
+					var10.anInt1733 = client.gamecon.readUByte();
 					var10.anInt1721 = client.gamecon.method576();
 					var10.anInt1708 = client.gamecon.method594() + client.anInt1799;
 					var10.anInt1737 = client.gamecon.readLEShort() + client.anInt1799;
@@ -247,7 +247,7 @@ public class Class104_Sub15 extends Class104 {
 
 				if ((var3 & 512) != 0) {
 					var10.anInt1727 = client.gamecon.readShort();
-					var4 = client.gamecon.method574();
+					var4 = client.gamecon.readIntt();
 					var10.anInt1709 = var4 >> 16;
 					var10.anInt1730 = client.anInt1799 + (var4 & '\uffff');
 					var10.anInt1728 = 0;
@@ -264,7 +264,7 @@ public class Class104_Sub15 extends Class104 {
 					var5 = client.gamecon.method588();
 					var10.method935(var4, var5, client.anInt1799);
 					var10.anInt1714 = client.anInt1799 + 300;
-					var10.anInt1693 = client.gamecon.method570();
+					var10.anInt1693 = client.gamecon.readUByte();
 					var10.anInt1715 = client.gamecon.readByteN();
 				}
 
@@ -287,7 +287,7 @@ public class Class104_Sub15 extends Class104 {
 					var10.method935(var4, var5, client.anInt1799);
 					var10.anInt1714 = 300 + client.anInt1799;
 					var10.anInt1693 = client.gamecon.method576();
-					var10.anInt1715 = client.gamecon.method570();
+					var10.anInt1715 = client.gamecon.readUByte();
 				}
 			}
 

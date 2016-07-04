@@ -39,7 +39,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 
 	void method674(final RSBuf var1) {
 		while (true) {
-			final int var2 = var1.method570();
+			final int var2 = var1.readUByte();
 			if (var2 == 0)
 				return;
 
@@ -163,7 +163,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 		int var3;
 		int var4;
 		if (var2 == 1) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			anIntArray1249 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
@@ -171,7 +171,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 		} else if (var2 == 2)
 			aString1229 = var1.method608();
 		else if (var2 == 12)
-			anInt1240 = var1.method570();
+			anInt1240 = var1.readUByte();
 		else if (var2 == 13)
 			anInt1233 = var1.readLEShort();
 		else if (var2 == 14)
@@ -190,7 +190,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			if (aStringArray1225[var2 - 30].equalsIgnoreCase("Hidden"))
 				aStringArray1225[var2 - 30] = null;
 		} else if (var2 == 40) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			aShortArray1234 = new short[var3];
 			aShortArray1241 = new short[var3];
 
@@ -199,7 +199,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 				aShortArray1241[var4] = (short) var1.readLEShort();
 			}
 		} else if (var2 == 41) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			aShortArray1242 = new short[var3];
 			aShortArray1243 = new short[var3];
 
@@ -208,7 +208,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 				aShortArray1243[var4] = (short) var1.readLEShort();
 			}
 		} else if (var2 == 60) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			anIntArray1232 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
@@ -240,7 +240,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			if (anInt1256 == '\uffff')
 				anInt1256 = -1;
 
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			anIntArray1230 = new int[1 + var3];
 
 			for (var4 = 0; var4 <= var3; ++var4) {

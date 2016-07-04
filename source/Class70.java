@@ -39,7 +39,7 @@ public class Class70 {
 
 					anInt570 += aDataInputStream568.read(aByteArray573, anInt570, var1);
 					if (anInt570 == 4) {
-						final int var2 = (new RSBuf(aByteArray573)).method574();
+						final int var2 = (new RSBuf(aByteArray573)).readIntt();
 						aByteArray566 = new byte[var2];
 						anInt567 = 2;
 					}
@@ -91,13 +91,13 @@ public class Class70 {
 				}
 
 				var8.pos = 0;
-				var9 = var8.method570();
+				var9 = var8.readUByte();
 				if ((var9 < 1) || (var9 > 3))
 					throw new IOException("" + var9);
 
 				int var10 = 0;
 				if (var9 > 1)
-					var10 = var8.method570();
+					var10 = var8.readUByte();
 
 				if (var9 <= 2) {
 					dir = var8.method616();

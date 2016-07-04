@@ -91,13 +91,13 @@ public class Class61_Sub1 extends Class61 {
 				aCRC32_889.update(var3, 0, var3.length);
 				var5 = (int) aCRC32_889.getValue();
 				final RSBuf var6 = new RSBuf(Class57.method240(var3));
-				final int var7 = var6.method570();
+				final int var7 = var6.readUByte();
 				if ((var7 != 5) && (var7 != 6))
 					throw new RuntimeException("");
 				else {
 					int var8 = 0;
 					if (var7 >= 6)
-						var8 = var6.method574();
+						var8 = var6.readIntt();
 
 					if ((anInt890 != var5) || (anInt887 != var8))
 						Class49.method222(this, 255, anInt884, anInt890, (byte) 0, true);
@@ -198,7 +198,7 @@ public class Class61_Sub1 extends Class61 {
 	}
 
 	@Override
-	void method264(final int var1, final byte var2) {
+	void submitArchiveRequest(final int var1, final byte var2) {
 		if ((aClass16_888 != null) && (aBoolArray882 != null) && aBoolArray882[var1])
 			Class87.method397(var1, aClass16_888, this);
 		else
@@ -230,8 +230,8 @@ public class Class61_Sub1 extends Class61 {
 		final int var8 = anInt884;
 		if (null != Class2.aClass104_Sub21_7) {
 			Class2.aClass104_Sub21_7.pos = (8 * var8) + 5;
-			final int var9 = Class2.aClass104_Sub21_7.method574();
-			final int var10 = Class2.aClass104_Sub21_7.method574();
+			final int var9 = Class2.aClass104_Sub21_7.readIntt();
+			final int var10 = Class2.aClass104_Sub21_7.readIntt();
 			method492(var9, var10);
 		} else {
 			Class49.method222((Class61_Sub1) null, 255, 255, 0, (byte) 0, true);

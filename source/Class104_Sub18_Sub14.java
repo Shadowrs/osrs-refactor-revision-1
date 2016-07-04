@@ -11,7 +11,7 @@ public class Class104_Sub18_Sub14 extends Class104_Sub18 {
 
 	public void method784(final RSBuf var1) {
 		while (true) {
-			final int var2 = var1.method570();
+			final int var2 = var1.readUByte();
 			if (var2 == 0)
 				return;
 

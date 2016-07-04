@@ -12,7 +12,7 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 
 	void method765(final RSBuf var1) {
 		while (true) {
-			final int var2 = var1.method570();
+			final int var2 = var1.readUByte();
 			if (var2 == 0)
 				return;
 
@@ -22,13 +22,13 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 
 	void method766(final RSBuf var1, final int var2) {
 		if (var2 == 1)
-			anInt1404 = var1.method570();
+			anInt1404 = var1.readUByte();
 		else if (var2 == 2)
-			aChar1405 = (char) var1.method570();
+			aChar1405 = (char) var1.readUByte();
 		else if (var2 == 3)
 			aString1409 = var1.method608();
 		else if (var2 == 4)
-			anInt1407 = var1.method574();
+			anInt1407 = var1.readIntt();
 		else {
 			int var3;
 			if (var2 == 5) {
@@ -37,7 +37,7 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 				aStringArray1411 = new String[anInt1408];
 
 				for (var3 = 0; var3 < anInt1408; ++var3) {
-					anIntArray1402[var3] = var1.method574();
+					anIntArray1402[var3] = var1.readIntt();
 					aStringArray1411[var3] = var1.method608();
 				}
 			} else if (var2 == 6) {
@@ -46,8 +46,8 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 				anIntArray1410 = new int[anInt1408];
 
 				for (var3 = 0; var3 < anInt1408; ++var3) {
-					anIntArray1402[var3] = var1.method574();
-					anIntArray1410[var3] = var1.method574();
+					anIntArray1402[var3] = var1.readIntt();
+					anIntArray1410[var3] = var1.readIntt();
 				}
 			}
 		}

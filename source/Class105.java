@@ -23,7 +23,7 @@ public class Class105 {
 				final int var10 = var8 & 63;
 				final int var11 = (var8 >> 6) & 63;
 				final int var12 = var8 >> 12;
-				final int var13 = var5.method570();
+				final int var13 = var5.readUByte();
 				final int var14 = var13 >> 2;
 				final int var15 = var13 & 3;
 				final int var16 = var1 + var11;

@@ -25,7 +25,7 @@ public class Class19 {
 					var7 += var9 - 1;
 					final int var10 = var7 & 63;
 					final int var11 = (var7 >> 6) & 63;
-					final int var12 = var4.method570() >> 2;
+					final int var12 = var4.readUByte() >> 2;
 					final int var13 = var1 + var11;
 					final int var14 = var10 + var2;
 					if ((var13 > 0) && (var14 > 0) && (var13 < 103) && (var14 < 103)) {
@@ -46,7 +46,7 @@ public class Class19 {
 				if (var9 == 0)
 					break;
 
-				var4.method570();
+				var4.readUByte();
 			}
 		}
 	}

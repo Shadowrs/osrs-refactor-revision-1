@@ -12,7 +12,7 @@ public class Class88 {
 				Class66.aBool527 = !Class66.aBool527;
 				if (!Class66.aBool527) {
 					final Class61_Sub1 var1 = Class27.aClass61_Sub1_264;
-					var2 = var1.method271("scape main");
+					var2 = var1.getArchiveIDForName("scape main");
 					var3 = var1.method273(var2, "");
 					Class87.method400(var1, var2, var3, 255, false);
 				} else
@@ -183,7 +183,7 @@ public class Class88 {
 	}
 
 	public static Class104_Sub18_Sub17_Sub1 method402(final Class61 var0, final String var1, final String var2) {
-		final int var3 = var0.method271(var1);
+		final int var3 = var0.getArchiveIDForName(var1);
 		final int var4 = var0.method273(var3, var2);
 		Class104_Sub18_Sub17_Sub1 var5;
 		if (!Class39.method181(var0, var3, var4))

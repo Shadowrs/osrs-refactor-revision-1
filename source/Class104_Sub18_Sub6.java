@@ -54,7 +54,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 
 	void method740(final RSBuf var1) {
 		while (true) {
-			final int var2 = var1.method570();
+			final int var2 = var1.readUByte();
 			if (var2 == 0)
 				return;
 
@@ -141,7 +141,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		int var3;
 		int var4;
 		if (var2 == 1) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			if (var3 > 0)
 				if ((anIntArray1350 != null) && !aBool1361)
 					var1.pos += var3 * 3;
@@ -151,13 +151,13 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 
 					for (var4 = 0; var4 < var3; ++var4) {
 						anIntArray1350[var4] = var1.readLEShort();
-						anIntArray1359[var4] = var1.method570();
+						anIntArray1359[var4] = var1.readUByte();
 					}
 				}
 		} else if (var2 == 2)
 			aString1331 = var1.method608();
 		else if (var2 == 5) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			if (var3 > 0)
 				if ((anIntArray1350 != null) && !aBool1361)
 					var1.pos += 2 * var3;
@@ -169,16 +169,16 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 						anIntArray1350[var4] = var1.readLEShort();
 				}
 		} else if (var2 == 14)
-			anInt1365 = var1.method570();
+			anInt1365 = var1.readUByte();
 		else if (var2 == 15)
-			anInt1339 = var1.method570();
+			anInt1339 = var1.readUByte();
 		else if (var2 == 17) {
 			anInt1363 = 0;
 			aBool1340 = false;
 		} else if (var2 == 18)
 			aBool1340 = false;
 		else if (var2 == 19)
-			anInt1342 = var1.method570();
+			anInt1342 = var1.readUByte();
 		else if (var2 == 21)
 			anInt1343 = 0;
 		else if (var2 == 22)
@@ -192,7 +192,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		} else if (var2 == 27)
 			anInt1363 = 1;
 		else if (var2 == 28)
-			anInt1348 = var1.method570();
+			anInt1348 = var1.readUByte();
 		else if (var2 == 29)
 			anInt1364 = var1.method565();
 		else if (var2 == 39)
@@ -202,7 +202,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			if (aStringArray1349[var2 - 30].equalsIgnoreCase("Hidden"))
 				aStringArray1349[var2 - 30] = null;
 		} else if (var2 == 40) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			aShortArray1334 = new short[var3];
 			aShortArray1332 = new short[var3];
 
@@ -211,7 +211,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 				aShortArray1332[var4] = (short) var1.readLEShort();
 			}
 		} else if (var2 == 41) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			aShortArray1336 = new short[var3];
 			aShortArray1337 = new short[var3];
 
@@ -234,7 +234,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		else if (var2 == 68)
 			anInt1341 = var1.readLEShort();
 		else if (var2 == 69)
-			anInt1335 = var1.method570();
+			anInt1335 = var1.readUByte();
 		else if (var2 == 70)
 			anInt1325 = var1.method572();
 		else if (var2 == 71)
@@ -246,7 +246,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		else if (var2 == 74)
 			aBool1368 = true;
 		else if (var2 == 75)
-			anInt1358 = var1.method570();
+			anInt1358 = var1.readUByte();
 		else if (var2 == 77) {
 			anInt1352 = var1.readLEShort();
 			if (anInt1352 == '\uffff')
@@ -256,7 +256,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			if (anInt1367 == '\uffff')
 				anInt1367 = -1;
 
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			anIntArray1338 = new int[var3 + 1];
 
 			for (var4 = 0; var4 <= var3; ++var4) {
@@ -266,18 +266,18 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			}
 		} else if (var2 == 78) {
 			anInt1333 = var1.readLEShort();
-			anInt1369 = var1.method570();
+			anInt1369 = var1.readUByte();
 		} else if (var2 == 79) {
 			anInt1370 = var1.readLEShort();
 			anInt1323 = var1.readLEShort();
-			anInt1369 = var1.method570();
-			var3 = var1.method570();
+			anInt1369 = var1.readUByte();
+			var3 = var1.readUByte();
 			anIntArray1372 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
 				anIntArray1372[var4] = var1.readLEShort();
 		} else if (var2 == 81)
-			anInt1343 = var1.method570() * 256;
+			anInt1343 = var1.readUByte() * 256;
 
 	}
 

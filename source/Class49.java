@@ -364,10 +364,10 @@ public class Class49 {
 
 							if (Class48.aClass104_Sub18_Sub13_410 == null) {
 								Class87.aClass104_Sub21_690.pos = 0;
-								var9 = Class87.aClass104_Sub21_690.method570();
+								var9 = Class87.aClass104_Sub21_690.readUByte();
 								var10 = Class87.aClass104_Sub21_690.readLEShort();
-								final int var11 = Class87.aClass104_Sub21_690.method570();
-								var12 = Class87.aClass104_Sub21_690.method574();
+								final int var11 = Class87.aClass104_Sub21_690.readUByte();
+								var12 = Class87.aClass104_Sub21_690.readIntt();
 								final long var13 = var10 + (var9 << 16);
 								Class104_Sub18_Sub13 var15 = (Class104_Sub18_Sub13) Class87.aClass58_683
 										.method241(var13);
@@ -421,8 +421,8 @@ public class Class49 {
 										final Class61_Sub1 var17 = Class87.aClass61_Sub1Array695[var10];
 										if (var17 != null) {
 											Class2.aClass104_Sub21_7.pos = 5 + (var10 * 8);
-											var12 = Class2.aClass104_Sub21_7.method574();
-											final int var18 = Class2.aClass104_Sub21_7.method574();
+											var12 = Class2.aClass104_Sub21_7.readIntt();
+											final int var18 = Class2.aClass104_Sub21_7.readIntt();
 											var17.method492(var12, var18);
 										}
 									}

@@ -14,7 +14,7 @@ public class Class90 {
 	static String[] aStringArray708 = new String[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
 			"Oct", "Nov", "Dec" };
 
-	public static byte[] method407(final Object var0, final boolean var1) {
+	public static byte[] fileToByteArray(final Object var0, final boolean var1) {
 		if (var0 == null)
 			return null;
 		else if (var0 instanceof byte[]) {

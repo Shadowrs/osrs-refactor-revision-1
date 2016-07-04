@@ -37,7 +37,7 @@ public class Class104_Sub18_Sub9 extends Class104_Sub18 {
 
 	void method761(final RSBuf var1) {
 		while (true) {
-			final int var2 = var1.method570();
+			final int var2 = var1.readUByte();
 			if (var2 == 0)
 				return;
 
@@ -75,12 +75,12 @@ public class Class104_Sub18_Sub9 extends Class104_Sub18 {
 
 	void method763(final RSBuf var1, final int var2) {
 		if (var2 == 1)
-			anInt1400 = var1.method570();
+			anInt1400 = var1.readUByte();
 		else {
 			int var3;
 			int var4;
 			if (var2 == 2) {
-				var3 = var1.method570();
+				var3 = var1.readUByte();
 				anIntArray1395 = new int[var3];
 
 				for (var4 = 0; var4 < var3; ++var4)
@@ -88,7 +88,7 @@ public class Class104_Sub18_Sub9 extends Class104_Sub18 {
 			} else if (var2 == 3)
 				aBool1401 = true;
 			else if (var2 == 40) {
-				var3 = var1.method570();
+				var3 = var1.readUByte();
 				aShortArray1396 = new short[var3];
 				aShortArray1397 = new short[var3];
 
@@ -97,7 +97,7 @@ public class Class104_Sub18_Sub9 extends Class104_Sub18 {
 					aShortArray1397[var4] = (short) var1.readLEShort();
 				}
 			} else if (var2 == 41) {
-				var3 = var1.method570();
+				var3 = var1.readUByte();
 				aShortArray1398 = new short[var3];
 				aShortArray1399 = new short[var3];
 

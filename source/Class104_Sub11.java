@@ -62,7 +62,7 @@ public class Class104_Sub11 extends Class104 {
 			var14 = 2;
 
 			for (var15 = 2; var15 < var9; ++var15) {
-				int var16 = var2.method570();
+				int var16 = var2.readUByte();
 				if (var16 == 0)
 					var13 = var14++;
 				else {
@@ -82,20 +82,20 @@ public class Class104_Sub11 extends Class104 {
 		Class81 var18;
 		for (var15 = 0; var15 < var17.length; ++var15) {
 			var18 = var17[var15] = new Class81();
-			int var19 = var2.method570();
+			int var19 = var2.readUByte();
 			if (var19 > 0)
 				var18.aByteArray639 = new byte[var19 * 2];
 
-			var19 = var2.method570();
+			var19 = var2.readUByte();
 			if (var19 > 0) {
 				var18.aByteArray635 = new byte[2 + (2 * var19)];
 				var18.aByteArray635[1] = 64;
 			}
 		}
 
-		var15 = var2.method570();
+		var15 = var2.readUByte();
 		final byte[] var44 = var15 > 0 ? new byte[var15 * 2] : null;
-		var15 = var2.method570();
+		var15 = var2.readUByte();
 		final byte[] var20 = var15 > 0 ? new byte[2 * var15] : null;
 
 		int var21;
@@ -114,14 +114,14 @@ public class Class104_Sub11 extends Class104 {
 
 		int var24;
 		for (var24 = 0; var24 < 128; ++var24) {
-			var23 += var2.method570();
+			var23 += var2.readUByte();
 			aShortArray968[var24] = (short) var23;
 		}
 
 		var23 = 0;
 
 		for (var24 = 0; var24 < 128; ++var24) {
-			var23 += var2.method570();
+			var23 += var2.readUByte();
 			aShortArray968[var24] = (short) (aShortArray968[var24] + (var23 << 8));
 		}
 
@@ -216,14 +216,14 @@ public class Class104_Sub11 extends Class104 {
 					var24 = -1;
 
 				if (anIntArray964[var32] > 0)
-					var31 = var2.method570() + 1;
+					var31 = var2.readUByte() + 1;
 			}
 
 			aByteArray962[var32] = (byte) var31;
 			--var24;
 		}
 
-		anInt961 = var2.method570() + 1;
+		anInt961 = var2.readUByte() + 1;
 
 		Class81 var33;
 		int var34;
@@ -252,7 +252,7 @@ public class Class104_Sub11 extends Class104 {
 				var23 = 0;
 
 				for (var34 = 2; var34 < var33.aByteArray635.length; var34 += 2) {
-					var23 = 1 + var23 + var2.method570();
+					var23 = 1 + var23 + var2.readUByte();
 					var33.aByteArray635[var34] = (byte) var23;
 				}
 			}
@@ -264,7 +264,7 @@ public class Class104_Sub11 extends Class104 {
 				var23 = 0;
 
 				for (var34 = 2; var34 < var33.aByteArray639.length; var34 += 2) {
-					var23 = var23 + 1 + var2.method570();
+					var23 = var23 + 1 + var2.readUByte();
 					var33.aByteArray639[var34] = (byte) var23;
 				}
 			}
@@ -279,11 +279,11 @@ public class Class104_Sub11 extends Class104 {
 		int var47;
 		byte var48;
 		if (null != var44) {
-			var23 = var2.method570();
+			var23 = var2.readUByte();
 			var44[0] = (byte) var23;
 
 			for (var32 = 2; var32 < var44.length; var32 += 2) {
-				var23 = 1 + var23 + var2.method570();
+				var23 = 1 + var23 + var2.readUByte();
 				var44[var32] = (byte) var23;
 			}
 
@@ -317,11 +317,11 @@ public class Class104_Sub11 extends Class104 {
 		}
 
 		if (null != var20) {
-			var23 = var2.method570();
+			var23 = var2.readUByte();
 			var20[0] = (byte) var23;
 
 			for (var32 = 2; var32 < var20.length; var32 += 2) {
-				var23 = var23 + 1 + var2.method570();
+				var23 = var23 + 1 + var2.readUByte();
 				var20[var32] = (byte) var23;
 			}
 
@@ -377,33 +377,33 @@ public class Class104_Sub11 extends Class104 {
 		}
 
 		for (var32 = 0; var32 < var14; ++var32)
-			var17[var32].anInt636 = var2.method570();
+			var17[var32].anInt636 = var2.readUByte();
 
 		for (var32 = 0; var32 < var14; ++var32) {
 			var33 = var17[var32];
 			if (var33.aByteArray639 != null)
-				var33.anInt637 = var2.method570();
+				var33.anInt637 = var2.readUByte();
 
 			if (null != var33.aByteArray635)
-				var33.anInt638 = var2.method570();
+				var33.anInt638 = var2.readUByte();
 
 			if (var33.anInt636 > 0)
-				var33.anInt642 = var2.method570();
+				var33.anInt642 = var2.readUByte();
 		}
 
 		for (var32 = 0; var32 < var14; ++var32)
-			var17[var32].anInt641 = var2.method570();
+			var17[var32].anInt641 = var2.readUByte();
 
 		for (var32 = 0; var32 < var14; ++var32) {
 			var33 = var17[var32];
 			if (var33.anInt641 > 0)
-				var33.anInt640 = var2.method570();
+				var33.anInt640 = var2.readUByte();
 		}
 
 		for (var32 = 0; var32 < var14; ++var32) {
 			var33 = var17[var32];
 			if (var33.anInt640 > 0)
-				var33.anInt634 = var2.method570();
+				var33.anInt634 = var2.readUByte();
 		}
 
 	}

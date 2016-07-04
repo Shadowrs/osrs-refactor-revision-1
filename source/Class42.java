@@ -15,7 +15,7 @@ public class Class42 {
 				var1 = new Class104_Sub18_Sub4();
 				final RSBuf var3 = new RSBuf(var2);
 				var3.pos = var3.aByteArray1174.length - 12;
-				final int var4 = var3.method574();
+				final int var4 = var3.readIntt();
 				var1.anInt1279 = var3.readLEShort();
 				var1.anInt1281 = var3.readLEShort();
 				var1.anInt1282 = var3.readLEShort();
@@ -33,9 +33,9 @@ public class Class42 {
 					if (var6 == 3)
 						var1.aStringArray1280[var5] = var3.method608();
 					else if ((var6 < 100) && (var6 != 21) && (var6 != 38) && (var6 != 39))
-						var1.anIntArray1276[var5] = var3.method574();
+						var1.anIntArray1276[var5] = var3.readIntt();
 					else
-						var1.anIntArray1276[var5] = var3.method570();
+						var1.anIntArray1276[var5] = var3.readUByte();
 				}
 
 				Class104_Sub18_Sub4.aClass56_1278.method238(var1, var0);

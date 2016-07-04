@@ -33,8 +33,8 @@ public class Class83 {
 		int var3;
 		int var5;
 		for (var3 = 0; var3 < var2; aClass104_Sub21_653.pos += var5) {
-			final int var4 = aClass104_Sub21_653.method574();
-			var5 = aClass104_Sub21_653.method574();
+			final int var4 = aClass104_Sub21_653.readIntt();
+			var5 = aClass104_Sub21_653.readIntt();
 			if (var4 == 1297379947) {
 				anIntArray650[var3] = aClass104_Sub21_653.pos;
 				++var3;
@@ -108,7 +108,7 @@ public class Class83 {
 	int method368(final int var1, final int var2) {
 		int var4;
 		if (var2 == 255) {
-			final int var7 = aClass104_Sub21_653.method570();
+			final int var7 = aClass104_Sub21_653.readUByte();
 			var4 = aClass104_Sub21_653.method580();
 			if (var7 == 47) {
 				aClass104_Sub21_653.pos += var4;
@@ -129,10 +129,10 @@ public class Class83 {
 			final byte var3 = aByteArray655[var2 - 128];
 			var4 = var2;
 			if (var3 >= 1)
-				var4 = var2 | (aClass104_Sub21_653.method570() << 8);
+				var4 = var2 | (aClass104_Sub21_653.readUByte() << 8);
 
 			if (var3 >= 2)
-				var4 |= aClass104_Sub21_653.method570() << 16;
+				var4 |= aClass104_Sub21_653.readUByte() << 16;
 
 			return var4;
 		}

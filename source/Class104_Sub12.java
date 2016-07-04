@@ -127,14 +127,14 @@ public class Class104_Sub12 extends Class104 {
 
 	void method527(final RSBuf var1) {
 		aBool977 = false;
-		anInt980 = var1.method570();
-		anInt981 = var1.method570();
+		anInt980 = var1.readUByte();
+		anInt981 = var1.readUByte();
 		anInt982 = var1.readLEShort();
 		anInt985 = anInt983 = var1.method572();
 		anInt975 = anInt1005 = var1.method572();
 		anInt987 = var1.readLEShort();
 		anInt988 = var1.readLEShort();
-		anInt1000 = var1.method570();
+		anInt1000 = var1.readUByte();
 		anInt1091 = var1.readLEShort();
 		if (anInt1091 == '\uffff')
 			anInt1091 = -1;
@@ -145,19 +145,19 @@ public class Class104_Sub12 extends Class104 {
 		if (anInt1077 == '\uffff')
 			anInt1077 = -1;
 
-		final int var2 = var1.method570();
+		final int var2 = var1.readUByte();
 		int var3;
 		if (var2 > 0) {
 			anIntArray984 = new int[var2];
 			anIntArray1076 = new int[var2];
 
 			for (var3 = 0; var3 < var2; ++var3) {
-				anIntArray984[var3] = var1.method570();
+				anIntArray984[var3] = var1.readUByte();
 				anIntArray1076[var3] = var1.readLEShort();
 			}
 		}
 
-		var3 = var1.method570();
+		var3 = var1.readUByte();
 		int var4;
 		int var5;
 		int var6;
@@ -178,46 +178,46 @@ public class Class104_Sub12 extends Class104 {
 
 		if (anInt980 == 0) {
 			anInt994 = var1.readLEShort();
-			aBool1075 = var1.method570() == 1;
+			aBool1075 = var1.readUByte() == 1;
 		}
 
 		if (anInt980 == 1) {
 			var1.readLEShort();
-			var1.method570();
+			var1.readUByte();
 		}
 
 		if (anInt980 == 2) {
 			anIntArray1080 = new int[anInt987 * anInt988];
 			anIntArray1081 = new int[anInt988 * anInt987];
-			var4 = var1.method570();
+			var4 = var1.readUByte();
 			if (var4 == 1)
 				anInt1037 |= 268435456;
 
-			var5 = var1.method570();
+			var5 = var1.readUByte();
 			if (var5 == 1)
 				anInt1037 |= 1073741824;
 
-			var6 = var1.method570();
+			var6 = var1.readUByte();
 			if (var6 == 1)
 				anInt1037 |= Integer.MIN_VALUE;
 
-			final int var7 = var1.method570();
+			final int var7 = var1.readUByte();
 			if (var7 == 1)
 				anInt1037 |= 536870912;
 
-			anInt1038 = var1.method570();
-			anInt1032 = var1.method570();
+			anInt1038 = var1.readUByte();
+			anInt1032 = var1.readUByte();
 			anIntArray1049 = new int[20];
 			anIntArray1057 = new int[20];
 			anIntArray1035 = new int[20];
 
 			int var8;
 			for (var8 = 0; var8 < 20; ++var8) {
-				final int var9 = var1.method570();
+				final int var9 = var1.readUByte();
 				if (var9 == 1) {
 					anIntArray1049[var8] = var1.method572();
 					anIntArray1057[var8] = var1.method572();
-					anIntArray1035[var8] = var1.method574();
+					anIntArray1035[var8] = var1.readIntt();
 				} else
 					anIntArray1035[var8] = -1;
 			}
@@ -234,17 +234,17 @@ public class Class104_Sub12 extends Class104 {
 		}
 
 		if (anInt980 == 3)
-			aBool1088 = var1.method570() == 1;
+			aBool1088 = var1.readUByte() == 1;
 
 		if ((anInt980 == 4) || (anInt980 == 1)) {
-			anInt1059 = var1.method570();
-			anInt1029 = var1.method570();
-			anInt1027 = var1.method570();
+			anInt1059 = var1.readUByte();
+			anInt1029 = var1.readUByte();
+			anInt1027 = var1.readUByte();
 			anInt1024 = var1.readLEShort();
 			if (anInt1024 == '\uffff')
 				anInt1024 = -1;
 
-			aBool1030 = var1.method570() == 1;
+			aBool1030 = var1.readUByte() == 1;
 		}
 
 		if (anInt980 == 4) {
@@ -253,17 +253,17 @@ public class Class104_Sub12 extends Class104 {
 		}
 
 		if ((anInt980 == 1) || (anInt980 == 3) || (anInt980 == 4))
-			anInt1017 = var1.method574();
+			anInt1017 = var1.readIntt();
 
 		if ((anInt980 == 3) || (anInt980 == 4)) {
-			anInt996 = var1.method574();
-			anInt997 = var1.method574();
-			anInt998 = var1.method574();
+			anInt996 = var1.readIntt();
+			anInt997 = var1.readIntt();
+			anInt998 = var1.readIntt();
 		}
 
 		if (anInt980 == 5) {
-			anInt1002 = var1.method574();
-			anInt1003 = var1.method574();
+			anInt1002 = var1.readIntt();
+			anInt1003 = var1.readIntt();
 		}
 
 		if (anInt980 == 6) {
@@ -293,16 +293,16 @@ public class Class104_Sub12 extends Class104 {
 		if (anInt980 == 7) {
 			anIntArray1080 = new int[anInt988 * anInt987];
 			anIntArray1081 = new int[anInt987 * anInt988];
-			anInt1059 = var1.method570();
+			anInt1059 = var1.readUByte();
 			anInt1024 = var1.readLEShort();
 			if (anInt1024 == '\uffff')
 				anInt1024 = -1;
 
-			aBool1030 = var1.method570() == 1;
-			anInt1017 = var1.method574();
+			aBool1030 = var1.readUByte() == 1;
+			anInt1017 = var1.readIntt();
 			anInt1038 = var1.method572();
 			anInt1032 = var1.method572();
-			var4 = var1.method570();
+			var4 = var1.readUByte();
 			if (var4 == 1)
 				anInt1037 |= 1073741824;
 
@@ -353,9 +353,9 @@ public class Class104_Sub12 extends Class104 {
 	}
 
 	void method528(final RSBuf var1) {
-		var1.method570();
+		var1.readUByte();
 		aBool977 = true;
-		anInt980 = var1.method570();
+		anInt980 = var1.readUByte();
 		anInt982 = var1.readLEShort();
 		anInt985 = anInt983 = var1.method572();
 		anInt975 = anInt1005 = var1.method572();
@@ -371,21 +371,21 @@ public class Class104_Sub12 extends Class104 {
 		else
 			anInt1091 += anInt978 & -65536;
 
-		aBool1075 = var1.method570() == 1;
+		aBool1075 = var1.readUByte() == 1;
 		if (anInt980 == 0) {
 			anInt1079 = var1.readLEShort();
 			anInt994 = var1.readLEShort();
 		}
 
 		if (anInt980 == 5) {
-			anInt1002 = var1.method574();
+			anInt1002 = var1.readIntt();
 			anInt979 = var1.readLEShort();
-			aBool989 = var1.method570() == 1;
-			anInt1000 = var1.method570();
-			anInt1006 = var1.method570();
-			anInt1007 = var1.method574();
-			aBool1044 = var1.method570() == 1;
-			aBool1009 = var1.method570() == 1;
+			aBool989 = var1.readUByte() == 1;
+			anInt1000 = var1.readUByte();
+			anInt1006 = var1.readUByte();
+			anInt1007 = var1.readIntt();
+			aBool1044 = var1.readUByte() == 1;
+			aBool1009 = var1.readUByte() == 1;
 		}
 
 		if (anInt980 == 6) {
@@ -404,7 +404,7 @@ public class Class104_Sub12 extends Class104 {
 			if (anInt1058 == '\uffff')
 				anInt1058 = -1;
 
-			aBool1023 = var1.method570() == 1;
+			aBool1023 = var1.readUByte() == 1;
 		}
 
 		if (anInt980 == 4) {
@@ -413,27 +413,27 @@ public class Class104_Sub12 extends Class104 {
 				anInt1024 = -1;
 
 			aString1025 = var1.method608();
-			anInt1027 = var1.method570();
-			anInt1059 = var1.method570();
-			anInt1029 = var1.method570();
-			aBool1030 = var1.method570() == 1;
-			anInt1017 = var1.method574();
+			anInt1027 = var1.readUByte();
+			anInt1059 = var1.readUByte();
+			anInt1029 = var1.readUByte();
+			aBool1030 = var1.readUByte() == 1;
+			anInt1017 = var1.readIntt();
 		}
 
 		if (anInt980 == 3) {
-			anInt1017 = var1.method574();
-			aBool1088 = var1.method570() == 1;
-			anInt1000 = var1.method570();
+			anInt1017 = var1.readIntt();
+			aBool1088 = var1.readUByte() == 1;
+			anInt1000 = var1.readUByte();
 		}
 
 		if (anInt980 == 9) {
-			anInt999 = var1.method570();
-			anInt1017 = var1.method574();
+			anInt999 = var1.readUByte();
+			anInt1017 = var1.readIntt();
 		}
 
 		anInt1037 = var1.method614();
 		aString990 = var1.method608();
-		final int var2 = var1.method570();
+		final int var2 = var1.readUByte();
 		if (var2 > 0) {
 			aStringArray1039 = new String[var2];
 
@@ -441,9 +441,9 @@ public class Class104_Sub12 extends Class104 {
 				aStringArray1039[var3] = var1.method608();
 		}
 
-		anInt1041 = var1.method570();
-		anInt1082 = var1.method570();
-		aBool1053 = var1.method570() == 1;
+		anInt1041 = var1.readUByte();
+		anInt1082 = var1.readUByte();
+		aBool1053 = var1.readUByte() == 1;
 		aString1036 = var1.method608();
 		anObjectArray970 = method534(var1);
 		anObjectArray1051 = method534(var1);
@@ -469,14 +469,14 @@ public class Class104_Sub12 extends Class104 {
 	}
 
 	int[] method529(final RSBuf var1) {
-		final int var2 = var1.method570();
+		final int var2 = var1.readUByte();
 		if (var2 == 0)
 			return null;
 		else {
 			final int[] var3 = new int[var2];
 
 			for (int var4 = 0; var4 < var2; ++var4)
-				var3[var4] = var1.method574();
+				var3[var4] = var1.readIntt();
 
 			return var3;
 		}
@@ -618,16 +618,16 @@ public class Class104_Sub12 extends Class104 {
 	}
 
 	Object[] method534(final RSBuf var1) {
-		final int var2 = var1.method570();
+		final int var2 = var1.readUByte();
 		if (var2 == 0)
 			return null;
 		else {
 			final Object[] var3 = new Object[var2];
 
 			for (int var4 = 0; var4 < var2; ++var4) {
-				final int var5 = var1.method570();
+				final int var5 = var1.readUByte();
 				if (var5 == 0)
-					var3[var4] = new Integer(var1.method574());
+					var3[var4] = new Integer(var1.readIntt());
 				else if (var5 == 1)
 					var3[var4] = var1.method608();
 			}

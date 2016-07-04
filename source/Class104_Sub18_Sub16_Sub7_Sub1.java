@@ -92,7 +92,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 
 	final void method950(final RSBuf var1) {
 		var1.pos = 0;
-		final int var2 = var1.method570();
+		final int var2 = var1.readUByte();
 		anInt1771 = var1.method565();
 		anInt1784 = var1.method565();
 		int var3 = -1;
@@ -102,11 +102,11 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 		int var6;
 		int var7;
 		for (int var5 = 0; var5 < 12; ++var5) {
-			var6 = var1.method570();
+			var6 = var1.readUByte();
 			if (var6 == 0)
 				var4[var5] = 0;
 			else {
-				var7 = var1.method570();
+				var7 = var1.readUByte();
 				var4[var5] = var7 + (var6 << 8);
 				if ((var5 == 0) && (var4[0] == '\uffff')) {
 					var3 = var1.readLEShort();
@@ -124,7 +124,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 		final int[] var9 = new int[5];
 
 		for (var6 = 0; var6 < 5; ++var6) {
-			var7 = var1.method570();
+			var7 = var1.readUByte();
 			if ((var7 < 0) || (var7 >= Class47.aShortArrayArray405[var6].length))
 				var7 = 0;
 
@@ -164,7 +164,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 		if (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644 == this)
 			RuntimeException_Sub1.aString1478 = aString1780;
 
-		anInt1773 = var1.method570();
+		anInt1773 = var1.readUByte();
 		anInt1774 = var1.readLEShort();
 		if (aClass85_1770 == null)
 			aClass85_1770 = new Class85();

@@ -82,7 +82,7 @@ public class RSBuf extends Class104 {
 		writebyte(var1 & 127);
 	}
 
-	public int method570() {
+	public int readUByte() {
 		return aByteArray1174[++pos - 1] & 255;
 	}
 
@@ -106,15 +106,15 @@ public class RSBuf extends Class104 {
 				+ ((aByteArray1174[pos - 1] & 255) << 8) + (aByteArray1174[pos - 2] & 255);
 	}
 
-	public int method574() {
+	public int readIntt() {
 		pos += 4;
 		return ((aByteArray1174[pos - 2] & 255) << 8) + ((aByteArray1174[pos - 3] & 255) << 16)
 				+ ((aByteArray1174[pos - 4] & 255) << 24) + (aByteArray1174[pos - 1] & 255);
 	}
 
-	public long method575() {
-		final long var1 = method574() & 4294967295L;
-		final long var3 = method574() & 4294967295L;
+	public long readLong() {
+		final long var1 = readIntt() & 4294967295L;
+		final long var3 = readIntt() & 4294967295L;
 		return (var1 << 32) + var3;
 	}
 
@@ -122,7 +122,7 @@ public class RSBuf extends Class104 {
 		return (aByteArray1174[++pos - 1] - 128) & 255;
 	}
 
-	public void method577(final byte[] var1, final int var2, final int var3) {
+	public void readBytes(final byte[] var1, final int var2, final int var3) {
 		for (int var4 = var2; var4 < (var3 + var2); ++var4)
 			var1[var4] = aByteArray1174[++pos - 1];
 
@@ -130,11 +130,11 @@ public class RSBuf extends Class104 {
 
 	public int method578() {
 		final int var1 = aByteArray1174[pos] & 255;
-		return var1 < 128 ? method570() - 64 : readLEShort() - '\uc000';
+		return var1 < 128 ? readUByte() - 64 : readLEShort() - '\uc000';
 	}
 
 	public int method579() {
-		return aByteArray1174[pos] < 0 ? method574() & Integer.MAX_VALUE : readLEShort();
+		return aByteArray1174[pos] < 0 ? readIntt() & Integer.MAX_VALUE : readLEShort();
 	}
 
 	public int method580() {
@@ -212,7 +212,7 @@ public class RSBuf extends Class104 {
 		final int var3 = pos;
 		pos = 0;
 		final byte[] var4 = new byte[var3];
-		method577(var4, 0, var3);
+		readBytes(var4, 0, var3);
 		final BigInteger var5 = new BigInteger(var4);
 		final BigInteger var6 = var5; // .modPow(var1, var2); // uncommented disabled rsa being applied
 		final byte[] var7 = var6.toByteArray();
@@ -316,7 +316,7 @@ public class RSBuf extends Class104 {
 
 	public int method599() {
 		final int var1 = aByteArray1174[pos] & 255;
-		return var1 < 128 ? method570() : readLEShort() - '\u8000';
+		return var1 < 128 ? readUByte() : readLEShort() - '\u8000';
 	}
 
 	public void method600(final int var1) {
@@ -358,7 +358,7 @@ public class RSBuf extends Class104 {
 			var3 = (var3 >>> 8) ^ anIntArray1173[(var3 ^ var1[var4]) & 255];
 
 		var3 = ~var3;
-		var4 = method574();
+		var4 = readIntt();
 		return var4 == var3;
 	}
 
@@ -381,8 +381,8 @@ public class RSBuf extends Class104 {
 		final int var5 = (var3 - var2) / 8;
 
 		for (int var6 = 0; var6 < var5; ++var6) {
-			int var7 = method574();
-			int var8 = method574();
+			int var7 = readIntt();
+			int var8 = readIntt();
 			int var9 = -957401312;
 			final int var10 = -1640531527;
 
@@ -489,8 +489,8 @@ public class RSBuf extends Class104 {
 		final int var5 = (var3 - var2) / 8;
 
 		for (int var6 = 0; var6 < var5; ++var6) {
-			int var7 = method574();
-			int var8 = method574();
+			int var7 = readIntt();
+			int var8 = readIntt();
 			int var9 = 0;
 			final int var10 = -1640531527;
 

@@ -36,16 +36,16 @@ public class Class104_Sub5 extends Class104 {
 
 	void method498(final byte[] var1) {
 		final RSBuf var2 = new RSBuf(var1);
-		anInt902 = var2.method574();
-		anInt924 = var2.method574();
-		anInt930 = var2.method574();
-		anInt931 = var2.method574();
+		anInt902 = var2.readIntt();
+		anInt924 = var2.readIntt();
+		anInt930 = var2.readIntt();
+		anInt931 = var2.readIntt();
 		if (anInt931 < 0) {
 			anInt931 = ~anInt931;
 			aBool906 = true;
 		}
 
-		final int var3 = var2.method574();
+		final int var3 = var2.readIntt();
 		aByteArrayArray928 = new byte[var3][];
 
 		for (int var4 = 0; var4 < var3; ++var4) {
@@ -53,12 +53,12 @@ public class Class104_Sub5 extends Class104 {
 
 			int var6;
 			do {
-				var6 = var2.method570();
+				var6 = var2.readUByte();
 				var5 += var6;
 			} while (var6 >= 255);
 
 			final byte[] var7 = new byte[var5];
-			var2.method577(var7, 0, var5);
+			var2.readBytes(var7, 0, var5);
 			aByteArrayArray928[var4] = var7;
 		}
 

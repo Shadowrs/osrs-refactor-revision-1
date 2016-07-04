@@ -12,11 +12,11 @@ public class Class7 {
 		for (int var0 = 0; var0 < client.anInt1910; ++var0) {
 			final int var1 = client.anIntArray1911[var0];
 			final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var1];
-			final int var3 = client.gamecon.method570();
+			final int var3 = client.gamecon.readUByte();
 			int var4;
 			int var5;
 			if ((var3 & 128) != 0) {
-				var4 = client.gamecon.method570();
+				var4 = client.gamecon.readUByte();
 				var5 = client.gamecon.readByteN();
 				var2.method935(var4, var5, client.anInt1799);
 				var2.anInt1714 = 300 + client.anInt1799;
@@ -37,7 +37,7 @@ public class Class7 {
 
 			if ((var3 & 1) != 0) {
 				var2.anInt1727 = client.gamecon.readShort();
-				var4 = client.gamecon.method574();
+				var4 = client.gamecon.readIntt();
 				var2.anInt1709 = var4 >> 16;
 				var2.anInt1730 = (var4 & '\uffff') + client.anInt1799;
 				var2.anInt1728 = 0;
@@ -129,7 +129,7 @@ public class Class7 {
 				final int var15 = var13 & 63;
 				final int var16 = (var13 >> 6) & 63;
 				final int var17 = var13 >> 12;
-				final int var18 = var10.method570();
+				final int var18 = var10.readUByte();
 				final int var19 = var18 >> 2;
 				final int var20 = var18 & 3;
 				if ((var4 == var17) && (var16 >= var5) && (var16 < (8 + var5)) && (var15 >= var6)

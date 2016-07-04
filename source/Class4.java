@@ -72,13 +72,13 @@ public class Class4 {
 	}
 
 	final void method31(final RSBuf var1, final Class74 var2) {
-		final int var3 = var1.method570();
+		final int var3 = var1.readUByte();
 		anIntArray11[0] = var3 >> 4;
 		anIntArray11[1] = var3 & 15;
 		if (var3 != 0) {
 			anIntArray13[0] = var1.readLEShort();
 			anIntArray13[1] = var1.readLEShort();
-			final int var4 = var1.method570();
+			final int var4 = var1.readUByte();
 
 			int var5;
 			int var6;

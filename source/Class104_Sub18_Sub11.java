@@ -4,7 +4,7 @@ public class Class104_Sub18_Sub11 extends Class104_Sub18 {
 
 	void method767(final RSBuf var1) {
 		while (true) {
-			final int var2 = var1.method570();
+			final int var2 = var1.readUByte();
 			if (var2 == 0)
 				return;
 

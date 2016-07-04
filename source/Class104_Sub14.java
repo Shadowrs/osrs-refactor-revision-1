@@ -4,7 +4,7 @@ public class Class104_Sub14 extends Class104 {
 
 	Class104_Sub14(final RSBuf var1) {
 		var1.pos = var1.aByteArray1174.length - 3;
-		final int var2 = var1.method570();
+		final int var2 = var1.readUByte();
 		final int var3 = var1.readLEShort();
 		int var4 = 14 + (var2 * 10);
 		var1.pos = 0;
@@ -24,7 +24,7 @@ public class Class104_Sub14 extends Class104 {
 			var14 = -1;
 
 			while (true) {
-				var15 = var1.method570();
+				var15 = var1.readUByte();
 				if (var15 != var14)
 					++var4;
 
@@ -82,7 +82,7 @@ public class Class104_Sub14 extends Class104 {
 
 		int var29;
 		for (var29 = 0; var29 < var6; ++var29) {
-			var28 = (var28 + var1.method570()) & 127;
+			var28 = (var28 + var1.readUByte()) & 127;
 			if ((var28 != 0) && (var28 != 32)) {
 				if (var28 == 1)
 					++var16;

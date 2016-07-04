@@ -164,8 +164,8 @@ public class Class104_Sub19 extends Class104 {
 
 	Class104_Sub19(final RSBuf var1) {
 		anInt1139 = var1.readLEShort();
-		aBool1138 = var1.method570() == 1;
-		final int var2 = var1.method570();
+		aBool1138 = var1.readUByte() == 1;
+		final int var2 = var1.readUByte();
 		if ((var2 >= 1) && (var2 <= 4)) {
 			anIntArray1147 = new int[var2];
 
@@ -177,23 +177,23 @@ public class Class104_Sub19 extends Class104 {
 				anIntArray1140 = new int[var2 - 1];
 
 				for (var3 = 0; var3 < (var2 - 1); ++var3)
-					anIntArray1140[var3] = var1.method570();
+					anIntArray1140[var3] = var1.readUByte();
 			}
 
 			if (var2 > 1) {
 				anIntArray1142 = new int[var2 - 1];
 
 				for (var3 = 0; var3 < (var2 - 1); ++var3)
-					anIntArray1142[var3] = var1.method570();
+					anIntArray1142[var3] = var1.readUByte();
 			}
 
 			anIntArray1143 = new int[var2];
 
 			for (var3 = 0; var3 < var2; ++var3)
-				anIntArray1143[var3] = var1.method574();
+				anIntArray1143[var3] = var1.readIntt();
 
-			anInt1144 = var1.method570();
-			anInt1137 = var1.method570();
+			anInt1144 = var1.readUByte();
+			anInt1137 = var1.readUByte();
 			anIntArray1146 = null;
 		} else
 			throw new RuntimeException();

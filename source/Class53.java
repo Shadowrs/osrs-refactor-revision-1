@@ -97,7 +97,7 @@ public class Class53 {
 		var1.pos = var0.length - 7 - (Class12.anInt67 * 8);
 		Class12.anInt72 = var1.readLEShort();
 		Class12.anInt69 = var1.readLEShort();
-		final int var2 = (var1.method570() & 255) + 1;
+		final int var2 = (var1.readUByte() & 255) + 1;
 
 		int var3;
 		for (var3 = 0; var3 < Class12.anInt67; ++var3)
@@ -129,7 +129,7 @@ public class Class53 {
 			final int var6 = var5 * var4;
 			final byte[] var7 = new byte[var6];
 			Class41.aByteArrayArray368[var3] = var7;
-			final int var8 = var1.method570();
+			final int var8 = var1.readUByte();
 			int var9;
 			if (var8 == 0)
 				for (var9 = 0; var9 < var6; ++var9)

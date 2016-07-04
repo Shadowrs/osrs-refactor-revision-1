@@ -19,7 +19,7 @@ public class Class104_Sub18_Sub3 extends Class104_Sub18 {
 
 	void method681(final RSBuf var1) {
 		while (true) {
-			final int var2 = var1.method570();
+			final int var2 = var1.readUByte();
 			if (var2 == 0)
 				return;
 
@@ -47,31 +47,31 @@ public class Class104_Sub18_Sub3 extends Class104_Sub18 {
 		} else if (var2 == 2)
 			anInt1266 = var1.readLEShort();
 		else if (var2 == 3) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			anIntArray1267 = new int[var3 + 1];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1267[var4] = var1.method570();
+				anIntArray1267[var4] = var1.readUByte();
 
 			anIntArray1267[var3] = 9999999;
 		} else if (var2 == 4)
 			aBool1272 = true;
 		else if (var2 == 5)
-			anInt1269 = var1.method570();
+			anInt1269 = var1.readUByte();
 		else if (var2 == 6)
 			anInt1270 = var1.readLEShort();
 		else if (var2 == 7)
 			anInt1271 = var1.readLEShort();
 		else if (var2 == 8)
-			anInt1261 = var1.method570();
+			anInt1261 = var1.readUByte();
 		else if (var2 == 9)
-			anInt1273 = var1.method570();
+			anInt1273 = var1.readUByte();
 		else if (var2 == 10)
-			anInt1274 = var1.method570();
+			anInt1274 = var1.readUByte();
 		else if (var2 == 11)
-			anInt1275 = var1.method570();
+			anInt1275 = var1.readUByte();
 		else if (var2 == 12) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			anIntArray1263 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
@@ -80,7 +80,7 @@ public class Class104_Sub18_Sub3 extends Class104_Sub18 {
 			for (var4 = 0; var4 < var3; ++var4)
 				anIntArray1263[var4] += var1.readLEShort() << 16;
 		} else if (var2 == 13) {
-			var3 = var1.method570();
+			var3 = var1.readUByte();
 			anIntArray1265 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)

@@ -32,7 +32,7 @@ public class Class92 {
 		aClass74_729.method337(var1);
 		aClass74_718 = new Class74();
 		aClass74_718.method337(var1);
-		int var2 = var1.method570();
+		int var2 = var1.readUByte();
 		if (var2 != 0) {
 			--var1.pos;
 			aClass74_725 = new Class74();
@@ -41,7 +41,7 @@ public class Class92 {
 			aClass74_720.method337(var1);
 		}
 
-		var2 = var1.method570();
+		var2 = var1.readUByte();
 		if (var2 != 0) {
 			--var1.pos;
 			aClass74_721 = new Class74();
@@ -50,7 +50,7 @@ public class Class92 {
 			aClass74_722.method337(var1);
 		}
 
-		var2 = var1.method570();
+		var2 = var1.readUByte();
 		if (var2 != 0) {
 			--var1.pos;
 			aClass74_735 = new Class74();

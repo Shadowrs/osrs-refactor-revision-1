@@ -55,7 +55,7 @@ public abstract class Class47 {
 
 	public static Class104_Sub18_Sub17_Sub2_Sub1 method214(final Class61 var0, final Class61 var1, final String var2,
 			final String var3) {
-		final int var4 = var0.method271(var2);
+		final int var4 = var0.getArchiveIDForName(var2);
 		final int var5 = var0.method273(var4, var3);
 		Class104_Sub18_Sub17_Sub2_Sub1 var6;
 		if (!Class39.method181(var0, var4, var5))

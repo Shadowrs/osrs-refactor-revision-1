@@ -10,20 +10,20 @@ public class Class104_Sub23 extends Class104 {
 	Class104_Sub23(final int var1, final byte[] var2) {
 		anInt1180 = var1;
 		final RSBuf var3 = new RSBuf(var2);
-		anInt1178 = var3.method570();
+		anInt1178 = var3.readUByte();
 		anIntArray1179 = new int[anInt1178];
 		anIntArrayArray1177 = new int[anInt1178][];
 
 		int var4;
 		for (var4 = 0; var4 < anInt1178; ++var4)
-			anIntArray1179[var4] = var3.method570();
+			anIntArray1179[var4] = var3.readUByte();
 
 		for (var4 = 0; var4 < anInt1178; ++var4)
-			anIntArrayArray1177[var4] = new int[var3.method570()];
+			anIntArrayArray1177[var4] = new int[var3.readUByte()];
 
 		for (var4 = 0; var4 < anInt1178; ++var4)
 			for (int var5 = 0; var5 < anIntArrayArray1177[var4].length; ++var5)
-				anIntArrayArray1177[var4][var5] = var3.method570();
+				anIntArrayArray1177[var4][var5] = var3.readUByte();
 
 	}
 
