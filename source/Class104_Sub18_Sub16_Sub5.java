@@ -1124,7 +1124,7 @@ public class Class104_Sub18_Sub16_Sub5 extends Class104_Sub18_Sub16 {
 			var2.readLEShort();
 			var2.readLEShort();
 			var2.readLEShort();
-			var2.readIntt();
+			var2.readLEInt();
 		}
 
 	}

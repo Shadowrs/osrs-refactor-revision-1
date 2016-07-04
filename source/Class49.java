@@ -309,7 +309,7 @@ public class Class49 {
 						var4 = new RSBuf(4);
 						var4.writebyte(1);
 						var4.method587((int) var3.aLong824);
-						Class66.aClass13_547.flushbytes(var4.aByteArray1174, 0, 4);
+						Class66.aClass13_547.flushbytes(var4.backing, 0, 4);
 						Class87.aClass58_683.method242(var3, var3.aLong824);
 						--Class87.anInt682;
 						++Class87.anInt684;
@@ -320,7 +320,7 @@ public class Class49 {
 						var4 = new RSBuf(4);
 						var4.writebyte(0);
 						var4.method587((int) var3.aLong824);
-						Class66.aClass13_547.flushbytes(var4.aByteArray1174, 0, 4);
+						Class66.aClass13_547.flushbytes(var4.backing, 0, 4);
 						var3.method555();
 						Class87.aClass58_694.method242(var3, var3.aLong824);
 						--Class87.anInt687;
@@ -351,11 +351,11 @@ public class Class49 {
 							if (var8 > var6)
 								var8 = var6;
 
-							Class66.aClass13_547.readbytes(Class87.aClass104_Sub21_690.aByteArray1174,
+							Class66.aClass13_547.readbytes(Class87.aClass104_Sub21_690.backing,
 									Class87.aClass104_Sub21_690.pos, var8);
 							if (Class87.aByte697 != 0)
 								for (var9 = 0; var9 < var8; ++var9)
-									Class87.aClass104_Sub21_690.aByteArray1174[var9
+									Class87.aClass104_Sub21_690.backing[var9
 											+ Class87.aClass104_Sub21_690.pos] ^= Class87.aByte697;
 
 							Class87.aClass104_Sub21_690.pos += var8;
@@ -367,7 +367,7 @@ public class Class49 {
 								var9 = Class87.aClass104_Sub21_690.readUByte();
 								var10 = Class87.aClass104_Sub21_690.readLEShort();
 								final int var11 = Class87.aClass104_Sub21_690.readUByte();
-								var12 = Class87.aClass104_Sub21_690.readIntt();
+								var12 = Class87.aClass104_Sub21_690.readLEInt();
 								final long var13 = var10 + (var9 << 16);
 								Class104_Sub18_Sub13 var15 = (Class104_Sub18_Sub13) Class87.aClass58_683
 										.method241(var13);
@@ -389,13 +389,13 @@ public class Class49 {
 								Class87.anInt696 = 8;
 								Class87.aClass104_Sub21_690.pos = 0;
 							} else if (Class87.anInt696 == 0)
-								if (Class87.aClass104_Sub21_690.aByteArray1174[0] == -1) {
+								if (Class87.aClass104_Sub21_690.backing[0] == -1) {
 									Class87.anInt696 = 1;
 									Class87.aClass104_Sub21_690.pos = 0;
 								} else
 									Class48.aClass104_Sub18_Sub13_410 = null;
 						} else {
-							var8 = Class87.aClass104_Sub21_691.aByteArray1174.length
+							var8 = Class87.aClass104_Sub21_691.backing.length
 									- Class48.aClass104_Sub18_Sub13_410.aByte1459;
 							var9 = 512 - Class87.anInt696;
 							if (var9 > (var8 - Class87.aClass104_Sub21_691.pos))
@@ -404,11 +404,11 @@ public class Class49 {
 							if (var9 > var6)
 								var9 = var6;
 
-							Class66.aClass13_547.readbytes(Class87.aClass104_Sub21_691.aByteArray1174,
+							Class66.aClass13_547.readbytes(Class87.aClass104_Sub21_691.backing,
 									Class87.aClass104_Sub21_691.pos, var9);
 							if (Class87.aByte697 != 0)
 								for (var10 = 0; var10 < var9; ++var10)
-									Class87.aClass104_Sub21_691.aByteArray1174[var10
+									Class87.aClass104_Sub21_691.backing[var10
 											+ Class87.aClass104_Sub21_691.pos] ^= Class87.aByte697;
 
 							Class87.aClass104_Sub21_691.pos += var9;
@@ -421,14 +421,14 @@ public class Class49 {
 										final Class61_Sub1 var17 = Class87.aClass61_Sub1Array695[var10];
 										if (var17 != null) {
 											Class2.aClass104_Sub21_7.pos = 5 + (var10 * 8);
-											var12 = Class2.aClass104_Sub21_7.readIntt();
-											final int var18 = Class2.aClass104_Sub21_7.readIntt();
+											var12 = Class2.aClass104_Sub21_7.readLEInt();
+											final int var18 = Class2.aClass104_Sub21_7.readLEInt();
 											var17.method492(var12, var18);
 										}
 									}
 								} else {
 									Class87.aCRC32_680.reset();
-									Class87.aCRC32_680.update(Class87.aClass104_Sub21_691.aByteArray1174, 0, var8);
+									Class87.aCRC32_680.update(Class87.aClass104_Sub21_691.backing, 0, var8);
 									var10 = (int) Class87.aCRC32_680.getValue();
 									if (var10 != Class48.aClass104_Sub18_Sub13_410.anInt1460) {
 										try {
@@ -447,7 +447,7 @@ public class Class49 {
 									Class87.anInt698 = 0;
 									Class48.aClass104_Sub18_Sub13_410.aClass61_Sub1_1461.method487(
 											(int) (Class48.aClass104_Sub18_Sub13_410.aLong824 & 65535L),
-											Class87.aClass104_Sub21_691.aByteArray1174,
+											Class87.aClass104_Sub21_691.backing,
 											16711680L == (Class48.aClass104_Sub18_Sub13_410.aLong824 & 16711680L),
 											Class87.aBool689);
 								}

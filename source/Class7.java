@@ -37,7 +37,7 @@ public class Class7 {
 
 			if ((var3 & 1) != 0) {
 				var2.anInt1727 = client.gamecon.readShort();
-				var4 = client.gamecon.readIntt();
+				var4 = client.gamecon.readLEInt();
 				var2.anInt1709 = var4 >> 16;
 				var2.anInt1730 = (var4 & '\uffff') + client.anInt1799;
 				var2.anInt1728 = 0;

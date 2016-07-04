@@ -18,7 +18,7 @@ public class Class50 {
 				var1 = 32767;
 
 			final byte[] var2 = new byte[var1];
-			var0.pos += Class106.aClass49_826.method218(var0.aByteArray1174, var0.pos, var2, 0, var1);
+			var0.pos += Class106.aClass49_826.method218(var0.backing, var0.pos, var2, 0, var1);
 			final String var3 = Class104_Sub18_Sub6.method751(var2, 0, var1);
 			var4 = var3;
 		} catch (final Exception var6) {

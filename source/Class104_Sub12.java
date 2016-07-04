@@ -217,7 +217,7 @@ public class Class104_Sub12 extends Class104 {
 				if (var9 == 1) {
 					anIntArray1049[var8] = var1.method572();
 					anIntArray1057[var8] = var1.method572();
-					anIntArray1035[var8] = var1.readIntt();
+					anIntArray1035[var8] = var1.readLEInt();
 				} else
 					anIntArray1035[var8] = -1;
 			}
@@ -253,17 +253,17 @@ public class Class104_Sub12 extends Class104 {
 		}
 
 		if ((anInt980 == 1) || (anInt980 == 3) || (anInt980 == 4))
-			anInt1017 = var1.readIntt();
+			anInt1017 = var1.readLEInt();
 
 		if ((anInt980 == 3) || (anInt980 == 4)) {
-			anInt996 = var1.readIntt();
-			anInt997 = var1.readIntt();
-			anInt998 = var1.readIntt();
+			anInt996 = var1.readLEInt();
+			anInt997 = var1.readLEInt();
+			anInt998 = var1.readLEInt();
 		}
 
 		if (anInt980 == 5) {
-			anInt1002 = var1.readIntt();
-			anInt1003 = var1.readIntt();
+			anInt1002 = var1.readLEInt();
+			anInt1003 = var1.readLEInt();
 		}
 
 		if (anInt980 == 6) {
@@ -299,7 +299,7 @@ public class Class104_Sub12 extends Class104 {
 				anInt1024 = -1;
 
 			aBool1030 = var1.readUByte() == 1;
-			anInt1017 = var1.readIntt();
+			anInt1017 = var1.readLEInt();
 			anInt1038 = var1.method572();
 			anInt1032 = var1.method572();
 			var4 = var1.readUByte();
@@ -378,12 +378,12 @@ public class Class104_Sub12 extends Class104 {
 		}
 
 		if (anInt980 == 5) {
-			anInt1002 = var1.readIntt();
+			anInt1002 = var1.readLEInt();
 			anInt979 = var1.readLEShort();
 			aBool989 = var1.readUByte() == 1;
 			anInt1000 = var1.readUByte();
 			anInt1006 = var1.readUByte();
-			anInt1007 = var1.readIntt();
+			anInt1007 = var1.readLEInt();
 			aBool1044 = var1.readUByte() == 1;
 			aBool1009 = var1.readUByte() == 1;
 		}
@@ -417,18 +417,18 @@ public class Class104_Sub12 extends Class104 {
 			anInt1059 = var1.readUByte();
 			anInt1029 = var1.readUByte();
 			aBool1030 = var1.readUByte() == 1;
-			anInt1017 = var1.readIntt();
+			anInt1017 = var1.readLEInt();
 		}
 
 		if (anInt980 == 3) {
-			anInt1017 = var1.readIntt();
+			anInt1017 = var1.readLEInt();
 			aBool1088 = var1.readUByte() == 1;
 			anInt1000 = var1.readUByte();
 		}
 
 		if (anInt980 == 9) {
 			anInt999 = var1.readUByte();
-			anInt1017 = var1.readIntt();
+			anInt1017 = var1.readLEInt();
 		}
 
 		anInt1037 = var1.method614();
@@ -476,7 +476,7 @@ public class Class104_Sub12 extends Class104 {
 			final int[] var3 = new int[var2];
 
 			for (int var4 = 0; var4 < var2; ++var4)
-				var3[var4] = var1.readIntt();
+				var3[var4] = var1.readLEInt();
 
 			return var3;
 		}
@@ -627,7 +627,7 @@ public class Class104_Sub12 extends Class104 {
 			for (int var4 = 0; var4 < var2; ++var4) {
 				final int var5 = var1.readUByte();
 				if (var5 == 0)
-					var3[var4] = new Integer(var1.readIntt());
+					var3[var4] = new Integer(var1.readLEInt());
 				else if (var5 == 1)
 					var3[var4] = var1.method608();
 			}

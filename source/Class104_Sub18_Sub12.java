@@ -79,7 +79,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 		} else if (var2 == 11)
 			anInt1431 = 1;
 		else if (var2 == 12)
-			anInt1453 = var1.readIntt();
+			anInt1453 = var1.readLEInt();
 		else if (var2 == 16)
 			aBool1440 = true;
 		else if (var2 == 23) {

@@ -6,7 +6,7 @@ public final class Class104_Sub21_Sub1 extends RSBuf {
 	ISAAC isaac;
 
 	public void method623(final int var1) {
-		aByteArray1174[++pos - 1] = (byte) (var1 + isaac.nextKey());
+		backing[++pos - 1] = (byte) (var1 + isaac.nextKey());
 	}
 
 	public Class104_Sub21_Sub1(final int var1) {
@@ -23,14 +23,14 @@ public final class Class104_Sub21_Sub1 extends RSBuf {
 		int var4 = 0;
 
 		for (anInt1184 += var1; var1 > var3; var3 = 8) {
-			var4 += (aByteArray1174[var2++] & anIntArray1185[var3]) << (var1 - var3);
+			var4 += (backing[var2++] & anIntArray1185[var3]) << (var1 - var3);
 			var1 -= var3;
 		}
 
 		if (var1 == var3)
-			var4 += aByteArray1174[var2] & anIntArray1185[var3];
+			var4 += backing[var2] & anIntArray1185[var3];
 		else
-			var4 += (aByteArray1174[var2] >> (var3 - var1)) & anIntArray1185[var1];
+			var4 += (backing[var2] >> (var3 - var1)) & anIntArray1185[var1];
 
 		return var4;
 	}
@@ -44,7 +44,7 @@ public final class Class104_Sub21_Sub1 extends RSBuf {
 	}
 
 	public int opcode() {
-		return (aByteArray1174[++pos - 1] - isaac.nextKey()) & 255;
+		return (backing[++pos - 1] - isaac.nextKey()) & 255;
 	}
 
 	public void endbits() {

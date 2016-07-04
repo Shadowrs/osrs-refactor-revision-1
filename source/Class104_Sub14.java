@@ -3,7 +3,7 @@ public class Class104_Sub14 extends Class104 {
 	Class58 aClass58_1100;
 
 	Class104_Sub14(final RSBuf var1) {
-		var1.pos = var1.aByteArray1174.length - 3;
+		var1.pos = var1.backing.length - 3;
 		final int var2 = var1.readUByte();
 		final int var3 = var1.readLEShort();
 		int var4 = 14 + (var2 * 10);
@@ -183,7 +183,7 @@ public class Class104_Sub14 extends Class104 {
 				while (true) {
 					final int var63 = var1.method580();
 					var51.method569(var63);
-					final int var64 = var1.aByteArray1174[var29++] & 255;
+					final int var64 = var1.backing[var29++] & 255;
 					final boolean var65 = var64 != var62;
 					var62 = var64 & 15;
 					if (var64 == 7) {
@@ -202,62 +202,62 @@ public class Class104_Sub14 extends Class104 {
 
 						var51.writebyte(81);
 						var51.writebyte(3);
-						var51.writebyte(var1.aByteArray1174[var50++]);
-						var51.writebyte(var1.aByteArray1174[var50++]);
-						var51.writebyte(var1.aByteArray1174[var50++]);
+						var51.writebyte(var1.backing[var50++]);
+						var51.writebyte(var1.backing[var50++]);
+						var51.writebyte(var1.backing[var50++]);
 					} else {
 						var52 ^= var64 >> 4;
 						if (var62 == 0) {
 							if (var65)
 								var51.writebyte(144 + var52);
 
-							var53 += var1.aByteArray1174[var37++];
-							var54 += var1.aByteArray1174[var38++];
+							var53 += var1.backing[var37++];
+							var54 += var1.backing[var38++];
 							var51.writebyte(var53 & 127);
 							var51.writebyte(var54 & 127);
 						} else if (var62 == 1) {
 							if (var65)
 								var51.writebyte(128 + var52);
 
-							var53 += var1.aByteArray1174[var37++];
-							var55 += var1.aByteArray1174[var40++];
+							var53 += var1.backing[var37++];
+							var55 += var1.backing[var40++];
 							var51.writebyte(var53 & 127);
 							var51.writebyte(var55 & 127);
 						} else if (var62 == 2) {
 							if (var65)
 								var51.writebyte(176 + var52);
 
-							var28 = (var28 + var1.aByteArray1174[var15++]) & 127;
+							var28 = (var28 + var1.backing[var15++]) & 127;
 							var51.writebyte(var28);
 							byte var66;
 							if ((var28 != 0) && (var28 != 32)) {
 								if (var28 == 1)
-									var66 = var1.aByteArray1174[var34++];
+									var66 = var1.backing[var34++];
 								else if (var28 == 33)
-									var66 = var1.aByteArray1174[var41++];
+									var66 = var1.backing[var41++];
 								else if (var28 == 7)
-									var66 = var1.aByteArray1174[var35++];
+									var66 = var1.backing[var35++];
 								else if (var28 == 39)
-									var66 = var1.aByteArray1174[var42++];
+									var66 = var1.backing[var42++];
 								else if (var28 == 10)
-									var66 = var1.aByteArray1174[var36++];
+									var66 = var1.backing[var36++];
 								else if (var28 == 42)
-									var66 = var1.aByteArray1174[var43++];
+									var66 = var1.backing[var43++];
 								else if (var28 == 99)
-									var66 = var1.aByteArray1174[var46++];
+									var66 = var1.backing[var46++];
 								else if (var28 == 98)
-									var66 = var1.aByteArray1174[var47++];
+									var66 = var1.backing[var47++];
 								else if (var28 == 101)
-									var66 = var1.aByteArray1174[var48++];
+									var66 = var1.backing[var48++];
 								else if (var28 == 100)
-									var66 = var1.aByteArray1174[var49++];
+									var66 = var1.backing[var49++];
 								else if ((var28 != 64) && (var28 != 65) && (var28 != 120) && (var28 != 121)
 										&& (var28 != 123))
-									var66 = var1.aByteArray1174[var39++];
+									var66 = var1.backing[var39++];
 								else
-									var66 = var1.aByteArray1174[var30++];
+									var66 = var1.backing[var30++];
 							} else
-								var66 = var1.aByteArray1174[var44++];
+								var66 = var1.backing[var44++];
 
 							final int var67 = var66 + var59[var28];
 							var59[var28] = var67;
@@ -266,22 +266,22 @@ public class Class104_Sub14 extends Class104 {
 							if (var65)
 								var51.writebyte(224 + var52);
 
-							var56 += var1.aByteArray1174[var45++];
-							var56 += var1.aByteArray1174[var33++] << 7;
+							var56 += var1.backing[var45++];
+							var56 += var1.backing[var33++] << 7;
 							var51.writebyte(var56 & 127);
 							var51.writebyte((var56 >> 7) & 127);
 						} else if (var62 == 4) {
 							if (var65)
 								var51.writebyte(208 + var52);
 
-							var57 += var1.aByteArray1174[var32++];
+							var57 += var1.backing[var32++];
 							var51.writebyte(var57 & 127);
 						} else if (var62 == 5) {
 							if (var65)
 								var51.writebyte(160 + var52);
 
-							var53 += var1.aByteArray1174[var37++];
-							var58 += var1.aByteArray1174[var31++];
+							var53 += var1.backing[var37++];
+							var58 += var1.backing[var31++];
 							var51.writebyte(var53 & 127);
 							var51.writebyte(var58 & 127);
 						} else {
@@ -291,7 +291,7 @@ public class Class104_Sub14 extends Class104 {
 							if (var65)
 								var51.writebyte(192 + var52);
 
-							var51.writebyte(var1.aByteArray1174[var44++]);
+							var51.writebyte(var1.backing[var44++]);
 						}
 					}
 				}

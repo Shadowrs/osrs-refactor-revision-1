@@ -23,7 +23,7 @@ public class Class83 {
 	RSBuf aClass104_Sub21_653 = new RSBuf((byte[]) null);
 
 	void method360(final byte[] var1) {
-		aClass104_Sub21_653.aByteArray1174 = var1;
+		aClass104_Sub21_653.backing = var1;
 		aClass104_Sub21_653.pos = 10;
 		final int var2 = aClass104_Sub21_653.readLEShort();
 		anInt656 = aClass104_Sub21_653.readLEShort();
@@ -33,8 +33,8 @@ public class Class83 {
 		int var3;
 		int var5;
 		for (var3 = 0; var3 < var2; aClass104_Sub21_653.pos += var5) {
-			final int var4 = aClass104_Sub21_653.readIntt();
-			var5 = aClass104_Sub21_653.readIntt();
+			final int var4 = aClass104_Sub21_653.readLEInt();
+			var5 = aClass104_Sub21_653.readLEInt();
 			if (var4 == 1297379947) {
 				anIntArray650[var3] = aClass104_Sub21_653.pos;
 				++var3;
@@ -52,7 +52,7 @@ public class Class83 {
 	}
 
 	boolean method361() {
-		return aClass104_Sub21_653.aByteArray1174 != null;
+		return aClass104_Sub21_653.backing != null;
 	}
 
 	int method362() {
@@ -77,7 +77,7 @@ public class Class83 {
 	}
 
 	int method367(final int var1) {
-		final byte var2 = aClass104_Sub21_653.aByteArray1174[aClass104_Sub21_653.pos];
+		final byte var2 = aClass104_Sub21_653.backing[aClass104_Sub21_653.pos];
 		int var5;
 		if (var2 < 0) {
 			var5 = var2 & 255;
@@ -91,7 +91,7 @@ public class Class83 {
 		else {
 			final int var3 = aClass104_Sub21_653.method580();
 			if ((var5 == 247) && (var3 > 0)) {
-				final int var4 = aClass104_Sub21_653.aByteArray1174[aClass104_Sub21_653.pos] & 255;
+				final int var4 = aClass104_Sub21_653.backing[aClass104_Sub21_653.pos] & 255;
 				if (((var4 >= 241) && (var4 <= 243)) || (var4 == 246) || (var4 == 248)
 						|| ((var4 >= 250) && (var4 <= 252)) || (var4 == 254)) {
 					++aClass104_Sub21_653.pos;
@@ -143,7 +143,7 @@ public class Class83 {
 	}
 
 	void method370() {
-		aClass104_Sub21_653.aByteArray1174 = null;
+		aClass104_Sub21_653.backing = null;
 		anIntArray650 = null;
 		anIntArray651 = null;
 		anIntArray648 = null;

@@ -20,8 +20,8 @@ public class Class74 {
 
 	final void method337(final RSBuf var1) {
 		anInt586 = var1.readUByte();
-		anInt596 = var1.readIntt();
-		anInt590 = var1.readIntt();
+		anInt596 = var1.readLEInt();
+		anInt590 = var1.readLEInt();
 		method338(var1);
 	}
 

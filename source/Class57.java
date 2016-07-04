@@ -12,39 +12,40 @@ public class Class57 {
 	static Class13 aClass13_467;
 	public static Canvas aCanvas468;
 
-	static final byte[] method240(final byte[] var0) {
-		final RSBuf var1 = new RSBuf(var0);
-		final int var2 = var1.readUByte();
-		final int var3 = var1.readIntt();
-		if ((var3 >= 0) && ((Class61.anInt490 == 0) || (var3 <= Class61.anInt490))) {
-			if (var2 == 0) {
-				final byte[] var4 = new byte[var3];
-				var1.readBytes(var4, 0, var3);
-				return var4;
+	static final byte[] method240(final byte[] data) {
+		final RSBuf buf = new RSBuf(data);
+		final int opcode = buf.readUByte();
+		final int size = buf.readLEInt();
+		if ((size >= 0) && ((Class61.anInt490 == 0) || (size <= Class61.anInt490))) {
+			if (opcode == 0) {
+				final byte[] dataa = new byte[size];
+				buf.readBytes(dataa, 0, size);
+				return dataa;
 			} else {
-				final int var5 = var1.readIntt();
+				final int count = buf.readLEInt();
 
 				// Xtea crashpatch
-				if (var5 > 1000000) {
-					System.err.println("XTEA crash intercepted; returning null bytes");
+				if (count > 1000000) {
+					System.err.println("XTEA crash intercepted; returning null bytes (count: "+count+")");
 					return new byte[100];
 				}
 				
-				if ((var5 < 0) || ((Class61.anInt490 != 0) && (var5 > Class61.anInt490))) {
+				if ((count < 0) || ((Class61.anInt490 != 0) && (count > Class61.anInt490))) {
 					//throw new RuntimeException();
-					System.err.println("ERROR IN ARCHIVELOADING; RETURNING EMPTY ARRAY");
+					System.err.println("ERROR IN ARCHIVELOADING; RETURNING EMPTY ARRAY (count: "+count+")");
 					return new byte[100];
 				} else {
-					final byte[] var6 = new byte[var5];
-					if (var2 == 1)
-						Class45.method195(var6, var5, var0, var3, 9);
+					final byte[] bytes = new byte[count];
+					if (opcode == 1)
+						Class45.method195(bytes, count, data, size, 9);
 					else
-						Class61.aClass31_491.method146(var1, var6);
+						Class61.inflation.copyTo(buf, bytes);
 
-					return var6;
+					return bytes;
 				}
 			}
-		} else
+		} else {
 			throw new RuntimeException();
+		}
 	}
 }

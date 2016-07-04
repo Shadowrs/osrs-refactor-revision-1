@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Class95 {
 	public static int[] anIntArray746 = new int[] { 0, 2, 0, 0, 0, 0, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 6, -2,
 			0, 0, 0, -2, 10, 0, 0, -2, 0, 0, 15, 0, 0, 0, 0, 0, 0, -2, 0, 1, 0, 0, 0, 0, 0, 0, 12, 0, 6, 0, 0, 5, 0, 0,
@@ -24,10 +26,13 @@ public class Class95 {
 			var2 = client.gamecon.readShort(); // L X
 			var3 = (client.pktSize - client.gamecon.pos) / 16;
 			Class13.xteakeys = new int[var3][4];
+			System.out.println("regions: "+var3);
 
-			for (var4 = 0; var4 < var3; ++var4)
+			for (var4 = 0; var4 < var3; ++var4) {
 				for (var5 = 0; var5 < 4; ++var5)
-					Class13.xteakeys[var4][var5] = client.gamecon.readInt();
+					Class13.xteakeys[var4][var5] = client.gamecon.readIntV1();
+				System.out.printf("region %d/%d (%d) xteas: "+Arrays.toString(Class13.xteakeys[var4])+" \n", var4, var3);
+			}
 
 			var4 = client.gamecon.readByteN(); // HEIGHT
 			var5 = client.gamecon.readLEShort(); // C X
@@ -82,7 +87,7 @@ public class Class95 {
 
 			for (var3 = 0; var3 < var2; ++var3)
 				for (var4 = 0; var4 < 4; ++var4)
-					Class13.xteakeys[var3][var4] = client.gamecon.readInt();
+					Class13.xteakeys[var3][var4] = client.gamecon.readIntV1();
 
 			var3 = client.gamecon.readShortN();
 			var4 = client.gamecon.readByteN();

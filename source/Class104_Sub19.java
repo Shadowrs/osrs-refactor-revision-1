@@ -190,7 +190,7 @@ public class Class104_Sub19 extends Class104 {
 			anIntArray1143 = new int[var2];
 
 			for (var3 = 0; var3 < var2; ++var3)
-				anIntArray1143[var3] = var1.readIntt();
+				anIntArray1143[var3] = var1.readLEInt();
 
 			anInt1144 = var1.readUByte();
 			anInt1137 = var1.readUByte();

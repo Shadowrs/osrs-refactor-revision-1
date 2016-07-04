@@ -79,30 +79,30 @@ public class Class61_Sub1 extends Class61 {
 
 	}
 
-	public void method488(final Class16 var1, final int var2, final byte[] var3, final boolean var4) {
+	public void method488(final Class16 var1, final int var2, final byte[] data, final boolean var4) {
 		int var5;
 		if (var1 == aClass16_883) {
 			if (aBool885)
 				throw new RuntimeException();
-			else if (null == var3)
+			else if (null == data)
 				Class49.method222(this, 255, anInt884, anInt890, (byte) 0, true);
 			else {
 				aCRC32_889.reset();
-				aCRC32_889.update(var3, 0, var3.length);
+				aCRC32_889.update(data, 0, data.length);
 				var5 = (int) aCRC32_889.getValue();
-				final RSBuf var6 = new RSBuf(Class57.method240(var3));
-				final int var7 = var6.readUByte();
-				if ((var7 != 5) && (var7 != 6))
-					throw new RuntimeException("");
+				final RSBuf buf = new RSBuf(Class57.method240(data));
+				final int opcode = buf.readUByte();
+				if ((opcode != 5) && (opcode != 6))
+					throw new RuntimeException("yo");
 				else {
 					int var8 = 0;
-					if (var7 >= 6)
-						var8 = var6.readIntt();
+					if (opcode >= 6)
+						var8 = buf.readLEInt();
 
 					if ((anInt890 != var5) || (anInt887 != var8))
 						Class49.method222(this, 255, anInt884, anInt890, (byte) 0, true);
 					else {
-						method257(var3);
+						method257(data);
 						method489();
 					}
 				}
@@ -111,15 +111,15 @@ public class Class61_Sub1 extends Class61 {
 			if (!var4 && (anInt891 == var2))
 				aBool885 = true;
 
-			if ((null != var3) && (var3.length > 2)) {
+			if ((null != data) && (data.length > 2)) {
 				aCRC32_889.reset();
-				aCRC32_889.update(var3, 0, var3.length - 2);
+				aCRC32_889.update(data, 0, data.length - 2);
 				var5 = (int) aCRC32_889.getValue();
-				final int var9 = ((var3[var3.length - 2] & 255) << 8) + (var3[var3.length - 1] & 255);
+				final int var9 = ((data[data.length - 2] & 255) << 8) + (data[data.length - 1] & 255);
 				if ((var5 == anIntArray483[var2]) && (var9 == anIntArray493[var2])) {
 					aBoolArray882[var2] = true;
 					if (var4)
-						anObjectArray492[var2] = Class52.method229(var3, false);
+						anObjectArray492[var2] = Class52.method229(data, false);
 
 				} else {
 					aBoolArray882[var2] = false;
@@ -230,8 +230,8 @@ public class Class61_Sub1 extends Class61 {
 		final int var8 = anInt884;
 		if (null != Class2.aClass104_Sub21_7) {
 			Class2.aClass104_Sub21_7.pos = (8 * var8) + 5;
-			final int var9 = Class2.aClass104_Sub21_7.readIntt();
-			final int var10 = Class2.aClass104_Sub21_7.readIntt();
+			final int var9 = Class2.aClass104_Sub21_7.readLEInt();
+			final int var10 = Class2.aClass104_Sub21_7.readLEInt();
 			method492(var9, var10);
 		} else {
 			Class49.method222((Class61_Sub1) null, 255, 255, 0, (byte) 0, true);

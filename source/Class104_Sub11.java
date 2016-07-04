@@ -13,7 +13,7 @@ public class Class104_Sub11 extends Class104 {
 		final RSBuf var2 = new RSBuf(var1);
 
 		int var3;
-		for (var3 = 0; var2.aByteArray1174[var3 + var2.pos] != 0; ++var3)
+		for (var3 = 0; var2.backing[var3 + var2.pos] != 0; ++var3)
 			;
 
 		final byte[] var4 = new byte[var3];
@@ -28,7 +28,7 @@ public class Class104_Sub11 extends Class104 {
 		var2.pos += var3;
 
 		int var6;
-		for (var6 = 0; var2.aByteArray1174[var6 + var2.pos] != 0; ++var6)
+		for (var6 = 0; var2.backing[var6 + var2.pos] != 0; ++var6)
 			;
 
 		final byte[] var7 = new byte[var6];
@@ -43,7 +43,7 @@ public class Class104_Sub11 extends Class104 {
 		var2.pos += var6;
 
 		int var9;
-		for (var9 = 0; var2.aByteArray1174[var2.pos + var9] != 0; ++var9)
+		for (var9 = 0; var2.backing[var2.pos + var9] != 0; ++var9)
 			;
 
 		final byte[] var10 = new byte[var9];
@@ -99,7 +99,7 @@ public class Class104_Sub11 extends Class104 {
 		final byte[] var20 = var15 > 0 ? new byte[2 * var15] : null;
 
 		int var21;
-		for (var21 = 0; var2.aByteArray1174[var2.pos + var21] != 0; ++var21)
+		for (var21 = 0; var2.backing[var2.pos + var21] != 0; ++var21)
 			;
 
 		final byte[] var22 = new byte[var21];
@@ -158,7 +158,7 @@ public class Class104_Sub11 extends Class104 {
 					else
 						var24 = -1;
 
-					var27 = var2.aByteArray1174[var5++] - 1;
+					var27 = var2.backing[var5++] - 1;
 				}
 
 				aByteArray967[var28] = (byte) var27;
@@ -177,7 +177,7 @@ public class Class104_Sub11 extends Class104 {
 					else
 						var24 = -1;
 
-					var28 = (var2.aByteArray1174[var8++] + 16) << 2;
+					var28 = (var2.backing[var8++] + 16) << 2;
 				}
 
 				aByteArray965[var29] = (byte) var28;

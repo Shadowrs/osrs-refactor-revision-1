@@ -38,23 +38,23 @@ public final class Class45 {
 
 	}
 
-	public static int method195(final byte[] var0, int var1, final byte[] var2, final int var3, final int var4) {
+	public static int method195(final byte[] var0, int count, final byte[] var2, final int var3, final int var4) {
 		final Class32 var5 = aClass32_396;
 		synchronized (var5) {
 			aClass32_396.aByteArray294 = var2;
 			aClass32_396.anInt299 = var4;
 			aClass32_396.aByteArray301 = var0;
 			aClass32_396.anInt302 = 0;
-			aClass32_396.anInt295 = var1;
+			aClass32_396.anInt295 = count;
 			aClass32_396.anInt308 = 0;
 			aClass32_396.anInt307 = 0;
 			aClass32_396.anInt300 = 0;
 			aClass32_396.anInt304 = 0;
 			method197(aClass32_396);
-			var1 -= aClass32_396.anInt295;
+			count -= aClass32_396.anInt295;
 			aClass32_396.aByteArray294 = null;
 			aClass32_396.aByteArray301 = null;
-			return var1;
+			return count;
 		}
 	}
 

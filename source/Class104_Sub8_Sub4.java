@@ -186,7 +186,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 			if (client.step == 2) {
 				client.secureBuf.pos = 0;
 				client.secureBuf.writebyte(14);
-				Class20.stream.flushbytes(client.secureBuf.aByteArray1174, 0, 1);
+				Class20.stream.flushbytes(client.secureBuf.backing, 0, 1);
 				client.gamecon.pos = 0;
 				client.step = 3;
 			}
@@ -238,7 +238,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeShort(0); // dummy value
 				var2 = client.loginbuf.pos; // remember position 
 				client.loginbuf.writeInt(1); // CLIENT REVISION  - rev 1
-				client.loginbuf.appendBytes(client.secureBuf.aByteArray1174, 0, client.secureBuf.pos);
+				client.loginbuf.appendBytes(client.secureBuf.backing, 0, client.secureBuf.pos);
 				final int var3 = client.loginbuf.pos;
 				client.loginbuf.writeString(Class66.aString543);
 				client.loginbuf.writebyte(client.aBool1794 ? 1 : 0);
@@ -261,7 +261,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeInt(Class100.aClass61_Sub1_800.anInt489);
 				client.loginbuf.applyIsaac(issackeys, var3, client.loginbuf.pos);
 				client.loginbuf.writeShortLE(client.loginbuf.pos - var2);
-				Class20.stream.flushbytes(client.loginbuf.aByteArray1174, 0, client.loginbuf.pos);
+				Class20.stream.flushbytes(client.loginbuf.backing, 0, client.loginbuf.pos);
 				client.secureBuf.setisaac(issackeys);
 
 				for (int var4 = 0; var4 < 4; ++var4)
@@ -340,10 +340,10 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 					client.anInt1874 <<= 8;
 					client.anInt1874 += Class20.stream.read(); // pid right half
 					client.anInt1990 = Class20.stream.read();
-					Class20.stream.readbytes(client.gamecon.aByteArray1174, 0, 1);
+					Class20.stream.readbytes(client.gamecon.backing, 0, 1);
 					client.gamecon.pos = 0;
 					client.pktOpc = client.gamecon.opcode(); // packet opcode
-					Class20.stream.readbytes(client.gamecon.aByteArray1174, 0, 2);
+					Class20.stream.readbytes(client.gamecon.backing, 0, 2);
 					client.gamecon.pos = 0;
 					client.pktSize = client.gamecon.readLEShort();
 					client.step = 10;
@@ -352,7 +352,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				if (client.step == 10) {
 					if (Class20.stream.avail() >= client.pktSize) {
 						client.gamecon.pos = 0;
-						Class20.stream.readbytes(client.gamecon.aByteArray1174, 0, client.pktSize);
+						Class20.stream.readbytes(client.gamecon.backing, 0, client.pktSize);
 						Class102_Sub1.reset();
 						Class54.anInt447 = -1;
 						Class95.readregionpacket(false);
@@ -463,7 +463,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 		if (Class24.aClass96_241 != null)
 			try {
 				Class24.aClass96_241.method428(0L);
-				Class24.aClass96_241.method434(var0.aByteArray1174, var1, 24);
+				Class24.aClass96_241.method434(var0.backing, var1, 24);
 			} catch (final Exception var3) {
 				;
 			}

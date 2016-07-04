@@ -265,7 +265,7 @@ public class Class96 {
 	static int method435(final int var0, final int var1) {
 		final long var2 = (var0 << 16) + var1;
 		return (null != Class48.aClass104_Sub18_Sub13_410) && (Class48.aClass104_Sub18_Sub13_410.aLong824 == var2)
-				? ((Class87.aClass104_Sub21_691.pos * 99) / (Class87.aClass104_Sub21_691.aByteArray1174.length
+				? ((Class87.aClass104_Sub21_691.pos * 99) / (Class87.aClass104_Sub21_691.backing.length
 						- Class48.aClass104_Sub18_Sub13_410.aByte1459)) + 1
 				: 0;
 	}

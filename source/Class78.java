@@ -215,7 +215,7 @@ public class Class78 {
 
 			if ((var3 == 2) && Class97.method442(var1, var2, var4)) {
 				client.secureBuf.method623(247);
-				client.secureBuf.method600(anInt628);
+				client.secureBuf.putIntV2(anInt628);
 				client.secureBuf.writeShort(var2 + Class20.anInt206);
 				client.secureBuf.method606(client.anInt1970);
 				client.secureBuf.method591((var4 >> 14) & 32767);
@@ -628,7 +628,7 @@ public class Class78 {
 					client.secureBuf.method623(81);
 					client.secureBuf.method592(var4);
 					client.secureBuf.writeShort(Class20.anInt206 + var2);
-					client.secureBuf.method600(anInt628);
+					client.secureBuf.putIntV2(anInt628);
 					client.secureBuf.method591(var1 + Class53.anInt436);
 					client.secureBuf.method591(client.anInt1970);
 				}
@@ -684,7 +684,7 @@ public class Class78 {
 
 					if (var3 == 36) {
 						client.secureBuf.method623(220);
-						client.secureBuf.method600(var2);
+						client.secureBuf.putIntV2(var2);
 						client.secureBuf.method591(var1);
 						client.secureBuf.method606(var4);
 						client.anInt1899 = 0;

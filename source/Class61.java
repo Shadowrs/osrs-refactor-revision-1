@@ -1,6 +1,6 @@
 public abstract class Class61 {
 	public int anInt489;
-	int anInt495;
+	int count;
 	int[] anIntArray479;
 	int[] anIntArray483;
 	int[] anIntArray493;
@@ -14,44 +14,44 @@ public abstract class Class61 {
 	Class73[] aClass73Array488;
 	boolean aBool480;
 	boolean aBool494;
-	static Class31 aClass31_491 = new Class31();
+	static Class31 inflation = new Class31();
 	static int anInt490 = 0;
 
-	void method257(final byte[] var1) {
-		final int var2 = var1.length;
+	void method257(final byte[] raw) {
+		final int len = raw.length;
 		int var3 = -1;
 
 		int var4;
-		for (var4 = 0; var4 < var2; ++var4)
-			var3 = (var3 >>> 8) ^ RSBuf.anIntArray1173[(var3 ^ var1[var4]) & 255];
+		for (var4 = 0; var4 < len; ++var4)
+			var3 = (var3 >>> 8) ^ RSBuf.SHIFTS[(var3 ^ raw[var4]) & 255];
 
 		var3 = ~var3;
 		anInt489 = var3;
-		final RSBuf var7 = new RSBuf(Class57.method240(var1));
-		var3 = var7.readUByte();
+		final RSBuf buf = new RSBuf(Class57.method240(raw));
+		var3 = buf.readUByte();
 		if ((var3 >= 5) && (var3 <= 7)) {
 			if (var3 >= 6)
-				var7.readIntt();
+				buf.readLEInt();
 
-			var4 = var7.readUByte();
+			var4 = buf.readUByte();
 			if (var3 >= 7)
-				anInt495 = var7.method579();
+				count = buf.method579();
 			else
-				anInt495 = var7.readLEShort();
+				count = buf.readLEShort();
 
 			int var8 = 0;
 			int var9 = -1;
-			anIntArray479 = new int[anInt495];
+			anIntArray479 = new int[count];
 			int var10;
 			if (var3 >= 7)
-				for (var10 = 0; var10 < anInt495; ++var10) {
-					anIntArray479[var10] = var8 += var7.method579();
+				for (var10 = 0; var10 < count; ++var10) {
+					anIntArray479[var10] = var8 += buf.method579();
 					if (anIntArray479[var10] > var9)
 						var9 = anIntArray479[var10];
 				}
 			else
-				for (var10 = 0; var10 < anInt495; ++var10) {
-					anIntArray479[var10] = var8 += var7.readLEShort();
+				for (var10 = 0; var10 < count; ++var10) {
+					anIntArray479[var10] = var8 += buf.readLEShort();
 					if (anIntArray479[var10] > var9)
 						var9 = anIntArray479[var10];
 				}
@@ -65,20 +65,20 @@ public abstract class Class61 {
 			if (var4 != 0) {
 				anIntArray481 = new int[var9 + 1];
 
-				for (var10 = 0; var10 < anInt495; ++var10)
-					anIntArray481[anIntArray479[var10]] = var7.readIntt();
+				for (var10 = 0; var10 < count; ++var10)
+					anIntArray481[anIntArray479[var10]] = buf.readLEInt();
 
 				aClass73_482 = new Class73(anIntArray481);
 			}
 
-			for (var10 = 0; var10 < anInt495; ++var10)
-				anIntArray483[anIntArray479[var10]] = var7.readIntt();
+			for (var10 = 0; var10 < count; ++var10)
+				anIntArray483[anIntArray479[var10]] = buf.readLEInt();
 
-			for (var10 = 0; var10 < anInt495; ++var10)
-				anIntArray493[anIntArray479[var10]] = var7.readIntt();
+			for (var10 = 0; var10 < count; ++var10)
+				anIntArray493[anIntArray479[var10]] = buf.readLEInt();
 
-			for (var10 = 0; var10 < anInt495; ++var10)
-				anIntArray485[anIntArray479[var10]] = var7.readLEShort();
+			for (var10 = 0; var10 < count; ++var10)
+				anIntArray485[anIntArray479[var10]] = buf.readLEShort();
 
 			int var11;
 			int var12;
@@ -86,7 +86,7 @@ public abstract class Class61 {
 			int var14;
 			int var15;
 			if (var3 >= 7)
-				for (var10 = 0; var10 < anInt495; ++var10) {
+				for (var10 = 0; var10 < count; ++var10) {
 					var11 = anIntArray479[var10];
 					var12 = anIntArray485[var11];
 					var8 = 0;
@@ -94,7 +94,7 @@ public abstract class Class61 {
 					anIntArrayArray486[var11] = new int[var12];
 
 					for (var14 = 0; var14 < var12; ++var14) {
-						var15 = anIntArrayArray486[var11][var14] = var8 += var7.method579();
+						var15 = anIntArrayArray486[var11][var14] = var8 += buf.method579();
 						if (var15 > var13)
 							var13 = var15;
 					}
@@ -102,7 +102,7 @@ public abstract class Class61 {
 					fileArray[var11] = new Object[1 + var13];
 				}
 			else
-				for (var10 = 0; var10 < anInt495; ++var10) {
+				for (var10 = 0; var10 < count; ++var10) {
 					var11 = anIntArray479[var10];
 					var12 = anIntArray485[var11];
 					var8 = 0;
@@ -110,7 +110,7 @@ public abstract class Class61 {
 					anIntArrayArray486[var11] = new int[var12];
 
 					for (var14 = 0; var14 < var12; ++var14) {
-						var15 = anIntArrayArray486[var11][var14] = var8 += var7.readLEShort();
+						var15 = anIntArrayArray486[var11][var14] = var8 += buf.readLEShort();
 						if (var15 > var13)
 							var13 = var15;
 					}
@@ -122,13 +122,13 @@ public abstract class Class61 {
 				anIntArrayArray487 = new int[var9 + 1][];
 				aClass73Array488 = new Class73[var9 + 1];
 
-				for (var10 = 0; var10 < anInt495; ++var10) {
+				for (var10 = 0; var10 < count; ++var10) {
 					var11 = anIntArray479[var10];
 					var12 = anIntArray485[var11];
 					anIntArrayArray487[var11] = new int[fileArray[var11].length];
 
 					for (var13 = 0; var13 < var12; ++var13)
-						anIntArrayArray487[var11][anIntArrayArray486[var11][var13]] = var7.readIntt();
+						anIntArrayArray487[var11][anIntArrayArray486[var11][var13]] = buf.readLEInt();
 
 					aClass73Array488[var11] = new Class73(anIntArrayArray487[var11]);
 				}
@@ -254,7 +254,7 @@ public abstract class Class61 {
 				if ((null != var2) && ((var2[0] != 0) || (var2[1] != 0) || (var2[2] != 0) || (var2[3] != 0))) {
 					var8 = Class90.fileToByteArray(anObjectArray492[var1], true);
 					final RSBuf var9 = new RSBuf(var8);
-					var9.method605(var2, 5, var9.aByteArray1174.length);
+					var9.method605(var2, 5, var9.backing.length);
 				} else
 					var8 = Class90.fileToByteArray(anObjectArray492[var1], false);
 
@@ -277,7 +277,7 @@ public abstract class Class61 {
 						var15 = 0;
 
 						for (var16 = 0; var16 < var3; ++var16) {
-							var15 += var12.readIntt();
+							var15 += var12.readLEInt();
 							var13[var16] += var15;
 						}
 					}
@@ -296,7 +296,7 @@ public abstract class Class61 {
 						int var18 = 0;
 
 						for (int var19 = 0; var19 < var3; ++var19) {
-							var18 += var12.readIntt();
+							var18 += var12.readLEInt();
 							System.arraycopy(var20, var15, var17[var19], var13[var19], var18);
 							var13[var19] += var18;
 							var15 += var18;

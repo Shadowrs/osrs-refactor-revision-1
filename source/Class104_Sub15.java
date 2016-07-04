@@ -182,7 +182,7 @@ public class Class104_Sub15 extends Class104 {
 
 						if (!var15 && (client.anInt1906 == 0)) {
 							client.aClass104_Sub21_1885.pos = 0;
-							client.gamecon.readBytes(client.aClass104_Sub21_1885.aByteArray1174, 0,
+							client.gamecon.readBytes(client.aClass104_Sub21_1885.backing, 0,
 									var7);
 							client.aClass104_Sub21_1885.pos = 0;
 							final String var11 = Class104_Sub18_Sub17_Sub2
@@ -247,7 +247,7 @@ public class Class104_Sub15 extends Class104 {
 
 				if ((var3 & 512) != 0) {
 					var10.anInt1727 = client.gamecon.readShort();
-					var4 = client.gamecon.readIntt();
+					var4 = client.gamecon.readLEInt();
 					var10.anInt1709 = var4 >> 16;
 					var10.anInt1730 = client.anInt1799 + (var4 & '\uffff');
 					var10.anInt1728 = 0;

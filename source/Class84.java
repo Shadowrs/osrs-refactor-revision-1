@@ -156,7 +156,7 @@ public class Class84 {
 				final RSBuf var1 = new RSBuf(4);
 				var1.writebyte(var0 ? 2 : 3);
 				var1.method587(0);
-				Class66.aClass13_547.flushbytes(var1.aByteArray1174, 0, 4);
+				Class66.aClass13_547.flushbytes(var1.backing, 0, 4);
 			} catch (final IOException var4) {
 				try {
 					Class66.aClass13_547.destory();
