@@ -7,17 +7,17 @@ public abstract class Class47 {
 
 	abstract void method209(byte[] var1, int var2);
 
-	public static Class104_Sub12 method210(final int var0) {
+	public static Widget method210(final int var0) {
 		final int var1 = var0 >> 16;
 		final int var2 = var0 & '\uffff';
-		if ((null == Class22.aClass104_Sub12ArrayArray228[var1])
-				|| (Class22.aClass104_Sub12ArrayArray228[var1][var2] == null)) {
-			final boolean var3 = Class104_Sub7.method508(var1);
+		if ((null == Class22.widgets[var1])
+				|| (Class22.widgets[var1][var2] == null)) {
+			final boolean var3 = Class104_Sub7.laoded(var1);
 			if (!var3)
 				return null;
 		}
 
-		return Class22.aClass104_Sub12ArrayArray228[var1][var2];
+		return Class22.widgets[var1][var2];
 	}
 
 	static final int method211(final int var0, final int var1, final int var2) {

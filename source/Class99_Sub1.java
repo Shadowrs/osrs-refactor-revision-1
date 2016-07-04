@@ -21,7 +21,7 @@ public class Class99_Sub1 extends Class99 {
 			aSourceDataLine900.start();
 			anInt899 = var1;
 		} catch (final LineUnavailableException var5) {
-			if (Class104_Sub12.method540(var1) != 1) {
+			if (Widget.method540(var1) != 1) {
 				int var3 = var1 - 1;
 				var3 |= var3 >>> 1;
 				var3 |= var3 >>> 2;

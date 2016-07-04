@@ -203,14 +203,14 @@ public final class Class44 {
 					&& (client.anIntArray1993[var4] < (var2 + var0))
 					&& ((client.anIntArray1996[var4] + client.anIntArray1876[var4]) > var1)
 					&& (client.anIntArray1876[var4] < (var3 + var1)))
-				client.aBoolArray2027[var4] = true;
+				client.rsfacesFlag[var4] = true;
 
 	}
 
-	static Class104_Sub12 method193(final Class104_Sub12 var0) {
-		Class104_Sub12 var1 = var0;
+	static Widget method193(final Widget var0) {
+		Widget var1 = var0;
 		final int var2 = Class25.method130(Class104_Sub3.method485(var0), -204868796);
-		Class104_Sub12 var3;
+		Widget var3;
 		if (var2 == 0)
 			var3 = null;
 		else {
@@ -232,7 +232,7 @@ public final class Class44 {
 			}
 		}
 
-		Class104_Sub12 var5 = var3;
+		Widget var5 = var3;
 		if (var3 == null)
 			var5 = var0.aClass104_Sub12_1040;
 

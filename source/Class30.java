@@ -2,7 +2,7 @@ public class Class30 {
 	static String aString285;
 	static int[] anIntArray286;
 	static int anInt287;
-	static Class104_Sub12 aClass104_Sub12_288;
+	static Widget aClass104_Sub12_288;
 	public String aString283;
 	public int anInt284;
 	public static Class30 aClass30_282 = new Class30("LIVE", 0);

@@ -305,7 +305,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 						Class10.method40(30);
 
 						for (var2 = 0; var2 < 100; ++var2)
-							client.aBoolArray2027[var2] = true;
+							client.rsfacesFlag[var2] = true;
 
 						return;
 					}

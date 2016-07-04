@@ -5,20 +5,20 @@ public class Class26 {
 
 	static void method132() {
 		if (client.aBool1943) {
-			final Class104_Sub12 var0 = Class29.method141(Class78.anInt628, client.anInt1970);
+			final Widget var0 = Class29.method141(Class78.anInt628, client.anInt1970);
 			if ((var0 != null) && (var0.anObjectArray1031 != null)) {
-				final Class104_Sub6 var1 = new Class104_Sub6();
-				var1.aClass104_Sub12_938 = var0;
-				var1.anObjectArray936 = var0.anObjectArray1031;
-				Class46.method203(var1);
+				final CS var1 = new CS();
+				var1.ownerRSFaceHash = var0;
+				var1.params = var0.anObjectArray1031;
+				Class46.doCS(var1);
 			}
 
 			client.aBool1943 = false;
-			Class79.method348(var0);
+			Class79.setflags(var0);
 		}
 	}
 
-	static final int method133(final Class104_Sub12 var0, final int var1) {
+	static final int method133(final Widget var0, final int var1) {
 		if ((null != var0.anIntArrayArray1069) && (var1 < var0.anIntArrayArray1069.length))
 			try {
 				final int[] var2 = var0.anIntArrayArray1069[var1];
@@ -43,7 +43,7 @@ public class Class26 {
 						var7 = client.anIntArray1927[var2[var4++]];
 
 					int var9;
-					Class104_Sub12 var10;
+					Widget var10;
 					int var11;
 					int var12;
 					if (var6 == 4) {

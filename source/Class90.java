@@ -1,14 +1,14 @@
 import java.util.Calendar;
 
 public class Class90 {
-	static int[] anIntArray707;
-	static String[] aStringArray709;
+	static int[] cachedCsIntToUse;
+	static String[] cachedCsStrToUse;
 	public static String aString716;
 	static int[] anIntArray711 = new int[5];
 	static int[][] anIntArrayArray710 = new int[5][5000];
 	static int[] anIntArray706 = new int[1000];
 	static String[] aStringArray712 = new String[1000];
-	static int anInt713 = 0;
+	static int totalActs = 0;
 	static Class100[] aClass100Array714 = new Class100[50];
 	static Calendar aCalendar715 = Calendar.getInstance();
 	static String[] aStringArray708 = new String[] { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep",
@@ -36,7 +36,7 @@ public class Class90 {
 	static void method408(final int var0) {
 		for (Class104_Sub17 var1 = (Class104_Sub17) client.aClass58_1926
 				.method245(); null != var1; var1 = (Class104_Sub17) client.aClass58_1926.method243())
-			if (var0 == ((var1.aLong824 >> 48) & 65535L))
+			if (var0 == ((var1.nodeId >> 48) & 65535L))
 				var1.method470();
 
 	}

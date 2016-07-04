@@ -13,7 +13,7 @@ public final class Class104_Sub3 extends Class104 {
 	int anInt877 = 0;
 	int anInt878 = -1;
 
-	static int method485(final Class104_Sub12 var0) {
+	static int method485(final Widget var0) {
 		final Class104_Sub17 var1 = (Class104_Sub17) client.aClass58_1926
 				.method241(var0.anInt1018 + ((long) var0.anInt978 << 32));
 		return null != var1 ? var1.anInt1134 : var0.anInt1037;

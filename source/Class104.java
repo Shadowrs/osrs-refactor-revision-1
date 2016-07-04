@@ -1,5 +1,5 @@
 public class Class104 {
-	public long aLong824;
+	public long nodeId;
 	public Class104 aClass104_823;
 	Class104 aClass104_822;
 

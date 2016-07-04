@@ -1,5 +1,5 @@
 public class Class100 {
-	Class104_Sub18_Sub4 aClass104_Sub18_Sub4_796;
+	CS2 aClass104_Sub18_Sub4_796;
 	int[] anIntArray797;
 	String[] aStringArray798;
 	protected static boolean aBool799;

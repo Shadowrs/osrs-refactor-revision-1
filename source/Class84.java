@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 public class Class84 {
-	static Class104_Sub12 aClass104_Sub12_660;
+	static Widget aClass104_Sub12_660;
 	int anInt657;
 	int anInt658;
 	int[][] anIntArrayArray659;

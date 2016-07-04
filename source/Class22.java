@@ -4,7 +4,7 @@ import java.util.Hashtable;
 public class Class22 {
 	static File aFile224;
 	public static Class96[] aClass96Array227;
-	public static Class104_Sub12[][] aClass104_Sub12ArrayArray228;
+	public static Widget[][] widgets;
 	static boolean aBool225 = false;
 	static Hashtable aHashtable226 = new Hashtable(16);
 

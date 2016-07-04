@@ -32,37 +32,37 @@ public class Class104_Sub23 extends Class104 {
 		int var1 = 64 + (Class43.anInt375 * 128);
 		int var2 = Class47.method211(var0, var1, Class12.anInt73) - Class61_Sub1.anInt892;
 		if (Class85.anInt672 < var0) {
-			Class85.anInt672 += Class104_Sub6.anInt944 + ((Class75.anInt598 * (var0 - Class85.anInt672)) / 1000);
+			Class85.anInt672 += CS.anInt944 + ((Class75.anInt598 * (var0 - Class85.anInt672)) / 1000);
 			if (Class85.anInt672 > var0)
 				Class85.anInt672 = var0;
 		}
 
 		if (Class85.anInt672 > var0) {
-			Class85.anInt672 -= Class104_Sub6.anInt944 + ((Class75.anInt598 * (Class85.anInt672 - var0)) / 1000);
+			Class85.anInt672 -= CS.anInt944 + ((Class75.anInt598 * (Class85.anInt672 - var0)) / 1000);
 			if (Class85.anInt672 < var0)
 				Class85.anInt672 = var0;
 		}
 
 		if (Class46.anInt403 < var2) {
-			Class46.anInt403 += Class104_Sub6.anInt944 + (((var2 - Class46.anInt403) * Class75.anInt598) / 1000);
+			Class46.anInt403 += CS.anInt944 + (((var2 - Class46.anInt403) * Class75.anInt598) / 1000);
 			if (Class46.anInt403 > var2)
 				Class46.anInt403 = var2;
 		}
 
 		if (Class46.anInt403 > var2) {
-			Class46.anInt403 -= ((Class75.anInt598 * (Class46.anInt403 - var2)) / 1000) + Class104_Sub6.anInt944;
+			Class46.anInt403 -= ((Class75.anInt598 * (Class46.anInt403 - var2)) / 1000) + CS.anInt944;
 			if (Class46.anInt403 < var2)
 				Class46.anInt403 = var2;
 		}
 
 		if (Class99.anInt793 < var1) {
-			Class99.anInt793 += Class104_Sub6.anInt944 + ((Class75.anInt598 * (var1 - Class99.anInt793)) / 1000);
+			Class99.anInt793 += CS.anInt944 + ((Class75.anInt598 * (var1 - Class99.anInt793)) / 1000);
 			if (Class99.anInt793 > var1)
 				Class99.anInt793 = var1;
 		}
 
 		if (Class99.anInt793 > var1) {
-			Class99.anInt793 -= Class104_Sub6.anInt944 + ((Class75.anInt598 * (Class99.anInt793 - var1)) / 1000);
+			Class99.anInt793 -= CS.anInt944 + ((Class75.anInt598 * (Class99.anInt793 - var1)) / 1000);
 			if (Class99.anInt793 < var1)
 				Class99.anInt793 = var1;
 		}
@@ -123,7 +123,7 @@ public class Class104_Sub23 extends Class104 {
 
 	}
 
-	static String method621(String var0, final Class104_Sub12 var1) {
+	static String method621(String var0, final Widget var1) {
 		if (var0.indexOf("%") != -1) {
 			int var2;
 			for (var2 = 1; var2 <= 5; ++var2)

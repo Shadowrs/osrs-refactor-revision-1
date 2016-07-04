@@ -2,7 +2,7 @@ public class Class40 {
 	static long aLong359;
 	static int[] mapFileIds;
 
-	static boolean method182(final Class104_Sub12 var0) {
+	static boolean method182(final Widget var0) {
 		if (client.aBool1956) {
 			if (Class104_Sub3.method485(var0) != 0)
 				return false;

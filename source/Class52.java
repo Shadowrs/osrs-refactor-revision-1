@@ -18,14 +18,14 @@ public class Class52 implements Runnable {
 				Object var14;
 				if (var2 != null) {
 					if (var2.anInt1097 == 0) {
-						var2.aClass16_1095.method63((int) var2.aLong824, var2.aByteArray1096,
+						var2.aClass16_1095.method63((int) var2.nodeId, var2.aByteArray1096,
 								var2.aByteArray1096.length);
 						var1 = aClass59_429;
 						synchronized (var1) {
 							var2.method470();
 						}
 					} else if (var2.anInt1097 == 1) {
-						var2.aByteArray1096 = var2.aClass16_1095.method65((int) var2.aLong824);
+						var2.aByteArray1096 = var2.aClass16_1095.method65((int) var2.nodeId);
 						var1 = aClass59_429;
 						synchronized (var1) {
 							aClass59_427.method248(var2);
@@ -57,7 +57,7 @@ public class Class52 implements Runnable {
 				}
 			}
 		} catch (final Exception var13) {
-			Class104_Sub9.method520((String) null, var13);
+			Nodee.method520((String) null, var13);
 		}
 	}
 

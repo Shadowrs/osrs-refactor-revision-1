@@ -10,7 +10,7 @@ public final class Class76 {
 	static int[] anIntArray615;
 	static Class70 aClass70_617;
 	static Class8 aClass8_618;
-	static Class104_Sub12 aClass104_Sub12_619;
+	static Widget aClass104_Sub12_619;
 	static Class99 aClass99_620;
 	static int[][][] anIntArrayArrayArray611 = new int[4][105][105];
 	static byte[][][] aByteArrayArrayArray600 = new byte[4][104][104];

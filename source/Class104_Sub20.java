@@ -30,7 +30,7 @@ public final class Class104_Sub20 extends Class104 {
 		anInt1150 = var3;
 	}
 
-	static final boolean method559(final Class104_Sub12 var0) {
+	static final boolean method559(final Widget var0) {
 		final int var1 = var0.anInt982;
 		if (var1 == 205) {
 			client.anInt1836 = 250;

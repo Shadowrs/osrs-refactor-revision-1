@@ -199,17 +199,17 @@ public class Class88 {
 		return null == var2 ? 0 : ((var1 >= 0) && (var1 < var2.anIntArray858.length) ? var2.anIntArray858[var1] : 0);
 	}
 
-	static void method404(final int var0) {
-		if (var0 != -1)
-			if (Class104_Sub7.method508(var0)) {
-				final Class104_Sub12[] var1 = Class22.aClass104_Sub12ArrayArray228[var0];
+	static void handleCSCodes(final int hash) {
+		if (hash != -1)
+			if (Class104_Sub7.laoded(hash)) {
+				final Widget[] wid = Class22.widgets[hash];
 
-				for (final Class104_Sub12 var3 : var1) {
-					if (var3.anObjectArray970 != null) {
-						final Class104_Sub6 var4 = new Class104_Sub6();
-						var4.aClass104_Sub12_938 = var3;
-						var4.anObjectArray936 = var3.anObjectArray970;
-						Class46.method203(var4);
+				for (final Widget children : wid) {
+					if (children.opcodeKeys != null) {
+						final CS cs = new CS();
+						cs.ownerRSFaceHash = children;
+						cs.params = children.opcodeKeys;
+						Class46.doCS(cs);
 					}
 				}
 

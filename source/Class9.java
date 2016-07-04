@@ -18,7 +18,7 @@ public final class Class9 {
 		aBool53 = var7;
 	}
 
-	static final void method35() {
+	static final void otherPackets() {
 		int var0;
 		int var2;
 		int var3;
@@ -353,9 +353,9 @@ public final class Class9 {
 		}
 	}
 
-	static final void method36(final int var0, final int var1) {
-		if (Class104_Sub7.method508(var0))
-			Class15.method62(Class22.aClass104_Sub12ArrayArray228[var0], var1);
+	static final void doWidgetOp(final int hash, final int op) {
+		if (Class104_Sub7.laoded(hash))
+			Class15.loadWidget(Class22.widgets[hash], op);
 	}
 
 	static final String[] method37(final String[] var0) {

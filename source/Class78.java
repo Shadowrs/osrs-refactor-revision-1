@@ -75,7 +75,7 @@ public class Class78 {
 			}
 
 			int var6;
-			Class104_Sub12 var12;
+			Widget var12;
 			if (var3 == 28) {
 				client.secureBuf.method623(155);
 				client.secureBuf.writeInt(var2);
@@ -83,7 +83,7 @@ public class Class78 {
 				if ((null != var12.anIntArrayArray1069) && (var12.anIntArrayArray1069[0][0] == 5)) {
 					var6 = var12.anIntArrayArray1069[0][1];
 					Class71.anIntArray576[var6] = 1 - Class71.anIntArray576[var6];
-					Class46.method204(var6);
+					Class46.redrawComponent(var6);
 				}
 			}
 
@@ -255,7 +255,7 @@ public class Class78 {
 					var6 = var12.anIntArrayArray1069[0][1];
 					if (var12.anIntArray1076[0] != Class71.anIntArray576[var6]) {
 						Class71.anIntArray576[var6] = var12.anIntArray1076[0];
-						Class46.method204(var6);
+						Class46.redrawComponent(var6);
 					}
 				}
 			}
@@ -380,13 +380,13 @@ public class Class78 {
 			if (var3 == 26) {
 				client.secureBuf.method623(129);
 
-				for (Class104_Sub9 var15 = (Class104_Sub9) client.aClass58_1795
-						.method245(); null != var15; var15 = (Class104_Sub9) client.aClass58_1795.method243())
+				for (Nodee var15 = (Nodee) client.aClass58_1795
+						.method245(); null != var15; var15 = (Nodee) client.aClass58_1795.method243())
 					if ((var15.anInt956 == 0) || (var15.anInt956 == 3))
 						Class13.method56(var15, true);
 
 				if (null != client.aClass104_Sub12_1951) {
-					Class79.method348(client.aClass104_Sub12_1951);
+					Class79.setflags(client.aClass104_Sub12_1951);
 					client.aClass104_Sub12_1951 = null;
 				}
 			}
@@ -485,19 +485,19 @@ public class Class78 {
 				if (var12 != null) {
 					Class26.method132();
 					var6 = Class101.method464(Class104_Sub3.method485(var12));
-					final Class104_Sub12 var8 = Class29.method141(var2, var1);
+					final Widget var8 = Class29.method141(var2, var1);
 					if ((null != var8) && (var8.anObjectArray1056 != null)) {
-						final Class104_Sub6 var9 = new Class104_Sub6();
-						var9.aClass104_Sub12_938 = var8;
-						var9.anObjectArray936 = var8.anObjectArray1056;
-						Class46.method203(var9);
+						final CS var9 = new CS();
+						var9.ownerRSFaceHash = var8;
+						var9.params = var8.anObjectArray1056;
+						Class46.doCS(var9);
 					}
 
 					client.aBool1943 = true;
 					anInt628 = var2;
 					client.anInt1970 = var1;
 					Class11.anInt66 = var6;
-					Class79.method348(var8);
+					Class79.setflags(var8);
 					client.anInt1941 = 0;
 					String var14;
 					if (Class101.method464(Class104_Sub3.method485(var12)) == 0)
@@ -511,7 +511,7 @@ public class Class78 {
 					if (client.aString1914 == null)
 						client.aString1914 = "Null";
 
-					if (var12.aBool977)
+					if (var12.isHeaderless)
 						client.aString1946 = var12.aString990 + Class70.method326(16777215);
 					else
 						client.aString1946 = Class70.method326('\uff00') + var12.aString1078
@@ -648,7 +648,7 @@ public class Class78 {
 					Class7.anInt44 = var1;
 					Class14.anInt105 = var2;
 					Class7.anInt42 = var4;
-					Class79.method348(var12);
+					Class79.setflags(var12);
 					client.aString1942 = Class70.method326(16748608) + Class27.method137(var4).aString1444
 							+ Class70.method326(16777215);
 					if (null == client.aString1942)
@@ -668,7 +668,7 @@ public class Class78 {
 						client.secureBuf.method591(var1);
 						client.secureBuf.writeInt(var2);
 						client.aClass104_Sub12_1951 = Class29.method141(var2, var1);
-						Class79.method348(client.aClass104_Sub12_1951);
+						Class79.setflags(client.aClass104_Sub12_1951);
 					}
 
 					if (var3 == 23)
@@ -785,14 +785,14 @@ public class Class78 {
 
 					if (client.anInt1941 != 0) {
 						client.anInt1941 = 0;
-						Class79.method348(Class47.method210(Class14.anInt105));
+						Class79.setflags(Class47.method210(Class14.anInt105));
 					}
 
 					if (client.aBool1943)
 						Class26.method132();
 
 					if ((Class30.aClass104_Sub12_288 != null) && (client.anInt1899 == 0))
-						Class79.method348(Class30.aClass104_Sub12_288);
+						Class79.setflags(Class30.aClass104_Sub12_288);
 
 				}
 			}

@@ -395,7 +395,7 @@ public abstract class Class61 {
 		}
 	}
 
-	static final void method279(final Class104_Sub12 var0, final int var1, final int var2) {
+	static final void method279(final Widget var0, final int var1, final int var2) {
 		if ((null == client.aClass104_Sub12_1958) && !client.aBool1930)
 			if ((null != var0) && (Class44.method193(var0) != null)) {
 				client.aClass104_Sub12_1958 = var0;
@@ -463,9 +463,9 @@ public abstract class Class61 {
 	}
 
 	public static void method281() {
-		Class104_Sub12.aClass56_973.method239();
-		Class104_Sub12.aClass56_1045.method239();
-		Class104_Sub12.aClass56_1086.method239();
+		Widget.aClass56_973.method239();
+		Widget.aClass56_1045.method239();
+		Widget.aClass56_1086.method239();
 	}
 
 	static final int method282(final int var0, int var1, final byte var2) {

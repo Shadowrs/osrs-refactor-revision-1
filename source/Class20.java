@@ -10,7 +10,7 @@ public final class Class20 {
 	int anInt203;
 	static Class13 stream;
 	static int anInt206;
-	static Class104_Sub12 aClass104_Sub12_207;
+	static Widget aClass104_Sub12_207;
 	public int anInt200 = 0;
 	int anInt204 = 0;
 

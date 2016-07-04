@@ -1,5 +1,5 @@
 public class Class27 {
-	static Class104_Sub12 aClass104_Sub12_262;
+	static Widget aClass104_Sub12_262;
 	static Class61_Sub1 aClass61_Sub1_263;
 	static Class61_Sub1 aClass61_Sub1_264;
 	public static Class61 aClass61_265;

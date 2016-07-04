@@ -6,7 +6,7 @@ public class Class61_Sub1 extends Class61 {
 	volatile boolean[] aBoolArray882;
 	int anInt891 = -1;
 	static CRC32 aCRC32_889 = new CRC32();
-	int anInt890;
+	int crc;
 	int anInt887;
 	boolean aBool886 = false;
 	Class16 aClass16_888;
@@ -28,7 +28,7 @@ public class Class61_Sub1 extends Class61 {
 				final Class16 var6 = aClass16_883;
 				final Class104_Sub13 var7 = new Class104_Sub13();
 				var7.anInt1097 = 0;
-				var7.aLong824 = var5;
+				var7.nodeId = var5;
 				var7.aByteArray1096 = var2;
 				var7.aClass16_1095 = var6;
 				final Class59 var8 = Class52.aClass59_429;
@@ -54,7 +54,7 @@ public class Class61_Sub1 extends Class61 {
 				final Class16 var11 = aClass16_888;
 				final Class104_Sub13 var18 = new Class104_Sub13();
 				var18.anInt1097 = 0;
-				var18.aLong824 = var1;
+				var18.nodeId = var1;
 				var18.aByteArray1096 = var2;
 				var18.aClass16_1095 = var11;
 				final Class59 var19 = Class52.aClass59_429;
@@ -80,27 +80,27 @@ public class Class61_Sub1 extends Class61 {
 	}
 
 	public void method488(final Class16 var1, final int var2, final byte[] data, final boolean var4) {
-		int var5;
+		int ucrc;
 		if (var1 == aClass16_883) {
 			if (aBool885)
 				throw new RuntimeException();
 			else if (null == data)
-				Class49.method222(this, 255, anInt884, anInt890, (byte) 0, true);
+				Class49.method222(this, 255, anInt884, crc, (byte) 0, true);
 			else {
 				aCRC32_889.reset();
 				aCRC32_889.update(data, 0, data.length);
-				var5 = (int) aCRC32_889.getValue();
+				ucrc = (int) aCRC32_889.getValue();
 				final RSBuf buf = new RSBuf(Class57.method240(data));
 				final int opcode = buf.readUByte();
 				if ((opcode != 5) && (opcode != 6))
-					throw new RuntimeException("yo");
+					throw new RuntimeException("");
 				else {
 					int var8 = 0;
 					if (opcode >= 6)
 						var8 = buf.readLEInt();
 
-					if ((anInt890 != var5) || (anInt887 != var8))
-						Class49.method222(this, 255, anInt884, anInt890, (byte) 0, true);
+					if ((crc != ucrc) || (anInt887 != var8))
+						Class49.method222(this, 255, anInt884, crc, (byte) 0, true);
 					else {
 						method257(data);
 						method489();
@@ -114,9 +114,9 @@ public class Class61_Sub1 extends Class61 {
 			if ((null != data) && (data.length > 2)) {
 				aCRC32_889.reset();
 				aCRC32_889.update(data, 0, data.length - 2);
-				var5 = (int) aCRC32_889.getValue();
+				ucrc = (int) aCRC32_889.getValue();
 				final int var9 = ((data[data.length - 2] & 255) << 8) + (data[data.length - 1] & 255);
-				if ((var5 == anIntArray483[var2]) && (var9 == anIntArray493[var2])) {
+				if ((ucrc == anIntArray483[var2]) && (var9 == anIntArray493[var2])) {
 					aBoolArray882[var2] = true;
 					if (var4)
 						anObjectArray492[var2] = Class52.method229(data, false);
@@ -153,7 +153,7 @@ public class Class61_Sub1 extends Class61 {
 					final Class16 var2 = aClass16_888;
 					final Class104_Sub13 var4 = new Class104_Sub13();
 					var4.anInt1097 = 1;
-					var4.aLong824 = var1;
+					var4.nodeId = var1;
 					var4.aClass16_1095 = var2;
 					var4.aClass61_Sub1_1098 = this;
 					final Class59 var5 = Class52.aClass59_429;
@@ -211,12 +211,12 @@ public class Class61_Sub1 extends Class61 {
 	}
 
 	void method492(final int var1, final int var2) {
-		anInt890 = var1;
+		crc = var1;
 		anInt887 = var2;
 		if (aClass16_883 != null)
 			Class87.method397(anInt884, aClass16_883, this);
 		else
-			Class49.method222(this, 255, anInt884, anInt890, (byte) 0, true);
+			Class49.method222(this, 255, anInt884, crc, (byte) 0, true);
 
 	}
 

@@ -20,8 +20,8 @@ public class Class29 {
 		return new String(var2);
 	}
 
-	public static Class104_Sub12 method141(final int var0, final int var1) {
-		final Class104_Sub12 var2 = Class47.method210(var0);
+	public static Widget method141(final int var0, final int var1) {
+		final Widget var2 = Class47.method210(var0);
 		return var1 == -1 ? var2
 				: ((var2 != null) && (null != var2.aClass104_Sub12Array1020)
 						&& (var1 < var2.aClass104_Sub12Array1020.length) ? var2.aClass104_Sub12Array1020[var1] : null);
@@ -32,15 +32,15 @@ public class Class29 {
 	}
 
 	static void method143(final int var0, final int var1, final int var2, final String var3) {
-		final Class104_Sub12 var4 = method141(var1, var2);
+		final Widget var4 = method141(var1, var2);
 		if (null != var4) {
 			if (null != var4.anObjectArray1042) {
-				final Class104_Sub6 var5 = new Class104_Sub6();
-				var5.aClass104_Sub12_938 = var4;
+				final CS var5 = new CS();
+				var5.ownerRSFaceHash = var4;
 				var5.anInt939 = var0;
 				var5.aString943 = var3;
-				var5.anObjectArray936 = var4.anObjectArray1042;
-				Class46.method203(var5);
+				var5.params = var4.anObjectArray1042;
+				Class46.doCS(var5);
 			}
 
 			boolean var6 = true;

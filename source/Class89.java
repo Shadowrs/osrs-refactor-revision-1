@@ -6,7 +6,7 @@ public class Class89 {
 	static int anInt702;
 	static int anInt703;
 	static int anInt704;
-	static Class104_Sub12 aClass104_Sub12_705;
+	static Widget aClass104_Sub12_705;
 
 	public static void method406() {
 		try {

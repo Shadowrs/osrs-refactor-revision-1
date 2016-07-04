@@ -243,7 +243,7 @@ public final class Class16 {
 		var9.anInt878 = var8;
 	}
 
-	static String method68(final Class104_Sub12 var0) {
+	static String method68(final Widget var0) {
 		return Class101.method464(Class104_Sub3.method485(var0)) == 0 ? null
 				: ((null != var0.aString1036) && (var0.aString1036.trim().length() != 0) ? var0.aString1036 : null);
 	}

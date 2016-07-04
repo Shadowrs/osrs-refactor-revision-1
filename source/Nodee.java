@@ -5,9 +5,9 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URL;
 
-public class Class104_Sub9 extends Class104 {
+public class Nodee extends Class104 {
 	int anInt956;
-	int anInt957;
+	int rsfaceID;
 	static Class61 aClass61_959;
 	boolean aBool958 = false;
 

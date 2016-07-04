@@ -1,16 +1,16 @@
-public class Class104_Sub12 extends Class104 {
+public class Widget extends Class104 {
 	static Class61 aClass61_971;
 	public Object[] anObjectArray972;
 	static Class61 aClass61_995;
 	public static Class61 aClass61_1001;
 	public Object[] anObjectArray1014;
-	public Class104_Sub12[] aClass104_Sub12Array1020;
+	public Widget[] aClass104_Sub12Array1020;
 	public Object[] anObjectArray1067;
 	public Object[] anObjectArray1068;
 	public Object[] anObjectArray1070;
 	public Object[] anObjectArray1072;
 	public Object[] anObjectArray1073;
-	public boolean aBool977 = false;
+	public boolean isHeaderless = false;
 	public int anInt980;
 	public int anInt981 = 0;
 	public int anInt982 = 0;
@@ -80,7 +80,7 @@ public class Class104_Sub12 extends Class104 {
 	public int anInt1082 = 0;
 	public boolean aBool1009;
 	public boolean aBool1053 = false;
-	public Object[] anObjectArray970;
+	public Object[] opcodeKeys;
 	public Object[] anObjectArray1051;
 	public Object[] anObjectArray1033;
 	public Object[] anObjectArray1031;
@@ -110,7 +110,7 @@ public class Class104_Sub12 extends Class104 {
 	public int anInt991 = 0;
 	public int anInt992 = 0;
 	public int anInt1022 = 0;
-	public Class104_Sub12 aClass104_Sub12_1040 = null;
+	public Widget aClass104_Sub12_1040 = null;
 	public boolean aBool1008 = false;
 	public int anInt986 = -1;
 	public int anInt1083 = 0;
@@ -126,7 +126,7 @@ public class Class104_Sub12 extends Class104 {
 	public int anInt1094 = -1;
 
 	void method527(final RSBuf var1) {
-		aBool977 = false;
+		isHeaderless = false;
 		anInt980 = var1.readUByte();
 		anInt981 = var1.readUByte();
 		anInt982 = var1.readLEShort();
@@ -354,7 +354,7 @@ public class Class104_Sub12 extends Class104 {
 
 	void method528(final RSBuf var1) {
 		var1.readUByte();
-		aBool977 = true;
+		isHeaderless = true;
 		anInt980 = var1.readUByte();
 		anInt982 = var1.readLEShort();
 		anInt985 = anInt983 = var1.method572();
@@ -445,7 +445,7 @@ public class Class104_Sub12 extends Class104 {
 		anInt1082 = var1.readUByte();
 		aBool1053 = var1.readUByte() == 1;
 		aString1036 = var1.method608();
-		anObjectArray970 = method534(var1);
+		opcodeKeys = method534(var1);
 		anObjectArray1051 = method534(var1);
 		anObjectArray1033 = method534(var1);
 		anObjectArray1031 = method534(var1);
@@ -718,14 +718,14 @@ public class Class104_Sub12 extends Class104 {
 
 	}
 
-	static final void method538(final Class104_Sub12[] var0, final int var1, final int var2, final int var3,
+	static final void method538(final Widget[] var0, final int var1, final int var2, final int var3,
 			final int var4, final int var5, final int var6, final int var7) {
 		for (int var8 = 0; var8 < var0.length; ++var8) {
-			final Class104_Sub12 var9 = var0[var8];
+			final Widget var9 = var0[var8];
 			if ((var9 != null)
-					&& (!var9.aBool977 || (var9.anInt980 == 0) || var9.aBool1008 || (Class104_Sub3.method485(var9) != 0)
+					&& (!var9.isHeaderless || (var9.anInt980 == 0) || var9.aBool1008 || (Class104_Sub3.method485(var9) != 0)
 							|| (var9 == client.aClass104_Sub12_2019))
-					&& (var1 == var9.anInt1091) && (!var9.aBool977 || !Class40.method182(var9))) {
+					&& (var1 == var9.anInt1091) && (!var9.isHeaderless || !Class40.method182(var9))) {
 				final int var10 = var9.anInt983 + var6;
 				final int var11 = var9.anInt1005 + var7;
 				int var12;
@@ -778,14 +778,14 @@ public class Class104_Sub12 extends Class104 {
 					client.anInt1967 = var11;
 				}
 
-				if (!var9.aBool977 || ((var12 < var14) && (var13 < var15)))
+				if (!var9.isHeaderless || ((var12 < var14) && (var13 < var15)))
 					if (var9.anInt982 == 1337)
-						Class79.method348(var9);
+						Class79.setflags(var9);
 					else if (var9.anInt982 == 1338)
 						Class84.method380(var10, var11);
 					else {
 						if (var9.anInt980 == 0) {
-							if (!var9.aBool977 && Class40.method182(var9) && (Class76.aClass104_Sub12_619 != var9))
+							if (!var9.isHeaderless && Class40.method182(var9) && (Class76.aClass104_Sub12_619 != var9))
 								continue;
 
 							method538(var0, var9.anInt978, var12, var13, var14, var15, var10 - var9.anInt991,
@@ -794,12 +794,12 @@ public class Class104_Sub12 extends Class104 {
 								method538(var9.aClass104_Sub12Array1020, var9.anInt978, var12, var13, var14, var15,
 										var10 - var9.anInt991, var11 - var9.anInt992);
 
-							final Class104_Sub9 var21 = (Class104_Sub9) client.aClass58_1795.method241(var9.anInt978);
+							final Nodee var21 = (Nodee) client.aClass58_1795.method241(var9.anInt978);
 							if (var21 != null)
-								Class97.method438(var21.anInt957, var12, var13, var14, var15, var10, var11);
+								Class97.method438(var21.rsfaceID, var12, var13, var14, var15, var10, var11);
 						}
 
-						if (var9.aBool977) {
+						if (var9.isHeaderless) {
 							boolean var26;
 							if ((Class14.anInt91 >= var12) && (Class14.anInt95 >= var13) && (Class14.anInt91 < var14)
 									&& (Class14.anInt95 < var15))
@@ -835,12 +835,12 @@ public class Class104_Sub12 extends Class104 {
 							}
 
 							if (var9.aBool1008) {
-								Class104_Sub6 var22;
+								CS var22;
 								if (var26 && (client.anInt1983 != 0) && (null != var9.anObjectArray1026)) {
-									var22 = new Class104_Sub6();
-									var22.aClass104_Sub12_938 = var9;
+									var22 = new CS();
+									var22.ownerRSFaceHash = var9;
 									var22.anInt935 = client.anInt1983;
-									var22.anObjectArray936 = var9.anObjectArray1026;
+									var22.params = var9.anObjectArray1026;
 									client.aClass59_1984.method248(var22);
 								}
 
@@ -854,87 +854,87 @@ public class Class104_Sub12 extends Class104 {
 								if (!var9.aBool1066 && var28) {
 									var9.aBool1066 = true;
 									if (null != var9.anObjectArray1047) {
-										var22 = new Class104_Sub6();
-										var22.aClass104_Sub12_938 = var9;
+										var22 = new CS();
+										var22.ownerRSFaceHash = var9;
 										var22.anInt937 = Class14.anInt101 - var10;
 										var22.anInt935 = Class14.anInt102 - var11;
-										var22.anObjectArray936 = var9.anObjectArray1047;
+										var22.params = var9.anObjectArray1047;
 										client.aClass59_1984.method248(var22);
 									}
 								}
 
 								if (var9.aBool1066 && var27 && (null != var9.anObjectArray1048)) {
-									var22 = new Class104_Sub6();
-									var22.aClass104_Sub12_938 = var9;
+									var22 = new CS();
+									var22.ownerRSFaceHash = var9;
 									var22.anInt937 = Class14.anInt91 - var10;
 									var22.anInt935 = Class14.anInt95 - var11;
-									var22.anObjectArray936 = var9.anObjectArray1048;
+									var22.params = var9.anObjectArray1048;
 									client.aClass59_1984.method248(var22);
 								}
 
 								if (var9.aBool1066 && !var27) {
 									var9.aBool1066 = false;
 									if (null != var9.anObjectArray1046) {
-										var22 = new Class104_Sub6();
-										var22.aClass104_Sub12_938 = var9;
+										var22 = new CS();
+										var22.ownerRSFaceHash = var9;
 										var22.anInt937 = Class14.anInt91 - var10;
 										var22.anInt935 = Class14.anInt95 - var11;
-										var22.anObjectArray936 = var9.anObjectArray1046;
+										var22.params = var9.anObjectArray1046;
 										client.aClass59_1957.method248(var22);
 									}
 								}
 
 								if (var27 && (null != var9.anObjectArray1050)) {
-									var22 = new Class104_Sub6();
-									var22.aClass104_Sub12_938 = var9;
+									var22 = new CS();
+									var22.ownerRSFaceHash = var9;
 									var22.anInt937 = Class14.anInt91 - var10;
 									var22.anInt935 = Class14.anInt95 - var11;
-									var22.anObjectArray936 = var9.anObjectArray1050;
+									var22.params = var9.anObjectArray1050;
 									client.aClass59_1984.method248(var22);
 								}
 
 								if (!var9.aBool1087 && var26) {
 									var9.aBool1087 = true;
 									if (null != var9.anObjectArray1051) {
-										var22 = new Class104_Sub6();
-										var22.aClass104_Sub12_938 = var9;
+										var22 = new CS();
+										var22.ownerRSFaceHash = var9;
 										var22.anInt937 = Class14.anInt91 - var10;
 										var22.anInt935 = Class14.anInt95 - var11;
-										var22.anObjectArray936 = var9.anObjectArray1051;
+										var22.params = var9.anObjectArray1051;
 										client.aClass59_1984.method248(var22);
 									}
 								}
 
 								if (var9.aBool1087 && var26 && (var9.anObjectArray1052 != null)) {
-									var22 = new Class104_Sub6();
-									var22.aClass104_Sub12_938 = var9;
+									var22 = new CS();
+									var22.ownerRSFaceHash = var9;
 									var22.anInt937 = Class14.anInt91 - var10;
 									var22.anInt935 = Class14.anInt95 - var11;
-									var22.anObjectArray936 = var9.anObjectArray1052;
+									var22.params = var9.anObjectArray1052;
 									client.aClass59_1984.method248(var22);
 								}
 
 								if (var9.aBool1087 && !var26) {
 									var9.aBool1087 = false;
 									if (null != var9.anObjectArray1033) {
-										var22 = new Class104_Sub6();
-										var22.aClass104_Sub12_938 = var9;
+										var22 = new CS();
+										var22.ownerRSFaceHash = var9;
 										var22.anInt937 = Class14.anInt91 - var10;
 										var22.anInt935 = Class14.anInt95 - var11;
-										var22.anObjectArray936 = var9.anObjectArray1033;
+										var22.params = var9.anObjectArray1033;
 										client.aClass59_1957.method248(var22);
 									}
 								}
 
 								if (null != var9.anObjectArray1064) {
-									var22 = new Class104_Sub6();
-									var22.aClass104_Sub12_938 = var9;
-									var22.anObjectArray936 = var9.anObjectArray1064;
+									var22 = new CS();
+									var22.ownerRSFaceHash = var9;
+									var22.params = var9.anObjectArray1064;
 									client.aClass59_1985.method248(var22);
 								}
 
 								int var23;
-								Class104_Sub6 var24;
+								CS var24;
 								if ((null != var9.anObjectArray1034) && (client.anInt1948 > var9.anInt1090)) {
 									if ((null != var9.anIntArray1084) && ((client.anInt1948 - var9.anInt1090) <= 32))
 										label373: for (var19 = var9.anInt1090; var19 < client.anInt1948; ++var19) {
@@ -942,17 +942,17 @@ public class Class104_Sub12 extends Class104 {
 
 											for (var23 = 0; var23 < var9.anIntArray1084.length; ++var23)
 												if (var9.anIntArray1084[var23] == var20) {
-													var24 = new Class104_Sub6();
-													var24.aClass104_Sub12_938 = var9;
-													var24.anObjectArray936 = var9.anObjectArray1034;
+													var24 = new CS();
+													var24.ownerRSFaceHash = var9;
+													var24.params = var9.anObjectArray1034;
 													client.aClass59_1984.method248(var24);
 													break label373;
 												}
 										}
 									else {
-										var22 = new Class104_Sub6();
-										var22.aClass104_Sub12_938 = var9;
-										var22.anObjectArray936 = var9.anObjectArray1034;
+										var22 = new CS();
+										var22.ownerRSFaceHash = var9;
+										var22.params = var9.anObjectArray1034;
 										client.aClass59_1984.method248(var22);
 									}
 
@@ -966,17 +966,17 @@ public class Class104_Sub12 extends Class104 {
 
 											for (var23 = 0; var23 < var9.anIntArray1061.length; ++var23)
 												if (var20 == var9.anIntArray1061[var23]) {
-													var24 = new Class104_Sub6();
-													var24.aClass104_Sub12_938 = var9;
-													var24.anObjectArray936 = var9.anObjectArray1060;
+													var24 = new CS();
+													var24.ownerRSFaceHash = var9;
+													var24.params = var9.anObjectArray1060;
 													client.aClass59_1984.method248(var24);
 													break label353;
 												}
 										}
 									else {
-										var22 = new Class104_Sub6();
-										var22.aClass104_Sub12_938 = var9;
-										var22.anObjectArray936 = var9.anObjectArray1060;
+										var22 = new CS();
+										var22.ownerRSFaceHash = var9;
+										var22.params = var9.anObjectArray1060;
 										client.aClass59_1984.method248(var22);
 									}
 
@@ -990,17 +990,17 @@ public class Class104_Sub12 extends Class104 {
 
 											for (var23 = 0; var23 < var9.anIntArray1063.length; ++var23)
 												if (var9.anIntArray1063[var23] == var20) {
-													var24 = new Class104_Sub6();
-													var24.aClass104_Sub12_938 = var9;
-													var24.anObjectArray936 = var9.anObjectArray1062;
+													var24 = new CS();
+													var24.ownerRSFaceHash = var9;
+													var24.params = var9.anObjectArray1062;
 													client.aClass59_1984.method248(var24);
 													break label333;
 												}
 										}
 									else {
-										var22 = new Class104_Sub6();
-										var22.aClass104_Sub12_938 = var9;
-										var22.anObjectArray936 = var9.anObjectArray1062;
+										var22 = new CS();
+										var22.ownerRSFaceHash = var9;
+										var22.params = var9.anObjectArray1062;
 										client.aClass59_1984.method248(var22);
 									}
 
@@ -1008,47 +1008,47 @@ public class Class104_Sub12 extends Class104 {
 								}
 
 								if ((client.anInt1977 > var9.anInt1089) && (null != var9.anObjectArray1067)) {
-									var22 = new Class104_Sub6();
-									var22.aClass104_Sub12_938 = var9;
-									var22.anObjectArray936 = var9.anObjectArray1067;
+									var22 = new CS();
+									var22.ownerRSFaceHash = var9;
+									var22.params = var9.anObjectArray1067;
 									client.aClass59_1984.method248(var22);
 								}
 
 								if ((client.anInt1846 > var9.anInt1089) && (null != var9.anObjectArray1072)) {
-									var22 = new Class104_Sub6();
-									var22.aClass104_Sub12_938 = var9;
-									var22.anObjectArray936 = var9.anObjectArray1072;
+									var22 = new CS();
+									var22.ownerRSFaceHash = var9;
+									var22.params = var9.anObjectArray1072;
 									client.aClass59_1984.method248(var22);
 								}
 
 								if ((client.anInt2037 > var9.anInt1089) && (var9.anObjectArray1070 != null)) {
-									var22 = new Class104_Sub6();
-									var22.aClass104_Sub12_938 = var9;
-									var22.anObjectArray936 = var9.anObjectArray1070;
+									var22 = new CS();
+									var22.ownerRSFaceHash = var9;
+									var22.params = var9.anObjectArray1070;
 									client.aClass59_1984.method248(var22);
 								}
 
 								if ((client.anInt1980 > var9.anInt1089) && (null != var9.anObjectArray972)) {
-									var22 = new Class104_Sub6();
-									var22.aClass104_Sub12_938 = var9;
-									var22.anObjectArray936 = var9.anObjectArray972;
+									var22 = new CS();
+									var22.ownerRSFaceHash = var9;
+									var22.params = var9.anObjectArray972;
 									client.aClass59_1984.method248(var22);
 								}
 
 								var9.anInt1089 = client.anInt1978;
 								if (null != var9.anObjectArray1068)
 									for (var19 = 0; var19 < client.anInt2008; ++var19) {
-										final Class104_Sub6 var25 = new Class104_Sub6();
-										var25.aClass104_Sub12_938 = var9;
+										final CS var25 = new CS();
+										var25.ownerRSFaceHash = var9;
 										var25.anInt941 = client.anIntArray2010[var19];
 										var25.anInt942 = client.anIntArray2009[var19];
-										var25.anObjectArray936 = var9.anObjectArray1068;
+										var25.params = var9.anObjectArray1068;
 										client.aClass59_1984.method248(var25);
 									}
 							}
 						}
 
-						if (!var9.aBool977) {
+						if (!var9.isHeaderless) {
 							if ((null != client.aClass104_Sub12_1958) || (null != Class67.aClass104_Sub12_556)
 									|| client.aBool1930)
 								return;

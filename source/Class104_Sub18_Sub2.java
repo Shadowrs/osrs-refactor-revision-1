@@ -58,7 +58,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 				boolean var6 = false;
 
 				for (int var7 = 0; var7 < anIntArray1249.length; ++var7)
-					if (!Class104_Sub9.aClass61_959.method260(anIntArray1249[var7], 0))
+					if (!Nodee.aClass61_959.method260(anIntArray1249[var7], 0))
 						var6 = true;
 
 				if (var6)
@@ -68,7 +68,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 
 				int var9;
 				for (var9 = 0; var9 < anIntArray1249.length; ++var9)
-					var8[var9] = Class104_Sub18_Sub16_Sub5.method913(Class104_Sub9.aClass61_959, anIntArray1249[var9],
+					var8[var9] = Class104_Sub18_Sub16_Sub5.method913(Nodee.aClass61_959, anIntArray1249[var9],
 							0);
 
 				Class104_Sub18_Sub16_Sub5 var10;
@@ -116,7 +116,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			boolean var2 = false;
 
 			for (int var3 = 0; var3 < anIntArray1232.length; ++var3)
-				if (!Class104_Sub9.aClass61_959.method260(anIntArray1232[var3], 0))
+				if (!Nodee.aClass61_959.method260(anIntArray1232[var3], 0))
 					var2 = true;
 
 			if (var2)
@@ -125,7 +125,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 				final Class104_Sub18_Sub16_Sub5[] var4 = new Class104_Sub18_Sub16_Sub5[anIntArray1232.length];
 
 				for (int var5 = 0; var5 < anIntArray1232.length; ++var5)
-					var4[var5] = Class104_Sub18_Sub16_Sub5.method913(Class104_Sub9.aClass61_959, anIntArray1232[var5],
+					var4[var5] = Class104_Sub18_Sub16_Sub5.method913(Nodee.aClass61_959, anIntArray1232[var5],
 							0);
 
 				Class104_Sub18_Sub16_Sub5 var6;

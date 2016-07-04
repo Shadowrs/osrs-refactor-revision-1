@@ -28,7 +28,7 @@ public class Class87 {
 		synchronized (var4) {
 			for (Class104_Sub13 var5 = (Class104_Sub13) Class52.aClass59_429
 					.method251(); null != var5; var5 = (Class104_Sub13) Class52.aClass59_429.method252())
-				if ((var5.aLong824 == var0) && (var1 == var5.aClass16_1095) && (var5.anInt1097 == 0)) {
+				if ((var5.nodeId == var0) && (var1 == var5.aClass16_1095) && (var5.anInt1097 == 0)) {
 					var3 = var5.aByteArray1096;
 					break;
 				}

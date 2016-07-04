@@ -27,24 +27,24 @@ public class Class46 {
 			return new byte[var0];
 	}
 
-	static void method203(final Class104_Sub6 var0) {
-		final Object[] var1 = var0.anObjectArray936;
+	static void doCS(final CS var0) {
+		final Object[] var1 = var0.params;
 		final int var2 = ((Integer) var1[0]).intValue();
-		Class104_Sub18_Sub4 var3 = Class42.method184(var2);
-		if (null != var3) {
+		CS2 cachedscript = Class42.getCS(var2);
+		if (null != cachedscript) {
 			int var4 = 0;
 			int var5 = 0;
 			int var6 = -1;
-			int[] var7 = var3.anIntArray1277;
-			int[] var8 = var3.anIntArray1276;
+			int[] var7 = cachedscript.opcodeHeaders;
+			int[] var8 = cachedscript.numberValuesToUse;
 			final byte var9 = -1;
-			Class90.anInt713 = 0;
+			Class90.totalActs = 0;
 
 			int var12;
 			try {
-				Class90.anIntArray707 = new int[var3.anInt1279];
+				Class90.cachedCsIntToUse = new int[cachedscript.anInt1279];
 				int var10 = 0;
-				Class90.aStringArray709 = new String[var3.anInt1281];
+				Class90.cachedCsStrToUse = new String[cachedscript.anInt1281];
 				int var11 = 0;
 
 				int var13;
@@ -59,13 +59,13 @@ public class Class46 {
 							var13 = var0.anInt935;
 
 						if (var13 == -2147483645)
-							var13 = var0.aClass104_Sub12_938 != null ? var0.aClass104_Sub12_938.anInt978 : -1;
+							var13 = var0.ownerRSFaceHash != null ? var0.ownerRSFaceHash.anInt978 : -1;
 
 						if (var13 == -2147483644)
 							var13 = var0.anInt939;
 
 						if (var13 == -2147483643)
-							var13 = var0.aClass104_Sub12_938 != null ? var0.aClass104_Sub12_938.anInt1018 : -1;
+							var13 = var0.ownerRSFaceHash != null ? var0.ownerRSFaceHash.anInt1018 : -1;
 
 						if (var13 == -2147483642)
 							var13 = null != var0.aClass104_Sub12_940 ? var0.aClass104_Sub12_940.anInt978 : -1;
@@ -79,13 +79,13 @@ public class Class46 {
 						if (var13 == -2147483639)
 							var13 = var0.anInt942;
 
-						Class90.anIntArray707[var10++] = var13;
+						Class90.cachedCsIntToUse[var10++] = var13;
 					} else if (var1[var12] instanceof String) {
 						var14 = (String) var1[var12];
 						if (var14.equals("event_opbase"))
 							var14 = var0.aString943;
 
-						Class90.aStringArray709[var11++] = var14;
+						Class90.cachedCsStrToUse[var11++] = var14;
 					}
 
 				var12 = 0;
@@ -126,7 +126,7 @@ public class Class46 {
 						}
 
 						if (var44 == 3) {
-							Class90.aStringArray712[var5++] = var3.aStringArray1280[var6];
+							Class90.aStringArray712[var5++] = cachedscript.aStringArray1280[var6];
 							continue;
 						}
 
@@ -164,16 +164,16 @@ public class Class46 {
 						}
 
 						if (var44 == 21) {
-							if (Class90.anInt713 == 0)
+							if (Class90.totalActs == 0)
 								return;
 
-							final Class100 var45 = Class90.aClass100Array714[--Class90.anInt713];
-							var3 = var45.aClass104_Sub18_Sub4_796;
-							var7 = var3.anIntArray1277;
-							var8 = var3.anIntArray1276;
+							final Class100 var45 = Class90.aClass100Array714[--Class90.totalActs];
+							cachedscript = var45.aClass104_Sub18_Sub4_796;
+							var7 = cachedscript.opcodeHeaders;
+							var8 = cachedscript.numberValuesToUse;
 							var6 = var45.anInt795;
-							Class90.anIntArray707 = var45.anIntArray797;
-							Class90.aStringArray709 = var45.aStringArray798;
+							Class90.cachedCsIntToUse = var45.anIntArray797;
+							Class90.cachedCsStrToUse = var45.aStringArray798;
 							continue;
 						}
 
@@ -216,7 +216,7 @@ public class Class46 {
 						}
 
 						if (var44 == 33) {
-							Class90.anIntArray706[var4++] = Class90.anIntArray707[var8[var6]];
+							Class90.anIntArray706[var4++] = Class90.cachedCsIntToUse[var8[var6]];
 							continue;
 						}
 
@@ -224,19 +224,19 @@ public class Class46 {
 						if (var44 == 34) {
 							var10001 = var8[var6];
 							--var4;
-							Class90.anIntArray707[var10001] = Class90.anIntArray706[var4];
+							Class90.cachedCsIntToUse[var10001] = Class90.anIntArray706[var4];
 							continue;
 						}
 
 						if (var44 == 35) {
-							Class90.aStringArray712[var5++] = Class90.aStringArray709[var8[var6]];
+							Class90.aStringArray712[var5++] = Class90.cachedCsStrToUse[var8[var6]];
 							continue;
 						}
 
 						if (var44 == 36) {
 							var10001 = var8[var6];
 							--var5;
-							Class90.aStringArray709[var10001] = Class90.aStringArray712[var5];
+							Class90.cachedCsStrToUse[var10001] = Class90.aStringArray712[var5];
 							continue;
 						}
 
@@ -260,7 +260,7 @@ public class Class46 {
 
 						if (var44 == 40) {
 							var13 = var8[var6];
-							final Class104_Sub18_Sub4 var93 = Class42.method184(var13);
+							final CS2 var93 = Class42.getCS(var13);
 							var47 = new int[var93.anInt1279];
 							final String[] var69 = new String[var93.anInt1281];
 
@@ -273,17 +273,17 @@ public class Class46 {
 							var4 -= var93.anInt1282;
 							var5 -= var93.anInt1283;
 							final Class100 var81 = new Class100();
-							var81.aClass104_Sub18_Sub4_796 = var3;
+							var81.aClass104_Sub18_Sub4_796 = cachedscript;
 							var81.anInt795 = var6;
-							var81.anIntArray797 = Class90.anIntArray707;
-							var81.aStringArray798 = Class90.aStringArray709;
-							Class90.aClass100Array714[++Class90.anInt713 - 1] = var81;
-							var3 = var93;
-							var7 = var93.anIntArray1277;
-							var8 = var93.anIntArray1276;
+							var81.anIntArray797 = Class90.cachedCsIntToUse;
+							var81.aStringArray798 = Class90.cachedCsStrToUse;
+							Class90.aClass100Array714[++Class90.totalActs - 1] = var81;
+							cachedscript = var93;
+							var7 = var93.opcodeHeaders;
+							var8 = var93.numberValuesToUse;
 							var6 = -1;
-							Class90.anIntArray707 = var47;
-							Class90.aStringArray709 = var69;
+							Class90.cachedCsIntToUse = var47;
+							Class90.cachedCsStrToUse = var69;
 							continue;
 						}
 
@@ -371,9 +371,9 @@ public class Class46 {
 					else
 						var49 = false;
 
-					Class104_Sub12 var21;
-					Class104_Sub12 var22;
-					Class104_Sub12 var23;
+					Widget var21;
+					Widget var22;
+					Widget var23;
 					if (var44 < 1000) {
 						if (var44 == 100) {
 							var4 -= 3;
@@ -385,10 +385,10 @@ public class Class46 {
 
 							var23 = Class47.method210(var15);
 							if (null == var23.aClass104_Sub12Array1020)
-								var23.aClass104_Sub12Array1020 = new Class104_Sub12[1 + var17];
+								var23.aClass104_Sub12Array1020 = new Widget[1 + var17];
 
 							if (var23.aClass104_Sub12Array1020.length <= var17) {
-								final Class104_Sub12[] var76 = new Class104_Sub12[1 + var17];
+								final Widget[] var76 = new Widget[1 + var17];
 
 								for (var20 = 0; var20 < var23.aClass104_Sub12Array1020.length; ++var20)
 									var76[var20] = var23.aClass104_Sub12Array1020[var20];
@@ -399,26 +399,26 @@ public class Class46 {
 							if ((var17 > 0) && (var23.aClass104_Sub12Array1020[var17 - 1] == null))
 								throw new RuntimeException("" + (var17 - 1));
 
-							final Class104_Sub12 var77 = new Class104_Sub12();
+							final Widget var77 = new Widget();
 							var77.anInt980 = var24;
 							var77.anInt1091 = var77.anInt978 = var23.anInt978;
 							var77.anInt1018 = var17;
-							var77.aBool977 = true;
+							var77.isHeaderless = true;
 							var23.aClass104_Sub12Array1020[var17] = var77;
 							if (var49)
 								Class27.aClass104_Sub12_262 = var77;
 							else
 								Class84.aClass104_Sub12_660 = var77;
 
-							Class79.method348(var23);
+							Class79.setflags(var23);
 							continue;
 						}
 
 						if (var44 == 101) {
 							var21 = var49 ? Class27.aClass104_Sub12_262 : Class84.aClass104_Sub12_660;
-							final Class104_Sub12 var71 = Class47.method210(var21.anInt978);
+							final Widget var71 = Class47.method210(var21.anInt978);
 							var71.aClass104_Sub12Array1020[var21.anInt1018] = null;
-							Class79.method348(var71);
+							Class79.setflags(var71);
 							continue;
 						}
 
@@ -426,7 +426,7 @@ public class Class46 {
 							--var4;
 							var21 = Class47.method210(Class90.anIntArray706[var4]);
 							var21.aClass104_Sub12Array1020 = null;
-							Class79.method348(var21);
+							Class79.setflags(var21);
 							continue;
 						}
 
@@ -459,7 +459,7 @@ public class Class46 {
 							var4 -= 2;
 							var21.anInt983 = Class90.anIntArray706[var4];
 							var21.anInt1005 = Class90.anIntArray706[var4 + 1];
-							Class79.method348(var21);
+							Class79.setflags(var21);
 							continue;
 						}
 
@@ -467,7 +467,7 @@ public class Class46 {
 							var4 -= 2;
 							var21.anInt987 = Class90.anIntArray706[var4];
 							var21.anInt988 = Class90.anIntArray706[var4 + 1];
-							Class79.method348(var21);
+							Class79.setflags(var21);
 							continue;
 						}
 
@@ -476,7 +476,7 @@ public class Class46 {
 							final boolean var90 = Class90.anIntArray706[var4] == 1;
 							if (var90 != var21.aBool1075) {
 								var21.aBool1075 = var90;
-								Class79.method348(var21);
+								Class79.setflags(var21);
 							}
 							continue;
 						}
@@ -491,7 +491,7 @@ public class Class46 {
 								} else
 									var21 = var49 ? Class27.aClass104_Sub12_262 : Class84.aClass104_Sub12_660;
 
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								if (var44 == 1200) {
 									var4 -= 2;
 									var24 = Class90.anIntArray706[var4];
@@ -871,7 +871,7 @@ public class Class46 {
 									if (var44 == 2702) {
 										--var4;
 										var15 = Class90.anIntArray706[var4];
-										final Class104_Sub9 var46 = (Class104_Sub9) client.aClass58_1795
+										final Nodee var46 = (Nodee) client.aClass58_1795
 												.method241(var15);
 										if (null != var46)
 											Class90.anIntArray706[var4++] = 1;
@@ -927,14 +927,14 @@ public class Class46 {
 									if (var44 == 3103) {
 										client.secureBuf.method623(129);
 
-										for (Class104_Sub9 var83 = (Class104_Sub9) client.aClass58_1795
-												.method245(); null != var83; var83 = (Class104_Sub9) client.aClass58_1795
+										for (Nodee var83 = (Nodee) client.aClass58_1795
+												.method245(); null != var83; var83 = (Nodee) client.aClass58_1795
 														.method243())
 											if ((var83.anInt956 == 0) || (var83.anInt956 == 3))
 												Class13.method56(var83, true);
 
 										if (client.aClass104_Sub12_1951 != null) {
-											Class79.method348(client.aClass104_Sub12_1951);
+											Class79.setflags(client.aClass104_Sub12_1951);
 											client.aClass104_Sub12_1951 = null;
 										}
 										continue;
@@ -2524,56 +2524,56 @@ public class Class46 {
 								if (var21.anInt992 < 0)
 									var21.anInt992 = 0;
 
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1101) {
 								--var4;
 								var21.anInt1017 = Class90.anIntArray706[var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1102) {
 								--var4;
 								var21.aBool1088 = Class90.anIntArray706[var4] == 1;
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1103) {
 								--var4;
 								var21.anInt1000 = Class90.anIntArray706[var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1104) {
 								--var4;
 								var21.anInt999 = Class90.anIntArray706[var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1105) {
 								--var4;
 								var21.anInt1002 = Class90.anIntArray706[var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1106) {
 								--var4;
 								var21.anInt979 = Class90.anIntArray706[var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1107) {
 								--var4;
 								var21.aBool989 = Class90.anIntArray706[var4] == 1;
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
@@ -2581,7 +2581,7 @@ public class Class46 {
 								var21.anInt1010 = 1;
 								--var4;
 								var21.anInt1011 = Class90.anIntArray706[var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
@@ -2593,7 +2593,7 @@ public class Class46 {
 								var21.anInt1019 = Class90.anIntArray706[3 + var4];
 								var21.anInt1012 = Class90.anIntArray706[4 + var4];
 								var21.anInt1021 = Class90.anIntArray706[5 + var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
@@ -2604,7 +2604,7 @@ public class Class46 {
 									var21.anInt1058 = var24;
 									var21.anInt974 = 0;
 									var21.anInt1085 = 0;
-									Class79.method348(var21);
+									Class79.setflags(var21);
 								}
 								continue;
 							}
@@ -2612,7 +2612,7 @@ public class Class46 {
 							if (var44 == 1111) {
 								--var4;
 								var21.aBool1023 = Class90.anIntArray706[var4] == 1;
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
@@ -2621,7 +2621,7 @@ public class Class46 {
 								var16 = Class90.aStringArray712[var5];
 								if (!var16.equals(var21.aString1025)) {
 									var21.aString1025 = var16;
-									Class79.method348(var21);
+									Class79.setflags(var21);
 								}
 								continue;
 							}
@@ -2629,7 +2629,7 @@ public class Class46 {
 							if (var44 == 1113) {
 								--var4;
 								var21.anInt1024 = Class90.anIntArray706[var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
@@ -2638,42 +2638,42 @@ public class Class46 {
 								var21.anInt1059 = Class90.anIntArray706[var4];
 								var21.anInt1029 = Class90.anIntArray706[1 + var4];
 								var21.anInt1027 = Class90.anIntArray706[var4 + 2];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1115) {
 								--var4;
 								var21.aBool1030 = Class90.anIntArray706[var4] == 1;
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1116) {
 								--var4;
 								var21.anInt1006 = Class90.anIntArray706[var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1117) {
 								--var4;
 								var21.anInt1007 = Class90.anIntArray706[var4];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1118) {
 								--var4;
 								var21.aBool1044 = Class90.anIntArray706[var4] == 1;
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
 							if (var44 == 1119) {
 								--var4;
 								var21.aBool1009 = Class90.anIntArray706[var4] == 1;
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 
@@ -2681,7 +2681,7 @@ public class Class46 {
 								var4 -= 2;
 								var21.anInt1079 = Class90.anIntArray706[var4];
 								var21.anInt994 = Class90.anIntArray706[var4 + 1];
-								Class79.method348(var21);
+								Class79.setflags(var21);
 								continue;
 							}
 						}
@@ -2691,20 +2691,20 @@ public class Class46 {
 				}
 			} catch (final Exception var43) {
 				final StringBuilder var42 = new StringBuilder(30);
-				var42.append("").append(var3.aLong824).append(" ");
+				var42.append("").append(cachedscript.nodeId).append(" ");
 
-				for (var12 = Class90.anInt713 - 1; var12 >= 0; --var12)
-					var42.append("").append(Class90.aClass100Array714[var12].aClass104_Sub18_Sub4_796.aLong824)
+				for (var12 = Class90.totalActs - 1; var12 >= 0; --var12)
+					var42.append("").append(Class90.aClass100Array714[var12].aClass104_Sub18_Sub4_796.nodeId)
 							.append(" ");
 
 				var42.append("").append(var9);
-				Class104_Sub9.method520(var42.toString(), var43);
+				Nodee.method520(var42.toString(), var43);
 			}
 		}
 	}
 
-	static final void method204(final int var0) {
-		Class66.method301();
+	static final void redrawComponent(final int var0) {
+		Class66.redraw();
 		Class25.method128();
 		final int var1 = Class104_Sub23.method622(var0).anInt1412;
 		if (var1 != 0) {

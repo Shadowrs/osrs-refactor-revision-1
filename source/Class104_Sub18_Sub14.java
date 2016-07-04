@@ -248,7 +248,7 @@ public class Class104_Sub18_Sub14 extends Class104_Sub18 {
 
 									var39 = 0;
 									if (var37 != -2)
-										var39 = Class104_Sub18_Sub17_Sub4.anIntArray1685[Class104_Sub12.method541(var37,
+										var39 = Class104_Sub18_Sub17_Sub4.anIntArray1685[Widget.method541(var37,
 												96, -1871888009)];
 
 									if (var35.anInt1384 != -1) {
@@ -260,7 +260,7 @@ public class Class104_Sub18_Sub14 extends Class104_Sub18 {
 											var41 = 255;
 
 										var37 = Class1.method15(var40, var35.anInt1382, var41);
-										var39 = Class104_Sub18_Sub17_Sub4.anIntArray1685[Class104_Sub12.method541(var37,
+										var39 = Class104_Sub18_Sub17_Sub4.anIntArray1685[Widget.method541(var37,
 												96, -1844126251)];
 									}
 
@@ -269,10 +269,10 @@ public class Class104_Sub18_Sub14 extends Class104_Sub18 {
 											Class61.method282(var30, var27, (byte) 60),
 											Class61.method282(var30, var28, (byte) 46),
 											Class61.method282(var30, var29, (byte) -116),
-											Class104_Sub12.method541(var38, var26, -1310531349),
-											Class104_Sub12.method541(var38, var27, -1334586386),
-											Class104_Sub12.method541(var38, var28, -1441637592),
-											Class104_Sub12.method541(var38, var29, -2040205630), var32, var39);
+											Widget.method541(var38, var26, -1310531349),
+											Widget.method541(var38, var27, -1334586386),
+											Widget.method541(var38, var28, -1441637592),
+											Widget.method541(var38, var29, -2040205630), var32, var39);
 								}
 							}
 						}

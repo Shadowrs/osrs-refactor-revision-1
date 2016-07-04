@@ -114,39 +114,39 @@ public class Class15 {
 		}
 	}
 
-	static final void method62(final Class104_Sub12[] var0, final int var1) {
-		for (final Class104_Sub12 var3 : var0) {
+	static final void loadWidget(final Widget[] var0, final int type) {
+		for (final Widget var3 : var0) {
 			if (null != var3) {
 				if (var3.anInt980 == 0) {
 					if (null != var3.aClass104_Sub12Array1020)
-						method62(var3.aClass104_Sub12Array1020, var1);
+						loadWidget(var3.aClass104_Sub12Array1020, type);
 
-					final Class104_Sub9 var4 = (Class104_Sub9) client.aClass58_1795.method241(var3.anInt978);
+					final Nodee var4 = (Nodee) client.aClass58_1795.method241(var3.anInt978);
 					if (var4 != null)
-						Class9.method36(var4.anInt957, var1);
+						Class9.doWidgetOp(var4.rsfaceID, type);
 				}
 
-				Class104_Sub6 var5;
-				if ((var1 == 0) && (var3.anObjectArray1014 != null)) {
-					var5 = new Class104_Sub6();
-					var5.aClass104_Sub12_938 = var3;
-					var5.anObjectArray936 = var3.anObjectArray1014;
-					Class46.method203(var5);
+				CS var5;
+				if ((type == 0) && (var3.anObjectArray1014 != null)) {
+					var5 = new CS();
+					var5.ownerRSFaceHash = var3;
+					var5.params = var3.anObjectArray1014;
+					Class46.doCS(var5);
 				}
 
-				if ((var1 == 1) && (null != var3.anObjectArray1073)) {
+				if ((type == 1) && (null != var3.anObjectArray1073)) {
 					if (var3.anInt1018 >= 0) {
-						final Class104_Sub12 var6 = Class47.method210(var3.anInt978);
+						final Widget var6 = Class47.method210(var3.anInt978);
 						if ((var6 == null) || (null == var6.aClass104_Sub12Array1020)
 								|| (var3.anInt1018 >= var6.aClass104_Sub12Array1020.length)
 								|| (var6.aClass104_Sub12Array1020[var3.anInt1018] != var3))
 							continue;
 					}
 
-					var5 = new Class104_Sub6();
-					var5.aClass104_Sub12_938 = var3;
-					var5.anObjectArray936 = var3.anObjectArray1073;
-					Class46.method203(var5);
+					var5 = new CS();
+					var5.ownerRSFaceHash = var3;
+					var5.params = var3.anObjectArray1073;
+					Class46.doCS(var5);
 				}
 			}
 		}

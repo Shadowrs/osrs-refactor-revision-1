@@ -67,18 +67,18 @@ public class Class86 {
 					}
 
 					Class87.aClass63_685.method291(var2);
-					Class87.aClass58_688.method242(var2, var2.aLong824);
+					Class87.aClass58_688.method242(var2, var2.nodeId);
 					++Class87.anInt687;
 					--Class87.anInt692;
 				}
 
-			Class87.aClass58_681.method242(var2, var2.aLong824);
+			Class87.aClass58_681.method242(var2, var2.nodeId);
 			++Class87.anInt682;
 			--Class87.anInt684;
 		}
 	}
 
-	static final void method395(final Class104_Sub12 var0, final int var1, final int var2, final int var3,
+	static final void method395(final Widget var0, final int var1, final int var2, final int var3,
 			final int var4, final int var5, final int var6) {
 		if (client.aBool1872)
 			client.anInt1873 = 32;
@@ -90,11 +90,11 @@ public class Class86 {
 		if (Class14.anInt93 != 0)
 			if ((var5 >= var1) && (var5 < (16 + var1)) && (var6 >= var2) && (var6 < (16 + var2))) {
 				var0.anInt992 -= 4;
-				Class79.method348(var0);
+				Class79.setflags(var0);
 			} else if ((var5 >= var1) && (var5 < (16 + var1)) && (var6 >= ((var3 + var2) - 16))
 					&& (var6 < (var3 + var2))) {
 				var0.anInt992 += 4;
-				Class79.method348(var0);
+				Class79.setflags(var0);
 			} else if ((var5 >= (var1 - client.anInt1873)) && (var5 < (var1 + 16 + client.anInt1873))
 					&& (var6 >= (16 + var2)) && (var6 < ((var3 + var2) - 16))) {
 				var7 = (var3 * (var3 - 32)) / var4;
@@ -104,7 +104,7 @@ public class Class86 {
 				final int var8 = var6 - var2 - 16 - (var7 / 2);
 				final int var9 = var3 - 32 - var7;
 				var0.anInt992 = (var8 * (var4 - var3)) / var9;
-				Class79.method348(var0);
+				Class79.setflags(var0);
 				client.aBool1872 = true;
 			}
 
@@ -112,7 +112,7 @@ public class Class86 {
 			var7 = var0.anInt987;
 			if ((var5 >= (var1 - var7)) && (var6 >= var2) && (var5 < (var1 + 16)) && (var6 <= (var2 + var3))) {
 				var0.anInt992 += client.anInt1983 * 45;
-				Class79.method348(var0);
+				Class79.setflags(var0);
 			}
 		}
 

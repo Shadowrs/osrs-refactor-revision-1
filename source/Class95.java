@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class Class95 {
-	public static int[] anIntArray746 = new int[] { 0, 2, 0, 0, 0, 0, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 6, -2,
+	public static int[] PACKETSIZES = new int[] { 0, 2, 0, 0, 0, 0, 4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 6, -2,
 			0, 0, 0, -2, 10, 0, 0, -2, 0, 0, 15, 0, 0, 0, 0, 0, 0, -2, 0, 1, 0, 0, 0, 0, 0, 0, 12, 0, 6, 0, 0, 5, 0, 0,
 			0, -1, 0, 0, 0, 0, 0, 0, 0, 0, 6, 2, 0, 0, 1, 0, 0, -2, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 5, 8, -2, 4, 3, 2, 0,
 			0, -2, 0, 0, 0, 0, 2, 0, 0, -1, 0, 10, 0, 0, 0, 7, 0, 0, 0, 0, 0, 0, -2, 0, 0, 0, 4, 0, 0, -2, 0, 0, 0, 0,
@@ -31,7 +31,7 @@ public class Class95 {
 			for (var4 = 0; var4 < var3; ++var4) {
 				for (var5 = 0; var5 < 4; ++var5)
 					Class13.xteakeys[var4][var5] = client.gamecon.readIntV1();
-				System.out.printf("region %d/%d xteas: "+Arrays.toString(Class13.xteakeys[var4])+" \n", var4, var3);
+				System.out.printf("region %d/%d xteas: "+Arrays.toString(Class13.xteakeys[var4])+" \n", (var4+1), var3);
 			}
 
 			var4 = client.gamecon.readByteN(); // HEIGHT
@@ -135,7 +135,7 @@ public class Class95 {
 
 	}
 
-	static final void method425(final Class104_Sub12 var0) {
+	static final void method425(final Widget var0) {
 		final int var1 = var0.anInt982;
 		if (var1 == 324) {
 			if (client.anInt1887 == -1) {

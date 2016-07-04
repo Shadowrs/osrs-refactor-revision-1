@@ -308,9 +308,9 @@ public class Class49 {
 						var3 = (Class104_Sub18_Sub13) Class87.aClass58_681.method245();
 						var4 = new RSBuf(4);
 						var4.writebyte(1);
-						var4.method587((int) var3.aLong824);
+						var4.method587((int) var3.nodeId);
 						Class66.aClass13_547.flushbytes(var4.backing, 0, 4);
-						Class87.aClass58_683.method242(var3, var3.aLong824);
+						Class87.aClass58_683.method242(var3, var3.nodeId);
 						--Class87.anInt682;
 						++Class87.anInt684;
 					}
@@ -319,10 +319,10 @@ public class Class49 {
 						var3 = (Class104_Sub18_Sub13) Class87.aClass63_685.method293();
 						var4 = new RSBuf(4);
 						var4.writebyte(0);
-						var4.method587((int) var3.aLong824);
+						var4.method587((int) var3.nodeId);
 						Class66.aClass13_547.flushbytes(var4.backing, 0, 4);
 						var3.method555();
-						Class87.aClass58_694.method242(var3, var3.aLong824);
+						Class87.aClass58_694.method242(var3, var3.nodeId);
 						--Class87.anInt687;
 						++Class87.anInt692;
 					}
@@ -414,7 +414,7 @@ public class Class49 {
 							Class87.aClass104_Sub21_691.pos += var9;
 							Class87.anInt696 += var9;
 							if (var8 == Class87.aClass104_Sub21_691.pos) {
-								if (16711935L == Class48.aClass104_Sub18_Sub13_410.aLong824) {
+								if (16711935L == Class48.aClass104_Sub18_Sub13_410.nodeId) {
 									Class2.aClass104_Sub21_7 = Class87.aClass104_Sub21_691;
 
 									for (var10 = 0; var10 < 256; ++var10) {
@@ -446,9 +446,9 @@ public class Class49 {
 									Class87.anInt693 = 0;
 									Class87.anInt698 = 0;
 									Class48.aClass104_Sub18_Sub13_410.aClass61_Sub1_1461.method487(
-											(int) (Class48.aClass104_Sub18_Sub13_410.aLong824 & 65535L),
+											(int) (Class48.aClass104_Sub18_Sub13_410.nodeId & 65535L),
 											Class87.aClass104_Sub21_691.backing,
-											16711680L == (Class48.aClass104_Sub18_Sub13_410.aLong824 & 16711680L),
+											16711680L == (Class48.aClass104_Sub18_Sub13_410.nodeId & 16711680L),
 											Class87.aBool689);
 								}
 
@@ -528,6 +528,6 @@ public class Class49 {
 
 	public static void method223(final Class61 var0, final Class61 var1) {
 		Class104_Sub18_Sub2.aClass61_1238 = var0;
-		Class104_Sub9.aClass61_959 = var1;
+		Nodee.aClass61_959 = var1;
 	}
 }

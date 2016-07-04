@@ -1,6 +1,6 @@
-public class Class104_Sub18_Sub4 extends Class104_Sub18 {
-	int[] anIntArray1276;
-	int[] anIntArray1277;
+public class CS2 extends Class104_Sub18 {
+	int[] numberValuesToUse;
+	int[] opcodeHeaders;
 	int anInt1279;
 	String[] aStringArray1280;
 	int anInt1281;

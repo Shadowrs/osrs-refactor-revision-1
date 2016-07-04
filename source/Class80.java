@@ -44,7 +44,7 @@ public class Class80 {
 			var1.method470();
 	}
 
-	static final boolean method353(final Class104_Sub12 var0) {
+	static final boolean method353(final Widget var0) {
 		if (var0.anIntArray984 == null)
 			return false;
 		else {
@@ -68,12 +68,12 @@ public class Class80 {
 		}
 	}
 
-	static final void method354(final int var0) {
-		if (Class104_Sub7.method508(var0)) {
-			final Class104_Sub12[] var1 = Class22.aClass104_Sub12ArrayArray228[var0];
+	static final void empty(final int var0) {
+		if (Class104_Sub7.laoded(var0)) {
+			final Widget[] var1 = Class22.widgets[var0];
 
-			for (final Class104_Sub12 element : var1) {
-				final Class104_Sub12 var3 = element;
+			for (final Widget element : var1) {
+				final Widget var3 = element;
 				if (var3 != null) {
 					var3.anInt974 = 0;
 					var3.anInt1085 = 0;

@@ -3,9 +3,9 @@ public class Class79 {
 	static int anInt631;
 	public static boolean aBool632;
 
-	static void method348(final Class104_Sub12 var0) {
+	static void setflags(final Widget var0) {
 		if (client.anInt1928 == var0.anInt1094)
-			client.aBoolArray2027[var0.anInt1093] = true;
+			client.rsfacesFlag[var0.anInt1093] = true;
 
 	}
 

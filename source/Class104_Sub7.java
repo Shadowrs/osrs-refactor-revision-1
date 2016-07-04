@@ -5,30 +5,30 @@ public class Class104_Sub7 extends Class104 {
 	int anInt950;
 	static Class104_Sub18_Sub17_Sub2_Sub1 aClass104_Sub18_Sub17_Sub2_Sub1_951;
 
-	public static boolean method508(final int var0) {
+	public static boolean laoded(final int var0) {
 		if (Class103.aBoolArray817[var0])
 			return true;
-		else if (!Class104_Sub12.aClass61_1001.method278(var0))
+		else if (!Widget.aClass61_1001.method278(var0))
 			return false;
 		else {
-			final int var1 = Class104_Sub12.aClass61_1001.method266(var0);
+			final int var1 = Widget.aClass61_1001.method266(var0);
 			if (var1 == 0) {
 				Class103.aBoolArray817[var0] = true;
 				return true;
 			} else {
-				if (Class22.aClass104_Sub12ArrayArray228[var0] == null)
-					Class22.aClass104_Sub12ArrayArray228[var0] = new Class104_Sub12[var1];
+				if (Class22.widgets[var0] == null)
+					Class22.widgets[var0] = new Widget[var1];
 
 				for (int var2 = 0; var2 < var1; ++var2)
-					if (null == Class22.aClass104_Sub12ArrayArray228[var0][var2]) {
-						final byte[] var3 = Class104_Sub12.aClass61_1001.method259(var0, var2);
+					if (null == Class22.widgets[var0][var2]) {
+						final byte[] var3 = Widget.aClass61_1001.method259(var0, var2);
 						if (null != var3) {
-							Class22.aClass104_Sub12ArrayArray228[var0][var2] = new Class104_Sub12();
-							Class22.aClass104_Sub12ArrayArray228[var0][var2].anInt978 = var2 + (var0 << 16);
+							Class22.widgets[var0][var2] = new Widget();
+							Class22.widgets[var0][var2].anInt978 = var2 + (var0 << 16);
 							if (var3[0] == -1)
-								Class22.aClass104_Sub12ArrayArray228[var0][var2].method528(new RSBuf(var3));
+								Class22.widgets[var0][var2].method528(new RSBuf(var3));
 							else
-								Class22.aClass104_Sub12ArrayArray228[var0][var2].method527(new RSBuf(var3));
+								Class22.widgets[var0][var2].method527(new RSBuf(var3));
 						}
 					}
 

@@ -9,7 +9,7 @@ public final class Class58 {
 		final Class104 var3 = aClass104Array470[(int) (var1 & anInt471 - 1)];
 
 		for (aClass104_472 = var3.aClass104_823; aClass104_472 != var3; aClass104_472 = aClass104_472.aClass104_823)
-			if (aClass104_472.aLong824 == var1) {
+			if (aClass104_472.nodeId == var1) {
 				final Class104 var4 = aClass104_472;
 				aClass104_472 = aClass104_472.aClass104_823;
 				return var4;
@@ -28,7 +28,7 @@ public final class Class58 {
 		var1.aClass104_823 = var4;
 		var1.aClass104_822.aClass104_823 = var1;
 		var1.aClass104_823.aClass104_822 = var1;
-		var1.aLong824 = var2;
+		var1.nodeId = var2;
 	}
 
 	public Class58(final int var1) {

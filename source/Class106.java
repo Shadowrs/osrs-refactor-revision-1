@@ -1,7 +1,7 @@
 public class Class106 {
 	public static Class49 aClass49_826;
 	static Class61_Sub1 aClass61_Sub1_827;
-	static Class104_Sub12[] aClass104_Sub12Array828;
+	static Widget[] aClass104_Sub12Array828;
 	static Class61 aClass61_829;
 
 	static final void method474(final RSBuf var0, final int var1, final int var2, final int var3,

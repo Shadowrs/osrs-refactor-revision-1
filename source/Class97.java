@@ -36,29 +36,29 @@ public class Class97 {
 
 	static final void method438(final int var0, final int var1, final int var2, final int var3, final int var4,
 			final int var5, final int var6) {
-		if (Class104_Sub7.method508(var0))
-			Class104_Sub12.method538(Class22.aClass104_Sub12ArrayArray228[var0], -1, var1, var2, var3, var4, var5,
+		if (Class104_Sub7.laoded(var0))
+			Widget.method538(Class22.widgets[var0], -1, var1, var2, var3, var4, var5,
 					var6);
 	}
 
-	static final void method439(final Class104_Sub12[] var0, final int var1) {
-		for (final Class104_Sub12 element : var0) {
-			final Class104_Sub12 var3 = element;
-			if ((null != var3) && (var3.anInt1091 == var1) && (!var3.aBool977 || !Class40.method182(var3))) {
+	static final void method439(final Widget[] var0, final int var1) {
+		for (final Widget element : var0) {
+			final Widget var3 = element;
+			if ((null != var3) && (var3.anInt1091 == var1) && (!var3.isHeaderless || !Class40.method182(var3))) {
 				int var5;
 				if (var3.anInt980 == 0) {
-					if (!var3.aBool977 && Class40.method182(var3) && (Class76.aClass104_Sub12_619 != var3))
+					if (!var3.isHeaderless && Class40.method182(var3) && (Class76.aClass104_Sub12_619 != var3))
 						continue;
 
 					method439(var0, var3.anInt978);
 					if (null != var3.aClass104_Sub12Array1020)
 						method439(var3.aClass104_Sub12Array1020, var3.anInt978);
 
-					final Class104_Sub9 var4 = (Class104_Sub9) client.aClass58_1795.method241(var3.anInt978);
+					final Nodee var4 = (Nodee) client.aClass58_1795.method241(var3.anInt978);
 					if (var4 != null) {
-						var5 = var4.anInt957;
-						if (Class104_Sub7.method508(var5))
-							method439(Class22.aClass104_Sub12ArrayArray228[var5], -1);
+						var5 = var4.rsfaceID;
+						if (Class104_Sub7.laoded(var5))
+							method439(Class22.widgets[var5], -1);
 					}
 				}
 
@@ -74,7 +74,7 @@ public class Class97 {
 							final Class104_Sub18_Sub3 var7 = Class70.method327(var5);
 
 							for (var3.anInt1085 += client.anInt1867; var3.anInt1085 > var7.anIntArray1264[var3.anInt974]; Class79
-									.method348(var3)) {
+									.setflags(var3)) {
 								var3.anInt1085 -= var7.anIntArray1264[var3.anInt974];
 								++var3.anInt974;
 								if (var3.anInt974 >= var7.anIntArray1262.length) {
@@ -86,14 +86,14 @@ public class Class97 {
 						}
 					}
 
-					if ((var3.anInt1022 != 0) && !var3.aBool977) {
+					if ((var3.anInt1022 != 0) && !var3.isHeaderless) {
 						int var8 = var3.anInt1022 >> 16;
 						var5 = (var3.anInt1022 << 16) >> 16;
 						var8 *= client.anInt1867;
 						var5 *= client.anInt1867;
 						var3.anInt1043 = (var8 + var3.anInt1043) & 2047;
 						var3.anInt1019 = (var3.anInt1019 + var5) & 2047;
-						Class79.method348(var3);
+						Class79.setflags(var3);
 					}
 				}
 			}
@@ -101,27 +101,27 @@ public class Class97 {
 
 	}
 
-	static final Class104_Sub9 method440(final int var0, final int var1, final int var2) {
-		final Class104_Sub9 var3 = new Class104_Sub9();
-		var3.anInt957 = var1;
+	static final Nodee method440(final int var0, final int var1, final int var2) {
+		final Nodee var3 = new Nodee();
+		var3.rsfaceID = var1;
 		var3.anInt956 = var2;
 		client.aClass58_1795.method242(var3, var0);
-		Class80.method354(var1);
-		Class88.method404(var1);
-		final Class104_Sub12 var4 = Class47.method210(var0);
+		Class80.empty(var1);
+		Class88.handleCSCodes(var1);
+		final Widget var4 = Class47.method210(var0);
 		if (var4 != null)
-			Class79.method348(var4);
+			Class79.setflags(var4);
 
 		if (null != client.aClass104_Sub12_1951) {
-			Class79.method348(client.aClass104_Sub12_1951);
+			Class79.setflags(client.aClass104_Sub12_1951);
 			client.aClass104_Sub12_1951 = null;
 		}
 
 		client.aBool1930 = false;
 		client.anInt1805 = 0;
 		Class44.method192(Class50.anInt422, Class36.anInt349, Class12.anInt74, Class78.anInt627);
-		if (client.anInt1947 != -1)
-			Class9.method36(client.anInt1947, 1);
+		if (client.currentWidget != -1)
+			Class9.doWidgetOp(client.currentWidget, 1);
 
 		return var3;
 	}

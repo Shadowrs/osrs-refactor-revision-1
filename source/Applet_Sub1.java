@@ -59,7 +59,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 
 			aClass11_1760.method43(this, 1);
 		} catch (final Exception var5) {
-			Class104_Sub9.method520((String) null, var5);
+			Nodee.method520((String) null, var5);
 			method944("crash");
 		}
 
@@ -156,7 +156,7 @@ public abstract class Applet_Sub1 extends Applet implements Runnable, FocusListe
 					var20.anEventQueue65.postEvent(new ActionEvent(var11, 1001, "dummy"));
 			}
 		} catch (final Exception var15) {
-			Class104_Sub9.method520((String) null, var15);
+			Nodee.method520((String) null, var15);
 			method944("crash");
 		}
 

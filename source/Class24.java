@@ -47,15 +47,15 @@ public class Class24 {
 	}
 
 	public static void method126(final Class61 var0, final Class61 var1, final Class61 var2, final Class61 var3) {
-		Class104_Sub12.aClass61_1001 = var0;
-		Class104_Sub12.aClass61_971 = var1;
+		Widget.aClass61_1001 = var0;
+		Widget.aClass61_971 = var1;
 		Class1_Sub1.aClass61_837 = var2;
-		Class104_Sub12.aClass61_995 = var3;
-		Class22.aClass104_Sub12ArrayArray228 = new Class104_Sub12[Class104_Sub12.aClass61_1001.method267()][];
-		Class103.aBoolArray817 = new boolean[Class104_Sub12.aClass61_1001.method267()];
+		Widget.aClass61_995 = var3;
+		Class22.widgets = new Widget[Widget.aClass61_1001.method267()][];
+		Class103.aBoolArray817 = new boolean[Widget.aClass61_1001.method267()];
 	}
 
-	static String method127(final Class104_Sub12 var0, final int var1) {
+	static String method127(final Widget var0, final int var1) {
 		final int var2 = Class104_Sub3.method485(var0);
 		final boolean var3 = ((var2 >> (1 + var1)) & 1) != 0;
 		return !var3 && (null == var0.anObjectArray1042) ? null

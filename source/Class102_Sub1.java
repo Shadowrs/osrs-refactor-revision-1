@@ -85,33 +85,33 @@ public class Class102_Sub1 extends Class102 {
 		for (var0 = 0; var0 < client.anIntArray1981.length; ++var0)
 			client.anIntArray1981[var0] = -1;
 
-		if (client.anInt1947 != -1) {
-			var0 = client.anInt1947;
+		if (client.currentWidget != -1) {
+			var0 = client.currentWidget;
 			if ((var0 != -1) && Class103.aBoolArray817[var0]) {
-				Class104_Sub12.aClass61_1001.method276(var0, -1405441036);
-				if (null != Class22.aClass104_Sub12ArrayArray228[var0]) {
+				Widget.aClass61_1001.method276(var0, -1405441036);
+				if (null != Class22.widgets[var0]) {
 					boolean var5 = true;
 
-					for (var2 = 0; var2 < Class22.aClass104_Sub12ArrayArray228[var0].length; ++var2)
-						if (Class22.aClass104_Sub12ArrayArray228[var0][var2] != null)
-							if (Class22.aClass104_Sub12ArrayArray228[var0][var2].anInt980 != 2)
-								Class22.aClass104_Sub12ArrayArray228[var0][var2] = null;
+					for (var2 = 0; var2 < Class22.widgets[var0].length; ++var2)
+						if (Class22.widgets[var0][var2] != null)
+							if (Class22.widgets[var0][var2].anInt980 != 2)
+								Class22.widgets[var0][var2] = null;
 							else
 								var5 = false;
 
 					if (var5)
-						Class22.aClass104_Sub12ArrayArray228[var0] = null;
+						Class22.widgets[var0] = null;
 
 					Class103.aBoolArray817[var0] = false;
 				}
 			}
 		}
 
-		for (Class104_Sub9 var4 = (Class104_Sub9) client.aClass58_1795
-				.method245(); null != var4; var4 = (Class104_Sub9) client.aClass58_1795.method243())
+		for (Nodee var4 = (Nodee) client.aClass58_1795
+				.method245(); null != var4; var4 = (Nodee) client.aClass58_1795.method243())
 			Class13.method56(var4, true);
 
-		client.anInt1947 = -1;
+		client.currentWidget = -1;
 		client.aClass58_1795 = new Class58(8);
 		client.aClass104_Sub12_1951 = null;
 		client.aBool1930 = false;
@@ -127,7 +127,7 @@ public class Class102_Sub1 extends Class102 {
 		client.aBool1798 = true;
 
 		for (var0 = 0; var0 < 100; ++var0)
-			client.aBoolArray2027[var0] = true;
+			client.rsfacesFlag[var0] = true;
 
 		client.aString1829 = null;
 		Class89.anInt704 = 0;

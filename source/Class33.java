@@ -247,7 +247,7 @@ public final class Class33 {
 		Class26.method131();
 		Class61.method281();
 		((Class34) Class104_Sub18_Sub17_Sub4.anInterface2_1686).method160();
-		Class104_Sub18_Sub4.aClass56_1278.method239();
+		CS2.aClass56_1278.method239();
 		Class27.aClass61_Sub1_263.method269();
 		Class104_Sub20.aClass61_Sub1_1171.method269();
 		Class29.aClass61_Sub1_278.method269();

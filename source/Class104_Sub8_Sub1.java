@@ -34,7 +34,7 @@ public class Class104_Sub8_Sub1 extends Class104_Sub8 {
 
 		for (Class104_Sub22 var7 = (Class104_Sub22) var1.aClass58_1100
 				.method245(); null != var7; var7 = (Class104_Sub22) var1.aClass58_1100.method243()) {
-			final int var8 = (int) var7.aLong824;
+			final int var8 = (int) var7.nodeId;
 			Class104_Sub11 var9 = (Class104_Sub11) aClass58_1199.method241(var8);
 			if (null == var9) {
 				var9 = Class76.method345(var2, var8);

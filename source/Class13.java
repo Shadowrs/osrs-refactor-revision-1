@@ -80,7 +80,7 @@ public final class Class13 implements Runnable {
 				break;
 			}
 		} catch (final Exception var12) {
-			Class104_Sub9.method520((String) null, var12);
+			Nodee.method520((String) null, var12);
 		}
 
 	}
@@ -167,39 +167,39 @@ public final class Class13 implements Runnable {
 		return dummy ? 0 : anInputStream86.read();
 	}
 
-	static final void method56(final Class104_Sub9 var0, final boolean var1) {
-		final int var2 = var0.anInt957;
-		final int var3 = (int) var0.aLong824;
+	static final void method56(final Nodee var0, final boolean var1) {
+		final int var2 = var0.rsfaceID;
+		final int var3 = (int) var0.nodeId;
 		var0.method470();
 		if (var1 && (var2 != -1) && Class103.aBoolArray817[var2]) {
-			Class104_Sub12.aClass61_1001.method276(var2, -130954046);
-			if (null != Class22.aClass104_Sub12ArrayArray228[var2]) {
+			Widget.aClass61_1001.method276(var2, -130954046);
+			if (null != Class22.widgets[var2]) {
 				boolean var4 = true;
 
-				for (int var5 = 0; var5 < Class22.aClass104_Sub12ArrayArray228[var2].length; ++var5)
-					if (Class22.aClass104_Sub12ArrayArray228[var2][var5] != null)
-						if (Class22.aClass104_Sub12ArrayArray228[var2][var5].anInt980 != 2)
-							Class22.aClass104_Sub12ArrayArray228[var2][var5] = null;
+				for (int var5 = 0; var5 < Class22.widgets[var2].length; ++var5)
+					if (Class22.widgets[var2][var5] != null)
+						if (Class22.widgets[var2][var5].anInt980 != 2)
+							Class22.widgets[var2][var5] = null;
 						else
 							var4 = false;
 
 				if (var4)
-					Class22.aClass104_Sub12ArrayArray228[var2] = null;
+					Class22.widgets[var2] = null;
 
 				Class103.aBoolArray817[var2] = false;
 			}
 		}
 
 		Class90.method408(var2);
-		final Class104_Sub12 var6 = Class47.method210(var3);
+		final Widget var6 = Class47.method210(var3);
 		if (null != var6)
-			Class79.method348(var6);
+			Class79.setflags(var6);
 
 		client.aBool1930 = false;
 		client.anInt1805 = 0;
 		Class44.method192(Class50.anInt422, Class36.anInt349, Class12.anInt74, Class78.anInt627);
-		if (client.anInt1947 != -1)
-			Class9.method36(client.anInt1947, 1);
+		if (client.currentWidget != -1)
+			Class9.doWidgetOp(client.currentWidget, 1);
 
 	}
 }
