@@ -248,7 +248,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeInt(Class52.aClass61_Sub1_430.anInt489);
 				client.loginbuf.writeInt(Class29.aClass61_Sub1_278.anInt489);
 				client.loginbuf.writeInt(Class103.aClass61_Sub1_818.anInt489);
-				client.loginbuf.writeInt(Class67.aClass61_Sub1_555.anInt489);
+				client.loginbuf.writeInt(Class67.fs.anInt489);
 				client.loginbuf.writeInt(Class27.aClass61_Sub1_264.anInt489);
 				client.loginbuf.writeInt(Class1.aClass61_Sub1_2.anInt489);
 				client.loginbuf.writeInt(client.aClass61_Sub1_1820.anInt489);

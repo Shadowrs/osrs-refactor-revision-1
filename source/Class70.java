@@ -5,7 +5,7 @@ import java.io.RandomAccessFile;
 import java.net.URL;
 
 public class Class70 {
-	static byte[][] aByteArrayArray574;
+	static byte[][] landscapedata;
 	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array575;
 	DataInputStream aDataInputStream568;
 	int anInt567;

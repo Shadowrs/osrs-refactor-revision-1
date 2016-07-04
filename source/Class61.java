@@ -142,7 +142,7 @@ public abstract class Class61 {
 	}
 
 	public byte[] method259(final int var1, final int var2) {
-		return method275(var1, var2, (int[]) null);
+		return decode(var1, var2, (int[]) null);
 	}
 
 	public boolean method260(final int var1, final int var2) {
@@ -349,14 +349,14 @@ public abstract class Class61 {
 		aBool494 = var2;
 	}
 
-	public byte[] method275(final int var1, final int var2, final int[] var3) {
+	public byte[] decode(final int var1, final int var2, final int[] keys) {
 		if ((var1 >= 0) && (var1 < anObjectArrayArray484.length) && (null != anObjectArrayArray484[var1]) && (var2 >= 0)
 				&& (var2 < anObjectArrayArray484[var1].length)) {
 			if (null == anObjectArrayArray484[var1][var2]) {
-				boolean var4 = method270(var1, var3);
+				boolean var4 = method270(var1, keys);
 				if (!var4) {
 					method264(var1, (byte) 124);
-					var4 = method270(var1, var3);
+					var4 = method270(var1, keys);
 					if (!var4)
 						return null;
 				}

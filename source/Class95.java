@@ -32,11 +32,11 @@ public class Class95 {
 			var4 = client.gamecon.readByteN(); // HEIGHT
 			var5 = client.gamecon.readLEShort(); // C X
 			var6 = client.gamecon.readShortN(); // C Y
-			Class47.anIntArray406 = new int[var3];
-			Class40.anIntArray360 = new int[var3];
-			Class75.anIntArray597 = new int[var3];
+			Class47.regionId = new int[var3];
+			Class40.mapInfo = new int[var3];
+			Class75.landscapeInfo = new int[var3];
 			Class104_Sub15.aByteArrayArray1124 = new byte[var3][];
-			Class70.aByteArrayArray574 = new byte[var3][];
+			Class70.landscapedata = new byte[var3][];
 			boolean var7 = false;
 			if ((((var5 / 8) == 48) || ((var5 / 8) == 49)) && ((var6 / 8) == 48))
 				var7 = true;
@@ -51,9 +51,9 @@ public class Class95 {
 					regionid = (xx << 8) + yy;
 					if (!var7 || ((yy != 49) && (yy != 149) && (yy != 147) && (xx != 50)
 							&& ((xx != 49) || (yy != 47)))) {
-						Class47.anIntArray406[var3] = regionid;
-						Class40.anIntArray360[var3] = Class67.aClass61_Sub1_555.method271("m" + xx + "_" + yy);
-						Class75.anIntArray597[var3] = Class67.aClass61_Sub1_555.method271("l" + xx + "_" + yy);
+						Class47.regionId[var3] = regionid;
+						Class40.mapInfo[var3] = Class67.fs.method271("m" + xx + "_" + yy);
+						Class75.landscapeInfo[var3] = Class67.fs.method271("l" + xx + "_" + yy);
 						++var3;
 					}
 				}
@@ -88,11 +88,11 @@ public class Class95 {
 			var4 = client.gamecon.readByteN();
 			var5 = client.gamecon.readShort();
 			var6 = client.gamecon.readShortN();
-			Class47.anIntArray406 = new int[var2];
-			Class40.anIntArray360 = new int[var2];
-			Class75.anIntArray597 = new int[var2];
+			Class47.regionId = new int[var2];
+			Class40.mapInfo = new int[var2];
+			Class75.landscapeInfo = new int[var2];
 			Class104_Sub15.aByteArrayArray1124 = new byte[var2][];
-			Class70.aByteArrayArray574 = new byte[var2][];
+			Class70.landscapedata = new byte[var2][];
 			var2 = 0;
 
 			for (int var16 = 0; var16 < 4; ++var16)
@@ -106,18 +106,18 @@ public class Class95 {
 
 							int var14;
 							for (var14 = 0; var14 < var2; ++var14)
-								if (var13 == Class47.anIntArray406[var14]) {
+								if (var13 == Class47.regionId[var14]) {
 									var13 = -1;
 									break;
 								}
 
 							if (var13 != -1) {
-								Class47.anIntArray406[var2] = var13;
+								Class47.regionId[var2] = var13;
 								var14 = (var13 >> 8) & 255;
 								final int var15 = var13 & 255;
-								Class40.anIntArray360[var2] = Class67.aClass61_Sub1_555
+								Class40.mapInfo[var2] = Class67.fs
 										.method271("m" + var14 + "_" + var15);
-								Class75.anIntArray597[var2] = Class67.aClass61_Sub1_555
+								Class75.landscapeInfo[var2] = Class67.fs
 										.method271("l" + var14 + "_" + var15);
 								++var2;
 							}

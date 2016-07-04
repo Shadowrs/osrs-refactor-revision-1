@@ -1,5 +1,5 @@
 public class Class67 {
-	static Class61_Sub1 aClass61_Sub1_555;
+	static Class61_Sub1 fs;
 	static Class104_Sub12 aClass104_Sub12_556;
 	int anInt552 = 0;
 	int anInt550 = 0;

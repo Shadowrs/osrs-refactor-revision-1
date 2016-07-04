@@ -252,7 +252,7 @@ public final class Class33 {
 		Class104_Sub20.aClass61_Sub1_1171.method269();
 		Class29.aClass61_Sub1_278.method269();
 		Class103.aClass61_Sub1_818.method269();
-		Class67.aClass61_Sub1_555.method269();
+		Class67.fs.method269();
 		Class27.aClass61_Sub1_264.method269();
 		Class1.aClass61_Sub1_2.method269();
 		client.aClass61_Sub1_1820.method269();

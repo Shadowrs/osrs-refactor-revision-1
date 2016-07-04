@@ -1,6 +1,6 @@
 public abstract class Class47 {
 	public static short[][] aShortArrayArray405;
-	static int[] anIntArray406;
+	static int[] regionId;
 	static boolean aBool404 = false;
 
 	abstract byte[] method208(int var1);

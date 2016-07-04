@@ -565,47 +565,47 @@ final void method943(final byte var1) {
             } else if(anInt1806 == 25) {
                Class20.method121(false);
                anInt1842 = 0;
-               boolean var84 = true;
+               boolean valid = true;
 
                for(var5 = 0; var5 < Class104_Sub15.aByteArrayArray1124.length; ++var5) {
-                  if((Class40.anIntArray360[var5] != -1) && (null == Class104_Sub15.aByteArrayArray1124[var5])) {
-                     Class104_Sub15.aByteArrayArray1124[var5] = Class67.aClass61_Sub1_555.method259(Class40.anIntArray360[var5], 0);
+                  if((Class40.mapInfo[var5] != -1) && (null == Class104_Sub15.aByteArrayArray1124[var5])) {
+                     Class104_Sub15.aByteArrayArray1124[var5] = Class67.fs.method259(Class40.mapInfo[var5], 0);
                      if(null == Class104_Sub15.aByteArrayArray1124[var5]) {
-                        var84 = false;
+                        valid = false;
                         ++anInt1842;
                      }
                   }
 
-                  if((Class75.anIntArray597[var5] != -1) && (null == Class70.aByteArrayArray574[var5])) {
-                     Class70.aByteArrayArray574[var5] = Class67.aClass61_Sub1_555.method275(Class75.anIntArray597[var5], 0, Class13.xteakeys[var5]);
-                     if(Class70.aByteArrayArray574[var5] == null) {
-                        var84 = false;
+                  if((Class75.landscapeInfo[var5] != -1) && (null == Class70.landscapedata[var5])) {
+                     Class70.landscapedata[var5] = Class67.fs.decode(Class75.landscapeInfo[var5], 0, Class13.xteakeys[var5]);
+                     if(Class70.landscapedata[var5] == null) {
+                        valid = false;
                         ++anInt1842;
                      }
                   }
                }
 
-               if(!var84)
+               if(!valid)
 				anInt2043 = 1;
 			else {
                   anInt1843 = 0;
-                  var84 = true;
+                  valid = true;
 
                   for(var5 = 0; var5 < Class104_Sub15.aByteArrayArray1124.length; ++var5) {
-                     final byte[] var4 = Class70.aByteArrayArray574[var5];
+                     final byte[] var4 = Class70.landscapedata[var5];
                      if(var4 != null) {
-                        var9 = ((Class47.anIntArray406[var5] >> 8) * 64) - Class53.anInt436;
-                        var10 = ((Class47.anIntArray406[var5] & 255) * 64) - Class20.anInt206;
+                        var9 = ((Class47.regionId[var5] >> 8) * 64) - Class53.anInt436;
+                        var10 = ((Class47.regionId[var5] & 255) * 64) - Class20.anInt206;
                         if(dynamicRegion) {
                            var9 = 10;
                            var10 = 10;
                         }
 
-                        var84 &= Class19.method119(var4, var9, var10);
+                        valid &= Class19.method119(var4, var9, var10);
                      }
                   }
 
-                  if(!var84)
+                  if(!valid)
 					anInt2043 = 2;
 				else {
                      if(anInt2043 != 0)
@@ -659,8 +659,8 @@ final void method943(final byte var1) {
                      if(!dynamicRegion) {
                         byte[] var12;
                         for(var11 = 0; var11 < var5; ++var11) {
-                           var9 = ((Class47.anIntArray406[var11] >> 8) * 64) - Class53.anInt436;
-                           var10 = ((Class47.anIntArray406[var11] & 255) * 64) - Class20.anInt206;
+                           var9 = ((Class47.regionId[var11] >> 8) * 64) - Class53.anInt436;
+                           var10 = ((Class47.regionId[var11] & 255) * 64) - Class20.anInt206;
                            var12 = Class104_Sub15.aByteArrayArray1124[var11];
                            if(null != var12) {
                               Class101.method465();
@@ -669,8 +669,8 @@ final void method943(final byte var1) {
                         }
 
                         for(var11 = 0; var11 < var5; ++var11) {
-                           var9 = (64 * (Class47.anIntArray406[var11] >> 8)) - Class53.anInt436;
-                           var10 = ((Class47.anIntArray406[var11] & 255) * 64) - Class20.anInt206;
+                           var9 = (64 * (Class47.regionId[var11] >> 8)) - Class53.anInt436;
+                           var10 = ((Class47.regionId[var11] & 255) * 64) - Class20.anInt206;
                            var12 = Class104_Sub15.aByteArrayArray1124[var11];
                            if((var12 == null) && (Class96.anInt761 < 800)) {
                               Class101.method465();
@@ -681,10 +681,10 @@ final void method943(final byte var1) {
                         Class20.method121(true);
 
                         for(var11 = 0; var11 < var5; ++var11) {
-                           final byte[] var6 = Class70.aByteArrayArray574[var11];
+                           final byte[] var6 = Class70.landscapedata[var11];
                            if(var6 != null) {
-                              var10 = ((Class47.anIntArray406[var11] >> 8) * 64) - Class53.anInt436;
-                              var13 = ((Class47.anIntArray406[var11] & 255) * 64) - Class20.anInt206;
+                              var10 = ((Class47.regionId[var11] >> 8) * 64) - Class53.anInt436;
+                              var13 = ((Class47.regionId[var11] & 255) * 64) - Class20.anInt206;
                               Class101.method465();
                               Class105.method472(var6, var10, var13, Class81.aClass17_643, aClass67Array1975);
                            }
@@ -723,9 +723,9 @@ final void method943(final byte var1) {
                                           var17 = (var13 >> 3) & 2047;
                                           var18 = (var17 / 8) + ((var16 / 8) << 8);
 
-                                          for(var19 = 0; var19 < Class47.anIntArray406.length; ++var19)
-											if((var18 == Class47.anIntArray406[var19]) && (null != Class70.aByteArrayArray574[var19])) {
-                                                Class7.method34(Class70.aByteArrayArray574[var19], var11, var9 * 8, 8 * var10, var14, (var16 & 7) * 8, (var17 & 7) * 8, var15, Class81.aClass17_643, aClass67Array1975);
+                                          for(var19 = 0; var19 < Class47.regionId.length; ++var19)
+											if((var18 == Class47.regionId[var19]) && (null != Class70.landscapedata[var19])) {
+                                                Class7.method34(Class70.landscapedata[var19], var11, var9 * 8, 8 * var10, var14, (var16 & 7) * 8, (var17 & 7) * 8, var15, Class81.aClass17_643, aClass67Array1975);
                                                 break;
                                              }
                                        }
@@ -748,8 +748,8 @@ final void method943(final byte var1) {
                                     var18 = (var14 >> 3) & 2047;
                                     var19 = (var18 / 8) + ((var17 / 8) << 8);
 
-                                    for(var20 = 0; var20 < Class47.anIntArray406.length; ++var20)
-										if((var19 == Class47.anIntArray406[var20]) && (Class104_Sub15.aByteArrayArray1124[var20] != null)) {
+                                    for(var20 = 0; var20 < Class47.regionId.length; ++var20)
+										if((var19 == Class47.regionId[var20]) && (Class104_Sub15.aByteArrayArray1124[var20] != null)) {
 										      Class1.method14(Class104_Sub15.aByteArrayArray1124[var20], var11, 8 * var9, 8 * var10, var15, (var17 & 7) * 8, 8 * (var18 & 7), var16, aClass67Array1975);
 										      var95 = true;
 										      break;
@@ -831,8 +831,8 @@ final void method943(final byte var1) {
                         for(var15 = var9 - 1; var15 <= (var10 + 1); ++var15)
 							for(var16 = var13 - 1; var16 <= (var14 + 1); ++var16)
 								if((var15 < var9) || (var15 > var10) || (var16 < var13) || (var16 > var14)) {
-							         Class67.aClass61_Sub1_555.method268("m" + var15 + "_" + var16);
-							         Class67.aClass61_Sub1_555.method268("l" + var15 + "_" + var16);
+							         Class67.fs.method268("m" + var15 + "_" + var16);
+							         Class67.fs.method268("l" + var15 + "_" + var16);
 							      }
                      }
 

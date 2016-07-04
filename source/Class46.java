@@ -2855,7 +2855,7 @@ public class Class46 {
 				Class52.aClass61_Sub1_430 = Class94.method423(2, true, false, true);
 				Class29.aClass61_Sub1_278 = Class94.method423(3, false, true, true);
 				Class103.aClass61_Sub1_818 = Class94.method423(4, false, true, true);
-				Class67.aClass61_Sub1_555 = Class94.method423(5, true, true, true);
+				Class67.fs = Class94.method423(5, true, true, true);
 				Class27.aClass61_Sub1_264 = Class94.method423(6, true, true, false);
 				Class1.aClass61_Sub1_2 = Class94.method423(7, false, true, true);
 				client.aClass61_Sub1_1820 = Class94.method423(8, false, true, true);
@@ -2876,7 +2876,7 @@ public class Class46 {
 				var0 += (Class52.aClass61_Sub1_430.method493() * 2) / 100;
 				var0 += (Class29.aClass61_Sub1_278.method493() * 2) / 100;
 				var0 += (Class103.aClass61_Sub1_818.method493() * 6) / 100;
-				var0 += (Class67.aClass61_Sub1_555.method493() * 4) / 100;
+				var0 += (Class67.fs.method493() * 4) / 100;
 				var0 += (Class27.aClass61_Sub1_264.method493() * 2) / 100;
 				var0 += (Class1.aClass61_Sub1_2.method493() * 60) / 100;
 				var0 += (client.aClass61_Sub1_1820.method493() * 2) / 100;
