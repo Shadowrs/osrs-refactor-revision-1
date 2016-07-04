@@ -9,7 +9,7 @@ public final class Class13 implements Runnable {
 	byte[] aByteArray80;
 	boolean aBool81 = false;
 	int anInt84 = 0;
-	boolean aBool77 = false;
+	boolean dummy = false;
 	Class8 aClass8_82;
 	int anInt85 = 0;
 	Class11 aClass11_83;
@@ -26,7 +26,7 @@ public final class Class13 implements Runnable {
 					int var4;
 					synchronized (this) {
 						if (anInt85 == anInt84) {
-							if (aBool77)
+							if (dummy)
 								break label80;
 
 							try {
@@ -85,22 +85,22 @@ public final class Class13 implements Runnable {
 
 	}
 
-	public void method51(final byte[] var1, int var2, int var3) throws IOException {
-		if (!aBool77)
-			while (var3 > 0) {
-				final int var4 = anInputStream86.read(var1, var2, var3);
+	public void readbytes(final byte[] destination, int off, int len) throws IOException {
+		if (!dummy)
+			while (len > 0) {
+				final int var4 = anInputStream86.read(destination, off, len);
 				if (var4 <= 0)
 					throw new EOFException();
 
-				var2 += var4;
-				var3 -= var4;
+				off += var4;
+				len -= var4;
 			}
 	}
 
 	public void destory() {
-		if (!aBool77) {
+		if (!dummy) {
 			synchronized (this) {
-				aBool77 = true;
+				dummy = true;
 				notifyAll();
 			}
 
@@ -120,12 +120,12 @@ public final class Class13 implements Runnable {
 		}
 	}
 
-	public int method53() throws IOException {
-		return aBool77 ? 0 : anInputStream86.available();
+	public int avail() throws IOException {
+		return dummy ? 0 : anInputStream86.available();
 	}
 
-	public void method54(final byte[] var1, final int var2, final int var3) throws IOException {
-		if (!aBool77)
+	public void flushbytes(final byte[] var1, final int var2, final int var3) throws IOException {
+		if (!dummy)
 			if (aBool81) {
 				aBool81 = false;
 				throw new IOException();
@@ -163,8 +163,8 @@ public final class Class13 implements Runnable {
 		destory();
 	}
 
-	public int method55() throws IOException {
-		return aBool77 ? 0 : anInputStream86.read();
+	public int read() throws IOException {
+		return dummy ? 0 : anInputStream86.read();
 	}
 
 	static final void method56(final Class104_Sub9 var0, final boolean var1) {

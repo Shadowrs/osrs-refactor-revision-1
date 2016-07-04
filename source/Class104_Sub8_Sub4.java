@@ -186,8 +186,8 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 			if (client.step == 2) {
 				client.secureBuf.anInt1172 = 0;
 				client.secureBuf.writebyte(14);
-				Class20.stream.method54(client.secureBuf.aByteArray1174, 0, 1);
-				client.aClass104_Sub21_Sub1_1963.anInt1172 = 0;
+				Class20.stream.flushbytes(client.secureBuf.aByteArray1174, 0, 1);
+				client.gamecon.anInt1172 = 0;
 				client.step = 3;
 			}
 
@@ -199,7 +199,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				if (null != Class102_Sub1.aClass99_895)
 					Class102_Sub1.aClass99_895.method447();
 
-				code = Class20.stream.method55();
+				code = Class20.stream.read();
 				if (null != Class76.aClass99_620)
 					Class76.aClass99_620.method447();
 
@@ -211,21 +211,21 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 					return;
 				}
 
-				client.aClass104_Sub21_Sub1_1963.anInt1172 = 0;
+				client.gamecon.anInt1172 = 0;
 				client.step = 5;
 			}
 
 			int var2;
 			if (client.step == 5) {
-				final int[] var1 = new int[] { (int) (Math.random() * 9.9999999E7D),
+				final int[] issackeys = new int[] { (int) (Math.random() * 9.9999999E7D),
 						(int) (Math.random() * 9.9999999E7D), (int) (Math.random() * 9.9999999E7D),
 						(int) (Math.random() * 9.9999999E7D) };
 				client.secureBuf.anInt1172 = 0;
 				client.secureBuf.writebyte(10);
-				client.secureBuf.writeInt(var1[0]);
-				client.secureBuf.writeInt(var1[1]);
-				client.secureBuf.writeInt(var1[2]);
-				client.secureBuf.writeInt(var1[3]);
+				client.secureBuf.writeInt(issackeys[0]);
+				client.secureBuf.writeInt(issackeys[1]);
+				client.secureBuf.writeInt(issackeys[2]);
+				client.secureBuf.writeInt(issackeys[3]);
 				client.secureBuf.writeLong(0L);
 				client.secureBuf.writeString(Class66.aString522);
 				client.secureBuf.doRSA(Class60.aBigInteger476, Class60.aBigInteger477);
@@ -259,21 +259,20 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeInt(Class65.aClass61_Sub1_515.anInt489);
 				client.loginbuf.writeInt(Class104_Sub18_Sub6.aClass61_Sub1_1374.anInt489);
 				client.loginbuf.writeInt(Class100.aClass61_Sub1_800.anInt489);
-				client.loginbuf.method618(var1, var3, client.loginbuf.anInt1172);
-				client.loginbuf.method610(client.loginbuf.anInt1172 - var2);
-				Class20.stream.method54(client.loginbuf.aByteArray1174, 0,
-						client.loginbuf.anInt1172);
-				client.secureBuf.method627(var1);
+				client.loginbuf.applyIsaac(issackeys, var3, client.loginbuf.anInt1172);
+				client.loginbuf.writeShortLE(client.loginbuf.anInt1172 - var2);
+				Class20.stream.flushbytes(client.loginbuf.aByteArray1174, 0, client.loginbuf.anInt1172);
+				client.secureBuf.setisaac(issackeys);
 
 				for (int var4 = 0; var4 < 4; ++var4)
-					var1[var4] += 50;
+					issackeys[var4] += 50;
 
-				client.aClass104_Sub21_Sub1_1963.method627(var1);
+				client.gamecon.setisaac(issackeys);
 				client.step = 6;
 			}
 
-			if ((client.step == 6) && (Class20.stream.method53() > 0)) {
-				code = Class20.stream.method55();
+			if ((client.step == 6) && (Class20.stream.avail() > 0)) {
+				code = Class20.stream.read();
 				if ((code == 21) && (client.anInt1806 == 20))
 					client.step = 7;
 				else if (code == 2)
@@ -281,7 +280,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				else {
 					if ((code == 15) && (client.anInt1806 == 40)) {
 						client.secureBuf.anInt1172 = 0;
-						client.aClass104_Sub21_Sub1_1963.anInt1172 = 0;
+						client.gamecon.anInt1172 = 0;
 						client.anInt1790 = -1;
 						client.anInt1837 = -1;
 						client.anInt2042 = -1;
@@ -321,8 +320,8 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				}
 			}
 
-			if ((client.step == 7) && (Class20.stream.method53() > 0)) {
-				client.anInt1826 = (Class20.stream.method55() + 3) * 60;
+			if ((client.step == 7) && (Class20.stream.avail() > 0)) {
+				client.anInt1826 = (Class20.stream.read() + 3) * 60;
 				client.step = 8;
 			}
 
@@ -334,26 +333,26 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 					client.step = 0;
 
 			} else {
-				if ((client.step == 9) && (Class20.stream.method53() >= 8)) {
-					client.anInt1915 = Class20.stream.method55();
-					client.aBool1955 = Class20.stream.method55() == 1;
-					client.anInt1874 = Class20.stream.method55();
+				if ((client.step == 9) && (Class20.stream.avail() >= 8)) {
+					client.anInt1915 = Class20.stream.read();
+					client.aBool1955 = Class20.stream.read() == 1;
+					client.anInt1874 = Class20.stream.read(); // pid left half
 					client.anInt1874 <<= 8;
-					client.anInt1874 += Class20.stream.method55();
-					client.anInt1990 = Class20.stream.method55();
-					Class20.stream.method51(client.aClass104_Sub21_Sub1_1963.aByteArray1174, 0, 1);
-					client.aClass104_Sub21_Sub1_1963.anInt1172 = 0;
-					client.anInt1790 = client.aClass104_Sub21_Sub1_1963.method628();
-					Class20.stream.method51(client.aClass104_Sub21_Sub1_1963.aByteArray1174, 0, 2);
-					client.aClass104_Sub21_Sub1_1963.anInt1172 = 0;
-					client.anInt1929 = client.aClass104_Sub21_Sub1_1963.method571();
+					client.anInt1874 += Class20.stream.read(); // pid right half
+					client.anInt1990 = Class20.stream.read();
+					Class20.stream.readbytes(client.gamecon.aByteArray1174, 0, 1);
+					client.gamecon.anInt1172 = 0;
+					client.anInt1790 = client.gamecon.opcode();
+					Class20.stream.readbytes(client.gamecon.aByteArray1174, 0, 2);
+					client.gamecon.anInt1172 = 0;
+					client.anInt1929 = client.gamecon.method571();
 					client.step = 10;
 				}
 
 				if (client.step == 10) {
-					if (Class20.stream.method53() >= client.anInt1929) {
-						client.aClass104_Sub21_Sub1_1963.anInt1172 = 0;
-						Class20.stream.method51(client.aClass104_Sub21_Sub1_1963.aByteArray1174, 0,
+					if (Class20.stream.avail() >= client.anInt1929) {
+						client.gamecon.anInt1172 = 0;
+						Class20.stream.readbytes(client.gamecon.aByteArray1174, 0,
 								client.anInt1929);
 						Class102_Sub1.method495();
 						Class54.anInt447 = -1;

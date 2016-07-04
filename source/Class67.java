@@ -669,7 +669,7 @@ public class Class67 {
 		int var2 = 0;
 
 		for (int var3 = 0; var3 < var1; ++var3)
-			var2 = ((var2 << 5) - var2) + Class37.method177(var0.charAt(var3));
+			var2 = ((var2 << 5) - var2) + ISAAC.method177(var0.charAt(var3));
 
 		return var2;
 	}

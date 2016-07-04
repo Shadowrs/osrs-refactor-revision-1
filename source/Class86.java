@@ -49,7 +49,7 @@ public class Class86 {
 								var7.writebyte(4);
 								var7.writebyte(Class87.aByte697);
 								var7.writeShort(0);
-								Class66.aClass13_547.method54(var7.aByteArray1174, 0, 4);
+								Class66.aClass13_547.flushbytes(var7.aByteArray1174, 0, 4);
 							} catch (final IOException var5) {
 								try {
 									Class66.aClass13_547.destory();

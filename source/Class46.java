@@ -1335,7 +1335,7 @@ public class Class46 {
 											var24 = Class90.anIntArray706[var4];
 											client.secureBuf.method623(252);
 											client.secureBuf
-													.writebyte(Class104_Sub21_Sub1.method630(var80) + 1);
+													.writebyte(Class104_Sub21_Sub1.strlen(var80) + 1);
 											client.secureBuf.writeString(var80);
 											client.secureBuf.method585(var24);
 											continue;
@@ -1400,7 +1400,7 @@ public class Class46 {
 													client.anInt1846 = client.anInt1978;
 													client.secureBuf.method623(248);
 													client.secureBuf
-															.writebyte(Class104_Sub21_Sub1.method630(var80));
+															.writebyte(Class104_Sub21_Sub1.strlen(var80));
 													client.secureBuf.writeString(var80);
 													continue label2280;
 												}
@@ -1492,7 +1492,7 @@ public class Class46 {
 											if (null != Class104_Sub13.aClass104_Sub7Array1099) {
 												client.secureBuf.method623(245);
 												client.secureBuf
-														.writebyte(Class104_Sub21_Sub1.method630(var80));
+														.writebyte(Class104_Sub21_Sub1.strlen(var80));
 												client.secureBuf.writeString(var80);
 											}
 											continue;
@@ -2202,7 +2202,7 @@ public class Class46 {
 											var17 = Class90.anIntArray706[1 + var4];
 											client.secureBuf.method623(96);
 											client.secureBuf
-													.writebyte(Class104_Sub21_Sub1.method630(var80) + 2);
+													.writebyte(Class104_Sub21_Sub1.strlen(var80) + 2);
 											client.secureBuf.writeString(var80);
 											client.secureBuf.writebyte(var24 - 1);
 											client.secureBuf.writebyte(var17);
@@ -2382,7 +2382,7 @@ public class Class46 {
 											client.secureBuf.writeString(var80);
 											Class41.method183(client.secureBuf, var16);
 											client.secureBuf
-													.method610(client.secureBuf.anInt1172 - var17);
+													.writeShortLE(client.secureBuf.anInt1172 - var17);
 											continue;
 										}
 

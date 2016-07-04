@@ -418,14 +418,14 @@ public class RSBuf extends Class104 {
 		return var2 == 0 ? "" : Class104_Sub18_Sub6.method751(aByteArray1174, var1, var2);
 	}
 
-	public void method609(final int var1) {
+	public void writeIntLE(final int var1) {
 		aByteArray1174[anInt1172 - var1 - 4] = (byte) (var1 >> 24);
 		aByteArray1174[anInt1172 - var1 - 3] = (byte) (var1 >> 16);
 		aByteArray1174[anInt1172 - var1 - 2] = (byte) (var1 >> 8);
 		aByteArray1174[anInt1172 - var1 - 1] = (byte) var1;
 	}
 
-	public void method610(final int var1) {
+	public void writeShortLE(final int var1) {
 		aByteArray1174[anInt1172 - var1 - 2] = (byte) (var1 >> 8);
 		aByteArray1174[anInt1172 - var1 - 1] = (byte) var1;
 	}
@@ -483,7 +483,7 @@ public class RSBuf extends Class104 {
 
 	}
 
-	public void method618(final int[] var1, final int var2, final int var3) {
+	public void applyIsaac(final int[] var1, final int var2, final int var3) {
 		final int var4 = anInt1172;
 		anInt1172 = var2;
 		final int var5 = (var3 - var2) / 8;

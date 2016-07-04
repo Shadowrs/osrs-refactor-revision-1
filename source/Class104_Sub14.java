@@ -192,7 +192,7 @@ public class Class104_Sub14 extends Class104 {
 
 						var51.writebyte(47);
 						var51.writebyte(0);
-						var51.method609(var51.anInt1172 - var61);
+						var51.writeIntLE(var51.anInt1172 - var61);
 						continue label220;
 					}
 

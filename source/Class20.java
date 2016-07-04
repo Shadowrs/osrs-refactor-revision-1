@@ -23,7 +23,7 @@ public final class Class20 {
 				client.secureBuf.method623(228);
 
 				try {
-					stream.method54(client.secureBuf.aByteArray1174, 0,
+					stream.flushbytes(client.secureBuf.aByteArray1174, 0,
 							client.secureBuf.anInt1172);
 					client.secureBuf.anInt1172 = 0;
 				} catch (final IOException var2) {

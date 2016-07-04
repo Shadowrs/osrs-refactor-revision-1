@@ -106,7 +106,7 @@ public class Class15 {
 
 						client.anInt1846 = client.anInt1978;
 						client.secureBuf.method623(41);
-						client.secureBuf.writebyte(Class104_Sub21_Sub1.method630(var0));
+						client.secureBuf.writebyte(Class104_Sub21_Sub1.strlen(var0));
 						client.secureBuf.writeString(var0);
 						break;
 					}

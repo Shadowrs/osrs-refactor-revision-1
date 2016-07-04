@@ -309,7 +309,7 @@ public class Class49 {
 						var4 = new RSBuf(4);
 						var4.writebyte(1);
 						var4.method587((int) var3.aLong824);
-						Class66.aClass13_547.method54(var4.aByteArray1174, 0, 4);
+						Class66.aClass13_547.flushbytes(var4.aByteArray1174, 0, 4);
 						Class87.aClass58_683.method242(var3, var3.aLong824);
 						--Class87.anInt682;
 						++Class87.anInt684;
@@ -320,7 +320,7 @@ public class Class49 {
 						var4 = new RSBuf(4);
 						var4.writebyte(0);
 						var4.method587((int) var3.aLong824);
-						Class66.aClass13_547.method54(var4.aByteArray1174, 0, 4);
+						Class66.aClass13_547.flushbytes(var4.aByteArray1174, 0, 4);
 						var3.method555();
 						Class87.aClass58_694.method242(var3, var3.aLong824);
 						--Class87.anInt687;
@@ -328,7 +328,7 @@ public class Class49 {
 					}
 
 					for (int var5 = 0; var5 < 100; ++var5) {
-						final int var6 = Class66.aClass13_547.method53();
+						final int var6 = Class66.aClass13_547.avail();
 						if (var6 < 0)
 							throw new IOException();
 
@@ -351,7 +351,7 @@ public class Class49 {
 							if (var8 > var6)
 								var8 = var6;
 
-							Class66.aClass13_547.method51(Class87.aClass104_Sub21_690.aByteArray1174,
+							Class66.aClass13_547.readbytes(Class87.aClass104_Sub21_690.aByteArray1174,
 									Class87.aClass104_Sub21_690.anInt1172, var8);
 							if (Class87.aByte697 != 0)
 								for (var9 = 0; var9 < var8; ++var9)
@@ -404,7 +404,7 @@ public class Class49 {
 							if (var9 > var6)
 								var9 = var6;
 
-							Class66.aClass13_547.method51(Class87.aClass104_Sub21_691.aByteArray1174,
+							Class66.aClass13_547.readbytes(Class87.aClass104_Sub21_691.aByteArray1174,
 									Class87.aClass104_Sub21_691.anInt1172, var9);
 							if (Class87.aByte697 != 0)
 								for (var10 = 0; var10 < var9; ++var10)

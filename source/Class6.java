@@ -10,7 +10,7 @@ public final class Class6 {
 	static final void method32(final String var0) {
 		if (!var0.equals("")) {
 			client.secureBuf.method623(185);
-			client.secureBuf.writebyte(Class104_Sub21_Sub1.method630(var0));
+			client.secureBuf.writebyte(Class104_Sub21_Sub1.strlen(var0));
 			client.secureBuf.writeString(var0);
 		}
 	}

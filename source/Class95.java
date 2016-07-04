@@ -20,18 +20,18 @@ public class Class95 {
 		int var9;
 		int var10;
 		if (!client.aBool1847) {
-			var1 = client.aClass104_Sub21_Sub1_1963.method571();
-			var2 = client.aClass104_Sub21_Sub1_1963.method593();
-			var3 = (client.anInt1929 - client.aClass104_Sub21_Sub1_1963.anInt1172) / 16;
+			var1 = client.gamecon.method571();
+			var2 = client.gamecon.method593();
+			var3 = (client.anInt1929 - client.gamecon.anInt1172) / 16;
 			Class13.anIntArrayArray87 = new int[var3][4];
 
 			for (var4 = 0; var4 < var3; ++var4)
 				for (var5 = 0; var5 < 4; ++var5)
-					Class13.anIntArrayArray87[var4][var5] = client.aClass104_Sub21_Sub1_1963.method601();
+					Class13.anIntArrayArray87[var4][var5] = client.gamecon.method601();
 
-			var4 = client.aClass104_Sub21_Sub1_1963.method607();
-			var5 = client.aClass104_Sub21_Sub1_1963.method571();
-			var6 = client.aClass104_Sub21_Sub1_1963.method595();
+			var4 = client.gamecon.method607();
+			var5 = client.gamecon.method571();
+			var6 = client.gamecon.method595();
 			Class47.anIntArray406 = new int[var3];
 			Class40.anIntArray360 = new int[var3];
 			Class75.anIntArray597 = new int[var3];
@@ -60,32 +60,32 @@ public class Class95 {
 
 			Class19.method120(var5, var6, var4, var2, var1);
 		} else {
-			var1 = client.aClass104_Sub21_Sub1_1963.method595();
-			client.aClass104_Sub21_Sub1_1963.method624();
+			var1 = client.gamecon.method595();
+			client.gamecon.method624();
 
 			for (var2 = 0; var2 < 4; ++var2)
 				for (var3 = 0; var3 < 13; ++var3)
 					for (var4 = 0; var4 < 13; ++var4) {
-						var5 = client.aClass104_Sub21_Sub1_1963.method625(1);
+						var5 = client.gamecon.method625(1);
 						if (var5 == 1)
-							client.anIntArrayArrayArray1848[var2][var3][var4] = client.aClass104_Sub21_Sub1_1963
+							client.anIntArrayArrayArray1848[var2][var3][var4] = client.gamecon
 									.method625(26);
 						else
 							client.anIntArrayArrayArray1848[var2][var3][var4] = -1;
 					}
 
-			client.aClass104_Sub21_Sub1_1963.method629();
-			var2 = (client.anInt1929 - client.aClass104_Sub21_Sub1_1963.anInt1172) / 16;
+			client.gamecon.endbits();
+			var2 = (client.anInt1929 - client.gamecon.anInt1172) / 16;
 			Class13.anIntArrayArray87 = new int[var2][4];
 
 			for (var3 = 0; var3 < var2; ++var3)
 				for (var4 = 0; var4 < 4; ++var4)
-					Class13.anIntArrayArray87[var3][var4] = client.aClass104_Sub21_Sub1_1963.method601();
+					Class13.anIntArrayArray87[var3][var4] = client.gamecon.method601();
 
-			var3 = client.aClass104_Sub21_Sub1_1963.method595();
-			var4 = client.aClass104_Sub21_Sub1_1963.method607();
-			var5 = client.aClass104_Sub21_Sub1_1963.method593();
-			var6 = client.aClass104_Sub21_Sub1_1963.method595();
+			var3 = client.gamecon.method595();
+			var4 = client.gamecon.method607();
+			var5 = client.gamecon.method593();
+			var6 = client.gamecon.method595();
 			Class47.anIntArray406 = new int[var2];
 			Class40.anIntArray360 = new int[var2];
 			Class75.anIntArray597 = new int[var2];

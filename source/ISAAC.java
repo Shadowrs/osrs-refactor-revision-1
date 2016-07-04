@@ -1,4 +1,4 @@
-public final class Class37 {
+public final class ISAAC {
 	int anInt355;
 	int anInt350;
 	int anInt353;
@@ -29,13 +29,14 @@ public final class Class37 {
 
 	}
 
-	final int method175() {
-		if ((--anInt354 + 1) == 0) {
+	final int nextKey() { // ISAAC DISABLED
+		return 0;
+		/*if ((--anInt354 + 1) == 0) {
 			method174();
 			anInt354 = 255;
 		}
 
-		return anIntArray352[anInt354];
+		return anIntArray352[anInt354];*/
 	}
 
 	final void method176() {
@@ -166,7 +167,7 @@ public final class Class37 {
 		anInt354 = 256;
 	}
 
-	Class37(final int[] var1) {
+	ISAAC(final int[] var1) {
 		for (int var2 = 0; var2 < var1.length; ++var2)
 			anIntArray352[var2] = var1[var2];
 

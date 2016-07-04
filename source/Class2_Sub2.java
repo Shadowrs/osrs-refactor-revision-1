@@ -100,8 +100,8 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 
 	static final void method483() {
 		while (true) {
-			if (client.aClass104_Sub21_Sub1_1963.method626(client.anInt1929) >= 27) {
-				final int var0 = client.aClass104_Sub21_Sub1_1963.method625(15);
+			if (client.gamecon.method626(client.anInt1929) >= 27) {
+				final int var0 = client.gamecon.method625(15);
 				if (var0 != 32767) {
 					boolean var1 = false;
 					if (null == client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0]) {
@@ -112,21 +112,21 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 					final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0];
 					client.anIntArray1830[++client.anInt1832 - 1] = var0;
 					var2.anInt1739 = client.anInt1799;
-					final int var3 = client.anIntArray1817[client.aClass104_Sub21_Sub1_1963.method625(3)];
+					final int var3 = client.anIntArray1817[client.gamecon.method625(3)];
 					if (var1)
 						var2.anInt1698 = var2.anInt1725 = var3;
 
-					int var4 = client.aClass104_Sub21_Sub1_1963.method625(5);
+					int var4 = client.gamecon.method625(5);
 					if (var4 > 15)
 						var4 -= 32;
 
-					final int var5 = client.aClass104_Sub21_Sub1_1963.method625(1);
+					final int var5 = client.gamecon.method625(1);
 					if (var5 == 1)
 						client.anIntArray1911[++client.anInt1910 - 1] = var0;
 
-					final int var6 = client.aClass104_Sub21_Sub1_1963.method625(1);
-					var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.aClass104_Sub21_Sub1_1963.method625(14));
-					int var7 = client.aClass104_Sub21_Sub1_1963.method625(5);
+					final int var6 = client.gamecon.method625(1);
+					var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.gamecon.method625(14));
+					int var7 = client.gamecon.method625(5);
 					if (var7 > 15)
 						var7 -= 32;
 
@@ -148,7 +148,7 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 				}
 			}
 
-			client.aClass104_Sub21_Sub1_1963.method629();
+			client.gamecon.endbits();
 			return;
 		}
 	}

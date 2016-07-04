@@ -3,10 +3,10 @@ public final class Class104_Sub21_Sub1 extends RSBuf {
 	static int[] anIntArray1185 = new int[] { 0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383,
 			32767, '\uffff', 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863,
 			134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1 };
-	Class37 aClass37_1186;
+	ISAAC isaac;
 
 	public void method623(final int var1) {
-		aByteArray1174[++anInt1172 - 1] = (byte) (var1 + aClass37_1186.method175());
+		aByteArray1174[++anInt1172 - 1] = (byte) (var1 + isaac.nextKey());
 	}
 
 	public Class104_Sub21_Sub1(final int var1) {
@@ -39,19 +39,19 @@ public final class Class104_Sub21_Sub1 extends RSBuf {
 		return (8 * var1) - anInt1184;
 	}
 
-	public void method627(final int[] var1) {
-		aClass37_1186 = new Class37(var1);
+	public void setisaac(final int[] var1) {
+		isaac = new ISAAC(var1);
 	}
 
-	public int method628() {
-		return (aByteArray1174[++anInt1172 - 1] - aClass37_1186.method175()) & 255;
+	public int opcode() {
+		return (aByteArray1174[++anInt1172 - 1] - isaac.nextKey()) & 255;
 	}
 
-	public void method629() {
+	public void endbits() {
 		anInt1172 = (7 + anInt1184) / 8;
 	}
 
-	public static int method630(final String var0) {
+	public static int strlen(final String var0) {
 		return var0.length() + 1;
 	}
 }
