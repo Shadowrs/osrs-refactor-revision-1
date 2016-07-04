@@ -1,13 +1,13 @@
 import java.io.File;
 
 public class Class24 {
-	public static int anInt238;
-	public static File aFile239;
+	public static int idxCount;
+	public static File rootdirectory;
 	static File settings;
 	static int[] anIntArray244;
-	static Class96 aClass96_241 = null;
-	public static Class96 maindata = null;
-	public static Class96 idx255 = null;
+	static FSManager aClass96_241 = null;
+	public static FSManager maindata = null;
+	public static FSManager idx255 = null;
 
 	public static boolean method125() {
 		try {

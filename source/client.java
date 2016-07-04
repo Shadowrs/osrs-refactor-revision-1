@@ -335,7 +335,7 @@ public final class client extends Applet_Sub1 {
 							++var9;
 						}
 
-						Class96.aClass30_760 = var28;
+						FSManager.aClass30_760 = var28;
 						break;
 					case 6:
 						if (var5.equalsIgnoreCase("true"))
@@ -382,55 +382,55 @@ public final class client extends Applet_Sub1 {
 			Class17.aBool127 = false;
 			lowmvm = false;
 			Class57.aString466 = getCodeBase().getHost();
-			final String var22 = Class96.aClass30_760.aString283;
+			final String var22 = FSManager.aClass30_760.aString283;
 			final byte var14 = 0;
 
 			try {
-				Class24.anInt238 = 16;
+				Class24.idxCount = 16;
 				Class16.anInt116 = var14;
 
 				try {
-					Class64.aString513 = System.getProperty("os.name");
+					Class64.osName = System.getProperty("os.name");
 				} catch (final Exception var20) {
-					Class64.aString513 = "Unknown";
+					Class64.osName = "Unknown";
 				}
 
-				Class90.aString716 = Class64.aString513.toLowerCase();
+				Class90.lowercaseOsName = Class64.osName.toLowerCase();
 
 				try {
-					Class104_Sub23.HOME = System.getProperty("user.home");
-					if (null != Class104_Sub23.HOME)
-						Class104_Sub23.HOME = Class104_Sub23.HOME + "/";
+					Class104_Sub23.homeDir = System.getProperty("user.home");
+					if (null != Class104_Sub23.homeDir)
+						Class104_Sub23.homeDir = Class104_Sub23.homeDir + "/";
 				} catch (final Exception var19) {
 					;
 				}
 
 				try {
-					if (Class90.aString716.startsWith("win")) {
-						if (Class104_Sub23.HOME == null)
-							Class104_Sub23.HOME = System.getenv("USERPROFILE");
-					} else if (null == Class104_Sub23.HOME)
-						Class104_Sub23.HOME = System.getenv("HOME");
+					if (Class90.lowercaseOsName.startsWith("win")) {
+						if (Class104_Sub23.homeDir == null)
+							Class104_Sub23.homeDir = System.getenv("USERPROFILE");
+					} else if (null == Class104_Sub23.homeDir)
+						Class104_Sub23.homeDir = System.getenv("HOME");
 
-					if (Class104_Sub23.HOME != null)
-						Class104_Sub23.HOME = Class104_Sub23.HOME + "/";
+					if (Class104_Sub23.homeDir != null)
+						Class104_Sub23.homeDir = Class104_Sub23.homeDir + "/";
 				} catch (final Exception var18) {
 					;
 				}
 
-				if (null == Class104_Sub23.HOME)
-					Class104_Sub23.HOME = "~/";
+				if (null == Class104_Sub23.homeDir)
+					Class104_Sub23.homeDir = "~/";
 
 				// DIRECTORIES
-				Class49.targets = new String[] { /*"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/",*/ Class104_Sub23.HOME, /*"/tmp/", "" */};
+				Class49.rootDirectory = new String[] { /*"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/",*/ Class104_Sub23.homeDir, /*"/tmp/", "" */};
 				Class7.store = new String[] { "os-rev4", /*".jagex_cache_" + Class16.anInt116, ".file_store_" + Class16.anInt116 */};
 
 				label129: for (yo = 0; yo < 4; ++yo) {
-					Class24.aFile239 = Class70.method325("gamename", var22, yo);
-					if (!Class24.aFile239.exists())
-						Class24.aFile239.mkdirs();
+					Class24.rootdirectory = Class70.method325("gamename", var22, yo);
+					if (!Class24.rootdirectory.exists())
+						Class24.rootdirectory.mkdirs();
 
-					final File[] child = Class24.aFile239.listFiles();
+					final File[] child = Class24.rootdirectory.listFiles();
 					if (child == null)
 						break;
 
@@ -463,15 +463,14 @@ public final class client extends Applet_Sub1 {
 					}
 				}
 
-				Class72.method333(Class24.aFile239);
-				Class89.method406();
-				Class24.maindata = new Class96( new JagFS(Class75.method341("main_file_cache.dat2"), "rw", 1048576000L), 5200, 0);
-				Class24.idx255 = new Class96(new JagFS(Class75.method341("main_file_cache.idx255"), "rw", 1048576L), 6000, 0);
-				Class22.aClass96Array227 = new Class96[Class24.anInt238];
+				Class72.verifyCreated(Class24.rootdirectory);
+				Class89.createRandomDat();
+				Class24.maindata = new FSManager( new JagFS(Class75.method341("main_file_cache.dat2"), "rw", 1048576000L), 5200, 0);
+				Class24.idx255 = new FSManager(new JagFS(Class75.method341("main_file_cache.idx255"), "rw", 1048576L), 6000, 0);
+				Class22.managers = new FSManager[Class24.idxCount];
 
-				for (yo = 0; yo < Class24.anInt238; ++yo)
-					Class22.aClass96Array227[yo] = new Class96(
-							new JagFS(Class75.method341("main_file_cache.idx" + yo), "rw", 1048576L), 6000, 0);
+				for (yo = 0; yo < Class24.idxCount; ++yo)
+					Class22.managers[yo] = new FSManager(new JagFS(Class75.method341("main_file_cache.idx" + yo), "rw", 1048576L), 6000, 0);
 			} catch (final Exception var21) {
 				Nodee.report((String) null, var21);
 			}
@@ -664,7 +663,7 @@ final void method943(final byte var1) {
                            var12 = Class104_Sub15.terrainData[var11];
                            if(null != var12) {
                               Class101.method465();
-                              Class1.method16(var12, localx, localy, (Class54.anInt447 * 8) - 48, (Class96.anInt761 * 8) - 48, aClass67Array1975);
+                              Class1.method16(var12, localx, localy, (Class54.anInt447 * 8) - 48, (FSManager.anInt761 * 8) - 48, aClass67Array1975);
                            }
                         }
 
@@ -672,7 +671,7 @@ final void method943(final byte var1) {
                            localx = (64 * (Class47.mapCoordinates[var11] >> 8)) - Class53.anInt436;
                            localy = ((Class47.mapCoordinates[var11] & 255) * 64) - Class20.anInt206;
                            var12 = Class104_Sub15.terrainData[var11];
-                           if((var12 == null) && (Class96.anInt761 < 800)) {
+                           if((var12 == null) && (FSManager.anInt761 < 800)) {
                               Class101.method465();
                               Nodee.method519(localx, localy, 64, 64);
                            }
@@ -825,8 +824,8 @@ final void method943(final byte var1) {
                      if(!dynamicRegion) {
                         localx = (Class54.anInt447 - 6) / 8;
                         localy = (6 + Class54.anInt447) / 8;
-                        var13 = (Class96.anInt761 - 6) / 8;
-                        var14 = (6 + Class96.anInt761) / 8;
+                        var13 = (FSManager.anInt761 - 6) / 8;
+                        var14 = (6 + FSManager.anInt761) / 8;
 
                         for(var15 = localx - 1; var15 <= (localy + 1); ++var15)
 							for(var16 = var13 - 1; var16 <= (var14 + 1); ++var16)
@@ -2625,7 +2624,7 @@ final void method943(final byte var1) {
                      }
 
                      if(lowmvm && (anInt1988 != Class12.anInt73))
-						Class19.method120(Class54.anInt447, Class96.anInt761, Class12.anInt73, Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0], Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0]);
+						Class19.method120(Class54.anInt447, FSManager.anInt761, Class12.anInt73, Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0], Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0]);
 					else if(anInt2013 != Class12.anInt73) {
                         anInt2013 = Class12.anInt73;
                         var8 = Class12.anInt73;
@@ -3352,7 +3351,7 @@ final void method943(final byte var1) {
 
 			method947();
 			Class80.method350(Class57.aCanvas468);
-			Class96.method437(Class57.aCanvas468);
+			FSManager.method437(Class57.aCanvas468);
 			if (Class25.aClass3_257 != null)
 				Class25.aClass3_257.method23(Class57.aCanvas468, 1813162168);
 		}
@@ -3952,7 +3951,7 @@ final void method943(final byte var1) {
 		}
 
 		Class80.method350(Class57.aCanvas468);
-		Class96.method437(Class57.aCanvas468);
+		FSManager.method437(Class57.aCanvas468);
 		Class25.aClass3_257 = Class46.method205(-1943632078);
 		if (Class25.aClass3_257 != null)
 			Class25.aClass3_257.method23(Class57.aCanvas468, 1813162168);
@@ -4106,7 +4105,7 @@ final void method943(final byte var1) {
 
 		Class66.anIntArray519 = var2;
 		Class66.anIntArray545 = var3;
-		Class33.method159(Class96.aClass57Array758, 0, Class96.aClass57Array758.length - 1, Class66.anIntArray519,
+		Class33.method159(FSManager.aClass57Array758, 0, FSManager.aClass57Array758.length - 1, Class66.anIntArray519,
 				Class66.anIntArray545);
 	}
 }

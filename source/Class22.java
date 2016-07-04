@@ -3,7 +3,7 @@ import java.util.Hashtable;
 
 public class Class22 {
 	static File aFile224;
-	public static Class96[] aClass96Array227;
+	public static FSManager[] managers;
 	public static Widget[][] widgets;
 	static boolean aBool225 = false;
 	static Hashtable aHashtable226 = new Hashtable(16);

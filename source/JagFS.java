@@ -44,7 +44,7 @@ public final class JagFS {
 		}
 	}
 
-	public final void method418() throws IOException {
+	public final void close() throws IOException {
 		if (aRandomAccessFile745 != null) {
 			aRandomAccessFile745.close();
 			aRandomAccessFile745 = null;
@@ -52,11 +52,11 @@ public final class JagFS {
 
 	}
 
-	public final long method419() throws IOException {
+	public final long length() throws IOException {
 		return aRandomAccessFile745.length();
 	}
 
-	public final int method420(final byte[] var1, final int var2, final int var3) throws IOException {
+	public final int read(final byte[] var1, final int var2, final int var3) throws IOException {
 		final int var4 = aRandomAccessFile745.read(var1, var2, var3);
 		if (var4 > 0)
 			aLong743 += var4;
@@ -68,7 +68,7 @@ public final class JagFS {
 	public void finalize() throws Throwable {
 		if (aRandomAccessFile745 != null) {
 			System.out.println("");
-			method418();
+			close();
 		}
 
 	}
@@ -84,7 +84,7 @@ public final class JagFS {
 	static Class61_Sub1 method423(final int var0, final boolean var1, final boolean var2, final boolean var3) {
 		Class16 var4 = null;
 		if (null != Class24.maindata)
-			var4 = new Class16(var0, Class24.maindata, Class22.aClass96Array227[var0], 1000000);
+			var4 = new Class16(var0, Class24.maindata, Class22.managers[var0], 1000000);
 
 		return new Class61_Sub1(var4, Class88.aClass16_701, var0, var1, var2, var3);
 	}

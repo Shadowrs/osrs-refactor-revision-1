@@ -177,7 +177,7 @@ public final class Class104_Sub1 extends Class104 {
 			int var12 = 0;
 
 			for (int var13 = 0; var13 < Class66.anInt542; ++var13) {
-				final Class57 var14 = Class96.aClass57Array758[var13];
+				final Class57 var14 = FSManager.aClass57Array758[var13];
 				boolean var15 = true;
 				String var16 = Integer.toString(var14.anInt460);
 				if (var14.anInt460 == -1) {

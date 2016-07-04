@@ -70,7 +70,7 @@ public class Class70 {
 
 	public static File method325(final String var0, final String var1, final int type) {
 		final String var3 = type == 0 ? "" : "" + type;
-		Class24.settings = new File(Class104_Sub23.HOME, "jagex_cl_" + var0 + "_" + var1 + var3 + ".dat");
+		Class24.settings = new File(Class104_Sub23.homeDir, "jagex_cl_" + var0 + "_" + var1 + var3 + ".dat");
 		String dir = null;
 		String var5 = null;
 		boolean var6 = false;
@@ -83,8 +83,8 @@ public class Class70 {
 
 				int var9;
 				for (var8 = new RSBuf(
-						(int) var7.method419()); var8.pos < var8.backing.length; var8.pos += var9) {
-					var9 = var7.method420(var8.backing, var8.pos,
+						(int) var7.length()); var8.pos < var8.backing.length; var8.pos += var9) {
+					var9 = var7.read(var8.backing, var8.pos,
 							var8.backing.length - var8.pos);
 					if (var9 == -1)
 						throw new IOException();
@@ -109,7 +109,7 @@ public class Class70 {
 						var5 = var8.method581();
 				}
 
-				var7.method418();
+				var7.close();
 			} catch (final IOException var25) {
 				var25.printStackTrace();
 			}
@@ -144,8 +144,8 @@ public class Class70 {
 
 		if ((dir == null) && (type == 0))
 			label125: for (int var13 = 0; var13 < Class7.store.length; ++var13)
-				for (int var14 = 0; var14 < Class49.targets.length; ++var14) {
-					final File var15 = new File(Class49.targets[var14] + Class7.store[var13] + File.separatorChar + var0 + File.separatorChar);
+				for (int var14 = 0; var14 < Class49.rootDirectory.length; ++var14) {
+					final File var15 = new File(Class49.rootDirectory[var14] + Class7.store[var13] + File.separatorChar + var0 + File.separatorChar);
 					if (var15.exists()) {
 						final File test = new File(var15, "test.dat");
 
@@ -173,7 +173,7 @@ public class Class70 {
 
 		if (null == dir) {
 			// jagexcache
-			dir = Class104_Sub23.HOME + File.separatorChar + "timelord" + var3 + File.separatorChar + var0 + File.separatorChar + var1 + File.separatorChar;
+			dir = Class104_Sub23.homeDir + File.separatorChar + "timelord" + var3 + File.separatorChar + var0 + File.separatorChar + var1 + File.separatorChar;
 			var6 = true;
 		}
 
@@ -211,7 +211,7 @@ public class Class70 {
 				var31.writebyte(null != var8 ? 1 : 0);
 				var31.method564(var26.getPath());
 				var33.method417(var31.backing, 0, var31.pos);
-				var33.method418();
+				var33.close();
 			} catch (final IOException var21) {
 				var21.printStackTrace();
 			}

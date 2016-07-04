@@ -3,7 +3,7 @@ import java.util.Calendar;
 public class Class90 {
 	static int[] cachedCsIntToUse;
 	static String[] cachedCsStrToUse;
-	public static String aString716;
+	public static String lowercaseOsName;
 	static int[] anIntArray711 = new int[5];
 	static int[][] anIntArrayArray710 = new int[5][5000];
 	static int[] anIntArray706 = new int[1000];

@@ -19,11 +19,11 @@ public abstract class Class3 {
 				if (null != var0) {
 					final RSBuf var1 = new RSBuf(var0);
 					Class66.anInt542 = var1.readLEShort();
-					Class96.aClass57Array758 = new Class57[Class66.anInt542];
+					FSManager.aClass57Array758 = new Class57[Class66.anInt542];
 
 					Class57 var3;
 					for (int var2 = 0; var2 < Class66.anInt542; var3.anInt461 = var2++) {
-						var3 = Class96.aClass57Array758[var2] = new Class57();
+						var3 = FSManager.aClass57Array758[var2] = new Class57();
 						final int var4 = var1.readLEShort();
 						var3.anInt463 = var4 & 32767;
 						var3.aBool464 = (var4 & '\u8000') != 0;
@@ -32,7 +32,7 @@ public abstract class Class3 {
 						var3.anInt460 = var1.method572();
 					}
 
-					Class33.method159(Class96.aClass57Array758, 0, Class96.aClass57Array758.length - 1,
+					Class33.method159(FSManager.aClass57Array758, 0, FSManager.aClass57Array758.length - 1,
 							Class66.anIntArray519, Class66.anIntArray545);
 					Class66.aBool541 = true;
 					Class76.aClass70_617 = null;

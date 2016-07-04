@@ -52,10 +52,10 @@ public class Class19 {
 	}
 
 	static final void method120(final int var0, final int var1, final int var2, final int var3, final int var4) {
-		if ((var0 != Class54.anInt447) || (var1 != Class96.anInt761)
+		if ((var0 != Class54.anInt447) || (var1 != FSManager.anInt761)
 				|| ((client.anInt1988 != var2) && client.lowmvm)) {
 			Class54.anInt447 = var0;
-			Class96.anInt761 = var1;
+			FSManager.anInt761 = var1;
 			client.anInt1988 = var2;
 			if (!client.lowmvm)
 				client.anInt1988 = 0;

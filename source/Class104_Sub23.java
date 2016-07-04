@@ -1,5 +1,5 @@
 public class Class104_Sub23 extends Class104 {
-	public static String HOME;
+	public static String homeDir;
 	static Class104_Sub18_Sub17_Sub3[] aClass104_Sub18_Sub17_Sub3Array1182;
 	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array1183;
 	int anInt1180;

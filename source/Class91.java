@@ -5,8 +5,8 @@ public class Class91 {
 		try {
 			Class24.maindata.method432(-883153307);
 
-			for (int var0 = 0; var0 < Class24.anInt238; ++var0)
-				Class22.aClass96Array227[var0].method432(-883153307);
+			for (int var0 = 0; var0 < Class24.idxCount; ++var0)
+				Class22.managers[var0].method432(-883153307);
 
 			Class24.idx255.method432(-883153307);
 			Class24.aClass96_241.method432(-883153307);

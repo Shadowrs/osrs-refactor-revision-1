@@ -160,7 +160,7 @@ public class Class71 {
 			}
 
 			if (Class66.anInt546 != -1) {
-				final Class57 var5 = Class96.aClass57Array758[Class66.anInt546];
+				final Class57 var5 = FSManager.aClass57Array758[Class66.anInt546];
 				if (var5.aBool464 == client.aBool1852) {
 					Class57.aString466 = var5.aString459;
 					client.anInt1939 = var5.anInt463;

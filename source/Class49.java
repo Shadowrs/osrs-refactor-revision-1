@@ -1,7 +1,7 @@
 import java.io.IOException;
 
 public class Class49 {
-	public static String[] targets;
+	public static String[] rootDirectory;
 	static Class8 aClass8_416;
 	static Class104_Sub18_Sub17_Sub3 aClass104_Sub18_Sub17_Sub3_417;
 	public static Class61 aClass61_418;

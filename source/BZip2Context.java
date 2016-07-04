@@ -417,12 +417,12 @@ public final class BZip2Context {
 
 			Class66.aClass104_Sub18_Sub17_Sub3Array521[Class66.aBool527 ? 1 : 0].method889(725, 463);
 			if ((client.loadstage > 5) && (client.anInt1913 == 0))
-				if (null != Class96.aClass104_Sub18_Sub17_Sub3_759) {
+				if (null != FSManager.aClass104_Sub18_Sub17_Sub3_759) {
 					var2 = 5;
 					var22 = 463;
 					final byte var26 = 100;
 					final byte var27 = 35;
-					Class96.aClass104_Sub18_Sub17_Sub3_759.method889(var2, var22);
+					FSManager.aClass104_Sub18_Sub17_Sub3_759.method889(var2, var22);
 					var0.method882("World" + " " + client.anInt1939, (var26 / 2) + var2, (var22 + (var27 / 2)) - 2,
 							16777215, 0);
 					if (null != Class76.aClass70_617)
@@ -430,7 +430,7 @@ public final class BZip2Context {
 					else
 						var1.method882("Click to switch", var2 + (var26 / 2), (var27 / 2) + var22 + 12, 16777215, 0);
 				} else
-					Class96.aClass104_Sub18_Sub17_Sub3_759 = Class11.method48(client.aClass61_Sub1_1820, "sl_button",
+					FSManager.aClass104_Sub18_Sub17_Sub3_759 = Class11.method48(client.aClass61_Sub1_1820, "sl_button",
 							"");
 
 			try {

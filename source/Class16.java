@@ -4,13 +4,13 @@ import java.io.IOException;
 public final class Class16 {
 	public static int anInt116;
 	static byte[] aByteArray113 = new byte[520];
-	Class96 aClass96_111 = null;
-	Class96 aClass96_112 = null;
+	FSManager aClass96_111 = null;
+	FSManager aClass96_112 = null;
 	int anInt115 = '\ufde8';
 	int anInt114;
 
 	public boolean method63(final int var1, final byte[] var2, final int var3) {
-		final Class96 var4 = aClass96_111;
+		final FSManager var4 = aClass96_111;
 		synchronized (var4) {
 			if ((var3 >= 0) && (var3 <= anInt115)) {
 				boolean var5 = method64(var1, var2, var3, true);
@@ -24,7 +24,7 @@ public final class Class16 {
 	}
 
 	boolean method64(final int var1, final byte[] var2, final int var3, boolean var4) {
-		final Class96 var5 = aClass96_111;
+		final FSManager var5 = aClass96_111;
 		synchronized (var5) {
 			boolean var10000;
 			try {
@@ -120,7 +120,7 @@ public final class Class16 {
 		}
 	}
 
-	public Class16(final int var1, final Class96 var2, final Class96 var3, final int var4) {
+	public Class16(final int var1, final FSManager var2, final FSManager var3, final int var4) {
 		anInt114 = var1;
 		aClass96_111 = var2;
 		aClass96_112 = var3;
@@ -128,7 +128,7 @@ public final class Class16 {
 	}
 
 	public byte[] method65(final int var1) {
-		final Class96 var2 = aClass96_111;
+		final FSManager var2 = aClass96_111;
 		synchronized (var2) {
 			try {
 				if (aClass96_112.method429() < (6 + (6 * var1)))

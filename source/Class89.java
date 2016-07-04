@@ -8,19 +8,18 @@ public class Class89 {
 	static int anInt704;
 	static Widget aClass104_Sub12_705;
 
-	public static void method406() {
+	public static void createRandomDat() {
 		try {
-			final File var0 = new File(Class104_Sub23.HOME, "random.dat");
+			final File var0 = new File(Class104_Sub23.homeDir, "random.dat");
 			int x;
 			if (var0.exists())
-				Class24.aClass96_241 = new Class96(new JagFS(var0, "rw", 25L), 24, 0);
+				Class24.aClass96_241 = new FSManager(new JagFS(var0, "rw", 25L), 24, 0);
 			else
 				label33: for (int var1 = 0; var1 < Class7.store.length; ++var1)
-					for (x = 0; x < Class49.targets.length; ++x) {
-						final File var3 = new File(Class49.targets[x] + Class7.store[var1]
-								+ File.separatorChar + "random.dat");
+					for (x = 0; x < Class49.rootDirectory.length; ++x) {
+						final File var3 = new File(Class49.rootDirectory[x] + Class7.store[var1] + File.separatorChar + "random.dat");
 						if (var3.exists()) {
-							Class24.aClass96_241 = new Class96(new JagFS(var3, "rw", 25L), 24, 0);
+							Class24.aClass96_241 = new FSManager(new JagFS(var3, "rw", 25L), 24, 0);
 							break label33;
 						}
 					}
@@ -32,7 +31,7 @@ public class Class89 {
 				var4.write(x);
 				var4.seek(0L);
 				var4.close();
-				Class24.aClass96_241 = new Class96(new JagFS(var0, "rw", 25L), 24, 0);
+				Class24.aClass96_241 = new FSManager(new JagFS(var0, "rw", 25L), 24, 0);
 			}
 		} catch (final IOException var5) {
 			;

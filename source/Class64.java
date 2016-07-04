@@ -2,7 +2,7 @@ import java.awt.event.ActionEvent;
 
 public class Class64 implements Runnable {
 	Class11 aClass11_509;
-	public static String aString513;
+	public static String osName;
 	volatile Class99[] aClass99Array512 = new Class99[2];
 	volatile boolean aBool511 = false;
 	volatile boolean aBool510 = false;

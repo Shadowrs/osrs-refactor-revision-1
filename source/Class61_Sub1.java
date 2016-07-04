@@ -207,7 +207,7 @@ public class Class61_Sub1 extends Class61 {
 	}
 
 	int method491(final int var1) {
-		return null != anObjectArray492[var1] ? 100 : (aBoolArray882[var1] ? 100 : Class96.method435(anInt884, var1));
+		return null != anObjectArray492[var1] ? 100 : (aBoolArray882[var1] ? 100 : FSManager.method435(anInt884, var1));
 	}
 
 	void method492(final int var1, final int var2) {
@@ -246,7 +246,7 @@ public class Class61_Sub1 extends Class61 {
 		else if (null != anObjectArray492)
 			return 99;
 		else {
-			int var1 = Class96.method435(255, anInt884);
+			int var1 = FSManager.method435(255, anInt884);
 			if (var1 >= 100)
 				var1 = 99;
 

@@ -2,7 +2,7 @@ import java.awt.Component;
 import java.io.EOFException;
 import java.io.IOException;
 
-public class Class96 {
+public class FSManager {
 	static Class57[] aClass57Array758;
 	static Class104_Sub18_Sub17_Sub3 aClass104_Sub18_Sub17_Sub3_759;
 	static Class30 aClass30_760;
@@ -28,7 +28,7 @@ public class Class96 {
 
 		int var1;
 		for (aLong749 = aLong754; anInt747 < aByteArray752.length; anInt747 += var1) {
-			var1 = aClass94_748.method420(aByteArray752, anInt747, aByteArray752.length - anInt747);
+			var1 = aClass94_748.read(aByteArray752, anInt747, aByteArray752.length - anInt747);
 			if (var1 == -1)
 				break;
 
@@ -82,7 +82,7 @@ public class Class96 {
 				aClass94_748.method416(aLong754);
 
 				for (aLong750 = aLong754; var3 > 0; var3 -= var8) {
-					var8 = aClass94_748.method420(var1, var2, var3);
+					var8 = aClass94_748.read(var1, var2, var3);
 					if (var8 == -1)
 						break;
 
@@ -148,7 +148,7 @@ public class Class96 {
 
 	public void method432(final int var1) throws IOException {
 		method433();
-		aClass94_748.method418();
+		aClass94_748.close();
 	}
 
 	void method433() throws IOException {
@@ -188,9 +188,9 @@ public class Class96 {
 
 	}
 
-	public Class96(final JagFS var1, final int var2, final int var3) throws IOException {
-		aClass94_748 = var1;
-		aLong757 = aLong755 = var1.method419();
+	public FSManager(final JagFS cache, final int var2, final int var3) throws IOException {
+		aClass94_748 = cache;
+		aLong757 = aLong755 = cache.length();
 		aByteArray752 = new byte[var2];
 		aByteArray751 = new byte[var3];
 		aLong754 = 0L;

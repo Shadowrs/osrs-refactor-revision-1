@@ -23,7 +23,7 @@ public class Class72 implements Runnable {
 
 	}
 
-	public static void method333(final File var0) {
+	public static void verifyCreated(final File var0) {
 		Class22.aFile224 = var0;
 		if (!Class22.aFile224.exists())
 			throw new RuntimeException("");

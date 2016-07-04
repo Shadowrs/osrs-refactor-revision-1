@@ -2970,7 +2970,7 @@ public class Class46 {
 					var7.method274("sl_arrows", "");
 					var7.method274("sl_stars", "");
 					var7.method274("sl_button", "");
-					var5 = Class96.method436(-2042726381);
+					var5 = FSManager.method436(-2042726381);
 					if (var4 < var5) {
 						Class66.aString540 = "Loading title screen - " + ((var4 * 100) / var5) + "%";
 						Class66.anInt534 = 50;

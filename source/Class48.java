@@ -55,7 +55,7 @@ public class Class48 {
 			Class104_Sub18_Sub16_Sub3.aClass104_Sub18_Sub17_Sub3Array1524 = null;
 			Class21.aClass104_Sub18_Sub17_Sub3Array223 = null;
 			aClass104_Sub18_Sub17_Sub3Array409 = null;
-			Class96.aClass104_Sub18_Sub17_Sub3_759 = null;
+			FSManager.aClass104_Sub18_Sub17_Sub3_759 = null;
 			Class42.anIntArray371 = null;
 			anIntArray411 = null;
 			Class66.anIntArray526 = null;
