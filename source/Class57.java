@@ -15,28 +15,28 @@ public class Class57 {
 	static final byte[] decodeCompression(final byte[] packedData) {
 		final RSBuf buf = new RSBuf(packedData);
 		final int compression = buf.readUByte();
-		final int containerSize = buf.readLEInt();
-		if ((containerSize >= 0) && ((Class61.maxSize == 0) || (containerSize <= Class61.maxSize))) {
+		final int uncompressedLength = buf.readLEInt();
+		if ((uncompressedLength >= 0) && ((Class61.maxSize == 0) || (uncompressedLength <= Class61.maxSize))) {
 			if (compression == 0) {
-				final byte[] dataa = new byte[containerSize];
-				buf.readBytes(dataa, 0, containerSize);
+				final byte[] dataa = new byte[uncompressedLength];
+				buf.readBytes(dataa, 0, uncompressedLength);
 				return dataa;
 			} else {
-				final int decompressedSize = buf.readLEInt();
+				final int decompressedLength = buf.readLEInt();
 
-				if (decompressedSize > 1000000 || decompressedSize < 0) {
-					System.out.printf("BAD compression %d size %d \n", compression, containerSize);
+				if (decompressedLength > 1000000 || decompressedLength < 0) {
+					System.out.printf("BAD compression %d size %d \n", compression, uncompressedLength);
 					return new byte[100];
 				}
 				
-				if ((decompressedSize < 0) || ((Class61.maxSize != 0) && (decompressedSize > Class61.maxSize))) {
+				if ((decompressedLength < 0) || ((Class61.maxSize != 0) && (decompressedLength > Class61.maxSize))) {
 					//throw new RuntimeException();
-					System.err.println("ERROR IN ARCHIVELOADING; RETURNING EMPTY ARRAY (size: "+decompressedSize+")");
+					System.err.println("ERROR IN ARCHIVELOADING; RETURNING EMPTY ARRAY (size: "+decompressedLength+")");
 					return new byte[] {}; // fail data, still some tho
 				} else {
-					final byte[] bytes = new byte[decompressedSize];
+					final byte[] bytes = new byte[decompressedLength];
 					if (compression == 1)
-						Class45.bzipFill(bytes, decompressedSize, packedData, containerSize, 9);
+						Class45.bzipFill(bytes, decompressedLength, packedData, uncompressedLength, 9);
 					else
 						Class61.inflation.unzip(buf, bytes);
 
