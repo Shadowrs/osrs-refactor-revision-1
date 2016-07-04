@@ -57,7 +57,7 @@ public class Class52 implements Runnable {
 				}
 			}
 		} catch (final Exception var13) {
-			Nodee.method520((String) null, var13);
+			Nodee.report((String) null, var13);
 		}
 	}
 

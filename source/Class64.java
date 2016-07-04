@@ -33,7 +33,7 @@ public class Class64 implements Runnable {
 					}
 				}
 			} catch (final Exception var8) {
-				Nodee.method520((String) null, var8);
+				Nodee.report((String) null, var8);
 				aBool510 = false;
 				return;
 			}

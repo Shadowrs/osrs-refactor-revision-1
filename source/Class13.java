@@ -80,7 +80,7 @@ public final class Class13 implements Runnable {
 				break;
 			}
 		} catch (final Exception var12) {
-			Nodee.method520((String) null, var12);
+			Nodee.report((String) null, var12);
 		}
 
 	}

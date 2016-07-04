@@ -473,7 +473,7 @@ public final class client extends Applet_Sub1 {
 					Class22.aClass96Array227[yo] = new Class96(
 							new JagFS(Class75.method341("main_file_cache.idx" + yo), "rw", 1048576L), 6000, 0);
 			} catch (final Exception var21) {
-				Nodee.method520((String) null, var21);
+				Nodee.report((String) null, var21);
 			}
 
 			method937(765, 503, 1);
@@ -2473,7 +2473,7 @@ final void method943(final byte var1) {
                                  break label3291;
                               }
 
-                              Nodee.method520("" + pktOpc + "," + anInt2042 + "," + anInt1815 + "," + pktSize, (Throwable)null);
+                              Nodee.report("" + pktOpc + "," + anInt2042 + "," + anInt1815 + "," + pktSize, (Throwable)null);
                               Class61_Sub1.method494();
                            } catch (final IOException var68) {
                               if(anInt1836 > 0)
@@ -2489,7 +2489,7 @@ final void method943(final byte var1) {
                               for(var10 = 0; (var10 < pktSize) && (var10 < 50); ++var10)
 								var82 = var82 + gamecon.backing[var10] + ",";
 
-                              Nodee.method520(var82, var69);
+                              Nodee.report(var82, var69);
                               Class61_Sub1.method494();
                            }
 

@@ -202,6 +202,7 @@ public class Class88 {
 	static void handleCSCodes(final int hash) {
 		if (hash != -1)
 			if (Class104_Sub7.loaded(hash)) {
+				System.out.println("CS for "+hash+" aka "+(hash>>16)+","+(hash&0xFFFF));
 				final Widget[] wid = Class22.widgets[hash];
 
 				for (final Widget children : wid) {

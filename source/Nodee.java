@@ -48,14 +48,16 @@ public class Nodee extends Class104 {
 
 	}
 
-	public static void method520(final String var0, final Throwable var1) {
+	public static void report(final String var0, final Throwable ex) {
+		System.err.println("report "+var0+" "+ex);
 		try {
 			String var2 = "";
-			if (null != var1) {
-				Throwable var3 = var1;
+			if (null != ex) {
+				ex.printStackTrace();
+				Throwable var3 = ex;
 				String var5;
-				if (var1 instanceof RuntimeException_Sub1) {
-					final RuntimeException_Sub1 var4 = (RuntimeException_Sub1) var1;
+				if (ex instanceof RuntimeException_Sub1) {
+					final RuntimeException_Sub1 var4 = (RuntimeException_Sub1) ex;
 					var5 = var4.aString1475 + " | ";
 					var3 = var4.aThrowable1479;
 				} else
@@ -99,7 +101,7 @@ public class Nodee extends Class104 {
 			}
 
 			if (var0 != null) {
-				if (null != var1)
+				if (null != ex)
 					var2 = var2 + " | ";
 
 				var2 = var2 + var0;
