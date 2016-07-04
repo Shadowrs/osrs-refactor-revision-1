@@ -184,10 +184,10 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 			}
 
 			if (client.step == 2) {
-				client.secureBuf.anInt1172 = 0;
+				client.secureBuf.pos = 0;
 				client.secureBuf.writebyte(14);
 				Class20.stream.flushbytes(client.secureBuf.aByteArray1174, 0, 1);
-				client.gamecon.anInt1172 = 0;
+				client.gamecon.pos = 0;
 				client.step = 3;
 			}
 
@@ -211,7 +211,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 					return;
 				}
 
-				client.gamecon.anInt1172 = 0;
+				client.gamecon.pos = 0;
 				client.step = 5;
 			}
 
@@ -220,7 +220,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				final int[] issackeys = new int[] { (int) (Math.random() * 9.9999999E7D),
 						(int) (Math.random() * 9.9999999E7D), (int) (Math.random() * 9.9999999E7D),
 						(int) (Math.random() * 9.9999999E7D) };
-				client.secureBuf.anInt1172 = 0;
+				client.secureBuf.pos = 0;
 				client.secureBuf.writebyte(10);
 				client.secureBuf.writeInt(issackeys[0]);
 				client.secureBuf.writeInt(issackeys[1]);
@@ -229,17 +229,17 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.secureBuf.writeLong(0L);
 				client.secureBuf.writeString(Class66.aString522);
 				client.secureBuf.doRSA(Class60.aBigInteger476, Class60.aBigInteger477);
-				client.loginbuf.anInt1172 = 0;
+				client.loginbuf.pos = 0;
 				if (client.anInt1806 == 40)
 					client.loginbuf.writebyte(18); // reconnect
 				else
 					client.loginbuf.writebyte(16); // main login
 
 				client.loginbuf.writeShort(0); // dummy value
-				var2 = client.loginbuf.anInt1172; // remember position 
+				var2 = client.loginbuf.pos; // remember position 
 				client.loginbuf.writeInt(1); // CLIENT REVISION  - rev 1
-				client.loginbuf.appendBytes(client.secureBuf.aByteArray1174, 0, client.secureBuf.anInt1172);
-				final int var3 = client.loginbuf.anInt1172;
+				client.loginbuf.appendBytes(client.secureBuf.aByteArray1174, 0, client.secureBuf.pos);
+				final int var3 = client.loginbuf.pos;
 				client.loginbuf.writeString(Class66.aString543);
 				client.loginbuf.writebyte(client.aBool1794 ? 1 : 0);
 				Class76.method343(client.loginbuf);
@@ -259,9 +259,9 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeInt(Class65.aClass61_Sub1_515.anInt489);
 				client.loginbuf.writeInt(Class104_Sub18_Sub6.aClass61_Sub1_1374.anInt489);
 				client.loginbuf.writeInt(Class100.aClass61_Sub1_800.anInt489);
-				client.loginbuf.applyIsaac(issackeys, var3, client.loginbuf.anInt1172);
-				client.loginbuf.writeShortLE(client.loginbuf.anInt1172 - var2);
-				Class20.stream.flushbytes(client.loginbuf.aByteArray1174, 0, client.loginbuf.anInt1172);
+				client.loginbuf.applyIsaac(issackeys, var3, client.loginbuf.pos);
+				client.loginbuf.writeShortLE(client.loginbuf.pos - var2);
+				Class20.stream.flushbytes(client.loginbuf.aByteArray1174, 0, client.loginbuf.pos);
 				client.secureBuf.setisaac(issackeys);
 
 				for (int var4 = 0; var4 < 4; ++var4)
@@ -279,13 +279,13 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 					client.step = 9;
 				else {
 					if ((code == 15) && (client.anInt1806 == 40)) {
-						client.secureBuf.anInt1172 = 0;
-						client.gamecon.anInt1172 = 0;
-						client.anInt1790 = -1;
+						client.secureBuf.pos = 0;
+						client.gamecon.pos = 0;
+						client.pktOpc = -1;
 						client.anInt1837 = -1;
 						client.anInt2042 = -1;
 						client.anInt1815 = -1;
-						client.anInt1929 = 0;
+						client.pktSize = 0;
 						client.anInt1834 = 0;
 						client.anInt1879 = 0;
 						client.anInt1805 = 0;
@@ -341,23 +341,22 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 					client.anInt1874 += Class20.stream.read(); // pid right half
 					client.anInt1990 = Class20.stream.read();
 					Class20.stream.readbytes(client.gamecon.aByteArray1174, 0, 1);
-					client.gamecon.anInt1172 = 0;
-					client.anInt1790 = client.gamecon.opcode();
+					client.gamecon.pos = 0;
+					client.pktOpc = client.gamecon.opcode(); // packet opcode
 					Class20.stream.readbytes(client.gamecon.aByteArray1174, 0, 2);
-					client.gamecon.anInt1172 = 0;
-					client.anInt1929 = client.gamecon.method571();
+					client.gamecon.pos = 0;
+					client.pktSize = client.gamecon.readLEShort();
 					client.step = 10;
 				}
 
 				if (client.step == 10) {
-					if (Class20.stream.avail() >= client.anInt1929) {
-						client.gamecon.anInt1172 = 0;
-						Class20.stream.readbytes(client.gamecon.aByteArray1174, 0,
-								client.anInt1929);
-						Class102_Sub1.method495();
+					if (Class20.stream.avail() >= client.pktSize) {
+						client.gamecon.pos = 0;
+						Class20.stream.readbytes(client.gamecon.aByteArray1174, 0, client.pktSize);
+						Class102_Sub1.reset();
 						Class54.anInt447 = -1;
-						Class95.method424(false);
-						client.anInt1790 = -1;
+						Class95.readregionpacket(false);
+						client.pktOpc = -1;
 					}
 
 				} else {

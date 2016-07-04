@@ -347,25 +347,25 @@ public class Class49 {
 						int var10;
 						int var12;
 						if (var7 > 0) {
-							var8 = var7 - Class87.aClass104_Sub21_690.anInt1172;
+							var8 = var7 - Class87.aClass104_Sub21_690.pos;
 							if (var8 > var6)
 								var8 = var6;
 
 							Class66.aClass13_547.readbytes(Class87.aClass104_Sub21_690.aByteArray1174,
-									Class87.aClass104_Sub21_690.anInt1172, var8);
+									Class87.aClass104_Sub21_690.pos, var8);
 							if (Class87.aByte697 != 0)
 								for (var9 = 0; var9 < var8; ++var9)
 									Class87.aClass104_Sub21_690.aByteArray1174[var9
-											+ Class87.aClass104_Sub21_690.anInt1172] ^= Class87.aByte697;
+											+ Class87.aClass104_Sub21_690.pos] ^= Class87.aByte697;
 
-							Class87.aClass104_Sub21_690.anInt1172 += var8;
-							if (Class87.aClass104_Sub21_690.anInt1172 < var7)
+							Class87.aClass104_Sub21_690.pos += var8;
+							if (Class87.aClass104_Sub21_690.pos < var7)
 								break;
 
 							if (Class48.aClass104_Sub18_Sub13_410 == null) {
-								Class87.aClass104_Sub21_690.anInt1172 = 0;
+								Class87.aClass104_Sub21_690.pos = 0;
 								var9 = Class87.aClass104_Sub21_690.method570();
-								var10 = Class87.aClass104_Sub21_690.method571();
+								var10 = Class87.aClass104_Sub21_690.readLEShort();
 								final int var11 = Class87.aClass104_Sub21_690.method570();
 								var12 = Class87.aClass104_Sub21_690.method574();
 								final long var13 = var10 + (var9 << 16);
@@ -387,40 +387,40 @@ public class Class49 {
 								Class87.aClass104_Sub21_691.writebyte(var11);
 								Class87.aClass104_Sub21_691.writeInt(var12);
 								Class87.anInt696 = 8;
-								Class87.aClass104_Sub21_690.anInt1172 = 0;
+								Class87.aClass104_Sub21_690.pos = 0;
 							} else if (Class87.anInt696 == 0)
 								if (Class87.aClass104_Sub21_690.aByteArray1174[0] == -1) {
 									Class87.anInt696 = 1;
-									Class87.aClass104_Sub21_690.anInt1172 = 0;
+									Class87.aClass104_Sub21_690.pos = 0;
 								} else
 									Class48.aClass104_Sub18_Sub13_410 = null;
 						} else {
 							var8 = Class87.aClass104_Sub21_691.aByteArray1174.length
 									- Class48.aClass104_Sub18_Sub13_410.aByte1459;
 							var9 = 512 - Class87.anInt696;
-							if (var9 > (var8 - Class87.aClass104_Sub21_691.anInt1172))
-								var9 = var8 - Class87.aClass104_Sub21_691.anInt1172;
+							if (var9 > (var8 - Class87.aClass104_Sub21_691.pos))
+								var9 = var8 - Class87.aClass104_Sub21_691.pos;
 
 							if (var9 > var6)
 								var9 = var6;
 
 							Class66.aClass13_547.readbytes(Class87.aClass104_Sub21_691.aByteArray1174,
-									Class87.aClass104_Sub21_691.anInt1172, var9);
+									Class87.aClass104_Sub21_691.pos, var9);
 							if (Class87.aByte697 != 0)
 								for (var10 = 0; var10 < var9; ++var10)
 									Class87.aClass104_Sub21_691.aByteArray1174[var10
-											+ Class87.aClass104_Sub21_691.anInt1172] ^= Class87.aByte697;
+											+ Class87.aClass104_Sub21_691.pos] ^= Class87.aByte697;
 
-							Class87.aClass104_Sub21_691.anInt1172 += var9;
+							Class87.aClass104_Sub21_691.pos += var9;
 							Class87.anInt696 += var9;
-							if (var8 == Class87.aClass104_Sub21_691.anInt1172) {
+							if (var8 == Class87.aClass104_Sub21_691.pos) {
 								if (16711935L == Class48.aClass104_Sub18_Sub13_410.aLong824) {
 									Class2.aClass104_Sub21_7 = Class87.aClass104_Sub21_691;
 
 									for (var10 = 0; var10 < 256; ++var10) {
 										final Class61_Sub1 var17 = Class87.aClass61_Sub1Array695[var10];
 										if (var17 != null) {
-											Class2.aClass104_Sub21_7.anInt1172 = 5 + (var10 * 8);
+											Class2.aClass104_Sub21_7.pos = 5 + (var10 * 8);
 											var12 = Class2.aClass104_Sub21_7.method574();
 											final int var18 = Class2.aClass104_Sub21_7.method574();
 											var17.method492(var12, var18);

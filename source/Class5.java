@@ -15,11 +15,11 @@ public class Class5 {
 		aClass104_Sub23_23 = var2;
 		final RSBuf var3 = new RSBuf(var1);
 		final RSBuf var4 = new RSBuf(var1);
-		var3.anInt1172 = 2;
+		var3.pos = 2;
 		final int var5 = var3.method570();
 		int var6 = -1;
 		int var7 = 0;
-		var4.anInt1172 = var3.anInt1172 + var5;
+		var4.pos = var3.pos + var5;
 
 		int var8;
 		for (var8 = 0; var8 < var5; ++var8) {
@@ -63,7 +63,7 @@ public class Class5 {
 			}
 		}
 
-		if (var4.anInt1172 != var1.length)
+		if (var4.pos != var1.length)
 			throw new RuntimeException();
 		else {
 			anInt24 = var7;

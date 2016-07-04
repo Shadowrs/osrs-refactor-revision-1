@@ -31,21 +31,21 @@ public class Class104_Sub18_Sub3 extends Class104_Sub18 {
 		int var3;
 		int var4;
 		if (var2 == 1) {
-			var3 = var1.method571();
+			var3 = var1.readLEShort();
 			anIntArray1264 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1264[var4] = var1.method571();
+				anIntArray1264[var4] = var1.readLEShort();
 
 			anIntArray1262 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1262[var4] = var1.method571();
+				anIntArray1262[var4] = var1.readLEShort();
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1262[var4] += var1.method571() << 16;
+				anIntArray1262[var4] += var1.readLEShort() << 16;
 		} else if (var2 == 2)
-			anInt1266 = var1.method571();
+			anInt1266 = var1.readLEShort();
 		else if (var2 == 3) {
 			var3 = var1.method570();
 			anIntArray1267 = new int[var3 + 1];
@@ -59,9 +59,9 @@ public class Class104_Sub18_Sub3 extends Class104_Sub18 {
 		else if (var2 == 5)
 			anInt1269 = var1.method570();
 		else if (var2 == 6)
-			anInt1270 = var1.method571();
+			anInt1270 = var1.readLEShort();
 		else if (var2 == 7)
-			anInt1271 = var1.method571();
+			anInt1271 = var1.readLEShort();
 		else if (var2 == 8)
 			anInt1261 = var1.method570();
 		else if (var2 == 9)
@@ -75,10 +75,10 @@ public class Class104_Sub18_Sub3 extends Class104_Sub18 {
 			anIntArray1263 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1263[var4] = var1.method571();
+				anIntArray1263[var4] = var1.readLEShort();
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1263[var4] += var1.method571() << 16;
+				anIntArray1263[var4] += var1.readLEShort() << 16;
 		} else if (var2 == 13) {
 			var3 = var1.method570();
 			anIntArray1265 = new int[var3];

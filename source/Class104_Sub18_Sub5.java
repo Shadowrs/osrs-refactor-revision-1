@@ -28,15 +28,15 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 
 	void method731(final RSBuf var1, final int var2) {
 		if (var2 == 1)
-			anInt1309 = var1.method571();
+			anInt1309 = var1.readLEShort();
 		else if (var2 == 2)
-			anInt1316 = var1.method571();
+			anInt1316 = var1.readLEShort();
 		else if (var2 == 4)
-			anInt1304 = var1.method571();
+			anInt1304 = var1.readLEShort();
 		else if (var2 == 5)
-			anInt1315 = var1.method571();
+			anInt1315 = var1.readLEShort();
 		else if (var2 == 6)
-			anInt1306 = var1.method571();
+			anInt1306 = var1.readLEShort();
 		else if (var2 == 7)
 			anInt1317 = var1.method570();
 		else if (var2 == 8)
@@ -50,8 +50,8 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 				aShortArray1312 = new short[var3];
 
 				for (var4 = 0; var4 < var3; ++var4) {
-					aShortArray1310[var4] = (short) var1.method571();
-					aShortArray1312[var4] = (short) var1.method571();
+					aShortArray1310[var4] = (short) var1.readLEShort();
+					aShortArray1312[var4] = (short) var1.readLEShort();
 				}
 			} else if (var2 == 41) {
 				var3 = var1.method570();
@@ -59,8 +59,8 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 				aShortArray1314 = new short[var3];
 
 				for (var4 = 0; var4 < var3; ++var4) {
-					aShortArray1313[var4] = (short) var1.method571();
-					aShortArray1314[var4] = (short) var1.method571();
+					aShortArray1313[var4] = (short) var1.readLEShort();
+					aShortArray1314[var4] = (short) var1.readLEShort();
 				}
 			}
 		}

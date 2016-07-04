@@ -100,7 +100,7 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 
 	static final void method483() {
 		while (true) {
-			if (client.gamecon.method626(client.anInt1929) >= 27) {
+			if (client.gamecon.method626(client.pktSize) >= 27) {
 				final int var0 = client.gamecon.method625(15);
 				if (var0 != 32767) {
 					boolean var1 = false;

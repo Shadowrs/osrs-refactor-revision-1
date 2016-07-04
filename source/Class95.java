@@ -8,30 +8,30 @@ public class Class95 {
 			0, 0, -2, 0, 0, 0, 0, 0, 0, 0, 5, 0, 3, 6, 0, 0, 2, 0, 0, 28, 7, 0, 8, 0, 0, 0, 0, -2, 0, 0, 6, 0, 0, 0, 5,
 			0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 14, 3, 0, 0, 0, 0, 6, 0, 0, 0, 0 };
 
-	static final void method424(final boolean var0) {
-		client.aBool1847 = var0;
+	static final void readregionpacket(final boolean secondary) {
+		client.dynamicRegion = secondary;
 		int var1;
 		int var2;
 		int var3;
 		int var4;
 		int var5;
 		int var6;
-		int var8;
-		int var9;
-		int var10;
-		if (!client.aBool1847) {
-			var1 = client.gamecon.method571();
-			var2 = client.gamecon.method593();
-			var3 = (client.anInt1929 - client.gamecon.anInt1172) / 16;
-			Class13.anIntArrayArray87 = new int[var3][4];
+		int xx;
+		int yy;
+		int regionid;
+		if (!client.dynamicRegion) {
+			var1 = client.gamecon.readLEShort(); // L Y
+			var2 = client.gamecon.readShort(); // L X
+			var3 = (client.pktSize - client.gamecon.pos) / 16;
+			Class13.xteakeys = new int[var3][4];
 
 			for (var4 = 0; var4 < var3; ++var4)
 				for (var5 = 0; var5 < 4; ++var5)
-					Class13.anIntArrayArray87[var4][var5] = client.gamecon.method601();
+					Class13.xteakeys[var4][var5] = client.gamecon.readInt();
 
-			var4 = client.gamecon.method607();
-			var5 = client.gamecon.method571();
-			var6 = client.gamecon.method595();
+			var4 = client.gamecon.readByteN(); // HEIGHT
+			var5 = client.gamecon.readLEShort(); // C X
+			var6 = client.gamecon.readShortN(); // C Y
 			Class47.anIntArray406 = new int[var3];
 			Class40.anIntArray360 = new int[var3];
 			Class75.anIntArray597 = new int[var3];
@@ -46,21 +46,23 @@ public class Class95 {
 
 			var3 = 0;
 
-			for (var8 = (var5 - 6) / 8; var8 <= ((6 + var5) / 8); ++var8)
-				for (var9 = (var6 - 6) / 8; var9 <= ((6 + var6) / 8); ++var9) {
-					var10 = (var8 << 8) + var9;
-					if (!var7 || ((var9 != 49) && (var9 != 149) && (var9 != 147) && (var8 != 50)
-							&& ((var8 != 49) || (var9 != 47)))) {
-						Class47.anIntArray406[var3] = var10;
-						Class40.anIntArray360[var3] = Class67.aClass61_Sub1_555.method271("m" + var8 + "_" + var9);
-						Class75.anIntArray597[var3] = Class67.aClass61_Sub1_555.method271("l" + var8 + "_" + var9);
+			for (xx = (var5 - 6) / 8; xx <= ((6 + var5) / 8); ++xx)
+				for (yy = (var6 - 6) / 8; yy <= ((6 + var6) / 8); ++yy) {
+					regionid = (xx << 8) + yy;
+					if (!var7 || ((yy != 49) && (yy != 149) && (yy != 147) && (xx != 50)
+							&& ((xx != 49) || (yy != 47)))) {
+						Class47.anIntArray406[var3] = regionid;
+						Class40.anIntArray360[var3] = Class67.aClass61_Sub1_555.method271("m" + xx + "_" + yy);
+						Class75.anIntArray597[var3] = Class67.aClass61_Sub1_555.method271("l" + xx + "_" + yy);
 						++var3;
 					}
 				}
 
+			System.out.printf("rx: %d, ry: %d, h:%d, lx:%d, ly:%d \n", var5, var6, var4, var2, var1);
+			
 			Class19.method120(var5, var6, var4, var2, var1);
 		} else {
-			var1 = client.gamecon.method595();
+			var1 = client.gamecon.readShortN();
 			client.gamecon.method624();
 
 			for (var2 = 0; var2 < 4; ++var2)
@@ -75,17 +77,17 @@ public class Class95 {
 					}
 
 			client.gamecon.endbits();
-			var2 = (client.anInt1929 - client.gamecon.anInt1172) / 16;
-			Class13.anIntArrayArray87 = new int[var2][4];
+			var2 = (client.pktSize - client.gamecon.pos) / 16;
+			Class13.xteakeys = new int[var2][4];
 
 			for (var3 = 0; var3 < var2; ++var3)
 				for (var4 = 0; var4 < 4; ++var4)
-					Class13.anIntArrayArray87[var3][var4] = client.gamecon.method601();
+					Class13.xteakeys[var3][var4] = client.gamecon.readInt();
 
-			var3 = client.gamecon.method595();
-			var4 = client.gamecon.method607();
-			var5 = client.gamecon.method593();
-			var6 = client.gamecon.method595();
+			var3 = client.gamecon.readShortN();
+			var4 = client.gamecon.readByteN();
+			var5 = client.gamecon.readShort();
+			var6 = client.gamecon.readShortN();
 			Class47.anIntArray406 = new int[var2];
 			Class40.anIntArray360 = new int[var2];
 			Class75.anIntArray597 = new int[var2];
@@ -94,12 +96,12 @@ public class Class95 {
 			var2 = 0;
 
 			for (int var16 = 0; var16 < 4; ++var16)
-				for (var8 = 0; var8 < 13; ++var8)
-					for (var9 = 0; var9 < 13; ++var9) {
-						var10 = client.anIntArrayArrayArray1848[var16][var8][var9];
-						if (var10 != -1) {
-							final int var11 = (var10 >> 14) & 1023;
-							final int var12 = (var10 >> 3) & 2047;
+				for (xx = 0; xx < 13; ++xx)
+					for (yy = 0; yy < 13; ++yy) {
+						regionid = client.anIntArrayArrayArray1848[var16][xx][yy];
+						if (regionid != -1) {
+							final int var11 = (regionid >> 14) & 1023;
+							final int var12 = (regionid >> 3) & 2047;
 							int var13 = (var12 / 8) + ((var11 / 8) << 8);
 
 							int var14;

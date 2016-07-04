@@ -24,8 +24,8 @@ public final class Class20 {
 
 				try {
 					stream.flushbytes(client.secureBuf.aByteArray1174, 0,
-							client.secureBuf.anInt1172);
-					client.secureBuf.anInt1172 = 0;
+							client.secureBuf.pos);
+					client.secureBuf.pos = 0;
 				} catch (final IOException var2) {
 					client.aBool1840 = true;
 				}

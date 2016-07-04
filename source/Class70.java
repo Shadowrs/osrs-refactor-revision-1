@@ -83,14 +83,14 @@ public class Class70 {
 
 				int var9;
 				for (var8 = new RSBuf(
-						(int) var7.method419()); var8.anInt1172 < var8.aByteArray1174.length; var8.anInt1172 += var9) {
-					var9 = var7.method420(var8.aByteArray1174, var8.anInt1172,
-							var8.aByteArray1174.length - var8.anInt1172);
+						(int) var7.method419()); var8.pos < var8.aByteArray1174.length; var8.pos += var9) {
+					var9 = var7.method420(var8.aByteArray1174, var8.pos,
+							var8.aByteArray1174.length - var8.pos);
 					if (var9 == -1)
 						throw new IOException();
 				}
 
-				var8.anInt1172 = 0;
+				var8.pos = 0;
 				var9 = var8.method570();
 				if ((var9 < 1) || (var9 > 3))
 					throw new IOException("" + var9);
@@ -210,7 +210,7 @@ public class Class70 {
 				var31.writebyte(3);
 				var31.writebyte(null != var8 ? 1 : 0);
 				var31.method564(var26.getPath());
-				var33.method417(var31.aByteArray1174, 0, var31.anInt1172);
+				var33.method417(var31.aByteArray1174, 0, var31.pos);
 				var33.method418();
 			} catch (final IOException var21) {
 				var21.printStackTrace();

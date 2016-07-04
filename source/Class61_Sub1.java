@@ -229,7 +229,7 @@ public class Class61_Sub1 extends Class61 {
 		aBool886 = var6;
 		final int var8 = anInt884;
 		if (null != Class2.aClass104_Sub21_7) {
-			Class2.aClass104_Sub21_7.anInt1172 = (8 * var8) + 5;
+			Class2.aClass104_Sub21_7.pos = (8 * var8) + 5;
 			final int var9 = Class2.aClass104_Sub21_7.method574();
 			final int var10 = Class2.aClass104_Sub21_7.method574();
 			method492(var9, var10);

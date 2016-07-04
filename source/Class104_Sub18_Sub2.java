@@ -167,24 +167,24 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			anIntArray1249 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1249[var4] = var1.method571();
+				anIntArray1249[var4] = var1.readLEShort();
 		} else if (var2 == 2)
 			aString1229 = var1.method608();
 		else if (var2 == 12)
 			anInt1240 = var1.method570();
 		else if (var2 == 13)
-			anInt1233 = var1.method571();
+			anInt1233 = var1.readLEShort();
 		else if (var2 == 14)
-			anInt1236 = var1.method571();
+			anInt1236 = var1.readLEShort();
 		else if (var2 == 15)
-			anInt1244 = var1.method571();
+			anInt1244 = var1.readLEShort();
 		else if (var2 == 16)
-			anInt1235 = var1.method571();
+			anInt1235 = var1.readLEShort();
 		else if (var2 == 17) {
-			anInt1236 = var1.method571();
-			anInt1237 = var1.method571();
-			anInt1251 = var1.method571();
-			anInt1239 = var1.method571();
+			anInt1236 = var1.readLEShort();
+			anInt1237 = var1.readLEShort();
+			anInt1251 = var1.readLEShort();
+			anInt1239 = var1.readLEShort();
 		} else if ((var2 >= 30) && (var2 < 35)) {
 			aStringArray1225[var2 - 30] = var1.method608();
 			if (aStringArray1225[var2 - 30].equalsIgnoreCase("Hidden"))
@@ -195,8 +195,8 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			aShortArray1241 = new short[var3];
 
 			for (var4 = 0; var4 < var3; ++var4) {
-				aShortArray1234[var4] = (short) var1.method571();
-				aShortArray1241[var4] = (short) var1.method571();
+				aShortArray1234[var4] = (short) var1.readLEShort();
+				aShortArray1241[var4] = (short) var1.readLEShort();
 			}
 		} else if (var2 == 41) {
 			var3 = var1.method570();
@@ -204,23 +204,23 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			aShortArray1243 = new short[var3];
 
 			for (var4 = 0; var4 < var3; ++var4) {
-				aShortArray1242[var4] = (short) var1.method571();
-				aShortArray1243[var4] = (short) var1.method571();
+				aShortArray1242[var4] = (short) var1.readLEShort();
+				aShortArray1243[var4] = (short) var1.readLEShort();
 			}
 		} else if (var2 == 60) {
 			var3 = var1.method570();
 			anIntArray1232 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1232[var4] = var1.method571();
+				anIntArray1232[var4] = var1.readLEShort();
 		} else if (var2 == 93)
 			aBool1255 = false;
 		else if (var2 == 95)
-			anInt1246 = var1.method571();
+			anInt1246 = var1.readLEShort();
 		else if (var2 == 97)
-			anInt1227 = var1.method571();
+			anInt1227 = var1.readLEShort();
 		else if (var2 == 98)
-			anInt1248 = var1.method571();
+			anInt1248 = var1.readLEShort();
 		else if (var2 == 99)
 			aBool1247 = true;
 		else if (var2 == 100)
@@ -228,15 +228,15 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 		else if (var2 == 101)
 			anInt1226 = var1.method565() * 5;
 		else if (var2 == 102)
-			anInt1252 = var1.method571();
+			anInt1252 = var1.readLEShort();
 		else if (var2 == 103)
-			anInt1253 = var1.method571();
+			anInt1253 = var1.readLEShort();
 		else if (var2 == 106) {
-			anInt1254 = var1.method571();
+			anInt1254 = var1.readLEShort();
 			if (anInt1254 == '\uffff')
 				anInt1254 = -1;
 
-			anInt1256 = var1.method571();
+			anInt1256 = var1.readLEShort();
 			if (anInt1256 == '\uffff')
 				anInt1256 = -1;
 
@@ -244,7 +244,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			anIntArray1230 = new int[1 + var3];
 
 			for (var4 = 0; var4 <= var3; ++var4) {
-				anIntArray1230[var4] = var1.method571();
+				anIntArray1230[var4] = var1.readLEShort();
 				if (anIntArray1230[var4] == '\uffff')
 					anIntArray1230[var4] = -1;
 			}

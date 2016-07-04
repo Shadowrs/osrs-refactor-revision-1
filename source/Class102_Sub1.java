@@ -10,16 +10,16 @@ public class Class102_Sub1 extends Class102 {
 		aShort893 = (short) var2;
 	}
 
-	static void method495() {
+	static void reset() {
 		client.aLong1800 = 0L;
 		client.anInt1803 = 0;
 		Class2_Sub2.aClass72_865.anInt581 = 0;
 		Class100.aBool799 = true;
 		client.aBool1945 = true;
 		Class105.aClass59_825 = new Class59();
-		client.secureBuf.anInt1172 = 0;
-		client.gamecon.anInt1172 = 0;
-		client.anInt1790 = -1;
+		client.secureBuf.pos = 0;
+		client.gamecon.pos = 0;
+		client.pktOpc = -1;
 		client.anInt1837 = -1;
 		client.anInt2042 = -1;
 		client.anInt1815 = -1;

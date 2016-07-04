@@ -17,7 +17,7 @@ public class Class7 {
 			int var5;
 			if ((var3 & 128) != 0) {
 				var4 = client.gamecon.method570();
-				var5 = client.gamecon.method607();
+				var5 = client.gamecon.readByteN();
 				var2.method935(var4, var5, client.anInt1799);
 				var2.anInt1714 = 300 + client.anInt1799;
 				var2.anInt1693 = client.gamecon.method576();
@@ -25,18 +25,18 @@ public class Class7 {
 			}
 
 			if ((var3 & 4) != 0) {
-				var2.anInt1716 = client.gamecon.method593();
+				var2.anInt1716 = client.gamecon.readShort();
 				if (var2.anInt1716 == '\uffff')
 					var2.anInt1716 = -1;
 			}
 
 			if ((var3 & 2) != 0) {
-				var2.anInt1717 = client.gamecon.method595();
-				var2.anInt1718 = client.gamecon.method595();
+				var2.anInt1717 = client.gamecon.readShortN();
+				var2.anInt1718 = client.gamecon.readShortN();
 			}
 
 			if ((var3 & 1) != 0) {
-				var2.anInt1727 = client.gamecon.method593();
+				var2.anInt1727 = client.gamecon.readShort();
 				var4 = client.gamecon.method574();
 				var2.anInt1709 = var4 >> 16;
 				var2.anInt1730 = (var4 & '\uffff') + client.anInt1799;
@@ -50,7 +50,7 @@ public class Class7 {
 			}
 
 			if ((var3 & 8) != 0) {
-				var4 = client.gamecon.method595();
+				var4 = client.gamecon.readShortN();
 				if (var4 == '\uffff')
 					var4 = -1;
 
@@ -78,7 +78,7 @@ public class Class7 {
 			}
 
 			if ((var3 & 64) != 0) {
-				var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.gamecon.method571());
+				var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.gamecon.readLEShort());
 				var2.anInt1736 = var2.aClass104_Sub18_Sub2_1788.anInt1240;
 				var2.anInt1740 = var2.aClass104_Sub18_Sub2_1788.anInt1253;
 				var2.anInt1701 = var2.aClass104_Sub18_Sub2_1788.anInt1236;

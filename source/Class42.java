@@ -14,22 +14,22 @@ public class Class42 {
 			else {
 				var1 = new Class104_Sub18_Sub4();
 				final RSBuf var3 = new RSBuf(var2);
-				var3.anInt1172 = var3.aByteArray1174.length - 12;
+				var3.pos = var3.aByteArray1174.length - 12;
 				final int var4 = var3.method574();
-				var1.anInt1279 = var3.method571();
-				var1.anInt1281 = var3.method571();
-				var1.anInt1282 = var3.method571();
-				var1.anInt1283 = var3.method571();
-				var3.anInt1172 = 0;
+				var1.anInt1279 = var3.readLEShort();
+				var1.anInt1281 = var3.readLEShort();
+				var1.anInt1282 = var3.readLEShort();
+				var1.anInt1283 = var3.readLEShort();
+				var3.pos = 0;
 				var3.method604();
 				var1.anIntArray1277 = new int[var4];
 				var1.anIntArray1276 = new int[var4];
 				var1.aStringArray1280 = new String[var4];
 
 				int var6;
-				for (int var5 = 0; var3.anInt1172 < (var3.aByteArray1174.length
+				for (int var5 = 0; var3.pos < (var3.aByteArray1174.length
 						- 12); var1.anIntArray1277[var5++] = var6) {
-					var6 = var3.method571();
+					var6 = var3.readLEShort();
 					if (var6 == 3)
 						var1.aStringArray1280[var5] = var3.method608();
 					else if ((var6 < 100) && (var6 != 21) && (var6 != 38) && (var6 != 39))

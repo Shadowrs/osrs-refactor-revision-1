@@ -129,19 +129,19 @@ public class Class104_Sub12 extends Class104 {
 		aBool977 = false;
 		anInt980 = var1.method570();
 		anInt981 = var1.method570();
-		anInt982 = var1.method571();
+		anInt982 = var1.readLEShort();
 		anInt985 = anInt983 = var1.method572();
 		anInt975 = anInt1005 = var1.method572();
-		anInt987 = var1.method571();
-		anInt988 = var1.method571();
+		anInt987 = var1.readLEShort();
+		anInt988 = var1.readLEShort();
 		anInt1000 = var1.method570();
-		anInt1091 = var1.method571();
+		anInt1091 = var1.readLEShort();
 		if (anInt1091 == '\uffff')
 			anInt1091 = -1;
 		else
 			anInt1091 += anInt978 & -65536;
 
-		anInt1077 = var1.method571();
+		anInt1077 = var1.readLEShort();
 		if (anInt1077 == '\uffff')
 			anInt1077 = -1;
 
@@ -153,7 +153,7 @@ public class Class104_Sub12 extends Class104 {
 
 			for (var3 = 0; var3 < var2; ++var3) {
 				anIntArray984[var3] = var1.method570();
-				anIntArray1076[var3] = var1.method571();
+				anIntArray1076[var3] = var1.readLEShort();
 			}
 		}
 
@@ -165,11 +165,11 @@ public class Class104_Sub12 extends Class104 {
 			anIntArrayArray1069 = new int[var3][];
 
 			for (var4 = 0; var4 < var3; ++var4) {
-				var5 = var1.method571();
+				var5 = var1.readLEShort();
 				anIntArrayArray1069[var4] = new int[var5];
 
 				for (var6 = 0; var6 < var5; ++var6) {
-					anIntArrayArray1069[var4][var6] = var1.method571();
+					anIntArrayArray1069[var4][var6] = var1.readLEShort();
 					if (anIntArrayArray1069[var4][var6] == '\uffff')
 						anIntArrayArray1069[var4][var6] = -1;
 				}
@@ -177,12 +177,12 @@ public class Class104_Sub12 extends Class104 {
 		}
 
 		if (anInt980 == 0) {
-			anInt994 = var1.method571();
+			anInt994 = var1.readLEShort();
 			aBool1075 = var1.method570() == 1;
 		}
 
 		if (anInt980 == 1) {
-			var1.method571();
+			var1.readLEShort();
 			var1.method570();
 		}
 
@@ -240,7 +240,7 @@ public class Class104_Sub12 extends Class104 {
 			anInt1059 = var1.method570();
 			anInt1029 = var1.method570();
 			anInt1027 = var1.method570();
-			anInt1024 = var1.method571();
+			anInt1024 = var1.readLEShort();
 			if (anInt1024 == '\uffff')
 				anInt1024 = -1;
 
@@ -268,33 +268,33 @@ public class Class104_Sub12 extends Class104 {
 
 		if (anInt980 == 6) {
 			anInt1010 = 1;
-			anInt1011 = var1.method571();
+			anInt1011 = var1.readLEShort();
 			if (anInt1011 == '\uffff')
 				anInt1011 = -1;
 
 			anInt1071 = 1;
-			anInt1013 = var1.method571();
+			anInt1013 = var1.readLEShort();
 			if (anInt1013 == '\uffff')
 				anInt1013 = -1;
 
-			anInt1058 = var1.method571();
+			anInt1058 = var1.readLEShort();
 			if (anInt1058 == '\uffff')
 				anInt1058 = -1;
 
-			anInt1015 = var1.method571();
+			anInt1015 = var1.readLEShort();
 			if (anInt1015 == '\uffff')
 				anInt1015 = -1;
 
-			anInt1021 = var1.method571();
-			anInt1043 = var1.method571();
-			anInt1019 = var1.method571();
+			anInt1021 = var1.readLEShort();
+			anInt1043 = var1.readLEShort();
+			anInt1019 = var1.readLEShort();
 		}
 
 		if (anInt980 == 7) {
 			anIntArray1080 = new int[anInt988 * anInt987];
 			anIntArray1081 = new int[anInt987 * anInt988];
 			anInt1059 = var1.method570();
-			anInt1024 = var1.method571();
+			anInt1024 = var1.readLEShort();
 			if (anInt1024 == '\uffff')
 				anInt1024 = -1;
 
@@ -323,7 +323,7 @@ public class Class104_Sub12 extends Class104 {
 		if ((anInt981 == 2) || (anInt980 == 2)) {
 			aString1036 = var1.method608();
 			aString1078 = var1.method608();
-			var4 = var1.method571() & 63;
+			var4 = var1.readLEShort() & 63;
 			anInt1037 |= var4 << 11;
 		}
 
@@ -356,16 +356,16 @@ public class Class104_Sub12 extends Class104 {
 		var1.method570();
 		aBool977 = true;
 		anInt980 = var1.method570();
-		anInt982 = var1.method571();
+		anInt982 = var1.readLEShort();
 		anInt985 = anInt983 = var1.method572();
 		anInt975 = anInt1005 = var1.method572();
-		anInt987 = var1.method571();
+		anInt987 = var1.readLEShort();
 		if (anInt980 == 9)
 			anInt988 = var1.method572();
 		else
-			anInt988 = var1.method571();
+			anInt988 = var1.readLEShort();
 
-		anInt1091 = var1.method571();
+		anInt1091 = var1.readLEShort();
 		if (anInt1091 == '\uffff')
 			anInt1091 = -1;
 		else
@@ -373,13 +373,13 @@ public class Class104_Sub12 extends Class104 {
 
 		aBool1075 = var1.method570() == 1;
 		if (anInt980 == 0) {
-			anInt1079 = var1.method571();
-			anInt994 = var1.method571();
+			anInt1079 = var1.readLEShort();
+			anInt994 = var1.readLEShort();
 		}
 
 		if (anInt980 == 5) {
 			anInt1002 = var1.method574();
-			anInt979 = var1.method571();
+			anInt979 = var1.readLEShort();
 			aBool989 = var1.method570() == 1;
 			anInt1000 = var1.method570();
 			anInt1006 = var1.method570();
@@ -390,17 +390,17 @@ public class Class104_Sub12 extends Class104 {
 
 		if (anInt980 == 6) {
 			anInt1010 = 1;
-			anInt1011 = var1.method571();
+			anInt1011 = var1.readLEShort();
 			if (anInt1011 == '\uffff')
 				anInt1011 = -1;
 
 			anInt1016 = var1.method572();
 			anInt993 = var1.method572();
-			anInt1043 = var1.method571();
-			anInt1019 = var1.method571();
-			anInt1012 = var1.method571();
-			anInt1021 = var1.method571();
-			anInt1058 = var1.method571();
+			anInt1043 = var1.readLEShort();
+			anInt1019 = var1.readLEShort();
+			anInt1012 = var1.readLEShort();
+			anInt1021 = var1.readLEShort();
+			anInt1058 = var1.readLEShort();
 			if (anInt1058 == '\uffff')
 				anInt1058 = -1;
 
@@ -408,7 +408,7 @@ public class Class104_Sub12 extends Class104 {
 		}
 
 		if (anInt980 == 4) {
-			anInt1024 = var1.method571();
+			anInt1024 = var1.readLEShort();
 			if (anInt1024 == '\uffff')
 				anInt1024 = -1;
 

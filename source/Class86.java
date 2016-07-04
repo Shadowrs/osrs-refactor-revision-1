@@ -32,7 +32,7 @@ public class Class86 {
 
 		Class66.aClass13_547 = var0;
 		Class84.method379(var1);
-		Class87.aClass104_Sub21_690.anInt1172 = 0;
+		Class87.aClass104_Sub21_690.pos = 0;
 		Class48.aClass104_Sub18_Sub13_410 = null;
 		Class87.aClass104_Sub21_691 = null;
 		Class87.anInt696 = 0;

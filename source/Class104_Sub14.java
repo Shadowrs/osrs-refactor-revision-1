@@ -3,11 +3,11 @@ public class Class104_Sub14 extends Class104 {
 	Class58 aClass58_1100;
 
 	Class104_Sub14(final RSBuf var1) {
-		var1.anInt1172 = var1.aByteArray1174.length - 3;
+		var1.pos = var1.aByteArray1174.length - 3;
 		final int var2 = var1.method570();
-		final int var3 = var1.method571();
+		final int var3 = var1.readLEShort();
 		int var4 = 14 + (var2 * 10);
-		var1.anInt1172 = 0;
+		var1.pos = 0;
 		int var5 = 0;
 		int var6 = 0;
 		int var7 = 0;
@@ -58,14 +58,14 @@ public class Class104_Sub14 extends Class104 {
 		var4 += 5 * var5;
 		var4 += 2 * (var7 + var8 + var6 + var9 + var11);
 		var4 += var10 + var12;
-		var13 = var1.anInt1172;
+		var13 = var1.pos;
 		var14 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
 
 		for (var15 = 0; var15 < var14; ++var15)
 			var1.method580();
 
-		var4 += var1.anInt1172 - var13;
-		var15 = var1.anInt1172;
+		var4 += var1.pos - var13;
+		var15 = var1.pos;
 		int var16 = 0;
 		int var17 = 0;
 		int var18 = 0;
@@ -113,48 +113,48 @@ public class Class104_Sub14 extends Class104 {
 		}
 
 		var29 = 0;
-		int var30 = var1.anInt1172;
-		var1.anInt1172 += var26;
-		int var31 = var1.anInt1172;
-		var1.anInt1172 += var11;
-		int var32 = var1.anInt1172;
-		var1.anInt1172 += var10;
-		int var33 = var1.anInt1172;
-		var1.anInt1172 += var9;
-		int var34 = var1.anInt1172;
-		var1.anInt1172 += var16;
-		int var35 = var1.anInt1172;
-		var1.anInt1172 += var18;
-		int var36 = var1.anInt1172;
-		var1.anInt1172 += var20;
-		int var37 = var1.anInt1172;
-		var1.anInt1172 += var7 + var8 + var11;
-		int var38 = var1.anInt1172;
-		var1.anInt1172 += var7;
-		int var39 = var1.anInt1172;
-		var1.anInt1172 += var27;
-		int var40 = var1.anInt1172;
-		var1.anInt1172 += var8;
-		int var41 = var1.anInt1172;
-		var1.anInt1172 += var17;
-		int var42 = var1.anInt1172;
-		var1.anInt1172 += var19;
-		int var43 = var1.anInt1172;
-		var1.anInt1172 += var21;
-		int var44 = var1.anInt1172;
-		var1.anInt1172 += var12;
-		int var45 = var1.anInt1172;
-		var1.anInt1172 += var9;
-		int var46 = var1.anInt1172;
-		var1.anInt1172 += var22;
-		int var47 = var1.anInt1172;
-		var1.anInt1172 += var23;
-		int var48 = var1.anInt1172;
-		var1.anInt1172 += var24;
-		int var49 = var1.anInt1172;
-		var1.anInt1172 += var25;
-		int var50 = var1.anInt1172;
-		var1.anInt1172 += var5 * 3;
+		int var30 = var1.pos;
+		var1.pos += var26;
+		int var31 = var1.pos;
+		var1.pos += var11;
+		int var32 = var1.pos;
+		var1.pos += var10;
+		int var33 = var1.pos;
+		var1.pos += var9;
+		int var34 = var1.pos;
+		var1.pos += var16;
+		int var35 = var1.pos;
+		var1.pos += var18;
+		int var36 = var1.pos;
+		var1.pos += var20;
+		int var37 = var1.pos;
+		var1.pos += var7 + var8 + var11;
+		int var38 = var1.pos;
+		var1.pos += var7;
+		int var39 = var1.pos;
+		var1.pos += var27;
+		int var40 = var1.pos;
+		var1.pos += var8;
+		int var41 = var1.pos;
+		var1.pos += var17;
+		int var42 = var1.pos;
+		var1.pos += var19;
+		int var43 = var1.pos;
+		var1.pos += var21;
+		int var44 = var1.pos;
+		var1.pos += var12;
+		int var45 = var1.pos;
+		var1.pos += var9;
+		int var46 = var1.pos;
+		var1.pos += var22;
+		int var47 = var1.pos;
+		var1.pos += var23;
+		int var48 = var1.pos;
+		var1.pos += var24;
+		int var49 = var1.pos;
+		var1.pos += var25;
+		int var50 = var1.pos;
+		var1.pos += var5 * 3;
 		aByteArray1101 = new byte[var4];
 		final RSBuf var51 = new RSBuf(aByteArray1101);
 		var51.writeInt(1297377380);
@@ -162,7 +162,7 @@ public class Class104_Sub14 extends Class104 {
 		var51.writeShort(var2 > 1 ? 1 : 0);
 		var51.writeShort(var2);
 		var51.writeShort(var3);
-		var1.anInt1172 = var13;
+		var1.pos = var13;
 		int var52 = 0;
 		int var53 = 0;
 		int var54 = 0;
@@ -175,8 +175,8 @@ public class Class104_Sub14 extends Class104 {
 
 		label220: for (int var60 = 0; var60 < var2; ++var60) {
 			var51.writeInt(1297379947);
-			var51.anInt1172 += 4;
-			final int var61 = var51.anInt1172;
+			var51.pos += 4;
+			final int var61 = var51.pos;
 			int var62 = -1;
 
 			while (true)
@@ -192,7 +192,7 @@ public class Class104_Sub14 extends Class104 {
 
 						var51.writebyte(47);
 						var51.writebyte(0);
-						var51.writeIntLE(var51.anInt1172 - var61);
+						var51.writeIntLE(var51.pos - var61);
 						continue label220;
 					}
 

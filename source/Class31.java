@@ -9,13 +9,13 @@ public class Class31 {
 	}
 
 	public void method146(final RSBuf var1, final byte[] var2) {
-		if ((var1.aByteArray1174[var1.anInt1172] == 31) && (var1.aByteArray1174[1 + var1.anInt1172] == -117)) {
+		if ((var1.aByteArray1174[var1.pos] == 31) && (var1.aByteArray1174[1 + var1.pos] == -117)) {
 			if (null == anInflater289)
 				anInflater289 = new Inflater(true);
 
 			try {
-				anInflater289.setInput(var1.aByteArray1174, var1.anInt1172 + 10,
-						var1.aByteArray1174.length - (8 + var1.anInt1172 + 10));
+				anInflater289.setInput(var1.aByteArray1174, var1.pos + 10,
+						var1.aByteArray1174.length - (8 + var1.pos + 10));
 				anInflater289.inflate(var2);
 			} catch (final Exception var4) {
 				anInflater289.reset();

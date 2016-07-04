@@ -91,7 +91,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 	}
 
 	final void method950(final RSBuf var1) {
-		var1.anInt1172 = 0;
+		var1.pos = 0;
 		final int var2 = var1.method570();
 		anInt1771 = var1.method565();
 		anInt1784 = var1.method565();
@@ -109,7 +109,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 				var7 = var1.method570();
 				var4[var5] = var7 + (var6 << 8);
 				if ((var5 == 0) && (var4[0] == '\uffff')) {
-					var3 = var1.method571();
+					var3 = var1.readLEShort();
 					break;
 				}
 
@@ -131,32 +131,32 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 			var9[var6] = var7;
 		}
 
-		anInt1702 = var1.method571();
+		anInt1702 = var1.readLEShort();
 		if (anInt1702 == '\uffff')
 			anInt1702 = -1;
 
-		anInt1699 = var1.method571();
+		anInt1699 = var1.readLEShort();
 		if (anInt1699 == '\uffff')
 			anInt1699 = -1;
 
 		anInt1700 = anInt1699;
-		anInt1701 = var1.method571();
+		anInt1701 = var1.readLEShort();
 		if (anInt1701 == '\uffff')
 			anInt1701 = -1;
 
-		anInt1743 = var1.method571();
+		anInt1743 = var1.readLEShort();
 		if (anInt1743 == '\uffff')
 			anInt1743 = -1;
 
-		anInt1703 = var1.method571();
+		anInt1703 = var1.readLEShort();
 		if (anInt1703 == '\uffff')
 			anInt1703 = -1;
 
-		anInt1704 = var1.method571();
+		anInt1704 = var1.readLEShort();
 		if (anInt1704 == '\uffff')
 			anInt1704 = -1;
 
-		anInt1705 = var1.method571();
+		anInt1705 = var1.readLEShort();
 		if (anInt1705 == '\uffff')
 			anInt1705 = -1;
 
@@ -165,7 +165,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub1 extends Class104_Sub18_Sub16_S
 			RuntimeException_Sub1.aString1478 = aString1780;
 
 		anInt1773 = var1.method570();
-		anInt1774 = var1.method571();
+		anInt1774 = var1.readLEShort();
 		if (aClass85_1770 == null)
 			aClass85_1770 = new Class85();
 

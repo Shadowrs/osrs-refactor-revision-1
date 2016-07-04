@@ -2362,12 +2362,12 @@ public class Class46 {
 
 												client.secureBuf.method623(205);
 												client.secureBuf.writebyte(0);
-												var19 = client.secureBuf.anInt1172;
+												var19 = client.secureBuf.pos;
 												client.secureBuf.writebyte(var61);
 												client.secureBuf.writebyte(var66);
 												Class41.method183(client.secureBuf, var80);
 												client.secureBuf
-														.method613(client.secureBuf.anInt1172 - var19);
+														.method613(client.secureBuf.pos - var19);
 											}
 											continue;
 										}
@@ -2378,11 +2378,11 @@ public class Class46 {
 											var16 = Class90.aStringArray712[1 + var5];
 											client.secureBuf.method623(211);
 											client.secureBuf.writeShort(0);
-											var17 = client.secureBuf.anInt1172;
+											var17 = client.secureBuf.pos;
 											client.secureBuf.writeString(var80);
 											Class41.method183(client.secureBuf, var16);
 											client.secureBuf
-													.writeShortLE(client.secureBuf.anInt1172 - var17);
+													.writeShortLE(client.secureBuf.pos - var17);
 											continue;
 										}
 

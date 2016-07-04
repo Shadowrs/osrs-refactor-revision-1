@@ -14,7 +14,7 @@ public class Class104_Sub18_Sub11 extends Class104_Sub18 {
 
 	void method768(final RSBuf var1, final int var2) {
 		if (var2 == 5)
-			anInt1412 = var1.method571();
+			anInt1412 = var1.readLEShort();
 
 	}
 

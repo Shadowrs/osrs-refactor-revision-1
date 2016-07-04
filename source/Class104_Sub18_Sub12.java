@@ -59,21 +59,21 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 
 	void method773(final RSBuf var1, final int var2) {
 		if (var2 == 1)
-			anInt1419 = var1.method571();
+			anInt1419 = var1.readLEShort();
 		else if (var2 == 2)
 			aString1444 = var1.method608();
 		else if (var2 == 4)
-			anInt1425 = var1.method571();
+			anInt1425 = var1.readLEShort();
 		else if (var2 == 5)
-			anInt1426 = var1.method571();
+			anInt1426 = var1.readLEShort();
 		else if (var2 == 6)
-			anInt1427 = var1.method571();
+			anInt1427 = var1.readLEShort();
 		else if (var2 == 7) {
-			anInt1454 = var1.method571();
+			anInt1454 = var1.readLEShort();
 			if (anInt1454 > 32767)
 				anInt1454 -= 65536;
 		} else if (var2 == 8) {
-			anInt1430 = var1.method571();
+			anInt1430 = var1.readLEShort();
 			if (anInt1430 > 32767)
 				anInt1430 -= 65536;
 		} else if (var2 == 11)
@@ -83,15 +83,15 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 		else if (var2 == 16)
 			aBool1440 = true;
 		else if (var2 == 23) {
-			anInt1436 = var1.method571();
+			anInt1436 = var1.readLEShort();
 			anInt1438 = var1.method570();
 		} else if (var2 == 24)
-			anInt1437 = var1.method571();
+			anInt1437 = var1.readLEShort();
 		else if (var2 == 25) {
-			anInt1457 = var1.method571();
+			anInt1457 = var1.readLEShort();
 			anInt1441 = var1.method570();
 		} else if (var2 == 26)
-			anInt1443 = var1.method571();
+			anInt1443 = var1.readLEShort();
 		else if ((var2 >= 30) && (var2 < 35)) {
 			aStringArray1434[var2 - 30] = var1.method608();
 			if (aStringArray1434[var2 - 30].equalsIgnoreCase("Hidden"))
@@ -107,8 +107,8 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 				aShortArray1422 = new short[var3];
 
 				for (var4 = 0; var4 < var3; ++var4) {
-					aShortArray1421[var4] = (short) var1.method571();
-					aShortArray1422[var4] = (short) var1.method571();
+					aShortArray1421[var4] = (short) var1.readLEShort();
+					aShortArray1422[var4] = (short) var1.readLEShort();
 				}
 			} else if (var2 == 41) {
 				var3 = var1.method570();
@@ -116,41 +116,41 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 				aShortArray1424 = new short[var3];
 
 				for (var4 = 0; var4 < var3; ++var4) {
-					aShortArray1423[var4] = (short) var1.method571();
-					aShortArray1424[var4] = (short) var1.method571();
+					aShortArray1423[var4] = (short) var1.readLEShort();
+					aShortArray1424[var4] = (short) var1.readLEShort();
 				}
 			} else if (var2 == 78)
-				anInt1445 = var1.method571();
+				anInt1445 = var1.readLEShort();
 			else if (var2 == 79)
-				anInt1448 = var1.method571();
+				anInt1448 = var1.readLEShort();
 			else if (var2 == 90)
-				anInt1414 = var1.method571();
+				anInt1414 = var1.readLEShort();
 			else if (var2 == 91)
-				anInt1429 = var1.method571();
+				anInt1429 = var1.readLEShort();
 			else if (var2 == 92)
-				anInt1451 = var1.method571();
+				anInt1451 = var1.readLEShort();
 			else if (var2 == 93)
-				anInt1447 = var1.method571();
+				anInt1447 = var1.readLEShort();
 			else if (var2 == 95)
-				anInt1446 = var1.method571();
+				anInt1446 = var1.readLEShort();
 			else if (var2 == 97)
-				anInt1442 = var1.method571();
+				anInt1442 = var1.readLEShort();
 			else if (var2 == 98)
-				anInt1433 = var1.method571();
+				anInt1433 = var1.readLEShort();
 			else if ((var2 >= 100) && (var2 < 110)) {
 				if (anIntArray1450 == null) {
 					anIntArray1450 = new int[10];
 					anIntArray1449 = new int[10];
 				}
 
-				anIntArray1450[var2 - 100] = var1.method571();
-				anIntArray1449[var2 - 100] = var1.method571();
+				anIntArray1450[var2 - 100] = var1.readLEShort();
+				anIntArray1449[var2 - 100] = var1.readLEShort();
 			} else if (var2 == 110)
-				anInt1452 = var1.method571();
+				anInt1452 = var1.readLEShort();
 			else if (var2 == 111)
-				anInt1428 = var1.method571();
+				anInt1428 = var1.readLEShort();
 			else if (var2 == 112)
-				anInt1439 = var1.method571();
+				anInt1439 = var1.readLEShort();
 			else if (var2 == 113)
 				anInt1455 = var1.method565();
 			else if (var2 == 114)

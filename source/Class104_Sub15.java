@@ -123,7 +123,7 @@ public class Class104_Sub15 extends Class104 {
 			}
 
 			Class104_Sub18_Sub16_Sub7_Sub1 var10;
-			for (; client.gamecon.method626(client.anInt1929) >= 11; var10.method933(
+			for (; client.gamecon.method626(client.pktSize) >= 11; var10.method933(
 					var5 + Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1745[0],
 					var3 + Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var7 == 1)) {
 				var0 = client.gamecon.method625(11);
@@ -171,20 +171,20 @@ public class Class104_Sub15 extends Class104 {
 					var3 += client.gamecon.method570() << 8;
 
 				if ((var3 & 4) != 0) {
-					var4 = client.gamecon.method571();
+					var4 = client.gamecon.readLEShort();
 					var5 = client.gamecon.method570();
 					var7 = client.gamecon.method570();
-					var8 = client.gamecon.anInt1172;
+					var8 = client.gamecon.pos;
 					if ((null != var10.aString1780) && (var10.aClass85_1770 != null)) {
 						boolean var15 = false;
 						if ((var5 <= 1) && Class34.method166(var10.aString1780))
 							var15 = true;
 
 						if (!var15 && (client.anInt1906 == 0)) {
-							client.aClass104_Sub21_1885.anInt1172 = 0;
+							client.aClass104_Sub21_1885.pos = 0;
 							client.gamecon.method577(client.aClass104_Sub21_1885.aByteArray1174, 0,
 									var7);
-							client.aClass104_Sub21_1885.anInt1172 = 0;
+							client.aClass104_Sub21_1885.pos = 0;
 							final String var11 = Class104_Sub18_Sub17_Sub2
 									.method879(Class80.method351(Class50.method224(client.aClass104_Sub21_1885)));
 							var10.aString1723 = var11.trim();
@@ -201,7 +201,7 @@ public class Class104_Sub15 extends Class104 {
 						}
 					}
 
-					client.gamecon.anInt1172 = var8 + var7;
+					client.gamecon.pos = var8 + var7;
 				}
 
 				if ((var3 & 2) != 0) {
@@ -215,25 +215,25 @@ public class Class104_Sub15 extends Class104 {
 
 				if ((var3 & 256) != 0) {
 					var10.anInt1697 = client.gamecon.method570();
-					var10.anInt1734 = client.gamecon.method607();
+					var10.anInt1734 = client.gamecon.readByteN();
 					var10.anInt1733 = client.gamecon.method570();
 					var10.anInt1721 = client.gamecon.method576();
 					var10.anInt1708 = client.gamecon.method594() + client.anInt1799;
-					var10.anInt1737 = client.gamecon.method571() + client.anInt1799;
-					var10.anInt1738 = client.gamecon.method607();
+					var10.anInt1737 = client.gamecon.readLEShort() + client.anInt1799;
+					var10.anInt1738 = client.gamecon.readByteN();
 					var10.anInt1744 = 1;
 					var10.anInt1735 = 0;
 				}
 
 				if ((var3 & 32) != 0) {
-					var10.anInt1716 = client.gamecon.method595();
+					var10.anInt1716 = client.gamecon.readShortN();
 					if (var10.anInt1716 == '\uffff')
 						var10.anInt1716 = -1;
 				}
 
 				if ((var3 & 128) != 0) {
 					var10.anInt1717 = client.gamecon.method594();
-					var10.anInt1718 = client.gamecon.method593();
+					var10.anInt1718 = client.gamecon.readShort();
 				}
 
 				if ((var3 & 16) != 0) {
@@ -241,12 +241,12 @@ public class Class104_Sub15 extends Class104 {
 					if (var4 == '\uffff')
 						var4 = -1;
 
-					var5 = client.gamecon.method607();
+					var5 = client.gamecon.readByteN();
 					Class75.method342(var10, var4, var5);
 				}
 
 				if ((var3 & 512) != 0) {
-					var10.anInt1727 = client.gamecon.method593();
+					var10.anInt1727 = client.gamecon.readShort();
 					var4 = client.gamecon.method574();
 					var10.anInt1709 = var4 >> 16;
 					var10.anInt1730 = client.anInt1799 + (var4 & '\uffff');
@@ -265,7 +265,7 @@ public class Class104_Sub15 extends Class104 {
 					var10.method935(var4, var5, client.anInt1799);
 					var10.anInt1714 = client.anInt1799 + 300;
 					var10.anInt1693 = client.gamecon.method570();
-					var10.anInt1715 = client.gamecon.method607();
+					var10.anInt1715 = client.gamecon.readByteN();
 				}
 
 				if ((var3 & 1) != 0) {
@@ -297,8 +297,8 @@ public class Class104_Sub15 extends Class104 {
 					client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var1] = null;
 			}
 
-			if (client.gamecon.anInt1172 != client.anInt1929)
-				throw new RuntimeException(client.gamecon.anInt1172 + "," + client.anInt1929);
+			if (client.gamecon.pos != client.pktSize)
+				throw new RuntimeException(client.gamecon.pos + "," + client.pktSize);
 			else
 				for (var0 = 0; var0 < client.anInt1994; ++var0)
 					if (client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[client.anIntArray1909[var0]] == null)

@@ -76,23 +76,23 @@ public class Class4 {
 		anIntArray11[0] = var3 >> 4;
 		anIntArray11[1] = var3 & 15;
 		if (var3 != 0) {
-			anIntArray13[0] = var1.method571();
-			anIntArray13[1] = var1.method571();
+			anIntArray13[0] = var1.readLEShort();
+			anIntArray13[1] = var1.readLEShort();
 			final int var4 = var1.method570();
 
 			int var5;
 			int var6;
 			for (var5 = 0; var5 < 2; ++var5)
 				for (var6 = 0; var6 < anIntArray11[var5]; ++var6) {
-					anIntArrayArrayArray18[var5][0][var6] = var1.method571();
-					anIntArrayArrayArray12[var5][0][var6] = var1.method571();
+					anIntArrayArrayArray18[var5][0][var6] = var1.readLEShort();
+					anIntArrayArrayArray12[var5][0][var6] = var1.readLEShort();
 				}
 
 			for (var5 = 0; var5 < 2; ++var5)
 				for (var6 = 0; var6 < anIntArray11[var5]; ++var6)
 					if ((var4 & (1 << (var5 * 4) << var6)) != 0) {
-						anIntArrayArrayArray18[var5][1][var6] = var1.method571();
-						anIntArrayArrayArray12[var5][1][var6] = var1.method571();
+						anIntArrayArrayArray18[var5][1][var6] = var1.readLEShort();
+						anIntArrayArrayArray12[var5][1][var6] = var1.readLEShort();
 					} else {
 						anIntArrayArrayArray18[var5][1][var6] = anIntArrayArrayArray18[var5][0][var6];
 						anIntArrayArrayArray12[var5][1][var6] = anIntArrayArrayArray12[var5][0][var6];

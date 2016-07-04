@@ -20,10 +20,10 @@ public class Class41 implements Interface3 {
 	}
 
 	public static int method183(final RSBuf var0, final String var1) {
-		final int var2 = var0.anInt1172;
+		final int var2 = var0.pos;
 		final byte[] var3 = Class67.method316(var1);
 		var0.method568(var3.length);
-		var0.anInt1172 += Class106.aClass49_826.method219(var3, 0, var3.length, var0.aByteArray1174, var0.anInt1172);
-		return var0.anInt1172 - var2;
+		var0.pos += Class106.aClass49_826.method219(var3, 0, var3.length, var0.aByteArray1174, var0.pos);
+		return var0.pos - var2;
 	}
 }

@@ -144,13 +144,13 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			var3 = var1.method570();
 			if (var3 > 0)
 				if ((anIntArray1350 != null) && !aBool1361)
-					var1.anInt1172 += var3 * 3;
+					var1.pos += var3 * 3;
 				else {
 					anIntArray1359 = new int[var3];
 					anIntArray1350 = new int[var3];
 
 					for (var4 = 0; var4 < var3; ++var4) {
-						anIntArray1350[var4] = var1.method571();
+						anIntArray1350[var4] = var1.readLEShort();
 						anIntArray1359[var4] = var1.method570();
 					}
 				}
@@ -160,13 +160,13 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			var3 = var1.method570();
 			if (var3 > 0)
 				if ((anIntArray1350 != null) && !aBool1361)
-					var1.anInt1172 += 2 * var3;
+					var1.pos += 2 * var3;
 				else {
 					anIntArray1359 = null;
 					anIntArray1350 = new int[var3];
 
 					for (var4 = 0; var4 < var3; ++var4)
-						anIntArray1350[var4] = var1.method571();
+						anIntArray1350[var4] = var1.readLEShort();
 				}
 		} else if (var2 == 14)
 			anInt1365 = var1.method570();
@@ -186,7 +186,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		else if (var2 == 23)
 			aBool1345 = true;
 		else if (var2 == 24) {
-			anInt1346 = var1.method571();
+			anInt1346 = var1.readLEShort();
 			if (anInt1346 == '\uffff')
 				anInt1346 = -1;
 		} else if (var2 == 27)
@@ -207,8 +207,8 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			aShortArray1332 = new short[var3];
 
 			for (var4 = 0; var4 < var3; ++var4) {
-				aShortArray1334[var4] = (short) var1.method571();
-				aShortArray1332[var4] = (short) var1.method571();
+				aShortArray1334[var4] = (short) var1.readLEShort();
+				aShortArray1332[var4] = (short) var1.readLEShort();
 			}
 		} else if (var2 == 41) {
 			var3 = var1.method570();
@@ -216,23 +216,23 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			aShortArray1337 = new short[var3];
 
 			for (var4 = 0; var4 < var3; ++var4) {
-				aShortArray1336[var4] = (short) var1.method571();
-				aShortArray1337[var4] = (short) var1.method571();
+				aShortArray1336[var4] = (short) var1.readLEShort();
+				aShortArray1337[var4] = (short) var1.readLEShort();
 			}
 		} else if (var2 == 60)
-			anInt1351 = var1.method571();
+			anInt1351 = var1.readLEShort();
 		else if (var2 == 62)
 			aBool1353 = true;
 		else if (var2 == 64)
 			aBool1354 = false;
 		else if (var2 == 65)
-			anInt1355 = var1.method571();
+			anInt1355 = var1.readLEShort();
 		else if (var2 == 66)
-			anInt1356 = var1.method571();
+			anInt1356 = var1.readLEShort();
 		else if (var2 == 67)
-			anInt1357 = var1.method571();
+			anInt1357 = var1.readLEShort();
 		else if (var2 == 68)
-			anInt1341 = var1.method571();
+			anInt1341 = var1.readLEShort();
 		else if (var2 == 69)
 			anInt1335 = var1.method570();
 		else if (var2 == 70)
@@ -248,11 +248,11 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		else if (var2 == 75)
 			anInt1358 = var1.method570();
 		else if (var2 == 77) {
-			anInt1352 = var1.method571();
+			anInt1352 = var1.readLEShort();
 			if (anInt1352 == '\uffff')
 				anInt1352 = -1;
 
-			anInt1367 = var1.method571();
+			anInt1367 = var1.readLEShort();
 			if (anInt1367 == '\uffff')
 				anInt1367 = -1;
 
@@ -260,22 +260,22 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			anIntArray1338 = new int[var3 + 1];
 
 			for (var4 = 0; var4 <= var3; ++var4) {
-				anIntArray1338[var4] = var1.method571();
+				anIntArray1338[var4] = var1.readLEShort();
 				if (anIntArray1338[var4] == '\uffff')
 					anIntArray1338[var4] = -1;
 			}
 		} else if (var2 == 78) {
-			anInt1333 = var1.method571();
+			anInt1333 = var1.readLEShort();
 			anInt1369 = var1.method570();
 		} else if (var2 == 79) {
-			anInt1370 = var1.method571();
-			anInt1323 = var1.method571();
+			anInt1370 = var1.readLEShort();
+			anInt1323 = var1.readLEShort();
 			anInt1369 = var1.method570();
 			var3 = var1.method570();
 			anIntArray1372 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1372[var4] = var1.method571();
+				anIntArray1372[var4] = var1.readLEShort();
 		} else if (var2 == 81)
 			anInt1343 = var1.method570() * 256;
 

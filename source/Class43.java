@@ -20,7 +20,7 @@ public final class Class43 {
 
 			var0.method623(var1);
 			var0.writebyte(0);
-			final int var3 = var0.anInt1172;
+			final int var3 = var0.pos;
 			var0.writeInt(var2.anInt1128);
 
 			for (int var4 = 0; var4 < var2.anInt1127; ++var4)
@@ -105,7 +105,7 @@ public final class Class43 {
 					}
 
 			var0.method583(var3);
-			var0.method613(var0.anInt1172 - var3);
+			var0.method613(var0.pos - var3);
 			var2.method470();
 		}
 	}

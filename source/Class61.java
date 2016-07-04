@@ -37,7 +37,7 @@ public abstract class Class61 {
 			if (var3 >= 7)
 				anInt495 = var7.method579();
 			else
-				anInt495 = var7.method571();
+				anInt495 = var7.readLEShort();
 
 			int var8 = 0;
 			int var9 = -1;
@@ -51,7 +51,7 @@ public abstract class Class61 {
 				}
 			else
 				for (var10 = 0; var10 < anInt495; ++var10) {
-					anIntArray479[var10] = var8 += var7.method571();
+					anIntArray479[var10] = var8 += var7.readLEShort();
 					if (anIntArray479[var10] > var9)
 						var9 = anIntArray479[var10];
 				}
@@ -78,7 +78,7 @@ public abstract class Class61 {
 				anIntArray493[anIntArray479[var10]] = var7.method574();
 
 			for (var10 = 0; var10 < anInt495; ++var10)
-				anIntArray485[anIntArray479[var10]] = var7.method571();
+				anIntArray485[anIntArray479[var10]] = var7.readLEShort();
 
 			int var11;
 			int var12;
@@ -110,7 +110,7 @@ public abstract class Class61 {
 					anIntArrayArray486[var11] = new int[var12];
 
 					for (var14 = 0; var14 < var12; ++var14) {
-						var15 = anIntArrayArray486[var11][var14] = var8 += var7.method571();
+						var15 = anIntArrayArray486[var11][var14] = var8 += var7.readLEShort();
 						if (var15 > var13)
 							var13 = var15;
 					}
@@ -269,7 +269,7 @@ public abstract class Class61 {
 					var10 -= var11 * var3 * 4;
 					final RSBuf var12 = new RSBuf(var20);
 					final int[] var13 = new int[var3];
-					var12.anInt1172 = var10;
+					var12.pos = var10;
 
 					int var15;
 					int var16;
@@ -289,7 +289,7 @@ public abstract class Class61 {
 						var13[var15] = 0;
 					}
 
-					var12.anInt1172 = var10;
+					var12.pos = var10;
 					var15 = 0;
 
 					for (var16 = 0; var16 < var11; ++var16) {
@@ -318,9 +318,9 @@ public abstract class Class61 {
 		}
 	}
 
-	public int method271(String var1) {
-		var1 = var1.toLowerCase();
-		return aClass73_482.method336(Class67.method319(var1));
+	public int method271(String filename) {
+		filename = filename.toLowerCase();
+		return aClass73_482.method336(Class67.method319(filename));
 	}
 
 	public byte[] method272(String var1, String var2) {

@@ -5,7 +5,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 
 public final class Class13 implements Runnable {
-	static int[][] anIntArrayArray87;
+	static int[][] xteakeys;
 	byte[] aByteArray80;
 	boolean aBool81 = false;
 	int anInt84 = 0;

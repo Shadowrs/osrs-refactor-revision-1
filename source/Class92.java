@@ -34,7 +34,7 @@ public class Class92 {
 		aClass74_718.method337(var1);
 		int var2 = var1.method570();
 		if (var2 != 0) {
-			--var1.anInt1172;
+			--var1.pos;
 			aClass74_725 = new Class74();
 			aClass74_725.method337(var1);
 			aClass74_720 = new Class74();
@@ -43,7 +43,7 @@ public class Class92 {
 
 		var2 = var1.method570();
 		if (var2 != 0) {
-			--var1.anInt1172;
+			--var1.pos;
 			aClass74_721 = new Class74();
 			aClass74_721.method337(var1);
 			aClass74_722 = new Class74();
@@ -52,7 +52,7 @@ public class Class92 {
 
 		var2 = var1.method570();
 		if (var2 != 0) {
-			--var1.anInt1172;
+			--var1.pos;
 			aClass74_735 = new Class74();
 			aClass74_735.method337(var1);
 			aClass74_724 = new Class74();
@@ -71,8 +71,8 @@ public class Class92 {
 
 		anInt717 = var1.method599();
 		anInt719 = var1.method599();
-		anInt732 = var1.method571();
-		anInt733 = var1.method571();
+		anInt732 = var1.readLEShort();
+		anInt733 = var1.readLEShort();
 		aClass4_730 = new Class4();
 		aClass74_731 = new Class74();
 		aClass4_730.method31(var1, aClass74_731);

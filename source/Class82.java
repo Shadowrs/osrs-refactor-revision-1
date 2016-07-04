@@ -77,13 +77,13 @@ public class Class82 {
 		for (int var2 = 0; var2 < 10; ++var2) {
 			final int var3 = var1.method570();
 			if (var3 != 0) {
-				--var1.anInt1172;
+				--var1.pos;
 				aClass92Array645[var2] = new Class92();
 				aClass92Array645[var2].method413(var1);
 			}
 		}
 
-		anInt646 = var1.method571();
-		anInt647 = var1.method571();
+		anInt646 = var1.readLEShort();
+		anInt647 = var1.readLEShort();
 	}
 }

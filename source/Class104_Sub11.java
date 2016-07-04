@@ -13,7 +13,7 @@ public class Class104_Sub11 extends Class104 {
 		final RSBuf var2 = new RSBuf(var1);
 
 		int var3;
-		for (var3 = 0; var2.aByteArray1174[var3 + var2.anInt1172] != 0; ++var3)
+		for (var3 = 0; var2.aByteArray1174[var3 + var2.pos] != 0; ++var3)
 			;
 
 		final byte[] var4 = new byte[var3];
@@ -22,13 +22,13 @@ public class Class104_Sub11 extends Class104 {
 		for (var5 = 0; var5 < var3; ++var5)
 			var4[var5] = var2.method565();
 
-		++var2.anInt1172;
+		++var2.pos;
 		++var3;
-		var5 = var2.anInt1172;
-		var2.anInt1172 += var3;
+		var5 = var2.pos;
+		var2.pos += var3;
 
 		int var6;
-		for (var6 = 0; var2.aByteArray1174[var6 + var2.anInt1172] != 0; ++var6)
+		for (var6 = 0; var2.aByteArray1174[var6 + var2.pos] != 0; ++var6)
 			;
 
 		final byte[] var7 = new byte[var6];
@@ -37,13 +37,13 @@ public class Class104_Sub11 extends Class104 {
 		for (var8 = 0; var8 < var6; ++var8)
 			var7[var8] = var2.method565();
 
-		++var2.anInt1172;
+		++var2.pos;
 		++var6;
-		var8 = var2.anInt1172;
-		var2.anInt1172 += var6;
+		var8 = var2.pos;
+		var2.pos += var6;
 
 		int var9;
-		for (var9 = 0; var2.aByteArray1174[var2.anInt1172 + var9] != 0; ++var9)
+		for (var9 = 0; var2.aByteArray1174[var2.pos + var9] != 0; ++var9)
 			;
 
 		final byte[] var10 = new byte[var9];
@@ -51,7 +51,7 @@ public class Class104_Sub11 extends Class104 {
 		for (int var11 = 0; var11 < var9; ++var11)
 			var10[var11] = var2.method565();
 
-		++var2.anInt1172;
+		++var2.pos;
 		++var9;
 		final byte[] var12 = new byte[var9];
 		int var14;
@@ -99,7 +99,7 @@ public class Class104_Sub11 extends Class104 {
 		final byte[] var20 = var15 > 0 ? new byte[2 * var15] : null;
 
 		int var21;
-		for (var21 = 0; var2.aByteArray1174[var2.anInt1172 + var21] != 0; ++var21)
+		for (var21 = 0; var2.aByteArray1174[var2.pos + var21] != 0; ++var21)
 			;
 
 		final byte[] var22 = new byte[var21];
@@ -108,7 +108,7 @@ public class Class104_Sub11 extends Class104 {
 		for (var23 = 0; var23 < var21; ++var23)
 			var22[var23] = var2.method565();
 
-		++var2.anInt1172;
+		++var2.pos;
 		++var21;
 		var23 = 0;
 
