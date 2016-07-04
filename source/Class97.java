@@ -143,7 +143,7 @@ public class Class97 {
 						Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anIntArray1746[0], var0, var1, true, 1 + var5, var6,
 						0, 0, 0, 2);
 			else {
-				final Class104_Sub18_Sub6 var7 = Class104_Sub18_Sub12.method782(var3);
+				final ObjectDefinition var7 = Class104_Sub18_Sub12.forId(var3);
 				int var8;
 				int var9;
 				if ((var6 != 0) && (var6 != 2)) {

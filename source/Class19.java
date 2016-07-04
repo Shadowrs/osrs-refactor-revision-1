@@ -1,49 +1,49 @@
 public class Class19 {
 	static int anInt195;
 
-	static final boolean method119(final byte[] var0, final int var1, final int var2) {
-		boolean var3 = true;
+	static final boolean loadClipping(final byte[] var0, final int var1, final int var2) {
+		boolean valid = true;
 		final RSBuf var4 = new RSBuf(var0);
-		int var5 = -1;
+		int objId = -1;
 
 		label57: while (true) {
-			final int var6 = var4.method599();
+			final int var6 = var4.readsmart();
 			if (var6 == 0)
-				return var3;
+				return valid;
 
-			var5 += var6;
+			objId += var6;
 			int var7 = 0;
-			boolean var8 = false;
+			boolean finished = false;
 
 			while (true) {
-				int var9;
-				while (!var8) {
-					var9 = var4.method599();
-					if (var9 == 0)
+				int opc;
+				while (!finished) {
+					opc = var4.readsmart();
+					if (opc == 0)
 						continue label57;
 
-					var7 += var9 - 1;
+					var7 += opc - 1;
 					final int var10 = var7 & 63;
 					final int var11 = (var7 >> 6) & 63;
 					final int var12 = var4.readUByte() >> 2;
 					final int var13 = var1 + var11;
 					final int var14 = var10 + var2;
 					if ((var13 > 0) && (var14 > 0) && (var13 < 103) && (var14 < 103)) {
-						final Class104_Sub18_Sub6 var15 = Class104_Sub18_Sub12.method782(var5);
-						if ((var12 != 22) || !client.aBool1794 || (var15.anInt1342 != 0) || (var15.anInt1363 == 1)
-								|| var15.aBool1362) {
-							if (!var15.method745()) {
+						final ObjectDefinition obj = Class104_Sub18_Sub12.forId(objId);
+						if ((var12 != 22) || !client.lowmvm || (obj.anInt1342 != 0) || (obj.anInt1363 == 1)
+								|| obj.aBool1362) {
+							if (!obj.valid()) {
 								++client.anInt1843;
-								var3 = false;
+								valid = false;
 							}
 
-							var8 = true;
+							finished = true;
 						}
 					}
 				}
 
-				var9 = var4.method599();
-				if (var9 == 0)
+				opc = var4.readsmart();
+				if (opc == 0)
 					break;
 
 				var4.readUByte();
@@ -53,15 +53,15 @@ public class Class19 {
 
 	static final void method120(final int var0, final int var1, final int var2, final int var3, final int var4) {
 		if ((var0 != Class54.anInt447) || (var1 != Class96.anInt761)
-				|| ((client.anInt1988 != var2) && client.aBool1794)) {
+				|| ((client.anInt1988 != var2) && client.lowmvm)) {
 			Class54.anInt447 = var0;
 			Class96.anInt761 = var1;
 			client.anInt1988 = var2;
-			if (!client.aBool1794)
+			if (!client.lowmvm)
 				client.anInt1988 = 0;
 
 			Class10.method40(25);
-			Class104_Sub15.method550("Loading - please wait.", true);
+			Class104_Sub15.drawLoading("Loading - please wait.", true);
 			int var5 = Class53.anInt436;
 			int var6 = Class20.anInt206;
 			Class53.anInt436 = (var0 - 6) * 8;

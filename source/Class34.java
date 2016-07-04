@@ -93,7 +93,7 @@ public class Class34 implements Interface2 {
 
 	static final void method163(final int var0, final int var1, final int var2, final int var3, final int var4,
 			final int var5, final Class17 var6, final Class67 var7) {
-		if (client.aBool1794 && ((Class76.aByteArrayArrayArray600[0][var1][var2] & 2) == 0)) {
+		if (client.lowmvm && ((Class76.aByteArrayArrayArray600[0][var1][var2] & 2) == 0)) {
 			if ((Class76.aByteArrayArrayArray600[var0][var1][var2] & 16) != 0)
 				return;
 
@@ -112,7 +112,7 @@ public class Class34 implements Interface2 {
 		if (var0 < Class76.anInt601)
 			Class76.anInt601 = var0;
 
-		final Class104_Sub18_Sub6 var9 = Class104_Sub18_Sub12.method782(var3);
+		final ObjectDefinition var9 = Class104_Sub18_Sub12.forId(var3);
 		int var10;
 		int var11;
 		if ((var4 != 1) && (var4 != 3)) {
@@ -160,7 +160,7 @@ public class Class34 implements Interface2 {
 
 		Object var22;
 		if (var5 == 22) {
-			if (!client.aBool1794 || (var9.anInt1342 != 0) || (var9.anInt1363 == 1) || var9.aBool1362) {
+			if (!client.lowmvm || (var9.anInt1342 != 0) || (var9.anInt1363 == 1) || var9.aBool1362) {
 				if ((var9.anInt1346 == -1) && (null == var9.anIntArray1338))
 					var22 = var9.method743(22, var4, var16, var18, var17, var19);
 				else
@@ -349,7 +349,7 @@ public class Class34 implements Interface2 {
 						var26 = 16;
 						var23 = var6.method85(var0, var1, var2);
 						if (var23 != 0)
-							var26 = Class104_Sub18_Sub12.method782((var23 >> 14) & 32767).anInt1348;
+							var26 = Class104_Sub18_Sub12.forId((var23 >> 14) & 32767).anInt1348;
 
 						if ((var9.anInt1346 == -1) && (var9.anIntArray1338 == null))
 							var28 = var9.method743(4, var4, var16, var18, var17, var19);
@@ -364,7 +364,7 @@ public class Class34 implements Interface2 {
 						var26 = 8;
 						var23 = var6.method85(var0, var1, var2);
 						if (var23 != 0)
-							var26 = Class104_Sub18_Sub12.method782((var23 >> 14) & 32767).anInt1348 / 2;
+							var26 = Class104_Sub18_Sub12.forId((var23 >> 14) & 32767).anInt1348 / 2;
 
 						if ((var9.anInt1346 == -1) && (var9.anIntArray1338 == null))
 							var28 = var9.method743(4, var4 + 4, var16, var18, var17, var19);
@@ -389,7 +389,7 @@ public class Class34 implements Interface2 {
 						var26 = 8;
 						var23 = var6.method85(var0, var1, var2);
 						if (var23 != 0)
-							var26 = Class104_Sub18_Sub12.method782((var23 >> 14) & 32767).anInt1348 / 2;
+							var26 = Class104_Sub18_Sub12.forId((var23 >> 14) & 32767).anInt1348 / 2;
 
 						final int var29 = (var4 + 2) & 3;
 						Object var30;

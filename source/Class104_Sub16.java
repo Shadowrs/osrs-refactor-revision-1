@@ -41,10 +41,10 @@ public class Class104_Sub16 extends Class104 {
 			final Runtime var4 = Runtime.getRuntime();
 			final int var5 = (int) ((var4.totalMemory() - var4.freeMemory()) / 1024L);
 			int var6 = 16776960;
-			if ((var5 > '\u8000') && client.aBool1794)
+			if ((var5 > '\u8000') && client.lowmvm)
 				var6 = 16711680;
 
-			if ((var5 > 65536) && !client.aBool1794)
+			if ((var5 > 65536) && !client.lowmvm)
 				var6 = 16711680;
 
 			Class29.aClass104_Sub18_Sub17_Sub2_Sub1_277.method881("Mem:" + var5 + "k", var2, var3, var6, -1);

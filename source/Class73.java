@@ -1,7 +1,7 @@
 public class Class73 {
 	int[] anIntArray585;
 
-	public int method336(final int var1) {
+	public int toId(final int var1) {
 		final int var2 = (anIntArray585.length >> 1) - 1;
 		int var3 = var1 & var2;
 

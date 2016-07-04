@@ -2,8 +2,8 @@ import java.awt.Canvas;
 
 public class Class10 {
 	static void method40(final int var0) {
-		if (client.anInt1806 != var0) {
-			if (client.anInt1806 == 0) {
+		if (client.loadstage != var0) {
+			if (client.loadstage == 0) {
 				Class54.anImage449 = null;
 				Class50.aFont420 = null;
 				Class104_Sub18_Sub15.aFontMetrics1466 = null;
@@ -20,10 +20,10 @@ public class Class10 {
 				Class57.aClass13_467 = null;
 			}
 
-			if (client.anInt1806 == 25) {
-				client.anInt2043 = 0;
-				client.anInt1842 = 0;
-				client.anInt1893 = 1;
+			if (client.loadstage == 25) {
+				client.loadtype = 0;
+				client.mapfails = 0;
+				client.prog = 1;
 				client.anInt1843 = 0;
 				client.anInt1844 = 1;
 			}
@@ -126,7 +126,7 @@ public class Class10 {
 				}
 			}
 
-			client.anInt1806 = var0;
+			client.loadstage = var0;
 		}
 	}
 }

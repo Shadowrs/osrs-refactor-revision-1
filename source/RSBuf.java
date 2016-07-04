@@ -314,7 +314,7 @@ public class RSBuf extends Class104 {
 		backing[++pos - 1] = (byte) (var1 >> 24);
 	}
 
-	public int method599() {
+	public int readsmart() {
 		final int var1 = backing[pos] & 255;
 		return var1 < 128 ? readUByte() : readLEShort() - '\u8000';
 	}
@@ -414,7 +414,7 @@ public class RSBuf extends Class104 {
 			;
 
 		final int var2 = pos - var1 - 1;
-		return var2 == 0 ? "" : Class104_Sub18_Sub6.method751(backing, var1, var2);
+		return var2 == 0 ? "" : ObjectDefinition.method751(backing, var1, var2);
 	}
 
 	public void writeIntLE(final int var1) {
@@ -472,7 +472,7 @@ public class RSBuf extends Class104 {
 				;
 
 			final int var3 = pos - var2 - 1;
-			return var3 == 0 ? "" : Class104_Sub18_Sub6.method751(backing, var2, var3);
+			return var3 == 0 ? "" : ObjectDefinition.method751(backing, var2, var3);
 		}
 	}
 

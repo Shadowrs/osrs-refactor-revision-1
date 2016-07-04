@@ -360,13 +360,13 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 			return true;
 		else {
 			boolean var5 = true;
-			if (!Class27.aClass61_265.method260(var2, 0))
+			if (!Class27.aClass61_265.exists(var2, 0))
 				var5 = false;
 
-			if ((var3 != -1) && !Class27.aClass61_265.method260(var3, 0))
+			if ((var3 != -1) && !Class27.aClass61_265.exists(var3, 0))
 				var5 = false;
 
-			if ((var4 != -1) && !Class27.aClass61_265.method260(var4, 0))
+			if ((var4 != -1) && !Class27.aClass61_265.exists(var4, 0))
 				var5 = false;
 
 			return var5;
@@ -385,23 +385,23 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 			return true;
 		else {
 			boolean var4 = true;
-			if (!Class27.aClass61_265.method260(var2, 0))
+			if (!Class27.aClass61_265.exists(var2, 0))
 				var4 = false;
 
-			if ((var3 != -1) && !Class27.aClass61_265.method260(var3, 0))
+			if ((var3 != -1) && !Class27.aClass61_265.exists(var3, 0))
 				var4 = false;
 
 			return var4;
 		}
 	}
 
-	public static Class104_Sub18_Sub6 method782(final int var0) {
-		Class104_Sub18_Sub6 var1 = (Class104_Sub18_Sub6) Class104_Sub18_Sub6.aClass56_1366.method236(var0);
+	public static ObjectDefinition forId(final int var0) {
+		ObjectDefinition var1 = (ObjectDefinition) ObjectDefinition.aClass56_1366.method236(var0);
 		if (var1 != null)
 			return var1;
 		else {
 			final byte[] var2 = Class72.aClass61_584.decompress(6, var0);
-			var1 = new Class104_Sub18_Sub6();
+			var1 = new ObjectDefinition();
 			var1.anInt1330 = var0;
 			if (null != var2)
 				var1.method740(new RSBuf(var2));
@@ -412,7 +412,7 @@ public class Class104_Sub18_Sub12 extends Class104_Sub18 {
 				var1.aBool1340 = false;
 			}
 
-			Class104_Sub18_Sub6.aClass56_1366.method238(var1, var0);
+			ObjectDefinition.aClass56_1366.method238(var1, var0);
 			return var1;
 		}
 	}

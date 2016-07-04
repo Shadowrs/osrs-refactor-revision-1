@@ -8,7 +8,7 @@ public final class Class104_Sub1 extends Class104 {
 	int anInt847;
 	int anInt850;
 	Class104_Sub8_Sub3 aClass104_Sub8_Sub3_851;
-	Class104_Sub18_Sub6 aClass104_Sub18_Sub6_852;
+	ObjectDefinition aClass104_Sub18_Sub6_852;
 	static int anInt853;
 	int anInt845;
 	int anInt844;
@@ -20,7 +20,7 @@ public final class Class104_Sub1 extends Class104 {
 
 	void method476() {
 		final int var1 = anInt845;
-		final Class104_Sub18_Sub6 var2 = aClass104_Sub18_Sub6_852.method747();
+		final ObjectDefinition var2 = aClass104_Sub18_Sub6_852.method747();
 		if (null != var2) {
 			anInt845 = var2.anInt1333;
 			anInt844 = var2.anInt1369 * 128;

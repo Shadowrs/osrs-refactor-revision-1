@@ -18,7 +18,7 @@ public class Class104_Sub18_Sub9 extends Class104_Sub18 {
 			boolean var1 = true;
 
 			for (int var2 = 0; var2 < anIntArray1395.length; ++var2)
-				if (!aClass61_1394.method260(anIntArray1395[var2], 0))
+				if (!aClass61_1394.exists(anIntArray1395[var2], 0))
 					var1 = false;
 
 			return var1;
@@ -29,7 +29,7 @@ public class Class104_Sub18_Sub9 extends Class104_Sub18 {
 		boolean var1 = true;
 
 		for (int var2 = 0; var2 < 5; ++var2)
-			if ((anIntArray1392[var2] != -1) && !aClass61_1394.method260(anIntArray1392[var2], 0))
+			if ((anIntArray1392[var2] != -1) && !aClass61_1394.exists(anIntArray1392[var2], 0))
 				var1 = false;
 
 		return var1;

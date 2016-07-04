@@ -14,97 +14,97 @@ public class Class95 {
 		client.dynamicRegion = secondary;
 		int var1;
 		int var2;
-		int var3;
+		int count;
 		int var4;
-		int var5;
-		int var6;
-		int xx;
-		int yy;
+		int cx;
+		int cz;
+		int rx;
+		int rz;
 		int regionid;
 		if (!client.dynamicRegion) {
 			var1 = client.gamecon.readLEShort(); // L Y
 			var2 = client.gamecon.readShort(); // L X
-			var3 = (client.pktSize - client.gamecon.pos) / 16;
-			Class13.xteakeys = new int[var3][4];
-			System.out.println("region count: "+var3);
+			count = (client.pktSize - client.gamecon.pos) / 16;
+			Class13.xteakeys = new int[count][4];
+			System.out.println("region count: "+count);
 
-			for (var4 = 0; var4 < var3; ++var4) {
-				for (var5 = 0; var5 < 4; ++var5)
-					Class13.xteakeys[var4][var5] = client.gamecon.readIntV1();
-				System.out.printf("region %d/%d xteas: "+Arrays.toString(Class13.xteakeys[var4])+" \n", (var4+1), var3);
+			for (var4 = 0; var4 < count; ++var4) {
+				for (cx = 0; cx < 4; ++cx)
+					Class13.xteakeys[var4][cx] = client.gamecon.readIntV1();
+				System.out.printf("region %d/%d xteas: "+Arrays.toString(Class13.xteakeys[var4])+" \n", (var4+1), count);
 			}
 
 			var4 = client.gamecon.readByteN(); // HEIGHT
-			var5 = client.gamecon.readLEShort(); // C X
-			var6 = client.gamecon.readShortN(); // C Y
-			Class47.regionId = new int[var3];
-			Class40.mapFileIds = new int[var3];
-			Class75.landscapeFileIds = new int[var3];
-			Class104_Sub15.aByteArrayArray1124 = new byte[var3][];
-			Class70.landscapedata = new byte[var3][];
-			boolean var7 = false;
-			if ((((var5 / 8) == 48) || ((var5 / 8) == 49)) && ((var6 / 8) == 48))
-				var7 = true;
+			cx = client.gamecon.readLEShort(); // C X
+			cz = client.gamecon.readShortN(); // C Y
+			Class47.mapCoordinates = new int[count];
+			Class40.mapFileIds = new int[count];
+			Class75.landscapeFileIds = new int[count];
+			Class104_Sub15.terrainData = new byte[count][];
+			Class70.landscapedata = new byte[count][];
+			boolean force = false;
+			if ((((cx / 8) == 48) || ((cx / 8) == 49)) && ((cz / 8) == 48))
+				force = true;
 
-			if (((var5 / 8) == 48) && ((var6 / 8) == 148))
-				var7 = true;
+			if (((cx / 8) == 48) && ((cz / 8) == 148))
+				force = true;
 
-			var3 = 0;
+			count = 0;
 
-			for (xx = (var5 - 6) / 8; xx <= ((6 + var5) / 8); ++xx)
-				for (yy = (var6 - 6) / 8; yy <= ((6 + var6) / 8); ++yy) {
-					regionid = (xx << 8) + yy;
-					if (!var7 || ((yy != 49) && (yy != 149) && (yy != 147) && (xx != 50)
-							&& ((xx != 49) || (yy != 47)))) {
-						System.out.println("region id "+regionid);
-						Class47.regionId[var3] = regionid;
-						Class40.mapFileIds[var3] = Class67.fs.getArchiveIDForName("m" + xx + "_" + yy);
-						Class75.landscapeFileIds[var3] = Class67.fs.getArchiveIDForName("l" + xx + "_" + yy);
-						++var3;
+			for (rx = (cx - 6) / 8; rx <= ((6 + cx) / 8); ++rx)
+				for (rz = (cz - 6) / 8; rz <= ((6 + cz) / 8); ++rz) {
+					regionid = (rx << 8) + rz;
+					if (!force || ((rz != 49) && (rz != 149) && (rz != 147) && (rx != 50)
+							&& ((rx != 49) || (rz != 47)))) {
+						Class47.mapCoordinates[count] = regionid;
+						Class40.mapFileIds[count] = Class67.fs.getArchiveIDForName("m" + rx + "_" + rz);
+						Class75.landscapeFileIds[count] = Class67.fs.getArchiveIDForName("l" + rx + "_" + rz);
+						System.out.println("region id "+regionid+" uses file id "+Class40.mapFileIds[count]+" and "+Class75.landscapeFileIds[count]);
+						++count;
 					}
 				}
 
-			System.out.printf("rx: %d, ry: %d, h:%d, lx:%d, ly:%d \n", var5, var6, var4, var2, var1);
+			System.out.printf("rx: %d, ry: %d, h:%d, lx:%d, ly:%d \n", cx, cz, var4, var2, var1);
 			
-			Class19.method120(var5, var6, var4, var2, var1);
+			Class19.method120(cx, cz, var4, var2, var1);
 		} else {
 			var1 = client.gamecon.readShortN();
 			client.gamecon.method624();
 
 			for (var2 = 0; var2 < 4; ++var2)
-				for (var3 = 0; var3 < 13; ++var3)
+				for (count = 0; count < 13; ++count)
 					for (var4 = 0; var4 < 13; ++var4) {
-						var5 = client.gamecon.method625(1);
-						if (var5 == 1)
-							client.anIntArrayArrayArray1848[var2][var3][var4] = client.gamecon
+						cx = client.gamecon.method625(1);
+						if (cx == 1)
+							client.anIntArrayArrayArray1848[var2][count][var4] = client.gamecon
 									.method625(26);
 						else
-							client.anIntArrayArrayArray1848[var2][var3][var4] = -1;
+							client.anIntArrayArrayArray1848[var2][count][var4] = -1;
 					}
 
 			client.gamecon.endbits();
 			var2 = (client.pktSize - client.gamecon.pos) / 16;
 			Class13.xteakeys = new int[var2][4];
 
-			for (var3 = 0; var3 < var2; ++var3)
+			for (count = 0; count < var2; ++count)
 				for (var4 = 0; var4 < 4; ++var4)
-					Class13.xteakeys[var3][var4] = client.gamecon.readIntV1();
+					Class13.xteakeys[count][var4] = client.gamecon.readIntV1();
 
-			var3 = client.gamecon.readShortN();
+			count = client.gamecon.readShortN();
 			var4 = client.gamecon.readByteN();
-			var5 = client.gamecon.readShort();
-			var6 = client.gamecon.readShortN();
-			Class47.regionId = new int[var2];
+			cx = client.gamecon.readShort();
+			cz = client.gamecon.readShortN();
+			Class47.mapCoordinates = new int[var2];
 			Class40.mapFileIds = new int[var2];
 			Class75.landscapeFileIds = new int[var2];
-			Class104_Sub15.aByteArrayArray1124 = new byte[var2][];
+			Class104_Sub15.terrainData = new byte[var2][];
 			Class70.landscapedata = new byte[var2][];
 			var2 = 0;
 
 			for (int var16 = 0; var16 < 4; ++var16)
-				for (xx = 0; xx < 13; ++xx)
-					for (yy = 0; yy < 13; ++yy) {
-						regionid = client.anIntArrayArrayArray1848[var16][xx][yy];
+				for (rx = 0; rx < 13; ++rx)
+					for (rz = 0; rz < 13; ++rz) {
+						regionid = client.anIntArrayArrayArray1848[var16][rx][rz];
 						if (regionid != -1) {
 							final int var11 = (regionid >> 14) & 1023;
 							final int var12 = (regionid >> 3) & 2047;
@@ -112,13 +112,13 @@ public class Class95 {
 
 							int var14;
 							for (var14 = 0; var14 < var2; ++var14)
-								if (var13 == Class47.regionId[var14]) {
+								if (var13 == Class47.mapCoordinates[var14]) {
 									var13 = -1;
 									break;
 								}
 
 							if (var13 != -1) {
-								Class47.regionId[var2] = var13;
+								Class47.mapCoordinates[var2] = var13;
 								var14 = (var13 >> 8) & 255;
 								final int var15 = var13 & 255;
 								Class40.mapFileIds[var2] = Class67.fs
@@ -130,7 +130,7 @@ public class Class95 {
 						}
 					}
 
-			Class19.method120(var1, var6, var4, var5, var3);
+			Class19.method120(var1, cz, var4, cx, count);
 		}
 
 	}
@@ -174,6 +174,6 @@ public class Class95 {
 
 	public static void method426(final Class61 var0) {
 		Class12.aClass61_76 = var0;
-		Class104_Sub18_Sub6.anInt1373 = Class12.aClass61_76.leng(16);
+		ObjectDefinition.anInt1373 = Class12.aClass61_76.leng(16);
 	}
 }

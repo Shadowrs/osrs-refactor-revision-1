@@ -1,4 +1,4 @@
-public class Class104_Sub18_Sub6 extends Class104_Sub18 {
+public class ObjectDefinition extends Class104_Sub18 {
 	static Class61 aClass61_1324;
 	public int anInt1330;
 	public static int anInt1373;
@@ -82,7 +82,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		if (null != anIntArray1359) {
 			for (int var4 = 0; var4 < anIntArray1359.length; ++var4)
 				if (var1 == anIntArray1359[var4])
-					return aClass61_1324.method260(anIntArray1350[var4] & '\uffff', 0);
+					return aClass61_1324.exists(anIntArray1350[var4] & '\uffff', 0);
 
 			return true;
 		} else if (null == anIntArray1350)
@@ -93,7 +93,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			boolean var2 = true;
 
 			for (final int element : anIntArray1350)
-				var2 &= aClass61_1324.method260(element & '\uffff', 0);
+				var2 &= aClass61_1324.exists(element & '\uffff', 0);
 
 			return var2;
 		}
@@ -281,16 +281,16 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 
 	}
 
-	public final boolean method745() {
+	public final boolean valid() {
 		if (null == anIntArray1350)
 			return true;
 		else {
-			boolean var1 = true;
+			boolean isOK = true;
 
 			for (final int element : anIntArray1350)
-				var1 &= aClass61_1324.method260(element & '\uffff', 0);
+				isOK &= aClass61_1324.exists(element & '\uffff', 0);
 
-			return var1;
+			return isOK;
 		}
 	}
 
@@ -408,7 +408,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		return var8;
 	}
 
-	public final Class104_Sub18_Sub6 method747() {
+	public final ObjectDefinition method747() {
 		int var1 = -1;
 		if (anInt1352 != -1)
 			var1 = Class52.method228(anInt1352);
@@ -416,7 +416,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 			var1 = Class71.anIntArray576[anInt1367];
 
 		return (var1 >= 0) && (var1 < anIntArray1338.length) && (anIntArray1338[var1] != -1)
-				? Class104_Sub18_Sub12.method782(anIntArray1338[var1]) : null;
+				? Class104_Sub18_Sub12.forId(anIntArray1338[var1]) : null;
 	}
 
 	public boolean method748() {
@@ -425,7 +425,7 @@ public class Class104_Sub18_Sub6 extends Class104_Sub18 {
 		else {
 			for (final int element : anIntArray1338)
 				if (element != -1) {
-					final Class104_Sub18_Sub6 var2 = Class104_Sub18_Sub12.method782(element);
+					final ObjectDefinition var2 = Class104_Sub18_Sub12.forId(element);
 					if ((var2.anInt1333 != -1) || (var2.anIntArray1372 != null))
 						return true;
 				}

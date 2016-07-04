@@ -53,7 +53,7 @@ public final class Class9 {
 				var15 = client.aClass104_Sub18_Sub16_Sub7_Sub1Array1937[var8];
 
 			if (null != var15) {
-				final Class104_Sub18_Sub6 var16 = Class104_Sub18_Sub12.method782(var6);
+				final ObjectDefinition var16 = Class104_Sub18_Sub12.forId(var6);
 				int var17;
 				int var18;
 				if ((var4 != 1) && (var4 != 3)) {

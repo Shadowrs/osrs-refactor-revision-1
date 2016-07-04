@@ -383,7 +383,7 @@ public class Class104_Sub5 extends Class104 {
 
 	static Class104_Sub5 method504(final Class61 var0, final int var1, final int var2) {
 		if (!method503(var0)) {
-			var0.method260(var1, var2);
+			var0.exists(var1, var2);
 			return null;
 		} else {
 			final byte[] var3 = var0.decompress(var1, var2);

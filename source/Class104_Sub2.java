@@ -29,7 +29,7 @@ public class Class104_Sub2 extends Class104 {
 
 			if ((var3 != null) && var3.method936(1531790724)) {
 				var3.aBool1779 = false;
-				if (((client.aBool1794 && (client.anInt1994 > 50)) || (client.anInt1994 > 200)) && !var0
+				if (((client.lowmvm && (client.anInt1994 > 50)) || (client.anInt1994 > 200)) && !var0
 						&& (var3.anInt1702 == var3.anInt1719))
 					var3.aBool1779 = true;
 

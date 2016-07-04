@@ -230,7 +230,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.secureBuf.writeString(Class66.aString522);
 				client.secureBuf.doRSA(Class60.aBigInteger476, Class60.aBigInteger477);
 				client.loginbuf.pos = 0;
-				if (client.anInt1806 == 40)
+				if (client.loadstage == 40)
 					client.loginbuf.writebyte(18); // reconnect
 				else
 					client.loginbuf.writebyte(16); // main login
@@ -241,7 +241,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.appendBytes(client.secureBuf.backing, 0, client.secureBuf.pos);
 				final int var3 = client.loginbuf.pos;
 				client.loginbuf.writeString(Class66.aString543);
-				client.loginbuf.writebyte(client.aBool1794 ? 1 : 0);
+				client.loginbuf.writebyte(client.lowmvm ? 1 : 0);
 				Class76.method343(client.loginbuf);
 				client.loginbuf.writeInt(Class27.aClass61_Sub1_263.anInt489);
 				client.loginbuf.writeInt(Class104_Sub20.aClass61_Sub1_1171.anInt489);
@@ -257,7 +257,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeInt(Class106.aClass61_Sub1_827.anInt489);
 				client.loginbuf.writeInt(Class85.aClass61_Sub1_671.anInt489);
 				client.loginbuf.writeInt(Class65.aClass61_Sub1_515.anInt489);
-				client.loginbuf.writeInt(Class104_Sub18_Sub6.aClass61_Sub1_1374.anInt489);
+				client.loginbuf.writeInt(ObjectDefinition.aClass61_Sub1_1374.anInt489);
 				client.loginbuf.writeInt(Class100.aClass61_Sub1_800.anInt489);
 				client.loginbuf.applyIsaac(issackeys, var3, client.loginbuf.pos);
 				client.loginbuf.writeShortLE(client.loginbuf.pos - var2);
@@ -273,12 +273,12 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 
 			if ((client.step == 6) && (Class20.stream.avail() > 0)) {
 				code = Class20.stream.read();
-				if ((code == 21) && (client.anInt1806 == 20))
+				if ((code == 21) && (client.loadstage == 20))
 					client.step = 7;
 				else if (code == 2)
 					client.step = 9;
 				else {
-					if ((code == 15) && (client.anInt1806 == 40)) {
+					if ((code == 15) && (client.loadstage == 40)) {
 						client.secureBuf.pos = 0;
 						client.gamecon.pos = 0;
 						client.pktOpc = -1;

@@ -711,7 +711,7 @@ public class Class66 {
 
 								if (client.aBool1798) {
 									Class104_Sub18_Sub17.method805(var12, var13, var19, var20, 0);
-									Class104_Sub15.method550("Loading - please wait.", false);
+									Class104_Sub15.drawLoading("Loading - please wait.", false);
 								}
 
 								if (!client.aBool1798 && !client.aBool1930 && (var27 >= var12)
@@ -731,7 +731,7 @@ public class Class66 {
 											var59 = var31;
 											if ((var66 == 2) && (Class81.aClass17_643.method89(Class12.anInt73, var32,
 													var65, var31) >= 0)) {
-												Class104_Sub18_Sub6 var43 = Class104_Sub18_Sub12.method782(var38);
+												ObjectDefinition var43 = Class104_Sub18_Sub12.forId(var38);
 												if (var43.anIntArray1338 != null)
 													var43 = var43.method747();
 

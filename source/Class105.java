@@ -7,7 +7,7 @@ public class Class105 {
 		int var6 = -1;
 
 		while (true) {
-			final int var7 = var5.method599();
+			final int var7 = var5.readsmart();
 			if (var7 == 0)
 				return;
 
@@ -15,7 +15,7 @@ public class Class105 {
 			int var8 = 0;
 
 			while (true) {
-				final int var9 = var5.method599();
+				final int var9 = var5.readsmart();
 				if (var9 == 0)
 					break;
 

@@ -147,7 +147,7 @@ public class Class104_Sub18_Sub14 extends Class104_Sub18 {
 						}
 
 						if ((var15 >= 1) && (var15 < 103)) {
-							if (client.aBool1794 && ((Class76.aByteArrayArrayArray600[0][var9][var15] & 2) == 0)) {
+							if (client.lowmvm && ((Class76.aByteArrayArrayArray600[0][var9][var15] & 2) == 0)) {
 								if ((Class76.aByteArrayArrayArray600[var2][var9][var15] & 16) != 0)
 									continue;
 

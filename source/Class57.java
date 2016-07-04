@@ -24,18 +24,15 @@ public class Class57 {
 			} else {
 				final int decompressedSize = buf.readLEInt();
 
-				if (decompressedSize > 1000000 || decompressedSize < 0)
+				if (decompressedSize > 1000000 || decompressedSize < 0) {
 					System.out.printf("BAD compression %d size %d \n", compression, containerSize);
-				// Xtea crashpatch
-				if (decompressedSize > 1000000) {
-					System.err.println("XTEA crash intercepted; returning null bytes (count: "+decompressedSize+")");
 					return new byte[100];
 				}
 				
 				if ((decompressedSize < 0) || ((Class61.maxSize != 0) && (decompressedSize > Class61.maxSize))) {
 					//throw new RuntimeException();
-					System.err.println("ERROR IN ARCHIVELOADING; RETURNING EMPTY ARRAY (count: "+decompressedSize+")");
-					return null;
+					System.err.println("ERROR IN ARCHIVELOADING; RETURNING EMPTY ARRAY (size: "+decompressedSize+")");
+					return new byte[] {}; // fail data, still some tho
 				} else {
 					final byte[] bytes = new byte[decompressedSize];
 					if (compression == 1)

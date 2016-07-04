@@ -19,9 +19,9 @@ public class Class88 {
 					Class28.method138();
 			}
 
-			if (client.anInt1806 != 5) {
+			if (client.loadstage != 5) {
 				++Class66.anInt532;
-				if (client.anInt1806 == 10) {
+				if (client.loadstage == 10) {
 					if (client.anInt1913 == 0) {
 						if (Class14.anInt100 == 1) {
 							final byte var4 = 5;

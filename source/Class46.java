@@ -2864,7 +2864,7 @@ public class Class46 {
 				Class106.aClass61_Sub1_827 = JagFS.method423(11, false, true, true);
 				Class85.aClass61_Sub1_671 = JagFS.method423(12, false, true, true);
 				Class65.aClass61_Sub1_515 = JagFS.method423(13, true, false, true);
-				Class104_Sub18_Sub6.aClass61_Sub1_1374 = JagFS.method423(14, false, true, false);
+				ObjectDefinition.aClass61_Sub1_1374 = JagFS.method423(14, false, true, false);
 				Class100.aClass61_Sub1_800 = JagFS.method423(15, false, true, true);
 				Class66.aString540 = "Connecting to update server";
 				Class66.anInt534 = 20;
@@ -2885,7 +2885,7 @@ public class Class46 {
 				var0 += (Class106.aClass61_Sub1_827.method493() * 2) / 100;
 				var0 += (Class85.aClass61_Sub1_671.method493() * 2) / 100;
 				var0 += (Class65.aClass61_Sub1_515.method493() * 2) / 100;
-				var0 += (Class104_Sub18_Sub6.aClass61_Sub1_1374.method493() * 2) / 100;
+				var0 += (ObjectDefinition.aClass61_Sub1_1374.method493() * 2) / 100;
 				var0 += (Class100.aClass61_Sub1_800.method493() * 2) / 100;
 				if (var0 != 100) {
 					if (var0 != 0)
@@ -2898,12 +2898,12 @@ public class Class46 {
 					client.anInt1816 = 45;
 				}
 			} else if (client.anInt1816 == 45) {
-				Class48.method217(22050, !client.aBool1794, 2);
+				Class48.method217(22050, !client.lowmvm, 2);
 				final Class104_Sub8_Sub1 var20 = new Class104_Sub8_Sub1();
 				var20.method638(9, 128);
 				Class76.aClass99_620 = Class71.method329(Applet_Sub1.aClass11_1760, Class57.aCanvas468, 0, 22050);
 				Class76.aClass99_620.method458(var20);
-				Class104_Sub2.method480(Class100.aClass61_Sub1_800, Class104_Sub18_Sub6.aClass61_Sub1_1374,
+				Class104_Sub2.method480(Class100.aClass61_Sub1_800, ObjectDefinition.aClass61_Sub1_1374,
 						Class103.aClass61_Sub1_818, var20);
 				Class102_Sub1.aClass99_895 = Class71.method329(Applet_Sub1.aClass11_1760, Class57.aCanvas468, 1, 2048);
 				Class79.aClass104_Sub8_Sub2_630 = new Class104_Sub8_Sub2();
@@ -2989,7 +2989,7 @@ public class Class46 {
 						Class49.aClass61_418 = var19;
 						JagFS.method422(Class52.aClass61_Sub1_430);
 						Class85.method392(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2);
-						Class22.method124(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2, client.aBool1794);
+						Class22.method124(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2, client.lowmvm);
 						Class49.method223(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2);
 						var6 = Class52.aClass61_Sub1_430;
 						var7 = Class1.aClass61_Sub1_2;
@@ -3026,7 +3026,7 @@ public class Class46 {
 							Class66.anInt534 = 90;
 						} else {
 							final Class34 var18 = new Class34(client.aClass61_Sub1_1838, client.aClass61_Sub1_1820, 20,
-									0.8D, client.aBool1794 ? 64 : 128);
+									0.8D, client.lowmvm ? 64 : 128);
 							Class104_Sub18_Sub17_Sub4.method917(var18);
 							Class104_Sub18_Sub17_Sub4.method918(0.8D);
 							Class66.aString540 = "Loaded textures";

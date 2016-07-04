@@ -60,17 +60,17 @@ public class Class92 {
 		}
 
 		for (int var3 = 0; var3 < 10; ++var3) {
-			final int var4 = var1.method599();
+			final int var4 = var1.readsmart();
 			if (var4 == 0)
 				break;
 
 			anIntArray734[var3] = var4;
 			anIntArray726[var3] = var1.method578();
-			anIntArray727[var3] = var1.method599();
+			anIntArray727[var3] = var1.readsmart();
 		}
 
-		anInt717 = var1.method599();
-		anInt719 = var1.method599();
+		anInt717 = var1.readsmart();
+		anInt719 = var1.readsmart();
 		anInt732 = var1.readLEShort();
 		anInt733 = var1.readLEShort();
 		aClass4_730 = new Class4();

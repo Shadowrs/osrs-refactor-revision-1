@@ -271,9 +271,9 @@ public class Class26 {
 	}
 
 	public static void method135() {
-		Class104_Sub18_Sub6.aClass56_1366.method239();
-		Class104_Sub18_Sub6.aClass56_1326.method239();
-		Class104_Sub18_Sub6.aClass56_1327.method239();
-		Class104_Sub18_Sub6.aClass56_1328.method239();
+		ObjectDefinition.aClass56_1366.method239();
+		ObjectDefinition.aClass56_1326.method239();
+		ObjectDefinition.aClass56_1327.method239();
+		ObjectDefinition.aClass56_1328.method239();
 	}
 }

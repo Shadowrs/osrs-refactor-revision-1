@@ -74,7 +74,7 @@ public class Class102_Sub1 extends Class102 {
 		client.anInt2024 = 0;
 		client.anInt1935 = 0;
 
-		for (var0 = 0; var0 < Class104_Sub18_Sub6.anInt1373; ++var0) {
+		for (var0 = 0; var0 < ObjectDefinition.anInt1373; ++var0) {
 			final Class104_Sub18_Sub11 var3 = Class104_Sub23.method622(var0);
 			if ((null != var3) && (var3.anInt1412 == 0)) {
 				Class71.anIntArray577[var0] = 0;

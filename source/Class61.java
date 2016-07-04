@@ -9,7 +9,7 @@ public abstract class Class61 {
 	Object[] anObjectArray492;
 	Object[][] fileArray;
 	int[] anIntArray481;
-	Class73 aClass73_482;
+	Class73 ach;
 	int[][] anIntArrayArray487;
 	Class73[] aClass73Array488;
 	boolean aBool480;
@@ -68,7 +68,7 @@ public abstract class Class61 {
 				for (var10 = 0; var10 < count; ++var10)
 					anIntArray481[anIntArray479[var10]] = buf.readLEInt();
 
-				aClass73_482 = new Class73(anIntArray481);
+				ach = new Class73(anIntArray481);
 			}
 
 			for (var10 = 0; var10 < count; ++var10)
@@ -141,20 +141,20 @@ public abstract class Class61 {
 	void method258(final int var1, final byte var2) {
 	}
 
-	public byte[] decompress(final int var1, final int var2) {
-		return filedata(var1, var2, (int[]) null);
+	public byte[] decompress(final int ach, final int file) {
+		return filedata(ach, file, (int[]) null);
 	}
 
-	public boolean method260(final int var1, final int var2) {
-		if ((var1 >= 0) && (var1 < fileArray.length) && (fileArray[var1] != null) && (var2 >= 0)
-				&& (var2 < fileArray[var1].length)) {
-			if (fileArray[var1][var2] != null)
+	public boolean exists(final int arc, final int file) {
+		if ((arc >= 0) && (arc < fileArray.length) && (fileArray[arc] != null) && (file >= 0)
+				&& (file < fileArray[arc].length)) {
+			if (fileArray[arc][file] != null)
 				return true;
-			else if (null != anObjectArray492[var1])
+			else if (null != anObjectArray492[arc])
 				return true;
 			else {
-				submitArchiveRequest(var1, (byte) 87);
-				return null != anObjectArray492[var1];
+				submitArchiveRequest(arc, (byte) 87);
+				return null != anObjectArray492[arc];
 			}
 		} else
 			return false;
@@ -178,10 +178,10 @@ public abstract class Class61 {
 		if ((var1 >= 0) && (var1 < fileArray.length) && (fileArray[var1] != null) && (var2 >= 0)
 				&& (var2 < fileArray[var1].length)) {
 			if (null == fileArray[var1][var2]) {
-				boolean var3 = method270(var1, (int[]) null);
+				boolean var3 = isLoaded(var1, (int[]) null);
 				if (!var3) {
 					submitArchiveRequest(var1, (byte) 121);
-					var3 = method270(var1, (int[]) null);
+					var3 = isLoaded(var1, (int[]) null);
 					if (!var3)
 						return null;
 				}
@@ -219,7 +219,7 @@ public abstract class Class61 {
 
 	public void method268(String var1) {
 		var1 = var1.toLowerCase();
-		final int var2 = aClass73_482.method336(Class67.method319(var1));
+		final int var2 = ach.toId(Class67.tohash(var1));
 		if (var2 >= 0)
 			method258(var2, (byte) 75);
 	}
@@ -232,7 +232,7 @@ public abstract class Class61 {
 
 	}
 
-	boolean method270(final int var1, final int[] var2) {
+	boolean isLoaded(final int var1, final int[] var2) {
 		if (anObjectArray492[var1] == null)
 			return false;
 		else {
@@ -320,28 +320,28 @@ public abstract class Class61 {
 
 	public int getArchiveIDForName(String filename) {
 		filename = filename.toLowerCase();
-		return aClass73_482.method336(Class67.method319(filename));
+		return ach.toId(Class67.tohash(filename));
 	}
 
 	public byte[] method272(String var1, String var2) {
 		var1 = var1.toLowerCase();
 		var2 = var2.toLowerCase();
-		final int var3 = aClass73_482.method336(Class67.method319(var1));
-		final int var4 = aClass73Array488[var3].method336(Class67.method319(var2));
+		final int var3 = ach.toId(Class67.tohash(var1));
+		final int var4 = aClass73Array488[var3].toId(Class67.tohash(var2));
 		return decompress(var3, var4);
 	}
 
 	public int method273(final int var1, String var2) {
 		var2 = var2.toLowerCase();
-		return aClass73Array488[var1].method336(Class67.method319(var2));
+		return aClass73Array488[var1].toId(Class67.tohash(var2));
 	}
 
 	public boolean method274(String var1, String var2) {
 		var1 = var1.toLowerCase();
 		var2 = var2.toLowerCase();
-		final int var3 = aClass73_482.method336(Class67.method319(var1));
-		final int var4 = aClass73Array488[var3].method336(Class67.method319(var2));
-		return method260(var3, var4);
+		final int var3 = ach.toId(Class67.tohash(var1));
+		final int var4 = aClass73Array488[var3].toId(Class67.tohash(var2));
+		return exists(var3, var4);
 	}
 
 	Class61(final boolean var1, final boolean var2) {
@@ -353,20 +353,20 @@ public abstract class Class61 {
 		if ((archiveID >= 0) && (archiveID < fileArray.length) && (null != fileArray[archiveID]) && (fileID >= 0)
 				&& (fileID < fileArray[archiveID].length)) {
 			if (null == fileArray[archiveID][fileID]) {
-				boolean var4 = method270(archiveID, keys);
-				if (!var4) {
+				boolean found = isLoaded(archiveID, keys);
+				if (!found) {
 					submitArchiveRequest(archiveID, (byte) 124);
-					var4 = method270(archiveID, keys);
-					if (!var4)
+					found = isLoaded(archiveID, keys);
+					if (!found)
 						return null;
 				}
 			}
 
-			final byte[] var5 = Class90.fileToByteArray(fileArray[archiveID][fileID], false);
+			final byte[] daa = Class90.fileToByteArray(fileArray[archiveID][fileID], false);
 			if (aBool494)
 				fileArray[archiveID][fileID] = null;
 
-			return var5;
+			return daa;
 		} else
 			return null;
 	}

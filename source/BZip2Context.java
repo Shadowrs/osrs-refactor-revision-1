@@ -89,7 +89,7 @@ public final class BZip2Context {
 		else {
 			byte var2;
 			int var3;
-			if ((client.anInt1806 == 0) || (client.anInt1806 == 5)) {
+			if ((client.loadstage == 0) || (client.loadstage == 5)) {
 				var2 = 20;
 				var0.method882("RuneScape is loading - please wait...", 382, 245 - var2, 16777215, -1);
 				var3 = 253 - var2;
@@ -108,7 +108,7 @@ public final class BZip2Context {
 			short var20;
 			int var21;
 			short var22;
-			if (client.anInt1806 == 20) {
+			if (client.loadstage == 20) {
 				Class66.aClass104_Sub18_Sub17_Sub3_523.method889(
 						382 - (Class66.aClass104_Sub18_Sub17_Sub3_523.anInt1618 / 2),
 						271 - (Class66.aClass104_Sub18_Sub17_Sub3_523.anInt1619 / 2));
@@ -136,7 +136,7 @@ public final class BZip2Context {
 				var21 += 15;
 			}
 
-			if (client.anInt1806 == 10) {
+			if (client.loadstage == 10) {
 				Class66.aClass104_Sub18_Sub17_Sub3_523.method889(202, 171);
 				short var9;
 				if (Class66.anInt536 == 0) {
@@ -416,7 +416,7 @@ public final class BZip2Context {
 			}
 
 			Class66.aClass104_Sub18_Sub17_Sub3Array521[Class66.aBool527 ? 1 : 0].method889(725, 463);
-			if ((client.anInt1806 > 5) && (client.anInt1913 == 0))
+			if ((client.loadstage > 5) && (client.anInt1913 == 0))
 				if (null != Class96.aClass104_Sub18_Sub17_Sub3_759) {
 					var2 = 5;
 					var22 = 463;

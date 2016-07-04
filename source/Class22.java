@@ -27,7 +27,7 @@ public class Class22 {
 
 	public static void method124(final Class61 var0, final Class61 var1, final boolean var2) {
 		Class72.aClass61_584 = var0;
-		Class104_Sub18_Sub6.aClass61_1324 = var1;
-		Class104_Sub18_Sub6.aBool1361 = var2;
+		ObjectDefinition.aClass61_1324 = var1;
+		ObjectDefinition.aBool1361 = var2;
 	}
 }

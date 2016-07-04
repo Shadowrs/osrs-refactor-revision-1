@@ -664,7 +664,7 @@ public class Class67 {
 		return var0 < 999999999 ? Integer.toString(var0) : "*";
 	}
 
-	public static int method319(final CharSequence var0) {
+	public static int tohash(final CharSequence var0) {
 		final int var1 = var0.length();
 		int var2 = 0;
 

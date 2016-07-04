@@ -58,7 +58,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 				boolean var6 = false;
 
 				for (int var7 = 0; var7 < anIntArray1249.length; ++var7)
-					if (!Nodee.aClass61_959.method260(anIntArray1249[var7], 0))
+					if (!Nodee.aClass61_959.exists(anIntArray1249[var7], 0))
 						var6 = true;
 
 				if (var6)
@@ -116,7 +116,7 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 			boolean var2 = false;
 
 			for (int var3 = 0; var3 < anIntArray1232.length; ++var3)
-				if (!Nodee.aClass61_959.method260(anIntArray1232[var3], 0))
+				if (!Nodee.aClass61_959.exists(anIntArray1232[var3], 0))
 					var2 = true;
 
 			if (var2)

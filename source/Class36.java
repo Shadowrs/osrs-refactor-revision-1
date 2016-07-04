@@ -110,7 +110,7 @@ public class Class36 {
 	}
 
 	static final boolean method173(final int var0, int var1) {
-		final Class104_Sub18_Sub6 var2 = Class104_Sub18_Sub12.method782(var0);
+		final ObjectDefinition var2 = Class104_Sub18_Sub12.forId(var0);
 		if (var1 == 11)
 			var1 = 10;
 

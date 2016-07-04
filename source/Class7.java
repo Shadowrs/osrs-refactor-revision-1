@@ -113,7 +113,7 @@ public class Class7 {
 		int var11 = -1;
 
 		while (true) {
-			final int var12 = var10.method599();
+			final int var12 = var10.readsmart();
 			if (var12 == 0)
 				return;
 
@@ -121,7 +121,7 @@ public class Class7 {
 			int var13 = 0;
 
 			while (true) {
-				final int var14 = var10.method599();
+				final int var14 = var10.readsmart();
 				if (var14 == 0)
 					break;
 
@@ -134,7 +134,7 @@ public class Class7 {
 				final int var20 = var18 & 3;
 				if ((var4 == var17) && (var16 >= var5) && (var16 < (8 + var5)) && (var15 >= var6)
 						&& (var15 < (8 + var6))) {
-					final Class104_Sub18_Sub6 var21 = Class104_Sub18_Sub12.method782(var11);
+					final ObjectDefinition var21 = Class104_Sub18_Sub12.forId(var11);
 					final int var22 = var2
 							+ client.method147(var16 & 7, var15 & 7, var7, var21.anInt1365, var21.anInt1339, var20);
 					final int var23 = var3

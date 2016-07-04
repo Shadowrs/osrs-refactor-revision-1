@@ -19,7 +19,7 @@ public class Class104_Sub15 extends Class104 {
 	int anInt1121;
 	int anInt1122;
 	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array1123;
-	static byte[][] aByteArrayArray1124;
+	static byte[][] terrainData;
 	static Class104_Sub18_Sub17_Sub3[] aClass104_Sub18_Sub17_Sub3Array1125;
 	Class104_Sub11 aClass104_Sub11_1103;
 	Class104_Sub4_Sub1 aClass104_Sub4_Sub1_1116;
@@ -306,15 +306,16 @@ public class Class104_Sub15 extends Class104 {
 		}
 	}
 
-	static final void method550(final String var0, final boolean var1) {
+	static final void drawLoading(final String str, final boolean var1) {
+		System.out.println(str);
 		final byte var2 = 4;
 		final int var3 = var2 + 6;
 		final int var4 = 6 + var2;
-		final int var5 = Class29.aClass104_Sub18_Sub17_Sub2_Sub1_277.method862(var0, 250);
-		final int var6 = Class29.aClass104_Sub18_Sub17_Sub2_Sub1_277.method885(var0, 250) * 13;
+		final int var5 = Class29.aClass104_Sub18_Sub17_Sub2_Sub1_277.method862(str, 250);
+		final int var6 = Class29.aClass104_Sub18_Sub17_Sub2_Sub1_277.method885(str, 250) * 13;
 		Class104_Sub18_Sub17.method805(var3 - var2, var4 - var2, var5 + var2 + var2, var6 + var2 + var2, 0);
 		Class104_Sub18_Sub17.method806(var3 - var2, var4 - var2, var2 + var5 + var2, var2 + var2 + var6, 16777215);
-		Class29.aClass104_Sub18_Sub17_Sub2_Sub1_277.method865(var0, var3, var4, var5, var6, 16777215, -1, 1, 1, 0);
+		Class29.aClass104_Sub18_Sub17_Sub2_Sub1_277.method865(str, var3, var4, var5, var6, 16777215, -1, 1, 1, 0);
 		Class44.method192(var3 - var2, var4 - var2, var2 + var2 + var5, var6 + var2 + var2);
 		if (var1)
 			try {
