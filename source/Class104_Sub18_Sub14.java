@@ -97,7 +97,7 @@ public class Class104_Sub18_Sub14 extends Class104_Sub18 {
 					if ((var11 >= 0) && (var11 < 104)) {
 						var12 = Class76.aByteArrayArrayArray603[var2][var11][var10] & 255;
 						if (var12 > 0) {
-							final Class104_Sub18_Sub1 var19 = Class31.method150(var12 - 1);
+							final Class104_Sub18_Sub1 var19 = client.method150(var12 - 1);
 							Class23.anIntArray237[var10] += var19.anInt1190;
 							Class101.anIntArray811[var10] += var19.anInt1189;
 							Class76.anIntArray615[var10] += var19.anInt1192;
@@ -110,7 +110,7 @@ public class Class104_Sub18_Sub14 extends Class104_Sub18 {
 					if ((var12 >= 0) && (var12 < 104)) {
 						var13 = Class76.aByteArrayArrayArray603[var2][var12][var10] & 255;
 						if (var13 > 0) {
-							final Class104_Sub18_Sub1 var20 = Class31.method150(var13 - 1);
+							final Class104_Sub18_Sub1 var20 = client.method150(var13 - 1);
 							Class23.anIntArray237[var10] -= var20.anInt1190;
 							Class101.anIntArray811[var10] -= var20.anInt1189;
 							Class76.anIntArray615[var10] -= var20.anInt1192;

@@ -1,11 +1,11 @@
 import java.awt.Graphics;
 
-public final class Class32 {
-	byte[] aByteArray294;
-	int anInt295;
+public final class BZip2Context {
+	byte[] packedData;
+	int leng;
 	byte aByte296;
 	int anInt300;
-	byte[] aByteArray301;
+	byte[] decompressedData;
 	int anInt303;
 	int anInt304;
 	int anInt306;
@@ -24,7 +24,7 @@ public final class Class32 {
 	int anInt314 = 6;
 	int anInt324 = 50;
 	int anInt297 = 18002;
-	int anInt299 = 0;
+	int blockSize = 0;
 	int anInt302 = 0;
 	int[] anIntArray292 = new int[256];
 	int[] anIntArray315 = new int[257];

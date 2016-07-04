@@ -90,7 +90,7 @@ public class Class61_Sub1 extends Class61 {
 				aCRC32_889.reset();
 				aCRC32_889.update(data, 0, data.length);
 				ucrc = (int) aCRC32_889.getValue();
-				final RSBuf buf = new RSBuf(Class57.method240(data));
+				final RSBuf buf = new RSBuf(Class57.decodeCompression(data));
 				final int opcode = buf.readUByte();
 				if ((opcode != 5) && (opcode != 6))
 					throw new RuntimeException("");

@@ -1144,7 +1144,7 @@ public class Widget extends Class104 {
 				var12.method841(0, 0);
 
 			if (!var4 && ((var8.anInt1431 == 1) || (var1 != 1)) && (var1 != -1))
-				Class31.aClass104_Sub18_Sub17_Sub2_Sub1_290.drawstr(Class27.method136(var1), 0, 9, 16776960, 1);
+				client.aClass104_Sub18_Sub17_Sub2_Sub1_290.drawstr(Class27.method136(var1), 0, 9, 16776960, 1);
 
 			if (!var4)
 				Class104_Sub18_Sub12.aClass56_1417.method238(var7, var5);

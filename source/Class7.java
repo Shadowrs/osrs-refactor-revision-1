@@ -136,9 +136,9 @@ public class Class7 {
 						&& (var15 < (8 + var6))) {
 					final Class104_Sub18_Sub6 var21 = Class104_Sub18_Sub12.method782(var11);
 					final int var22 = var2
-							+ Class31.method147(var16 & 7, var15 & 7, var7, var21.anInt1365, var21.anInt1339, var20);
+							+ client.method147(var16 & 7, var15 & 7, var7, var21.anInt1365, var21.anInt1339, var20);
 					final int var23 = var3
-							+ Class32.method152(var16 & 7, var15 & 7, var7, var21.anInt1365, var21.anInt1339, var20);
+							+ BZip2Context.method152(var16 & 7, var15 & 7, var7, var21.anInt1365, var21.anInt1339, var20);
 					if ((var22 > 0) && (var23 > 0) && (var22 < 103) && (var23 < 103)) {
 						int var24 = var1;
 						if ((Class76.aByteArrayArrayArray600[1][var22][var23] & 2) == 2)

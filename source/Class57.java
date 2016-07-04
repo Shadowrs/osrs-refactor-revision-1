@@ -12,34 +12,36 @@ public class Class57 {
 	static Class13 aClass13_467;
 	public static Canvas aCanvas468;
 
-	static final byte[] method240(final byte[] data) {
-		final RSBuf buf = new RSBuf(data);
-		final int opcode = buf.readUByte();
-		final int size = buf.readLEInt();
-		if ((size >= 0) && ((Class61.anInt490 == 0) || (size <= Class61.anInt490))) {
-			if (opcode == 0) {
-				final byte[] dataa = new byte[size];
-				buf.readBytes(dataa, 0, size);
+	static final byte[] decodeCompression(final byte[] packedData) {
+		final RSBuf buf = new RSBuf(packedData);
+		final int compression = buf.readUByte();
+		final int containerSize = buf.readLEInt();
+		if ((containerSize >= 0) && ((Class61.maxSize == 0) || (containerSize <= Class61.maxSize))) {
+			if (compression == 0) {
+				final byte[] dataa = new byte[containerSize];
+				buf.readBytes(dataa, 0, containerSize);
 				return dataa;
 			} else {
-				final int count = buf.readLEInt();
+				final int decompressedSize = buf.readLEInt();
 
+				if (decompressedSize > 1000000 || decompressedSize < 0)
+					System.out.printf("BAD compression %d size %d \n", compression, containerSize);
 				// Xtea crashpatch
-				if (count > 1000000) {
-					System.err.println("XTEA crash intercepted; returning null bytes (count: "+count+")");
+				if (decompressedSize > 1000000) {
+					System.err.println("XTEA crash intercepted; returning null bytes (count: "+decompressedSize+")");
 					return new byte[100];
 				}
 				
-				if ((count < 0) || ((Class61.anInt490 != 0) && (count > Class61.anInt490))) {
+				if ((decompressedSize < 0) || ((Class61.maxSize != 0) && (decompressedSize > Class61.maxSize))) {
 					//throw new RuntimeException();
-					System.err.println("ERROR IN ARCHIVELOADING; RETURNING EMPTY ARRAY (count: "+count+")");
-					return new byte[100];
+					System.err.println("ERROR IN ARCHIVELOADING; RETURNING EMPTY ARRAY (count: "+decompressedSize+")");
+					return null;
 				} else {
-					final byte[] bytes = new byte[count];
-					if (opcode == 1)
-						Class45.method195(bytes, count, data, size, 9);
+					final byte[] bytes = new byte[decompressedSize];
+					if (compression == 1)
+						Class45.bzipFill(bytes, decompressedSize, packedData, containerSize, 9);
 					else
-						Class61.inflation.copyTo(buf, bytes);
+						Class61.inflation.unzip(buf, bytes);
 
 					return bytes;
 				}

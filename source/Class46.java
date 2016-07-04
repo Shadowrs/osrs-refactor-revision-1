@@ -1416,7 +1416,7 @@ public class Class46 {
 													|| var80.startsWith(Class72.method335(1)))
 												var80 = var80.substring(7);
 
-											Class90.anIntArray706[var4++] = Class32.method154(var80) ? 1 : 0;
+											Class90.anIntArray706[var4++] = BZip2Context.method154(var80) ? 1 : 0;
 											continue;
 										}
 
@@ -1427,7 +1427,7 @@ public class Class46 {
 												var84 = Class90.aStringArray712;
 												var24 = var5++;
 												var59 = client.aString1829;
-												var68 = Class32.method151(Class65.method297(var59));
+												var68 = BZip2Context.method151(Class65.method297(var59));
 												if (var68 == null)
 													var68 = "";
 
@@ -1567,7 +1567,7 @@ public class Class46 {
 												var84 = Class90.aStringArray712;
 												var24 = var5++;
 												var59 = client.aString2012;
-												var68 = Class32.method151(Class65.method297(var59));
+												var68 = BZip2Context.method151(Class65.method297(var59));
 												if (var68 == null)
 													var68 = "";
 
@@ -2999,7 +2999,7 @@ public class Class46 {
 						Class27.aClass61_265 = var7;
 						Class79.aBool632 = var22;
 						Class104_Sub18_Sub12.aClass61_1432.method266(10);
-						Class31.aClass104_Sub18_Sub17_Sub2_Sub1_290 = var8;
+						client.aClass104_Sub18_Sub17_Sub2_Sub1_290 = var8;
 						Class9.method38(Class52.aClass61_Sub1_430, Class27.aClass61_Sub1_263,
 								Class104_Sub20.aClass61_Sub1_1171);
 						final Class61_Sub1 var9 = Class52.aClass61_Sub1_430;
@@ -3102,8 +3102,8 @@ public class Class46 {
 					else
 						++var0;
 
-					if (Class31.aClass104_Sub18_Sub17_Sub1Array291 == null)
-						Class31.aClass104_Sub18_Sub17_Sub1Array291 = Class48.method215(client.aClass61_Sub1_1820,
+					if (client.aClass104_Sub18_Sub17_Sub1Array291 == null)
+						client.aClass104_Sub18_Sub17_Sub1Array291 = Class48.method215(client.aClass61_Sub1_1820,
 								"headicons_pk", "");
 					else
 						++var0;

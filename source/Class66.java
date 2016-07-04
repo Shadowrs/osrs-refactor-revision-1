@@ -222,7 +222,7 @@ public class Class66 {
 								Class104_Sub2.method479(false);
 								Class104_Sub7.method510(false);
 								Class88.method405();
-								Class31.method149();
+								client.method149();
 								if (!client.aBool2034) {
 									var21 = client.anInt1962;
 									if ((client.anInt1821 / 256) > var21)
@@ -472,7 +472,7 @@ public class Class66 {
 														((Class104_Sub18_Sub16_Sub7) var67).anInt1706 + 15);
 												if (client.anInt1999 > -1) {
 													if (var37.anInt1771 != -1) {
-														Class31.aClass104_Sub18_Sub17_Sub1Array291[var37.anInt1771]
+														client.aClass104_Sub18_Sub17_Sub1Array291[var37.anInt1771]
 																.method841((client.anInt1999 + var12) - 12,
 																		(client.anInt1894 + var13) - var31);
 														var31 += 25;
@@ -501,7 +501,7 @@ public class Class66 {
 										if ((null != ((Class104_Sub18_Sub16_Sub7) var67).aString1723)
 												&& ((var59 >= client.anInt1994) || (client.anInt2004 == 0)
 														|| (client.anInt2004 == 3)
-														|| ((client.anInt2004 == 1) && Class32.method154(
+														|| ((client.anInt2004 == 1) && BZip2Context.method154(
 																((Class104_Sub18_Sub16_Sub7_Sub1) var67).aString1780)))) {
 											Class29.method142((Class104_Sub18_Sub16_Sub7) var67,
 													((Class104_Sub18_Sub16_Sub7) var67).anInt1706);

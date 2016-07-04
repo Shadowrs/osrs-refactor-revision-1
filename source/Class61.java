@@ -14,8 +14,8 @@ public abstract class Class61 {
 	Class73[] aClass73Array488;
 	boolean aBool480;
 	boolean aBool494;
-	static Class31 inflation = new Class31();
-	static int anInt490 = 0;
+	static GZIPDecompressor inflation = new GZIPDecompressor();
+	static int maxSize = 0; // anInt490 - if its unused maybe its used by reflection to check perms
 
 	void method257(final byte[] raw) {
 		final int len = raw.length;
@@ -27,7 +27,7 @@ public abstract class Class61 {
 
 		var3 = ~var3;
 		anInt489 = var3;
-		final RSBuf buf = new RSBuf(Class57.method240(raw));
+		final RSBuf buf = new RSBuf(Class57.decodeCompression(raw));
 		var3 = buf.readUByte();
 		if ((var3 >= 5) && (var3 <= 7)) {
 			if (var3 >= 6)
@@ -258,7 +258,7 @@ public abstract class Class61 {
 				} else
 					var8 = Class90.fileToByteArray(anObjectArray492[var1], false);
 
-				final byte[] var20 = Class57.method240(var8);
+				final byte[] var20 = Class57.decodeCompression(var8);
 				if (aBool480)
 					anObjectArray492[var1] = null;
 

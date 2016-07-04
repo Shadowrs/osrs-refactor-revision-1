@@ -276,6 +276,8 @@ public final class client extends Applet_Sub1 {
 	static Class85 aClass85_2047;
 	static int anInt1887;
 	static int anInt2049;
+	public static Class104_Sub18_Sub17_Sub2_Sub1 aClass104_Sub18_Sub17_Sub2_Sub1_290;
+	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array291;
 
 	@Override
 	final void method945(final int var1) {
@@ -421,7 +423,7 @@ public final class client extends Applet_Sub1 {
 
 				// DIRECTORIES
 				Class49.targets = new String[] { /*"c:/rscache/", "/rscache/", "c:/windows/", "c:/winnt/", "c:/",*/ Class104_Sub23.HOME, /*"/tmp/", "" */};
-				Class7.store = new String[] { "os-rev1", /*".jagex_cache_" + Class16.anInt116, ".file_store_" + Class16.anInt116 */};
+				Class7.store = new String[] { "os-rev4", /*".jagex_cache_" + Class16.anInt116, ".file_store_" + Class16.anInt116 */};
 
 				label129: for (var3 = 0; var3 < 4; ++var3) {
 					Class24.aFile239 = Class70.method325("gamename", var22, var3);
@@ -1944,11 +1946,11 @@ final void method943(final byte var1) {
                                     var33 = Class104_Sub18_Sub17_Sub2.method879(Class80.method351(var33));
                                     if((var18 != 2) && (var18 != 3)) {
                                        if(var18 == 1)
-										Class43.method188(9, Class72.method335(0) + var82, var33, Class32.method151(var25));
+										Class43.method188(9, Class72.method335(0) + var82, var33, BZip2Context.method151(var25));
 									else
-										Class43.method188(9, var82, var33, Class32.method151(var25));
+										Class43.method188(9, var82, var33, BZip2Context.method151(var25));
                                     } else
-										Class43.method188(9, Class72.method335(1) + var82, var33, Class32.method151(var25));
+										Class43.method188(9, Class72.method335(1) + var82, var33, BZip2Context.method151(var25));
                                  }
 
                                  pktOpc = -1;
@@ -3414,13 +3416,13 @@ final void method943(final byte var1) {
 				Class57.aCanvas468.repaint();
 			}
 		} else if (anInt1806 == 5)
-			Class32.method153(Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36,
+			BZip2Context.method153(Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36,
 					Class104_Sub7.aClass104_Sub18_Sub17_Sub2_Sub1_951);
 		else if (anInt1806 == 10)
-			Class32.method153(Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36,
+			BZip2Context.method153(Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36,
 					Class104_Sub7.aClass104_Sub18_Sub17_Sub2_Sub1_951);
 		else if (anInt1806 == 20)
-			Class32.method153(Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36,
+			BZip2Context.method153(Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36,
 					Class104_Sub7.aClass104_Sub18_Sub17_Sub2_Sub1_951);
 		else if (anInt1806 == 25) {
 			if (anInt2043 == 1) {
@@ -3959,6 +3961,133 @@ final void method943(final byte var1) {
 		if (anInt1792 != 0)
 			aBool1860 = true;
 
+	}
+
+	public static int method147(final int var0, final int var1, int var2, int var3, int var4, final int var5) {
+		if ((var5 & 1) == 1) {
+			final int var6 = var3;
+			var3 = var4;
+			var4 = var6;
+		}
+	
+		var2 &= 3;
+		return var2 == 0 ? var0 : (var2 == 1 ? var1 : (var2 == 2 ? 7 - var0 - (var3 - 1) : 7 - var1 - (var4 - 1)));
+	}
+
+	public static Class104_Sub18_Sub1 method150(final int var0) {
+		Class104_Sub18_Sub1 var1 = (Class104_Sub18_Sub1) Class104_Sub18_Sub1.aClass56_1188.method236(var0);
+		if (null != var1)
+			return var1;
+		else {
+			final byte[] var2 = Class104_Sub18_Sub1.aClass61_1191.method259(1, var0);
+			var1 = new Class104_Sub18_Sub1();
+			if (null != var2)
+				var1.method632(new RSBuf(var2), var0);
+	
+			var1.method631();
+			Class104_Sub18_Sub1.aClass56_1188.method238(var1, var0);
+			return var1;
+		}
+	}
+
+	static final void method149() {
+		for (Class104_Sub18_Sub16_Sub3 var0 = (Class104_Sub18_Sub16_Sub3) aClass59_1869
+				.method251(); var0 != null; var0 = (Class104_Sub18_Sub16_Sub3) aClass59_1869.method252())
+			if ((var0.anInt1516 == Class12.anInt73) && !var0.aBool1517) {
+				if (anInt1799 >= var0.anInt1515) {
+					var0.method810(anInt1867);
+					if (var0.aBool1517)
+						var0.method470();
+					else
+						Class81.aClass17_643.method97(var0.anInt1516, var0.anInt1522, var0.anInt1518, var0.anInt1523,
+								60, var0, 0, -1, false);
+				}
+			} else
+				var0.method470();
+	
+	}
+
+	static void showResponce(final int code) {
+		if (code == -3)
+			Class104_Sub18_Sub2.drawlogin("Connection timed out.", "Please try using a different world.", "");
+		else if (code == -2)
+			Class104_Sub18_Sub2.drawlogin("", "Error connecting to server.", "");
+		else if (code == -1)
+			Class104_Sub18_Sub2.drawlogin("No response from server.", "Please try using a different world.", "");
+		else if (code == 3)
+			Class104_Sub18_Sub2.drawlogin("", "Invalid username/email or password.", "");
+		else if (code == 4)
+			Class104_Sub18_Sub2.drawlogin("Your account has been disabled.",
+					"Please check your message-centre for details.", "");
+		else if (code == 5)
+			Class104_Sub18_Sub2.drawlogin("Your account is already logged in.", "Try again in 60 secs...", "");
+		else if (code == 6)
+			Class104_Sub18_Sub2.drawlogin("RuneScape has been updated!", "Please reload this page.", "");
+		else if (code == 7)
+			Class104_Sub18_Sub2.drawlogin("This world is full.", "Please use a different world.", "");
+		else if (code == 8)
+			Class104_Sub18_Sub2.drawlogin("Unable to connect.", "Login server offline.", "");
+		else if (code == 9)
+			Class104_Sub18_Sub2.drawlogin("Login limit exceeded.", "Too many connections from your address.", "");
+		else if (code == 10)
+			Class104_Sub18_Sub2.drawlogin("Unable to connect.", "Bad session id.", "");
+		else if (code == 11)
+			Class104_Sub18_Sub2.drawlogin("We suspect someone knows your password.",
+					"Press \'change your password\' on front page.", "");
+		else if (code == 12)
+			Class104_Sub18_Sub2.drawlogin("You need a members account to login to this world.",
+					"Please subscribe, or use a different world.", "");
+		else if (code == 13)
+			Class104_Sub18_Sub2.drawlogin("Could not complete login.", "Please try using a different world.", "");
+		else if (code == 14)
+			Class104_Sub18_Sub2.drawlogin("The server is being updated.", "Please wait 1 minute and try again.", "");
+		else if (code == 16)
+			Class104_Sub18_Sub2.drawlogin("Too many incorrect logins from your address.",
+					"Please wait 5 minutes before trying again.", "");
+		else if (code == 17)
+			Class104_Sub18_Sub2.drawlogin("You are standing in a members-only area.",
+					"To play on this world move to a free area first", "");
+		else if (code == 18)
+			Class104_Sub18_Sub2.drawlogin("Account locked as we suspect it has been stolen.",
+					"Press \'recover a locked account\' on front page.", "");
+		else if (code == 19)
+			Class104_Sub18_Sub2.drawlogin("This world is running a closed Beta.", "Sorry invited players only.",
+					"Please use a different world.");
+		else if (code == 20)
+			Class104_Sub18_Sub2.drawlogin("Invalid loginserver requested.", "Please try using a different world.", "");
+		else if (code == 22)
+			Class104_Sub18_Sub2.drawlogin("Malformed login packet.", "Please try again.", "");
+		else if (code == 23)
+			Class104_Sub18_Sub2.drawlogin("No reply from loginserver.", "Please wait 1 minute and try again.", "");
+		else if (code == 24)
+			Class104_Sub18_Sub2.drawlogin("Error loading your profile.", "Please contact customer support.", "");
+		else if (code == 25)
+			Class104_Sub18_Sub2.drawlogin("Unexpected loginserver response.", "Please try using a different world.",
+					"");
+		else if (code == 26)
+			Class104_Sub18_Sub2.drawlogin("This computers address has been blocked",
+					"as it was used to break our rules.", "");
+		else if (code == 27)
+			Class104_Sub18_Sub2.drawlogin("", "Service unavailable.", "");
+		else if (code == 31)
+			Class104_Sub18_Sub2.drawlogin("Your account must have a displayname set",
+					"in order to play the game.  Please set it", "via the website, or the main game.");
+		else if (code == 32)
+			Class104_Sub18_Sub2.drawlogin("Your attempt to log into your account was",
+					"unsuccessful.  Don\'t worry, you can sort", "this out by visiting the billing system.");
+		else if (code == 37)
+			Class104_Sub18_Sub2.drawlogin("Your account is currently inaccessible.",
+					"Please try again in a few minutes.", "");
+		else if (code == 38)
+			Class104_Sub18_Sub2.drawlogin("You need to vote to play!", "Visit runescape.com and vote,",
+					"and then come back here!");
+		else if (code == 55)
+			Class104_Sub18_Sub2.drawlogin("Sorry, but your account is not eligible to",
+					"play this version of the game.  Please try", "playing the main game instead!");
+		else
+			Class104_Sub18_Sub2.drawlogin("Unexpected server response", "Please try using a different world.", "");
+	
+		Class10.method40(10);
 	}
 
 	static void method954(final int var0, final int var1) {

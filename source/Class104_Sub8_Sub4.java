@@ -207,7 +207,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 					Class102_Sub1.aClass99_895.method447();
 
 				if (code != 0) {
-					Class31.showResponce(code);
+					client.showResponce(code);
 					return;
 				}
 
@@ -311,7 +311,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 					}
 
 					if ((code != 23) || (client.anInt1968 >= 1)) {
-						Class31.showResponce(code);
+						client.showResponce(code);
 						return;
 					}
 
@@ -371,7 +371,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 							++client.anInt1968;
 							client.step = 0;
 						} else
-							Class31.showResponce(-3);
+							client.showResponce(-3);
 				}
 			}
 		} catch (final IOException var5) {
@@ -384,7 +384,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				++client.anInt1968;
 				client.step = 0;
 			} else
-				Class31.showResponce(-2);
+				client.showResponce(-2);
 		}
 	}
 

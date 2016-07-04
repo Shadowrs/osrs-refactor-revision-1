@@ -201,7 +201,7 @@ public class Class26 {
 					var8 = (var17.anInt1695 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1695 / 32);
 					var10 = (var17.anInt1694 / 32) - (Class81.aClass104_Sub18_Sub16_Sub7_Sub1_644.anInt1694 / 32);
 					boolean var16 = false;
-					if (Class32.method154(var17.aString1780))
+					if (BZip2Context.method154(var17.aString1780))
 						var16 = true;
 
 					boolean var13 = false;

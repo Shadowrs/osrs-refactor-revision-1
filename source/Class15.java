@@ -40,7 +40,7 @@ public class Class15 {
 
 	static void method59(final int var0, final String var1) {
 		final String var2 = Class44.method189(var1);
-		String var3 = Class32.method151(Class65.method297(var2));
+		String var3 = BZip2Context.method151(Class65.method297(var2));
 		if (null == var3)
 			var3 = "";
 

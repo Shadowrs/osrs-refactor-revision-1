@@ -1,5 +1,5 @@
 public final class Class45 {
-	static Class32 aClass32_396 = new Class32();
+	static BZip2Context entryInstance = new BZip2Context();
 
 	static void method194(final int[] var0, final int[] var1, final int[] var2, final byte[] var3, final int var4,
 			final int var5, final int var6) {
@@ -38,36 +38,36 @@ public final class Class45 {
 
 	}
 
-	public static int method195(final byte[] var0, int count, final byte[] var2, final int var3, final int var4) {
-		final Class32 var5 = aClass32_396;
+	public static int bzipFill(final byte[] decompressedData, int count, final byte[] packedData, final int var3, final int blockSize) {
+		final BZip2Context var5 = entryInstance;
 		synchronized (var5) {
-			aClass32_396.aByteArray294 = var2;
-			aClass32_396.anInt299 = var4;
-			aClass32_396.aByteArray301 = var0;
-			aClass32_396.anInt302 = 0;
-			aClass32_396.anInt295 = count;
-			aClass32_396.anInt308 = 0;
-			aClass32_396.anInt307 = 0;
-			aClass32_396.anInt300 = 0;
-			aClass32_396.anInt304 = 0;
-			method197(aClass32_396);
-			count -= aClass32_396.anInt295;
-			aClass32_396.aByteArray294 = null;
-			aClass32_396.aByteArray301 = null;
+			entryInstance.packedData = packedData;
+			entryInstance.blockSize = blockSize;
+			entryInstance.decompressedData = decompressedData;
+			entryInstance.anInt302 = 0;
+			entryInstance.leng = count;
+			entryInstance.anInt308 = 0;
+			entryInstance.anInt307 = 0;
+			entryInstance.anInt300 = 0;
+			entryInstance.anInt304 = 0;
+			method197(entryInstance);
+			count -= entryInstance.leng;
+			entryInstance.packedData = null;
+			entryInstance.decompressedData = null;
 			return count;
 		}
 	}
 
-	static void method196(final Class32 var0) {
+	static void method196(final BZip2Context var0) {
 		byte var1 = var0.aByte296;
 		int var2 = var0.anInt306;
 		int var3 = var0.anInt303;
 		int var4 = var0.anInt312;
-		final int[] var5 = Class32.anIntArray316;
+		final int[] var5 = BZip2Context.anIntArray316;
 		int var6 = var0.anInt311;
-		final byte[] var7 = var0.aByteArray301;
+		final byte[] var7 = var0.decompressedData;
 		int var8 = var0.anInt302;
-		int var9 = var0.anInt295;
+		int var9 = var0.leng;
 		final int var11 = var0.anInt326 + 1;
 
 		label65: while (true) {
@@ -173,21 +173,21 @@ public final class Class45 {
 		var0.anInt306 = var2;
 		var0.anInt303 = var3;
 		var0.anInt312 = var4;
-		Class32.anIntArray316 = var5;
+		BZip2Context.anIntArray316 = var5;
 		var0.anInt311 = var6;
-		var0.aByteArray301 = var7;
+		var0.decompressedData = var7;
 		var0.anInt302 = var8;
-		var0.anInt295 = var9;
+		var0.leng = var9;
 	}
 
-	static void method197(final Class32 var0) {
+	static void method197(final BZip2Context var0) {
 		int var19 = 0;
 		int[] var20 = null;
 		int[] var21 = null;
 		int[] var22 = null;
 		var0.anInt309 = 1;
-		if (Class32.anIntArray316 == null)
-			Class32.anIntArray316 = new int[var0.anInt309 * 100000];
+		if (BZip2Context.anIntArray316 == null)
+			BZip2Context.anIntArray316 = new int[var0.anInt309 * 100000];
 
 		boolean var23 = true;
 
@@ -413,7 +413,7 @@ public final class Class45 {
 							}
 
 							++var0.anIntArray292[var0.aByteArray320[var24 & 255] & 255];
-							Class32.anIntArray316[var47] = var0.aByteArray320[var24 & 255] & 255;
+							BZip2Context.anIntArray316[var47] = var0.aByteArray320[var24 & 255] & 255;
 							++var47;
 							if (var45 == 0) {
 								++var43;
@@ -471,7 +471,7 @@ public final class Class45 {
 							var24 = var0.aByteArray320[var0.aByteArray330[var0.anIntArray322[0]] & 255];
 
 							for (var0.anIntArray292[var24 & 255] += var48; var48 > 0; --var48) {
-								Class32.anIntArray316[var47] = var24 & 255;
+								BZip2Context.anIntArray316[var47] = var24 & 255;
 								++var47;
 							}
 						}
@@ -487,14 +487,14 @@ public final class Class45 {
 						var0.anIntArray315[var36] += var0.anIntArray315[var36 - 1];
 
 					for (var36 = 0; var36 < var47; ++var36) {
-						var24 = (byte) (Class32.anIntArray316[var36] & 255);
-						Class32.anIntArray316[var0.anIntArray315[var24 & 255]] |= var36 << 8;
+						var24 = (byte) (BZip2Context.anIntArray316[var36] & 255);
+						BZip2Context.anIntArray316[var0.anIntArray315[var24 & 255]] |= var36 << 8;
 						++var0.anIntArray315[var24 & 255];
 					}
 
-					var0.anInt311 = Class32.anIntArray316[var0.anInt310] >> 8;
+					var0.anInt311 = BZip2Context.anIntArray316[var0.anInt310] >> 8;
 					var0.anInt303 = 0;
-					var0.anInt311 = Class32.anIntArray316[var0.anInt311];
+					var0.anInt311 = BZip2Context.anIntArray316[var0.anInt311];
 					var0.anInt312 = (byte) (var0.anInt311 & 255);
 					var0.anInt311 >>= 8;
 					++var0.anInt303;
@@ -514,19 +514,19 @@ public final class Class45 {
 		}
 	}
 
-	static byte method198(final Class32 var0) {
+	static byte method198(final BZip2Context var0) {
 		return (byte) method200(8, var0);
 	}
 
-	static byte method199(final Class32 var0) {
+	static byte method199(final BZip2Context var0) {
 		return (byte) method200(1, var0);
 	}
 
-	static int method200(final int var0, final Class32 var1) {
+	static int method200(final int var0, final BZip2Context var1) {
 		while (var1.anInt308 < var0) {
-			var1.anInt307 = (var1.anInt307 << 8) | (var1.aByteArray294[var1.anInt299] & 255);
+			var1.anInt307 = (var1.anInt307 << 8) | (var1.packedData[var1.blockSize] & 255);
 			var1.anInt308 += 8;
-			++var1.anInt299;
+			++var1.blockSize;
 			++var1.anInt300;
 			if (var1.anInt300 == 0)
 				;
@@ -537,7 +537,7 @@ public final class Class45 {
 		return var2;
 	}
 
-	static void method201(final Class32 var0) {
+	static void method201(final BZip2Context var0) {
 		var0.anInt317 = 0;
 
 		for (int var1 = 0; var1 < 256; ++var1)
