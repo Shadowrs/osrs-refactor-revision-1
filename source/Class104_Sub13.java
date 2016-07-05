@@ -14,7 +14,7 @@ public class Class104_Sub13 extends Class104 {
 				if (client.anInt1836 > 0)
 					Class61_Sub1.method494();
 				else {
-					Class10.method40(40);
+					Class10.setstage(40);
 					Class57.aClass13_467 = Class20.stream;
 					Class20.stream = null;
 				}
@@ -36,7 +36,7 @@ public class Class104_Sub13 extends Class104 {
 		}
 
 		client.secureBuf.putOpcode(30);
-		client.secureBuf.writebyte(var0.length() - 1);
+		client.secureBuf.writeByte(var0.length() - 1);
 		client.secureBuf.writeCompactedString(var0.substring(2));
 	}
 
@@ -56,17 +56,17 @@ public class Class104_Sub13 extends Class104 {
 		client.anIntArrayArray1822[var0][var1] = 0;
 		final byte var13 = 0;
 		int var14 = 0;
-		client.anIntArray1853[var13] = var0;
+		client.stepx[var13] = var0;
 		int var26 = var13 + 1;
-		client.anIntArray1854[var13] = var1;
+		client.stepy[var13] = var1;
 		boolean var15 = false;
-		int var16 = client.anIntArray1853.length;
+		int var16 = client.stepx.length;
 		final int[][] var17 = client.aClass67Array1975[Class12.myplayerHeight].anIntArrayArray553;
 
 		int var18;
 		while (var14 != var26) {
-			var11 = client.anIntArray1853[var14];
-			var12 = client.anIntArray1854[var14];
+			var11 = client.stepx[var14];
+			var12 = client.stepy[var14];
 			var14 = (1 + var14) % var16;
 			if ((var2 == var11) && (var12 == var3)) {
 				var15 = true;
@@ -96,8 +96,8 @@ public class Class104_Sub13 extends Class104 {
 			var18 = client.anIntArrayArray1822[var11][var12] + 1;
 			if ((var11 > 0) && (client.anIntArrayArray1907[var11 - 1][var12] == 0)
 					&& ((var17[var11 - 1][var12] & 19661064) == 0)) {
-				client.anIntArray1853[var26] = var11 - 1;
-				client.anIntArray1854[var26] = var12;
+				client.stepx[var26] = var11 - 1;
+				client.stepy[var26] = var12;
 				var26 = (var26 + 1) % var16;
 				client.anIntArrayArray1907[var11 - 1][var12] = 2;
 				client.anIntArrayArray1822[var11 - 1][var12] = var18;
@@ -105,8 +105,8 @@ public class Class104_Sub13 extends Class104 {
 
 			if ((var11 < 103) && (client.anIntArrayArray1907[var11 + 1][var12] == 0)
 					&& ((var17[1 + var11][var12] & 19661184) == 0)) {
-				client.anIntArray1853[var26] = var11 + 1;
-				client.anIntArray1854[var26] = var12;
+				client.stepx[var26] = var11 + 1;
+				client.stepy[var26] = var12;
 				var26 = (var26 + 1) % var16;
 				client.anIntArrayArray1907[1 + var11][var12] = 8;
 				client.anIntArrayArray1822[1 + var11][var12] = var18;
@@ -114,8 +114,8 @@ public class Class104_Sub13 extends Class104 {
 
 			if ((var12 > 0) && (client.anIntArrayArray1907[var11][var12 - 1] == 0)
 					&& ((var17[var11][var12 - 1] & 19661058) == 0)) {
-				client.anIntArray1853[var26] = var11;
-				client.anIntArray1854[var26] = var12 - 1;
+				client.stepx[var26] = var11;
+				client.stepy[var26] = var12 - 1;
 				var26 = (var26 + 1) % var16;
 				client.anIntArrayArray1907[var11][var12 - 1] = 1;
 				client.anIntArrayArray1822[var11][var12 - 1] = var18;
@@ -123,8 +123,8 @@ public class Class104_Sub13 extends Class104 {
 
 			if ((var12 < 103) && (client.anIntArrayArray1907[var11][1 + var12] == 0)
 					&& ((var17[var11][var12 + 1] & 19661088) == 0)) {
-				client.anIntArray1853[var26] = var11;
-				client.anIntArray1854[var26] = var12 + 1;
+				client.stepx[var26] = var11;
+				client.stepy[var26] = var12 + 1;
 				var26 = (var26 + 1) % var16;
 				client.anIntArrayArray1907[var11][var12 + 1] = 4;
 				client.anIntArrayArray1822[var11][1 + var12] = var18;
@@ -133,8 +133,8 @@ public class Class104_Sub13 extends Class104 {
 			if ((var11 > 0) && (var12 > 0) && (client.anIntArrayArray1907[var11 - 1][var12 - 1] == 0)
 					&& ((var17[var11 - 1][var12 - 1] & 19661070) == 0) && ((var17[var11 - 1][var12] & 19661064) == 0)
 					&& ((var17[var11][var12 - 1] & 19661058) == 0)) {
-				client.anIntArray1853[var26] = var11 - 1;
-				client.anIntArray1854[var26] = var12 - 1;
+				client.stepx[var26] = var11 - 1;
+				client.stepy[var26] = var12 - 1;
 				var26 = (1 + var26) % var16;
 				client.anIntArrayArray1907[var11 - 1][var12 - 1] = 3;
 				client.anIntArrayArray1822[var11 - 1][var12 - 1] = var18;
@@ -143,8 +143,8 @@ public class Class104_Sub13 extends Class104 {
 			if ((var11 < 103) && (var12 > 0) && (client.anIntArrayArray1907[var11 + 1][var12 - 1] == 0)
 					&& ((var17[1 + var11][var12 - 1] & 19661187) == 0) && ((var17[var11 + 1][var12] & 19661184) == 0)
 					&& ((var17[var11][var12 - 1] & 19661058) == 0)) {
-				client.anIntArray1853[var26] = 1 + var11;
-				client.anIntArray1854[var26] = var12 - 1;
+				client.stepx[var26] = 1 + var11;
+				client.stepy[var26] = var12 - 1;
 				var26 = (var26 + 1) % var16;
 				client.anIntArrayArray1907[1 + var11][var12 - 1] = 9;
 				client.anIntArrayArray1822[1 + var11][var12 - 1] = var18;
@@ -153,8 +153,8 @@ public class Class104_Sub13 extends Class104 {
 			if ((var11 > 0) && (var12 < 103) && (client.anIntArrayArray1907[var11 - 1][1 + var12] == 0)
 					&& ((var17[var11 - 1][1 + var12] & 19661112) == 0) && ((var17[var11 - 1][var12] & 19661064) == 0)
 					&& ((var17[var11][1 + var12] & 19661088) == 0)) {
-				client.anIntArray1853[var26] = var11 - 1;
-				client.anIntArray1854[var26] = var12 + 1;
+				client.stepx[var26] = var11 - 1;
+				client.stepy[var26] = var12 + 1;
 				var26 = (1 + var26) % var16;
 				client.anIntArrayArray1907[var11 - 1][var12 + 1] = 6;
 				client.anIntArrayArray1822[var11 - 1][var12 + 1] = var18;
@@ -163,8 +163,8 @@ public class Class104_Sub13 extends Class104 {
 			if ((var11 < 103) && (var12 < 103) && (client.anIntArrayArray1907[var11 + 1][var12 + 1] == 0)
 					&& ((var17[var11 + 1][var12 + 1] & 19661280) == 0) && ((var17[1 + var11][var12] & 19661184) == 0)
 					&& ((var17[var11][var12 + 1] & 19661088) == 0)) {
-				client.anIntArray1853[var26] = var11 + 1;
-				client.anIntArray1854[var26] = var12 + 1;
+				client.stepx[var26] = var11 + 1;
+				client.stepy[var26] = var12 + 1;
 				var26 = (var26 + 1) % var16;
 				client.anIntArrayArray1907[var11 + 1][1 + var12] = 12;
 				client.anIntArrayArray1822[var11 + 1][var12 + 1] = var18;
@@ -173,7 +173,7 @@ public class Class104_Sub13 extends Class104 {
 
 		client.anInt1850 = 0;
 		int var19;
-		int var21;
+		int y;
 		int var22;
 		if (!var15) {
 			if (!var4)
@@ -183,15 +183,15 @@ public class Class104_Sub13 extends Class104 {
 			var19 = 100;
 			final byte var20 = 10;
 
-			for (var21 = var2 - var20; var21 <= (var20 + var2); ++var21)
+			for (y = var2 - var20; y <= (var20 + var2); ++y)
 				for (var22 = var3 - var20; var22 <= (var3 + var20); ++var22)
-					if ((var21 >= 0) && (var22 >= 0) && (var21 < 104) && (var22 < 104)
-							&& (client.anIntArrayArray1822[var21][var22] < 100)) {
+					if ((y >= 0) && (var22 >= 0) && (y < 104) && (var22 < 104)
+							&& (client.anIntArrayArray1822[y][var22] < 100)) {
 						int var23 = 0;
-						if (var21 < var2)
-							var23 = var2 - var21;
-						else if (var21 > ((var7 + var2) - 1))
-							var23 = var21 - ((var7 + var2) - 1);
+						if (y < var2)
+							var23 = var2 - y;
+						else if (y > ((var7 + var2) - 1))
+							var23 = y - ((var7 + var2) - 1);
 
 						int var24 = 0;
 						if (var22 < var3)
@@ -201,10 +201,10 @@ public class Class104_Sub13 extends Class104 {
 
 						final int var25 = (var23 * var23) + (var24 * var24);
 						if ((var25 < var18)
-								|| ((var18 == var25) && (client.anIntArrayArray1822[var21][var22] < var19))) {
+								|| ((var18 == var25) && (client.anIntArrayArray1822[y][var22] < var19))) {
 							var18 = var25;
-							var19 = client.anIntArrayArray1822[var21][var22];
-							var11 = var21;
+							var19 = client.anIntArrayArray1822[y][var22];
+							var11 = y;
 							var12 = var22;
 						}
 					}
@@ -219,16 +219,16 @@ public class Class104_Sub13 extends Class104 {
 		}
 
 		final byte var27 = 0;
-		client.anIntArray1853[var27] = var11;
+		client.stepx[var27] = var11;
 		var14 = var27 + 1;
-		client.anIntArray1854[var27] = var12;
+		client.stepy[var27] = var12;
 
 		for (var18 = var19 = client.anIntArrayArray1907[var11][var12]; (var11 != var0)
 				|| (var1 != var12); var18 = client.anIntArrayArray1907[var11][var12]) {
 			if (var18 != var19) {
 				var19 = var18;
-				client.anIntArray1853[var14] = var11;
-				client.anIntArray1854[var14++] = var12;
+				client.stepx[var14] = var11;
+				client.stepy[var14++] = var12;
 			}
 
 			if ((var18 & 2) != 0)
@@ -253,35 +253,36 @@ public class Class104_Sub13 extends Class104 {
 				var16 = 25;
 
 			--var14;
-			final int var28 = client.anIntArray1853[var14];
-			var21 = client.anIntArray1854[var14];
-			if (var10 == 0) {
+			final int x = client.stepx[var14];
+			y = client.stepy[var14];
+			if (var10 == 0) { // gameworld
 				client.secureBuf.putOpcode(176);
-				client.secureBuf.writebyte(3 + var16 + var16);
+				client.secureBuf.writeByte(3 + var16 + var16);
 			}
 
-			if (var10 == 1) {
+			if (var10 == 1) { // minimap
 				client.secureBuf.putOpcode(60);
-				client.secureBuf.writebyte(14 + 3 + var16 + var16);
+				client.secureBuf.writeByte(14 + 3 + var16 + var16);
 			}
 
-			if (var10 == 2) {
+			if (var10 == 2) { // some other walk type
 				client.secureBuf.putOpcode(214);
-				client.secureBuf.writebyte(3 + var16 + var16);
+				client.secureBuf.writeByte(3 + var16 + var16);
 			}
 
-			client.anInt2018 = client.anIntArray1853[0];
-			client.anInt1880 = client.anIntArray1854[0];
+			client.firstX = client.stepx[0];
+			client.firstY = client.stepy[0];
 
+			// steps
 			for (var22 = 1; var22 < var16; ++var22) {
 				--var14;
-				client.secureBuf.writeByteN(client.anIntArray1853[var14] - var28);
-				client.secureBuf.writeByteS(client.anIntArray1854[var14] - var21);
+				client.secureBuf.writeByteN(client.stepx[var14] - x);
+				client.secureBuf.writeByteS(client.stepy[var14] - y);
 			}
 
-			client.secureBuf.writeLEShortA(Class20.anInt206 + var21);
-			client.secureBuf.writebyte(Class25.aBoolArray249[82] ? 1 : 0);
-			client.secureBuf.writeShort(var28 + Class53.anInt436);
+			client.secureBuf.writeLEShortA(Class20.anInt206 + y);
+			client.secureBuf.writeByte(Class25.run[82] ? 1 : 0);
+			client.secureBuf.writeShort(x + Class53.anInt436);
 			return true;
 		}
 	}

@@ -4,8 +4,18 @@ public final class GameBuf extends RSBuf {
 			32767, '\uffff', 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863,
 			134217727, 268435455, 536870911, 1073741823, Integer.MAX_VALUE, -1 };
 	ISAAC isaac;
+	
+	public static final int[] igs = new int[] {161, 176, 60, 72 , 178, 228};
 
 	public void putOpcode(final int code) {
+		boolean skip=false;
+		for (int ig : igs) {
+			if (code == ig) {
+				skip=true;
+			}
+		}
+		if (!skip)
+			System.out.println("writing "+code);
 		backing[++pos - 1] = (byte) (code + isaac.nextKey());
 	}
 

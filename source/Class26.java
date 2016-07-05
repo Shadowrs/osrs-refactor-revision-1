@@ -248,9 +248,9 @@ public class Class26 {
 				}
 			}
 
-			if (client.anInt2018 != 0) {
-				var6 = ((client.anInt2018 * 4) + 2) - (Class81.activePlayer.anInt1695 / 32);
-				var7 = ((client.anInt1880 * 4) + 2) - (Class81.activePlayer.anInt1694 / 32);
+			if (client.firstX != 0) {
+				var6 = ((client.firstX * 4) + 2) - (Class81.activePlayer.anInt1695 / 32);
+				var7 = ((client.firstY * 4) + 2) - (Class81.activePlayer.anInt1694 / 32);
 				Class66.method302(var0, var1, var6, var7, Class42.aClass104_Sub18_Sub17_Sub1Array372[0]);
 			}
 

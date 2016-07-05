@@ -6,7 +6,7 @@ public class RSBuf extends Class104 {
 	public static int[] SHIFTS = new int[256];
 	public byte[] backing;
 
-	public void writebyte(final int var1) {
+	public void writeByte(final int var1) {
 		backing[++pos - 1] = (byte) var1;
 	}
 
@@ -56,7 +56,7 @@ public class RSBuf extends Class104 {
 
 	public void writeSmart(final int var1) {
 		if ((var1 >= 0) && (var1 < 128))
-			writebyte(var1);
+			writeByte(var1);
 		else if ((var1 >= 0) && (var1 < '\u8000'))
 			writeShort(var1 + '\u8000');
 		else
@@ -68,18 +68,18 @@ public class RSBuf extends Class104 {
 			if ((var1 & -16384) != 0) {
 				if ((var1 & -2097152) != 0) {
 					if ((var1 & -268435456) != 0)
-						writebyte((var1 >>> 28) | 128);
+						writeByte((var1 >>> 28) | 128);
 
-					writebyte((var1 >>> 21) | 128);
+					writeByte((var1 >>> 21) | 128);
 				}
 
-				writebyte((var1 >>> 14) | 128);
+				writeByte((var1 >>> 14) | 128);
 			}
 
-			writebyte((var1 >>> 7) | 128);
+			writeByte((var1 >>> 7) | 128);
 		}
 
-		writebyte(var1 & 127);
+		writeByte(var1 & 127);
 	}
 
 	public int readUByte() {

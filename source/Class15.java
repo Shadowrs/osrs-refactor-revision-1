@@ -106,7 +106,7 @@ public class Class15 {
 
 						client.anInt1846 = client.anInt1978;
 						client.secureBuf.putOpcode(41);
-						client.secureBuf.writebyte(GameBuf.lengthOf(string)); // the size of this variable-length packet. 
+						client.secureBuf.writeByte(GameBuf.lengthOf(string)); // the size of this variable-length packet. 
 						client.secureBuf.writeCompactedString(string);
 						break;
 					}

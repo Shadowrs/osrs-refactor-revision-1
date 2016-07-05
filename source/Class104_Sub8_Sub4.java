@@ -185,7 +185,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 
 			if (client.step == 2) {
 				client.secureBuf.pos = 0;
-				client.secureBuf.writebyte(14);
+				client.secureBuf.writeByte(14);
 				Class20.stream.flushbytes(client.secureBuf.backing, 0, 1);
 				client.gamecon.pos = 0;
 				client.step = 3;
@@ -221,7 +221,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 						(int) (Math.random() * 9.9999999E7D), (int) (Math.random() * 9.9999999E7D),
 						(int) (Math.random() * 9.9999999E7D) };
 				client.secureBuf.pos = 0;
-				client.secureBuf.writebyte(10);
+				client.secureBuf.writeByte(10);
 				client.secureBuf.writeInt(issackeys[0]);
 				client.secureBuf.writeInt(issackeys[1]);
 				client.secureBuf.writeInt(issackeys[2]);
@@ -231,9 +231,9 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.secureBuf.doRSA(Class60.aBigInteger476, Class60.aBigInteger477);
 				client.loginbuf.pos = 0;
 				if (client.loadstage == 40)
-					client.loginbuf.writebyte(18); // reconnect
+					client.loginbuf.writeByte(18); // reconnect
 				else
-					client.loginbuf.writebyte(16); // main login
+					client.loginbuf.writeByte(16); // main login
 
 				client.loginbuf.writeShort(0); // dummy value
 				var2 = client.loginbuf.pos; // remember position 
@@ -241,7 +241,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.appendBytes(client.secureBuf.backing, 0, client.secureBuf.pos);
 				final int var3 = client.loginbuf.pos;
 				client.loginbuf.writeCompactedString(Class66.aString543);
-				client.loginbuf.writebyte(client.lowmvm ? 1 : 0);
+				client.loginbuf.writeByte(client.lowmvm ? 1 : 0);
 				Class76.method343(client.loginbuf);
 				client.loginbuf.writeInt(Class27.aClass61_Sub1_263.anInt489);
 				client.loginbuf.writeInt(Class104_Sub20.aClass61_Sub1_1171.anInt489);
@@ -291,7 +291,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 						client.anInt1805 = 0;
 						client.aBool1930 = false;
 						client.anInt2021 = 0;
-						client.anInt2018 = 0;
+						client.firstX = 0;
 
 						for (var2 = 0; var2 < client.localPlayers.length; ++var2)
 							if (client.localPlayers[var2] != null)
@@ -302,7 +302,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 								client.localNpcs[var2].anInt1716 = -1;
 
 						Class104_Sub2.aClass58_857 = new Class58(32);
-						Class10.method40(30);
+						Class10.setstage(30);
 
 						for (var2 = 0; var2 < 100; ++var2)
 							client.rsfacesFlag[var2] = true;

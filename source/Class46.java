@@ -958,7 +958,7 @@ public class Class46 {
 										--var5;
 										var80 = Class90.aStringArray712[var5];
 										client.secureBuf.putOpcode(223);
-										client.secureBuf.writebyte(var80.length() + 1);
+										client.secureBuf.writeByte(var80.length() + 1);
 										client.secureBuf.writeCompactedString(var80);
 										continue;
 									}
@@ -967,7 +967,7 @@ public class Class46 {
 										--var5;
 										var80 = Class90.aStringArray712[var5];
 										client.secureBuf.putOpcode(127);
-										client.secureBuf.writebyte(var80.length() + 1);
+										client.secureBuf.writeByte(var80.length() + 1);
 										client.secureBuf.writeCompactedString(var80);
 										continue;
 									}
@@ -1335,7 +1335,7 @@ public class Class46 {
 											var24 = Class90.anIntArray706[var4];
 											client.secureBuf.putOpcode(252);
 											client.secureBuf
-													.writebyte(GameBuf.lengthOf(var80) + 1);
+													.writeByte(GameBuf.lengthOf(var80) + 1);
 											client.secureBuf.writeCompactedString(var80);
 											client.secureBuf.writeByteA(var24);
 											continue;
@@ -1400,7 +1400,7 @@ public class Class46 {
 													client.anInt1846 = client.anInt1978;
 													client.secureBuf.putOpcode(248);
 													client.secureBuf
-															.writebyte(GameBuf.lengthOf(var80));
+															.writeByte(GameBuf.lengthOf(var80));
 													client.secureBuf.writeCompactedString(var80);
 													continue label2280;
 												}
@@ -1492,7 +1492,7 @@ public class Class46 {
 											if (null != Class104_Sub13.aClass104_Sub7Array1099) {
 												client.secureBuf.putOpcode(245);
 												client.secureBuf
-														.writebyte(GameBuf.lengthOf(var80));
+														.writeByte(GameBuf.lengthOf(var80));
 												client.secureBuf.writeCompactedString(var80);
 											}
 											continue;
@@ -2188,9 +2188,9 @@ public class Class46 {
 
 											client.anInt2005 = Class90.anIntArray706[var4 + 2];
 											client.secureBuf.putOpcode(167);
-											client.secureBuf.writebyte(client.anInt2004);
-											client.secureBuf.writebyte(Class21.aClass27_222.anInt261);
-											client.secureBuf.writebyte(client.anInt2005);
+											client.secureBuf.writeByte(client.anInt2004);
+											client.secureBuf.writeByte(Class21.aClass27_222.anInt261);
+											client.secureBuf.writeByte(client.anInt2005);
 											continue;
 										}
 
@@ -2202,10 +2202,10 @@ public class Class46 {
 											var17 = Class90.anIntArray706[1 + var4];
 											client.secureBuf.putOpcode(96);
 											client.secureBuf
-													.writebyte(GameBuf.lengthOf(var80) + 2);
+													.writeByte(GameBuf.lengthOf(var80) + 2);
 											client.secureBuf.writeCompactedString(var80);
-											client.secureBuf.writebyte(var24 - 1);
-											client.secureBuf.writebyte(var17);
+											client.secureBuf.writeByte(var24 - 1);
+											client.secureBuf.writeByte(var17);
 											continue;
 										}
 
@@ -2361,10 +2361,10 @@ public class Class46 {
 													}
 
 												client.secureBuf.putOpcode(205);
-												client.secureBuf.writebyte(0);
+												client.secureBuf.writeByte(0);
 												var19 = client.secureBuf.pos;
-												client.secureBuf.writebyte(var61);
-												client.secureBuf.writebyte(var66);
+												client.secureBuf.writeByte(var61);
+												client.secureBuf.writeByte(var66);
 												Class41.method183(client.secureBuf, var80);
 												client.secureBuf
 														.method613(client.secureBuf.pos - var19);
@@ -2977,7 +2977,7 @@ public class Class46 {
 					} else {
 						Class66.aString540 = "Loaded title screen";
 						Class66.anInt534 = 50;
-						Class10.method40(5);
+						Class10.setstage(5);
 						client.anInt1816 = 70;
 					}
 				} else if (client.anInt1816 == 70) {
@@ -3069,7 +3069,7 @@ public class Class46 {
 							client.anInt1816 = 140;
 						}
 					} else if (client.anInt1816 == 140)
-						Class10.method40(10);
+						Class10.setstage(10);
 				} else {
 					var0 = 0;
 					if (Class12.aClass104_Sub18_Sub17_Sub1_75 == null)

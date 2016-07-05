@@ -92,6 +92,6 @@ public abstract class Class1 {
 
 	static final void writePkt185() {
 		client.secureBuf.putOpcode(185);
-		client.secureBuf.writebyte(0);
+		client.secureBuf.writeByte(0);
 	}
 }

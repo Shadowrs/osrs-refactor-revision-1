@@ -47,8 +47,8 @@ public class Class102_Sub1 extends Class102 {
 		client.anInt1866 = ((int) (Math.random() * 20.0D) - 10) & 2047;
 		client.anInt2021 = 0;
 		client.anInt2013 = -1;
-		client.anInt2018 = 0;
-		client.anInt1880 = 0;
+		client.firstX = 0;
+		client.firstY = 0;
 		client.localPlrSize = 0;
 		client.localNpcSize = 0;
 

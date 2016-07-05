@@ -93,7 +93,7 @@ public final class client extends Applet_Sub1 {
 	static int anInt1861 = 0;
 	static int anInt1986 = 0;
 	static int anInt1856 = 2;
-	static int anInt2018;
+	static int firstX;
 	static int anInt1857 = 0;
 	static int anInt1797 = 0;
 	static int anInt1859 = 0;
@@ -114,7 +114,7 @@ public final class client extends Applet_Sub1 {
 	static int anInt1810 = 0;
 	static int anInt1811 = 0;
 	static int anInt1812 = 0;
-	static int anInt1835 = 0;
+	static int internalCycles = 0;
 	static int anInt1904;
 	static int anInt1910;
 	static int localNpcSize = 0;
@@ -152,8 +152,8 @@ public final class client extends Applet_Sub1 {
 	static int anInt1850 = 0;
 	static int[][] anIntArrayArray1907 = new int[104][104];
 	static int[][] anIntArrayArray1822 = new int[104][104];
-	static int[] anIntArray1853 = new int[4000];
-	static int[] anIntArray1854 = new int[4000];
+	static int[] stepx = new int[4000];
+	static int[] stepy = new int[4000];
 	static int anInt1796 = 1;
 	static int anInt1974 = 1;
 	static int anInt1959 = 1;
@@ -253,7 +253,7 @@ public final class client extends Applet_Sub1 {
 	static int[] anIntArray2015;
 	static int[] anIntArray2016;
 	static Sprite[] aClass104_Sub18_Sub17_Sub1Array2017;
-	static int anInt1880;
+	static int firstY;
 	static int anInt2022;
 	static int anInt2023;
 	static int anInt1827;
@@ -508,13 +508,13 @@ final void method943(final byte var1) {
                      map = Class25.anIntArray250[Class25.anInt247];
                      Class25.anInt247 = (Class25.anInt247 + 1) & 127;
                      if(map < 0)
-						Class25.aBoolArray249[~map] = false;
+						Class25.run[~map] = false;
 					else
-						Class25.aBoolArray249[map] = true;
+						Class25.run[map] = true;
                   }
 			else {
                   for(map = 0; map < 112; ++map)
-					Class25.aBoolArray249[map] = false;
+					Class25.run[map] = false;
 
                   Class25.anInt245 = Class25.anInt247;
                }
@@ -541,9 +541,9 @@ final void method943(final byte var1) {
             }
 
             int localx;
-            int localy;
+            int height;
             int var11;
-            int var13;
+            int width;
             int var14;
             int var15;
             int var16;
@@ -598,13 +598,13 @@ final void method943(final byte var1) {
                      final byte[] INFO = Class70.landscapedata[map];
                      if(INFO != null) {
                         localx = ((Class47.mapCoordinates[map] >> 8) * 64) - Class53.anInt436;
-                        localy = ((Class47.mapCoordinates[map] & 255) * 64) - Class20.anInt206;
+                        height = ((Class47.mapCoordinates[map] & 255) * 64) - Class20.anInt206;
                         if(dynamicRegion) {
                            localx = 10;
-                           localy = 10;
+                           height = 10;
                         }
 
-                        valid &= Class19.loadClipping(INFO, localx, localy);
+                        valid &= Class19.loadClipping(INFO, localx, height);
                      }
                   }
 
@@ -663,21 +663,21 @@ final void method943(final byte var1) {
                         byte[] var12;
                         for(var11 = 0; var11 < map; ++var11) {
                            localx = ((Class47.mapCoordinates[var11] >> 8) * 64) - Class53.anInt436;
-                           localy = ((Class47.mapCoordinates[var11] & 255) * 64) - Class20.anInt206;
+                           height = ((Class47.mapCoordinates[var11] & 255) * 64) - Class20.anInt206;
                            var12 = Class104_Sub15.terrainData[var11];
                            if(null != var12) {
                               Class101.method465();
-                              Class1.method16(var12, localx, localy, (Class54.anInt447 * 8) - 48, (FSManager.anInt761 * 8) - 48, aClass67Array1975);
+                              Class1.method16(var12, localx, height, (Class54.anInt447 * 8) - 48, (FSManager.anInt761 * 8) - 48, aClass67Array1975);
                            }
                         }
 
                         for(var11 = 0; var11 < map; ++var11) {
                            localx = (64 * (Class47.mapCoordinates[var11] >> 8)) - Class53.anInt436;
-                           localy = ((Class47.mapCoordinates[var11] & 255) * 64) - Class20.anInt206;
+                           height = ((Class47.mapCoordinates[var11] & 255) * 64) - Class20.anInt206;
                            var12 = Class104_Sub15.terrainData[var11];
                            if((var12 == null) && (FSManager.anInt761 < 800)) {
                               Class101.method465();
-                              Nodee.method519(localx, localy, 64, 64);
+                              Nodee.method519(localx, height, 64, 64);
                            }
                         }
 
@@ -686,10 +686,10 @@ final void method943(final byte var1) {
                         for(var11 = 0; var11 < map; ++var11) {
                            final byte[] var6 = Class70.landscapedata[var11];
                            if(var6 != null) {
-                              localy = ((Class47.mapCoordinates[var11] >> 8) * 64) - Class53.anInt436;
-                              var13 = ((Class47.mapCoordinates[var11] & 255) * 64) - Class20.anInt206;
+                              height = ((Class47.mapCoordinates[var11] >> 8) * 64) - Class53.anInt436;
+                              width = ((Class47.mapCoordinates[var11] & 255) * 64) - Class20.anInt206;
                               Class101.method465();
-                              Class105.method472(var6, localy, var13, Class81.aClass17_643, aClass67Array1975);
+                              Class105.method472(var6, height, width, Class81.aClass17_643, aClass67Array1975);
                            }
                         }
                      }
@@ -702,8 +702,8 @@ final void method943(final byte var1) {
                            if(var11 >= 4) {
                               for(var11 = 0; var11 < 13; ++var11)
 								for(localx = 0; localx < 13; ++localx) {
-                                    localy = anIntArrayArrayArray1848[0][var11][localx];
-                                    if(localy == -1)
+                                    height = anIntArrayArrayArray1848[0][var11][localx];
+                                    if(height == -1)
 										Nodee.method519(8 * var11, 8 * localx, 8, 8);
                                  }
 
@@ -717,18 +717,18 @@ final void method943(final byte var1) {
                                  Class101.method465();
 
                                  for(localx = 0; localx < 13; ++localx)
-									for(localy = 0; localy < 13; ++localy) {
-                                       var13 = anIntArrayArrayArray1848[var11][localx][localy];
-                                       if(var13 != -1) {
-                                          var14 = (var13 >> 24) & 3;
-                                          var15 = (var13 >> 1) & 3;
-                                          var16 = (var13 >> 14) & 1023;
-                                          var17 = (var13 >> 3) & 2047;
+									for(height = 0; height < 13; ++height) {
+                                       width = anIntArrayArrayArray1848[var11][localx][height];
+                                       if(width != -1) {
+                                          var14 = (width >> 24) & 3;
+                                          var15 = (width >> 1) & 3;
+                                          var16 = (width >> 14) & 1023;
+                                          var17 = (width >> 3) & 2047;
                                           var18 = (var17 / 8) + ((var16 / 8) << 8);
 
                                           for(var19 = 0; var19 < Class47.mapCoordinates.length; ++var19)
 											if((var18 == Class47.mapCoordinates[var19]) && (null != Class70.landscapedata[var19])) {
-                                                Class7.method34(Class70.landscapedata[var19], var11, localx * 8, 8 * localy, var14, (var16 & 7) * 8, (var17 & 7) * 8, var15, Class81.aClass17_643, aClass67Array1975);
+                                                Class7.method34(Class70.landscapedata[var19], var11, localx * 8, 8 * height, var14, (var16 & 7) * 8, (var17 & 7) * 8, var15, Class81.aClass17_643, aClass67Array1975);
                                                 break;
                                              }
                                        }
@@ -741,9 +741,9 @@ final void method943(final byte var1) {
                            Class101.method465();
 
                            for(localx = 0; localx < 13; ++localx)
-							for(localy = 0; localy < 13; ++localy) {
+							for(height = 0; height < 13; ++height) {
                                  var95 = false;
-                                 var14 = anIntArrayArrayArray1848[var11][localx][localy];
+                                 var14 = anIntArrayArrayArray1848[var11][localx][height];
                                  if(var14 != -1) {
                                     var15 = (var14 >> 24) & 3;
                                     var16 = (var14 >> 1) & 3;
@@ -753,7 +753,7 @@ final void method943(final byte var1) {
 
                                     for(var20 = 0; var20 < Class47.mapCoordinates.length; ++var20)
 										if((var19 == Class47.mapCoordinates[var20]) && (Class104_Sub15.terrainData[var20] != null)) {
-										      Class1.method14(Class104_Sub15.terrainData[var20], var11, 8 * localx, 8 * localy, var15, (var17 & 7) * 8, 8 * (var18 & 7), var16, aClass67Array1975);
+										      Class1.method14(Class104_Sub15.terrainData[var20], var11, 8 * localx, 8 * height, var15, (var17 & 7) * 8, 8 * (var18 & 7), var16, aClass67Array1975);
 										      var95 = true;
 										      break;
 										   }
@@ -762,7 +762,7 @@ final void method943(final byte var1) {
                                  if(!var95) {
                                     var15 = var11;
                                     var16 = localx * 8;
-                                    var17 = localy * 8;
+                                    var17 = height * 8;
 
                                     for(var18 = 0; var18 < 8; ++var18)
 										for(var19 = 0; var19 < 8; ++var19)
@@ -807,8 +807,8 @@ final void method943(final byte var1) {
 						Class81.aClass17_643.method70(0);
 
                      for(localx = 0; localx < 104; ++localx)
-						for(localy = 0; localy < 104; ++localy)
-							Class102_Sub1.method496(localx, localy);
+						for(height = 0; height < 104; ++height)
+							Class102_Sub1.method496(localx, height);
 
                      Class101.method465();
 
@@ -827,19 +827,19 @@ final void method943(final byte var1) {
 
                      if(!dynamicRegion) {
                         localx = (Class54.anInt447 - 6) / 8;
-                        localy = (6 + Class54.anInt447) / 8;
-                        var13 = (FSManager.anInt761 - 6) / 8;
+                        height = (6 + Class54.anInt447) / 8;
+                        width = (FSManager.anInt761 - 6) / 8;
                         var14 = (6 + FSManager.anInt761) / 8;
 
-                        for(var15 = localx - 1; var15 <= (localy + 1); ++var15)
-							for(var16 = var13 - 1; var16 <= (var14 + 1); ++var16)
-								if((var15 < localx) || (var15 > localy) || (var16 < var13) || (var16 > var14)) {
+                        for(var15 = localx - 1; var15 <= (height + 1); ++var15)
+							for(var16 = width - 1; var16 <= (var14 + 1); ++var16)
+								if((var15 < localx) || (var15 > height) || (var16 < width) || (var16 > var14)) {
 							         Class67.fs.method268("m" + var15 + "_" + var16);
 							         Class67.fs.method268("l" + var15 + "_" + var16);
 							      }
                      }
 
-                     Class10.method40(30);
+                     Class10.setstage(30);
                      Class101.method465();
                      Class36.method172();
                      secureBuf.putOpcode(197);
@@ -860,7 +860,7 @@ final void method943(final byte var1) {
                   if(anInt1836 > 0)
 					Class61_Sub1.method494();
 				else {
-                     Class10.method40(40);
+                     Class10.setstage(40);
                      Class57.aClass13_467 = Class20.stream;
                      Class20.stream = null;
                   }
@@ -928,13 +928,13 @@ final void method943(final byte var1) {
                               anInt1815 = anInt2042;
                               anInt2042 = anInt1837;
                               anInt1837 = pktOpc;
-                              System.out.println("inc opcode "+pktOpc+" size "+pktSize);
+                              //System.out.println("inc opcode "+pktOpc+" size "+pktSize);
                               if(pktOpc == 180) {
                                  localx = gamecon.readLEShortA();
-                                 localy = gamecon.readLEInt();
-                                 Class71.anIntArray577[localx] = localy;
-                                 if(localy != Class71.anIntArray576[localx]) {
-                                    Class71.anIntArray576[localx] = localy;
+                                 height = gamecon.readLEInt();
+                                 Class71.anIntArray577[localx] = height;
+                                 if(height != Class71.anIntArray576[localx]) {
+                                    Class71.anIntArray576[localx] = height;
                                     Class46.redrawComponent(localx);
                                  }
 
@@ -989,8 +989,8 @@ final void method943(final byte var1) {
                               Widget var92;
                               if(pktOpc == 176) {
                                  localx = gamecon.readULEShortA();
-                                 localy = gamecon.readLEInt();
-                                 var92 = Class47.method210(localy);
+                                 height = gamecon.readLEInt();
+                                 var92 = Class47.method210(height);
                                  if((localx != var92.anInt1058) || (localx == -1)) {
                                     var92.anInt1058 = localx;
                                     var92.anInt974 = 0;
@@ -1069,10 +1069,10 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 246) {
                                  localx = gamecon.readUByteN();
-                                 localy = gamecon.readUByteA();
-                                 var13 = gamecon.readUByteS();
-                                 Class12.myplayerHeight = var13 >> 1;
-                                 Class81.activePlayer.placeEntity(localy, localx, (var13 & 1) == 1);
+                                 height = gamecon.readUByteA();
+                                 width = gamecon.readUByteS();
+                                 Class12.myplayerHeight = width >> 1;
+                                 Class81.activePlayer.placeEntity(height, localx, (width & 1) == 1);
                                  pktOpc = -1;
                                  var87 = true;
                                  break label3291;
@@ -1174,13 +1174,13 @@ final void method943(final byte var1) {
                               Nodee var124;
                               if(pktOpc == 184) {
                                  localx = gamecon.readUByteN();
-                                 localy = gamecon.readUShortA();
-                                 var13 = gamecon.readInt();
-                                 var124 = (Nodee)aClass58_1795.method241(var13);
+                                 height = gamecon.readUShortA();
+                                 width = gamecon.readInt();
+                                 var124 = (Nodee)aClass58_1795.method241(width);
                                  if(var124 != null)
-									Class13.method56(var124, localy != var124.rsfaceID);
+									Class13.method56(var124, height != var124.rsfaceID);
 
-                                 Class97.method440(var13, localy, localx);
+                                 Class97.method440(width, height, localx);
                                  pktOpc = -1;
                                  var87 = true;
                                  break label3291;
@@ -1218,8 +1218,8 @@ final void method943(final byte var1) {
                                  Class80.empty(localx);
                                  Class88.handleCSCodes(currentWidget);
 
-                                 for(localy = 0; localy < 100; ++localy)
-									rsfacesFlag[localy] = true;
+                                 for(height = 0; height < 100; ++height)
+									rsfacesFlag[height] = true;
 
                                  pktOpc = -1;
                                  var87 = true;
@@ -1243,11 +1243,11 @@ final void method943(final byte var1) {
                                  Class103.anInt821 = gamecon.readUByte();
                                  if(Class103.anInt821 >= 100) {
                                     localx = 64 + (Looks.anInt673 * 128);
-                                    localy = (Class41.anInt370 * 128) + 64;
-                                    var13 = Class47.method211(localx, localy, Class12.myplayerHeight) - Class79.anInt631;
+                                    height = (Class41.anInt370 * 128) + 64;
+                                    width = Class47.method211(localx, height, Class12.myplayerHeight) - Class79.anInt631;
                                     var14 = localx - Looks.anInt672;
-                                    var15 = var13 - Class46.anInt403;
-                                    var16 = localy - Class99.anInt793;
+                                    var15 = width - Class46.anInt403;
+                                    var16 = height - Class99.anInt793;
                                     var17 = (int)Math.sqrt((var16 * var16) + (var14 * var14));
                                     Class27.anInt266 = (int)(Math.atan2(var15, var17) * 325.949D) & 2047;
                                     Class44.anInt395 = (int)(Math.atan2(var14, var16) * -325.949D) & 2047;
@@ -1265,11 +1265,11 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 234) {
                                  localx = gamecon.readInt();
-                                 localy = gamecon.readShort();
-                                 var13 = (localy >> 10) & 31;
-                                 var14 = (localy >> 5) & 31;
-                                 var15 = localy & 31;
-                                 var16 = (var13 << 19) + (var14 << 11) + (var15 << 3);
+                                 height = gamecon.readShort();
+                                 width = (height >> 10) & 31;
+                                 var14 = (height >> 5) & 31;
+                                 var15 = height & 31;
+                                 var16 = (width << 19) + (var14 << 11) + (var15 << 3);
                                  final Widget var122 = Class47.method210(localx);
                                  if(var122.anInt1017 != var16) {
                                     var122.anInt1017 = var16;
@@ -1283,10 +1283,10 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 85) {
                                  localx = gamecon.readUShortLE();
-                                 localy = gamecon.method611();
-                                 var13 = gamecon.readInt();
-                                 var120 = Class47.method210(var13);
-                                 var15 = localy + var120.anInt985;
+                                 height = gamecon.method611();
+                                 width = gamecon.readInt();
+                                 var120 = Class47.method210(width);
+                                 var15 = height + var120.anInt985;
                                  var16 = var120.anInt975 + localx;
                                  if((var15 != var120.anInt983) || (var120.anInt1005 != var16)) {
                                     var120.anInt983 = var15;
@@ -1311,17 +1311,17 @@ final void method943(final byte var1) {
                               long var38;
                               if(pktOpc == 48) {
                                  localx = gamecon.readLEInt();
-                                 localy = gamecon.readLEShortA();
-                                 if(localy == '\uffff')
-									localy = -1;
+                                 height = gamecon.readLEShortA();
+                                 if(height == '\uffff')
+									height = -1;
 
-                                 var13 = gamecon.readIntV1();
+                                 width = gamecon.readIntV1();
                                  var14 = gamecon.readLEShort();
                                  if(var14 == '\uffff')
 									var14 = -1;
 
-                                 for(var15 = var14; var15 <= localy; ++var15) {
-                                    var38 = var15 + ((long)var13 << 32);
+                                 for(var15 = var14; var15 <= height; ++var15) {
+                                    var38 = var15 + ((long)width << 32);
                                     final Class104 var40 = aClass58_1926.method241(var38);
                                     if(null != var40)
 										var40.method470();
@@ -1343,12 +1343,12 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 17) {
                                  localx = gamecon.readUByte();
-                                 localy = gamecon.readUByte();
-                                 var13 = gamecon.readUByte();
+                                 height = gamecon.readUByte();
+                                 width = gamecon.readUByte();
                                  var14 = gamecon.readUByte();
                                  aBoolArray2036[localx] = true;
-                                 anIntArray2039[localx] = localy;
-                                 anIntArray2038[localx] = var13;
+                                 anIntArray2039[localx] = height;
+                                 anIntArray2038[localx] = width;
                                  anIntArray2020[localx] = var14;
                                  anIntArray2040[localx] = 0;
                                  pktOpc = -1;
@@ -1365,16 +1365,16 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 222) {
                                  localx = gamecon.readLEInt();
-                                 localy = gamecon.readShort();
+                                 height = gamecon.readShort();
                                  if(localx < -70000)
-									localy += '\u8000';
+									height += '\u8000';
 
                                  if(localx >= 0)
 									var92 = Class47.method210(localx);
 								else
 									var92 = null;
 
-                                 for(; gamecon.pos < pktSize; Class104_Sub18_Sub16_Sub2.method809(localy, var14, var15 - 1, var16)) {
+                                 for(; gamecon.pos < pktSize; Class104_Sub18_Sub16_Sub2.method809(height, var14, var15 - 1, var16)) {
                                     var14 = gamecon.readsmart();
                                     var15 = gamecon.readShort();
                                     var16 = 0;
@@ -1394,7 +1394,7 @@ final void method943(final byte var1) {
 									Class79.setflags(var92);
 
                                  Class66.redraw();
-                                 anIntArray1973[(++anInt1916 - 1) & 31] = localy & 32767;
+                                 anIntArray1973[(++anInt1916 - 1) & 31] = height & 32767;
                                  pktOpc = -1;
                                  var87 = true;
                                  break label3291;
@@ -1403,10 +1403,10 @@ final void method943(final byte var1) {
                               long var41;
                               if(pktOpc == 39) {
                                  localx = gamecon.pos + pktSize;
-                                 localy = gamecon.readShort();
-                                 var13 = gamecon.readShort();
-                                 if(localy != currentWidget) {
-                                    currentWidget = localy;
+                                 height = gamecon.readShort();
+                                 width = gamecon.readShort();
+                                 if(height != currentWidget) {
+                                    currentWidget = height;
                                     Class80.empty(currentWidget);
                                     Class88.handleCSCodes(currentWidget);
 
@@ -1415,7 +1415,7 @@ final void method943(final byte var1) {
                                  }
 
                                  Nodee var116;
-                                 for(; var13-- > 0; var116.aBool958 = true) {
+                                 for(; width-- > 0; var116.aBool958 = true) {
                                     var14 = gamecon.readLEInt();
                                     var15 = gamecon.readShort();
                                     var16 = gamecon.readUByte();
@@ -1502,11 +1502,11 @@ final void method943(final byte var1) {
                                  var82 = gamecon.readString();
                                  final Object[] var86 = new Object[var82.length() + 1];
 
-                                 for(var13 = var82.length() - 1; var13 >= 0; --var13)
-									if(var82.charAt(var13) == 115)
-										var86[var13 + 1] = gamecon.readString();
+                                 for(width = var82.length() - 1; width >= 0; --width)
+									if(var82.charAt(width) == 115)
+										var86[width + 1] = gamecon.readString();
 									else
-										var86[var13 + 1] = new Integer(gamecon.readLEInt());
+										var86[width + 1] = new Integer(gamecon.readLEInt());
 
                                  var86[0] = new Integer(gamecon.readLEInt());
                                  final CS var101 = new CS();
@@ -1522,10 +1522,10 @@ final void method943(final byte var1) {
                                  Class19.anInt195 = gamecon.readUByteS();
 
                                  for(localx = Class19.anInt195; localx < (Class19.anInt195 + 8); ++localx)
-									for(localy = Class93.anInt742; localy < (Class93.anInt742 + 8); ++localy)
-										if(null != aClass59ArrayArrayArray1952[Class12.myplayerHeight][localx][localy]) {
-										      aClass59ArrayArrayArray1952[Class12.myplayerHeight][localx][localy] = null;
-										      Class102_Sub1.method496(localx, localy);
+									for(height = Class93.anInt742; height < (Class93.anInt742 + 8); ++height)
+										if(null != aClass59ArrayArrayArray1952[Class12.myplayerHeight][localx][height]) {
+										      aClass59ArrayArrayArray1952[Class12.myplayerHeight][localx][height] = null;
+										      Class102_Sub1.method496(localx, height);
 										   }
 
                                  for(var81 = (Class104_Sub3)aClass59_1922.method251(); null != var81; var81 = (Class104_Sub3)aClass59_1922.method252())
@@ -1539,11 +1539,11 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 66) {
                                  localx = gamecon.readIntV1();
-                                 localy = gamecon.readUShortA();
+                                 height = gamecon.readUShortA();
                                  var92 = Class47.method210(localx);
-                                 if((var92.anInt1010 != 2) || (localy != var92.anInt1011)) {
+                                 if((var92.anInt1010 != 2) || (height != var92.anInt1011)) {
                                     var92.anInt1010 = 2;
-                                    var92.anInt1011 = localy;
+                                    var92.anInt1011 = height;
                                     Class79.setflags(var92);
                                  }
 
@@ -1555,17 +1555,17 @@ final void method943(final byte var1) {
                               if(pktOpc == 208) {
                                  Class66.redraw();
                                  localx = gamecon.readUByteA();
-                                 localy = gamecon.readUByteA();
-                                 var13 = gamecon.readLEInt();
-                                 anIntArray1927[localy] = var13;
-                                 anIntArray1925[localy] = localx;
-                                 anIntArray1833[localy] = 1;
+                                 height = gamecon.readUByteA();
+                                 width = gamecon.readLEInt();
+                                 anIntArray1927[height] = width;
+                                 anIntArray1925[height] = localx;
+                                 anIntArray1833[height] = 1;
 
                                  for(var14 = 0; var14 < 98; ++var14)
-									if(var13 >= Class38.anIntArray356[var14])
-										anIntArray1833[localy] = var14 + 2;
+									if(width >= Class38.anIntArray356[var14])
+										anIntArray1833[height] = var14 + 2;
 
-                                 anIntArray1868[(++anInt1851 - 1) & 31] = localy;
+                                 anIntArray1868[(++anInt1851 - 1) & 31] = height;
                                  pktOpc = -1;
                                  var87 = true;
                                  break label3291;
@@ -1581,14 +1581,14 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 164) {
                                  var82 = gamecon.readString();
-                                 localy = gamecon.readUByteA();
-                                 var13 = gamecon.readUByteS();
-                                 if((localy >= 1) && (localy <= 8)) {
+                                 height = gamecon.readUByteA();
+                                 width = gamecon.readUByteS();
+                                 if((height >= 1) && (height <= 8)) {
                                     if(var82.equalsIgnoreCase("null"))
 										var82 = null;
 
-                                    aStringArray1918[localy - 1] = var82;
-                                    aBoolArray1919[localy - 1] = var13 == 0;
+                                    aStringArray1918[height - 1] = var82;
+                                    aBoolArray1919[height - 1] = width == 0;
                                  }
 
                                  pktOpc = -1;
@@ -1600,9 +1600,9 @@ final void method943(final byte var1) {
                                  localx = gamecon.readInt();
                                  var7 = Class47.method210(localx);
 
-                                 for(var13 = 0; var13 < var7.anIntArray1080.length; ++var13) {
-                                    var7.anIntArray1080[var13] = -1;
-                                    var7.anIntArray1080[var13] = 0;
+                                 for(width = 0; width < var7.anIntArray1080.length; ++width) {
+                                    var7.anIntArray1080[width] = -1;
+                                    var7.anIntArray1080[width] = 0;
                                  }
 
                                  Class79.setflags(var7);
@@ -1621,7 +1621,7 @@ final void method943(final byte var1) {
                               }
 
                               if(pktOpc == 70) {
-                                 localy = gamecon.readUByte();
+                                 height = gamecon.readUByte();
                                  final Class27[] var100 = Class30.method145();
                                  var14 = 0;
 
@@ -1633,7 +1633,7 @@ final void method943(final byte var1) {
                                     }
 
                                     final Class27 var127 = var100[var14];
-                                    if(localy == var127.anInt261) {
+                                    if(height == var127.anInt261) {
                                        var89 = var127;
                                        break;
                                     }
@@ -1650,7 +1650,7 @@ final void method943(final byte var1) {
                               boolean var98;
                               if(pktOpc == 140) {
                                  var82 = gamecon.readString();
-                                 localy = gamecon.readShort();
+                                 height = gamecon.readShort();
                                  final byte var102 = gamecon.readByte();
                                  var98 = false;
                                  if(var102 == -128)
@@ -1665,7 +1665,7 @@ final void method943(final byte var1) {
 
                                     var106 = false;
 
-                                    for(var15 = 0; (var15 < Class89.anInt704) && (!Class104_Sub13.aClass104_Sub7Array1099[var15].aString947.equals(var82) || (Class104_Sub13.aClass104_Sub7Array1099[var15].anInt950 != localy)); ++var15)
+                                    for(var15 = 0; (var15 < Class89.anInt704) && (!Class104_Sub13.aClass104_Sub7Array1099[var15].aString947.equals(var82) || (Class104_Sub13.aClass104_Sub7Array1099[var15].anInt950 != height)); ++var15)
 										;
 
                                     if(var15 < Class89.anInt704) {
@@ -1682,13 +1682,13 @@ final void method943(final byte var1) {
                                     final Class104_Sub7 var126 = new Class104_Sub7();
                                     var126.aString947 = var82;
                                     var126.aString948 = Class33.method155(var126.aString947, Class2.aClass101_8);
-                                    var126.anInt950 = localy;
+                                    var126.anInt950 = height;
                                     var126.aByte949 = var102;
 
                                     for(var16 = Class89.anInt704 - 1; var16 >= 0; --var16) {
                                        var17 = Class104_Sub13.aClass104_Sub7Array1099[var16].aString948.compareTo(var126.aString947);
                                        if(var17 == 0) {
-                                          Class104_Sub13.aClass104_Sub7Array1099[var16].anInt950 = localy;
+                                          Class104_Sub13.aClass104_Sub7Array1099[var16].anInt950 = height;
                                           Class104_Sub13.aClass104_Sub7Array1099[var16].aByte949 = var102;
                                           if(var82.equals(Class81.activePlayer.myName))
 											Class97.aByte766 = var102;
@@ -1729,7 +1729,7 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 25) {
                                  final GameBuf var85 = gamecon;
-                                 localy = pktSize;
+                                 height = pktSize;
                                  final Class104_Sub16 var99 = new Class104_Sub16();
                                  var99.anInt1127 = var85.readUByte();
                                  var99.anInt1128 = var85.readLEInt();
@@ -1801,7 +1801,7 @@ final void method943(final byte var1) {
                               }
 
                               if(pktOpc == 161) {
-                                 anInt2018 = 0;
+                                 firstX = 0;
                                  pktOpc = -1;
                                  var87 = true;
                                  break label3291;
@@ -1854,10 +1854,10 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 217) {
                                  localx = gamecon.readInt();
-                                 localy = gamecon.readLEShortA();
-                                 var13 = gamecon.readLEShortA();
+                                 height = gamecon.readLEShortA();
+                                 width = gamecon.readLEShortA();
                                  var120 = Class47.method210(localx);
-                                 var120.anInt1022 = var13 + (localy << 16);
+                                 var120.anInt1022 = width + (height << 16);
                                  pktOpc = -1;
                                  var87 = true;
                                  break label3291;
@@ -1865,32 +1865,32 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 102) {
                                  localx = gamecon.readLEInt();
-                                 localy = gamecon.readUShortA();
-                                 if(localy == '\uffff')
-									localy = -1;
+                                 height = gamecon.readUShortA();
+                                 if(height == '\uffff')
+									height = -1;
 
-                                 var13 = gamecon.readInt();
+                                 width = gamecon.readInt();
                                  var120 = Class47.method210(localx);
                                  ItemDef var123;
                                  if(!var120.isHeaderless) {
-                                    if(localy == -1) {
+                                    if(height == -1) {
                                        var120.anInt1010 = 0;
                                        pktOpc = -1;
                                        var87 = true;
                                        break label3291;
                                     }
 
-                                    var123 = Class27.forId(localy);
+                                    var123 = Class27.forId(height);
                                     var120.anInt1010 = 4;
-                                    var120.anInt1011 = localy;
+                                    var120.anInt1011 = height;
                                     var120.anInt1043 = var123.anInt1426;
                                     var120.anInt1019 = var123.anInt1427;
-                                    var120.anInt1021 = (var123.anInt1425 * 100) / var13;
+                                    var120.anInt1021 = (var123.anInt1425 * 100) / width;
                                     Class79.setflags(var120);
                                  } else {
-                                    var120.anInt986 = localy;
-                                    var120.anInt1083 = var13;
-                                    var123 = Class27.forId(localy);
+                                    var120.anInt986 = height;
+                                    var120.anInt1083 = width;
+                                    var123 = Class27.forId(height);
                                     var120.anInt1043 = var123.anInt1426;
                                     var120.anInt1019 = var123.anInt1427;
                                     var120.anInt1012 = var123.anInt1446;
@@ -2023,16 +2023,16 @@ final void method943(final byte var1) {
                                  anInt2024 = 2;
                                  anInt1846 = anInt1978;
                                  var115 = false;
-                                 localy = anInt1935;
+                                 height = anInt1935;
 
-                                 while(localy > 0) {
+                                 while(height > 0) {
                                     var115 = true;
-                                    --localy;
+                                    --height;
 
-                                    for(var13 = 0; var13 < localy; ++var13) {
+                                    for(width = 0; width < height; ++width) {
                                        var98 = false;
-                                       final Class86 var121 = aClass86Array1972[var13];
-                                       final Class86 var109 = aClass86Array1972[var13 + 1];
+                                       final Class86 var121 = aClass86Array1972[width];
+                                       final Class86 var109 = aClass86Array1972[width + 1];
                                        if((var121.anInt676 != anInt1939) && (anInt1939 == var109.anInt676))
 										var98 = true;
 
@@ -2046,9 +2046,9 @@ final void method943(final byte var1) {
 										var98 = true;
 
                                        if(var98) {
-                                          var22 = aClass86Array1972[var13];
-                                          aClass86Array1972[var13] = aClass86Array1972[1 + var13];
-                                          aClass86Array1972[var13 + 1] = var22;
+                                          var22 = aClass86Array1972[width];
+                                          aClass86Array1972[width] = aClass86Array1972[1 + width];
+                                          aClass86Array1972[width + 1] = var22;
                                           var115 = false;
                                        }
                                     }
@@ -2078,14 +2078,14 @@ final void method943(final byte var1) {
                                  final long var49 = gamecon.readLELong();
                                  aString1829 = Class36.method169(var49);
                                  Class103.aByte820 = gamecon.readByte();
-                                 var13 = gamecon.readUByte();
-                                 if(var13 == 255) {
+                                 width = gamecon.readUByte();
+                                 if(width == 255) {
                                     pktOpc = -1;
                                     var87 = true;
                                     break label3291;
                                  }
 
-                                 Class89.anInt704 = var13;
+                                 Class89.anInt704 = width;
                                  final Class104_Sub7[] var119 = new Class104_Sub7[100];
 
                                  for(var15 = 0; var15 < Class89.anInt704; ++var15) {
@@ -2126,16 +2126,16 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 29) {
                                  localx = gamecon.readLEInt();
-                                 localy = gamecon.readShort();
+                                 height = gamecon.readShort();
                                  if(localx < -70000)
-									localy += '\u8000';
+									height += '\u8000';
 
                                  if(localx >= 0)
 									var92 = Class47.method210(localx);
 								else
 									var92 = null;
 
-                                 final Class104_Sub2 var118 = (Class104_Sub2)Class104_Sub2.aClass58_857.method241(localy);
+                                 final Class104_Sub2 var118 = (Class104_Sub2)Class104_Sub2.aClass58_857.method241(height);
                                  if(null != var118)
 									for(var15 = 0; var15 < var118.anIntArray856.length; ++var15) {
                                        var118.anIntArray856[var15] = -1;
@@ -2155,14 +2155,14 @@ final void method943(final byte var1) {
                                        var92.anIntArray1081[var15] = var16;
                                     }
 
-                                    Class104_Sub18_Sub16_Sub2.method809(localy, var15, var17 - 1, var16);
+                                    Class104_Sub18_Sub16_Sub2.method809(height, var15, var17 - 1, var16);
                                  }
 
                                  if(null != var92)
 									Class79.setflags(var92);
 
                                  Class66.redraw();
-                                 anIntArray1973[(++anInt1916 - 1) & 31] = localy & 32767;
+                                 anIntArray1973[(++anInt1916 - 1) & 31] = height & 32767;
                                  pktOpc = -1;
                                  var87 = true;
                                  break label3291;
@@ -2216,17 +2216,17 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 50) {
                                  localx = gamecon.readMInt();
-                                 localy = gamecon.readShort();
+                                 height = gamecon.readShort();
                                  var92 = Class47.method210(localx);
                                  if((null != var92) && (var92.anInt980 == 0)) {
-                                    if(localy > (var92.anInt994 - var92.anInt988))
-										localy = var92.anInt994 - var92.anInt988;
+                                    if(height > (var92.anInt994 - var92.anInt988))
+										height = var92.anInt994 - var92.anInt988;
 
-                                    if(localy < 0)
-										localy = 0;
+                                    if(height < 0)
+										height = 0;
 
-                                    if(localy != var92.anInt992) {
-                                       var92.anInt992 = localy;
+                                    if(height != var92.anInt992) {
+                                       var92.anInt992 = height;
                                        Class79.setflags(var92);
                                     }
                                  }
@@ -2238,14 +2238,14 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 26) {
                                  localx = gamecon.readUShortA();
-                                 localy = gamecon.readShort();
-                                 var13 = gamecon.readInt();
+                                 height = gamecon.readShort();
+                                 width = gamecon.readInt();
                                  var14 = gamecon.readShort();
-                                 final Widget var24 = Class47.method210(var13);
-                                 if((localx != var24.anInt1043) || (var14 != var24.anInt1019) || (var24.anInt1021 != localy)) {
+                                 final Widget var24 = Class47.method210(width);
+                                 if((localx != var24.anInt1043) || (var14 != var24.anInt1019) || (var24.anInt1021 != height)) {
                                     var24.anInt1043 = localx;
                                     var24.anInt1019 = var14;
-                                    var24.anInt1021 = localy;
+                                    var24.anInt1021 = height;
                                     Class79.setflags(var24);
                                  }
 
@@ -2264,8 +2264,8 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 251) {
                                  localx = gamecon.readShort();
-                                 localy = gamecon.readIntV1();
-                                 var92 = Class47.method210(localy);
+                                 height = gamecon.readIntV1();
+                                 var92 = Class47.method210(height);
                                  if((var92.anInt1010 != 1) || (localx != var92.anInt1011)) {
                                     var92.anInt1010 = 1;
                                     var92.anInt1011 = localx;
@@ -2279,12 +2279,12 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 229) {
                                  localx = gamecon.readShort();
-                                 localy = gamecon.readUByte();
-                                 var13 = gamecon.readShort();
-                                 if((anInt1827 != 0) && (localy != 0) && (anInt2028 < 50)) {
+                                 height = gamecon.readUByte();
+                                 width = gamecon.readShort();
+                                 if((anInt1827 != 0) && (height != 0) && (anInt2028 < 50)) {
                                     anIntArray2029[anInt2028] = localx;
-                                    anIntArray1875[anInt2028] = localy;
-                                    anIntArray2031[anInt2028] = var13;
+                                    anIntArray1875[anInt2028] = height;
+                                    anIntArray2031[anInt2028] = width;
                                     aClass82Array2033[anInt2028] = null;
                                     anIntArray2032[anInt2028] = 0;
                                     ++anInt2028;
@@ -2365,7 +2365,7 @@ final void method943(final byte var1) {
                                  if(localx == '\uffff')
 									localx = -1;
 
-                                 localy = gamecon.readSTribyte();
+                                 height = gamecon.readSTribyte();
                                  if((anInt2022 != 0) && (localx != -1)) {
                                     Class87.method400(Class106.aClass61_Sub1_827, localx, 0, anInt2022, false);
                                     aBool2041 = true;
@@ -2395,37 +2395,37 @@ final void method943(final byte var1) {
                                  gamecon.initbits();
                                  localx = gamecon.readbits(8);
                                  if(localx < localNpcSize)
-									for(localy = localx; localy < localNpcSize; ++localy)
-										anIntArray2048[++anInt1904 - 1] = localNpcIndicies[localy];
+									for(height = localx; height < localNpcSize; ++height)
+										anIntArray2048[++anInt1904 - 1] = localNpcIndicies[height];
 
                                  if(localx > localNpcSize)
 									throw new RuntimeException("");
 
                                  localNpcSize = 0;
 
-                                 for(localy = 0; localy < localx; ++localy) {
-                                    var13 = localNpcIndicies[localy];
-                                    final Class104_Sub18_Sub16_Sub7_Sub2 var23 = localNpcs[var13];
+                                 for(height = 0; height < localx; ++height) {
+                                    width = localNpcIndicies[height];
+                                    final Class104_Sub18_Sub16_Sub7_Sub2 var23 = localNpcs[width];
                                     var15 = gamecon.readbits(1);
                                     if(var15 == 0) {
-                                       localNpcIndicies[++localNpcSize - 1] = var13;
+                                       localNpcIndicies[++localNpcSize - 1] = width;
                                        var23.anInt1739 = currentTime;
                                     } else {
                                        var16 = gamecon.readbits(2);
                                        if(var16 == 0) {
-                                          localNpcIndicies[++localNpcSize - 1] = var13;
+                                          localNpcIndicies[++localNpcSize - 1] = width;
                                           var23.anInt1739 = currentTime;
-                                          updates[++anInt1910 - 1] = var13;
+                                          updates[++anInt1910 - 1] = width;
                                        } else if(var16 == 1) {
-                                          localNpcIndicies[++localNpcSize - 1] = var13;
+                                          localNpcIndicies[++localNpcSize - 1] = width;
                                           var23.anInt1739 = currentTime;
                                           var17 = gamecon.readbits(3);
                                           var23.step(var17, false);
                                           var18 = gamecon.readbits(1);
                                           if(var18 == 1)
-											updates[++anInt1910 - 1] = var13;
+											updates[++anInt1910 - 1] = width;
                                        } else if(var16 == 2) {
-                                          localNpcIndicies[++localNpcSize - 1] = var13;
+                                          localNpcIndicies[++localNpcSize - 1] = width;
                                           var23.anInt1739 = currentTime;
                                           var17 = gamecon.readbits(3);
                                           var23.step(var17, true);
@@ -2433,9 +2433,9 @@ final void method943(final byte var1) {
                                           var23.step(var18, true);
                                           var19 = gamecon.readbits(1);
                                           if(var19 == 1)
-											updates[++anInt1910 - 1] = var13;
+											updates[++anInt1910 - 1] = width;
                                        } else if(var16 == 3)
-										anIntArray2048[++anInt1904 - 1] = var13;
+										anIntArray2048[++anInt1904 - 1] = width;
                                     }
                                  }
 
@@ -2443,10 +2443,10 @@ final void method943(final byte var1) {
                                  Class7.method33();
 
                                  for(localx = 0; localx < anInt1904; ++localx) {
-                                    localy = anIntArray2048[localx];
-                                    if(localNpcs[localy].anInt1739 != currentTime) {
-                                       localNpcs[localy].aClass104_Sub18_Sub2_1788 = null;
-                                       localNpcs[localy] = null;
+                                    height = anIntArray2048[localx];
+                                    if(localNpcs[height].anInt1739 != currentTime) {
+                                       localNpcs[height].aClass104_Sub18_Sub2_1788 = null;
+                                       localNpcs[height] = null;
                                     }
                                  }
 
@@ -2464,8 +2464,8 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 197) {
                                  var82 = gamecon.readString();
-                                 localy = gamecon.readMInt();
-                                 var92 = Class47.method210(localy);
+                                 height = gamecon.readMInt();
+                                 var92 = Class47.method210(height);
                                  if(!var82.equals(var92.aString1025)) {
                                     var92.aString1025 = var82;
                                     Class79.setflags(var92);
@@ -2479,18 +2479,19 @@ final void method943(final byte var1) {
                               Nodee.report("" + pktOpc + "," + anInt2042 + "," + anInt1815 + "," + pktSize, (Throwable)null);
                               Class61_Sub1.method494();
                            } catch (final IOException var68) {
+                        	   var68.printStackTrace();
                               if(anInt1836 > 0)
 								Class61_Sub1.method494();
 							else {
-                                 Class10.method40(40);
+                                 Class10.setstage(40);
                                  Class57.aClass13_467 = Class20.stream;
                                  Class20.stream = null;
                               }
                            } catch (final Exception var69) {
                               var82 = "" + pktOpc + "," + anInt2042 + "," + anInt1815 + "," + pktSize + "," + (Class81.activePlayer.stepx[0] + Class53.anInt436) + "," + (Class81.activePlayer.stepy[0] + Class20.anInt206) + ",";
 
-                              for(localy = 0; (localy < pktSize) && (localy < 50); ++localy)
-								var82 = var82 + gamecon.backing[localy] + ",";
+                              for(height = 0; (height < pktSize) && (height < 50); ++height)
+								var82 = var82 + gamecon.backing[height] + ",";
 
                               Nodee.report(var82, var69);
                               Class61_Sub1.method494();
@@ -2510,40 +2511,40 @@ final void method943(final byte var1) {
                         if(!aBool1979)
 							Class2_Sub2.aClass72_865.anInt581 = 0;
 						else if((Class14.anInt100 != 0) || (Class2_Sub2.aClass72_865.anInt581 >= 40)) {
-                           secureBuf.putOpcode(72);
-                           secureBuf.writebyte(0);
+                           secureBuf.putOpcode(72); // idk window size or mouse pos
+                           secureBuf.writeByte(0);
                            map = secureBuf.pos;
                            var11 = 0;
 
                            for(localx = 0; (localx < Class2_Sub2.aClass72_865.anInt581) && ((secureBuf.pos - map) < 240); ++localx) {
                               ++var11;
-                              localy = Class2_Sub2.aClass72_865.anIntArray580[localx];
-                              if(localy < 0)
-								localy = 0;
-							else if(localy > 502)
-								localy = 502;
+                              height = Class2_Sub2.aClass72_865.anIntArray580[localx];
+                              if(height < 0)
+								height = 0;
+							else if(height > 502)
+								height = 502;
 
-                              var13 = Class2_Sub2.aClass72_865.anIntArray582[localx];
-                              if(var13 < 0)
-								var13 = 0;
-							else if(var13 > 764)
-								var13 = 764;
+                              width = Class2_Sub2.aClass72_865.anIntArray582[localx];
+                              if(width < 0)
+								width = 0;
+							else if(width > 764)
+								width = 764;
 
-                              var14 = (localy * 765) + var13;
+                              var14 = (height * 765) + width;
                               if((Class2_Sub2.aClass72_865.anIntArray580[localx] == -1) && (Class2_Sub2.aClass72_865.anIntArray582[localx] == -1)) {
-                                 var13 = -1;
-                                 localy = -1;
+                                 width = -1;
+                                 height = -1;
                                  var14 = 524287;
                               }
 
-                              if((var13 == anInt1801) && (localy == anInt1802)) {
+                              if((width == anInt1801) && (height == anInt1802)) {
                                  if(anInt1803 < 2047)
 									++anInt1803;
                               } else {
-                                 var15 = var13 - anInt1801;
-                                 anInt1801 = var13;
-                                 var16 = localy - anInt1802;
-                                 anInt1802 = localy;
+                                 var15 = width - anInt1801;
+                                 anInt1801 = width;
+                                 var16 = height - anInt1802;
+                                 anInt1802 = height;
                                  if((anInt1803 < 8) && (var15 >= -32) && (var15 <= 31) && (var16 >= -32) && (var16 <= 31)) {
                                     var15 += 32;
                                     var16 += 32;
@@ -2591,20 +2592,20 @@ final void method943(final byte var1) {
 						else if(localx > 764)
 							localx = 764;
 
-                        localy = localx + (var11 * 765);
+                        height = localx + (var11 * 765);
                         byte var128 = 0;
                         if(Class14.anInt100 == 2)
 							var128 = 1;
 
                         var14 = (int)var52;
                         secureBuf.putOpcode(161);
-                        secureBuf.writeIntV1((var14 << 20) + (var128 << 19) + localy);
+                        secureBuf.writeIntV1((var14 << 20) + (var128 << 19) + height);
                      }
 
                      if(anInt1878 > 0)
 						--anInt1878;
 
-                     if(Class25.aBoolArray249[96] || Class25.aBoolArray249[97] || Class25.aBoolArray249[98] || Class25.aBoolArray249[99])
+                     if(Class25.run[96] || Class25.run[97] || Class25.run[98] || Class25.run[99])
 						aBool1791 = true;
 
                      if(aBool1791 && (anInt1878 <= 0)) {
@@ -2618,13 +2619,13 @@ final void method943(final byte var1) {
                      if(Class100.aBool799 && !aBool1945) {
                         aBool1945 = true;
                         secureBuf.putOpcode(178);
-                        secureBuf.writebyte(1);
+                        secureBuf.writeByte(1);
                      }
 
                      if(!Class100.aBool799 && aBool1945) {
                         aBool1945 = false;
                         secureBuf.putOpcode(178);
-                        secureBuf.writebyte(0);
+                        secureBuf.writeByte(0);
                      }
 
                      if(lowmvm && (anInt1988 != Class12.myplayerHeight))
@@ -2643,38 +2644,38 @@ final void method943(final byte var1) {
                         while(true) {
                            if(localx >= 103) {
                               localx = (((238 + (int)(Math.random() * 20.0D)) - 10) << 16) + (((238 + (int)(Math.random() * 20.0D)) - 10) << 8) + ((238 + (int)(Math.random() * 20.0D)) - 10);
-                              localy = ((238 + (int)(Math.random() * 20.0D)) - 10) << 16;
+                              height = ((238 + (int)(Math.random() * 20.0D)) - 10) << 16;
                               Class104_Sub2.aClass104_Sub18_Sub17_Sub1_861.method833();
 
-                              for(var13 = 1; var13 < 103; ++var13)
+                              for(width = 1; width < 103; ++width)
 								for(var14 = 1; var14 < 103; ++var14) {
-                                    if((Class76.aByteArrayArrayArray600[var8][var14][var13] & 24) == 0)
-										Class44.method191(var8, var14, var13, localx, localy);
+                                    if((Class76.aByteArrayArrayArray600[var8][var14][width] & 24) == 0)
+										Class44.method191(var8, var14, width, localx, height);
 
-                                    if((var8 < 3) && ((Class76.aByteArrayArrayArray600[var8 + 1][var14][var13] & 8) != 0))
-										Class44.method191(var8 + 1, var14, var13, localx, localy);
+                                    if((var8 < 3) && ((Class76.aByteArrayArrayArray600[var8 + 1][var14][width] & 8) != 0))
+										Class44.method191(var8 + 1, var14, width, localx, height);
                                  }
 
                               anInt2014 = 0;
 
-                              for(var13 = 0; var13 < 104; ++var13)
+                              for(width = 0; width < 104; ++width)
 								for(var14 = 0; var14 < 104; ++var14) {
-                                    var15 = Class81.aClass17_643.method88(Class12.myplayerHeight, var13, var14);
+                                    var15 = Class81.aClass17_643.method88(Class12.myplayerHeight, width, var14);
                                     if(var15 != 0) {
                                        var15 = (var15 >> 14) & 32767;
                                        var16 = ItemDef.forId(var15).anInt1351;
                                        if(var16 >= 0) {
-                                          var17 = var13;
+                                          var17 = width;
                                           var18 = var14;
                                           if((var16 != 22) && (var16 != 29) && (var16 != 34) && (var16 != 36) && (var16 != 46) && (var16 != 47) && (var16 != 48)) {
                                              final int[][] var130 = aClass67Array1975[Class12.myplayerHeight].anIntArrayArray553;
 
                                              for(var45 = 0; var45 < 10; ++var45) {
                                                 var32 = (int)(Math.random() * 4.0D);
-                                                if((var32 == 0) && (var17 > 0) && (var17 > (var13 - 3)) && ((var130[var17 - 1][var18] & 19661064) == 0))
+                                                if((var32 == 0) && (var17 > 0) && (var17 > (width - 3)) && ((var130[var17 - 1][var18] & 19661064) == 0))
 													--var17;
 
-                                                if((var32 == 1) && (var17 < 103) && (var17 < (3 + var13)) && ((var130[var17 + 1][var18] & 19661184) == 0))
+                                                if((var32 == 1) && (var17 < 103) && (var17 < (3 + width)) && ((var130[var17 + 1][var18] & 19661184) == 0))
 													++var17;
 
                                                 if((var32 == 2) && (var18 > 0) && (var18 > (var14 - 3)) && ((var130[var17][var18 - 1] & 19661058) == 0))
@@ -2697,16 +2698,16 @@ final void method943(final byte var1) {
                               break;
                            }
 
-                           localy = (2048 * (103 - localx)) + 24628;
+                           height = (2048 * (103 - localx)) + 24628;
 
-                           for(var13 = 1; var13 < 103; ++var13) {
-                              if((Class76.aByteArrayArrayArray600[var8][var13][localx] & 24) == 0)
-								Class81.aClass17_643.method92(var71, localy, 512, var8, var13, localx);
+                           for(width = 1; width < 103; ++width) {
+                              if((Class76.aByteArrayArrayArray600[var8][width][localx] & 24) == 0)
+								Class81.aClass17_643.method92(var71, height, 512, var8, width, localx);
 
-                              if((var8 < 3) && ((Class76.aByteArrayArrayArray600[1 + var8][var13][localx] & 8) != 0))
-								Class81.aClass17_643.method92(var71, localy, 512, 1 + var8, var13, localx);
+                              if((var8 < 3) && ((Class76.aByteArrayArrayArray600[1 + var8][width][localx] & 8) != 0))
+								Class81.aClass17_643.method92(var71, height, 512, 1 + var8, width, localx);
 
-                              localy += 4;
+                              height += 4;
                            }
 
                            ++localx;
@@ -2754,17 +2755,17 @@ final void method943(final byte var1) {
                               if(anIntArray2031[var8] < 0) {
                                  if(anIntArray2032[var8] != 0) {
                                     localx = (anIntArray2032[var8] & 255) * 128;
-                                    localy = (anIntArray2032[var8] >> 16) & 255;
-                                    var13 = ((128 * localy) + 64) - Class81.activePlayer.anInt1695;
-                                    if(var13 < 0)
-										var13 = -var13;
+                                    height = (anIntArray2032[var8] >> 16) & 255;
+                                    width = ((128 * height) + 64) - Class81.activePlayer.anInt1695;
+                                    if(width < 0)
+										width = -width;
 
                                     var14 = (anIntArray2032[var8] >> 8) & 255;
                                     var15 = ((var14 * 128) + 64) - Class81.activePlayer.anInt1694;
                                     if(var15 < 0)
 										var15 = -var15;
 
-                                    var16 = (var13 + var15) - 128;
+                                    var16 = (width + var15) - 128;
                                     if(var16 > localx) {
                                        anIntArray2031[var8] = -100;
                                        continue;
@@ -2813,7 +2814,7 @@ final void method943(final byte var1) {
                            if(anInt1836 > 0)
 							Class61_Sub1.method494();
 						else {
-                              Class10.method40(40);
+                              Class10.setstage(40);
                               Class57.aClass13_467 = Class20.stream;
                               Class20.stream = null;
                            }
@@ -2858,23 +2859,23 @@ final void method943(final byte var1) {
                                        localx = Class104_Sub3.method485(var79);
                                        var113 = ((localx >> 29) & 1) != 0;
                                        if(var113) {
-                                          localy = anInt1901;
-                                          var13 = anInt1924;
-                                          var79.anIntArray1080[var13] = var79.anIntArray1080[localy];
-                                          var79.anIntArray1081[var13] = var79.anIntArray1081[localy];
-                                          var79.anIntArray1080[localy] = -1;
-                                          var79.anIntArray1081[localy] = 0;
+                                          height = anInt1901;
+                                          width = anInt1924;
+                                          var79.anIntArray1080[width] = var79.anIntArray1080[height];
+                                          var79.anIntArray1081[width] = var79.anIntArray1081[height];
+                                          var79.anIntArray1080[height] = -1;
+                                          var79.anIntArray1081[height] = 0;
                                        } else if(var134 == 1) {
-                                          localy = anInt1901;
-                                          var13 = anInt1924;
+                                          height = anInt1901;
+                                          width = anInt1924;
 
-                                          while(var13 != localy)
-											if(localy > var13) {
-                                                var79.method530(localy - 1, localy);
-                                                --localy;
-                                             } else if(localy < var13) {
-                                                var79.method530(1 + localy, localy);
-                                                ++localy;
+                                          while(width != height)
+											if(height > width) {
+                                                var79.method530(height - 1, height);
+                                                --height;
+                                             } else if(height < width) {
+                                                var79.method530(1 + height, height);
+                                                ++height;
                                              }
                                        } else
 										var79.method530(anInt1924, anInt1901);
@@ -2956,10 +2957,10 @@ final void method943(final byte var1) {
 													                  if((aClass104_Sub12_1958.anInt988 + localx) > (anInt1964 + aClass104_Sub12_2019.anInt988))
 																		localx = (anInt1964 + aClass104_Sub12_2019.anInt988) - aClass104_Sub12_1958.anInt988;
 
-													                  localy = var11 - anInt1966;
-													                  var13 = localx - anInt1967;
+													                  height = var11 - anInt1966;
+													                  width = localx - anInt1967;
 													                  var14 = aClass104_Sub12_1958.anInt1041;
-													                  if((Class89.anInt703 > aClass104_Sub12_1958.anInt1082) && ((localy > var14) || (localy < -var14) || (var13 > var14) || (var13 < -var14)))
+													                  if((Class89.anInt703 > aClass104_Sub12_1958.anInt1082) && ((height > var14) || (height < -var14) || (width > var14) || (width < -var14)))
 																		aBool1804 = true;
 
 													                  var15 = (var11 - anInt2035) + aClass104_Sub12_2019.anInt991;
@@ -3037,8 +3038,8 @@ final void method943(final byte var1) {
 													               if(aBool1930) {
 													                  if(var11 != 1) {
 													                     localx = Class14.anInt91;
-													                     localy = Class14.anInt95;
-													                     if((localx < (Class50.anInt422 - 10)) || (localx > (Class12.anInt74 + Class50.anInt422 + 10)) || (localy < (Class36.anInt349 - 10)) || (localy > (Class78.anInt627 + Class36.anInt349 + 10))) {
+													                     height = Class14.anInt95;
+													                     if((localx < (Class50.anInt422 - 10)) || (localx > (Class12.anInt74 + Class50.anInt422 + 10)) || (height < (Class36.anInt349 - 10)) || (height > (Class78.anInt627 + Class36.anInt349 + 10))) {
 													                        aBool1930 = false;
 													                        Class44.method192(Class50.anInt422, Class36.anInt349, Class12.anInt74, Class78.anInt627);
 													                     }
@@ -3046,15 +3047,15 @@ final void method943(final byte var1) {
 
 													                  if(var11 == 1) {
 													                     localx = Class50.anInt422;
-													                     localy = Class36.anInt349;
-													                     var13 = Class12.anInt74;
+													                     height = Class36.anInt349;
+													                     width = Class12.anInt74;
 													                     var14 = Class14.anInt101;
 													                     var15 = Class14.anInt102;
 													                     var16 = -1;
 
 													                     for(var17 = 0; var17 < anInt1805; ++var17) {
-													                        var18 = ((anInt1805 - 1 - var17) * 15) + 31 + localy;
-													                        if((var14 > localx) && (var14 < (var13 + localx)) && (var15 > (var18 - 13)) && (var15 < (var18 + 3)))
+													                        var18 = ((anInt1805 - 1 - var17) * 15) + 31 + height;
+													                        if((var14 > localx) && (var14 < (width + localx)) && (var15 > (var18 - 13)) && (var15 < (var18 + 3)))
 																				var16 = var17;
 													                     }
 
@@ -3070,9 +3071,9 @@ final void method943(final byte var1) {
 													                        localx = anIntArray1933[anInt1805 - 1];
 													                        if((localx == 39) || (localx == 40) || (localx == 41) || (localx == 42) || (localx == 43) || (localx == 33) || (localx == 34) || (localx == 35) || (localx == 36) || (localx == 37) || (localx == 38) || (localx == 1005))
 																				label3386: {
-																				      localy = anIntArray1931[anInt1805 - 1];
-																				      var13 = anIntArray1932[anInt1805 - 1];
-																				      var120 = Class47.method210(var13);
+																				      height = anIntArray1931[anInt1805 - 1];
+																				      width = anIntArray1932[anInt1805 - 1];
+																				      var120 = Class47.method210(width);
 																				      if(!Class39.method180(Class104_Sub3.method485(var120))) {
 																				         var16 = Class104_Sub3.method485(var120);
 																				         var106 = ((var16 >> 29) & 1) != 0;
@@ -3085,8 +3086,8 @@ final void method943(final byte var1) {
 																				      if(Class67.aClass104_Sub12_556 != null)
 																						Class79.setflags(Class67.aClass104_Sub12_556);
 
-																				      Class67.aClass104_Sub12_556 = Class47.method210(var13);
-																				      anInt1901 = localy;
+																				      Class67.aClass104_Sub12_556 = Class47.method210(width);
+																				      anInt1901 = height;
 																				      anInt1902 = Class14.anInt101;
 																				      anInt1903 = Class14.anInt102;
 																				      Class79.setflags(Class67.aClass104_Sub12_556);
@@ -3143,16 +3144,16 @@ final void method943(final byte var1) {
 													            if(localx != Class104_Sub2.anInt860)
 																	Class104_Sub2.anInt860 += (localx - Class104_Sub2.anInt860) / 16;
 
-													            if(Class25.aBoolArray249[96])
+													            if(Class25.run[96])
 																	anInt1950 += (-24 - anInt1950) / 2;
-																else if(Class25.aBoolArray249[97])
+																else if(Class25.run[97])
 																	anInt1950 += (24 - anInt1950) / 2;
 																else
 																	anInt1950 /= 2;
 
-													            if(Class25.aBoolArray249[98])
+													            if(Class25.run[98])
 																	anInt1877 += (12 - anInt1877) / 2;
-																else if(Class25.aBoolArray249[99])
+																else if(Class25.run[99])
 																	anInt1877 += (-12 - anInt1877) / 2;
 																else
 																	anInt1877 /= 2;
@@ -3165,13 +3166,13 @@ final void method943(final byte var1) {
 													            if(anInt1962 > 383)
 																	anInt1962 = 383;
 
-													            localy = Class50.anInt421 >> 7;
-													            var13 = Class104_Sub2.anInt860 >> 7;
+													            height = Class50.anInt421 >> 7;
+													            width = Class104_Sub2.anInt860 >> 7;
 													            var14 = Class47.method211(Class50.anInt421, Class104_Sub2.anInt860, Class12.myplayerHeight);
 													            var15 = 0;
-													            if((localy > 3) && (var13 > 3) && (localy < 100) && (var13 < 100))
-																	for(var16 = localy - 4; var16 <= (4 + localy); ++var16)
-																		for(var17 = var13 - 4; var17 <= (var13 + 4); ++var17) {
+													            if((height > 3) && (width > 3) && (height < 100) && (width < 100))
+																	for(var16 = height - 4; var16 <= (4 + height); ++var16)
+																		for(var17 = width - 4; var17 <= (width + 4); ++var17) {
 																	         var18 = Class12.myplayerHeight;
 																	         if((var18 < 3) && ((Class76.aByteArrayArrayArray600[1][var16][var17] & 2) == 2))
 																				++var18;
@@ -3200,8 +3201,8 @@ final void method943(final byte var1) {
 																	++anIntArray2040[var11];
 
 													            var11 = ++Class14.anInt89 - 1;
-													            localy = Class25.anInt256;
-													            if((var11 > 15000) && (localy > 15000)) {
+													            height = Class25.anInt256;
+													            if((var11 > 15000) && (height > 15000)) {
 													               anInt1836 = 250;
 													               Class104_Sub16.method553(14500);
 													               secureBuf.putOpcode(38);
@@ -3262,22 +3263,23 @@ final void method943(final byte var1) {
 													            if(anInt1921 > 10)
 																	anInt1831 = -1;
 
-													            ++anInt1835;
-													            if(anInt1835 > 50)
-																	secureBuf.putOpcode(228);
+													            ++internalCycles;
+													            if(internalCycles > 50)
+																	secureBuf.putOpcode(228); // ping
 
 													            try {
 													               if((null != Class20.stream) && (secureBuf.pos > 0)) {
+													            	   System.out.println("wrote up to "+secureBuf.pos);
 													                  Class20.stream.flushbytes(secureBuf.backing, 0, secureBuf.pos);
 													                  secureBuf.pos = 0;
-													                  anInt1835 = 0;
+													                  internalCycles = 0;
 													                  return;
 													               }
 													            } catch (final IOException var61) {
 													               if(anInt1836 > 0)
 																	Class61_Sub1.method494();
 																else {
-													                  Class10.method40(40);
+													                  Class10.setstage(40);
 													                  Class57.aClass13_467 = Class20.stream;
 													                  Class20.stream = null;
 													               }
@@ -3685,7 +3687,7 @@ final void method943(final byte var1) {
 					if (anInt1954 == 2) {
 						Class43.aClass13_374 = new Class13((Socket) Class76.aClass8_618.anObject50, aClass11_1760);
 						final RSBuf var1 = new RSBuf(5);
-						var1.writebyte(15);
+						var1.writeByte(15);
 						var1.writeInt(1);
 						Class43.aClass13_374.flushbytes(var1.backing, 0, 5);
 						++anInt1954;
@@ -3886,8 +3888,8 @@ final void method943(final byte var1) {
 		anIntArray2015 = new int[1000];
 		anIntArray2016 = new int[1000];
 		aClass104_Sub18_Sub17_Sub1Array2017 = new Sprite[1000];
-		anInt2018 = 0;
-		anInt1880 = 0;
+		firstX = 0;
+		firstY = 0;
 		anInt2021 = 0;
 		anInt2022 = 255;
 		anInt2023 = -1;
@@ -4184,7 +4186,7 @@ final void method943(final byte var1) {
 		else
 			Class104_Sub18_Sub2.drawlogin("Unexpected server response", "Please try using a different world.", "");
 	
-		Class10.method40(10);
+		Class10.setstage(10);
 	}
 
 	static void method954(final int var0, final int var1) {

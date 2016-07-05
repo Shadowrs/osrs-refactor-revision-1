@@ -89,7 +89,7 @@ public class Class88 {
 							}
 
 							Class104_Sub18_Sub2.drawlogin("", "Connecting to server...", "");
-							Class10.method40(20);
+							Class10.setstage(20);
 							return;
 						}
 
@@ -161,7 +161,7 @@ public class Class88 {
 										}
 
 										Class104_Sub18_Sub2.drawlogin("", "Connecting to server...", "");
-										Class10.method40(20);
+										Class10.setstage(20);
 										return;
 									}
 

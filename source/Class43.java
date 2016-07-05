@@ -19,13 +19,13 @@ public final class Class43 {
 				return;
 
 			buf.putOpcode(var1);
-			buf.writebyte(0);
+			buf.writeByte(0);
 			final int var3 = buf.pos;
 			buf.writeInt(var2.anInt1128);
 
 			for (int var4 = 0; var4 < var2.anInt1127; ++var4)
 				if (var2.anIntArray1129[var4] != 0)
-					buf.writebyte(var2.anIntArray1129[var4]);
+					buf.writeByte(var2.anIntArray1129[var4]);
 				else
 					try {
 						final int var5 = var2.anIntArray1132[var4];
@@ -34,16 +34,16 @@ public final class Class43 {
 						if (var5 == 0) {
 							var6 = var2.aFieldArray1126[var4];
 							var7 = var6.getInt((Object) null);
-							buf.writebyte(0);
+							buf.writeByte(0);
 							buf.writeInt(var7);
 						} else if (var5 == 1) {
 							var6 = var2.aFieldArray1126[var4];
 							var6.setInt((Object) null, var2.anIntArray1130[var4]);
-							buf.writebyte(0);
+							buf.writeByte(0);
 						} else if (var5 == 2) {
 							var6 = var2.aFieldArray1126[var4];
 							var7 = var6.getModifiers();
-							buf.writebyte(0);
+							buf.writeByte(0);
 							buf.writeInt(var7);
 						}
 
@@ -52,7 +52,7 @@ public final class Class43 {
 							if (var5 == 4) {
 								var26 = var2.aMethodArray1133[var4];
 								var7 = var26.getModifiers();
-								buf.writebyte(0);
+								buf.writeByte(0);
 								buf.writeInt(var7);
 							}
 						} else {
@@ -68,40 +68,40 @@ public final class Class43 {
 
 							final Object var12 = var26.invoke((Object) null, var9);
 							if (var12 == null)
-								buf.writebyte(0);
+								buf.writeByte(0);
 							else if (var12 instanceof Number) {
-								buf.writebyte(1);
+								buf.writeByte(1);
 								buf.writeLong(((Number) var12).longValue());
 							} else if (var12 instanceof String) {
-								buf.writebyte(2);
+								buf.writeByte(2);
 								buf.writeCompactedString((String) var12);
 							} else
-								buf.writebyte(4);
+								buf.writeByte(4);
 						}
 					} catch (final ClassNotFoundException var14) {
-						buf.writebyte(-10);
+						buf.writeByte(-10);
 					} catch (final InvalidClassException var15) {
-						buf.writebyte(-11);
+						buf.writeByte(-11);
 					} catch (final StreamCorruptedException var16) {
-						buf.writebyte(-12);
+						buf.writeByte(-12);
 					} catch (final OptionalDataException var17) {
-						buf.writebyte(-13);
+						buf.writeByte(-13);
 					} catch (final IllegalAccessException var18) {
-						buf.writebyte(-14);
+						buf.writeByte(-14);
 					} catch (final IllegalArgumentException var19) {
-						buf.writebyte(-15);
+						buf.writeByte(-15);
 					} catch (final InvocationTargetException var20) {
-						buf.writebyte(-16);
+						buf.writeByte(-16);
 					} catch (final SecurityException var21) {
-						buf.writebyte(-17);
+						buf.writeByte(-17);
 					} catch (final IOException var22) {
-						buf.writebyte(-18);
+						buf.writeByte(-18);
 					} catch (final NullPointerException var23) {
-						buf.writebyte(-19);
+						buf.writeByte(-19);
 					} catch (final Exception var24) {
-						buf.writebyte(-20);
+						buf.writeByte(-20);
 					} catch (final Throwable var25) {
-						buf.writebyte(-21);
+						buf.writeByte(-21);
 					}
 
 			buf.writeAndGetHeader(var3);

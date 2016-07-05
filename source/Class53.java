@@ -191,7 +191,7 @@ public class Class53 {
 						Class15.chat(0, "", "You can\'t add yourself to your own ignore list");
 					else {
 						client.secureBuf.putOpcode(231); // add ignore packet
-						client.secureBuf.writebyte(GameBuf.lengthOf(var0));
+						client.secureBuf.writeByte(GameBuf.lengthOf(var0));
 						client.secureBuf.writeCompactedString(var0);
 					}
 				}

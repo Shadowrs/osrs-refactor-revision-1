@@ -46,8 +46,8 @@ public class Class86 {
 						if (Class87.aByte697 != 0)
 							try {
 								final RSBuf var7 = new RSBuf(4);
-								var7.writebyte(4);
-								var7.writebyte(Class87.aByte697);
+								var7.writeByte(4);
+								var7.writeByte(Class87.aByte697);
 								var7.writeShort(0);
 								Class66.aClass13_547.flushbytes(var7.backing, 0, 4);
 							} catch (final IOException var5) {

@@ -154,7 +154,7 @@ public class Class84 {
 		if (null != Class66.aClass13_547)
 			try {
 				final RSBuf var1 = new RSBuf(4);
-				var1.writebyte(var0 ? 2 : 3);
+				var1.writeByte(var0 ? 2 : 3);
 				var1.writeTribyte(0);
 				Class66.aClass13_547.flushbytes(var1.backing, 0, 4);
 			} catch (final IOException var4) {
@@ -191,19 +191,19 @@ public class Class84 {
 							Class81.activePlayer.stepy[0], var9, var10, true, 0, 0, 0,
 							0, 0, 1);
 					if (var11) {
-						client.secureBuf.writebyte(var2);
-						client.secureBuf.writebyte(var3);
+						client.secureBuf.writeByte(var2);
+						client.secureBuf.writeByte(var3);
 						client.secureBuf.writeShort(client.anInt1866);
-						client.secureBuf.writebyte(57);
-						client.secureBuf.writebyte(client.anInt1862);
-						client.secureBuf.writebyte(client.anInt1921);
-						client.secureBuf.writebyte(89);
+						client.secureBuf.writeByte(57);
+						client.secureBuf.writeByte(client.anInt1862);
+						client.secureBuf.writeByte(client.anInt1921);
+						client.secureBuf.writeByte(89);
 						client.secureBuf
 								.writeShort(Class81.activePlayer.anInt1695);
 						client.secureBuf
 								.writeShort(Class81.activePlayer.anInt1694);
-						client.secureBuf.writebyte(client.anInt1850);
-						client.secureBuf.writebyte(63);
+						client.secureBuf.writeByte(client.anInt1850);
+						client.secureBuf.writeByte(63);
 					}
 				}
 			}

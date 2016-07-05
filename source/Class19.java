@@ -60,7 +60,7 @@ public class Class19 {
 			if (!client.lowmvm)
 				client.anInt1988 = 0;
 
-			Class10.method40(25);
+			Class10.setstage(25);
 			Class104_Sub15.drawLoading("Loading - please wait.", true);
 			int var5 = Class53.anInt436;
 			int var6 = Class20.anInt206;
@@ -139,9 +139,9 @@ public class Class19 {
 					var21.method470();
 			}
 
-			if (client.anInt2018 != 0) {
-				client.anInt2018 -= var7;
-				client.anInt1880 -= var8;
+			if (client.firstX != 0) {
+				client.firstX -= var7;
+				client.firstY -= var8;
 			}
 
 			client.anInt2028 = 0;

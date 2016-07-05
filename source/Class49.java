@@ -307,7 +307,7 @@ public class Class49 {
 					while ((Class87.anInt684 < 20) && (Class87.anInt682 > 0)) {
 						var3 = (Class104_Sub18_Sub13) Class87.aClass58_681.method245();
 						var4 = new RSBuf(4);
-						var4.writebyte(1);
+						var4.writeByte(1);
 						var4.writeTribyte((int) var3.nodeId);
 						Class66.aClass13_547.flushbytes(var4.backing, 0, 4);
 						Class87.aClass58_683.method242(var3, var3.nodeId);
@@ -318,7 +318,7 @@ public class Class49 {
 					while ((Class87.anInt692 < 20) && (Class87.anInt687 > 0)) {
 						var3 = (Class104_Sub18_Sub13) Class87.aClass63_685.method293();
 						var4 = new RSBuf(4);
-						var4.writebyte(0);
+						var4.writeByte(0);
 						var4.writeTribyte((int) var3.nodeId);
 						Class66.aClass13_547.flushbytes(var4.backing, 0, 4);
 						var3.method555();
@@ -384,7 +384,7 @@ public class Class49 {
 								Class48.aClass104_Sub18_Sub13_410 = var15;
 								Class87.aClass104_Sub21_691 = new RSBuf(
 										var16 + var12 + Class48.aClass104_Sub18_Sub13_410.aByte1459);
-								Class87.aClass104_Sub21_691.writebyte(var11);
+								Class87.aClass104_Sub21_691.writeByte(var11);
 								Class87.aClass104_Sub21_691.writeInt(var12);
 								Class87.anInt696 = 8;
 								Class87.aClass104_Sub21_690.pos = 0;

@@ -8,9 +8,9 @@ public class Class104_Sub2 extends Class104 {
 	int[] anIntArray858 = new int[] { 0 };
 
 	static final void method479(final boolean var0) {
-		if ((client.anInt2018 == (Class81.activePlayer.anInt1695 >> 7))
-				&& (client.anInt1880 == (Class81.activePlayer.anInt1694 >> 7)))
-			client.anInt2018 = 0;
+		if ((client.firstX == (Class81.activePlayer.anInt1695 >> 7))
+				&& (client.firstY == (Class81.activePlayer.anInt1694 >> 7)))
+			client.firstX = 0;
 
 		int var1 = client.localPlrSize;
 		if (var0)

@@ -9,7 +9,7 @@ public final class Class25 implements KeyListener, FocusListener {
 	public static int anInt245 = 0;
 	public static int anInt255 = 0;
 	public static Class25 aClass25_248 = new Class25();
-	public static boolean[] aBoolArray249 = new boolean[112];
+	public static boolean[] run = new boolean[112];
 	public static int[] anIntArray250 = new int[128];
 	public static int anInt247 = 0;
 	public static char[] aCharArray252 = new char[128];

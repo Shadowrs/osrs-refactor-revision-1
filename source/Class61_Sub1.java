@@ -291,6 +291,6 @@ public class Class61_Sub1 extends Class61 {
 		}
 
 		Class104_Sub1.aClass59_849.method247();
-		Class10.method40(10);
+		Class10.setstage(10);
 	}
 }

@@ -1,21 +1,22 @@
 import java.awt.Canvas;
 
 public class Class10 {
-	static void method40(final int var0) {
-		if (client.loadstage != var0) {
+	
+	static void setstage(final int newstep) {
+		if (client.loadstage != newstep) {
 			if (client.loadstage == 0) {
 				Class54.anImage449 = null;
 				Class50.aFont420 = null;
 				Class104_Sub18_Sub15.aFontMetrics1466 = null;
 			}
 
-			if ((var0 == 20) || (var0 == 40)) {
+			if ((newstep == 20) || (newstep == 40)) {
 				client.step = 0;
 				client.anInt1824 = 0;
 				client.anInt1968 = 0;
 			}
 
-			if ((var0 != 20) && (var0 != 40) && (null != Class57.aClass13_467)) {
+			if ((newstep != 20) && (newstep != 40) && (null != Class57.aClass13_467)) {
 				Class57.aClass13_467.destory();
 				Class57.aClass13_467 = null;
 			}
@@ -28,7 +29,7 @@ public class Class10 {
 				client.anInt1844 = 1;
 			}
 
-			if ((var0 != 5) && (var0 != 10) && (var0 != 20))
+			if ((newstep != 5) && (newstep != 10) && (newstep != 20))
 				Class48.method216();
 			else {
 				final Canvas var1 = Class57.aCanvas468;
@@ -126,7 +127,7 @@ public class Class10 {
 				}
 			}
 
-			client.loadstage = var0;
+			client.loadstage = newstep;
 		}
 	}
 }

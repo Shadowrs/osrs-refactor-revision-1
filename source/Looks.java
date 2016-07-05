@@ -83,19 +83,19 @@ public class Looks {
 	}
 
 	public void writeAppearance(final RSBuf var1) {
-		var1.writebyte(female ? 1 : 0);
+		var1.writeByte(female ? 1 : 0);
 
 		int var2;
 		for (var2 = 0; var2 < 7; ++var2) {
 			final int var3 = clothes[curCloth[var2]];
 			if (var3 == 0)
-				var1.writebyte(-1);
+				var1.writeByte(-1);
 			else
-				var1.writebyte(var3 - 256);
+				var1.writeByte(var3 - 256);
 		}
 
 		for (var2 = 0; var2 < 5; ++var2)
-			var1.writebyte(skin[var2]);
+			var1.writeByte(skin[var2]);
 
 	}
 

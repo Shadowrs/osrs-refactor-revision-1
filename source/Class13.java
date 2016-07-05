@@ -52,7 +52,7 @@ public final class Class13 implements Runnable {
 						aBool81 = true;
 					}
 
-					anInt84 = (anInt84 + var4) % 5000;
+					anInt84 = (anInt84 + var4) % 5000; // until full
 
 					try {
 						if (anInt85 == anInt84)

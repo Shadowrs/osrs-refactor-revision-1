@@ -207,8 +207,8 @@ public class Class70 {
 			try {
 				final JagFS var33 = new JagFS(Class24.settings, "rw", 10000L);
 				final RSBuf var31 = new RSBuf(500);
-				var31.writebyte(3);
-				var31.writebyte(null != var8 ? 1 : 0);
+				var31.writeByte(3);
+				var31.writeByte(null != var8 ? 1 : 0);
 				var31.writeSpecialString(var26.getPath());
 				var33.method417(var31.backing, 0, var31.pos);
 				var33.close();
