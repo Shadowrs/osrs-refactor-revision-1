@@ -108,7 +108,7 @@ public class Class97 {
 		client.aClass58_1795.method242(var3, var0);
 		Class80.empty(var1);
 		Class88.handleCSCodes(var1);
-		final Widget var4 = Class47.method210(var0);
+		final Widget var4 = Class47.forHash(var0);
 		if (var4 != null)
 			Class79.setflags(var4);
 
@@ -139,7 +139,7 @@ public class Class97 {
 			final int var5 = var4 & 31;
 			final int var6 = (var4 >> 6) & 3;
 			if ((var5 != 10) && (var5 != 11) && (var5 != 22))
-				Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+				Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 						Class81.activePlayer.stepy[0], var0, var1, true, 1 + var5, var6,
 						0, 0, 0, 2);
 			else {
@@ -158,7 +158,7 @@ public class Class97 {
 				if (var6 != 0)
 					var10 = (var10 >> (4 - var6)) + ((var10 << var6) & 15);
 
-				Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+				Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 						Class81.activePlayer.stepy[0], var0, var1, true, 0, 0, var8,
 						var9, var10, 2);
 			}

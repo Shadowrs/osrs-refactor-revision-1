@@ -191,7 +191,7 @@ public final class Class13 implements Runnable {
 		}
 
 		Class90.method408(var2);
-		final Widget var6 = Class47.method210(var3);
+		final Widget var6 = Class47.forHash(var3);
 		if (null != var6)
 			Class79.setflags(var6);
 

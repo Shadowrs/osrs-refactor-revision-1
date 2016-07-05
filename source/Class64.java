@@ -74,7 +74,7 @@ public class Class64 implements Runnable {
 					Class81.aClass17_643.method79(var0, var2, var3);
 					var12 = ItemDef.forId(var13);
 					if (var12.anInt1363 != 0)
-						client.aClass67Array1975[var0].method309(var2, var3, var14, var15, var12.aBool1340);
+						client.region[var0].method309(var2, var3, var14, var15, var12.aBool1340);
 				}
 
 				if (var1 == 1)
@@ -88,7 +88,7 @@ public class Class64 implements Runnable {
 						return;
 
 					if (var12.anInt1363 != 0)
-						client.aClass67Array1975[var0].method315(var2, var3, var12.anInt1365, var12.anInt1339, var15,
+						client.region[var0].method315(var2, var3, var12.anInt1365, var12.anInt1339, var15,
 								var12.aBool1340);
 				}
 
@@ -96,7 +96,7 @@ public class Class64 implements Runnable {
 					Class81.aClass17_643.method82(var0, var2, var3);
 					var12 = ItemDef.forId(var13);
 					if (var12.anInt1363 == 1)
-						client.aClass67Array1975[var0].method310(var2, var3);
+						client.region[var0].method310(var2, var3);
 				}
 			}
 
@@ -106,7 +106,7 @@ public class Class64 implements Runnable {
 					var11 = var0 + 1;
 
 				Class28.method139(var0, var11, var2, var3, var4, var5, var6, Class81.aClass17_643,
-						client.aClass67Array1975[var0]);
+						client.region[var0]);
 			}
 		}
 

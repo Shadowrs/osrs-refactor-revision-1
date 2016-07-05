@@ -264,7 +264,7 @@ public class Class61_Sub1 extends Class61 {
 		Class81.aClass17_643.method69();
 
 		for (int var0 = 0; var0 < 4; ++var0)
-			client.aClass67Array1975[var0].method304();
+			client.region[var0].method304();
 
 		System.gc();
 		Class29.anInt272 = 1;

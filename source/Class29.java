@@ -21,7 +21,7 @@ public class Class29 {
 	}
 
 	public static Widget method141(final int var0, final int var1) {
-		final Widget var2 = Class47.method210(var0);
+		final Widget var2 = Class47.forHash(var0);
 		return var1 == -1 ? var2
 				: ((var2 != null) && (null != var2.aClass104_Sub12Array1020)
 						&& (var1 < var2.aClass104_Sub12Array1020.length) ? var2.aClass104_Sub12Array1020[var1] : null);

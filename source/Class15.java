@@ -50,7 +50,7 @@ public class Class15 {
 		for (int var6 = 0; var6 < client.localPlrSize; ++var6) {
 			final Player var7 = client.localPlayers[client.localPlayerIndexs[var6]];
 			if ((null != var7) && (var7.myName != null) && var7.myName.equalsIgnoreCase(var3)) {
-				Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+				Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 						Class81.activePlayer.stepy[0], var7.stepx[0],
 						var7.stepy[0], false, 0, 0, 1, 1, 0, 2);
 				if (var0 == 1) {
@@ -136,7 +136,7 @@ public class Class15 {
 
 				if ((type == 1) && (null != var3.anObjectArray1073)) {
 					if (var3.anInt1018 >= 0) {
-						final Widget var6 = Class47.method210(var3.anInt978);
+						final Widget var6 = Class47.forHash(var3.anInt978);
 						if ((var6 == null) || (null == var6.aClass104_Sub12Array1020)
 								|| (var3.anInt1018 >= var6.aClass104_Sub12Array1020.length)
 								|| (var6.aClass104_Sub12Array1020[var3.anInt1018] != var3))

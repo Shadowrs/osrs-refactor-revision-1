@@ -12,14 +12,14 @@ public final class Class43 {
 	static Class13 aClass13_374;
 	static int anInt375;
 
-	public static void writeClasscheckPacket(final GameBuf buf, final int var1) {
+	public static void writeClasscheckPacket(final GameBuf buf, final int opcode) {
 		while (true) {
 			final Class104_Sub16 var2 = (Class104_Sub16) Class105.aClass59_825.method251();
 			if (null == var2)
 				return;
 
-			buf.putOpcode(var1);
-			buf.writeByte(0);
+			buf.putOpcode(opcode); // 108
+			buf.writeByte(0); // var byte
 			final int var3 = buf.pos;
 			buf.writeInt(var2.anInt1128);
 
@@ -105,7 +105,7 @@ public final class Class43 {
 					}
 
 			buf.writeAndGetHeader(var3);
-			buf.method613(buf.pos - var3);
+			buf.endVarBytePacket(buf.pos - var3);
 			var2.method470();
 		}
 	}

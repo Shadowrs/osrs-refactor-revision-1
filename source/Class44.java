@@ -222,7 +222,7 @@ public final class Class44 {
 					break;
 				}
 
-				var1 = Class47.method210(var1.anInt1091);
+				var1 = Class47.forHash(var1.anInt1091);
 				if (var1 == null) {
 					var3 = null;
 					break;

@@ -49,7 +49,7 @@ public class Class26 {
 					if (var6 == 4) {
 						var9 = var2[var4++] << 16;
 						var9 += var2[var4++];
-						var10 = Class47.method210(var9);
+						var10 = Class47.forHash(var9);
 						var11 = var2[var4++];
 						if ((var11 != -1) && (!Class27.forId(var11).aBool1440 || client.aBool1852))
 							for (var12 = 0; var12 < var10.anIntArray1080.length; ++var12)
@@ -77,7 +77,7 @@ public class Class26 {
 					if (var6 == 10) {
 						var9 = var2[var4++] << 16;
 						var9 += var2[var4++];
-						var10 = Class47.method210(var9);
+						var10 = Class47.forHash(var9);
 						var11 = var2[var4++];
 						if ((var11 != -1) && (!Class27.forId(var11).aBool1440 || client.aBool1852))
 							for (var12 = 0; var12 < var10.anIntArray1080.length; ++var12)

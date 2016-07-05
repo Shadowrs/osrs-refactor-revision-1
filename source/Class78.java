@@ -19,7 +19,7 @@ public class Class78 {
 			if (var3 == 45) {
 				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -37,7 +37,7 @@ public class Class78 {
 				client.secureBuf.writeIntV1(var2);
 				client.secureBuf.writeLEShort(var4);
 				client.anInt1899 = 0;
-				Class30.aClass104_Sub12_288 = Class47.method210(var2);
+				Class30.widgetx = Class47.forHash(var2);
 				client.anInt1900 = var1;
 			}
 
@@ -45,7 +45,7 @@ public class Class78 {
 			if (var3 == 8) {
 				var11 = client.localNpcs[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var11.stepx[0],
 							var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -62,7 +62,7 @@ public class Class78 {
 			if (var3 == 51) {
 				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -79,7 +79,7 @@ public class Class78 {
 			if (var3 == 28) {
 				client.secureBuf.putOpcode(155);
 				client.secureBuf.writeInt(var2);
-				var12 = Class47.method210(var2);
+				var12 = Class47.forHash(var2);
 				if ((null != var12.anIntArrayArray1069) && (var12.anIntArrayArray1069[0][0] == 5)) {
 					var6 = var12.anIntArrayArray1069[0][1];
 					Class71.anIntArray576[var6] = 1 - Class71.anIntArray576[var6];
@@ -105,7 +105,7 @@ public class Class78 {
 				client.secureBuf.writeLEShort(var1);
 				client.secureBuf.writeLEInt(Class14.anInt105);
 				client.anInt1899 = 0;
-				Class30.aClass104_Sub12_288 = Class47.method210(var2);
+				Class30.widgetx = Class47.forHash(var2);
 				client.anInt1900 = var1;
 			}
 
@@ -121,7 +121,7 @@ public class Class78 {
 			if (var3 == 47) {
 				var5 = client.localPlayers[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -141,14 +141,14 @@ public class Class78 {
 				client.secureBuf.writeIntV1(var2);
 				client.secureBuf.writeIntV1(anInt628);
 				client.anInt1899 = 0;
-				Class30.aClass104_Sub12_288 = Class47.method210(var2);
+				Class30.widgetx = Class47.forHash(var2);
 				client.anInt1900 = var1;
 			}
 
 			if (var3 == 46) {
 				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -162,11 +162,11 @@ public class Class78 {
 
 			boolean var7;
 			if (var3 == 20) {
-				var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+				var7 = Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 						Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
@@ -183,7 +183,7 @@ public class Class78 {
 			if (var3 == 12) {
 				var11 = client.localNpcs[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var11.stepx[0],
 							var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -198,7 +198,7 @@ public class Class78 {
 			if (var3 == 14) {
 				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -228,14 +228,14 @@ public class Class78 {
 				client.secureBuf.writeLEInt(var2);
 				client.secureBuf.writeLEShortA(var4);
 				client.anInt1899 = 0;
-				Class30.aClass104_Sub12_288 = Class47.method210(var2);
+				Class30.widgetx = Class47.forHash(var2);
 				client.anInt1900 = var1;
 			}
 
 			if (var3 == 50) {
 				var5 = client.localPlayers[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -250,7 +250,7 @@ public class Class78 {
 			if (var3 == 29) {
 				client.secureBuf.putOpcode(155);
 				client.secureBuf.writeInt(var2);
-				var12 = Class47.method210(var2);
+				var12 = Class47.forHash(var2);
 				if ((null != var12.anIntArrayArray1069) && (var12.anIntArrayArray1069[0][0] == 5)) {
 					var6 = var12.anIntArrayArray1069[0][1];
 					if (var12.anIntArray1076[0] != Class71.anIntArray576[var6]) {
@@ -263,7 +263,7 @@ public class Class78 {
 			if (var3 == 48) {
 				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -281,7 +281,7 @@ public class Class78 {
 				client.secureBuf.writeLEShortA(var4);
 				client.secureBuf.writeLEShortA(var1);
 				client.anInt1899 = 0;
-				Class30.aClass104_Sub12_288 = Class47.method210(var2);
+				Class30.widgetx = Class47.forHash(var2);
 				client.anInt1900 = var1;
 			}
 
@@ -306,7 +306,7 @@ public class Class78 {
 			if (var3 == 15) {
 				var5 = client.localPlayers[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -321,11 +321,11 @@ public class Class78 {
 			}
 
 			if (var3 == 18) {
-				var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+				var7 = Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 						Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
@@ -348,11 +348,11 @@ public class Class78 {
 			}
 
 			if (var3 == 16) {
-				var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+				var7 = Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 						Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
@@ -397,7 +397,7 @@ public class Class78 {
 				client.secureBuf.writeInt(var2);
 				client.secureBuf.writeShortA(var1);
 				client.anInt1899 = 0;
-				Class30.aClass104_Sub12_288 = Class47.method210(var2);
+				Class30.widgetx = Class47.forHash(var2);
 				client.anInt1900 = var1;
 			}
 
@@ -407,7 +407,7 @@ public class Class78 {
 			if (var3 == 44) {
 				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -420,11 +420,11 @@ public class Class78 {
 			}
 
 			if (var3 == 22) {
-				var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+				var7 = Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 						Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
@@ -439,7 +439,7 @@ public class Class78 {
 			}
 
 			if (var3 == 24) {
-				var12 = Class47.method210(var2);
+				var12 = Class47.forHash(var2);
 				boolean var13 = true;
 				if (var12.anInt982 > 0)
 					var13 = Class104_Sub20.method559(var12);
@@ -453,7 +453,7 @@ public class Class78 {
 			if (var3 == 9) {
 				var11 = client.localNpcs[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var11.stepx[0],
 							var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -468,7 +468,7 @@ public class Class78 {
 			if (var3 == 49) {
 				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
@@ -525,14 +525,14 @@ public class Class78 {
 					client.secureBuf.writeInt(var2);
 					client.secureBuf.writeShort(var4);
 					client.anInt1899 = 0;
-					Class30.aClass104_Sub12_288 = Class47.method210(var2);
+					Class30.widgetx = Class47.forHash(var2);
 					client.anInt1900 = var1;
 				}
 
 				if (var3 == 10) {
 					var11 = client.localNpcs[var4];
 					if (var11 != null) {
-						Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 								Class81.activePlayer.stepy[0], var11.stepx[0],
 								var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
@@ -550,7 +550,7 @@ public class Class78 {
 					client.secureBuf.writeShortA(var4);
 					client.secureBuf.writeLEInt(var2);
 					client.anInt1899 = 0;
-					Class30.aClass104_Sub12_288 = Class47.method210(var2);
+					Class30.widgetx = Class47.forHash(var2);
 					client.anInt1900 = var1;
 				}
 
@@ -560,7 +560,7 @@ public class Class78 {
 					client.secureBuf.writeLEInt(var2);
 					client.secureBuf.writeShortA(var1);
 					client.anInt1899 = 0;
-					Class30.aClass104_Sub12_288 = Class47.method210(var2);
+					Class30.widgetx = Class47.forHash(var2);
 					client.anInt1900 = var1;
 				}
 
@@ -585,7 +585,7 @@ public class Class78 {
 				if (var3 == 13) {
 					var11 = client.localNpcs[var4];
 					if (null != var11) {
-						Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 								Class81.activePlayer.stepy[0], var11.stepx[0],
 								var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
@@ -600,7 +600,7 @@ public class Class78 {
 				if (var3 == 11) {
 					var11 = client.localNpcs[var4];
 					if (null != var11) {
-						Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 								Class81.activePlayer.stepy[0], var11.stepx[0],
 								var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
@@ -613,11 +613,11 @@ public class Class78 {
 				}
 
 				if (var3 == 17) {
-					var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+					var7 = Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0,
 							0, 0, 2);
 					if (!var7)
-						Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 								Class81.activePlayer.stepy[0], var1, var2, false, 0, 0,
 								1, 1, 0, 2);
 
@@ -643,7 +643,7 @@ public class Class78 {
 
 				if (var3 == 38) {
 					Class26.method132();
-					var12 = Class47.method210(var2);
+					var12 = Class47.forHash(var2);
 					client.anInt1941 = 1;
 					Class7.anInt44 = var1;
 					Class14.anInt105 = var2;
@@ -688,16 +688,16 @@ public class Class78 {
 						client.secureBuf.writeShortA(var1);
 						client.secureBuf.writeLEShort(var4);
 						client.anInt1899 = 0;
-						Class30.aClass104_Sub12_288 = Class47.method210(var2);
+						Class30.widgetx = Class47.forHash(var2);
 						client.anInt1900 = var1;
 					}
 
 					if (var3 == 19) {
-						var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						var7 = Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 								Class81.activePlayer.stepy[0], var1, var2, false, 0, 0,
 								0, 0, 0, 2);
 						if (!var7)
-							Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 									Class81.activePlayer.stepy[0], var1, var2, false, 0,
 									0, 1, 1, 0, 2);
 
@@ -717,12 +717,12 @@ public class Class78 {
 						client.secureBuf.writeIntV1(var2);
 						client.secureBuf.writeLEShort(var1);
 						client.anInt1899 = 0;
-						Class30.aClass104_Sub12_288 = Class47.method210(var2);
+						Class30.widgetx = Class47.forHash(var2);
 						client.anInt1900 = var1;
 					}
 
 					if (var3 == 1005) {
-						var12 = Class47.method210(var2);
+						var12 = Class47.forHash(var2);
 						if ((null != var12) && (var12.anIntArray1081[var1] >= 100000))
 							Class15.chat(0, "",
 									var12.anIntArray1081[var1] + " x " + Class27.forId(var4).aString1444);
@@ -732,14 +732,14 @@ public class Class78 {
 						}
 
 						client.anInt1899 = 0;
-						Class30.aClass104_Sub12_288 = Class47.method210(var2);
+						Class30.widgetx = Class47.forHash(var2);
 						client.anInt1900 = var1;
 					}
 
 					if (var3 == 7) {
 						var11 = client.localNpcs[var4];
 						if (null != var11) {
-							Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 									Class81.activePlayer.stepy[0],
 									var11.stepx[0], var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 							client.anInt1895 = Class14.anInt101;
@@ -755,11 +755,11 @@ public class Class78 {
 					}
 
 					if (var3 == 21) {
-						var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						var7 = Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 								Class81.activePlayer.stepy[0], var1, var2, false, 0, 0,
 								0, 0, 0, 2);
 						if (!var7)
-							Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class104_Sub13.pathfind(Class81.activePlayer.stepx[0],
 									Class81.activePlayer.stepy[0], var1, var2, false, 0,
 									0, 1, 1, 0, 2);
 
@@ -779,35 +779,35 @@ public class Class78 {
 						client.secureBuf.writeIntV1(var2);
 						client.secureBuf.writeLEShort(var4);
 						client.anInt1899 = 0;
-						Class30.aClass104_Sub12_288 = Class47.method210(var2);
+						Class30.widgetx = Class47.forHash(var2);
 						client.anInt1900 = var1;
 					}
 
 					if (client.anInt1941 != 0) {
 						client.anInt1941 = 0;
-						Class79.setflags(Class47.method210(Class14.anInt105));
+						Class79.setflags(Class47.forHash(Class14.anInt105));
 					}
 
 					if (client.aBool1943)
 						Class26.method132();
 
-					if ((Class30.aClass104_Sub12_288 != null) && (client.anInt1899 == 0))
-						Class79.setflags(Class30.aClass104_Sub12_288);
+					if ((Class30.widgetx != null) && (client.anInt1899 == 0))
+						Class79.setflags(Class30.widgetx);
 
 				}
 			}
 		}
 	}
 
-	public static Class method347(final String var0) throws ClassNotFoundException {
-		return var0.equals("B") ? Byte.TYPE
-				: (var0.equals("I") ? Integer.TYPE
-						: (var0.equals("S") ? Short.TYPE
-								: (var0.equals("J") ? Long.TYPE
-										: (var0.equals("Z") ? Boolean.TYPE
-												: (var0.equals("F") ? Float.TYPE
-														: (var0.equals("D") ? Double.TYPE
-																: (var0.equals("C") ? Character.TYPE
-																		: Class.forName(var0))))))));
+	public static Class classForPrefix(final String p) throws ClassNotFoundException {
+		return p.equals("B") ? Byte.TYPE
+				: (p.equals("I") ? Integer.TYPE
+						: (p.equals("S") ? Short.TYPE
+								: (p.equals("J") ? Long.TYPE
+										: (p.equals("Z") ? Boolean.TYPE
+												: (p.equals("F") ? Float.TYPE
+														: (p.equals("D") ? Double.TYPE
+																: (p.equals("C") ? Character.TYPE
+																		: Class.forName(p))))))));
 	}
 }

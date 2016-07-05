@@ -7,9 +7,9 @@ public abstract class Class47 {
 
 	abstract void method209(byte[] var1, int var2);
 
-	public static Widget method210(final int var0) {
-		final int var1 = var0 >> 16;
-		final int var2 = var0 & '\uffff';
+	public static Widget forHash(final int hash) {
+		final int var1 = hash >> 16;
+		final int var2 = hash & '\uffff';
 		if ((null == Class22.widgets[var1])
 				|| (Class22.widgets[var1][var2] == null)) {
 			final boolean var3 = Class104_Sub7.loaded(var1);

@@ -260,7 +260,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeInt(ObjectDefinition.aClass61_Sub1_1374.anInt489);
 				client.loginbuf.writeInt(Class100.aClass61_Sub1_800.anInt489);
 				client.loginbuf.applyIsaac(issackeys, var3, client.loginbuf.pos);
-				client.loginbuf.writeShortLE(client.loginbuf.pos - var2);
+				client.loginbuf.endVarShortPacket(client.loginbuf.pos - var2);
 				Class20.stream.flushbytes(client.loginbuf.backing, 0, client.loginbuf.pos);
 				client.secureBuf.setisaac(issackeys);
 

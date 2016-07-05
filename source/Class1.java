@@ -12,7 +12,7 @@ public abstract class Class1 {
 		for (int var9 = 0; var9 < 8; ++var9)
 			for (var10 = 0; var10 < 8; ++var10)
 				if (((var9 + var2) > 0) && ((var9 + var2) < 103) && ((var10 + var3) > 0) && ((var10 + var3) < 103))
-					var8[var1].anIntArrayArray553[var9 + var2][var10 + var3] &= -16777217;
+					var8[var1].clipmasks[var9 + var2][var10 + var3] &= -16777217;
 
 		final RSBuf var11 = new RSBuf(var0);
 
@@ -79,7 +79,7 @@ public abstract class Class1 {
 			for (var7 = 0; var7 < 64; ++var7)
 				for (var8 = 0; var8 < 64; ++var8)
 					if (((var1 + var7) > 0) && ((var7 + var1) < 103) && ((var8 + var2) > 0) && ((var8 + var2) < 103))
-						var5[var6].anIntArrayArray553[var1 + var7][var2 + var8] &= -16777217;
+						var5[var6].clipmasks[var1 + var7][var2 + var8] &= -16777217;
 
 		final RSBuf var9 = new RSBuf(var0);
 

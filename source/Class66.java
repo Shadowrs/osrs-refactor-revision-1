@@ -1280,7 +1280,7 @@ public class Class66 {
 																	Class79.setflags(var35);
 																}
 															}
-														} else if ((Class30.aClass104_Sub12_288 == var10)
+														} else if ((Class30.widgetx == var10)
 																&& (var21 == client.anInt1900))
 															var80.method844(var24, var25, 128);
 														else
@@ -1651,7 +1651,7 @@ public class Class66 {
 
 				if (!var2) {
 					var4 = (int) var0.nodeId;
-					final Widget var5 = Class47.method210(var4);
+					final Widget var5 = Class47.forHash(var4);
 					if (var5 != null)
 						Class79.setflags(var5);
 				}

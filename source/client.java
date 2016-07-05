@@ -145,13 +145,13 @@ public final class client extends Applet_Sub1 {
 	static GameBuf loginbuf = new GameBuf(5000);
 	static GameBuf gamecon = new GameBuf(5000);
 	static int anInt1988 = 0;
-	static Class67[] aClass67Array1975 = new Class67[4];
+	static Class67[] region = new Class67[4];
 	static boolean dynamicRegion = false;
 	static int[][][] anIntArrayArrayArray1848 = new int[4][13][13];
 	static int[] anIntArray1849 = new int[] { 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3 };
 	static int anInt1850 = 0;
 	static int[][] anIntArrayArray1907 = new int[104][104];
-	static int[][] anIntArrayArray1822 = new int[104][104];
+	static int[][] clips = new int[104][104];
 	static int[] stepx = new int[4000];
 	static int[] stepy = new int[4000];
 	static int anInt1796 = 1;
@@ -622,7 +622,7 @@ final void method943(final byte var1) {
                      System.gc();
 
                      for(map = 0; map < 4; ++map)
-						aClass67Array1975[map].method304();
+						region[map].method304();
 
                      for(map = 0; map < 4; ++map)
 						for(var11 = 0; var11 < 104; ++var11)
@@ -667,7 +667,7 @@ final void method943(final byte var1) {
                            var12 = Class104_Sub15.terrainData[var11];
                            if(null != var12) {
                               Class101.method465();
-                              Class1.method16(var12, localx, height, (Class54.anInt447 * 8) - 48, (FSManager.anInt761 * 8) - 48, aClass67Array1975);
+                              Class1.method16(var12, localx, height, (Class54.anInt447 * 8) - 48, (FSManager.anInt761 * 8) - 48, region);
                            }
                         }
 
@@ -689,7 +689,7 @@ final void method943(final byte var1) {
                               height = ((Class47.mapCoordinates[var11] >> 8) * 64) - Class53.anInt436;
                               width = ((Class47.mapCoordinates[var11] & 255) * 64) - Class20.anInt206;
                               Class101.method465();
-                              Class105.method472(var6, height, width, Class81.aClass17_643, aClass67Array1975);
+                              Class105.method472(var6, height, width, Class81.aClass17_643, region);
                            }
                         }
                      }
@@ -728,7 +728,7 @@ final void method943(final byte var1) {
 
                                           for(var19 = 0; var19 < Class47.mapCoordinates.length; ++var19)
 											if((var18 == Class47.mapCoordinates[var19]) && (null != Class70.landscapedata[var19])) {
-                                                Class7.method34(Class70.landscapedata[var19], var11, localx * 8, 8 * height, var14, (var16 & 7) * 8, (var17 & 7) * 8, var15, Class81.aClass17_643, aClass67Array1975);
+                                                Class7.method34(Class70.landscapedata[var19], var11, localx * 8, 8 * height, var14, (var16 & 7) * 8, (var17 & 7) * 8, var15, Class81.aClass17_643, region);
                                                 break;
                                              }
                                        }
@@ -753,7 +753,7 @@ final void method943(final byte var1) {
 
                                     for(var20 = 0; var20 < Class47.mapCoordinates.length; ++var20)
 										if((var19 == Class47.mapCoordinates[var20]) && (Class104_Sub15.terrainData[var20] != null)) {
-										      Class1.method14(Class104_Sub15.terrainData[var20], var11, 8 * localx, 8 * height, var15, (var17 & 7) * 8, 8 * (var18 & 7), var16, aClass67Array1975);
+										      Class1.method14(Class104_Sub15.terrainData[var20], var11, 8 * localx, 8 * height, var15, (var17 & 7) * 8, 8 * (var18 & 7), var16, region);
 										      var95 = true;
 										      break;
 										   }
@@ -792,7 +792,7 @@ final void method943(final byte var1) {
                      Class20.writePkt228(true);
                      Class33.method158();
                      Class101.method465();
-                     Class104_Sub18_Sub14.method785(Class81.aClass17_643, aClass67Array1975);
+                     Class104_Sub18_Sub14.method785(Class81.aClass17_643, region);
                      Class20.writePkt228(true);
                      var11 = Class76.anInt601;
                      if(var11 > Class12.myplayerHeight)
@@ -990,7 +990,7 @@ final void method943(final byte var1) {
                               if(pktOpc == 176) {
                                  localx = gamecon.readULEShortA();
                                  height = gamecon.readLEInt();
-                                 var92 = Class47.method210(height);
+                                 var92 = Class47.forHash(height);
                                  if((localx != var92.anInt1058) || (localx == -1)) {
                                     var92.anInt1058 = localx;
                                     var92.anInt974 = 0;
@@ -1270,7 +1270,7 @@ final void method943(final byte var1) {
                                  var14 = (height >> 5) & 31;
                                  var15 = height & 31;
                                  var16 = (width << 19) + (var14 << 11) + (var15 << 3);
-                                 final Widget var122 = Class47.method210(localx);
+                                 final Widget var122 = Class47.forHash(localx);
                                  if(var122.anInt1017 != var16) {
                                     var122.anInt1017 = var16;
                                     Class79.setflags(var122);
@@ -1285,7 +1285,7 @@ final void method943(final byte var1) {
                                  localx = gamecon.readUShortLE();
                                  height = gamecon.method611();
                                  width = gamecon.readInt();
-                                 var120 = Class47.method210(width);
+                                 var120 = Class47.forHash(width);
                                  var15 = height + var120.anInt985;
                                  var16 = var120.anInt975 + localx;
                                  if((var15 != var120.anInt983) || (var120.anInt1005 != var16)) {
@@ -1370,7 +1370,7 @@ final void method943(final byte var1) {
 									height += '\u8000';
 
                                  if(localx >= 0)
-									var92 = Class47.method210(localx);
+									var92 = Class47.forHash(localx);
 								else
 									var92 = null;
 
@@ -1471,7 +1471,7 @@ final void method943(final byte var1) {
                               if(pktOpc == 84) {
                                  localx = gamecon.readInt();
                                  var103 = gamecon.readUByteS() == 1;
-                                 var92 = Class47.method210(localx);
+                                 var92 = Class47.forHash(localx);
                                  if(var103 != var92.aBool1075) {
                                     var92.aBool1075 = var103;
                                     Class79.setflags(var92);
@@ -1540,7 +1540,7 @@ final void method943(final byte var1) {
                               if(pktOpc == 66) {
                                  localx = gamecon.readIntV1();
                                  height = gamecon.readUShortA();
-                                 var92 = Class47.method210(localx);
+                                 var92 = Class47.forHash(localx);
                                  if((var92.anInt1010 != 2) || (height != var92.anInt1011)) {
                                     var92.anInt1010 = 2;
                                     var92.anInt1011 = height;
@@ -1598,7 +1598,7 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 117) {
                                  localx = gamecon.readInt();
-                                 var7 = Class47.method210(localx);
+                                 var7 = Class47.forHash(localx);
 
                                  for(width = 0; width < var7.anIntArray1080.length; ++width) {
                                     var7.anIntArray1080[width] = -1;
@@ -1766,9 +1766,9 @@ final void method943(final byte var1) {
                                              final Class[] var31 = new Class[var18];
 
                                              for(var45 = 0; var45 < var18; ++var45)
-												var31[var45] = Class78.method347(var43[var45]);
+												var31[var45] = Class78.classForPrefix(var43[var45]);
 
-                                             var99.aMethodArray1133[var14] = Class78.method347(var110).getDeclaredMethod(str0, var31);
+                                             var99.aMethodArray1133[var14] = Class78.classForPrefix(var110).getDeclaredMethod(str0, var31);
                                              var99.aByteArrayArrayArray1131[var14] = var135;
                                           }
                                        } else {
@@ -1780,7 +1780,7 @@ final void method943(final byte var1) {
 
                                           var99.anIntArray1132[var14] = var15;
                                           var99.anIntArray1130[var14] = var18;
-                                          var99.aFieldArray1126[var14] = Class78.method347(var110).getDeclaredField(str0);
+                                          var99.aFieldArray1126[var14] = Class78.classForPrefix(var110).getDeclaredField(str0);
                                        }
                                     } catch (final ClassNotFoundException var63) {
                                        var99.anIntArray1129[var14] = -1;
@@ -1856,7 +1856,7 @@ final void method943(final byte var1) {
                                  localx = gamecon.readInt();
                                  height = gamecon.readLEShortA();
                                  width = gamecon.readLEShortA();
-                                 var120 = Class47.method210(localx);
+                                 var120 = Class47.forHash(localx);
                                  var120.anInt1022 = width + (height << 16);
                                  pktOpc = -1;
                                  var87 = true;
@@ -1870,7 +1870,7 @@ final void method943(final byte var1) {
 									height = -1;
 
                                  width = gamecon.readInt();
-                                 var120 = Class47.method210(localx);
+                                 var120 = Class47.forHash(localx);
                                  ItemDef var123;
                                  if(!var120.isHeaderless) {
                                     if(height == -1) {
@@ -2131,7 +2131,7 @@ final void method943(final byte var1) {
 									height += '\u8000';
 
                                  if(localx >= 0)
-									var92 = Class47.method210(localx);
+									var92 = Class47.forHash(localx);
 								else
 									var92 = null;
 
@@ -2217,7 +2217,7 @@ final void method943(final byte var1) {
                               if(pktOpc == 50) {
                                  localx = gamecon.readMInt();
                                  height = gamecon.readShort();
-                                 var92 = Class47.method210(localx);
+                                 var92 = Class47.forHash(localx);
                                  if((null != var92) && (var92.anInt980 == 0)) {
                                     if(height > (var92.anInt994 - var92.anInt988))
 										height = var92.anInt994 - var92.anInt988;
@@ -2241,7 +2241,7 @@ final void method943(final byte var1) {
                                  height = gamecon.readShort();
                                  width = gamecon.readInt();
                                  var14 = gamecon.readShort();
-                                 final Widget var24 = Class47.method210(width);
+                                 final Widget var24 = Class47.forHash(width);
                                  if((localx != var24.anInt1043) || (var14 != var24.anInt1019) || (var24.anInt1021 != height)) {
                                     var24.anInt1043 = localx;
                                     var24.anInt1019 = var14;
@@ -2265,7 +2265,7 @@ final void method943(final byte var1) {
                               if(pktOpc == 251) {
                                  localx = gamecon.readShort();
                                  height = gamecon.readIntV1();
-                                 var92 = Class47.method210(height);
+                                 var92 = Class47.forHash(height);
                                  if((var92.anInt1010 != 1) || (localx != var92.anInt1011)) {
                                     var92.anInt1010 = 1;
                                     var92.anInt1011 = localx;
@@ -2329,7 +2329,7 @@ final void method943(final byte var1) {
 
                               if(pktOpc == 171) {
                                  localx = gamecon.readMInt();
-                                 var7 = Class47.method210(localx);
+                                 var7 = Class47.forHash(localx);
                                  var7.anInt1010 = 3;
                                  var7.anInt1011 = Class81.activePlayer.appearance.method390();
                                  Class79.setflags(var7);
@@ -2465,7 +2465,7 @@ final void method943(final byte var1) {
                               if(pktOpc == 197) {
                                  var82 = gamecon.readString();
                                  height = gamecon.readMInt();
-                                 var92 = Class47.method210(height);
+                                 var92 = Class47.forHash(height);
                                  if(!var82.equals(var92.aString1025)) {
                                     var92.aString1025 = var82;
                                     Class79.setflags(var92);
@@ -2560,7 +2560,7 @@ final void method943(final byte var1) {
                               }
                            }
 
-                           secureBuf.method613(secureBuf.pos - map);
+                           secureBuf.endVarBytePacket(secureBuf.pos - map);
                            if(var11 >= Class2_Sub2.aClass72_865.anInt581)
 							Class2_Sub2.aClass72_865.anInt581 = 0;
 						else {
@@ -2668,7 +2668,7 @@ final void method943(final byte var1) {
                                           var17 = width;
                                           var18 = var14;
                                           if((var16 != 22) && (var16 != 29) && (var16 != 34) && (var16 != 36) && (var16 != 46) && (var16 != 47) && (var16 != 48)) {
-                                             final int[][] var130 = aClass67Array1975[Class12.myplayerHeight].anIntArrayArray553;
+                                             final int[][] var130 = region[Class12.myplayerHeight].clipmasks;
 
                                              for(var45 = 0; var45 < 10; ++var45) {
                                                 var32 = (int)(Math.random() * 4.0D);
@@ -2829,11 +2829,11 @@ final void method943(final byte var1) {
 								anInt1898 = 0;
                            }
 
-                           if(null != Class30.aClass104_Sub12_288) {
+                           if(null != Class30.widgetx) {
                               ++anInt1899;
                               if(anInt1899 >= 15) {
-                                 Class79.setflags(Class30.aClass104_Sub12_288);
-                                 Class30.aClass104_Sub12_288 = null;
+                                 Class79.setflags(Class30.widgetx);
+                                 Class30.widgetx = null;
                               }
                            }
 
@@ -2999,7 +2999,7 @@ final void method943(final byte var1) {
 													                                 if(var20 >= var19)
 																						break;
 
-													                                 var136 = Class47.method210(var136.anInt1091);
+													                                 var136 = Class47.forHash(var136.anInt1091);
 													                                 if(var136 == null) {
 													                                    var22 = null;
 													                                    break;
@@ -3023,7 +3023,7 @@ final void method943(final byte var1) {
 													            if(Class17.anInt117 != -1) {
 													               var11 = Class17.anInt117;
 													               localx = Class17.anInt159;
-													               var103 = Class104_Sub13.method543(Class81.activePlayer.stepx[0], Class81.activePlayer.stepy[0], var11, localx, true, 0, 0, 0, 0, 0, 0);
+													               var103 = Class104_Sub13.pathfind(Class81.activePlayer.stepx[0], Class81.activePlayer.stepy[0], var11, localx, true, 0, 0, 0, 0, 0, 0);
 													               Class17.anInt117 = -1;
 													               if(var103) {
 													                  anInt1895 = Class14.anInt101;
@@ -3073,7 +3073,7 @@ final void method943(final byte var1) {
 																				label3386: {
 																				      height = anIntArray1931[anInt1805 - 1];
 																				      width = anIntArray1932[anInt1805 - 1];
-																				      var120 = Class47.method210(width);
+																				      var120 = Class47.forHash(width);
 																				      if(!Class39.method180(Class104_Sub3.method485(var120))) {
 																				         var16 = Class104_Sub3.method485(var120);
 																				         var106 = ((var16 >> 29) & 1) != 0;
@@ -3086,7 +3086,7 @@ final void method943(final byte var1) {
 																				      if(Class67.aClass104_Sub12_556 != null)
 																						Class79.setflags(Class67.aClass104_Sub12_556);
 
-																				      Class67.aClass104_Sub12_556 = Class47.method210(width);
+																				      Class67.aClass104_Sub12_556 = Class47.forHash(width);
 																				      anInt1901 = height;
 																				      anInt1902 = Class14.anInt101;
 																				      anInt1903 = Class14.anInt102;
@@ -3294,7 +3294,7 @@ final void method943(final byte var1) {
 													         if(var97.anInt1018 < 0)
 																break;
 
-													         var7 = Class47.method210(var97.anInt1091);
+													         var7 = Class47.forHash(var97.anInt1091);
 													      } while((null == var7) || (null == var7.aClass104_Sub12Array1020) || (var97.anInt1018 >= var7.aClass104_Sub12Array1020.length) || (var97 != var7.aClass104_Sub12Array1020[var97.anInt1018]));
 
 													      Class46.doCS(cs1);
@@ -3304,7 +3304,7 @@ final void method943(final byte var1) {
                                                 if(var97.anInt1018 < 0)
 													break;
 
-                                                var7 = Class47.method210(var97.anInt1091);
+                                                var7 = Class47.forHash(var97.anInt1091);
                                              } while((var7 == null) || (var7.aClass104_Sub12Array1020 == null) || (var97.anInt1018 >= var7.aClass104_Sub12Array1020.length) || (var97 != var7.aClass104_Sub12Array1020[var97.anInt1018]));
 
                                              Class46.doCS(cs1);
@@ -3314,7 +3314,7 @@ final void method943(final byte var1) {
                                        if(var97.anInt1018 < 0)
 										break;
 
-                                       var7 = Class47.method210(var97.anInt1091);
+                                       var7 = Class47.forHash(var97.anInt1091);
                                     } while((var7 == null) || (null == var7.aClass104_Sub12Array1020) || (var97.anInt1018 >= var7.aClass104_Sub12Array1020.length) || (var97 != var7.aClass104_Sub12Array1020[var97.anInt1018]));
 
                                     Class46.doCS(cs1);

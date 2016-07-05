@@ -424,7 +424,7 @@ public class RSBuf extends Class104 {
 		backing[pos - var1 - 1] = (byte) var1;
 	}
 
-	public void writeShortLE(final int var1) {
+	public void endVarShortPacket(final int var1) {
 		backing[pos - var1 - 2] = (byte) (var1 >> 8);
 		backing[pos - var1 - 1] = (byte) var1;
 	}
@@ -445,7 +445,7 @@ public class RSBuf extends Class104 {
 		backing[++pos - 1] = (byte) (var1 >> 16);
 	}
 
-	public void method613(final int var1) {
+	public void endVarBytePacket(final int var1) {
 		backing[pos - var1 - 1] = (byte) var1;
 	}
 

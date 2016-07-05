@@ -45,6 +45,7 @@ public class Class104_Sub15 extends Class104 {
 		int updateFlag;
 		if (needsUpdate != 0) {
 			movetype = client.gamecon.readbits(2);
+			System.out.println("my move update: "+movetype);
 			if (movetype == 0)
 				client.updates[++client.anInt1910 - 1] = 2047;
 			else if (movetype == 1) {

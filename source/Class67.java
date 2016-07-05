@@ -5,7 +5,7 @@ public class Class67 {
 	int anInt550 = 0;
 	int anInt551;
 	int anInt554;
-	public int[][] anIntArrayArray553;
+	public int[][] clipmasks;
 
 	public void method303(int var1, int var2, final int var3, final int var4, final boolean var5) {
 		var1 -= anInt552;
@@ -158,9 +158,9 @@ public class Class67 {
 		for (int var1 = 0; var1 < anInt551; ++var1)
 			for (int var2 = 0; var2 < anInt554; ++var2)
 				if ((var1 != 0) && (var2 != 0) && (var1 < (anInt551 - 5)) && (var2 < (anInt554 - 5)))
-					anIntArrayArray553[var1][var2] = 16777216;
+					clipmasks[var1][var2] = 16777216;
 				else
-					anIntArrayArray553[var1][var2] = 16777215;
+					clipmasks[var1][var2] = 16777215;
 
 	}
 
@@ -177,37 +177,37 @@ public class Class67 {
 					if (((var3 - 1) == var1) && (var4 == var2))
 						return true;
 
-					if ((var1 == var3) && (var2 == (var4 + 1)) && ((anIntArrayArray553[var1][var2] & 19661088) == 0))
+					if ((var1 == var3) && (var2 == (var4 + 1)) && ((clipmasks[var1][var2] & 19661088) == 0))
 						return true;
 
-					if ((var3 == var1) && (var2 == (var4 - 1)) && ((anIntArrayArray553[var1][var2] & 19661058) == 0))
+					if ((var3 == var1) && (var2 == (var4 - 1)) && ((clipmasks[var1][var2] & 19661058) == 0))
 						return true;
 				} else if (var6 == 1) {
 					if ((var1 == var3) && (var2 == (var4 + 1)))
 						return true;
 
-					if ((var1 == (var3 - 1)) && (var4 == var2) && ((anIntArrayArray553[var1][var2] & 19661064) == 0))
+					if ((var1 == (var3 - 1)) && (var4 == var2) && ((clipmasks[var1][var2] & 19661064) == 0))
 						return true;
 
-					if ((var1 == (1 + var3)) && (var2 == var4) && ((anIntArrayArray553[var1][var2] & 19661184) == 0))
+					if ((var1 == (1 + var3)) && (var2 == var4) && ((clipmasks[var1][var2] & 19661184) == 0))
 						return true;
 				} else if (var6 == 2) {
 					if (((var3 + 1) == var1) && (var4 == var2))
 						return true;
 
-					if ((var3 == var1) && ((var4 + 1) == var2) && ((anIntArrayArray553[var1][var2] & 19661088) == 0))
+					if ((var3 == var1) && ((var4 + 1) == var2) && ((clipmasks[var1][var2] & 19661088) == 0))
 						return true;
 
-					if ((var1 == var3) && (var2 == (var4 - 1)) && ((anIntArrayArray553[var1][var2] & 19661058) == 0))
+					if ((var1 == var3) && (var2 == (var4 - 1)) && ((clipmasks[var1][var2] & 19661058) == 0))
 						return true;
 				} else if (var6 == 3) {
 					if ((var1 == var3) && ((var4 - 1) == var2))
 						return true;
 
-					if (((var3 - 1) == var1) && (var4 == var2) && ((anIntArrayArray553[var1][var2] & 19661064) == 0))
+					if (((var3 - 1) == var1) && (var4 == var2) && ((clipmasks[var1][var2] & 19661064) == 0))
 						return true;
 
-					if (((1 + var3) == var1) && (var2 == var4) && ((anIntArrayArray553[var1][var2] & 19661184) == 0))
+					if (((1 + var3) == var1) && (var2 == var4) && ((clipmasks[var1][var2] & 19661184) == 0))
 						return true;
 				}
 
@@ -219,13 +219,13 @@ public class Class67 {
 					if ((var1 == var3) && (var2 == (var4 + 1)))
 						return true;
 
-					if (((var3 + 1) == var1) && (var4 == var2) && ((anIntArrayArray553[var1][var2] & 19661184) == 0))
+					if (((var3 + 1) == var1) && (var4 == var2) && ((clipmasks[var1][var2] & 19661184) == 0))
 						return true;
 
-					if ((var3 == var1) && (var2 == (var4 - 1)) && ((anIntArrayArray553[var1][var2] & 19661058) == 0))
+					if ((var3 == var1) && (var2 == (var4 - 1)) && ((clipmasks[var1][var2] & 19661058) == 0))
 						return true;
 				} else if (var6 == 1) {
-					if ((var1 == (var3 - 1)) && (var2 == var4) && ((anIntArrayArray553[var1][var2] & 19661064) == 0))
+					if ((var1 == (var3 - 1)) && (var2 == var4) && ((clipmasks[var1][var2] & 19661064) == 0))
 						return true;
 
 					if ((var3 == var1) && (var2 == (var4 + 1)))
@@ -234,13 +234,13 @@ public class Class67 {
 					if (((var3 + 1) == var1) && (var2 == var4))
 						return true;
 
-					if ((var3 == var1) && (var2 == (var4 - 1)) && ((anIntArrayArray553[var1][var2] & 19661058) == 0))
+					if ((var3 == var1) && (var2 == (var4 - 1)) && ((clipmasks[var1][var2] & 19661058) == 0))
 						return true;
 				} else if (var6 == 2) {
-					if ((var1 == (var3 - 1)) && (var2 == var4) && ((anIntArrayArray553[var1][var2] & 19661064) == 0))
+					if ((var1 == (var3 - 1)) && (var2 == var4) && ((clipmasks[var1][var2] & 19661064) == 0))
 						return true;
 
-					if ((var3 == var1) && ((var4 + 1) == var2) && ((anIntArrayArray553[var1][var2] & 19661088) == 0))
+					if ((var3 == var1) && ((var4 + 1) == var2) && ((clipmasks[var1][var2] & 19661088) == 0))
 						return true;
 
 					if (((var3 + 1) == var1) && (var4 == var2))
@@ -252,10 +252,10 @@ public class Class67 {
 					if (((var3 - 1) == var1) && (var4 == var2))
 						return true;
 
-					if ((var1 == var3) && (var2 == (var4 + 1)) && ((anIntArrayArray553[var1][var2] & 19661088) == 0))
+					if ((var1 == var3) && (var2 == (var4 + 1)) && ((clipmasks[var1][var2] & 19661088) == 0))
 						return true;
 
-					if ((var1 == (1 + var3)) && (var2 == var4) && ((anIntArrayArray553[var1][var2] & 19661184) == 0))
+					if ((var1 == (1 + var3)) && (var2 == var4) && ((clipmasks[var1][var2] & 19661184) == 0))
 						return true;
 
 					if ((var3 == var1) && ((var4 - 1) == var2))
@@ -263,16 +263,16 @@ public class Class67 {
 				}
 
 			if (var5 == 9) {
-				if ((var1 == var3) && (var2 == (var4 + 1)) && ((anIntArrayArray553[var1][var2] & 32) == 0))
+				if ((var1 == var3) && (var2 == (var4 + 1)) && ((clipmasks[var1][var2] & 32) == 0))
 					return true;
 
-				if ((var1 == var3) && ((var4 - 1) == var2) && ((anIntArrayArray553[var1][var2] & 2) == 0))
+				if ((var1 == var3) && ((var4 - 1) == var2) && ((clipmasks[var1][var2] & 2) == 0))
 					return true;
 
-				if ((var1 == (var3 - 1)) && (var2 == var4) && ((anIntArrayArray553[var1][var2] & 8) == 0))
+				if ((var1 == (var3 - 1)) && (var2 == var4) && ((clipmasks[var1][var2] & 8) == 0))
 					return true;
 
-				if ((var1 == (1 + var3)) && (var2 == var4) && ((anIntArrayArray553[var1][var2] & 128) == 0))
+				if ((var1 == (1 + var3)) && (var2 == var4) && ((clipmasks[var1][var2] & 128) == 0))
 					return true;
 			}
 
@@ -299,11 +299,11 @@ public class Class67 {
 	public void method307(int var1, int var2) {
 		var1 -= anInt552;
 		var2 -= anInt550;
-		anIntArrayArray553[var1][var2] |= 2097152;
+		clipmasks[var1][var2] |= 2097152;
 	}
 
 	void method308(final int var1, final int var2, final int var3) {
-		anIntArrayArray553[var1][var2] |= var3;
+		clipmasks[var1][var2] |= var3;
 	}
 
 	public void method309(int var1, int var2, final int var3, final int var4, final boolean var5) {
@@ -456,7 +456,7 @@ public class Class67 {
 	public void method310(int var1, int var2) {
 		var1 -= anInt552;
 		var2 -= anInt550;
-		anIntArrayArray553[var1][var2] &= -262145;
+		clipmasks[var1][var2] &= -262145;
 	}
 
 	public boolean method311(int var1, int var2, int var3, int var4, final int var5, int var6) {
@@ -472,43 +472,43 @@ public class Class67 {
 					var6 = (2 + var6) & 3;
 
 				if (var6 == 0) {
-					if (((var3 + 1) == var1) && (var4 == var2) && ((anIntArrayArray553[var1][var2] & 128) == 0))
+					if (((var3 + 1) == var1) && (var4 == var2) && ((clipmasks[var1][var2] & 128) == 0))
 						return true;
 
-					if ((var1 == var3) && ((var4 - 1) == var2) && ((anIntArrayArray553[var1][var2] & 2) == 0))
+					if ((var1 == var3) && ((var4 - 1) == var2) && ((clipmasks[var1][var2] & 2) == 0))
 						return true;
 				} else if (var6 == 1) {
-					if (((var3 - 1) == var1) && (var4 == var2) && ((anIntArrayArray553[var1][var2] & 8) == 0))
+					if (((var3 - 1) == var1) && (var4 == var2) && ((clipmasks[var1][var2] & 8) == 0))
 						return true;
 
-					if ((var1 == var3) && (var2 == (var4 - 1)) && ((anIntArrayArray553[var1][var2] & 2) == 0))
+					if ((var1 == var3) && (var2 == (var4 - 1)) && ((clipmasks[var1][var2] & 2) == 0))
 						return true;
 				} else if (var6 == 2) {
-					if ((var1 == (var3 - 1)) && (var4 == var2) && ((anIntArrayArray553[var1][var2] & 8) == 0))
+					if ((var1 == (var3 - 1)) && (var4 == var2) && ((clipmasks[var1][var2] & 8) == 0))
 						return true;
 
-					if ((var3 == var1) && (var2 == (var4 + 1)) && ((anIntArrayArray553[var1][var2] & 32) == 0))
+					if ((var3 == var1) && (var2 == (var4 + 1)) && ((clipmasks[var1][var2] & 32) == 0))
 						return true;
 				} else if (var6 == 3) {
-					if ((var1 == (1 + var3)) && (var4 == var2) && ((anIntArrayArray553[var1][var2] & 128) == 0))
+					if ((var1 == (1 + var3)) && (var4 == var2) && ((clipmasks[var1][var2] & 128) == 0))
 						return true;
 
-					if ((var3 == var1) && (var2 == (1 + var4)) && ((anIntArrayArray553[var1][var2] & 32) == 0))
+					if ((var3 == var1) && (var2 == (1 + var4)) && ((clipmasks[var1][var2] & 32) == 0))
 						return true;
 				}
 			}
 
 			if (var5 == 8) {
-				if ((var1 == var3) && (var2 == (var4 + 1)) && ((anIntArrayArray553[var1][var2] & 32) == 0))
+				if ((var1 == var3) && (var2 == (var4 + 1)) && ((clipmasks[var1][var2] & 32) == 0))
 					return true;
 
-				if ((var3 == var1) && (var2 == (var4 - 1)) && ((anIntArrayArray553[var1][var2] & 2) == 0))
+				if ((var3 == var1) && (var2 == (var4 - 1)) && ((clipmasks[var1][var2] & 2) == 0))
 					return true;
 
-				if (((var3 - 1) == var1) && (var2 == var4) && ((anIntArrayArray553[var1][var2] & 8) == 0))
+				if (((var3 - 1) == var1) && (var2 == var4) && ((clipmasks[var1][var2] & 8) == 0))
 					return true;
 
-				if ((var1 == (1 + var3)) && (var4 == var2) && ((anIntArrayArray553[var1][var2] & 128) == 0))
+				if ((var1 == (1 + var3)) && (var4 == var2) && ((clipmasks[var1][var2] & 128) == 0))
 					return true;
 			}
 
@@ -522,21 +522,21 @@ public class Class67 {
 		final int var9 = (var4 + var6) - 1;
 		return (var1 >= var3) && (var1 <= var8) && (var2 >= var4) && (var2 <= var9) ? true
 				: ((var1 == (var3 - 1)) && (var2 >= var4) && (var2 <= var9)
-						&& ((anIntArrayArray553[var1 - anInt552][var2 - anInt550] & 8) == 0) && ((var7 & 8) == 0)
+						&& ((clipmasks[var1 - anInt552][var2 - anInt550] & 8) == 0) && ((var7 & 8) == 0)
 								? true
 								: ((var1 == (1 + var8)) && (var2 >= var4) && (var2 <= var9)
-										&& ((anIntArrayArray553[var1 - anInt552][var2 - anInt550] & 128) == 0)
+										&& ((clipmasks[var1 - anInt552][var2 - anInt550] & 128) == 0)
 										&& ((var7
 												& 2) == 0)
 														? true
 														: ((var2 == (var4 - 1)) && (var1 >= var3) && (var1 <= var8)
-																&& ((anIntArrayArray553[var1 - anInt552][var2
+																&& ((clipmasks[var1 - anInt552][var2
 																		- anInt550] & 2) == 0)
 																&& ((var7 & 4) == 0)
 																		? true
 																		: ((1 + var9) == var2) && (var1 >= var3)
 																				&& (var1 <= var8)
-																				&& ((anIntArrayArray553[var1
+																				&& ((clipmasks[var1
 																						- anInt552][var2 - anInt550]
 																						& 32) == 0)
 																				&& ((var7 & 1) == 0))));
@@ -545,11 +545,11 @@ public class Class67 {
 	public void method313(int var1, int var2) {
 		var1 -= anInt552;
 		var2 -= anInt550;
-		anIntArrayArray553[var1][var2] |= 262144;
+		clipmasks[var1][var2] |= 262144;
 	}
 
 	void method314(final int var1, final int var2, final int var3) {
-		anIntArrayArray553[var1][var2] &= ~var3;
+		clipmasks[var1][var2] &= ~var3;
 	}
 
 	public void method315(int var1, int var2, int var3, int var4, final int var5, final boolean var6) {
@@ -577,7 +577,7 @@ public class Class67 {
 	public Class67(final int var1, final int var2) {
 		anInt551 = var1;
 		anInt554 = var2;
-		anIntArrayArray553 = new int[anInt551][anInt554];
+		clipmasks = new int[anInt551][anInt554];
 		method304();
 	}
 

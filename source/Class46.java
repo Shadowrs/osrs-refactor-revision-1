@@ -383,7 +383,7 @@ public class Class46 {
 							if (var24 == 0)
 								throw new RuntimeException();
 
-							var23 = Class47.method210(var15);
+							var23 = Class47.forHash(var15);
 							if (null == var23.aClass104_Sub12Array1020)
 								var23.aClass104_Sub12Array1020 = new Widget[1 + var17];
 
@@ -416,7 +416,7 @@ public class Class46 {
 
 						if (var44 == 101) {
 							var21 = var49 ? Class27.aClass104_Sub12_262 : Class84.aClass104_Sub12_660;
-							final Widget var71 = Class47.method210(var21.anInt978);
+							final Widget var71 = Class47.forHash(var21.anInt978);
 							var71.aClass104_Sub12Array1020[var21.anInt1018] = null;
 							Class79.setflags(var71);
 							continue;
@@ -424,7 +424,7 @@ public class Class46 {
 
 						if (var44 == 102) {
 							--var4;
-							var21 = Class47.method210(Class90.anIntArray706[var4]);
+							var21 = Class47.forHash(Class90.anIntArray706[var4]);
 							var21.aClass104_Sub12Array1020 = null;
 							Class79.setflags(var21);
 							continue;
@@ -451,7 +451,7 @@ public class Class46 {
 						if (var44 >= 2000) {
 							var44 -= 1000;
 							--var4;
-							var21 = Class47.method210(Class90.anIntArray706[var4]);
+							var21 = Class47.forHash(Class90.anIntArray706[var4]);
 						} else
 							var21 = var49 ? Class27.aClass104_Sub12_262 : Class84.aClass104_Sub12_660;
 
@@ -487,7 +487,7 @@ public class Class46 {
 								if (var44 >= 2000) {
 									var44 -= 1000;
 									--var4;
-									var21 = Class47.method210(Class90.anIntArray706[var4]);
+									var21 = Class47.forHash(Class90.anIntArray706[var4]);
 								} else
 									var21 = var49 ? Class27.aClass104_Sub12_262 : Class84.aClass104_Sub12_660;
 
@@ -529,7 +529,7 @@ public class Class46 {
 									if (var44 >= 2000) {
 										var44 -= 1000;
 										--var4;
-										var21 = Class47.method210(Class90.anIntArray706[var4]);
+										var21 = Class47.forHash(Class90.anIntArray706[var4]);
 									} else
 										var21 = var49 ? Class27.aClass104_Sub12_262 : Class84.aClass104_Sub12_660;
 
@@ -773,7 +773,7 @@ public class Class46 {
 									}
 								} else if (var44 < 2600) {
 									--var4;
-									var21 = Class47.method210(Class90.anIntArray706[var4]);
+									var21 = Class47.forHash(Class90.anIntArray706[var4]);
 									if (var44 == 2500) {
 										Class90.anIntArray706[var4++] = var21.anInt983;
 										continue;
@@ -805,7 +805,7 @@ public class Class46 {
 									}
 								} else if (var44 < 2700) {
 									--var4;
-									var21 = Class47.method210(Class90.anIntArray706[var4]);
+									var21 = Class47.forHash(Class90.anIntArray706[var4]);
 									if (var44 == 2600) {
 										Class90.anIntArray706[var4++] = var21.anInt991;
 										continue;
@@ -853,14 +853,14 @@ public class Class46 {
 								} else if (var44 < 2800) {
 									if (var44 == 2700) {
 										--var4;
-										var21 = Class47.method210(Class90.anIntArray706[var4]);
+										var21 = Class47.forHash(Class90.anIntArray706[var4]);
 										Class90.anIntArray706[var4++] = var21.anInt986;
 										continue;
 									}
 
 									if (var44 == 2701) {
 										--var4;
-										var21 = Class47.method210(Class90.anIntArray706[var4]);
+										var21 = Class47.forHash(Class90.anIntArray706[var4]);
 										if (var21.anInt986 != -1)
 											Class90.anIntArray706[var4++] = var21.anInt1083;
 										else
@@ -881,7 +881,7 @@ public class Class46 {
 									}
 								} else if (var44 < 2900) {
 									--var4;
-									var21 = Class47.method210(Class90.anIntArray706[var4]);
+									var21 = Class47.forHash(Class90.anIntArray706[var4]);
 									if (var44 == 2800) {
 										Class90.anIntArray706[var4++] = Class101
 												.method464(Class104_Sub3.method485(var21));
@@ -986,7 +986,7 @@ public class Class46 {
 										var15 = Class90.anIntArray706[var4];
 										var24 = Class90.anIntArray706[1 + var4];
 										var17 = Class90.anIntArray706[2 + var4];
-										var23 = Class47.method210(var17);
+										var23 = Class47.forHash(var17);
 										Class61.method279(var23, var15, var24);
 										continue;
 									}
@@ -2367,7 +2367,7 @@ public class Class46 {
 												client.secureBuf.writeByte(var66);
 												Class41.method183(client.secureBuf, var80);
 												client.secureBuf
-														.method613(client.secureBuf.pos - var19);
+														.endVarBytePacket(client.secureBuf.pos - var19);
 											}
 											continue;
 										}
@@ -2382,7 +2382,7 @@ public class Class46 {
 											client.secureBuf.writeCompactedString(var80);
 											Class41.method183(client.secureBuf, var16);
 											client.secureBuf
-													.writeShortLE(client.secureBuf.pos - var17);
+													.endVarShortPacket(client.secureBuf.pos - var17);
 											continue;
 										}
 
@@ -2440,7 +2440,7 @@ public class Class46 {
 								if (var44 >= 2000) {
 									var44 -= 1000;
 									--var4;
-									var21 = Class47.method210(Class90.anIntArray706[var4]);
+									var21 = Class47.forHash(Class90.anIntArray706[var4]);
 								} else
 									var21 = var49 ? Class27.aClass104_Sub12_262 : Class84.aClass104_Sub12_660;
 
@@ -2504,7 +2504,7 @@ public class Class46 {
 							if (var44 >= 2000) {
 								var44 -= 1000;
 								--var4;
-								var21 = Class47.method210(Class90.anIntArray706[var4]);
+								var21 = Class47.forHash(Class90.anIntArray706[var4]);
 							} else
 								var21 = var49 ? Class27.aClass104_Sub12_262 : Class84.aClass104_Sub12_660;
 
@@ -2824,7 +2824,7 @@ public class Class46 {
 			Class81.aClass17_643 = new Class17(4, 104, 104, Class76.anIntArrayArrayArray611);
 
 			for (var0 = 0; var0 < 4; ++var0)
-				client.aClass67Array1975[var0] = new Class67(104, 104);
+				client.region[var0] = new Class67(104, 104);
 
 			Class104_Sub2.aClass104_Sub18_Sub17_Sub1_861 = new Sprite(512, 512);
 			Class66.aString540 = "Starting game engine...";

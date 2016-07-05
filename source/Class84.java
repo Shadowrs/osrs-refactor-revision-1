@@ -186,7 +186,7 @@ public class Class84 {
 					final int var8 = ((var3 * var6) - (var2 * var5)) >> 11;
 					final int var9 = (var7 + Class81.activePlayer.anInt1695) >> 7;
 					final int var10 = (Class81.activePlayer.anInt1694 - var8) >> 7;
-					final boolean var11 = Class104_Sub13.method543(
+					final boolean var11 = Class104_Sub13.pathfind(
 							Class81.activePlayer.stepx[0],
 							Class81.activePlayer.stepy[0], var9, var10, true, 0, 0, 0,
 							0, 0, 1);
