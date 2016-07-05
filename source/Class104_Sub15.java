@@ -171,11 +171,11 @@ public class Class104_Sub15 extends Class104 {
 				System.out.println("mask: "+dir2);
 
 				if ((dir2 & 4) != 0) { // public chat
-					update = client.gamecon.readLEShort();
+					update = client.gamecon.readShort();
 					updateFlag = client.gamecon.readUByte();
 					movee = client.gamecon.readUByte();
 					move2 = client.gamecon.pos;
-					if ((null != entity.myName) && (entity.aClass85_1770 != null)) {
+					if ((null != entity.myName) && (entity.appearance != null)) {
 						boolean var15 = false;
 						if ((updateFlag <= 1) && Class34.method166(entity.myName))
 							var15 = true;
@@ -218,7 +218,7 @@ public class Class104_Sub15 extends Class104 {
 					entity.anInt1733 = client.gamecon.readUByte();
 					entity.anInt1721 = client.gamecon.readUByteA();
 					entity.anInt1708 = client.gamecon.readUShortA() + client.currentTime;
-					entity.anInt1737 = client.gamecon.readLEShort() + client.currentTime;
+					entity.anInt1737 = client.gamecon.readShort() + client.currentTime;
 					entity.anInt1738 = client.gamecon.readUByteN();
 					entity.anInt1744 = 1;
 					entity.anInt1735 = 0;
@@ -232,7 +232,7 @@ public class Class104_Sub15 extends Class104 {
 
 				if ((dir2 & 128) != 0) { // face tile
 					entity.anInt1717 = client.gamecon.readUShortA();
-					entity.anInt1718 = client.gamecon.readShort();
+					entity.anInt1718 = client.gamecon.readLEShort();
 				}
 
 				if ((dir2 & 16) != 0) { // anim
@@ -245,7 +245,7 @@ public class Class104_Sub15 extends Class104 {
 				}
 
 				if ((dir2 & 512) != 0) { // graphic
-					entity.gfxId = client.gamecon.readShort();
+					entity.gfxId = client.gamecon.readLEShort();
 					update = client.gamecon.readLEInt();
 					entity.gfxHeight = update >> 16;
 					entity.gfxDelay = client.currentTime + (update & '\uffff');

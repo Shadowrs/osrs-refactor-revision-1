@@ -519,7 +519,7 @@ public class Class46 {
 
 								if (var44 == 1202) {
 									var21.anInt1010 = 3;
-									var21.anInt1011 = Class81.activePlayer.aClass85_1770
+									var21.anInt1011 = Class81.activePlayer.appearance
 											.method390();
 									continue;
 								}
@@ -1765,8 +1765,8 @@ public class Class46 {
 											var5 -= 2;
 											var80 = Class90.aStringArray712[var5];
 											var16 = Class90.aStringArray712[1 + var5];
-											if ((null != Class81.activePlayer.aClass85_1770)
-													&& Class81.activePlayer.aClass85_1770.aBool661) {
+											if ((null != Class81.activePlayer.appearance)
+													&& Class81.activePlayer.appearance.female) {
 												Class90.aStringArray712[var5++] = var16;
 												continue;
 											}
@@ -2862,7 +2862,7 @@ public class Class46 {
 				client.aClass61_Sub1_1838 = JagFS.method423(9, false, true, true);
 				Class2.aClass61_Sub1_9 = JagFS.method423(10, false, true, true);
 				Class106.aClass61_Sub1_827 = JagFS.method423(11, false, true, true);
-				Class85.aClass61_Sub1_671 = JagFS.method423(12, false, true, true);
+				Looks.aClass61_Sub1_671 = JagFS.method423(12, false, true, true);
 				Class65.aClass61_Sub1_515 = JagFS.method423(13, true, false, true);
 				ObjectDefinition.aClass61_Sub1_1374 = JagFS.method423(14, false, true, false);
 				Class100.aClass61_Sub1_800 = JagFS.method423(15, false, true, true);
@@ -2883,7 +2883,7 @@ public class Class46 {
 				var0 += (client.aClass61_Sub1_1838.method493() * 2) / 100;
 				var0 += (Class2.aClass61_Sub1_9.method493() * 2) / 100;
 				var0 += (Class106.aClass61_Sub1_827.method493() * 2) / 100;
-				var0 += (Class85.aClass61_Sub1_671.method493() * 2) / 100;
+				var0 += (Looks.aClass61_Sub1_671.method493() * 2) / 100;
 				var0 += (Class65.aClass61_Sub1_515.method493() * 2) / 100;
 				var0 += (ObjectDefinition.aClass61_Sub1_1374.method493() * 2) / 100;
 				var0 += (Class100.aClass61_Sub1_800.method493() * 2) / 100;
@@ -2988,7 +2988,7 @@ public class Class46 {
 						final Class61_Sub1 var19 = Class52.aClass61_Sub1_430;
 						Class49.aClass61_418 = var19;
 						JagFS.method422(Class52.aClass61_Sub1_430);
-						Class85.method392(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2);
+						Looks.method392(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2);
 						Class22.method124(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2, client.lowmvm);
 						Class49.method223(Class52.aClass61_Sub1_430, Class1.aClass61_Sub1_2);
 						var6 = Class52.aClass61_Sub1_430;
@@ -3055,9 +3055,9 @@ public class Class46 {
 							Class66.aString540 = "Loading interfaces - "
 									+ ((Class29.aClass61_Sub1_278.method490() * 4) / 5) + "%";
 							Class66.anInt534 = 100;
-						} else if (!Class85.aClass61_Sub1_671.method261()) {
+						} else if (!Looks.aClass61_Sub1_671.method261()) {
 							Class66.aString540 = "Loading interfaces - "
-									+ (80 + (Class85.aClass61_Sub1_671.method490() / 6)) + "%";
+									+ (80 + (Looks.aClass61_Sub1_671.method490() / 6)) + "%";
 							Class66.anInt534 = 100;
 						} else if (!Class65.aClass61_Sub1_515.method261()) {
 							Class66.aString540 = "Loading interfaces - "

@@ -31,15 +31,15 @@ public final class Class9 {
 		int var10;
 		int var11;
 		if (client.pktOpc == 245) {
-			var0 = client.gamecon.readLEShort();
+			var0 = client.gamecon.readShort();
 			byte var1 = client.gamecon.readByteA();
 			var2 = client.gamecon.readUByteN();
 			var3 = var2 >> 2;
 			var4 = var2 & 3;
 			var5 = client.anIntArray1849[var3];
 			var6 = client.gamecon.readUShortA();
-			var7 = client.gamecon.readShort();
-			var8 = client.gamecon.readLEShort();
+			var7 = client.gamecon.readLEShort();
+			var8 = client.gamecon.readShort();
 			var9 = client.gamecon.readUByteS();
 			var10 = ((var9 >> 4) & 7) + Class19.anInt195;
 			var11 = Class93.anInt742 + (var9 & 7);
@@ -132,7 +132,7 @@ public final class Class9 {
 				var0 = client.gamecon.readUByte();
 				var35 = ((var0 >> 4) & 7) + Class19.anInt195;
 				var2 = (var0 & 7) + Class93.anInt742;
-				var3 = client.gamecon.readLEShort();
+				var3 = client.gamecon.readShort();
 				var4 = client.gamecon.readUByte();
 				var5 = (var4 >> 4) & 15;
 				var6 = var4 & 7;
@@ -258,9 +258,9 @@ public final class Class9 {
 					var0 = client.gamecon.readUByte();
 					var35 = Class19.anInt195 + ((var0 >> 4) & 7);
 					var2 = Class93.anInt742 + (var0 & 7);
-					var3 = client.gamecon.readLEShort();
+					var3 = client.gamecon.readShort();
 					var4 = client.gamecon.readUByte();
-					var5 = client.gamecon.readLEShort();
+					var5 = client.gamecon.readShort();
 					if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104)) {
 						var35 = (128 * var35) + 64;
 						var2 = (128 * var2) + 64;
@@ -277,11 +277,11 @@ public final class Class9 {
 					var3 = var35 + client.gamecon.readByte();
 					var4 = var2 + client.gamecon.readByte();
 					var5 = client.gamecon.readUShort();
-					var6 = client.gamecon.readLEShort();
+					var6 = client.gamecon.readShort();
 					var7 = client.gamecon.readUByte() * 4;
 					var8 = client.gamecon.readUByte() * 4;
-					var9 = client.gamecon.readLEShort();
-					var10 = client.gamecon.readLEShort();
+					var9 = client.gamecon.readShort();
+					var10 = client.gamecon.readShort();
 					var11 = client.gamecon.readUByte();
 					final int var36 = client.gamecon.readUByte();
 					if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104) && (var3 >= 0) && (var4 >= 0)
@@ -302,9 +302,9 @@ public final class Class9 {
 					var0 = client.gamecon.readUByteN();
 					var35 = ((var0 >> 4) & 7) + Class19.anInt195;
 					var2 = Class93.anInt742 + (var0 & 7);
-					var3 = client.gamecon.readLEShort();
+					var3 = client.gamecon.readShort();
 					var4 = client.gamecon.readUShortA();
-					var5 = client.gamecon.readLEShort();
+					var5 = client.gamecon.readShort();
 					if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104) && (var3 != client.anInt1874)) {
 						final Class104_Sub18_Sub16_Sub6 var40 = new Class104_Sub18_Sub16_Sub6();
 						var40.anInt1691 = var5;
@@ -332,9 +332,9 @@ public final class Class9 {
 				var0 = client.gamecon.readUByte();
 				var35 = ((var0 >> 4) & 7) + Class19.anInt195;
 				var2 = Class93.anInt742 + (var0 & 7);
-				var3 = client.gamecon.readLEShort();
-				var4 = client.gamecon.readLEShort();
-				var5 = client.gamecon.readLEShort();
+				var3 = client.gamecon.readShort();
+				var4 = client.gamecon.readShort();
+				var5 = client.gamecon.readShort();
 				if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104)) {
 					final Class59 var32 = client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var35][var2];
 					if (null != var32) {

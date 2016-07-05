@@ -86,7 +86,7 @@ public class RSBuf extends Class104 {
 		return backing[++pos - 1] & 255;
 	}
 
-	public int readLEShort() {
+	public int readShort() {
 		pos += 2;
 		return ((backing[pos - 2] & 255) << 8) + (backing[pos - 1] & 255);
 	}
@@ -130,11 +130,11 @@ public class RSBuf extends Class104 {
 
 	public int readCompact() {
 		final int var1 = backing[pos] & 255;
-		return var1 < 128 ? readUByte() - 64 : readLEShort() - '\uc000';
+		return var1 < 128 ? readUByte() - 64 : readShort() - '\uc000';
 	}
 
 	public int readSpecial() {
-		return backing[pos] < 0 ? readLEInt() & Integer.MAX_VALUE : readLEShort();
+		return backing[pos] < 0 ? readLEInt() & Integer.MAX_VALUE : readShort();
 	}
 
 	public int length() {
@@ -274,7 +274,7 @@ public class RSBuf extends Class104 {
 		backing[++pos - 1] = (byte) (var1 >> 8);
 	}
 
-	public int readShort() {
+	public int readLEShort() {
 		pos += 2;
 		return (backing[pos - 2] & 255) + ((backing[pos - 1] & 255) << 8);
 	}
@@ -316,7 +316,7 @@ public class RSBuf extends Class104 {
 
 	public int readsmart() {
 		final int var1 = backing[pos] & 255;
-		return var1 < 128 ? readUByte() : readLEShort() - '\u8000';
+		return var1 < 128 ? readUByte() : readShort() - '\u8000';
 	}
 
 	public void putIntV2(final int var1) {
@@ -410,11 +410,11 @@ public class RSBuf extends Class104 {
 	public String readString() {
 		final int start = pos;
 
-		while (backing[++pos - 1] != 0)
+		while (backing[++pos - 1] != 0) // 0 value terminator
 			;
 
-		final int next = pos - start - 1;
-		return next == 0 ? "" : client.decodeStr(backing, start, next);
+		final int length = pos - start - 1;
+		return length == 0 ? "" : client.decodeStr(backing, start, length);
 	}
 
 	public void writeIntLE(final int var1) {

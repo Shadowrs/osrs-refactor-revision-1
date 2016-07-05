@@ -25,8 +25,8 @@ public class Class83 {
 	void method360(final byte[] var1) {
 		aClass104_Sub21_653.backing = var1;
 		aClass104_Sub21_653.pos = 10;
-		final int var2 = aClass104_Sub21_653.readLEShort();
-		anInt656 = aClass104_Sub21_653.readLEShort();
+		final int var2 = aClass104_Sub21_653.readShort();
+		anInt656 = aClass104_Sub21_653.readShort();
 		anInt652 = 500000;
 		anIntArray650 = new int[var2];
 

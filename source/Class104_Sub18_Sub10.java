@@ -32,7 +32,7 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 		else {
 			int var3;
 			if (var2 == 5) {
-				anInt1408 = var1.readLEShort();
+				anInt1408 = var1.readShort();
 				anIntArray1402 = new int[anInt1408];
 				aStringArray1411 = new String[anInt1408];
 
@@ -41,7 +41,7 @@ public class Class104_Sub18_Sub10 extends Class104_Sub18 {
 					aStringArray1411[var3] = var1.readString();
 				}
 			} else if (var2 == 6) {
-				anInt1408 = var1.readLEShort();
+				anInt1408 = var1.readShort();
 				anIntArray1402 = new int[anInt1408];
 				anIntArray1410 = new int[anInt1408];
 

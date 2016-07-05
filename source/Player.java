@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public final class Player extends Class104_Sub18_Sub16_Sub7 {
 	int anInt1769;
 	int anInt1772;
@@ -9,26 +11,26 @@ public final class Player extends Class104_Sub18_Sub16_Sub7 {
 	int anInt1786;
 	int skull = -1;
 	int pray = -1;
-	int anInt1773 = 0;
-	int anInt1774 = 0;
+	int combatLevel = 0;
+	int skillLevel = 0;
 	int anInt1776 = 0;
 	int anInt1777 = 0;
 	boolean aBool1779 = false;
 	int itemrender = 0;
 	Class104_Sub18_Sub16_Sub4 aClass104_Sub18_Sub16_Sub4_1785;
 	String myName;
-	Class85 aClass85_1770;
+	Looks appearance;
 
 	@Override
 	final Class104_Sub18_Sub16_Sub4 method788(final int var1) {
-		if (null == aClass85_1770)
+		if (null == appearance)
 			return null;
 		else {
 			final Def var2 = (anInt1722 != -1) && (anInt1707 == 0) ? Class70.forId(anInt1722)
 					: null;
 			final Def var3 = (anInt1719 == -1) || aBool1779
 					|| ((stand == anInt1719) && (var2 != null)) ? null : Class70.forId(anInt1719);
-			Class104_Sub18_Sub16_Sub4 var4 = aClass85_1770.method389(var2, anInt1732, var3, anInt1720);
+			Class104_Sub18_Sub16_Sub4 var4 = appearance.method389(var2, anInt1732, var3, anInt1720);
 			if (null == var4)
 				return null;
 			else {
@@ -87,7 +89,7 @@ public final class Player extends Class104_Sub18_Sub16_Sub7 {
 
 	@Override
 	final boolean forcefalse(final int var1) {
-		return null != aClass85_1770;
+		return null != appearance;
 	}
 
 	final void decodeAppearance(final RSBuf cachedAppearance) {
@@ -96,7 +98,7 @@ public final class Player extends Class104_Sub18_Sub16_Sub7 {
 		skull = cachedAppearance.readByte();
 		pray = cachedAppearance.readByte();
 		//System.out.printf("icons %d %d %d \n ", gender, skull, pray);
-		int var3 = -1;
+		int npcAppearance = -1;
 		itemrender = 0;
 		final int[] equipment = new int[12];
 
@@ -104,23 +106,26 @@ public final class Player extends Class104_Sub18_Sub16_Sub7 {
 		int shortt;
 		for (int caret = 0; caret < 12; ++caret) {
 			temp = cachedAppearance.readUByte();
-			if (temp == 0)
+			if (temp == 0) {
 				equipment[caret] = 0;
-			else {
+				System.out.println("looks["+caret+"] = 0");
+			} else {
 				shortt = cachedAppearance.readUByte();
 				equipment[caret] = shortt + (temp << 8);
-				if ((caret == 0) && (equipment[0] == '\uffff')) {
-					var3 = cachedAppearance.readLEShort();
+				if ((caret == 0) && (equipment[0] == '\uffff')) { // -1, npc appearance
+					npcAppearance = cachedAppearance.readShort();
 					break;
 				}
 
-				if (equipment[caret] >= 512) {
+				if (equipment[caret] >= 512) { // a value < 512 will be looks. >512 is an item ID
 					final int itemConfig = Class27.forId(equipment[caret] - 512).looksConfig;
 					if (itemConfig != 0)
 						itemrender = itemConfig;
 				}
+				System.out.println("looks["+caret+"] :: val="+equipment[caret]+" item="+(equipment[caret]-512));
 			}
 		}
+		System.out.println("player render : "+Arrays.toString(equipment));
 
 		final int[] skin = new int[5];
 
@@ -131,33 +136,34 @@ public final class Player extends Class104_Sub18_Sub16_Sub7 {
 
 			skin[temp] = shortt;
 		}
+		System.out.println("skin : "+Arrays.toString(skin));
 
-		stand = cachedAppearance.readLEShort();
+		stand = cachedAppearance.readShort();
 		if (stand == '\uffff')
 			stand = -1;
 
-		turn = cachedAppearance.readLEShort();
+		turn = cachedAppearance.readShort();
 		if (turn == '\uffff')
 			turn = -1;
 
 		walk = turn;
-		walkAnim = cachedAppearance.readLEShort();
+		walkAnim = cachedAppearance.readShort();
 		if (walkAnim == '\uffff')
 			walkAnim = -1;
 
-		turn180 = cachedAppearance.readLEShort();
+		turn180 = cachedAppearance.readShort();
 		if (turn180 == '\uffff')
 			turn180 = -1;
 
-		turn90c = cachedAppearance.readLEShort();
+		turn90c = cachedAppearance.readShort();
 		if (turn90c == '\uffff')
 			turn90c = -1;
 
-		turn90cc = cachedAppearance.readLEShort();
+		turn90cc = cachedAppearance.readShort();
 		if (turn90cc == '\uffff')
 			turn90cc = -1;
 
-		runAnim = cachedAppearance.readLEShort();
+		runAnim = cachedAppearance.readShort();
 		if (runAnim == '\uffff')
 			runAnim = -1;
 
@@ -165,11 +171,15 @@ public final class Player extends Class104_Sub18_Sub16_Sub7 {
 		if (Class81.activePlayer == this)
 			RuntimeException_Sub1.playerName = myName;
 
-		anInt1773 = cachedAppearance.readUByte();
-		anInt1774 = cachedAppearance.readLEShort();
-		if (aClass85_1770 == null)
-			aClass85_1770 = new Class85();
+		combatLevel = cachedAppearance.readUByte();
+		skillLevel = cachedAppearance.readShort();
+		if (appearance == null)
+			appearance = new Looks();
 
-		aClass85_1770.method383(equipment, skin, gender == 1, var3);
+		appearance.render(equipment, skin, gender == 1, npcAppearance);
+		
+		System.out.printf("other: %d %d %d %d %d %d %d -- '%s' %d %d \n",
+				stand, walk, runAnim, turn, turn90c, turn90cc, turn180, 
+				myName, combatLevel, skillLevel);
 	}
 }

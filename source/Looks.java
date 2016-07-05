@@ -1,4 +1,4 @@
-public class Class85 {
+public class Looks {
 	public static short[] aShortArray663;
 	public static short[][] aShortArrayArray668;
 	static Class61_Sub1 aClass61_Sub1_671;
@@ -6,54 +6,54 @@ public class Class85 {
 	static int anInt673;
 	int[] clothes;
 	int[] skin;
-	public boolean aBool661;
-	int anInt664;
+	public boolean female;
+	int npcRenderId;
 	long aLong665;
 	long aLong666;
 	static int[] curCloth = new int[] { 8, 11, 4, 6, 9, 7, 10 };
 	static Class56 aClass56_670 = new Class56(260);
 
-	public void method383(int[] var1, final int[] var2, final boolean var3, final int var4) {
-		if (null == var1) {
-			var1 = new int[12];
+	public void render(int[] cloth, final int[] skincol, final boolean isfemale, final int npcIdLook) {
+		if (null == cloth) {
+			cloth = new int[12];
 
-			for (int var5 = 0; var5 < 7; ++var5)
-				for (int var6 = 0; var6 < Class104_Sub2.anInt862; ++var6) {
-					final Class104_Sub18_Sub9 var7 = Class84.method382(var6);
-					if ((var7 != null) && !var7.aBool1401 && (var7.anInt1400 == (var5 + (var3 ? 7 : 0)))) {
-						var1[curCloth[var5]] = 256 + var6;
+			for (int i = 0; i < 7; ++i)
+				for (int x = 0; x < Class104_Sub2.ids; ++x) {
+					final Def2 d = Class84.forId(x);
+					if ((d != null) && !d.aBool1401 && (d.anInt1400 == (i + (isfemale ? 7 : 0)))) {
+						cloth[curCloth[i]] = 256 + x;
 						break;
 					}
 				}
 		}
 
-		clothes = var1;
-		skin = var2;
-		aBool661 = var3;
-		anInt664 = var4;
+		clothes = cloth;
+		skin = skincol;
+		female = isfemale;
+		npcRenderId = npcIdLook;
 		method388();
 	}
 
 	public void method384(final int var1, final boolean var2) {
-		if ((var1 != 1) || !aBool661) {
+		if ((var1 != 1) || !female) {
 			int var3 = clothes[curCloth[var1]];
 			if (var3 != 0) {
 				var3 -= 256;
 
-				Class104_Sub18_Sub9 var4;
+				Def2 var4;
 				do {
 					if (!var2) {
 						--var3;
 						if (var3 < 0)
-							var3 = Class104_Sub2.anInt862 - 1;
+							var3 = Class104_Sub2.ids - 1;
 					} else {
 						++var3;
-						if (var3 >= Class104_Sub2.anInt862)
+						if (var3 >= Class104_Sub2.ids)
 							var3 = 0;
 					}
 
-					var4 = Class84.method382(var3);
-				} while ((var4 == null) || var4.aBool1401 || (var4.anInt1400 != ((aBool661 ? 7 : 0) + var1)));
+					var4 = Class84.forId(var3);
+				} while ((var4 == null) || var4.aBool1401 || (var4.anInt1400 != ((female ? 7 : 0) + var1)));
 
 				clothes[curCloth[var1]] = var3 + 256;
 				method388();
@@ -78,12 +78,12 @@ public class Class85 {
 	}
 
 	public void method386(final boolean var1) {
-		if (aBool661 != var1)
-			method383((int[]) null, skin, var1, -1);
+		if (female != var1)
+			render((int[]) null, skin, var1, -1);
 	}
 
 	public void writeAppearance(final RSBuf var1) {
-		var1.writebyte(aBool661 ? 1 : 0);
+		var1.writebyte(female ? 1 : 0);
 
 		int var2;
 		for (var2 = 0; var2 < 7; ++var2) {
@@ -126,7 +126,7 @@ public class Class85 {
 		}
 
 		aLong665 <<= 1;
-		aLong665 += aBool661 ? 1 : 0;
+		aLong665 += female ? 1 : 0;
 		clothes[5] = var3;
 		clothes[9] = var4;
 		if ((var1 != 0L) && (aLong665 != var1))
@@ -136,8 +136,8 @@ public class Class85 {
 
 	public Class104_Sub18_Sub16_Sub4 method389(final Def var1, final int var2,
 			final Def var3, final int var4) {
-		if (anInt664 != -1)
-			return Class64.method296(anInt664).method675(var1, var2, var3, var4);
+		if (npcRenderId != -1)
+			return Class64.method296(npcRenderId).method675(var1, var2, var3, var4);
 		else {
 			long var5 = aLong665;
 			int[] var7 = clothes;
@@ -165,10 +165,10 @@ public class Class85 {
 				int var12;
 				for (int var11 = 0; var11 < 12; ++var11) {
 					var12 = var7[var11];
-					if ((var12 >= 256) && (var12 < 512) && !Class84.method382(var12 - 256).method759())
+					if ((var12 >= 256) && (var12 < 512) && !Class84.forId(var12 - 256).method759())
 						var10 = true;
 
-					if ((var12 >= 512) && !Class27.forId(var12 - 512).method780(aBool661))
+					if ((var12 >= 512) && !Class27.forId(var12 - 512).method780(female))
 						var10 = true;
 				}
 
@@ -189,13 +189,13 @@ public class Class85 {
 						var15 = var7[var14];
 						Class104_Sub18_Sub16_Sub5 var16;
 						if ((var15 >= 256) && (var15 < 512)) {
-							var16 = Class84.method382(var15 - 256).method762();
+							var16 = Class84.forId(var15 - 256).method762();
 							if (var16 != null)
 								var13[var12++] = var16;
 						}
 
 						if (var15 >= 512) {
-							var16 = Class27.forId(var15 - 512).method777(aBool661);
+							var16 = Class27.forId(var15 - 512).method777(female);
 							if (null != var16)
 								var13[var12++] = var16;
 						}
@@ -235,25 +235,25 @@ public class Class85 {
 	}
 
 	public int method390() {
-		return anInt664 == -1
+		return npcRenderId == -1
 				? (clothes[11] << 5) + (clothes[8] << 10) + (skin[4] << 20)
 						+ (skin[0] << 25) + (clothes[0] << 15) + clothes[1]
-				: 305419896 + Class64.method296(anInt664).anInt1228;
+				: 305419896 + Class64.method296(npcRenderId).anInt1228;
 	}
 
 	Class104_Sub18_Sub16_Sub5 method391() {
-		if (anInt664 != -1)
-			return Class64.method296(anInt664).method676();
+		if (npcRenderId != -1)
+			return Class64.method296(npcRenderId).method676();
 		else {
 			boolean var1 = false;
 
 			int var3;
 			for (int var2 = 0; var2 < 12; ++var2) {
 				var3 = clothes[var2];
-				if ((var3 >= 256) && (var3 < 512) && !Class84.method382(var3 - 256).method760())
+				if ((var3 >= 256) && (var3 < 512) && !Class84.forId(var3 - 256).method760())
 					var1 = true;
 
-				if ((var3 >= 512) && !Class27.forId(var3 - 512).method781(aBool661))
+				if ((var3 >= 512) && !Class27.forId(var3 - 512).method781(female))
 					var1 = true;
 			}
 
@@ -268,13 +268,13 @@ public class Class85 {
 					var6 = clothes[var5];
 					Class104_Sub18_Sub16_Sub5 var7;
 					if ((var6 >= 256) && (var6 < 512)) {
-						var7 = Class84.method382(var6 - 256).method764();
+						var7 = Class84.forId(var6 - 256).method764();
 						if (null != var7)
 							var4[var3++] = var7;
 					}
 
 					if (var6 >= 512) {
-						var7 = Class27.forId(var6 - 512).method778(aBool661);
+						var7 = Class27.forId(var6 - 512).method778(female);
 						if (null != var7)
 							var4[var3++] = var7;
 					}
@@ -297,8 +297,8 @@ public class Class85 {
 	}
 
 	public static void method392(final Class61 var0, final Class61 var1) {
-		Class104_Sub18_Sub9.aClass61_1391 = var0;
-		Class104_Sub18_Sub9.aClass61_1394 = var1;
-		Class104_Sub2.anInt862 = Class104_Sub18_Sub9.aClass61_1391.leng(3);
+		Def2.aClass61_1391 = var0;
+		Def2.aClass61_1394 = var1;
+		Class104_Sub2.ids = Def2.aClass61_1391.leng(3);
 	}
 }

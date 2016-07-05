@@ -116,7 +116,7 @@ public class Class102_Sub1 extends Class102 {
 		client.aClass104_Sub12_1951 = null;
 		client.aBool1930 = false;
 		client.anInt1805 = 0;
-		client.aClass85_2047.method383((int[]) null, new int[] { 0, 0, 0, 0, 0 }, false, -1);
+		client.aClass85_2047.render((int[]) null, new int[] { 0, 0, 0, 0, 0 }, false, -1);
 
 		for (var0 = 0; var0 < 8; ++var0) {
 			client.aStringArray1918[var0] = null;

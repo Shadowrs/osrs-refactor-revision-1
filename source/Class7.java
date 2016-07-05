@@ -25,7 +25,7 @@ public class Class7 {
 			}
 
 			if ((var3 & 4) != 0) {
-				var2.anInt1716 = client.gamecon.readShort();
+				var2.anInt1716 = client.gamecon.readLEShort();
 				if (var2.anInt1716 == '\uffff')
 					var2.anInt1716 = -1;
 			}
@@ -36,7 +36,7 @@ public class Class7 {
 			}
 
 			if ((var3 & 1) != 0) {
-				var2.gfxId = client.gamecon.readShort();
+				var2.gfxId = client.gamecon.readLEShort();
 				var4 = client.gamecon.readLEInt();
 				var2.gfxHeight = var4 >> 16;
 				var2.gfxDelay = (var4 & '\uffff') + client.currentTime;
@@ -78,7 +78,7 @@ public class Class7 {
 			}
 
 			if ((var3 & 64) != 0) {
-				var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.gamecon.readLEShort());
+				var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.gamecon.readShort());
 				var2.anInt1736 = var2.aClass104_Sub18_Sub2_1788.anInt1240;
 				var2.anInt1740 = var2.aClass104_Sub18_Sub2_1788.anInt1253;
 				var2.walkAnim = var2.aClass104_Sub18_Sub2_1788.anInt1236;

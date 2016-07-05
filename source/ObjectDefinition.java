@@ -150,7 +150,7 @@ public class ObjectDefinition extends Class104_Sub18 {
 					anIntArray1350 = new int[var3];
 
 					for (var4 = 0; var4 < var3; ++var4) {
-						anIntArray1350[var4] = var1.readLEShort();
+						anIntArray1350[var4] = var1.readShort();
 						anIntArray1359[var4] = var1.readUByte();
 					}
 				}
@@ -166,7 +166,7 @@ public class ObjectDefinition extends Class104_Sub18 {
 					anIntArray1350 = new int[var3];
 
 					for (var4 = 0; var4 < var3; ++var4)
-						anIntArray1350[var4] = var1.readLEShort();
+						anIntArray1350[var4] = var1.readShort();
 				}
 		} else if (var2 == 14)
 			anInt1365 = var1.readUByte();
@@ -186,7 +186,7 @@ public class ObjectDefinition extends Class104_Sub18 {
 		else if (var2 == 23)
 			aBool1345 = true;
 		else if (var2 == 24) {
-			anInt1346 = var1.readLEShort();
+			anInt1346 = var1.readShort();
 			if (anInt1346 == '\uffff')
 				anInt1346 = -1;
 		} else if (var2 == 27)
@@ -207,8 +207,8 @@ public class ObjectDefinition extends Class104_Sub18 {
 			aShortArray1332 = new short[var3];
 
 			for (var4 = 0; var4 < var3; ++var4) {
-				aShortArray1334[var4] = (short) var1.readLEShort();
-				aShortArray1332[var4] = (short) var1.readLEShort();
+				aShortArray1334[var4] = (short) var1.readShort();
+				aShortArray1332[var4] = (short) var1.readShort();
 			}
 		} else if (var2 == 41) {
 			var3 = var1.readUByte();
@@ -216,23 +216,23 @@ public class ObjectDefinition extends Class104_Sub18 {
 			aShortArray1337 = new short[var3];
 
 			for (var4 = 0; var4 < var3; ++var4) {
-				aShortArray1336[var4] = (short) var1.readLEShort();
-				aShortArray1337[var4] = (short) var1.readLEShort();
+				aShortArray1336[var4] = (short) var1.readShort();
+				aShortArray1337[var4] = (short) var1.readShort();
 			}
 		} else if (var2 == 60)
-			anInt1351 = var1.readLEShort();
+			anInt1351 = var1.readShort();
 		else if (var2 == 62)
 			aBool1353 = true;
 		else if (var2 == 64)
 			aBool1354 = false;
 		else if (var2 == 65)
-			anInt1355 = var1.readLEShort();
+			anInt1355 = var1.readShort();
 		else if (var2 == 66)
-			anInt1356 = var1.readLEShort();
+			anInt1356 = var1.readShort();
 		else if (var2 == 67)
-			anInt1357 = var1.readLEShort();
+			anInt1357 = var1.readShort();
 		else if (var2 == 68)
-			anInt1341 = var1.readLEShort();
+			anInt1341 = var1.readShort();
 		else if (var2 == 69)
 			anInt1335 = var1.readUByte();
 		else if (var2 == 70)
@@ -248,11 +248,11 @@ public class ObjectDefinition extends Class104_Sub18 {
 		else if (var2 == 75)
 			anInt1358 = var1.readUByte();
 		else if (var2 == 77) {
-			anInt1352 = var1.readLEShort();
+			anInt1352 = var1.readShort();
 			if (anInt1352 == '\uffff')
 				anInt1352 = -1;
 
-			anInt1367 = var1.readLEShort();
+			anInt1367 = var1.readShort();
 			if (anInt1367 == '\uffff')
 				anInt1367 = -1;
 
@@ -260,22 +260,22 @@ public class ObjectDefinition extends Class104_Sub18 {
 			anIntArray1338 = new int[var3 + 1];
 
 			for (var4 = 0; var4 <= var3; ++var4) {
-				anIntArray1338[var4] = var1.readLEShort();
+				anIntArray1338[var4] = var1.readShort();
 				if (anIntArray1338[var4] == '\uffff')
 					anIntArray1338[var4] = -1;
 			}
 		} else if (var2 == 78) {
-			anInt1333 = var1.readLEShort();
+			anInt1333 = var1.readShort();
 			anInt1369 = var1.readUByte();
 		} else if (var2 == 79) {
-			anInt1370 = var1.readLEShort();
-			anInt1323 = var1.readLEShort();
+			anInt1370 = var1.readShort();
+			anInt1323 = var1.readShort();
 			anInt1369 = var1.readUByte();
 			var3 = var1.readUByte();
 			anIntArray1372 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1372[var4] = var1.readLEShort();
+				anIntArray1372[var4] = var1.readShort();
 		} else if (var2 == 81)
 			anInt1343 = var1.readUByte() * 256;
 

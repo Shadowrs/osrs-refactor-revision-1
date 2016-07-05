@@ -88,29 +88,29 @@ public class Class53 {
 	static void method234(final byte[] var0) {
 		final RSBuf var1 = new RSBuf(var0);
 		var1.pos = var0.length - 2;
-		Class12.anInt67 = var1.readLEShort();
+		Class12.anInt67 = var1.readShort();
 		Class12.anIntArray70 = new int[Class12.anInt67];
 		Class12.anIntArray71 = new int[Class12.anInt67];
 		Class78.anIntArray626 = new int[Class12.anInt67];
 		Class69.anIntArray564 = new int[Class12.anInt67];
 		Class41.aByteArrayArray368 = new byte[Class12.anInt67][];
 		var1.pos = var0.length - 7 - (Class12.anInt67 * 8);
-		Class12.anInt72 = var1.readLEShort();
-		Class12.anInt69 = var1.readLEShort();
+		Class12.anInt72 = var1.readShort();
+		Class12.anInt69 = var1.readShort();
 		final int var2 = (var1.readUByte() & 255) + 1;
 
 		int var3;
 		for (var3 = 0; var3 < Class12.anInt67; ++var3)
-			Class12.anIntArray70[var3] = var1.readLEShort();
+			Class12.anIntArray70[var3] = var1.readShort();
 
 		for (var3 = 0; var3 < Class12.anInt67; ++var3)
-			Class12.anIntArray71[var3] = var1.readLEShort();
+			Class12.anIntArray71[var3] = var1.readShort();
 
 		for (var3 = 0; var3 < Class12.anInt67; ++var3)
-			Class78.anIntArray626[var3] = var1.readLEShort();
+			Class78.anIntArray626[var3] = var1.readShort();
 
 		for (var3 = 0; var3 < Class12.anInt67; ++var3)
-			Class69.anIntArray564[var3] = var1.readLEShort();
+			Class69.anIntArray564[var3] = var1.readShort();
 
 		var1.pos = var0.length - 7 - (Class12.anInt67 * 8) - ((var2 - 1) * 3);
 		Class12.anIntArray68 = new int[var2];

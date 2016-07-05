@@ -5,7 +5,7 @@ public class Class104_Sub14 extends Class104 {
 	Class104_Sub14(final RSBuf var1) {
 		var1.pos = var1.backing.length - 3;
 		final int var2 = var1.readUByte();
-		final int var3 = var1.readLEShort();
+		final int var3 = var1.readShort();
 		int var4 = 14 + (var2 * 10);
 		var1.pos = 0;
 		int var5 = 0;

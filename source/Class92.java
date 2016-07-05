@@ -71,8 +71,8 @@ public class Class92 {
 
 		anInt717 = var1.readsmart();
 		anInt719 = var1.readsmart();
-		anInt732 = var1.readLEShort();
-		anInt733 = var1.readLEShort();
+		anInt732 = var1.readShort();
+		anInt733 = var1.readShort();
 		aClass4_730 = new Class4();
 		aClass74_731 = new Class74();
 		aClass4_730.method31(var1, aClass74_731);

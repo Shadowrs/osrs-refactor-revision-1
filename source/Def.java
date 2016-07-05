@@ -31,21 +31,21 @@ public class Def extends Class104_Sub18 {
 		int var3;
 		int var4;
 		if (var2 == 1) {
-			var3 = var1.readLEShort();
+			var3 = var1.readShort();
 			anIntArray1264 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1264[var4] = var1.readLEShort();
+				anIntArray1264[var4] = var1.readShort();
 
 			anIntArray1262 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1262[var4] = var1.readLEShort();
+				anIntArray1262[var4] = var1.readShort();
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1262[var4] += var1.readLEShort() << 16;
+				anIntArray1262[var4] += var1.readShort() << 16;
 		} else if (var2 == 2)
-			anInt1266 = var1.readLEShort();
+			anInt1266 = var1.readShort();
 		else if (var2 == 3) {
 			var3 = var1.readUByte();
 			anIntArray1267 = new int[var3 + 1];
@@ -59,9 +59,9 @@ public class Def extends Class104_Sub18 {
 		else if (var2 == 5)
 			anInt1269 = var1.readUByte();
 		else if (var2 == 6)
-			anInt1270 = var1.readLEShort();
+			anInt1270 = var1.readShort();
 		else if (var2 == 7)
-			anInt1271 = var1.readLEShort();
+			anInt1271 = var1.readShort();
 		else if (var2 == 8)
 			anInt1261 = var1.readUByte();
 		else if (var2 == 9)
@@ -75,10 +75,10 @@ public class Def extends Class104_Sub18 {
 			anIntArray1263 = new int[var3];
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1263[var4] = var1.readLEShort();
+				anIntArray1263[var4] = var1.readShort();
 
 			for (var4 = 0; var4 < var3; ++var4)
-				anIntArray1263[var4] += var1.readLEShort() << 16;
+				anIntArray1263[var4] += var1.readShort() << 16;
 		} else if (var2 == 13) {
 			var3 = var1.readUByte();
 			anIntArray1265 = new int[var3];

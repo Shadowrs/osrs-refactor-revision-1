@@ -31,16 +31,16 @@ public class Class104_Sub23 extends Class104 {
 		int var0 = 64 + (Class30.anInt287 * 128);
 		int var1 = 64 + (Class43.anInt375 * 128);
 		int var2 = Class47.method211(var0, var1, Class12.myplayerHeight) - Class61_Sub1.anInt892;
-		if (Class85.anInt672 < var0) {
-			Class85.anInt672 += CS.anInt944 + ((Class75.anInt598 * (var0 - Class85.anInt672)) / 1000);
-			if (Class85.anInt672 > var0)
-				Class85.anInt672 = var0;
+		if (Looks.anInt672 < var0) {
+			Looks.anInt672 += CS.anInt944 + ((Class75.anInt598 * (var0 - Looks.anInt672)) / 1000);
+			if (Looks.anInt672 > var0)
+				Looks.anInt672 = var0;
 		}
 
-		if (Class85.anInt672 > var0) {
-			Class85.anInt672 -= CS.anInt944 + ((Class75.anInt598 * (Class85.anInt672 - var0)) / 1000);
-			if (Class85.anInt672 < var0)
-				Class85.anInt672 = var0;
+		if (Looks.anInt672 > var0) {
+			Looks.anInt672 -= CS.anInt944 + ((Class75.anInt598 * (Looks.anInt672 - var0)) / 1000);
+			if (Looks.anInt672 < var0)
+				Looks.anInt672 = var0;
 		}
 
 		if (Class46.anInt403 < var2) {
@@ -67,10 +67,10 @@ public class Class104_Sub23 extends Class104 {
 				Class99.anInt793 = var1;
 		}
 
-		var0 = (Class85.anInt673 * 128) + 64;
+		var0 = (Looks.anInt673 * 128) + 64;
 		var1 = 64 + (Class41.anInt370 * 128);
 		var2 = Class47.method211(var0, var1, Class12.myplayerHeight) - Class79.anInt631;
-		final int var3 = var0 - Class85.anInt672;
+		final int var3 = var0 - Looks.anInt672;
 		final int var4 = var2 - Class46.anInt403;
 		final int var5 = var1 - Class99.anInt793;
 		final int var6 = (int) Math.sqrt((var3 * var3) + (var5 * var5));

@@ -17,10 +17,10 @@ public class Class81 {
 			if (client.anInt1805 < 400) {
 				int var5;
 				String var9;
-				if (var0.anInt1774 == 0) {
+				if (var0.skillLevel == 0) {
 					final String var4 = var0.myName;
-					var5 = var0.anInt1773;
-					final int var6 = activePlayer.anInt1773;
+					var5 = var0.combatLevel;
+					final int var6 = activePlayer.combatLevel;
 					final int var7 = var6 - var5;
 					String var8;
 					if (var7 < -9)
@@ -42,9 +42,9 @@ public class Class81 {
 					else
 						var8 = Class70.method326(16776960);
 
-					var9 = var4 + var8 + " " + " (" + "level-" + var0.anInt1773 + ")";
+					var9 = var4 + var8 + " " + " (" + "level-" + var0.combatLevel + ")";
 				} else
-					var9 = var0.myName + " " + " (" + "skill-" + var0.anInt1774 + ")";
+					var9 = var0.myName + " " + " (" + "skill-" + var0.skillLevel + ")";
 
 				int var10;
 				if (client.anInt1941 == 1)
@@ -60,7 +60,7 @@ public class Class81 {
 						if (null != client.aStringArray1918[var10]) {
 							short var11 = 0;
 							if (client.aStringArray1918[var10].equalsIgnoreCase("Attack")) {
-								if (var0.anInt1773 > activePlayer.anInt1773)
+								if (var0.combatLevel > activePlayer.combatLevel)
 									var11 = 2000;
 
 								if ((activePlayer.itemrender != 0) && (var0.itemrender != 0))

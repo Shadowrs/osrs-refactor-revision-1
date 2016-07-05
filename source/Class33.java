@@ -233,7 +233,7 @@ public final class Class33 {
 	static final void method158() {
 		Class104_Sub18_Sub7.aClass56_1381.method239();
 		Class104_Sub18_Sub11.method769();
-		Class104_Sub18_Sub9.aClass56_1393.method239();
+		Def2.aClass56_1393.method239();
 		Class26.method135();
 		Class103.method469();
 		ItemDef.aClass56_1415.method239();
@@ -259,7 +259,7 @@ public final class Class33 {
 		client.aClass61_Sub1_1838.clearFiles();
 		Class2.aClass61_Sub1_9.clearFiles();
 		Class106.aClass61_Sub1_827.clearFiles();
-		Class85.aClass61_Sub1_671.clearFiles();
+		Looks.aClass61_Sub1_671.clearFiles();
 	}
 
 	static void method159(final Class57[] var0, final int var1, final int var2, final int[] var3, final int[] var4) {

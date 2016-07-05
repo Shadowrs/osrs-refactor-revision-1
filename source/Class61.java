@@ -37,7 +37,7 @@ public abstract class Class61 {
 			if (var3 >= 7)
 				count = buf.readSpecial();
 			else
-				count = buf.readLEShort();
+				count = buf.readShort();
 
 			int var8 = 0;
 			int var9 = -1;
@@ -51,7 +51,7 @@ public abstract class Class61 {
 				}
 			else
 				for (var10 = 0; var10 < count; ++var10) {
-					anIntArray479[var10] = var8 += buf.readLEShort();
+					anIntArray479[var10] = var8 += buf.readShort();
 					if (anIntArray479[var10] > var9)
 						var9 = anIntArray479[var10];
 				}
@@ -78,7 +78,7 @@ public abstract class Class61 {
 				anIntArray493[anIntArray479[var10]] = buf.readLEInt();
 
 			for (var10 = 0; var10 < count; ++var10)
-				anIntArray485[anIntArray479[var10]] = buf.readLEShort();
+				anIntArray485[anIntArray479[var10]] = buf.readShort();
 
 			int var11;
 			int var12;
@@ -110,7 +110,7 @@ public abstract class Class61 {
 					anIntArrayArray486[var11] = new int[var12];
 
 					for (var14 = 0; var14 < var12; ++var14) {
-						var15 = anIntArrayArray486[var11][var14] = var8 += buf.readLEShort();
+						var15 = anIntArrayArray486[var11][var14] = var8 += buf.readShort();
 						if (var15 > var13)
 							var13 = var15;
 					}

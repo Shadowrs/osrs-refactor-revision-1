@@ -259,7 +259,7 @@ public class Class66 {
 										pid = var66;
 									}
 
-									Class85.anInt672 = var23 - pid;
+									Looks.anInt672 = var23 - pid;
 									Class46.anInt403 = var24 - var30;
 									Class99.anInt793 = var25 - var31;
 									Class27.anInt266 = var21;
@@ -269,7 +269,7 @@ public class Class66 {
 								if (!client.aBool2034) {
 									var23 = 3;
 									if (Class27.anInt266 < 310) {
-										var24 = Class85.anInt672 >> 7;
+										var24 = Looks.anInt672 >> 7;
 										var25 = Class99.anInt793 >> 7;
 										var26 = Class81.activePlayer.anInt1695 >> 7;
 										var27 = Class81.activePlayer.anInt1694 >> 7;
@@ -349,9 +349,9 @@ public class Class66 {
 
 									var21 = var23;
 								} else {
-									var23 = Class47.method211(Class85.anInt672, Class99.anInt793, Class12.myplayerHeight);
+									var23 = Class47.method211(Looks.anInt672, Class99.anInt793, Class12.myplayerHeight);
 									if (((var23 - Class46.anInt403) < 800)
-											&& ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][Class85.anInt672 >> 7][Class99.anInt793 >> 7]
+											&& ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][Looks.anInt672 >> 7][Class99.anInt793 >> 7]
 													& 4) != 0))
 										var22 = Class12.myplayerHeight;
 									else
@@ -360,7 +360,7 @@ public class Class66 {
 									var21 = var22;
 								}
 
-								var22 = Class85.anInt672;
+								var22 = Looks.anInt672;
 								var23 = Class46.anInt403;
 								var24 = Class99.anInt793;
 								var25 = Class27.anInt266;
@@ -374,7 +374,7 @@ public class Class66 {
 																* (client.anIntArray2020[var27] / 100.0D))
 														* client.anIntArray2038[var27]));
 										if (var27 == 0)
-											Class85.anInt672 += var28;
+											Looks.anInt672 += var28;
 
 										if (var27 == 1)
 											Class46.anInt403 += var28;
@@ -411,7 +411,7 @@ public class Class66 {
 								Class101.method465();
 								Class104_Sub18_Sub17.method805(var12, var13, var19, var20, 0);
 								Class101.method465();
-								Class81.aClass17_643.method102(Class85.anInt672, Class46.anInt403, Class99.anInt793,
+								Class81.aClass17_643.method102(Looks.anInt672, Class46.anInt403, Class99.anInt793,
 										Class27.anInt266, Class44.anInt395, var21);
 								Class101.method465();
 								Class81.aClass17_643.method77();
@@ -697,7 +697,7 @@ public class Class66 {
 								Class103.method468(var12, var13);
 								((Class34) Class104_Sub18_Sub17_Sub4.anInterface2_1686).method161(client.anInt1867);
 								Class104_Sub16.method551(var12, var13);
-								Class85.anInt672 = var22;
+								Looks.anInt672 = var22;
 								Class46.anInt403 = var23;
 								Class99.anInt793 = var24;
 								Class27.anInt266 = var25;
@@ -1449,13 +1449,13 @@ public class Class66 {
 															.method788(-78901604);
 											} else if (var22 == -1) {
 												var76 = var10.method532((Def) null, -1, var58,
-														Class81.activePlayer.aClass85_1770);
+														Class81.activePlayer.appearance);
 												if ((null == var76) && Widget.aBool1065)
 													Class79.setflags(var10);
 											} else {
 												final Def var82 = Class70.forId(var22);
 												var76 = var10.method532(var82, var10.anInt974, var58,
-														Class81.activePlayer.aClass85_1770);
+														Class81.activePlayer.appearance);
 												if ((var76 == null) && Widget.aBool1065)
 													Class79.setflags(var10);
 											}

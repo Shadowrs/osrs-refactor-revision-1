@@ -365,7 +365,7 @@ public class Class49 {
 							if (Class48.aClass104_Sub18_Sub13_410 == null) {
 								Class87.aClass104_Sub21_690.pos = 0;
 								var9 = Class87.aClass104_Sub21_690.readUByte();
-								var10 = Class87.aClass104_Sub21_690.readLEShort();
+								var10 = Class87.aClass104_Sub21_690.readShort();
 								final int var11 = Class87.aClass104_Sub21_690.readUByte();
 								var12 = Class87.aClass104_Sub21_690.readLEInt();
 								final long var13 = var10 + (var9 << 16);

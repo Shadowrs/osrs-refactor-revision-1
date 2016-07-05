@@ -1,6 +1,6 @@
 public class Class26 {
 	public static void method131() {
-		Class85.aClass56_670.method239();
+		Looks.aClass56_670.method239();
 	}
 
 	static void method132() {
@@ -67,7 +67,7 @@ public class Class26 {
 						var7 = (Class71.anIntArray576[var2[var4++]] * 100) / '\ub71b';
 
 					if (var6 == 8)
-						var7 = Class81.activePlayer.anInt1773;
+						var7 = Class81.activePlayer.combatLevel;
 
 					if (var6 == 9)
 						for (var9 = 0; var9 < 25; ++var9)

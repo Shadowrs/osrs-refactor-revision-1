@@ -31,8 +31,8 @@ public class Class74 {
 		anIntArray588 = new int[anInt589];
 
 		for (int var2 = 0; var2 < anInt589; ++var2) {
-			anIntArray587[var2] = var1.readLEShort();
-			anIntArray588[var2] = var1.readLEShort();
+			anIntArray587[var2] = var1.readShort();
+			anIntArray588[var2] = var1.readShort();
 		}
 
 	}

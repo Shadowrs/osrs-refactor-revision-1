@@ -255,7 +255,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeInt(client.aClass61_Sub1_1838.anInt489);
 				client.loginbuf.writeInt(Class2.aClass61_Sub1_9.anInt489);
 				client.loginbuf.writeInt(Class106.aClass61_Sub1_827.anInt489);
-				client.loginbuf.writeInt(Class85.aClass61_Sub1_671.anInt489);
+				client.loginbuf.writeInt(Looks.aClass61_Sub1_671.anInt489);
 				client.loginbuf.writeInt(Class65.aClass61_Sub1_515.anInt489);
 				client.loginbuf.writeInt(ObjectDefinition.aClass61_Sub1_1374.anInt489);
 				client.loginbuf.writeInt(Class100.aClass61_Sub1_800.anInt489);
@@ -345,7 +345,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 					client.pktOpc = client.gamecon.opcode(); // packet opcode
 					Class20.stream.readbytes(client.gamecon.backing, 0, 2);
 					client.gamecon.pos = 0;
-					client.pktSize = client.gamecon.readLEShort();
+					client.pktSize = client.gamecon.readShort();
 					client.step = 10;
 				}
 

@@ -163,7 +163,7 @@ public class Class104_Sub19 extends Class104 {
 	}
 
 	Class104_Sub19(final RSBuf var1) {
-		anInt1139 = var1.readLEShort();
+		anInt1139 = var1.readShort();
 		aBool1138 = var1.readUByte() == 1;
 		final int var2 = var1.readUByte();
 		if ((var2 >= 1) && (var2 <= 4)) {
@@ -171,7 +171,7 @@ public class Class104_Sub19 extends Class104 {
 
 			int var3;
 			for (var3 = 0; var3 < var2; ++var3)
-				anIntArray1147[var3] = var1.readLEShort();
+				anIntArray1147[var3] = var1.readShort();
 
 			if (var2 > 1) {
 				anIntArray1140 = new int[var2 - 1];

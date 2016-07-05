@@ -2,7 +2,7 @@ public class Class104_Sub2 extends Class104 {
 	public static boolean aBool859;
 	static int anInt860;
 	static Sprite aClass104_Sub18_Sub17_Sub1_861;
-	public static int anInt862;
+	public static int ids;
 	static Class58 aClass58_857 = new Class58(32);
 	int[] anIntArray856 = new int[] { -1 };
 	int[] anIntArray858 = new int[] { 0 };

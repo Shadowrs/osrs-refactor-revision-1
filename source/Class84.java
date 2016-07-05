@@ -298,17 +298,17 @@ public class Class84 {
 
 	}
 
-	public static Class104_Sub18_Sub9 method382(final int var0) {
-		Class104_Sub18_Sub9 var1 = (Class104_Sub18_Sub9) Class104_Sub18_Sub9.aClass56_1393.method236(var0);
+	public static Def2 forId(final int var0) {
+		Def2 var1 = (Def2) Def2.aClass56_1393.method236(var0);
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class104_Sub18_Sub9.aClass61_1391.decompress(3, var0);
-			var1 = new Class104_Sub18_Sub9();
+			final byte[] var2 = Def2.aClass61_1391.decompress(3, var0);
+			var1 = new Def2();
 			if (var2 != null)
 				var1.method761(new RSBuf(var2));
 
-			Class104_Sub18_Sub9.aClass56_1393.method238(var1, var0);
+			Def2.aClass56_1393.method238(var1, var0);
 			return var1;
 		}
 	}

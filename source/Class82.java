@@ -83,7 +83,7 @@ public class Class82 {
 			}
 		}
 
-		anInt646 = var1.readLEShort();
-		anInt647 = var1.readLEShort();
+		anInt646 = var1.readShort();
+		anInt647 = var1.readShort();
 	}
 }

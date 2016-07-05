@@ -17,7 +17,7 @@ public class Class104_Sub18_Sub8 extends Class104_Sub18 {
 
 	void method758(final RSBuf var1, final int var2) {
 		if (var2 == 1) {
-			anInt1388 = var1.readLEShort();
+			anInt1388 = var1.readShort();
 			anInt1386 = var1.readUByte();
 			anInt1390 = var1.readUByte();
 		}

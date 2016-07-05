@@ -1,4 +1,4 @@
-public class Class104_Sub18_Sub9 extends Class104_Sub18 {
+public class Def2 extends Class104_Sub18 {
 	static Class61 aClass61_1391;
 	static Class61 aClass61_1394;
 	public static Class56 aClass56_1393 = new Class56(64);
@@ -84,7 +84,7 @@ public class Class104_Sub18_Sub9 extends Class104_Sub18 {
 				anIntArray1395 = new int[var3];
 
 				for (var4 = 0; var4 < var3; ++var4)
-					anIntArray1395[var4] = var1.readLEShort();
+					anIntArray1395[var4] = var1.readShort();
 			} else if (var2 == 3)
 				aBool1401 = true;
 			else if (var2 == 40) {
@@ -93,8 +93,8 @@ public class Class104_Sub18_Sub9 extends Class104_Sub18 {
 				aShortArray1397 = new short[var3];
 
 				for (var4 = 0; var4 < var3; ++var4) {
-					aShortArray1396[var4] = (short) var1.readLEShort();
-					aShortArray1397[var4] = (short) var1.readLEShort();
+					aShortArray1396[var4] = (short) var1.readShort();
+					aShortArray1397[var4] = (short) var1.readShort();
 				}
 			} else if (var2 == 41) {
 				var3 = var1.readUByte();
@@ -102,11 +102,11 @@ public class Class104_Sub18_Sub9 extends Class104_Sub18 {
 				aShortArray1399 = new short[var3];
 
 				for (var4 = 0; var4 < var3; ++var4) {
-					aShortArray1398[var4] = (short) var1.readLEShort();
-					aShortArray1399[var4] = (short) var1.readLEShort();
+					aShortArray1398[var4] = (short) var1.readShort();
+					aShortArray1399[var4] = (short) var1.readShort();
 				}
 			} else if ((var2 >= 60) && (var2 < 70))
-				anIntArray1392[var2 - 60] = var1.readLEShort();
+				anIntArray1392[var2 - 60] = var1.readShort();
 		}
 
 	}

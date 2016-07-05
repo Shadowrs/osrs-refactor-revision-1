@@ -22,8 +22,8 @@ public class Class95 {
 		int rz;
 		int regionid;
 		if (!client.dynamicRegion) {
-			var1 = client.gamecon.readLEShort(); // L Y
-			var2 = client.gamecon.readShort(); // L X
+			var1 = client.gamecon.readShort(); // L Y
+			var2 = client.gamecon.readLEShort(); // L X
 			count = (client.pktSize - client.gamecon.pos) / 16;
 			Class13.xteakeys = new int[count][4];
 			System.out.println("region count: "+count);
@@ -35,7 +35,7 @@ public class Class95 {
 			}
 
 			var4 = client.gamecon.readUByteN(); // HEIGHT
-			cx = client.gamecon.readLEShort(); // C X
+			cx = client.gamecon.readShort(); // C X
 			cz = client.gamecon.readLEShortA(); // C Y
 			Class47.mapCoordinates = new int[count];
 			Class40.mapFileIds = new int[count];
@@ -92,7 +92,7 @@ public class Class95 {
 
 			count = client.gamecon.readLEShortA();
 			var4 = client.gamecon.readUByteN();
-			cx = client.gamecon.readShort();
+			cx = client.gamecon.readLEShort();
 			cz = client.gamecon.readLEShortA();
 			Class47.mapCoordinates = new int[var2];
 			Class40.mapFileIds = new int[var2];
@@ -143,7 +143,7 @@ public class Class95 {
 				client.anInt2049 = var0.anInt1003;
 			}
 
-			if (client.aClass85_2047.aBool661)
+			if (client.aClass85_2047.female)
 				var0.anInt1002 = client.anInt1887;
 			else
 				var0.anInt1002 = client.anInt2049;
@@ -154,7 +154,7 @@ public class Class95 {
 				client.anInt2049 = var0.anInt1003;
 			}
 
-			if (client.aClass85_2047.aBool661)
+			if (client.aClass85_2047.female)
 				var0.anInt1002 = client.anInt2049;
 			else
 				var0.anInt1002 = client.anInt1887;
