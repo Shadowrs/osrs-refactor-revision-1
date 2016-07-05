@@ -39,38 +39,38 @@ public class Class104_Sub15 extends Class104 {
 		client.gamecon.initbits();
 		int needsUpdate = client.gamecon.readbits(1);
 		int movetype;
-		int move;
-		int maskflag;
+		int dir1;
+		int dir2;
 		int update;
 		int updateFlag;
 		if (needsUpdate != 0) {
 			movetype = client.gamecon.readbits(2);
 			if (movetype == 0)
-				client.anIntArray1911[++client.anInt1910 - 1] = 2047;
+				client.updates[++client.anInt1910 - 1] = 2047;
 			else if (movetype == 1) {
-				move = client.gamecon.readbits(3);
-				Class81.pf.step(move, false);
-				maskflag = client.gamecon.readbits(1);
-				if (maskflag == 1)
-					client.anIntArray1911[++client.anInt1910 - 1] = 2047;
+				dir1 = client.gamecon.readbits(3);
+				Class81.pf.step(dir1, false);
+				dir2 = client.gamecon.readbits(1);
+				if (dir2 == 1)
+					client.updates[++client.anInt1910 - 1] = 2047;
 			} else if (movetype == 2) {
-				move = client.gamecon.readbits(3);
-				Class81.pf.step(move, true);
-				maskflag = client.gamecon.readbits(3);
-				Class81.pf.step(maskflag, true);
+				dir1 = client.gamecon.readbits(3);
+				Class81.pf.step(dir1, true);
+				dir2 = client.gamecon.readbits(3);
+				Class81.pf.step(dir2, true);
 				update = client.gamecon.readbits(1);
 				if (update == 1)
-					client.anIntArray1911[++client.anInt1910 - 1] = 2047;
+					client.updates[++client.anInt1910 - 1] = 2047;
 			} else if (movetype == 3) { // teleport
-				Class12.anInt73 = client.gamecon.readbits(2);
-				move = client.gamecon.readbits(7);
-				maskflag = client.gamecon.readbits(1);
-				if (maskflag == 1)
-					client.anIntArray1911[++client.anInt1910 - 1] = 2047;
+				Class12.myplayerHeight = client.gamecon.readbits(2);
+				dir1 = client.gamecon.readbits(7); // x
+				dir2 = client.gamecon.readbits(1);
+				if (dir2 == 1)
+					client.updates[++client.anInt1910 - 1] = 2047;
 
-				update = client.gamecon.readbits(7);
-				updateFlag = client.gamecon.readbits(1);
-				Class81.pf.placeEntity(move, update, updateFlag == 1);
+				update = client.gamecon.readbits(7); // y
+				updateFlag = client.gamecon.readbits(1); // teleporting flag
+				Class81.pf.placeEntity(dir1, update, updateFlag == 1);
 			}
 		}
 
@@ -87,28 +87,28 @@ public class Class104_Sub15 extends Class104 {
 			int movee;
 			int move2;
 			for (movetype = 0; movetype < needsUpdate; ++movetype) {
-				move = client.localPlayerIndexs[movetype];
-				final Player entity = client.localNpcs[move];
+				dir1 = client.localPlayerIndexs[movetype];
+				final Player entity = client.localNpcs[dir1];
 				update = client.gamecon.readbits(1);
 				if (update == 0) {
-					client.localPlayerIndexs[++client.toUpdate - 1] = move;
+					client.localPlayerIndexs[++client.toUpdate - 1] = dir1;
 					entity.anInt1739 = client.anInt1799;
 				} else {
 					updateFlag = client.gamecon.readbits(2);
 					if (updateFlag == 0) {
-						client.localPlayerIndexs[++client.toUpdate - 1] = move;
+						client.localPlayerIndexs[++client.toUpdate - 1] = dir1;
 						entity.anInt1739 = client.anInt1799;
-						client.anIntArray1911[++client.anInt1910 - 1] = move;
+						client.updates[++client.anInt1910 - 1] = dir1;
 					} else if (updateFlag == 1) {
-						client.localPlayerIndexs[++client.toUpdate - 1] = move;
+						client.localPlayerIndexs[++client.toUpdate - 1] = dir1;
 						entity.anInt1739 = client.anInt1799;
 						movee = client.gamecon.readbits(3);
 						entity.step(movee, false);
 						move2 = client.gamecon.readbits(1);
 						if (move2 == 1)
-							client.anIntArray1911[++client.anInt1910 - 1] = move;
+							client.updates[++client.anInt1910 - 1] = dir1;
 					} else if (updateFlag == 2) {
-						client.localPlayerIndexs[++client.toUpdate - 1] = move;
+						client.localPlayerIndexs[++client.toUpdate - 1] = dir1;
 						entity.anInt1739 = client.anInt1799;
 						movee = client.gamecon.readbits(3);
 						entity.step(movee, true);
@@ -116,15 +116,15 @@ public class Class104_Sub15 extends Class104 {
 						entity.step(move2, true);
 						final int var9 = client.gamecon.readbits(1);
 						if (var9 == 1)
-							client.anIntArray1911[++client.anInt1910 - 1] = move;
+							client.updates[++client.anInt1910 - 1] = dir1;
 					} else if (updateFlag == 3)
-						client.anIntArray2048[++client.anInt1904 - 1] = move;
+						client.anIntArray2048[++client.anInt1904 - 1] = dir1;
 				}
 			}
 
 			Player entity;
 			// new npcs
-			for (; client.gamecon.availbits(client.pktSize) >= 11; entity.placeEntity( updateFlag + Class81.pf.anIntArray1745[0], maskflag + Class81.pf.anIntArray1746[0], movee == 1)) {
+			for (; client.gamecon.availbits(client.pktSize) >= 11; entity.placeEntity( updateFlag + Class81.pf.stepx[0], dir2 + Class81.pf.stepy[0], movee == 1)) {
 				needsUpdate = client.gamecon.readbits(11);
 				if (needsUpdate == 2047) // break flag
 					break;
@@ -141,34 +141,35 @@ public class Class104_Sub15 extends Class104 {
 				client.localPlayerIndexs[++client.toUpdate - 1] = needsUpdate;
 				entity = client.localNpcs[needsUpdate];
 				entity.anInt1739 = client.anInt1799;
-				maskflag = client.gamecon.readbits(5);
-				if (maskflag > 15)
-					maskflag -= 32;
+				dir2 = client.gamecon.readbits(5); // y
+				if (dir2 > 15)
+					dir2 -= 32;
 
 				update = client.anIntArray1817[client.gamecon.readbits(3)];
 				if (hasCachedAppearance)
 					entity.anInt1698 = entity.anInt1725 = update;
 
-				updateFlag = client.gamecon.readbits(5);
+				updateFlag = client.gamecon.readbits(5); // x
 				if (updateFlag > 15)
 					updateFlag -= 32;
 
 				movee = client.gamecon.readbits(1);
 				move2 = client.gamecon.readbits(1);
 				if (move2 == 1)
-					client.anIntArray1911[++client.anInt1910 - 1] = needsUpdate;
+					client.updates[++client.anInt1910 - 1] = needsUpdate;
 			}
 
 			client.gamecon.endbits();
 
 			for (needsUpdate = 0; needsUpdate < client.anInt1910; ++needsUpdate) {
-				movetype = client.anIntArray1911[needsUpdate];
+				movetype = client.updates[needsUpdate];
 				entity = client.localNpcs[movetype];
-				maskflag = client.gamecon.readUByte();
-				if ((maskflag & 64) != 0)
-					maskflag += client.gamecon.readUByte() << 8;
+				dir2 = client.gamecon.readUByte();
+				// larger mask
+				if ((dir2 & 64) != 0)
+					dir2 += client.gamecon.readUByte() << 8;
 
-				if ((maskflag & 4) != 0) {
+				if ((dir2 & 4) != 0) { // public chat
 					update = client.gamecon.readLEShort();
 					updateFlag = client.gamecon.readUByte();
 					movee = client.gamecon.readUByte();
@@ -180,29 +181,27 @@ public class Class104_Sub15 extends Class104 {
 
 						if (!var15 && (client.anInt1906 == 0)) {
 							client.somebuf.pos = 0;
-							client.gamecon.readBytes(client.somebuf.backing, 0,
-									movee);
+							client.gamecon.readBytes(client.somebuf.backing, 0, movee);
 							client.somebuf.pos = 0;
-							final String var11 = Class104_Sub18_Sub17_Sub2
-									.method879(Class80.method351(Class50.huffmanDecode(client.somebuf)));
-							entity.aString1723 = var11.trim();
+							final String rStr = client .fixed(client.format(client.huffmanDecode(client.somebuf)));
+							entity.aString1723 = rStr.trim();
 							entity.anInt1731 = update >> 8;
 							entity.anInt1749 = update & 255;
 							entity.anInt1713 = 150;
 							if ((updateFlag != 2) && (updateFlag != 3)) {
 								if (updateFlag == 1)
-									Class15.method60(1, Class72.method335(0) + entity.aString1780, var11);
+									Class15.method60(1, Class72.method335(0) + entity.aString1780, rStr);
 								else
-									Class15.method60(2, entity.aString1780, var11);
+									Class15.method60(2, entity.aString1780, rStr);
 							} else
-								Class15.method60(1, Class72.method335(1) + entity.aString1780, var11);
+								Class15.method60(1, Class72.method335(1) + entity.aString1780, rStr);
 						}
 					}
 
 					client.gamecon.pos = move2 + movee;
 				}
 
-				if ((maskflag & 2) != 0) {
+				if ((dir2 & 2) != 0) { // appearance
 					update = client.gamecon.readUByteS();
 					final byte[] data = new byte[update];
 					final RSBuf buf = new RSBuf(data);
@@ -211,7 +210,7 @@ public class Class104_Sub15 extends Class104 {
 					entity.decodeAppearance(buf);
 				}
 
-				if ((maskflag & 256) != 0) {
+				if ((dir2 & 256) != 0) { // force move
 					entity.anInt1697 = client.gamecon.readUByte();
 					entity.anInt1734 = client.gamecon.readByteN();
 					entity.anInt1733 = client.gamecon.readUByte();
@@ -223,27 +222,27 @@ public class Class104_Sub15 extends Class104 {
 					entity.anInt1735 = 0;
 				}
 
-				if ((maskflag & 32) != 0) {
+				if ((dir2 & 32) != 0) { // face entity
 					entity.anInt1716 = client.gamecon.readShortN();
 					if (entity.anInt1716 == '\uffff')
 						entity.anInt1716 = -1;
 				}
 
-				if ((maskflag & 128) != 0) {
+				if ((dir2 & 128) != 0) { // face tile
 					entity.anInt1717 = client.gamecon.method594();
 					entity.anInt1718 = client.gamecon.readShort();
 				}
 
-				if ((maskflag & 16) != 0) {
+				if ((dir2 & 16) != 0) { // anim
 					update = client.gamecon.method594();
 					if (update == '\uffff')
 						update = -1;
 
 					updateFlag = client.gamecon.readByteN();
-					Class75.method342(entity, update, updateFlag);
+					Class75.transform(entity, update, updateFlag);
 				}
 
-				if ((maskflag & 512) != 0) {
+				if ((dir2 & 512) != 0) { // graphic
 					entity.anInt1727 = client.gamecon.readShort();
 					update = client.gamecon.readLEInt();
 					entity.anInt1709 = update >> 16;
@@ -257,16 +256,16 @@ public class Class104_Sub15 extends Class104 {
 						entity.anInt1727 = -1;
 				}
 
-				if ((maskflag & 1024) != 0) {
+				if ((dir2 & 1024) != 0) { // hit1
 					update = client.gamecon.method576();
 					updateFlag = client.gamecon.readUByteS();
-					entity.method935(update, updateFlag, client.anInt1799);
+					entity.hits(update, updateFlag, client.anInt1799);
 					entity.anInt1714 = client.anInt1799 + 300;
 					entity.anInt1693 = client.gamecon.readUByte();
 					entity.anInt1715 = client.gamecon.readByteN();
 				}
 
-				if ((maskflag & 1) != 0) {
+				if ((dir2 & 1) != 0) { // force chat
 					entity.aString1723 = client.gamecon.readString();
 					if (entity.aString1723.charAt(0) == 126) {
 						entity.aString1723 = entity.aString1723.substring(1);
@@ -279,10 +278,10 @@ public class Class104_Sub15 extends Class104 {
 					entity.anInt1713 = 150;
 				}
 
-				if ((maskflag & 8) != 0) {
+				if ((dir2 & 8) != 0) { // hit 2
 					update = client.gamecon.method576();
 					updateFlag = client.gamecon.readUByteS();
-					entity.method935(update, updateFlag, client.anInt1799);
+					entity.hits(update, updateFlag, client.anInt1799);
 					entity.anInt1714 = 300 + client.anInt1799;
 					entity.anInt1693 = client.gamecon.method576();
 					entity.anInt1715 = client.gamecon.readUByte();

@@ -39,8 +39,8 @@ public class Class104_Sub2 extends Class104 {
 					if ((null != var3.aClass104_Sub18_Sub16_Sub4_1785) && (client.anInt1799 >= var3.anInt1776)
 							&& (client.anInt1799 < var3.anInt1777)) {
 						var3.aBool1779 = false;
-						var3.anInt1775 = Class47.method211(var3.anInt1695, var3.anInt1694, Class12.anInt73);
-						Class81.aClass17_643.method106(Class12.anInt73, var3.anInt1695, var3.anInt1694, var3.anInt1775,
+						var3.anInt1775 = Class47.method211(var3.anInt1695, var3.anInt1694, Class12.myplayerHeight);
+						Class81.aClass17_643.method106(Class12.myplayerHeight, var3.anInt1695, var3.anInt1694, var3.anInt1775,
 								60, var3, var3.anInt1725, var4, var3.anInt1782, var3.anInt1786, var3.anInt1769,
 								var3.anInt1772);
 					} else {
@@ -51,8 +51,8 @@ public class Class104_Sub2 extends Class104 {
 							client.anIntArrayArray1891[var5][var6] = client.anInt1892;
 						}
 
-						var3.anInt1775 = Class47.method211(var3.anInt1695, var3.anInt1694, Class12.anInt73);
-						Class81.aClass17_643.method97(Class12.anInt73, var3.anInt1695, var3.anInt1694, var3.anInt1775,
+						var3.anInt1775 = Class47.method211(var3.anInt1695, var3.anInt1694, Class12.myplayerHeight);
+						Class81.aClass17_643.method97(Class12.myplayerHeight, var3.anInt1695, var3.anInt1694, var3.anInt1775,
 								60, var3, var3.anInt1725, var4, var3.aBool1696);
 					}
 			}

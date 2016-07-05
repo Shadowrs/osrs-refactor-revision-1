@@ -435,7 +435,7 @@ public class ObjectDefinition extends Class104_Sub18 {
 	}
 
 	public final Class104_Sub18_Sub16_Sub4 method749(final int var1, final int var2, final int[][] var3, final int var4,
-			final int var5, final int var6, final Class104_Sub18_Sub3 var7, final int var8) {
+			final int var5, final int var6, final Def var7, final int var8) {
 		long var9;
 		if (anIntArray1359 == null)
 			var9 = var2 + (anInt1330 << 10);

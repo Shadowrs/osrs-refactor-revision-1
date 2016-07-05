@@ -77,8 +77,8 @@ public class Class19 {
 				final Class104_Sub18_Sub16_Sub7_Sub2 var10 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var9];
 				if (var10 != null) {
 					for (var11 = 0; var11 < 10; ++var11) {
-						var10.anIntArray1745[var11] -= var7;
-						var10.anIntArray1746[var11] -= var8;
+						var10.stepx[var11] -= var7;
+						var10.stepy[var11] -= var8;
 					}
 
 					var10.anInt1695 -= var7 * 128;
@@ -90,8 +90,8 @@ public class Class19 {
 				final Player var23 = client.localNpcs[var9];
 				if (null != var23) {
 					for (var11 = 0; var11 < 10; ++var11) {
-						var23.anIntArray1745[var11] -= var7;
-						var23.anIntArray1746[var11] -= var8;
+						var23.stepx[var11] -= var7;
+						var23.stepy[var11] -= var8;
 					}
 
 					var23.anInt1695 -= var7 * 128;
@@ -99,7 +99,7 @@ public class Class19 {
 				}
 			}
 
-			Class12.anInt73 = var2;
+			Class12.myplayerHeight = var2;
 			Class81.pf.placeEntity(var3, var4, false);
 			byte var22 = 0;
 			byte var12 = 104;

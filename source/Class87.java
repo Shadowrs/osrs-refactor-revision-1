@@ -43,8 +43,8 @@ public class Class87 {
 	}
 
 	public static void method398() {
-		Class104_Sub18_Sub3.aClass56_1260.method239();
-		Class104_Sub18_Sub3.aClass56_1268.method239();
+		Def.aClass56_1260.method239();
+		Def.aClass56_1268.method239();
 	}
 
 	public static boolean method399(final char var0) {

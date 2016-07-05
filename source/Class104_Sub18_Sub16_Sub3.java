@@ -9,7 +9,7 @@ public final class Class104_Sub18_Sub16_Sub3 extends Class104_Sub18_Sub16 {
 	int anInt1518;
 	int anInt1523;
 	int anInt1515;
-	Class104_Sub18_Sub3 aClass104_Sub18_Sub3_1519;
+	Def aClass104_Sub18_Sub3_1519;
 
 	Class104_Sub18_Sub16_Sub3(final int var1, final int var2, final int var3, final int var4, final int var5,
 			final int var6, final int var7) {
@@ -22,7 +22,7 @@ public final class Class104_Sub18_Sub16_Sub3 extends Class104_Sub18_Sub16 {
 		final int var8 = Class71.method330(anInt1520).anInt1316;
 		if (var8 != -1) {
 			aBool1517 = false;
-			aClass104_Sub18_Sub3_1519 = Class70.method327(var8);
+			aClass104_Sub18_Sub3_1519 = Class70.forId(var8);
 		} else
 			aBool1517 = true;
 

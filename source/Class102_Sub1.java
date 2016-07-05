@@ -135,9 +135,9 @@ public class Class102_Sub1 extends Class102 {
 	}
 
 	static final void method496(final int var0, final int var1) {
-		final Class59 var2 = client.aClass59ArrayArrayArray1952[Class12.anInt73][var0][var1];
+		final Class59 var2 = client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var0][var1];
 		if (var2 == null)
-			Class81.aClass17_643.method110(Class12.anInt73, var0, var1);
+			Class81.aClass17_643.method110(Class12.myplayerHeight, var0, var1);
 		else {
 			int var3 = -99999999;
 			Class104_Sub18_Sub16_Sub6 var4 = null;
@@ -157,7 +157,7 @@ public class Class102_Sub1 extends Class102 {
 			}
 
 			if (null == var4)
-				Class81.aClass17_643.method110(Class12.anInt73, var0, var1);
+				Class81.aClass17_643.method110(Class12.myplayerHeight, var0, var1);
 			else {
 				var2.method255(var4);
 				Class104_Sub18_Sub16_Sub6 var10 = null;
@@ -174,8 +174,8 @@ public class Class102_Sub1 extends Class102 {
 					}
 
 				final int var9 = (var1 << 7) + var0 + 1610612736;
-				Class81.aClass17_643.method74(Class12.anInt73, var0, var1,
-						Class47.method211((128 * var0) + 64, 64 + (var1 * 128), Class12.anInt73), var4, var9, var10,
+				Class81.aClass17_643.method74(Class12.myplayerHeight, var0, var1,
+						Class47.method211((128 * var0) + 64, 64 + (var1 * 128), Class12.myplayerHeight), var4, var9, var10,
 						var8);
 			}
 		}

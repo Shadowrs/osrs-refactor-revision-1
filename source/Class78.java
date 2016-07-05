@@ -19,9 +19,9 @@ public class Class78 {
 			if (var3 == 45) {
 				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -45,9 +45,9 @@ public class Class78 {
 			if (var3 == 8) {
 				var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
-							var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var11.stepx[0],
+							var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -62,9 +62,9 @@ public class Class78 {
 			if (var3 == 51) {
 				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -121,9 +121,9 @@ public class Class78 {
 			if (var3 == 47) {
 				var5 = client.localNpcs[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -148,9 +148,9 @@ public class Class78 {
 			if (var3 == 46) {
 				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -162,12 +162,12 @@ public class Class78 {
 
 			boolean var7;
 			if (var3 == 20) {
-				var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-						Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
+						Class81.pf.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -183,9 +183,9 @@ public class Class78 {
 			if (var3 == 12) {
 				var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
-							var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var11.stepx[0],
+							var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -198,9 +198,9 @@ public class Class78 {
 			if (var3 == 14) {
 				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -235,9 +235,9 @@ public class Class78 {
 			if (var3 == 50) {
 				var5 = client.localNpcs[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -263,9 +263,9 @@ public class Class78 {
 			if (var3 == 48) {
 				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -306,9 +306,9 @@ public class Class78 {
 			if (var3 == 15) {
 				var5 = client.localNpcs[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -321,12 +321,12 @@ public class Class78 {
 			}
 
 			if (var3 == 18) {
-				var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-						Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
+						Class81.pf.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -348,12 +348,12 @@ public class Class78 {
 			}
 
 			if (var3 == 16) {
-				var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-						Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
+						Class81.pf.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -407,9 +407,9 @@ public class Class78 {
 			if (var3 == 44) {
 				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -420,12 +420,12 @@ public class Class78 {
 			}
 
 			if (var3 == 22) {
-				var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-						Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
+						Class81.pf.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -453,9 +453,9 @@ public class Class78 {
 			if (var3 == 9) {
 				var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
-							var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var11.stepx[0],
+							var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -468,9 +468,9 @@ public class Class78 {
 			if (var3 == 49) {
 				var5 = client.localNpcs[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var5.anIntArray1745[0],
-							var5.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+					Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var5.stepx[0],
+							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
@@ -532,9 +532,9 @@ public class Class78 {
 				if (var3 == 10) {
 					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 					if (var11 != null) {
-						Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-								Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
-								var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+						Class104_Sub13.method543(Class81.pf.stepx[0],
+								Class81.pf.stepy[0], var11.stepx[0],
+								var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
 						client.anInt1896 = Class14.anInt102;
 						client.anInt1898 = 2;
@@ -585,9 +585,9 @@ public class Class78 {
 				if (var3 == 13) {
 					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 					if (null != var11) {
-						Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-								Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
-								var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+						Class104_Sub13.method543(Class81.pf.stepx[0],
+								Class81.pf.stepy[0], var11.stepx[0],
+								var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
 						client.anInt1896 = Class14.anInt102;
 						client.anInt1898 = 2;
@@ -600,9 +600,9 @@ public class Class78 {
 				if (var3 == 11) {
 					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 					if (null != var11) {
-						Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-								Class81.pf.anIntArray1746[0], var11.anIntArray1745[0],
-								var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+						Class104_Sub13.method543(Class81.pf.stepx[0],
+								Class81.pf.stepy[0], var11.stepx[0],
+								var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
 						client.anInt1896 = Class14.anInt102;
 						client.anInt1898 = 2;
@@ -613,12 +613,12 @@ public class Class78 {
 				}
 
 				if (var3 == 17) {
-					var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0, 0,
+					var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var1, var2, false, 0, 0, 0,
 							0, 0, 2);
 					if (!var7)
-						Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-								Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0,
+						Class104_Sub13.method543(Class81.pf.stepx[0],
+								Class81.pf.stepy[0], var1, var2, false, 0, 0,
 								1, 1, 0, 2);
 
 					client.anInt1895 = Class14.anInt101;
@@ -672,7 +672,7 @@ public class Class78 {
 					}
 
 					if (var3 == 23)
-						Class81.aClass17_643.method95(Class12.anInt73, var1, var2);
+						Class81.aClass17_643.method95(Class12.myplayerHeight, var1, var2);
 
 					if (var3 == 4) {
 						Class97.method442(var1, var2, var4);
@@ -693,12 +693,12 @@ public class Class78 {
 					}
 
 					if (var3 == 19) {
-						var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-								Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0,
+						var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
+								Class81.pf.stepy[0], var1, var2, false, 0, 0,
 								0, 0, 0, 2);
 						if (!var7)
-							Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-									Class81.pf.anIntArray1746[0], var1, var2, false, 0,
+							Class104_Sub13.method543(Class81.pf.stepx[0],
+									Class81.pf.stepy[0], var1, var2, false, 0,
 									0, 1, 1, 0, 2);
 
 						client.anInt1895 = Class14.anInt101;
@@ -739,9 +739,9 @@ public class Class78 {
 					if (var3 == 7) {
 						var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
 						if (null != var11) {
-							Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-									Class81.pf.anIntArray1746[0],
-									var11.anIntArray1745[0], var11.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+							Class104_Sub13.method543(Class81.pf.stepx[0],
+									Class81.pf.stepy[0],
+									var11.stepx[0], var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 							client.anInt1895 = Class14.anInt101;
 							client.anInt1896 = Class14.anInt102;
 							client.anInt1898 = 2;
@@ -755,12 +755,12 @@ public class Class78 {
 					}
 
 					if (var3 == 21) {
-						var7 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-								Class81.pf.anIntArray1746[0], var1, var2, false, 0, 0,
+						var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
+								Class81.pf.stepy[0], var1, var2, false, 0, 0,
 								0, 0, 0, 2);
 						if (!var7)
-							Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-									Class81.pf.anIntArray1746[0], var1, var2, false, 0,
+							Class104_Sub13.method543(Class81.pf.stepx[0],
+									Class81.pf.stepy[0], var1, var2, false, 0,
 									0, 1, 1, 0, 2);
 
 						client.anInt1895 = Class14.anInt101;

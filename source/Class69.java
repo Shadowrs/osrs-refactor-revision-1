@@ -14,7 +14,7 @@ public final class Class69 {
 
 	static final void method322(int var0, int var1, final int var2) {
 		if ((var0 >= 128) && (var1 >= 128) && (var0 <= 13056) && (var1 <= 13056)) {
-			int var3 = Class47.method211(var0, var1, Class12.anInt73) - var2;
+			int var3 = Class47.method211(var0, var1, Class12.myplayerHeight) - var2;
 			var0 -= Class85.anInt672;
 			var3 -= Class46.anInt403;
 			var1 -= Class99.anInt793;

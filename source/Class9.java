@@ -68,14 +68,14 @@ public final class Class9 {
 				final int var20 = ((var17 + 1) >> 1) + var10;
 				final int var21 = var11 + (var18 >> 1);
 				final int var22 = var11 + ((var18 + 1) >> 1);
-				final int[][] var23 = Class76.anIntArrayArrayArray611[Class12.anInt73];
+				final int[][] var23 = Class76.anIntArrayArrayArray611[Class12.myplayerHeight];
 				final int var24 = (var23[var20][var22] + var23[var19][var21] + var23[var20][var21]
 						+ var23[var19][var22]) >> 2;
 				final int var25 = (var10 << 7) + (var17 << 6);
 				final int var26 = (var11 << 7) + (var18 << 6);
 				final Class104_Sub18_Sub16_Sub4 var27 = var16.method750(var3, var4, var23, var25, var24, var26);
 				if (null != var27) {
-					JagFS2.method67(Class12.anInt73, var10, var11, var5, -1, 0, 0, 1 + var7, var0 + 1);
+					JagFS2.method67(Class12.myplayerHeight, var10, var11, var5, -1, 0, 0, 1 + var7, var0 + 1);
 					var15.anInt1776 = var7 + client.anInt1799;
 					var15.anInt1777 = client.anInt1799 + var0;
 					var15.aClass104_Sub18_Sub16_Sub4_1785 = var27;
@@ -111,7 +111,7 @@ public final class Class9 {
 			var2 = Class19.anInt195 + ((var35 >> 4) & 7);
 			var3 = (var35 & 7) + Class93.anInt742;
 			if ((var2 >= 0) && (var3 >= 0) && (var2 < 104) && (var3 < 104)) {
-				final Class59 var29 = client.aClass59ArrayArrayArray1952[Class12.anInt73][var2][var3];
+				final Class59 var29 = client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var2][var3];
 				if (null != var29) {
 					for (var30 = (Class104_Sub18_Sub16_Sub6) var29
 							.method251(); null != var30; var30 = (Class104_Sub18_Sub16_Sub6) var29.method252())
@@ -121,7 +121,7 @@ public final class Class9 {
 						}
 
 					if (var29.method251() == null)
-						client.aClass59ArrayArrayArray1952[Class12.anInt73][var2][var3] = null;
+						client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var2][var3] = null;
 
 					Class102_Sub1.method496(var2, var3);
 				}
@@ -139,10 +139,10 @@ public final class Class9 {
 				var7 = client.gamecon.readUByte();
 				if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104)) {
 					var8 = 1 + var5;
-					if ((Class81.pf.anIntArray1745[0] >= (var35 - var8))
-							&& (Class81.pf.anIntArray1745[0] <= (var8 + var35))
-							&& (Class81.pf.anIntArray1746[0] >= (var2 - var8))
-							&& (Class81.pf.anIntArray1746[0] <= (var2 + var8))
+					if ((Class81.pf.stepx[0] >= (var35 - var8))
+							&& (Class81.pf.stepx[0] <= (var8 + var35))
+							&& (Class81.pf.stepy[0] >= (var2 - var8))
+							&& (Class81.pf.stepy[0] <= (var2 + var8))
 							&& (client.anInt2026 != 0) && (var6 > 0) && (client.anInt2028 < 50)) {
 						client.anIntArray2029[client.anInt2028] = var3;
 						client.anIntArray1875[client.anInt2028] = var6;
@@ -165,61 +165,61 @@ public final class Class9 {
 				var7 = client.anIntArray1849[var5];
 				if ((var2 >= 0) && (var3 >= 0) && (var2 < 103) && (var3 < 103)) {
 					if (var7 == 0) {
-						final Class20 var31 = Class81.aClass17_643.method117(Class12.anInt73, var2, var3);
+						final Class20 var31 = Class81.aClass17_643.method117(Class12.myplayerHeight, var2, var3);
 						if (var31 != null) {
 							var9 = (var31.anInt200 >> 14) & 32767;
 							if (var5 == 2) {
 								var31.aClass104_Sub18_Sub16_199 = new Class104_Sub18_Sub16_Sub1(var9, 2, var6 + 4,
-										Class12.anInt73, var2, var3, var0, false, var31.aClass104_Sub18_Sub16_199);
+										Class12.myplayerHeight, var2, var3, var0, false, var31.aClass104_Sub18_Sub16_199);
 								var31.aClass104_Sub18_Sub16_202 = new Class104_Sub18_Sub16_Sub1(var9, 2, (var6 + 1) & 3,
-										Class12.anInt73, var2, var3, var0, false, var31.aClass104_Sub18_Sub16_202);
+										Class12.myplayerHeight, var2, var3, var0, false, var31.aClass104_Sub18_Sub16_202);
 							} else
 								var31.aClass104_Sub18_Sub16_199 = new Class104_Sub18_Sub16_Sub1(var9, var5, var6,
-										Class12.anInt73, var2, var3, var0, false, var31.aClass104_Sub18_Sub16_199);
+										Class12.myplayerHeight, var2, var3, var0, false, var31.aClass104_Sub18_Sub16_199);
 						}
 					}
 
 					if (var7 == 1) {
-						final Class33 var37 = Class81.aClass17_643.method96(Class12.anInt73, var2, var3);
+						final Class33 var37 = Class81.aClass17_643.method96(Class12.myplayerHeight, var2, var3);
 						if (var37 != null) {
 							var9 = (var37.anInt340 >> 14) & 32767;
 							if ((var5 != 4) && (var5 != 5)) {
 								if (var5 == 6)
 									var37.aClass104_Sub18_Sub16_338 = new Class104_Sub18_Sub16_Sub1(var9, 4, 4 + var6,
-											Class12.anInt73, var2, var3, var0, false, var37.aClass104_Sub18_Sub16_338);
+											Class12.myplayerHeight, var2, var3, var0, false, var37.aClass104_Sub18_Sub16_338);
 								else if (var5 == 7)
 									var37.aClass104_Sub18_Sub16_338 = new Class104_Sub18_Sub16_Sub1(var9, 4,
-											((2 + var6) & 3) + 4, Class12.anInt73, var2, var3, var0, false,
+											((2 + var6) & 3) + 4, Class12.myplayerHeight, var2, var3, var0, false,
 											var37.aClass104_Sub18_Sub16_338);
 								else if (var5 == 8) {
 									var37.aClass104_Sub18_Sub16_338 = new Class104_Sub18_Sub16_Sub1(var9, 4, var6 + 4,
-											Class12.anInt73, var2, var3, var0, false, var37.aClass104_Sub18_Sub16_338);
+											Class12.myplayerHeight, var2, var3, var0, false, var37.aClass104_Sub18_Sub16_338);
 									var37.aClass104_Sub18_Sub16_339 = new Class104_Sub18_Sub16_Sub1(var9, 4,
-											((var6 + 2) & 3) + 4, Class12.anInt73, var2, var3, var0, false,
+											((var6 + 2) & 3) + 4, Class12.myplayerHeight, var2, var3, var0, false,
 											var37.aClass104_Sub18_Sub16_339);
 								}
 							} else
 								var37.aClass104_Sub18_Sub16_338 = new Class104_Sub18_Sub16_Sub1(var9, 4, var6,
-										Class12.anInt73, var2, var3, var0, false, var37.aClass104_Sub18_Sub16_338);
+										Class12.myplayerHeight, var2, var3, var0, false, var37.aClass104_Sub18_Sub16_338);
 						}
 					}
 
 					if (var7 == 2) {
-						final Class21 var38 = Class81.aClass17_643.method113(Class12.anInt73, var2, var3);
+						final Class21 var38 = Class81.aClass17_643.method113(Class12.myplayerHeight, var2, var3);
 						if (var5 == 11)
 							var5 = 10;
 
 						if (null != var38)
 							var38.aClass104_Sub18_Sub16_214 = new Class104_Sub18_Sub16_Sub1(
-									(var38.anInt220 >> 14) & 32767, var5, var6, Class12.anInt73, var2, var3, var0,
+									(var38.anInt220 >> 14) & 32767, var5, var6, Class12.myplayerHeight, var2, var3, var0,
 									false, var38.aClass104_Sub18_Sub16_214);
 					}
 
 					if (var7 == 3) {
-						final Class6 var39 = Class81.aClass17_643.method105(Class12.anInt73, var2, var3);
+						final Class6 var39 = Class81.aClass17_643.method105(Class12.myplayerHeight, var2, var3);
 						if (null != var39)
 							var39.aClass104_Sub18_Sub16_33 = new Class104_Sub18_Sub16_Sub1(
-									(var39.anInt34 >> 14) & 32767, 22, var6, Class12.anInt73, var2, var3, var0, false,
+									(var39.anInt34 >> 14) & 32767, 22, var6, Class12.myplayerHeight, var2, var3, var0, false,
 									var39.aClass104_Sub18_Sub16_33);
 					}
 				}
@@ -234,10 +234,10 @@ public final class Class9 {
 					var30 = new Class104_Sub18_Sub16_Sub6();
 					var30.anInt1691 = var4;
 					var30.anInt1692 = var3;
-					if (client.aClass59ArrayArrayArray1952[Class12.anInt73][var35][var2] == null)
-						client.aClass59ArrayArrayArray1952[Class12.anInt73][var35][var2] = new Class59();
+					if (client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var35][var2] == null)
+						client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var35][var2] = new Class59();
 
-					client.aClass59ArrayArrayArray1952[Class12.anInt73][var35][var2].method248(var30);
+					client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var35][var2].method248(var30);
 					Class102_Sub1.method496(var35, var2);
 				}
 
@@ -252,7 +252,7 @@ public final class Class9 {
 					var6 = ((var5 >> 4) & 7) + Class19.anInt195;
 					var7 = (var5 & 7) + Class93.anInt742;
 					if ((var6 >= 0) && (var7 >= 0) && (var6 < 104) && (var7 < 104))
-						JagFS2.method67(Class12.anInt73, var6, var7, var4, var0, var2, var3, 0, -1);
+						JagFS2.method67(Class12.myplayerHeight, var6, var7, var4, var0, var2, var3, 0, -1);
 
 				} else if (client.pktOpc == 20) {
 					var0 = client.gamecon.readUByte();
@@ -264,8 +264,8 @@ public final class Class9 {
 					if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104)) {
 						var35 = (128 * var35) + 64;
 						var2 = (128 * var2) + 64;
-						final Class104_Sub18_Sub16_Sub3 var41 = new Class104_Sub18_Sub16_Sub3(var3, Class12.anInt73,
-								var35, var2, Class47.method211(var35, var2, Class12.anInt73) - var4, var5,
+						final Class104_Sub18_Sub16_Sub3 var41 = new Class104_Sub18_Sub16_Sub3(var3, Class12.myplayerHeight,
+								var35, var2, Class47.method211(var35, var2, Class12.myplayerHeight) - var4, var5,
 								client.anInt1799);
 						client.aClass59_1869.method248(var41);
 					}
@@ -290,10 +290,10 @@ public final class Class9 {
 						var2 = 64 + (var2 * 128);
 						var3 = (128 * var3) + 64;
 						var4 = 64 + (var4 * 128);
-						final Class104_Sub18_Sub16_Sub2 var34 = new Class104_Sub18_Sub16_Sub2(var6, Class12.anInt73,
-								var35, var2, Class47.method211(var35, var2, Class12.anInt73) - var7,
+						final Class104_Sub18_Sub16_Sub2 var34 = new Class104_Sub18_Sub16_Sub2(var6, Class12.myplayerHeight,
+								var35, var2, Class47.method211(var35, var2, Class12.myplayerHeight) - var7,
 								client.anInt1799 + var9, var10 + client.anInt1799, var11, var36, var5, var8);
-						var34.method808(var3, var4, Class47.method211(var3, var4, Class12.anInt73) - var8,
+						var34.method808(var3, var4, Class47.method211(var3, var4, Class12.myplayerHeight) - var8,
 								client.anInt1799 + var9);
 						client.aClass59_1923.method248(var34);
 					}
@@ -309,10 +309,10 @@ public final class Class9 {
 						final Class104_Sub18_Sub16_Sub6 var40 = new Class104_Sub18_Sub16_Sub6();
 						var40.anInt1691 = var5;
 						var40.anInt1692 = var4;
-						if (client.aClass59ArrayArrayArray1952[Class12.anInt73][var35][var2] == null)
-							client.aClass59ArrayArrayArray1952[Class12.anInt73][var35][var2] = new Class59();
+						if (client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var35][var2] == null)
+							client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var35][var2] = new Class59();
 
-						client.aClass59ArrayArrayArray1952[Class12.anInt73][var35][var2].method248(var40);
+						client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var35][var2].method248(var40);
 						Class102_Sub1.method496(var35, var2);
 					}
 
@@ -325,7 +325,7 @@ public final class Class9 {
 					var5 = ((var4 >> 4) & 7) + Class19.anInt195;
 					var6 = Class93.anInt742 + (var4 & 7);
 					if ((var5 >= 0) && (var6 >= 0) && (var5 < 104) && (var6 < 104))
-						JagFS2.method67(Class12.anInt73, var5, var6, var3, -1, var35, var2, 0, -1);
+						JagFS2.method67(Class12.myplayerHeight, var5, var6, var3, -1, var35, var2, 0, -1);
 
 				}
 			} else {
@@ -336,7 +336,7 @@ public final class Class9 {
 				var4 = client.gamecon.readLEShort();
 				var5 = client.gamecon.readLEShort();
 				if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104)) {
-					final Class59 var32 = client.aClass59ArrayArrayArray1952[Class12.anInt73][var35][var2];
+					final Class59 var32 = client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var35][var2];
 					if (null != var32) {
 						for (Class104_Sub18_Sub16_Sub6 var33 = (Class104_Sub18_Sub16_Sub6) var32
 								.method251(); var33 != null; var33 = (Class104_Sub18_Sub16_Sub6) var32.method252())
@@ -373,7 +373,7 @@ public final class Class9 {
 	public static void method38(final Class61 var0, final Class61 var1, final Class61 var2) {
 		Class106.aClass61_829 = var0;
 		Class7.aClass61_43 = var1;
-		Class104_Sub18_Sub3.aClass61_1259 = var2;
+		Def.aClass61_1259 = var2;
 	}
 
 	static boolean method39(final Class61 var0, final int var1) {

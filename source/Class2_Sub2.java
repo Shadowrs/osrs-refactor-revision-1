@@ -122,7 +122,7 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 
 					final int var5 = client.gamecon.readbits(1);
 					if (var5 == 1)
-						client.anIntArray1911[++client.anInt1910 - 1] = var0;
+						client.updates[++client.anInt1910 - 1] = var0;
 
 					final int var6 = client.gamecon.readbits(1);
 					var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.gamecon.readbits(14));
@@ -142,8 +142,8 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 					var2.anInt1702 = var2.aClass104_Sub18_Sub2_1788.anInt1233;
 					var2.anInt1699 = var2.aClass104_Sub18_Sub2_1788.anInt1244;
 					var2.anInt1700 = var2.aClass104_Sub18_Sub2_1788.anInt1235;
-					var2.placeEntity(Class81.pf.anIntArray1745[0] + var7,
-							Class81.pf.anIntArray1746[0] + var4, var6 == 1);
+					var2.placeEntity(Class81.pf.stepx[0] + var7,
+							Class81.pf.stepy[0] + var4, var6 == 1);
 					continue;
 				}
 			}

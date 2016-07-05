@@ -45,8 +45,8 @@ public class Class30 {
 			var0.anInt1727 = -1;
 			var0.anInt1708 = 0;
 			var0.anInt1737 = 0;
-			var0.anInt1695 = (var0.anInt1736 * 64) + (128 * var0.anIntArray1745[0]);
-			var0.anInt1694 = (var0.anInt1736 * 64) + (var0.anIntArray1746[0] * 128);
+			var0.anInt1695 = (var0.anInt1736 * 64) + (128 * var0.stepx[0]);
+			var0.anInt1694 = (var0.anInt1736 * 64) + (var0.stepy[0] * 128);
 			var0.method932();
 		}
 
@@ -56,8 +56,8 @@ public class Class30 {
 			var0.anInt1727 = -1;
 			var0.anInt1708 = 0;
 			var0.anInt1737 = 0;
-			var0.anInt1695 = (var0.anIntArray1745[0] * 128) + (var0.anInt1736 * 64);
-			var0.anInt1694 = (var0.anInt1736 * 64) + (var0.anIntArray1746[0] * 128);
+			var0.anInt1695 = (var0.stepx[0] * 128) + (var0.anInt1736 * 64);
+			var0.anInt1694 = (var0.anInt1736 * 64) + (var0.stepy[0] * 128);
 			var0.method932();
 		}
 

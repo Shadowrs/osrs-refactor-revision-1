@@ -47,8 +47,8 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 		}
 	}
 
-	public final Class104_Sub18_Sub16_Sub4 method675(final Class104_Sub18_Sub3 var1, final int var2,
-			final Class104_Sub18_Sub3 var3, final int var4) {
+	public final Class104_Sub18_Sub16_Sub4 method675(final Def var1, final int var2,
+			final Def var3, final int var4) {
 		if (null != anIntArray1230) {
 			final Class104_Sub18_Sub2 var12 = method677();
 			return var12 == null ? null : var12.method675(var1, var2, var3, var4);

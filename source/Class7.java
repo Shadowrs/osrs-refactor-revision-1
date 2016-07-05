@@ -10,7 +10,7 @@ public class Class7 {
 
 	static final void method33() {
 		for (int var0 = 0; var0 < client.anInt1910; ++var0) {
-			final int var1 = client.anIntArray1911[var0];
+			final int var1 = client.updates[var0];
 			final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var1];
 			final int var3 = client.gamecon.readUByte();
 			int var4;
@@ -18,7 +18,7 @@ public class Class7 {
 			if ((var3 & 128) != 0) {
 				var4 = client.gamecon.readUByte();
 				var5 = client.gamecon.readByteN();
-				var2.method935(var4, var5, client.anInt1799);
+				var2.hits(var4, var5, client.anInt1799);
 				var2.anInt1714 = 300 + client.anInt1799;
 				var2.anInt1693 = client.gamecon.method576();
 				var2.anInt1715 = client.gamecon.method576();
@@ -56,7 +56,7 @@ public class Class7 {
 
 				var5 = client.gamecon.method576();
 				if ((var2.anInt1722 == var4) && (var4 != -1)) {
-					final int var6 = Class70.method327(var4).anInt1275;
+					final int var6 = Class70.forId(var4).anInt1275;
 					if (var6 == 1) {
 						var2.anInt1732 = 0;
 						var2.anInt1724 = 0;
@@ -67,7 +67,7 @@ public class Class7 {
 					if (var6 == 2)
 						var2.anInt1726 = 0;
 				} else if ((var4 == -1) || (var2.anInt1722 == -1)
-						|| (Class70.method327(var4).anInt1269 >= Class70.method327(var2.anInt1722).anInt1269)) {
+						|| (Class70.forId(var4).anInt1269 >= Class70.forId(var2.anInt1722).anInt1269)) {
 					var2.anInt1722 = var4;
 					var2.anInt1732 = 0;
 					var2.anInt1724 = 0;
@@ -98,7 +98,7 @@ public class Class7 {
 			if ((var3 & 16) != 0) {
 				var4 = client.gamecon.readUByteS();
 				var5 = client.gamecon.readUByteS();
-				var2.method935(var4, var5, client.anInt1799);
+				var2.hits(var4, var5, client.anInt1799);
 				var2.anInt1714 = 300 + client.anInt1799;
 				var2.anInt1693 = client.gamecon.readUByteS();
 				var2.anInt1715 = client.gamecon.method576();

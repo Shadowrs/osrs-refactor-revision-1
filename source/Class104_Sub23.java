@@ -30,7 +30,7 @@ public class Class104_Sub23 extends Class104 {
 	static final void method620() {
 		int var0 = 64 + (Class30.anInt287 * 128);
 		int var1 = 64 + (Class43.anInt375 * 128);
-		int var2 = Class47.method211(var0, var1, Class12.anInt73) - Class61_Sub1.anInt892;
+		int var2 = Class47.method211(var0, var1, Class12.myplayerHeight) - Class61_Sub1.anInt892;
 		if (Class85.anInt672 < var0) {
 			Class85.anInt672 += CS.anInt944 + ((Class75.anInt598 * (var0 - Class85.anInt672)) / 1000);
 			if (Class85.anInt672 > var0)
@@ -69,7 +69,7 @@ public class Class104_Sub23 extends Class104 {
 
 		var0 = (Class85.anInt673 * 128) + 64;
 		var1 = 64 + (Class41.anInt370 * 128);
-		var2 = Class47.method211(var0, var1, Class12.anInt73) - Class79.anInt631;
+		var2 = Class47.method211(var0, var1, Class12.myplayerHeight) - Class79.anInt631;
 		final int var3 = var0 - Class85.anInt672;
 		final int var4 = var2 - Class46.anInt403;
 		final int var5 = var1 - Class99.anInt793;

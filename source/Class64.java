@@ -47,7 +47,7 @@ public class Class64 implements Runnable {
 	static final void method295(final int var0, final int var1, final int var2, final int var3, final int var4,
 			final int var5, final int var6) {
 		if ((var2 >= 1) && (var3 >= 1) && (var2 <= 102) && (var3 <= 102)) {
-			if (client.lowmvm && (var0 != Class12.anInt73))
+			if (client.lowmvm && (var0 != Class12.myplayerHeight))
 				return;
 
 			int var7 = 0;

@@ -220,7 +220,7 @@ public class Class88 {
 	static final void method405() {
 		for (Class104_Sub18_Sub16_Sub2 var0 = (Class104_Sub18_Sub16_Sub2) client.aClass59_1923
 				.method251(); null != var0; var0 = (Class104_Sub18_Sub16_Sub2) client.aClass59_1923.method252())
-			if ((var0.anInt1506 == Class12.anInt73) && (client.anInt1799 <= var0.anInt1496)) {
+			if ((var0.anInt1506 == Class12.myplayerHeight) && (client.anInt1799 <= var0.anInt1496)) {
 				if (client.anInt1799 >= var0.anInt1495) {
 					if (var0.anInt1505 > 0) {
 						final Class104_Sub18_Sub16_Sub7_Sub2 var1 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0.anInt1505
@@ -248,7 +248,7 @@ public class Class88 {
 					}
 
 					var0.method807(client.anInt1867);
-					Class81.aClass17_643.method97(Class12.anInt73, (int) var0.aDouble1503, (int) var0.aDouble1502,
+					Class81.aClass17_643.method97(Class12.myplayerHeight, (int) var0.aDouble1503, (int) var0.aDouble1502,
 							(int) var0.aDouble1499, 60, var0, var0.anInt1509, -1, false);
 				}
 			} else

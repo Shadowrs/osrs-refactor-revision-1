@@ -42,7 +42,7 @@ public final class Class104_Sub1 extends Class104 {
 
 	}
 
-	static void method477(final Class104_Sub18_Sub3 var0, final int var1, final int var2, final int var3) {
+	static void method477(final Def var0, final int var1, final int var2, final int var3) {
 		if ((client.anInt2028 < 50) && (client.anInt2026 != 0))
 			if ((var0.anIntArray1265 != null) && (var1 < var0.anIntArray1265.length)) {
 				final int var4 = var0.anIntArray1265[var1];

@@ -187,8 +187,8 @@ public class Class84 {
 					final int var9 = (var7 + Class81.pf.anInt1695) >> 7;
 					final int var10 = (Class81.pf.anInt1694 - var8) >> 7;
 					final boolean var11 = Class104_Sub13.method543(
-							Class81.pf.anIntArray1745[0],
-							Class81.pf.anIntArray1746[0], var9, var10, true, 0, 0, 0,
+							Class81.pf.stepx[0],
+							Class81.pf.stepy[0], var9, var10, true, 0, 0, 0,
 							0, 0, 1);
 					if (var11) {
 						client.secureBuf.writebyte(var2);
@@ -211,9 +211,9 @@ public class Class84 {
 
 	static final void method381(final Class104_Sub18_Sub16_Sub7 var0) {
 		var0.aBool1696 = false;
-		Class104_Sub18_Sub3 var1;
+		Def var1;
 		if (var0.anInt1719 != -1) {
-			var1 = Class70.method327(var0.anInt1719);
+			var1 = Class70.forId(var0.anInt1719);
 			if ((null != var1) && (var1.anIntArray1262 != null)) {
 				++var0.anInt1741;
 				if ((var0.anInt1720 < var1.anIntArray1262.length)
@@ -238,7 +238,7 @@ public class Class84 {
 
 			final int var2 = Class71.method330(var0.anInt1727).anInt1316;
 			if (var2 != -1) {
-				final Class104_Sub18_Sub3 var3 = Class70.method327(var2);
+				final Def var3 = Class70.forId(var2);
 				if ((var3 != null) && (var3.anIntArray1262 != null)) {
 					++var0.anInt1729;
 					if ((var0.anInt1728 < var3.anIntArray1262.length)
@@ -258,7 +258,7 @@ public class Class84 {
 		}
 
 		if ((var0.anInt1722 != -1) && (var0.anInt1707 <= 1)) {
-			var1 = Class70.method327(var0.anInt1722);
+			var1 = Class70.forId(var0.anInt1722);
 			if ((var1.anInt1273 == 1) && (var0.anInt1735 > 0) && (var0.anInt1708 <= client.anInt1799)
 					&& (var0.anInt1737 < client.anInt1799)) {
 				var0.anInt1707 = 1;
@@ -267,7 +267,7 @@ public class Class84 {
 		}
 
 		if ((var0.anInt1722 != -1) && (var0.anInt1707 == 0)) {
-			var1 = Class70.method327(var0.anInt1722);
+			var1 = Class70.forId(var0.anInt1722);
 			if ((var1 != null) && (var1.anIntArray1262 != null)) {
 				++var0.anInt1724;
 				if ((var0.anInt1732 < var1.anIntArray1262.length)

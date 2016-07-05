@@ -462,12 +462,12 @@ public class Class34 implements Interface2 {
 	}
 
 	static Class104_Sub18_Sub15 method165(final int var0) {
-		final Class104_Sub18_Sub15 var1 = (Class104_Sub18_Sub15) Class104_Sub18_Sub3.aClass56_1268.method236(var0);
+		final Class104_Sub18_Sub15 var1 = (Class104_Sub18_Sub15) Def.aClass56_1268.method236(var0);
 		if (null != var1)
 			return var1;
 		else {
 			final Class61 var2 = Class7.aClass61_43;
-			final Class61 var3 = Class104_Sub18_Sub3.aClass61_1259;
+			final Class61 var3 = Def.aClass61_1259;
 			boolean var4 = true;
 			final int[] var5 = var2.method265(var0);
 

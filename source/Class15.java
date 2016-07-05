@@ -50,9 +50,9 @@ public class Class15 {
 		for (int var6 = 0; var6 < client.toUpdate; ++var6) {
 			final Player var7 = client.localNpcs[client.localPlayerIndexs[var6]];
 			if ((null != var7) && (var7.aString1780 != null) && var7.aString1780.equalsIgnoreCase(var3)) {
-				Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-						Class81.pf.anIntArray1746[0], var7.anIntArray1745[0],
-						var7.anIntArray1746[0], false, 0, 0, 1, 1, 0, 2);
+				Class104_Sub13.method543(Class81.pf.stepx[0],
+						Class81.pf.stepy[0], var7.stepx[0],
+						var7.stepy[0], false, 0, 0, 1, 1, 0, 2);
 				if (var0 == 1) {
 					client.secureBuf.putOpcode(246);
 					client.secureBuf.writeShort(client.localPlayerIndexs[var6]);

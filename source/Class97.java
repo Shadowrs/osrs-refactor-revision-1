@@ -71,7 +71,7 @@ public class Class97 {
 							var5 = w.anInt1058;
 
 						if (var5 != -1) {
-							final Class104_Sub18_Sub3 var7 = Class70.method327(var5);
+							final Def var7 = Class70.forId(var5);
 
 							for (w.anInt1085 += client.anInt1867; w.anInt1085 > var7.anIntArray1264[w.anInt974]; Class79
 									.setflags(w)) {
@@ -132,15 +132,15 @@ public class Class97 {
 
 	static final boolean method442(final int var0, final int var1, final int var2) {
 		final int var3 = (var2 >> 14) & 32767;
-		final int var4 = Class81.aClass17_643.method89(Class12.anInt73, var0, var1, var2);
+		final int var4 = Class81.aClass17_643.method89(Class12.myplayerHeight, var0, var1, var2);
 		if (var4 == -1)
 			return false;
 		else {
 			final int var5 = var4 & 31;
 			final int var6 = (var4 >> 6) & 3;
 			if ((var5 != 10) && (var5 != 11) && (var5 != 22))
-				Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-						Class81.pf.anIntArray1746[0], var0, var1, true, 1 + var5, var6,
+				Class104_Sub13.method543(Class81.pf.stepx[0],
+						Class81.pf.stepy[0], var0, var1, true, 1 + var5, var6,
 						0, 0, 0, 2);
 			else {
 				final ObjectDefinition var7 = ItemDef.forId(var3);
@@ -158,8 +158,8 @@ public class Class97 {
 				if (var6 != 0)
 					var10 = (var10 >> (4 - var6)) + ((var10 << var6) & 15);
 
-				Class104_Sub13.method543(Class81.pf.anIntArray1745[0],
-						Class81.pf.anIntArray1746[0], var0, var1, true, 0, 0, var8,
+				Class104_Sub13.method543(Class81.pf.stepx[0],
+						Class81.pf.stepy[0], var0, var1, true, 0, 0, var8,
 						var9, var10, 2);
 			}
 

@@ -46,26 +46,26 @@ public class Class75 {
 		}
 	}
 
-	static void method342(final Player var0, final int var1, final int var2) {
-		if ((var0.anInt1722 == var1) && (var1 != -1)) {
-			final int var3 = Class70.method327(var1).anInt1275;
+	static void transform(final Player pl, final int type, final int upd) {
+		if ((pl.anInt1722 == type) && (type != -1)) {
+			final int var3 = Class70.forId(type).anInt1275;
 			if (var3 == 1) {
-				var0.anInt1732 = 0;
-				var0.anInt1724 = 0;
-				var0.anInt1707 = var2;
-				var0.anInt1726 = 0;
+				pl.anInt1732 = 0;
+				pl.anInt1724 = 0;
+				pl.anInt1707 = upd;
+				pl.anInt1726 = 0;
 			}
 
 			if (var3 == 2)
-				var0.anInt1726 = 0;
-		} else if ((var1 == -1) || (var0.anInt1722 == -1)
-				|| (Class70.method327(var1).anInt1269 >= Class70.method327(var0.anInt1722).anInt1269)) {
-			var0.anInt1722 = var1;
-			var0.anInt1732 = 0;
-			var0.anInt1724 = 0;
-			var0.anInt1707 = var2;
-			var0.anInt1726 = 0;
-			var0.anInt1735 = var0.anInt1744;
+				pl.anInt1726 = 0;
+		} else if ((type == -1) || (pl.anInt1722 == -1)
+				|| (Class70.forId(type).anInt1269 >= Class70.forId(pl.anInt1722).anInt1269)) {
+			pl.anInt1722 = type;
+			pl.anInt1732 = 0;
+			pl.anInt1724 = 0;
+			pl.anInt1707 = upd;
+			pl.anInt1726 = 0;
+			pl.anInt1735 = pl.anInt1744;
 		}
 
 	}

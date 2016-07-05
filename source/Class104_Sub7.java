@@ -67,9 +67,9 @@ public class Class104_Sub7 extends Class104 {
 					if (!var2.aClass104_Sub18_Sub2_1788.aBool1257)
 						var3 -= Integer.MIN_VALUE;
 
-					Class81.aClass17_643.method97(Class12.anInt73, var2.anInt1695, var2.anInt1694,
+					Class81.aClass17_643.method97(Class12.myplayerHeight, var2.anInt1695, var2.anInt1694,
 							Class47.method211(var2.anInt1695 + ((var2.anInt1736 * 64) - 64),
-									((var2.anInt1736 * 64) - 64) + var2.anInt1694, Class12.anInt73),
+									((var2.anInt1736 * 64) - 64) + var2.anInt1694, Class12.myplayerHeight),
 							((var2.anInt1736 * 64) - 64) + 60, var2, var2.anInt1725, var3, var2.aBool1696);
 				}
 			}

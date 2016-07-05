@@ -1,7 +1,7 @@
 public class Class104_Sub18_Sub16_Sub1 extends Class104_Sub18_Sub16 {
 	int anInt1480;
 	int anInt1487;
-	Class104_Sub18_Sub3 aClass104_Sub18_Sub3_1486;
+	Def aClass104_Sub18_Sub3_1486;
 	int anInt1488;
 	int anInt1481;
 	int anInt1482;
@@ -74,7 +74,7 @@ public class Class104_Sub18_Sub16_Sub1 extends Class104_Sub18_Sub16 {
 		anInt1484 = var5;
 		anInt1485 = var6;
 		if (var7 != -1) {
-			aClass104_Sub18_Sub3_1486 = Class70.method327(var7);
+			aClass104_Sub18_Sub3_1486 = Class70.forId(var7);
 			anInt1487 = 0;
 			anInt1480 = client.anInt1799 - 1;
 			if ((aClass104_Sub18_Sub3_1486.anInt1275 == 0) && (null != var9)

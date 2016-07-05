@@ -643,31 +643,6 @@ public abstract class Class104_Sub18_Sub17_Sub2 extends Class104_Sub18_Sub17 {
 		anInt1613 = 0;
 	}
 
-	public static String method879(final String var0) {
-		final int var1 = var0.length();
-		int var2 = 0;
-
-		for (int var3 = 0; var3 < var1; ++var3) {
-			final char var4 = var0.charAt(var3);
-			if ((var4 == 60) || (var4 == 62))
-				var2 += 3;
-		}
-
-		final StringBuilder var5 = new StringBuilder(var1 + var2);
-
-		for (int var7 = 0; var7 < var1; ++var7) {
-			final char var6 = var0.charAt(var7);
-			if (var6 == 60)
-				var5.append("<lt>");
-			else if (var6 == 62)
-				var5.append("<gt>");
-			else
-				var5.append(var6);
-		}
-
-		return var5.toString();
-	}
-
 	void method880(final byte[] var1) {
 		anIntArray1604 = new int[256];
 		int var2;

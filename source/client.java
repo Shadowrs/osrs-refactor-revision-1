@@ -180,7 +180,7 @@ public final class client extends Applet_Sub1 {
 	static Player[] localNpcs;
 	static int toUpdate;
 	static int[] localPlayerIndexs;
-	static int[] anIntArray1911;
+	static int[] updates;
 	static RSBuf[] cachedAppearances;
 	static int anInt1874;
 	static int anInt1990;
@@ -278,6 +278,10 @@ public final class client extends Applet_Sub1 {
 	static int anInt2049;
 	public static Class104_Sub18_Sub17_Sub2_Sub1 aClass104_Sub18_Sub17_Sub2_Sub1_290;
 	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array291;
+	static char[] characters = new char[] { '\u20ac', '\u0000', '\u201a', '\u0192', '\u201e', '\u2026', '\u2020',
+	'\u2021', '\u02c6', '\u2030', '\u0160', '\u2039', '\u0152', '\u0000', '\u017d', '\u0000', '\u0000',
+	'\u2018', '\u2019', '\u201c', '\u201d', '\u2022', '\u2013', '\u2014', '\u02dc', '\u2122', '\u0161',
+	'\u203a', '\u0153', '\u0000', '\u017e', '\u0178' };
 
 	@Override
 	final void method945(final int var1) {
@@ -791,11 +795,11 @@ final void method943(final byte var1) {
                      Class104_Sub18_Sub14.method785(Class81.aClass17_643, aClass67Array1975);
                      Class20.writePkt228(true);
                      var11 = Class76.anInt601;
-                     if(var11 > Class12.anInt73)
-						var11 = Class12.anInt73;
+                     if(var11 > Class12.myplayerHeight)
+						var11 = Class12.myplayerHeight;
 
-                     if(var11 < (Class12.anInt73 - 1))
-						var11 = Class12.anInt73 - 1;
+                     if(var11 < (Class12.myplayerHeight - 1))
+						var11 = Class12.myplayerHeight - 1;
 
                      if(lowmvm)
 						Class81.aClass17_643.method70(Class76.anInt601);
@@ -959,7 +963,7 @@ final void method943(final byte var1) {
                                     str1 = "Cabbage";
                                  }
 
-                                 str1 = Class104_Sub18_Sub17_Sub2.method879(Class80.method351(str1));
+                                 str1 = client.fixed(client.format(str1));
                                  Class15.method60(6, var82, str1);
                                  pktOpc = -1;
                                  var87 = true;
@@ -1067,7 +1071,7 @@ final void method943(final byte var1) {
                                  localx = gamecon.readByteN();
                                  localy = gamecon.method576();
                                  var13 = gamecon.readUByteS();
-                                 Class12.anInt73 = var13 >> 1;
+                                 Class12.myplayerHeight = var13 >> 1;
                                  Class81.pf.placeEntity(localy, localx, (var13 & 1) == 1);
                                  pktOpc = -1;
                                  var87 = true;
@@ -1152,7 +1156,7 @@ final void method943(final byte var1) {
                                        var133 = "Cabbage";
                                     }
 
-                                    var133 = Class104_Sub18_Sub17_Sub2.method879(Class80.method351(var133));
+                                    var133 = client.fixed(client.format(var133));
                                     if((var16 != 2) && (var16 != 3)) {
                                        if(var16 == 1)
 										Class15.method60(7, Class72.method335(0) + var82, var133);
@@ -1240,7 +1244,7 @@ final void method943(final byte var1) {
                                  if(Class103.anInt821 >= 100) {
                                     localx = 64 + (Class85.anInt673 * 128);
                                     localy = (Class41.anInt370 * 128) + 64;
-                                    var13 = Class47.method211(localx, localy, Class12.anInt73) - Class79.anInt631;
+                                    var13 = Class47.method211(localx, localy, Class12.myplayerHeight) - Class79.anInt631;
                                     var14 = localx - Class85.anInt672;
                                     var15 = var13 - Class46.anInt403;
                                     var16 = localy - Class99.anInt793;
@@ -1519,13 +1523,13 @@ final void method943(final byte var1) {
 
                                  for(localx = Class19.anInt195; localx < (Class19.anInt195 + 8); ++localx)
 									for(localy = Class93.anInt742; localy < (Class93.anInt742 + 8); ++localy)
-										if(null != aClass59ArrayArrayArray1952[Class12.anInt73][localx][localy]) {
-										      aClass59ArrayArrayArray1952[Class12.anInt73][localx][localy] = null;
+										if(null != aClass59ArrayArrayArray1952[Class12.myplayerHeight][localx][localy]) {
+										      aClass59ArrayArrayArray1952[Class12.myplayerHeight][localx][localy] = null;
 										      Class102_Sub1.method496(localx, localy);
 										   }
 
                                  for(var81 = (Class104_Sub3)aClass59_1922.method251(); null != var81; var81 = (Class104_Sub3)aClass59_1922.method252())
-									if((var81.anInt871 >= Class19.anInt195) && (var81.anInt871 < (8 + Class19.anInt195)) && (var81.anInt870 >= Class93.anInt742) && (var81.anInt870 < (Class93.anInt742 + 8)) && (var81.anInt876 == Class12.anInt73))
+									if((var81.anInt871 >= Class19.anInt195) && (var81.anInt871 < (8 + Class19.anInt195)) && (var81.anInt870 >= Class93.anInt742) && (var81.anInt870 < (Class93.anInt742 + 8)) && (var81.anInt876 == Class12.myplayerHeight))
 										var81.anInt878 = 0;
 
                                  pktOpc = -1;
@@ -1942,7 +1946,7 @@ final void method943(final byte var1) {
                                        var33 = "Cabbage";
                                     }
 
-                                    var33 = Class104_Sub18_Sub17_Sub2.method879(Class80.method351(var33));
+                                    var33 = client.fixed(client.format(var33));
                                     if((var18 != 2) && (var18 != 3)) {
                                        if(var18 == 1)
 										Class43.method188(9, Class72.method335(0) + var82, var33, BZip2Context.method151(var25));
@@ -2188,7 +2192,7 @@ final void method943(final byte var1) {
                                  if(Class75.anInt598 >= 100) {
                                     Class85.anInt672 = (Class30.anInt287 * 128) + 64;
                                     Class99.anInt793 = 64 + (Class43.anInt375 * 128);
-                                    Class46.anInt403 = Class47.method211(Class85.anInt672, Class99.anInt793, Class12.anInt73) - Class61_Sub1.anInt892;
+                                    Class46.anInt403 = Class47.method211(Class85.anInt672, Class99.anInt793, Class12.myplayerHeight) - Class61_Sub1.anInt892;
                                  }
 
                                  pktOpc = -1;
@@ -2411,7 +2415,7 @@ final void method943(final byte var1) {
                                        if(var16 == 0) {
                                           anIntArray1830[++anInt1832 - 1] = var13;
                                           var23.anInt1739 = anInt1799;
-                                          anIntArray1911[++anInt1910 - 1] = var13;
+                                          updates[++anInt1910 - 1] = var13;
                                        } else if(var16 == 1) {
                                           anIntArray1830[++anInt1832 - 1] = var13;
                                           var23.anInt1739 = anInt1799;
@@ -2419,7 +2423,7 @@ final void method943(final byte var1) {
                                           var23.step(var17, false);
                                           var18 = gamecon.readbits(1);
                                           if(var18 == 1)
-											anIntArray1911[++anInt1910 - 1] = var13;
+											updates[++anInt1910 - 1] = var13;
                                        } else if(var16 == 2) {
                                           anIntArray1830[++anInt1832 - 1] = var13;
                                           var23.anInt1739 = anInt1799;
@@ -2429,7 +2433,7 @@ final void method943(final byte var1) {
                                           var23.step(var18, true);
                                           var19 = gamecon.readbits(1);
                                           if(var19 == 1)
-											anIntArray1911[++anInt1910 - 1] = var13;
+											updates[++anInt1910 - 1] = var13;
                                        } else if(var16 == 3)
 										anIntArray2048[++anInt1904 - 1] = var13;
                                     }
@@ -2483,7 +2487,7 @@ final void method943(final byte var1) {
                                  Class20.stream = null;
                               }
                            } catch (final Exception var69) {
-                              var82 = "" + pktOpc + "," + anInt2042 + "," + anInt1815 + "," + pktSize + "," + (Class81.pf.anIntArray1745[0] + Class53.anInt436) + "," + (Class81.pf.anIntArray1746[0] + Class20.anInt206) + ",";
+                              var82 = "" + pktOpc + "," + anInt2042 + "," + anInt1815 + "," + pktSize + "," + (Class81.pf.stepx[0] + Class53.anInt436) + "," + (Class81.pf.stepy[0] + Class20.anInt206) + ",";
 
                               for(localy = 0; (localy < pktSize) && (localy < 50); ++localy)
 								var82 = var82 + gamecon.backing[localy] + ",";
@@ -2500,7 +2504,6 @@ final void method943(final byte var1) {
                   }
 
                   if(loadstage == 30) {
-                	  System.out.println("class check packet");
                      Class43.writeClasscheckPacket(secureBuf, 108);
                      final Object var76 = Class2_Sub2.aClass72_865.anObject583;
                      synchronized(var76) {
@@ -2624,11 +2627,11 @@ final void method943(final byte var1) {
                         secureBuf.writebyte(0);
                      }
 
-                     if(lowmvm && (anInt1988 != Class12.anInt73))
-						Class19.method120(Class54.anInt447, FSManager.anInt761, Class12.anInt73, Class81.pf.anIntArray1745[0], Class81.pf.anIntArray1746[0]);
-					else if(anInt2013 != Class12.anInt73) {
-                        anInt2013 = Class12.anInt73;
-                        var8 = Class12.anInt73;
+                     if(lowmvm && (anInt1988 != Class12.myplayerHeight))
+						Class19.method120(Class54.anInt447, FSManager.anInt761, Class12.myplayerHeight, Class81.pf.stepx[0], Class81.pf.stepy[0]);
+					else if(anInt2013 != Class12.myplayerHeight) {
+                        anInt2013 = Class12.myplayerHeight;
+                        var8 = Class12.myplayerHeight;
                         final int[] var71 = Class104_Sub2.aClass104_Sub18_Sub17_Sub1_861.anIntArray1592;
                         var11 = var71.length;
 
@@ -2656,7 +2659,7 @@ final void method943(final byte var1) {
 
                               for(var13 = 0; var13 < 104; ++var13)
 								for(var14 = 0; var14 < 104; ++var14) {
-                                    var15 = Class81.aClass17_643.method88(Class12.anInt73, var13, var14);
+                                    var15 = Class81.aClass17_643.method88(Class12.myplayerHeight, var13, var14);
                                     if(var15 != 0) {
                                        var15 = (var15 >> 14) & 32767;
                                        var16 = ItemDef.forId(var15).anInt1351;
@@ -2664,7 +2667,7 @@ final void method943(final byte var1) {
                                           var17 = var13;
                                           var18 = var14;
                                           if((var16 != 22) && (var16 != 29) && (var16 != 34) && (var16 != 36) && (var16 != 46) && (var16 != 47) && (var16 != 48)) {
-                                             final int[][] var130 = aClass67Array1975[Class12.anInt73].anIntArrayArray553;
+                                             final int[][] var130 = aClass67Array1975[Class12.myplayerHeight].anIntArrayArray553;
 
                                              for(var45 = 0; var45 < 10; ++var45) {
                                                 var32 = (int)(Math.random() * 4.0D);
@@ -3019,7 +3022,7 @@ final void method943(final byte var1) {
 													            if(Class17.anInt117 != -1) {
 													               var11 = Class17.anInt117;
 													               localx = Class17.anInt159;
-													               var103 = Class104_Sub13.method543(Class81.pf.anIntArray1745[0], Class81.pf.anIntArray1746[0], var11, localx, true, 0, 0, 0, 0, 0, 0);
+													               var103 = Class104_Sub13.method543(Class81.pf.stepx[0], Class81.pf.stepy[0], var11, localx, true, 0, 0, 0, 0, 0, 0);
 													               Class17.anInt117 = -1;
 													               if(var103) {
 													                  anInt1895 = Class14.anInt101;
@@ -3164,12 +3167,12 @@ final void method943(final byte var1) {
 
 													            localy = Class50.anInt421 >> 7;
 													            var13 = Class104_Sub2.anInt860 >> 7;
-													            var14 = Class47.method211(Class50.anInt421, Class104_Sub2.anInt860, Class12.anInt73);
+													            var14 = Class47.method211(Class50.anInt421, Class104_Sub2.anInt860, Class12.myplayerHeight);
 													            var15 = 0;
 													            if((localy > 3) && (var13 > 3) && (localy < 100) && (var13 < 100))
 																	for(var16 = localy - 4; var16 <= (4 + localy); ++var16)
 																		for(var17 = var13 - 4; var17 <= (var13 + 4); ++var17) {
-																	         var18 = Class12.anInt73;
+																	         var18 = Class12.myplayerHeight;
 																	         if((var18 < 3) && ((Class76.aByteArrayArrayArray600[1][var16][var17] & 2) == 2))
 																				++var18;
 
@@ -3570,7 +3573,7 @@ final void method943(final byte var1) {
 						Class104_Sub18_Sub17.method802(anIntArray1993[perc], anIntArray1876[perc], anIntArray1995[perc],
 								anIntArray1996[perc], 16711680, 128);
 
-			Class104_Sub8_Sub4.method738(Class12.anInt73, Class81.pf.anInt1695,
+			Class104_Sub8_Sub4.method738(Class12.myplayerHeight, Class81.pf.anInt1695,
 					Class81.pf.anInt1694, anInt1867);
 			anInt1867 = 0;
 		} else if (loadstage == 40)
@@ -3776,7 +3779,7 @@ final void method943(final byte var1) {
 		toUpdate = 0;
 		localPlayerIndexs = new int[2048];
 		anInt1910 = 0;
-		anIntArray1911 = new int[2048];
+		updates = new int[2048];
 		cachedAppearances = new RSBuf[2048];
 		anInt1874 = -1;
 		anInt1990 = 0;
@@ -3963,6 +3966,78 @@ final void method943(final byte var1) {
 
 	}
 
+	public static String huffmanDecode(final RSBuf buf) {
+		String r;
+		try {
+			int size = buf.readsmart();
+			if (size > 32767)
+				size = 32767;
+	
+			final byte[] to = new byte[size];
+			buf.pos += Class106.huffman.decihper(buf.backing, buf.pos, to, 0, size);
+			final String result = decodeStr(to, 0, size);
+			r = result;
+		} catch (final Exception var6) {
+			r = "Cabbage";
+		}
+	
+		return r;
+	}
+
+	public static String format(final String src) {
+		final int len = src.length();
+		final char[] chars = new char[len];
+		byte type = 2;
+	
+		for (int var4 = 0; var4 < len; ++var4) {
+			char cur = src.charAt(var4);
+			if (type == 0)
+				cur = Character.toLowerCase(cur);
+			else if ((type == 2) || Character.isUpperCase(cur))
+				cur = Class99.cased(cur);
+	
+			if (Character.isLetter(cur))
+				type = 0;
+			else if ((cur != 46) && (cur != 63) && (cur != 33)) {
+				if (Character.isSpaceChar(cur)) {
+					if (type != 2)
+						type = 1;
+				} else
+					type = 1;
+			} else
+				type = 2;
+	
+			chars[var4] = cur;
+		}
+	
+		return new String(chars);
+	}
+
+	public static String fixed(final String src) {
+		final int len = src.length();
+		int size = 0;
+	
+		for (int i = 0; i < len; ++i) {
+			final char c = src.charAt(i);
+			if ((c == 60) || (c == 62))
+				size += 3;
+		}
+	
+		final StringBuilder sb = new StringBuilder(len + size);
+	
+		for (int i = 0; i < len; ++i) {
+			final char c = src.charAt(i);
+			if (c == 60)
+				sb.append("<lt>");
+			else if (c == 62)
+				sb.append("<gt>");
+			else
+				sb.append(c);
+		}
+	
+		return sb.toString();
+	}
+
 	public static String decodeStr(final byte[] var0, final int var1, final int size) {
 		final char[] result = new char[size];
 		int count = 0;
@@ -3971,7 +4046,7 @@ final void method943(final byte var1) {
 			int last = var0[var1 + var5] & 255;
 			if (last != 0) {
 				if ((last >= 128) && (last < 160)) {
-					char c = Class50.characters[last - 128];
+					char c = client.characters[last - 128];
 					if (c == 0)
 						c = 63;
 	
@@ -4015,7 +4090,7 @@ final void method943(final byte var1) {
 	static final void method149() {
 		for (Class104_Sub18_Sub16_Sub3 var0 = (Class104_Sub18_Sub16_Sub3) aClass59_1869
 				.method251(); var0 != null; var0 = (Class104_Sub18_Sub16_Sub3) aClass59_1869.method252())
-			if ((var0.anInt1516 == Class12.anInt73) && !var0.aBool1517) {
+			if ((var0.anInt1516 == Class12.myplayerHeight) && !var0.aBool1517) {
 				if (anInt1799 >= var0.anInt1515) {
 					var0.method810(anInt1867);
 					if (var0.aBool1517)

@@ -1,4 +1,4 @@
-public class Class104_Sub18_Sub3 extends Class104_Sub18 {
+public class Def extends Class104_Sub18 {
 	static Class61 aClass61_1259;
 	public int[] anIntArray1264;
 	public int anInt1266 = -1;
@@ -133,7 +133,7 @@ public class Class104_Sub18_Sub3 extends Class104_Sub18 {
 	}
 
 	public Class104_Sub18_Sub16_Sub4 method685(final Class104_Sub18_Sub16_Sub4 var1, int var2,
-			final Class104_Sub18_Sub3 var3, int var4) {
+			final Def var3, int var4) {
 		var2 = anIntArray1262[var2];
 		final Class104_Sub18_Sub15 var5 = Class34.method165(var2 >> 16);
 		var2 &= '\uffff';

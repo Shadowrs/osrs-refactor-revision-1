@@ -172,7 +172,7 @@ public class Class26 {
 			int var11;
 			for (var6 = 0; var6 < 104; ++var6)
 				for (var7 = 0; var7 < 104; ++var7) {
-					final Class59 var9 = client.aClass59ArrayArrayArray1952[Class12.anInt73][var6][var7];
+					final Class59 var9 = client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var6][var7];
 					if (var9 != null) {
 						var10 = ((4 * var6) + 2) - (Class81.pf.anInt1695 / 32);
 						var11 = ((var7 * 4) + 2) - (Class81.pf.anInt1694 / 32);

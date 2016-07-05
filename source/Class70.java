@@ -224,18 +224,18 @@ public class Class70 {
 		return "<col=" + Integer.toHexString(var0) + ">";
 	}
 
-	public static Class104_Sub18_Sub3 method327(final int var0) {
-		Class104_Sub18_Sub3 var1 = (Class104_Sub18_Sub3) Class104_Sub18_Sub3.aClass56_1260.method236(var0);
+	public static Def forId(final int id) {
+		Def var1 = (Def) Def.aClass56_1260.method236(id);
 		if (var1 != null)
 			return var1;
 		else {
-			final byte[] var2 = Class106.aClass61_829.decompress(12, var0);
-			var1 = new Class104_Sub18_Sub3();
+			final byte[] var2 = Class106.aClass61_829.decompress(12, id);
+			var1 = new Def();
 			if (var2 != null)
 				var1.method681(new RSBuf(var2));
 
 			var1.method683();
-			Class104_Sub18_Sub3.aClass56_1260.method238(var1, var0);
+			Def.aClass56_1260.method238(var1, id);
 			return var1;
 		}
 	}

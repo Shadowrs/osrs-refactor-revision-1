@@ -89,7 +89,7 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 
 		Class104_Sub18_Sub16_Sub4 var5;
 		if ((anInt1316 != -1) && (var1 != -1))
-			var5 = Class70.method327(anInt1316).method688(var2, var1);
+			var5 = Class70.forId(anInt1316).method688(var2, var1);
 		else
 			var5 = var2.method829(true);
 
@@ -125,7 +125,7 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 			var0.anInt1748 = 0;
 		else {
 			if ((var0.anInt1722 != -1) && (var0.anInt1707 == 0)) {
-				final Class104_Sub18_Sub3 var1 = Class70.method327(var0.anInt1722);
+				final Def var1 = Class70.forId(var0.anInt1722);
 				if ((var0.anInt1735 > 0) && (var1.anInt1273 == 0)) {
 					++var0.anInt1748;
 					return;
@@ -139,8 +139,8 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 
 			final int var2 = var0.anInt1695;
 			final int var3 = var0.anInt1694;
-			final int var4 = (var0.anInt1736 * 64) + (128 * var0.anIntArray1745[var0.anInt1744 - 1]);
-			final int var5 = (128 * var0.anIntArray1746[var0.anInt1744 - 1]) + (var0.anInt1736 * 64);
+			final int var4 = (var0.anInt1736 * 64) + (128 * var0.stepx[var0.anInt1744 - 1]);
+			final int var5 = (128 * var0.stepy[var0.anInt1744 - 1]) + (var0.anInt1736 * 64);
 			if (((var4 - var2) <= 256) && ((var4 - var2) >= -256) && ((var5 - var3) <= 256)
 					&& ((var5 - var3) >= -256)) {
 				if (var2 < var4) {

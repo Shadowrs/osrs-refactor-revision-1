@@ -23,7 +23,7 @@ public final class Class104_Sub18_Sub16_Sub2 extends Class104_Sub18_Sub16 {
 	int anInt1498;
 	int anInt1505;
 	int anInt1494;
-	Class104_Sub18_Sub3 aClass104_Sub18_Sub3_1511;
+	Def aClass104_Sub18_Sub3_1511;
 
 	final void method807(final int var1) {
 		aBool1510 = true;
@@ -103,7 +103,7 @@ public final class Class104_Sub18_Sub16_Sub2 extends Class104_Sub18_Sub16 {
 		aBool1510 = false;
 		final int var12 = Class71.method330(anInt1491).anInt1316;
 		if (var12 != -1)
-			aClass104_Sub18_Sub3_1511 = Class70.method327(var12);
+			aClass104_Sub18_Sub3_1511 = Class70.forId(var12);
 		else
 			aClass104_Sub18_Sub3_1511 = null;
 

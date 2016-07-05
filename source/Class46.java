@@ -919,7 +919,7 @@ public class Class46 {
 
 									if (var44 == 3101) {
 										var4 -= 2;
-										Class75.method342(Class81.pf,
+										Class75.transform(Class81.pf,
 												Class90.anIntArray706[var4], Class90.anIntArray706[var4 + 1]);
 										continue;
 									}
@@ -1119,7 +1119,7 @@ public class Class46 {
 									}
 
 									if (var44 == 3308) {
-										var15 = Class12.anInt73;
+										var15 = Class12.myplayerHeight;
 										var24 = Class53.anInt436
 												+ (Class81.pf.anInt1695 >> 7);
 										var17 = (Class81.pf.anInt1694 >> 7)
@@ -1952,8 +1952,8 @@ public class Class46 {
 										if (var44 == 4111) {
 											--var5;
 											var80 = Class90.aStringArray712[var5];
-											Class90.aStringArray712[var5++] = Class104_Sub18_Sub17_Sub2
-													.method879(var80);
+											Class90.aStringArray712[var5++] = client
+													.fixed(var80);
 											continue;
 										}
 

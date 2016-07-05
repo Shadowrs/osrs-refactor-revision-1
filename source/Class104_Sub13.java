@@ -61,7 +61,7 @@ public class Class104_Sub13 extends Class104 {
 		client.anIntArray1854[var13] = var1;
 		boolean var15 = false;
 		int var16 = client.anIntArray1853.length;
-		final int[][] var17 = client.aClass67Array1975[Class12.anInt73].anIntArrayArray553;
+		final int[][] var17 = client.aClass67Array1975[Class12.myplayerHeight].anIntArrayArray553;
 
 		int var18;
 		while (var14 != var26) {
@@ -74,20 +74,20 @@ public class Class104_Sub13 extends Class104 {
 			}
 
 			if (var5 != 0) {
-				if (((var5 < 5) || (var5 == 10)) && client.aClass67Array1975[Class12.anInt73].method305(var11, var12,
+				if (((var5 < 5) || (var5 == 10)) && client.aClass67Array1975[Class12.myplayerHeight].method305(var11, var12,
 						var2, var3, var5 - 1, var6)) {
 					var15 = true;
 					break;
 				}
 
-				if ((var5 < 10) && client.aClass67Array1975[Class12.anInt73].method311(var11, var12, var2, var3,
+				if ((var5 < 10) && client.aClass67Array1975[Class12.myplayerHeight].method311(var11, var12, var2, var3,
 						var5 - 1, var6)) {
 					var15 = true;
 					break;
 				}
 			}
 
-			if ((var7 != 0) && (var8 != 0) && client.aClass67Array1975[Class12.anInt73].method312(var11, var12, var2,
+			if ((var7 != 0) && (var8 != 0) && client.aClass67Array1975[Class12.myplayerHeight].method312(var11, var12, var2,
 					var3, var7, var8, var9)) {
 				var15 = true;
 				break;

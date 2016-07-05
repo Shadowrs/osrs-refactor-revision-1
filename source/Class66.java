@@ -234,7 +234,7 @@ public class Class66 {
 									var22 = (client.anInt1866 + client.anInt1859) & 2047;
 									var23 = Class50.anInt421;
 									var24 = Class47.method211(Class81.pf.anInt1695,
-											Class81.pf.anInt1694, Class12.anInt73)
+											Class81.pf.anInt1694, Class12.myplayerHeight)
 											- 50;
 									var25 = Class104_Sub2.anInt860;
 									var26 = 600 + (var21 * 3);
@@ -273,8 +273,8 @@ public class Class66 {
 										var25 = Class99.anInt793 >> 7;
 										var26 = Class81.pf.anInt1695 >> 7;
 										var27 = Class81.pf.anInt1694 >> 7;
-										if ((Class76.aByteArrayArrayArray600[Class12.anInt73][var24][var25] & 4) != 0)
-											var23 = Class12.anInt73;
+										if ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][var24][var25] & 4) != 0)
+											var23 = Class12.myplayerHeight;
 
 										if (var26 > var24)
 											var28 = var26 - var24;
@@ -296,9 +296,9 @@ public class Class66 {
 												else if (var24 > var26)
 													--var24;
 
-												if ((Class76.aByteArrayArrayArray600[Class12.anInt73][var24][var25]
+												if ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][var24][var25]
 														& 4) != 0)
-													var23 = Class12.anInt73;
+													var23 = Class12.myplayerHeight;
 
 												var31 += var30;
 												if (var31 >= 65536) {
@@ -308,9 +308,9 @@ public class Class66 {
 													else if (var25 > var27)
 														--var25;
 
-													if ((Class76.aByteArrayArrayArray600[Class12.anInt73][var24][var25]
+													if ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][var24][var25]
 															& 4) != 0)
-														var23 = Class12.anInt73;
+														var23 = Class12.myplayerHeight;
 												}
 											}
 										} else {
@@ -323,9 +323,9 @@ public class Class66 {
 												else if (var25 > var27)
 													--var25;
 
-												if ((Class76.aByteArrayArrayArray600[Class12.anInt73][var24][var25]
+												if ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][var24][var25]
 														& 4) != 0)
-													var23 = Class12.anInt73;
+													var23 = Class12.myplayerHeight;
 
 												var31 += var30;
 												if (var31 >= 65536) {
@@ -335,25 +335,25 @@ public class Class66 {
 													else if (var24 > var26)
 														--var24;
 
-													if ((Class76.aByteArrayArrayArray600[Class12.anInt73][var24][var25]
+													if ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][var24][var25]
 															& 4) != 0)
-														var23 = Class12.anInt73;
+														var23 = Class12.myplayerHeight;
 												}
 											}
 										}
 									}
 
-									if ((Class76.aByteArrayArrayArray600[Class12.anInt73][Class81.pf.anInt1695 >> 7][Class81.pf.anInt1694 >> 7]
+									if ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][Class81.pf.anInt1695 >> 7][Class81.pf.anInt1694 >> 7]
 											& 4) != 0)
-										var23 = Class12.anInt73;
+										var23 = Class12.myplayerHeight;
 
 									var21 = var23;
 								} else {
-									var23 = Class47.method211(Class85.anInt672, Class99.anInt793, Class12.anInt73);
+									var23 = Class47.method211(Class85.anInt672, Class99.anInt793, Class12.myplayerHeight);
 									if (((var23 - Class46.anInt403) < 800)
-											&& ((Class76.aByteArrayArrayArray600[Class12.anInt73][Class85.anInt672 >> 7][Class99.anInt793 >> 7]
+											&& ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][Class85.anInt672 >> 7][Class99.anInt793 >> 7]
 													& 4) != 0))
-										var22 = Class12.anInt73;
+										var22 = Class12.myplayerHeight;
 									else
 										var22 = 3;
 
@@ -729,7 +729,7 @@ public class Class66 {
 										var38 = (var31 >> 14) & 32767;
 										if (var59 != var31) {
 											var59 = var31;
-											if ((var66 == 2) && (Class81.aClass17_643.method89(Class12.anInt73, var32,
+											if ((var66 == 2) && (Class81.aClass17_643.method89(Class12.myplayerHeight, var32,
 													var65, var31) >= 0)) {
 												ObjectDefinition var43 = ItemDef.forId(var38);
 												if (var43.anIntArray1338 != null)
@@ -843,7 +843,7 @@ public class Class66 {
 											}
 
 											if (var66 == 3) {
-												final Class59 var70 = client.aClass59ArrayArrayArray1952[Class12.anInt73][var32][var65];
+												final Class59 var70 = client.aClass59ArrayArrayArray1952[Class12.myplayerHeight][var32][var65];
 												if (var70 != null)
 													for (Class104_Sub18_Sub16_Sub6 var72 = (Class104_Sub18_Sub16_Sub6) var70
 															.method254(); var72 != null; var72 = (Class104_Sub18_Sub16_Sub6) var70
@@ -1442,18 +1442,18 @@ public class Class66 {
 												}
 											} else if (var10.anInt1010 == 5) {
 												if (var10.anInt1011 == 0)
-													var76 = client.aClass85_2047.method389((Class104_Sub18_Sub3) null,
-															-1, (Class104_Sub18_Sub3) null, -1);
+													var76 = client.aClass85_2047.method389((Def) null,
+															-1, (Def) null, -1);
 												else
 													var76 = Class81.pf
 															.method788(-78901604);
 											} else if (var22 == -1) {
-												var76 = var10.method532((Class104_Sub18_Sub3) null, -1, var58,
+												var76 = var10.method532((Def) null, -1, var58,
 														Class81.pf.aClass85_1770);
 												if ((null == var76) && Widget.aBool1065)
 													Class79.setflags(var10);
 											} else {
-												final Class104_Sub18_Sub3 var82 = Class70.method327(var22);
+												final Def var82 = Class70.forId(var22);
 												var76 = var10.method532(var82, var10.anInt974, var58,
 														Class81.pf.aClass85_1770);
 												if ((var76 == null) && Widget.aBool1065)

@@ -308,7 +308,7 @@ public class Class99 {
 		}
 	}
 
-	static char method462(final char var0) {
-		return (var0 != 181) && (var0 != 402) ? Character.toTitleCase(var0) : var0;
+	static char cased(final char c) {
+		return (c != 181) && (c != 402) ? Character.toTitleCase(c) : c;
 	}
 }

@@ -187,7 +187,7 @@ public final class JagFS2 {
 
 	static final void method66(final Class104_Sub18_Sub16_Sub7 var0) {
 		if ((var0.anInt1737 == client.anInt1799) || (var0.anInt1722 == -1) || (var0.anInt1707 != 0)
-				|| ((1 + var0.anInt1724) > Class70.method327(var0.anInt1722).anIntArray1264[var0.anInt1732])) {
+				|| ((1 + var0.anInt1724) > Class70.forId(var0.anInt1722).anIntArray1264[var0.anInt1732])) {
 			final int var1 = var0.anInt1737 - var0.anInt1708;
 			final int var2 = client.anInt1799 - var0.anInt1708;
 			final int var3 = (var0.anInt1736 * 64) + (var0.anInt1697 * 128);

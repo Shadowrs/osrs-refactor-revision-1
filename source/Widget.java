@@ -516,7 +516,7 @@ public class Widget extends Class104 {
 		}
 	}
 
-	public Class104_Sub18_Sub16_Sub4 method532(final Class104_Sub18_Sub3 var1, final int var2, final boolean var3,
+	public Class104_Sub18_Sub16_Sub4 method532(final Def var1, final int var2, final boolean var3,
 			final Class85 var4) {
 		aBool1065 = false;
 		int var5;

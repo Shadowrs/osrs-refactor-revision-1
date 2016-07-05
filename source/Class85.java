@@ -134,8 +134,8 @@ public class Class85 {
 
 	}
 
-	public Class104_Sub18_Sub16_Sub4 method389(final Class104_Sub18_Sub3 var1, final int var2,
-			final Class104_Sub18_Sub3 var3, final int var4) {
+	public Class104_Sub18_Sub16_Sub4 method389(final Def var1, final int var2,
+			final Def var3, final int var4) {
 		if (anInt664 != -1)
 			return Class64.method296(anInt664).method675(var1, var2, var3, var4);
 		else {
