@@ -72,7 +72,7 @@ public class Class83 {
 	}
 
 	void method366(final int var1) {
-		final int var2 = aClass104_Sub21_653.method580();
+		final int var2 = aClass104_Sub21_653.length();
 		anIntArray648[var1] += var2;
 	}
 
@@ -89,7 +89,7 @@ public class Class83 {
 		if ((var5 != 240) && (var5 != 247))
 			return method368(var1, var5);
 		else {
-			final int var3 = aClass104_Sub21_653.method580();
+			final int var3 = aClass104_Sub21_653.length();
 			if ((var5 == 247) && (var3 > 0)) {
 				final int var4 = aClass104_Sub21_653.backing[aClass104_Sub21_653.pos] & 255;
 				if (((var4 >= 241) && (var4 <= 243)) || (var4 == 246) || (var4 == 248)
@@ -109,7 +109,7 @@ public class Class83 {
 		int var4;
 		if (var2 == 255) {
 			final int var7 = aClass104_Sub21_653.readUByte();
-			var4 = aClass104_Sub21_653.method580();
+			var4 = aClass104_Sub21_653.length();
 			if (var7 == 47) {
 				aClass104_Sub21_653.pos += var4;
 				return 1;

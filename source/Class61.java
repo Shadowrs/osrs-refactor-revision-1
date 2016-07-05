@@ -35,7 +35,7 @@ public abstract class Class61 {
 
 			var4 = buf.readUByte();
 			if (var3 >= 7)
-				count = buf.method579();
+				count = buf.readSpecial();
 			else
 				count = buf.readLEShort();
 
@@ -45,7 +45,7 @@ public abstract class Class61 {
 			int var10;
 			if (var3 >= 7)
 				for (var10 = 0; var10 < count; ++var10) {
-					anIntArray479[var10] = var8 += buf.method579();
+					anIntArray479[var10] = var8 += buf.readSpecial();
 					if (anIntArray479[var10] > var9)
 						var9 = anIntArray479[var10];
 				}
@@ -94,7 +94,7 @@ public abstract class Class61 {
 					anIntArrayArray486[var11] = new int[var12];
 
 					for (var14 = 0; var14 < var12; ++var14) {
-						var15 = anIntArrayArray486[var11][var14] = var8 += buf.method579();
+						var15 = anIntArrayArray486[var11][var14] = var8 += buf.readSpecial();
 						if (var15 > var13)
 							var13 = var15;
 					}
@@ -419,14 +419,14 @@ public abstract class Class61 {
 						final Class86 var3 = client.aClass86Array1972[var2];
 						var4 = Class33.method155(var3.aString675, Class2.aClass101_8);
 						if ((null != var4) && var4.equals(var1)) {
-							Class15.method60(0, "", var0 + " is already on your friend list");
+							Class15.chat(0, "", var0 + " is already on your friend list");
 							return;
 						}
 
 						if (var3.aString679 != null) {
 							var5 = Class33.method155(var3.aString679, Class2.aClass101_8);
 							if ((var5 != null) && var5.equals(var1)) {
-								Class15.method60(0, "", var0 + " is already on your friend list");
+								Class15.chat(0, "", var0 + " is already on your friend list");
 								return;
 							}
 						}
@@ -436,30 +436,30 @@ public abstract class Class61 {
 						final Class78 var6 = client.aClass78Array2046[var2];
 						var4 = Class33.method155(var6.aString625, Class2.aClass101_8);
 						if ((null != var4) && var4.equals(var1)) {
-							Class15.method60(0, "", "Please remove " + var0 + " from your ignore list first");
+							Class15.chat(0, "", "Please remove " + var0 + " from your ignore list first");
 							return;
 						}
 
 						if (null != var6.aString624) {
 							var5 = Class33.method155(var6.aString624, Class2.aClass101_8);
 							if ((var5 != null) && var5.equals(var1)) {
-								Class15.method60(0, "", "Please remove " + var0 + " from your ignore list first");
+								Class15.chat(0, "", "Please remove " + var0 + " from your ignore list first");
 								return;
 							}
 						}
 					}
 
-					if (Class33.method155(Class81.pf.aString1780, Class2.aClass101_8)
+					if (Class33.method155(Class81.activePlayer.myName, Class2.aClass101_8)
 							.equals(var1))
-						Class15.method60(0, "", "You can\'t add yourself to your own friend list");
+						Class15.chat(0, "", "You can\'t add yourself to your own friend list");
 					else {
 						client.secureBuf.putOpcode(203); // add friend, ovbs. see above. 
 						client.secureBuf.writebyte(GameBuf.lengthOf(var0));
-						client.secureBuf.writeString(var0);
+						client.secureBuf.writeCompactedString(var0);
 					}
 				}
 			} else
-				Class15.method60(0, "", "Your friend list is full. Max of 100 for free users, and 200 for members");
+				Class15.chat(0, "", "Your friend list is full. Max of 100 for free users, and 200 for members");
 	}
 
 	public static void method281() {

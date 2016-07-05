@@ -17,7 +17,7 @@ public class Class100 {
 					int var7;
 					if (var0.anInt1246 != 0) {
 						final int var6 = var0.anInt1246;
-						var7 = Class81.pf.anInt1773;
+						var7 = Class81.activePlayer.anInt1773;
 						final int var8 = var7 - var6;
 						String var9;
 						if (var8 < -9)
@@ -84,7 +84,7 @@ public class Class100 {
 							for (var10 = 4; var10 >= 0; --var10)
 								if ((null != var5[var10]) && var5[var10].equalsIgnoreCase("Attack")) {
 									short var12 = 0;
-									if (var0.anInt1246 > Class81.pf.anInt1773)
+									if (var0.anInt1246 > Class81.activePlayer.anInt1773)
 										var12 = 2000;
 
 									var7 = 0;

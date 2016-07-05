@@ -46,9 +46,9 @@ public final class Class76 {
 	}
 
 	static final void method344() {
-		for (int var0 = 0; var0 < client.anInt1832; ++var0) {
-			final int var1 = client.anIntArray1830[var0];
-			final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var1];
+		for (int var0 = 0; var0 < client.localNpcSize; ++var0) {
+			final int var1 = client.localNpcIndicies[var0];
+			final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.localNpcs[var1];
 			if (var2 != null) {
 				Class30.method144(var2);
 			}

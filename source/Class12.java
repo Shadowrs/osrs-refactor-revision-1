@@ -4,7 +4,7 @@ public class Class12 {
 	static int anInt72;
 	static int myplayerHeight;
 	static int anInt74;
-	static Class104_Sub18_Sub17_Sub1 aClass104_Sub18_Sub17_Sub1_75;
+	static Sprite aClass104_Sub18_Sub17_Sub1_75;
 	static Class61 aClass61_76;
 	static int[] anIntArray70;
 	static int[] anIntArray71;

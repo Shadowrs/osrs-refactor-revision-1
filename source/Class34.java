@@ -437,8 +437,8 @@ public class Class34 implements Interface2 {
 		}
 	}
 
-	public static Class104_Sub18_Sub17_Sub1 method164() {
-		final Class104_Sub18_Sub17_Sub1 var0 = new Class104_Sub18_Sub17_Sub1();
+	public static Sprite method164() {
+		final Sprite var0 = new Sprite();
 		var0.anInt1590 = Class12.anInt72;
 		var0.anInt1591 = Class12.anInt69;
 		var0.anInt1589 = Class12.anIntArray70[0];

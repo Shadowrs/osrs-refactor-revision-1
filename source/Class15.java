@@ -47,11 +47,11 @@ public class Class15 {
 		var3 = var3;
 		boolean var5 = false;
 
-		for (int var6 = 0; var6 < client.toUpdate; ++var6) {
-			final Player var7 = client.localNpcs[client.localPlayerIndexs[var6]];
-			if ((null != var7) && (var7.aString1780 != null) && var7.aString1780.equalsIgnoreCase(var3)) {
-				Class104_Sub13.method543(Class81.pf.stepx[0],
-						Class81.pf.stepy[0], var7.stepx[0],
+		for (int var6 = 0; var6 < client.localPlrSize; ++var6) {
+			final Player var7 = client.localPlayers[client.localPlayerIndexs[var6]];
+			if ((null != var7) && (var7.myName != null) && var7.myName.equalsIgnoreCase(var3)) {
+				Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class81.activePlayer.stepy[0], var7.stepx[0],
 						var7.stepy[0], false, 0, 0, 1, 1, 0, 2);
 				if (var0 == 1) {
 					client.secureBuf.putOpcode(246);
@@ -73,12 +73,12 @@ public class Class15 {
 		}
 
 		if (!var5)
-			method60(0, "", "Unable to find " + var3);
+			chat(0, "", "Unable to find " + var3);
 
 	}
 
-	static final void method60(final int var0, final String var1, final String var2) {
-		Class43.method188(var0, var1, var2, (String) null);
+	static final void chat(final int id, final String var1, final String var2) {
+		Class43.setChat(id, var1, var2, (String) null);
 	}
 
 	static final void method61(final String string) {
@@ -107,7 +107,7 @@ public class Class15 {
 						client.anInt1846 = client.anInt1978;
 						client.secureBuf.putOpcode(41);
 						client.secureBuf.writebyte(GameBuf.lengthOf(string)); // the size of this variable-length packet. 
-						client.secureBuf.writeString(string);
+						client.secureBuf.writeCompactedString(string);
 						break;
 					}
 				}

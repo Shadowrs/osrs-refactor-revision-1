@@ -11,7 +11,7 @@ public final class Class6 {
 		if (!var0.equals("")) {
 			client.secureBuf.putOpcode(185);
 			client.secureBuf.writebyte(GameBuf.lengthOf(var0));
-			client.secureBuf.writeString(var0);
+			client.secureBuf.writeCompactedString(var0);
 		}
 	}
 }

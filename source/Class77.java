@@ -1,5 +1,5 @@
 public class Class77 {
-	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array623;
+	static Sprite[] aClass104_Sub18_Sub17_Sub1Array623;
 	static char[] aCharArray621 = new char[] { '\u0020', '\u00a0', '\u005f', '\u002d', '\u00e0', '\u00e1', '\u00e2',
 			'\u00e4', '\u00e3', '\u00c0', '\u00c1', '\u00c2', '\u00c4', '\u00c3', '\u00e8', '\u00e9', '\u00ea',
 			'\u00eb', '\u00c8', '\u00c9', '\u00ca', '\u00cb', '\u00ed', '\u00ee', '\u00ef', '\u00cd', '\u00ce',

@@ -1,5 +1,5 @@
 public class Class104_Sub11 extends Class104 {
-	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array969;
+	static Sprite[] aClass104_Sub18_Sub17_Sub1Array969;
 	Class104_Sub4_Sub1[] aClass104_Sub4_Sub1Array963 = new Class104_Sub4_Sub1[128];
 	short[] aShortArray968 = new short[128];
 	byte[] aByteArray962 = new byte[128];
@@ -20,7 +20,7 @@ public class Class104_Sub11 extends Class104 {
 
 		int var5;
 		for (var5 = 0; var5 < var3; ++var5)
-			var4[var5] = var2.method565();
+			var4[var5] = var2.readByte();
 
 		++var2.pos;
 		++var3;
@@ -35,7 +35,7 @@ public class Class104_Sub11 extends Class104 {
 
 		int var8;
 		for (var8 = 0; var8 < var6; ++var8)
-			var7[var8] = var2.method565();
+			var7[var8] = var2.readByte();
 
 		++var2.pos;
 		++var6;
@@ -49,7 +49,7 @@ public class Class104_Sub11 extends Class104 {
 		final byte[] var10 = new byte[var9];
 
 		for (int var11 = 0; var11 < var9; ++var11)
-			var10[var11] = var2.method565();
+			var10[var11] = var2.readByte();
 
 		++var2.pos;
 		++var9;
@@ -106,7 +106,7 @@ public class Class104_Sub11 extends Class104 {
 
 		int var23;
 		for (var23 = 0; var23 < var21; ++var23)
-			var22[var23] = var2.method565();
+			var22[var23] = var2.readByte();
 
 		++var2.pos;
 		++var21;
@@ -137,7 +137,7 @@ public class Class104_Sub11 extends Class104 {
 				else
 					var24 = -1;
 
-				var26 = var2.method580();
+				var26 = var2.length();
 			}
 
 			aShortArray968[var27] = (short) (aShortArray968[var27] + (((var26 - 1) & 2) << 14));
@@ -231,20 +231,20 @@ public class Class104_Sub11 extends Class104 {
 			var33 = var17[var32];
 			if (var33.aByteArray639 != null)
 				for (var34 = 1; var34 < var33.aByteArray639.length; var34 += 2)
-					var33.aByteArray639[var34] = var2.method565();
+					var33.aByteArray639[var34] = var2.readByte();
 
 			if (var33.aByteArray635 != null)
 				for (var34 = 3; var34 < (var33.aByteArray635.length - 2); var34 += 2)
-					var33.aByteArray635[var34] = var2.method565();
+					var33.aByteArray635[var34] = var2.readByte();
 		}
 
 		if (var44 != null)
 			for (var32 = 1; var32 < var44.length; var32 += 2)
-				var44[var32] = var2.method565();
+				var44[var32] = var2.readByte();
 
 		if (null != var20)
 			for (var32 = 1; var32 < var20.length; var32 += 2)
-				var20[var32] = var2.method565();
+				var20[var32] = var2.readByte();
 
 		for (var32 = 0; var32 < var14; ++var32) {
 			var33 = var17[var32];

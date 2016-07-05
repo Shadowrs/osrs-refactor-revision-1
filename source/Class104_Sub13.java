@@ -37,7 +37,7 @@ public class Class104_Sub13 extends Class104 {
 
 		client.secureBuf.putOpcode(30);
 		client.secureBuf.writebyte(var0.length() - 1);
-		client.secureBuf.writeString(var0.substring(2));
+		client.secureBuf.writeCompactedString(var0.substring(2));
 	}
 
 	static final boolean method543(final int var0, final int var1, final int var2, final int var3, final boolean var4,
@@ -275,8 +275,8 @@ public class Class104_Sub13 extends Class104 {
 
 			for (var22 = 1; var22 < var16; ++var22) {
 				--var14;
-				client.secureBuf.method584(client.anIntArray1853[var14] - var28);
-				client.secureBuf.method586(client.anIntArray1854[var14] - var21);
+				client.secureBuf.writeByteN(client.anIntArray1853[var14] - var28);
+				client.secureBuf.writeByteS(client.anIntArray1854[var14] - var21);
 			}
 
 			client.secureBuf.writeLEShortA(Class20.anInt206 + var21);

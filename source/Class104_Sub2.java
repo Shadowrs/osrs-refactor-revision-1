@@ -1,18 +1,18 @@
 public class Class104_Sub2 extends Class104 {
 	public static boolean aBool859;
 	static int anInt860;
-	static Class104_Sub18_Sub17_Sub1 aClass104_Sub18_Sub17_Sub1_861;
+	static Sprite aClass104_Sub18_Sub17_Sub1_861;
 	public static int anInt862;
 	static Class58 aClass58_857 = new Class58(32);
 	int[] anIntArray856 = new int[] { -1 };
 	int[] anIntArray858 = new int[] { 0 };
 
 	static final void method479(final boolean var0) {
-		if ((client.anInt2018 == (Class81.pf.anInt1695 >> 7))
-				&& (client.anInt1880 == (Class81.pf.anInt1694 >> 7)))
+		if ((client.anInt2018 == (Class81.activePlayer.anInt1695 >> 7))
+				&& (client.anInt1880 == (Class81.activePlayer.anInt1694 >> 7)))
 			client.anInt2018 = 0;
 
-		int var1 = client.toUpdate;
+		int var1 = client.localPlrSize;
 		if (var0)
 			var1 = 1;
 
@@ -20,24 +20,24 @@ public class Class104_Sub2 extends Class104 {
 			Player var3;
 			int var4;
 			if (var0) {
-				var3 = Class81.pf;
+				var3 = Class81.activePlayer;
 				var4 = 33538048;
 			} else {
-				var3 = client.localNpcs[client.localPlayerIndexs[var2]];
+				var3 = client.localPlayers[client.localPlayerIndexs[var2]];
 				var4 = client.localPlayerIndexs[var2] << 14;
 			}
 
-			if ((var3 != null) && var3.method936(1531790724)) {
+			if ((var3 != null) && var3.forcefalse(1531790724)) {
 				var3.aBool1779 = false;
-				if (((client.lowmvm && (client.toUpdate > 50)) || (client.toUpdate > 200)) && !var0
-						&& (var3.anInt1702 == var3.anInt1719))
+				if (((client.lowmvm && (client.localPlrSize > 50)) || (client.localPlrSize > 200)) && !var0
+						&& (var3.stand == var3.anInt1719))
 					var3.aBool1779 = true;
 
 				final int var5 = var3.anInt1695 >> 7;
 				final int var6 = var3.anInt1694 >> 7;
 				if ((var5 >= 0) && (var5 < 104) && (var6 >= 0) && (var6 < 104))
-					if ((null != var3.aClass104_Sub18_Sub16_Sub4_1785) && (client.anInt1799 >= var3.anInt1776)
-							&& (client.anInt1799 < var3.anInt1777)) {
+					if ((null != var3.aClass104_Sub18_Sub16_Sub4_1785) && (client.currentTime >= var3.anInt1776)
+							&& (client.currentTime < var3.anInt1777)) {
 						var3.aBool1779 = false;
 						var3.anInt1775 = Class47.method211(var3.anInt1695, var3.anInt1694, Class12.myplayerHeight);
 						Class81.aClass17_643.method106(Class12.myplayerHeight, var3.anInt1695, var3.anInt1694, var3.anInt1775,

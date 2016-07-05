@@ -2,7 +2,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub2 extends Class104_Sub18_Sub16_S
 	Class104_Sub18_Sub2 aClass104_Sub18_Sub2_1788;
 
 	@Override
-	final boolean method936(final int var1) {
+	final boolean forcefalse(final int var1) {
 		return aClass104_Sub18_Sub2_1788 != null;
 	}
 
@@ -13,7 +13,7 @@ public final class Class104_Sub18_Sub16_Sub7_Sub2 extends Class104_Sub18_Sub16_S
 		else {
 			final Def var2 = (anInt1722 != -1) && (anInt1707 == 0) ? Class70.forId(anInt1722)
 					: null;
-			final Def var3 = (anInt1719 == -1) || ((anInt1702 == anInt1719) && (var2 != null)) ? null
+			final Def var3 = (anInt1719 == -1) || ((stand == anInt1719) && (var2 != null)) ? null
 					: Class70.forId(anInt1719);
 			Class104_Sub18_Sub16_Sub4 var4 = aClass104_Sub18_Sub2_1788.method675(var2, anInt1732, var3, anInt1720);
 			if (null == var4)
@@ -21,10 +21,10 @@ public final class Class104_Sub18_Sub16_Sub7_Sub2 extends Class104_Sub18_Sub16_S
 			else {
 				var4.method812();
 				anInt1706 = var4.anInt1467;
-				if ((anInt1727 != -1) && (anInt1728 != -1)) {
-					final Class104_Sub18_Sub16_Sub4 var5 = Class71.method330(anInt1727).method732(anInt1728);
+				if ((gfxId != -1) && (anInt1728 != -1)) {
+					final Class104_Sub18_Sub16_Sub4 var5 = Class71.method330(gfxId).method732(anInt1728);
 					if (null != var5) {
-						var5.method822(0, -anInt1709, 0);
+						var5.method822(0, -gfxHeight, 0);
 						final Class104_Sub18_Sub16_Sub4[] var6 = new Class104_Sub18_Sub16_Sub4[] { var4, var5 };
 						var4 = new Class104_Sub18_Sub16_Sub4(var6, 2);
 					}

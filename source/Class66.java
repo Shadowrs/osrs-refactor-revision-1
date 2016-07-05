@@ -5,7 +5,7 @@ public class Class66 {
 	static int[] anIntArray525;
 	static int[] anIntArray526;
 	static int[] anIntArray529;
-	static Class104_Sub18_Sub17_Sub1 aClass104_Sub18_Sub17_Sub1_531;
+	static Sprite aClass104_Sub18_Sub17_Sub1_531;
 	static Class104_Sub18_Sub17_Sub3 aClass104_Sub18_Sub17_Sub3_538;
 	static Class104_Sub18_Sub17_Sub3[] aClass104_Sub18_Sub17_Sub3Array544;
 	public static Class13 aClass13_547;
@@ -107,7 +107,7 @@ public class Class66 {
 					var11 = var8;
 
 				var10.anInt1093 = var11;
-				var10.anInt1094 = client.anInt1799;
+				var10.anInt1094 = client.currentTime;
 				if (!var10.isHeaderless || !Class40.method182(var10)) {
 					if (var10.anInt982 > 0)
 						Class95.method425(var10);
@@ -204,7 +204,7 @@ public class Class66 {
 						boolean var34;
 						int var38;
 						int var40;
-						int var59;
+						int pid;
 						int var65;
 						int var66;
 						int var71;
@@ -233,14 +233,14 @@ public class Class66 {
 
 									var22 = (client.anInt1866 + client.anInt1859) & 2047;
 									var23 = Class50.anInt421;
-									var24 = Class47.method211(Class81.pf.anInt1695,
-											Class81.pf.anInt1694, Class12.myplayerHeight)
+									var24 = Class47.method211(Class81.activePlayer.anInt1695,
+											Class81.activePlayer.anInt1694, Class12.myplayerHeight)
 											- 50;
 									var25 = Class104_Sub2.anInt860;
 									var26 = 600 + (var21 * 3);
 									var27 = (2048 - var21) & 2047;
 									var28 = (2048 - var22) & 2047;
-									var59 = 0;
+									pid = 0;
 									var30 = 0;
 									var31 = var26;
 									if (var27 != 0) {
@@ -254,12 +254,12 @@ public class Class66 {
 									if (var28 != 0) {
 										var32 = Class104_Sub18_Sub17_Sub4.anIntArray1680[var28];
 										var65 = Class104_Sub18_Sub17_Sub4.anIntArray1678[var28];
-										var66 = ((var31 * var32) + (var65 * var59)) >> 16;
-										var31 = ((var65 * var31) - (var32 * var59)) >> 16;
-										var59 = var66;
+										var66 = ((var31 * var32) + (var65 * pid)) >> 16;
+										var31 = ((var65 * var31) - (var32 * pid)) >> 16;
+										pid = var66;
 									}
 
-									Class85.anInt672 = var23 - var59;
+									Class85.anInt672 = var23 - pid;
 									Class46.anInt403 = var24 - var30;
 									Class99.anInt793 = var25 - var31;
 									Class27.anInt266 = var21;
@@ -271,8 +271,8 @@ public class Class66 {
 									if (Class27.anInt266 < 310) {
 										var24 = Class85.anInt672 >> 7;
 										var25 = Class99.anInt793 >> 7;
-										var26 = Class81.pf.anInt1695 >> 7;
-										var27 = Class81.pf.anInt1694 >> 7;
+										var26 = Class81.activePlayer.anInt1695 >> 7;
+										var27 = Class81.activePlayer.anInt1694 >> 7;
 										if ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][var24][var25] & 4) != 0)
 											var23 = Class12.myplayerHeight;
 
@@ -282,12 +282,12 @@ public class Class66 {
 											var28 = var24 - var26;
 
 										if (var27 > var25)
-											var59 = var27 - var25;
+											pid = var27 - var25;
 										else
-											var59 = var25 - var27;
+											pid = var25 - var27;
 
-										if (var28 > var59) {
-											var30 = (65536 * var59) / var28;
+										if (var28 > pid) {
+											var30 = (65536 * pid) / var28;
 											var31 = '\u8000';
 
 											while (var24 != var26) {
@@ -314,7 +314,7 @@ public class Class66 {
 												}
 											}
 										} else {
-											var30 = (65536 * var28) / var59;
+											var30 = (65536 * var28) / pid;
 											var31 = '\u8000';
 
 											while (var27 != var25) {
@@ -343,7 +343,7 @@ public class Class66 {
 										}
 									}
 
-									if ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][Class81.pf.anInt1695 >> 7][Class81.pf.anInt1694 >> 7]
+									if ((Class76.aByteArrayArrayArray600[Class12.myplayerHeight][Class81.activePlayer.anInt1695 >> 7][Class81.activePlayer.anInt1694 >> 7]
 											& 4) != 0)
 										var23 = Class12.myplayerHeight;
 
@@ -417,20 +417,20 @@ public class Class66 {
 								Class81.aClass17_643.method77();
 								client.anInt1881 = 0;
 
-								for (var59 = -1; var59 < (client.anInt1832 + client.toUpdate); ++var59) {
-									Object var67;
-									if (var59 == -1)
-										var67 = Class81.pf;
-									else if (var59 < client.toUpdate)
-										var67 = client.localNpcs[client.localPlayerIndexs[var59]];
+								for (pid = -1; pid < (client.localNpcSize + client.localPlrSize); ++pid) {
+									Object entity;
+									if (pid == -1)
+										entity = Class81.activePlayer;
+									else if (pid < client.localPlrSize)
+										entity = client.localPlayers[client.localPlayerIndexs[pid]];
 									else
-										var67 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[client.anIntArray1830[var59
-												- client.toUpdate]];
+										entity = client.localNpcs[client.localNpcIndicies[pid
+												- client.localPlrSize]];
 
-									if ((null != var67) && ((Class104_Sub18_Sub16_Sub7) var67).method936(1531790724)) {
+									if ((null != entity) && ((Class104_Sub18_Sub16_Sub7) entity).forcefalse(1531790724)) {
 										Class104_Sub18_Sub2 var36;
-										if (var67 instanceof Class104_Sub18_Sub16_Sub7_Sub2) {
-											var36 = ((Class104_Sub18_Sub16_Sub7_Sub2) var67).aClass104_Sub18_Sub2_1788;
+										if (entity instanceof Class104_Sub18_Sub16_Sub7_Sub2) {
+											var36 = ((Class104_Sub18_Sub16_Sub7_Sub2) entity).aClass104_Sub18_Sub2_1788;
 											if (var36.anIntArray1230 != null)
 												var36 = var36.method677();
 
@@ -438,93 +438,93 @@ public class Class66 {
 												continue;
 										}
 
-										if (var59 >= client.toUpdate) {
-											var36 = ((Class104_Sub18_Sub16_Sub7_Sub2) var67).aClass104_Sub18_Sub2_1788;
+										if (pid >= client.localPlrSize) {
+											var36 = ((Class104_Sub18_Sub16_Sub7_Sub2) entity).aClass104_Sub18_Sub2_1788;
 											if (var36.anIntArray1230 != null)
 												var36 = var36.method677();
 
 											if ((var36.anInt1252 >= 0)
-													&& (var36.anInt1252 < Class70.aClass104_Sub18_Sub17_Sub1Array575.length)) {
-												Class29.method142((Class104_Sub18_Sub16_Sub7) var67,
-														15 + ((Class104_Sub18_Sub16_Sub7) var67).anInt1706);
+													&& (var36.anInt1252 < Class70.prayers.length)) {
+												Class29.method142((Class104_Sub18_Sub16_Sub7) entity,
+														15 + ((Class104_Sub18_Sub16_Sub7) entity).anInt1706);
 												if (client.anInt1999 > -1)
-													Class70.aClass104_Sub18_Sub17_Sub1Array575[var36.anInt1252]
-															.method841((client.anInt1999 + var12) - 12,
+													Class70.prayers[var36.anInt1252]
+															.draw((client.anInt1999 + var12) - 12,
 																	(var13 + client.anInt1894) - 30);
 											}
 
 											if ((client.anInt1797 == 1)
-													&& (client.anIntArray1830[var59
-															- client.toUpdate] == client.anInt1808)
-													&& ((client.anInt1799 % 20) < 10)) {
-												Class29.method142((Class104_Sub18_Sub16_Sub7) var67,
-														15 + ((Class104_Sub18_Sub16_Sub7) var67).anInt1706);
+													&& (client.localNpcIndicies[pid
+															- client.localPlrSize] == client.anInt1808)
+													&& ((client.currentTime % 20) < 10)) {
+												Class29.method142((Class104_Sub18_Sub16_Sub7) entity,
+														15 + ((Class104_Sub18_Sub16_Sub7) entity).anInt1706);
 												if (client.anInt1999 > -1)
-													Class104_Sub11.aClass104_Sub18_Sub17_Sub1Array969[0].method841(
+													Class104_Sub11.aClass104_Sub18_Sub17_Sub1Array969[0].draw(
 															(client.anInt1999 + var12) - 12,
 															(var13 + client.anInt1894) - 28);
 											}
 										} else {
 											var31 = 30;
-											final Player var37 = (Player) var67;
-											if ((var37.skull != -1) || (var37.pray != -1)) {
-												Class29.method142((Class104_Sub18_Sub16_Sub7) var67,
-														((Class104_Sub18_Sub16_Sub7) var67).anInt1706 + 15);
+											final Player player = (Player) entity;
+											if ((player.skull != -1) || (player.pray != -1)) {
+												Class29.method142((Class104_Sub18_Sub16_Sub7) entity,
+														((Class104_Sub18_Sub16_Sub7) entity).anInt1706 + 15);
 												if (client.anInt1999 > -1) {
-													if (var37.skull != -1) {
-														client.aClass104_Sub18_Sub17_Sub1Array291[var37.skull]
-																.method841((client.anInt1999 + var12) - 12,
+													if (player.skull != -1) {
+														client.skulls[player.skull]
+																.draw((client.anInt1999 + var12) - 12,
 																		(client.anInt1894 + var13) - var31);
 														var31 += 25;
 													}
 
-													if (var37.pray != -1) {
-														Class70.aClass104_Sub18_Sub17_Sub1Array575[var37.pray]
-																.method841((var12 + client.anInt1999) - 12,
+													if (player.pray != -1) {
+														Class70.prayers[player.pray]
+																.draw((var12 + client.anInt1999) - 12,
 																		(var13 + client.anInt1894) - var31);
 														var31 += 25;
 													}
 												}
 											}
 
-											if ((var59 >= 0) && (client.anInt1797 == 10)
-													&& (client.localPlayerIndexs[var59] == client.anInt1809)) {
-												Class29.method142((Class104_Sub18_Sub16_Sub7) var67,
-														15 + ((Class104_Sub18_Sub16_Sub7) var67).anInt1706);
+											if ((pid >= 0) && (client.anInt1797 == 10)
+													&& (client.localPlayerIndexs[pid] == client.anInt1809)) {
+												Class29.method142((Class104_Sub18_Sub16_Sub7) entity,
+														15 + ((Class104_Sub18_Sub16_Sub7) entity).anInt1706);
 												if (client.anInt1999 > -1)
-													Class104_Sub11.aClass104_Sub18_Sub17_Sub1Array969[1].method841(
+													Class104_Sub11.aClass104_Sub18_Sub17_Sub1Array969[1].draw(
 															(var12 + client.anInt1999) - 12,
 															(var13 + client.anInt1894) - var31);
 											}
 										}
 
-										if ((null != ((Class104_Sub18_Sub16_Sub7) var67).aString1723)
-												&& ((var59 >= client.toUpdate) || (client.anInt2004 == 0)
+										if ((null != ((Class104_Sub18_Sub16_Sub7) entity).forceChat)
+												&& ((pid >= client.localPlrSize) || (client.anInt2004 == 0)
 														|| (client.anInt2004 == 3)
 														|| ((client.anInt2004 == 1) && BZip2Context.method154(
-																((Player) var67).aString1780)))) {
-											Class29.method142((Class104_Sub18_Sub16_Sub7) var67,
-													((Class104_Sub18_Sub16_Sub7) var67).anInt1706);
+																((Player) entity).myName)))) {
+											Class29.method142((Class104_Sub18_Sub16_Sub7) entity,
+													((Class104_Sub18_Sub16_Sub7) entity).anInt1706);
 											if ((client.anInt1999 > -1) && (client.anInt1881 < client.anInt1882)) {
 												client.anIntArray1886[client.anInt1881] = Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36
-														.method883(((Class104_Sub18_Sub16_Sub7) var67).aString1723) / 2;
+														.method883(((Class104_Sub18_Sub16_Sub7) entity).forceChat) / 2;
 												client.anIntArray1807[client.anInt1881] = Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.anInt1600;
 												client.anIntArray1883[client.anInt1881] = client.anInt1999;
 												client.anIntArray1884[client.anInt1881] = client.anInt1894;
-												client.anIntArray2011[client.anInt1881] = ((Class104_Sub18_Sub16_Sub7) var67).anInt1731;
-												client.anIntArray1888[client.anInt1881] = ((Class104_Sub18_Sub16_Sub7) var67).anInt1749;
-												client.anIntArray1889[client.anInt1881] = ((Class104_Sub18_Sub16_Sub7) var67).anInt1713;
-												client.aStringArray1890[client.anInt1881] = ((Class104_Sub18_Sub16_Sub7) var67).aString1723;
+												client.anIntArray2011[client.anInt1881] = ((Class104_Sub18_Sub16_Sub7) entity).anInt1731;
+												client.anIntArray1888[client.anInt1881] = ((Class104_Sub18_Sub16_Sub7) entity).anInt1749;
+												client.anIntArray1889[client.anInt1881] = ((Class104_Sub18_Sub16_Sub7) entity).anInt1713;
+												client.aStringArray1890[client.anInt1881] = ((Class104_Sub18_Sub16_Sub7) entity).forceChat;
 												++client.anInt1881;
 											}
 										}
 
-										if (((Class104_Sub18_Sub16_Sub7) var67).anInt1714 > client.anInt1799) {
-											Class29.method142((Class104_Sub18_Sub16_Sub7) var67,
-													((Class104_Sub18_Sub16_Sub7) var67).anInt1706 + 15);
+										if (((Class104_Sub18_Sub16_Sub7) entity).hitTime > client.currentTime) {
+											Class29.method142((Class104_Sub18_Sub16_Sub7) entity,
+													((Class104_Sub18_Sub16_Sub7) entity).anInt1706 + 15);
 											if (client.anInt1999 > -1) {
-												var31 = (((Class104_Sub18_Sub16_Sub7) var67).anInt1693 * 30)
-														/ ((Class104_Sub18_Sub16_Sub7) var67).anInt1715;
+												var31 = (((Class104_Sub18_Sub16_Sub7) entity).anInt1693 * 30)
+														/ ((Class104_Sub18_Sub16_Sub7) entity).anInt1715;
 												if (var31 > 30)
 													var31 = 30;
 
@@ -537,9 +537,9 @@ public class Class66 {
 										}
 
 										for (var31 = 0; var31 < 4; ++var31)
-											if (((Class104_Sub18_Sub16_Sub7) var67).anIntArray1712[var31] > client.anInt1799) {
-												Class29.method142((Class104_Sub18_Sub16_Sub7) var67,
-														((Class104_Sub18_Sub16_Sub7) var67).anInt1706 / 2);
+											if (((Class104_Sub18_Sub16_Sub7) entity).hitTimes[var31] > client.currentTime) {
+												Class29.method142((Class104_Sub18_Sub16_Sub7) entity,
+														((Class104_Sub18_Sub16_Sub7) entity).anInt1706 / 2);
 												if (client.anInt1999 > -1) {
 													if (var31 == 1)
 														client.anInt1894 -= 20;
@@ -554,12 +554,12 @@ public class Class66 {
 														client.anInt1894 -= 10;
 													}
 
-													Class77.aClass104_Sub18_Sub17_Sub1Array623[((Class104_Sub18_Sub16_Sub7) var67).anIntArray1711[var31]]
-															.method841((client.anInt1999 + var12) - 12,
+													Class77.aClass104_Sub18_Sub17_Sub1Array623[((Class104_Sub18_Sub16_Sub7) entity).hitType[var31]]
+															.draw((client.anInt1999 + var12) - 12,
 																	(var13 + client.anInt1894) - 12);
 													Class104_Sub7.aClass104_Sub18_Sub17_Sub2_Sub1_951.method882(
 															Integer.toString(
-																	((Class104_Sub18_Sub16_Sub7) var67).anIntArray1710[var31]),
+																	((Class104_Sub18_Sub16_Sub7) entity).hitDmg[var31]),
 															(client.anInt1999 + var12) - 1,
 															var13 + client.anInt1894 + 3, 16777215, 0);
 												}
@@ -568,17 +568,17 @@ public class Class66 {
 								}
 
 								int var42;
-								for (var59 = 0; var59 < client.anInt1881; ++var59) {
-									var30 = client.anIntArray1883[var59];
-									var31 = client.anIntArray1884[var59];
-									var32 = client.anIntArray1886[var59];
-									var65 = client.anIntArray1807[var59];
+								for (pid = 0; pid < client.anInt1881; ++pid) {
+									var30 = client.anIntArray1883[pid];
+									var31 = client.anIntArray1884[pid];
+									var32 = client.anIntArray1886[pid];
+									var65 = client.anIntArray1807[pid];
 									var34 = true;
 
 									while (var34) {
 										var34 = false;
 
-										for (var38 = 0; var38 < var59; ++var38)
+										for (var38 = 0; var38 < pid; ++var38)
 											if (((2 + var31) > (client.anIntArray1884[var38]
 													- client.anIntArray1807[var38]))
 													&& ((var31 - var65) < (2 + client.anIntArray1884[var38]))
@@ -593,25 +593,25 @@ public class Class66 {
 											}
 									}
 
-									client.anInt1999 = client.anIntArray1883[var59];
-									client.anInt1894 = client.anIntArray1884[var59] = var31;
-									final String var39 = client.aStringArray1890[var59];
+									client.anInt1999 = client.anIntArray1883[pid];
+									client.anInt1894 = client.anIntArray1884[pid] = var31;
+									final String var39 = client.aStringArray1890[pid];
 									if (client.anInt1949 == 0) {
 										var40 = 16776960;
-										if (client.anIntArray2011[var59] < 6)
-											var40 = client.anIntArray2003[client.anIntArray2011[var59]];
+										if (client.anIntArray2011[pid] < 6)
+											var40 = client.anIntArray2003[client.anIntArray2011[pid]];
 
-										if (client.anIntArray2011[var59] == 6)
+										if (client.anIntArray2011[pid] == 6)
 											var40 = (client.anInt1892 % 20) < 10 ? 16711680 : 16776960;
 
-										if (client.anIntArray2011[var59] == 7)
+										if (client.anIntArray2011[pid] == 7)
 											var40 = (client.anInt1892 % 20) < 10 ? 255 : '\uffff';
 
-										if (client.anIntArray2011[var59] == 8)
+										if (client.anIntArray2011[pid] == 8)
 											var40 = (client.anInt1892 % 20) < 10 ? '\ub000' : 8454016;
 
-										if (client.anIntArray2011[var59] == 9) {
-											var71 = 150 - client.anIntArray1889[var59];
+										if (client.anIntArray2011[pid] == 9) {
+											var71 = 150 - client.anIntArray1889[pid];
 											if (var71 < 50)
 												var40 = (var71 * 1280) + 16711680;
 											else if (var71 < 100)
@@ -620,8 +620,8 @@ public class Class66 {
 												var40 = '\uff00' + (5 * (var71 - 100));
 										}
 
-										if (client.anIntArray2011[var59] == 10) {
-											var71 = 150 - client.anIntArray1889[var59];
+										if (client.anIntArray2011[pid] == 10) {
+											var71 = 150 - client.anIntArray1889[pid];
 											if (var71 < 50)
 												var40 = (var71 * 5) + 16711680;
 											else if (var71 < 100)
@@ -630,8 +630,8 @@ public class Class66 {
 												var40 = (((var71 - 100) * 327680) + 255) - ((var71 - 100) * 5);
 										}
 
-										if (client.anIntArray2011[var59] == 11) {
-											var71 = 150 - client.anIntArray1889[var59];
+										if (client.anIntArray2011[pid] == 11) {
+											var71 = 150 - client.anIntArray1889[pid];
 											if (var71 < 50)
 												var40 = 16777215 - (var71 * 327685);
 											else if (var71 < 100)
@@ -640,27 +640,27 @@ public class Class66 {
 												var40 = 16777215 - (327680 * (var71 - 100));
 										}
 
-										if (client.anIntArray1888[var59] == 0)
+										if (client.anIntArray1888[pid] == 0)
 											Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.method882(var39,
 													client.anInt1999 + var12, client.anInt1894 + var13, var40, 0);
 
-										if (client.anIntArray1888[var59] == 1)
+										if (client.anIntArray1888[pid] == 1)
 											Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.method866(var39,
 													var12 + client.anInt1999, client.anInt1894 + var13, var40, 0,
 													client.anInt1892);
 
-										if (client.anIntArray1888[var59] == 2)
+										if (client.anIntArray1888[pid] == 2)
 											Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.method867(var39,
 													var12 + client.anInt1999, var13 + client.anInt1894, var40, 0,
 													client.anInt1892);
 
-										if (client.anIntArray1888[var59] == 3)
+										if (client.anIntArray1888[pid] == 3)
 											Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.method868(var39,
 													var12 + client.anInt1999, client.anInt1894 + var13, var40, 0,
-													client.anInt1892, 150 - client.anIntArray1889[var59]);
+													client.anInt1892, 150 - client.anIntArray1889[pid]);
 
-										if (client.anIntArray1888[var59] == 4) {
-											var71 = ((150 - client.anIntArray1889[var59])
+										if (client.anIntArray1888[pid] == 4) {
+											var71 = ((150 - client.anIntArray1889[pid])
 													* (Class6.aClass104_Sub18_Sub17_Sub2_Sub1_36.method883(var39)
 															+ 100))
 													/ 150;
@@ -672,8 +672,8 @@ public class Class66 {
 											Class104_Sub18_Sub17.method800(var12, var13, var12 + var19, var20 + var13);
 										}
 
-										if (client.anIntArray1888[var59] == 5) {
-											var71 = 150 - client.anIntArray1889[var59];
+										if (client.anIntArray1888[pid] == 5) {
+											var71 = 150 - client.anIntArray1889[pid];
 											var42 = 0;
 											if (var71 < 25)
 												var42 = var71 - 25;
@@ -719,7 +719,7 @@ public class Class66 {
 									if ((client.anInt1941 == 0) && !client.aBool1943)
 										Class60.method256("Walk here", "", 23, 0, var27 - var12, var28 - var13);
 
-									var59 = -1;
+									pid = -1;
 
 									for (var30 = 0; var30 < Class104_Sub18_Sub16_Sub4.anInt1548; ++var30) {
 										var31 = Class104_Sub18_Sub16_Sub4.anIntArray1537[var30];
@@ -727,8 +727,8 @@ public class Class66 {
 										var65 = (var31 >> 7) & 127;
 										var66 = (var31 >> 29) & 3;
 										var38 = (var31 >> 14) & 32767;
-										if (var59 != var31) {
-											var59 = var31;
+										if (pid != var31) {
+											pid = var31;
 											if ((var66 == 2) && (Class81.aClass17_643.method89(Class12.myplayerHeight, var32,
 													var65, var31) >= 0)) {
 												ObjectDefinition var43 = ItemDef.forId(var38);
@@ -788,22 +788,22 @@ public class Class66 {
 											Class104_Sub18_Sub16_Sub7_Sub2 var46;
 											Player var73;
 											if (var66 == 1) {
-												final Class104_Sub18_Sub16_Sub7_Sub2 var68 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var38];
+												final Class104_Sub18_Sub16_Sub7_Sub2 var68 = client.localNpcs[var38];
 												if ((var68.aClass104_Sub18_Sub2_1788.anInt1240 == 1)
 														&& ((var68.anInt1695 & 127) == 64)
 														&& ((var68.anInt1694 & 127) == 64)) {
-													for (var71 = 0; var71 < client.anInt1832; ++var71) {
-														var46 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[client.anIntArray1830[var71]];
+													for (var71 = 0; var71 < client.localNpcSize; ++var71) {
+														var46 = client.localNpcs[client.localNpcIndicies[var71]];
 														if ((var46 != null) && (var68 != var46)
 																&& (var46.aClass104_Sub18_Sub2_1788.anInt1240 == 1)
 																&& (var46.anInt1695 == var68.anInt1695)
 																&& (var68.anInt1694 == var46.anInt1694))
 															Class100.method463(var46.aClass104_Sub18_Sub2_1788,
-																	client.anIntArray1830[var71], var32, var65);
+																	client.localNpcIndicies[var71], var32, var65);
 													}
 
-													for (var71 = 0; var71 < client.toUpdate; ++var71) {
-														var73 = client.localNpcs[client.localPlayerIndexs[var71]];
+													for (var71 = 0; var71 < client.localPlrSize; ++var71) {
+														var73 = client.localPlayers[client.localPlayerIndexs[var71]];
 														if ((var73 != null) && (var73.anInt1695 == var68.anInt1695)
 																&& (var68.anInt1694 == var73.anInt1694))
 															Class81.method355(var73, client.localPlayerIndexs[var71],
@@ -816,21 +816,21 @@ public class Class66 {
 											}
 
 											if (var66 == 0) {
-												final Player var69 = client.localNpcs[var38];
+												final Player var69 = client.localPlayers[var38];
 												if (((var69.anInt1695 & 127) == 64)
 														&& ((var69.anInt1694 & 127) == 64)) {
-													for (var71 = 0; var71 < client.anInt1832; ++var71) {
-														var46 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[client.anIntArray1830[var71]];
+													for (var71 = 0; var71 < client.localNpcSize; ++var71) {
+														var46 = client.localNpcs[client.localNpcIndicies[var71]];
 														if ((var46 != null)
 																&& (var46.aClass104_Sub18_Sub2_1788.anInt1240 == 1)
 																&& (var46.anInt1695 == var69.anInt1695)
 																&& (var46.anInt1694 == var69.anInt1694))
 															Class100.method463(var46.aClass104_Sub18_Sub2_1788,
-																	client.anIntArray1830[var71], var32, var65);
+																	client.localNpcIndicies[var71], var32, var65);
 													}
 
-													for (var71 = 0; var71 < client.toUpdate; ++var71) {
-														var73 = client.localNpcs[client.localPlayerIndexs[var71]];
+													for (var71 = 0; var71 < client.localPlrSize; ++var71) {
+														var73 = client.localPlayers[client.localPlayerIndexs[var71]];
 														if ((var73 != null) && (var73 != var69)
 																&& (var69.anInt1695 == var73.anInt1695)
 																&& (var73.anInt1694 == var69.anInt1694))
@@ -1205,10 +1205,10 @@ public class Class66 {
 
 											if (var10.anIntArray1080[var21] <= 0) {
 												if ((null != var10.anIntArray1035) && (var21 < 20)) {
-													final Class104_Sub18_Sub17_Sub1 var83 = var10.method533(var21,
+													final Sprite var83 = var10.method533(var21,
 															2127306834);
 													if (null != var83)
-														var83.method841(var24, var25);
+														var83.draw(var24, var25);
 													else if (Widget.aBool1065)
 														Class79.setflags(var10);
 												}
@@ -1218,7 +1218,7 @@ public class Class66 {
 														&& (var25 < var5))
 														|| ((Class67.aClass104_Sub12_556 == var10)
 																&& (client.anInt1901 == var21))) {
-													Class104_Sub18_Sub17_Sub1 var80;
+													Sprite var80;
 													if ((client.anInt1941 == 1) && (Class7.anInt44 == var21)
 															&& (var10.anInt978 == Class14.anInt105))
 														var80 = Widget.method539(var28,
@@ -1284,7 +1284,7 @@ public class Class66 {
 																&& (var21 == client.anInt1900))
 															var80.method844(var24, var25, 128);
 														else
-															var80.method841(var24, var25);
+															var80.draw(var24, var25);
 													} else
 														Class79.setflags(var10);
 												}
@@ -1363,11 +1363,11 @@ public class Class66 {
 													var10.anInt1027);
 										}
 									} else if (var10.anInt980 == 5) {
-										Class104_Sub18_Sub17_Sub1 var81;
+										Sprite var81;
 										if (!var10.isHeaderless) {
 											var81 = var10.method535(Class80.method353(var10));
 											if (var81 != null)
-												var81.method841(var12, var13);
+												var81.draw(var12, var13);
 											else if (Widget.aBool1065)
 												Class79.setflags(var10);
 										} else {
@@ -1392,7 +1392,7 @@ public class Class66 {
 														var81.method846(var12, var13, var10.anInt987, var10.anInt988,
 																256 - (var14 & 255));
 													else if ((var22 == var10.anInt987) && (var10.anInt988 == var23))
-														var81.method841(var12, var13);
+														var81.draw(var12, var13);
 													else
 														var81.method835(var12, var13, var10.anInt987, var10.anInt988);
 												} else {
@@ -1411,7 +1411,7 @@ public class Class66 {
 																var81.method844(var12 + (var26 * var22),
 																		var13 + (var27 * var23), 256 - (var14 & 255));
 															else
-																var81.method841(var12 + (var26 * var22),
+																var81.draw(var12 + (var26 * var22),
 																		var13 + (var27 * var23));
 
 													Class104_Sub18_Sub17.method800(var2, var3, var4, var5);
@@ -1445,17 +1445,17 @@ public class Class66 {
 													var76 = client.aClass85_2047.method389((Def) null,
 															-1, (Def) null, -1);
 												else
-													var76 = Class81.pf
+													var76 = Class81.activePlayer
 															.method788(-78901604);
 											} else if (var22 == -1) {
 												var76 = var10.method532((Def) null, -1, var58,
-														Class81.pf.aClass85_1770);
+														Class81.activePlayer.aClass85_1770);
 												if ((null == var76) && Widget.aBool1065)
 													Class79.setflags(var10);
 											} else {
 												final Def var82 = Class70.forId(var22);
 												var76 = var10.method532(var82, var10.anInt974, var58,
-														Class81.pf.aClass85_1770);
+														Class81.activePlayer.aClass85_1770);
 												if ((var76 == null) && Widget.aBool1065)
 													Class79.setflags(var10);
 											}
@@ -1571,10 +1571,10 @@ public class Class66 {
 
 												for (var51 = Class104_Sub23.method621(var51, var10); var51
 														.length() > 0; var28 += 1 + var75.anInt1600) {
-													var59 = var51.indexOf("<br>");
-													if (var59 != -1) {
-														var54 = var51.substring(0, var59);
-														var51 = var51.substring(var59 + 4);
+													pid = var51.indexOf("<br>");
+													if (pid != -1) {
+														var54 = var51.substring(0, pid);
+														var51 = var51.substring(pid + 4);
 													} else {
 														var54 = var51;
 														var51 = "";
@@ -1606,14 +1606,14 @@ public class Class66 {
 														var26 = (var25 * var10.anInt999) >> 17;
 														var27 = (1 + (var10.anInt999 * var25)) >> 17;
 														var28 = (var24 * var10.anInt999) >> 17;
-														var59 = (1 + (var10.anInt999 * var24)) >> 17;
+														pid = (1 + (var10.anInt999 * var24)) >> 17;
 														var30 = var12 + var26;
 														var31 = var12 - var27;
 														var32 = (var12 + var10.anInt987) - var27;
 														var65 = var26 + var12 + var10.anInt987;
 														var66 = var13 + var28;
-														var38 = var13 - var59;
-														var40 = (var13 + var10.anInt988) - var59;
+														var38 = var13 - pid;
+														var40 = (var13 + var10.anInt988) - pid;
 														var71 = var13 + var10.anInt988 + var28;
 														Class104_Sub18_Sub17_Sub4.method920(var30, var31, var32);
 														Class104_Sub18_Sub17_Sub4.method922(var66, var38, var40, var30,
@@ -1661,7 +1661,7 @@ public class Class66 {
 	}
 
 	static final void method302(final int var0, final int var1, final int var2, final int var3,
-			final Class104_Sub18_Sub17_Sub1 var4) {
+			final Sprite var4) {
 		if (null != var4) {
 			final int var5 = (client.anInt1866 + client.anInt1862) & 2047;
 			final int var6 = (var2 * var2) + (var3 * var3);
@@ -1677,7 +1677,7 @@ public class Class66 {
 							4 + ((var9 + var0 + 94) - (var4.anInt1590 / 2)),
 							(var1 + 83) - var10 - (var4.anInt1591 / 2) - 4);
 				else
-					var4.method841(4 + ((var0 + 94 + var9) - (var4.anInt1590 / 2)),
+					var4.draw(4 + ((var0 + 94 + var9) - (var4.anInt1590 / 2)),
 							(83 + var1) - var10 - (var4.anInt1591 / 2) - 4);
 
 			}

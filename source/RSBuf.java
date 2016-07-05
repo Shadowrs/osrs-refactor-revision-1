@@ -21,40 +21,40 @@ public class RSBuf extends Class104 {
 		backing[++pos - 1] = (byte) ((int) var1);
 	}
 
-	public void writeString(final String var1) {
-		final int var2 = var1.indexOf(0);
-		if (var2 >= 0)
+	public void writeCompactedString(final String str) {
+		final int header = str.indexOf(0);
+		if (header >= 0)
 			throw new IllegalArgumentException("");
 		else {
-			pos += Class33.method156(var1, 0, var1.length(), backing, pos);
+			pos += Class33.writeInto(str, 0, str.length(), backing, pos);
 			backing[++pos - 1] = 0;
 		}
 	}
 
-	public void method564(final CharSequence var1) {
-		final int var2 = Class104_Sub20.method560(var1);
+	public void writeSpecialString(final CharSequence seq) {
+		final int len = Class104_Sub20.actualLen(seq);
 		backing[++pos - 1] = 0;
-		method569(var2);
-		pos += Class91.method410(backing, pos, var1);
+		writeCompact(len);
+		pos += Class91.writeCompactStrBytes(backing, pos, seq);
 	}
 
-	public byte method565() {
+	public byte readByte() {
 		return backing[++pos - 1];
 	}
 
-	public int method566() {
+	public int readInt() {
 		pos += 4;
 		return (backing[pos - 4] & 255) + ((backing[pos - 2] & 255) << 16)
 				+ ((backing[pos - 1] & 255) << 24) + ((backing[pos - 3] & 255) << 8);
 	}
 
-	public int method567() {
+	public int readSTribyte() {
 		pos += 3;
 		return (backing[pos - 3] & 255) + ((backing[pos - 1] & 255) << 16)
 				+ ((backing[pos - 2] & 255) << 8);
 	}
 
-	public void method568(final int var1) {
+	public void writeSmart(final int var1) {
 		if ((var1 >= 0) && (var1 < 128))
 			writebyte(var1);
 		else if ((var1 >= 0) && (var1 < '\u8000'))
@@ -63,7 +63,7 @@ public class RSBuf extends Class104 {
 			throw new IllegalArgumentException();
 	}
 
-	public void method569(final int var1) {
+	public void writeCompact(final int var1) {
 		if ((var1 & -128) != 0) {
 			if ((var1 & -16384) != 0) {
 				if ((var1 & -2097152) != 0) {
@@ -91,7 +91,7 @@ public class RSBuf extends Class104 {
 		return ((backing[pos - 2] & 255) << 8) + (backing[pos - 1] & 255);
 	}
 
-	public int method572() {
+	public int readUShort() {
 		pos += 2;
 		int var1 = ((backing[pos - 2] & 255) << 8) + (backing[pos - 1] & 255);
 		if (var1 > 32767)
@@ -100,7 +100,7 @@ public class RSBuf extends Class104 {
 		return var1;
 	}
 
-	public int method573() {
+	public int readMInt() {
 		pos += 4;
 		return ((backing[pos - 3] & 255) << 24) + ((backing[pos - 4] & 255) << 16)
 				+ ((backing[pos - 1] & 255) << 8) + (backing[pos - 2] & 255);
@@ -118,7 +118,7 @@ public class RSBuf extends Class104 {
 		return (var1 << 32) + var3;
 	}
 
-	public int method576() {
+	public int readUByteA() {
 		return (backing[++pos - 1] - 128) & 255;
 	}
 
@@ -128,16 +128,16 @@ public class RSBuf extends Class104 {
 
 	}
 
-	public int method578() {
+	public int readCompact() {
 		final int var1 = backing[pos] & 255;
 		return var1 < 128 ? readUByte() - 64 : readLEShort() - '\uc000';
 	}
 
-	public int method579() {
+	public int readSpecial() {
 		return backing[pos] < 0 ? readLEInt() & Integer.MAX_VALUE : readLEShort();
 	}
 
-	public int method580() {
+	public int length() {
 		byte var1 = backing[++pos - 1];
 
 		int var2;
@@ -147,63 +147,63 @@ public class RSBuf extends Class104 {
 		return var2 | var1;
 	}
 
-	public String method581() {
+	public String readStr() {
 		final byte var1 = backing[++pos - 1];
 		if (var1 != 0)
 			throw new IllegalStateException("");
 		else {
-			final int var2 = method580();
-			if ((var2 + pos) > backing.length)
+			final int len = length();
+			if ((len + pos) > backing.length)
 				throw new IllegalStateException("");
 			else {
-				final byte[] var3 = backing;
-				final int var4 = pos;
-				final char[] var5 = new char[var2];
-				int var6 = 0;
-				int var7 = var4;
+				final byte[] src = backing;
+				final int start = pos;
+				final char[] chars = new char[len];
+				int count = 0;
+				int caret = start;
 
-				int var10;
-				for (final int var8 = var2 + var4; var7 < var8; var5[var6++] = (char) var10) {
-					final int var9 = var3[var7++] & 255;
-					if (var9 < 128) {
-						if (var9 == 0)
-							var10 = '\ufffd';
+				int c;
+				for (final int var8 = len + start; caret < var8; chars[count++] = (char) c) {
+					final int unsigned = src[caret++] & 255;
+					if (unsigned < 128) {
+						if (unsigned == 0)
+							c = '\ufffd';
 						else
-							var10 = var9;
-					} else if (var9 < 192)
-						var10 = '\ufffd';
-					else if (var9 < 224) {
-						if ((var7 < var8) && ((var3[var7] & 192) == 128)) {
-							var10 = ((var9 & 31) << 6) | (var3[var7++] & 63);
-							if (var10 < 128)
-								var10 = '\ufffd';
+							c = unsigned;
+					} else if (unsigned < 192)
+						c = '\ufffd';
+					else if (unsigned < 224) {
+						if ((caret < var8) && ((src[caret] & 192) == 128)) {
+							c = ((unsigned & 31) << 6) | (src[caret++] & 63);
+							if (c < 128)
+								c = '\ufffd';
 						} else
-							var10 = '\ufffd';
-					} else if (var9 < 240) {
-						if (((1 + var7) < var8) && ((var3[var7] & 192) == 128) && ((var3[1 + var7] & 192) == 128)) {
-							var10 = ((var9 & 15) << 12) | ((var3[var7++] & 63) << 6) | (var3[var7++] & 63);
-							if (var10 < 2048)
-								var10 = '\ufffd';
+							c = '\ufffd';
+					} else if (unsigned < 240) {
+						if (((1 + caret) < var8) && ((src[caret] & 192) == 128) && ((src[1 + caret] & 192) == 128)) {
+							c = ((unsigned & 15) << 12) | ((src[caret++] & 63) << 6) | (src[caret++] & 63);
+							if (c < 2048)
+								c = '\ufffd';
 						} else
-							var10 = '\ufffd';
-					} else if (var9 < 248) {
-						if (((2 + var7) < var8) && ((var3[var7] & 192) == 128) && ((var3[var7 + 1] & 192) == 128)
-								&& ((var3[2 + var7] & 192) == 128)) {
-							var10 = ((var9 & 7) << 18) | ((var3[var7++] & 63) << 12) | ((var3[var7++] & 63) << 6)
-									| (var3[var7++] & 63);
-							if ((var10 >= 65536) && (var10 <= 1114111))
-								var10 = '\ufffd';
+							c = '\ufffd';
+					} else if (unsigned < 248) {
+						if (((2 + caret) < var8) && ((src[caret] & 192) == 128) && ((src[caret + 1] & 192) == 128)
+								&& ((src[2 + caret] & 192) == 128)) {
+							c = ((unsigned & 7) << 18) | ((src[caret++] & 63) << 12) | ((src[caret++] & 63) << 6)
+									| (src[caret++] & 63);
+							if ((c >= 65536) && (c <= 1114111))
+								c = '\ufffd';
 							else
-								var10 = '\ufffd';
+								c = '\ufffd';
 						} else
-							var10 = '\ufffd';
+							c = '\ufffd';
 					} else
-						var10 = '\ufffd';
+						c = '\ufffd';
 				}
 
-				final String var11 = new String(var5, 0, var6);
-				pos += var2;
-				return var11;
+				final String r = new String(chars, 0, count);
+				pos += len;
+				return r;
 			}
 		}
 	}
@@ -221,20 +221,20 @@ public class RSBuf extends Class104 {
 		appendBytes(var7, 0, var7.length);
 	}
 
-	public int method583(final int var1) {
-		final byte[] var2 = backing;
-		final int var3 = pos;
-		int var4 = -1;
+	public int writeAndGetHeader(final int start) {
+		final byte[] src = backing;
+		final int end = pos;
+		int v = -1;
 
-		for (int var5 = var1; var5 < var3; ++var5)
-			var4 = (var4 >>> 8) ^ SHIFTS[(var4 ^ var2[var5]) & 255];
+		for (int var5 = start; var5 < end; ++var5)
+			v = (v >>> 8) ^ SHIFTS[(v ^ src[var5]) & 255];
 
-		var4 = ~var4;
-		writeInt(var4);
-		return var4;
+		v = ~v;
+		writeInt(v);
+		return v;
 	}
 
-	public void method584(final int var1) {
+	public void writeByteN(final int var1) {
 		backing[++pos - 1] = (byte) (0 - var1);
 	}
 
@@ -242,11 +242,11 @@ public class RSBuf extends Class104 {
 		backing[++pos - 1] = (byte) (var1 + 128);
 	}
 
-	public void method586(final int var1) {
+	public void writeByteS(final int var1) {
 		backing[++pos - 1] = (byte) (128 - var1);
 	}
 
-	public void method587(final int var1) {
+	public void writeTribyte(final int var1) {
 		backing[++pos - 1] = (byte) (var1 >> 16);
 		backing[++pos - 1] = (byte) (var1 >> 8);
 		backing[++pos - 1] = (byte) var1;
@@ -279,17 +279,17 @@ public class RSBuf extends Class104 {
 		return (backing[pos - 2] & 255) + ((backing[pos - 1] & 255) << 8);
 	}
 
-	public int method594() {
+	public int readUShortA() {
 		pos += 2;
 		return ((backing[pos - 1] - 128) & 255) + ((backing[pos - 2] & 255) << 8);
 	}
 
-	public int readShortN() {
+	public int readLEShortA() {
 		pos += 2;
 		return ((backing[pos - 2] - 128) & 255) + ((backing[pos - 1] & 255) << 8);
 	}
 
-	public int method596() {
+	public int readUShortLE() {
 		pos += 2;
 		int var1 = ((backing[pos - 1] - 128) & 255) + ((backing[pos - 2] & 255) << 8);
 		if (var1 > 32767)
@@ -298,7 +298,7 @@ public class RSBuf extends Class104 {
 		return var1;
 	}
 
-	public int method597() {
+	public int readULEShortA() {
 		pos += 2;
 		int var1 = ((backing[pos - 1] & 255) << 8) + ((backing[pos - 2] - 128) & 255);
 		if (var1 > 32767)
@@ -307,7 +307,7 @@ public class RSBuf extends Class104 {
 		return var1;
 	}
 
-	public void method598(final int var1) {
+	public void writeLEInt(final int var1) {
 		backing[++pos - 1] = (byte) var1;
 		backing[++pos - 1] = (byte) (var1 >> 8);
 		backing[++pos - 1] = (byte) (var1 >> 16);
@@ -403,7 +403,7 @@ public class RSBuf extends Class104 {
 		backing[++pos - 1] = (byte) (var1 >> 8);
 	}
 
-	public int readByteN() {
+	public int readUByteN() {
 		return (0 - backing[++pos - 1]) & 255;
 	}
 
@@ -438,7 +438,7 @@ public class RSBuf extends Class104 {
 		return var1;
 	}
 
-	public void writeLEIntA(final int var1) {
+	public void writeIntV1(final int var1) {
 		backing[++pos - 1] = (byte) (var1 >> 8);
 		backing[++pos - 1] = (byte) var1;
 		backing[++pos - 1] = (byte) (var1 >> 24);
@@ -476,9 +476,9 @@ public class RSBuf extends Class104 {
 		}
 	}
 
-	public void method617(final byte[] var1, final int var2, final int var3) {
-		for (int var4 = (var3 + var2) - 1; var4 >= var2; --var4)
-			var1[var4] = backing[++pos - 1];
+	public void writeIntoReverse(final byte[] to, final int start, final int size) {
+		for (int var4 = (size + start) - 1; var4 >= start; --var4)
+			to[var4] = backing[++pos - 1];
 
 	}
 

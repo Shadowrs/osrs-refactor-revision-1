@@ -133,11 +133,11 @@ public class Class53 {
 			int var9;
 			if (var8 == 0)
 				for (var9 = 0; var9 < var6; ++var9)
-					var7[var9] = var1.method565();
+					var7[var9] = var1.readByte();
 			else if (var8 == 1)
 				for (var9 = 0; var9 < var4; ++var9)
 					for (int var10 = 0; var10 < var5; ++var10)
-						var7[(var10 * var4) + var9] = var1.method565();
+						var7[(var10 * var4) + var9] = var1.readByte();
 		}
 
 	}
@@ -145,7 +145,7 @@ public class Class53 {
 	static final void method235(final String var0, final boolean var1) {
 		if (var0 != null)
 			if (client.anInt2045 >= 100)
-				Class15.method60(0, "", "Your ignore list is full. Max of 100 users.");
+				Class15.chat(0, "", "Your ignore list is full. Max of 100 users.");
 			else {
 				final String var2 = Class33.method155(var0, Class2.aClass101_8);
 				if (var2 != null) {
@@ -156,14 +156,14 @@ public class Class53 {
 						final Class78 var4 = client.aClass78Array2046[var3];
 						var5 = Class33.method155(var4.aString625, Class2.aClass101_8);
 						if ((null != var5) && var5.equals(var2)) {
-							Class15.method60(0, "", var0 + " is already on your ignore list");
+							Class15.chat(0, "", var0 + " is already on your ignore list");
 							return;
 						}
 
 						if (null != var4.aString624) {
 							var6 = Class33.method155(var4.aString624, Class2.aClass101_8);
 							if ((null != var6) && var6.equals(var2)) {
-								Class15.method60(0, "", var0 + " is already on your ignore list");
+								Class15.chat(0, "", var0 + " is already on your ignore list");
 								return;
 							}
 						}
@@ -173,26 +173,26 @@ public class Class53 {
 						final Class86 var7 = client.aClass86Array1972[var3];
 						var5 = Class33.method155(var7.aString675, Class2.aClass101_8);
 						if ((null != var5) && var5.equals(var2)) {
-							Class15.method60(0, "", "Please remove " + var0 + " from your friend list first");
+							Class15.chat(0, "", "Please remove " + var0 + " from your friend list first");
 							return;
 						}
 
 						if (null != var7.aString679) {
 							var6 = Class33.method155(var7.aString679, Class2.aClass101_8);
 							if ((null != var6) && var6.equals(var2)) {
-								Class15.method60(0, "", "Please remove " + var0 + " from your friend list first");
+								Class15.chat(0, "", "Please remove " + var0 + " from your friend list first");
 								return;
 							}
 						}
 					}
 
-					if (Class33.method155(Class81.pf.aString1780, Class2.aClass101_8)
+					if (Class33.method155(Class81.activePlayer.myName, Class2.aClass101_8)
 							.equals(var2))
-						Class15.method60(0, "", "You can\'t add yourself to your own ignore list");
+						Class15.chat(0, "", "You can\'t add yourself to your own ignore list");
 					else {
 						client.secureBuf.putOpcode(231); // add ignore packet
 						client.secureBuf.writebyte(GameBuf.lengthOf(var0));
-						client.secureBuf.writeString(var0);
+						client.secureBuf.writeCompactedString(var0);
 					}
 				}
 			}

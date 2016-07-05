@@ -104,14 +104,14 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 				final int var0 = client.gamecon.readbits(15);
 				if (var0 != 32767) {
 					boolean var1 = false;
-					if (null == client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0]) {
-						client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0] = new Class104_Sub18_Sub16_Sub7_Sub2();
+					if (null == client.localNpcs[var0]) {
+						client.localNpcs[var0] = new Class104_Sub18_Sub16_Sub7_Sub2();
 						var1 = true;
 					}
 
-					final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0];
-					client.anIntArray1830[++client.anInt1832 - 1] = var0;
-					var2.anInt1739 = client.anInt1799;
+					final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.localNpcs[var0];
+					client.localNpcIndicies[++client.localNpcSize - 1] = var0;
+					var2.anInt1739 = client.currentTime;
 					final int var3 = client.anIntArray1817[client.gamecon.readbits(3)];
 					if (var1)
 						var2.anInt1698 = var2.anInt1725 = var3;
@@ -135,15 +135,15 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 					if (var2.anInt1740 == 0)
 						var2.anInt1725 = 0;
 
-					var2.anInt1701 = var2.aClass104_Sub18_Sub2_1788.anInt1236;
-					var2.anInt1743 = var2.aClass104_Sub18_Sub2_1788.anInt1237;
-					var2.anInt1703 = var2.aClass104_Sub18_Sub2_1788.anInt1251;
-					var2.anInt1704 = var2.aClass104_Sub18_Sub2_1788.anInt1239;
-					var2.anInt1702 = var2.aClass104_Sub18_Sub2_1788.anInt1233;
-					var2.anInt1699 = var2.aClass104_Sub18_Sub2_1788.anInt1244;
-					var2.anInt1700 = var2.aClass104_Sub18_Sub2_1788.anInt1235;
-					var2.placeEntity(Class81.pf.stepx[0] + var7,
-							Class81.pf.stepy[0] + var4, var6 == 1);
+					var2.walkAnim = var2.aClass104_Sub18_Sub2_1788.anInt1236;
+					var2.turn180 = var2.aClass104_Sub18_Sub2_1788.anInt1237;
+					var2.turn90c = var2.aClass104_Sub18_Sub2_1788.anInt1251;
+					var2.turn90cc = var2.aClass104_Sub18_Sub2_1788.anInt1239;
+					var2.stand = var2.aClass104_Sub18_Sub2_1788.anInt1233;
+					var2.turn = var2.aClass104_Sub18_Sub2_1788.anInt1244;
+					var2.walk = var2.aClass104_Sub18_Sub2_1788.anInt1235;
+					var2.placeEntity(Class81.activePlayer.stepx[0] + var7,
+							Class81.activePlayer.stepy[0] + var4, var6 == 1);
 					continue;
 				}
 			}
@@ -156,27 +156,27 @@ public final class Class2_Sub2 extends Class2 implements ImageProducer, ImageObs
 	static final void method484() {
 		int var0;
 		int var1;
-		for (var0 = -1; var0 < client.toUpdate; ++var0) {
+		for (var0 = -1; var0 < client.localPlrSize; ++var0) {
 			if (var0 == -1)
 				var1 = 2047;
 			else
 				var1 = client.localPlayerIndexs[var0];
 
-			final Player var2 = client.localNpcs[var1];
+			final Player var2 = client.localPlayers[var1];
 			if ((null != var2) && (var2.anInt1713 > 0)) {
 				--var2.anInt1713;
 				if (var2.anInt1713 == 0)
-					var2.aString1723 = null;
+					var2.forceChat = null;
 			}
 		}
 
-		for (var0 = 0; var0 < client.anInt1832; ++var0) {
-			var1 = client.anIntArray1830[var0];
-			final Class104_Sub18_Sub16_Sub7_Sub2 var3 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var1];
+		for (var0 = 0; var0 < client.localNpcSize; ++var0) {
+			var1 = client.localNpcIndicies[var0];
+			final Class104_Sub18_Sub16_Sub7_Sub2 var3 = client.localNpcs[var1];
 			if ((var3 != null) && (var3.anInt1713 > 0)) {
 				--var3.anInt1713;
 				if (var3.anInt1713 == 0)
-					var3.aString1723 = null;
+					var3.forceChat = null;
 			}
 		}
 

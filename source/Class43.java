@@ -74,7 +74,7 @@ public final class Class43 {
 								buf.writeLong(((Number) var12).longValue());
 							} else if (var12 instanceof String) {
 								buf.writebyte(2);
-								buf.writeString((String) var12);
+								buf.writeCompactedString((String) var12);
 							} else
 								buf.writebyte(4);
 						}
@@ -104,7 +104,7 @@ public final class Class43 {
 						buf.writebyte(-21);
 					}
 
-			buf.method583(var3);
+			buf.writeAndGetHeader(var3);
 			buf.method613(buf.pos - var3);
 			var2.method470();
 		}
@@ -165,7 +165,7 @@ public final class Class43 {
 		}
 	}
 
-	static final void method188(final int var0, final String var1, final String var2, final String var3) {
+	static final void setChat(final int id, final String s1, final String s2, final String empty) {
 		for (int var4 = 99; var4 > 0; --var4) {
 			client.anIntArray1998[var4] = client.anIntArray1998[var4 - 1];
 			client.aStringArray1912[var4] = client.aStringArray1912[var4 - 1];
@@ -173,10 +173,10 @@ public final class Class43 {
 			client.aStringArray2025[var4] = client.aStringArray2025[var4 - 1];
 		}
 
-		client.anIntArray1998[0] = var0;
-		client.aStringArray1912[0] = var1;
-		client.aStringArray2001[0] = var2;
-		client.aStringArray2025[0] = var3;
+		client.anIntArray1998[0] = id;
+		client.aStringArray1912[0] = s1;
+		client.aStringArray2001[0] = s2;
+		client.aStringArray2025[0] = empty;
 		++client.anInt2000;
 		client.anInt1977 = client.anInt1978;
 	}

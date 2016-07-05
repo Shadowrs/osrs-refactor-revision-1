@@ -13,16 +13,16 @@ public class Class104_Sub16 extends Class104 {
 
 	static final void method551(final int var0, final int var1) {
 		if (client.anInt1898 == 1)
-			Class104_Sub15.aClass104_Sub18_Sub17_Sub1Array1123[client.anInt1897 / 100].method841(client.anInt1895 - 8,
+			Class104_Sub15.aClass104_Sub18_Sub17_Sub1Array1123[client.anInt1897 / 100].draw(client.anInt1895 - 8,
 					client.anInt1896 - 8);
 
 		if (client.anInt1898 == 2)
 			Class104_Sub15.aClass104_Sub18_Sub17_Sub1Array1123[(client.anInt1897 / 100) + 4]
-					.method841(client.anInt1895 - 8, client.anInt1896 - 8);
+					.draw(client.anInt1895 - 8, client.anInt1896 - 8);
 
 		client.anInt1906 = 0;
-		int var2 = Class53.anInt436 + (Class81.pf.anInt1695 >> 7);
-		int var3 = Class20.anInt206 + (Class81.pf.anInt1694 >> 7);
+		int var2 = Class53.anInt436 + (Class81.activePlayer.anInt1695 >> 7);
+		int var3 = Class20.anInt206 + (Class81.activePlayer.anInt1694 >> 7);
 		if ((var2 >= 3053) && (var2 <= 3156) && (var3 >= 3056) && (var3 <= 3136))
 			client.anInt1906 = 1;
 

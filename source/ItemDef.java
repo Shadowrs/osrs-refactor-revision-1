@@ -37,7 +37,7 @@ public class ItemDef extends Class104_Sub18 {
 	int anInt1439 = 128;
 	public int anInt1455 = 0;
 	public int anInt1456 = 0;
-	public int anInt1420 = 0;
+	public int looksConfig = 0;
 	public static Class56 aClass56_1415 = new Class56(64);
 	public static Class56 aClass56_1416 = new Class56(50);
 	public static Class56 aClass56_1417 = new Class56(100);
@@ -152,11 +152,11 @@ public class ItemDef extends Class104_Sub18 {
 			else if (var2 == 112)
 				anInt1439 = var1.readLEShort();
 			else if (var2 == 113)
-				anInt1455 = var1.method565();
+				anInt1455 = var1.readByte();
 			else if (var2 == 114)
-				anInt1456 = var1.method565() * 5;
+				anInt1456 = var1.readByte() * 5;
 			else if (var2 == 115)
-				anInt1420 = var1.readUByte();
+				looksConfig = var1.readUByte();
 		}
 
 	}

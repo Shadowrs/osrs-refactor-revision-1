@@ -227,7 +227,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.secureBuf.writeInt(issackeys[2]);
 				client.secureBuf.writeInt(issackeys[3]);
 				client.secureBuf.writeLong(0L);
-				client.secureBuf.writeString(Class66.aString522);
+				client.secureBuf.writeCompactedString(Class66.aString522);
 				client.secureBuf.doRSA(Class60.aBigInteger476, Class60.aBigInteger477);
 				client.loginbuf.pos = 0;
 				if (client.loadstage == 40)
@@ -240,7 +240,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeInt(1); // CLIENT REVISION  - rev 1
 				client.loginbuf.appendBytes(client.secureBuf.backing, 0, client.secureBuf.pos);
 				final int var3 = client.loginbuf.pos;
-				client.loginbuf.writeString(Class66.aString543);
+				client.loginbuf.writeCompactedString(Class66.aString543);
 				client.loginbuf.writebyte(client.lowmvm ? 1 : 0);
 				Class76.method343(client.loginbuf);
 				client.loginbuf.writeInt(Class27.aClass61_Sub1_263.anInt489);
@@ -293,13 +293,13 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 						client.anInt2021 = 0;
 						client.anInt2018 = 0;
 
+						for (var2 = 0; var2 < client.localPlayers.length; ++var2)
+							if (client.localPlayers[var2] != null)
+								client.localPlayers[var2].anInt1716 = -1;
+
 						for (var2 = 0; var2 < client.localNpcs.length; ++var2)
 							if (client.localNpcs[var2] != null)
 								client.localNpcs[var2].anInt1716 = -1;
-
-						for (var2 = 0; var2 < client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828.length; ++var2)
-							if (client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var2] != null)
-								client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var2].anInt1716 = -1;
 
 						Class104_Sub2.aClass58_857 = new Class58(32);
 						Class10.method40(30);

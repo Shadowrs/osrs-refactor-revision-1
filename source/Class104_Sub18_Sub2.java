@@ -224,9 +224,9 @@ public class Class104_Sub18_Sub2 extends Class104_Sub18 {
 		else if (var2 == 99)
 			aBool1247 = true;
 		else if (var2 == 100)
-			anInt1250 = var1.method565();
+			anInt1250 = var1.readByte();
 		else if (var2 == 101)
-			anInt1226 = var1.method565() * 5;
+			anInt1226 = var1.readByte() * 5;
 		else if (var2 == 102)
 			anInt1252 = var1.readLEShort();
 		else if (var2 == 103)

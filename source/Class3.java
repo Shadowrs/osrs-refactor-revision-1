@@ -2,7 +2,7 @@ import java.awt.Component;
 import java.net.URL;
 
 public abstract class Class3 {
-	static Class104_Sub18_Sub17_Sub1 aClass104_Sub18_Sub17_Sub1_10;
+	static Sprite aClass104_Sub18_Sub17_Sub1_10;
 
 	public abstract void method23(Component var1, int var2);
 
@@ -29,7 +29,7 @@ public abstract class Class3 {
 						var3.aBool464 = (var4 & '\u8000') != 0;
 						var3.aString459 = var1.readString();
 						var3.anInt462 = var1.readUByte();
-						var3.anInt460 = var1.method572();
+						var3.anInt460 = var1.readUShort();
 					}
 
 					Class33.method159(FSManager.aClass57Array758, 0, FSManager.aClass57Array758.length - 1,

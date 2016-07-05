@@ -12,7 +12,7 @@ public class Class104_Sub18_Sub16_Sub1 extends Class104_Sub18_Sub16 {
 	@Override
 	final Class104_Sub18_Sub16_Sub4 method788(final int var1) {
 		if (aClass104_Sub18_Sub3_1486 != null) {
-			int var2 = client.anInt1799 - anInt1480;
+			int var2 = client.currentTime - anInt1480;
 			if ((var2 > 100) && (aClass104_Sub18_Sub3_1486.anInt1266 > 0))
 				var2 = 100;
 
@@ -32,7 +32,7 @@ public class Class104_Sub18_Sub16_Sub1 extends Class104_Sub18_Sub16 {
 				aClass104_Sub18_Sub3_1486 = null;
 			}
 
-			anInt1480 = client.anInt1799 - var2;
+			anInt1480 = client.currentTime - var2;
 		}
 
 		ObjectDefinition var3 = ItemDef.forId(anInt1488);
@@ -76,7 +76,7 @@ public class Class104_Sub18_Sub16_Sub1 extends Class104_Sub18_Sub16 {
 		if (var7 != -1) {
 			aClass104_Sub18_Sub3_1486 = Class70.forId(var7);
 			anInt1487 = 0;
-			anInt1480 = client.anInt1799 - 1;
+			anInt1480 = client.currentTime - 1;
 			if ((aClass104_Sub18_Sub3_1486.anInt1275 == 0) && (null != var9)
 					&& (var9 instanceof Class104_Sub18_Sub16_Sub1)) {
 				final Class104_Sub18_Sub16_Sub1 var10 = (Class104_Sub18_Sub16_Sub1) var9;

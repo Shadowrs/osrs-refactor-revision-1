@@ -120,7 +120,7 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 	}
 
 	static final void method734(final Class104_Sub18_Sub16_Sub7 var0) {
-		var0.anInt1719 = var0.anInt1702;
+		var0.anInt1719 = var0.stand;
 		if (var0.anInt1744 == 0)
 			var0.anInt1748 = 0;
 		else {
@@ -166,16 +166,16 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 				if (var6 > 1024)
 					var6 -= 2048;
 
-				int var7 = var0.anInt1743;
+				int var7 = var0.turn180;
 				if ((var6 >= -256) && (var6 <= 256))
-					var7 = var0.anInt1701;
+					var7 = var0.walkAnim;
 				else if ((var6 >= 256) && (var6 < 768))
-					var7 = var0.anInt1704;
+					var7 = var0.turn90cc;
 				else if ((var6 >= -768) && (var6 <= -256))
-					var7 = var0.anInt1703;
+					var7 = var0.turn90c;
 
 				if (var7 == -1)
-					var7 = var0.anInt1701;
+					var7 = var0.walkAnim;
 
 				var0.anInt1719 = var7;
 				int var8 = 4;
@@ -213,8 +213,8 @@ public class Class104_Sub18_Sub5 extends Class104_Sub18 {
 				if (var0.aBoolArray1747[var0.anInt1744 - 1])
 					var8 <<= 1;
 
-				if ((var8 >= 8) && (var0.anInt1701 == var0.anInt1719) && (var0.anInt1705 != -1))
-					var0.anInt1719 = var0.anInt1705;
+				if ((var8 >= 8) && (var0.walkAnim == var0.anInt1719) && (var0.runAnim != -1))
+					var0.anInt1719 = var0.runAnim;
 
 				if (var2 < var4) {
 					var0.anInt1695 += var8;

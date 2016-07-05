@@ -155,7 +155,7 @@ public class Class84 {
 			try {
 				final RSBuf var1 = new RSBuf(4);
 				var1.writebyte(var0 ? 2 : 3);
-				var1.method587(0);
+				var1.writeTribyte(0);
 				Class66.aClass13_547.flushbytes(var1.backing, 0, 4);
 			} catch (final IOException var4) {
 				try {
@@ -184,11 +184,11 @@ public class Class84 {
 					var6 = ((client.anInt1921 + 256) * var6) >> 8;
 					final int var7 = ((var3 * var5) + (var2 * var6)) >> 11;
 					final int var8 = ((var3 * var6) - (var2 * var5)) >> 11;
-					final int var9 = (var7 + Class81.pf.anInt1695) >> 7;
-					final int var10 = (Class81.pf.anInt1694 - var8) >> 7;
+					final int var9 = (var7 + Class81.activePlayer.anInt1695) >> 7;
+					final int var10 = (Class81.activePlayer.anInt1694 - var8) >> 7;
 					final boolean var11 = Class104_Sub13.method543(
-							Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var9, var10, true, 0, 0, 0,
+							Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var9, var10, true, 0, 0, 0,
 							0, 0, 1);
 					if (var11) {
 						client.secureBuf.writebyte(var2);
@@ -199,9 +199,9 @@ public class Class84 {
 						client.secureBuf.writebyte(client.anInt1921);
 						client.secureBuf.writebyte(89);
 						client.secureBuf
-								.writeShort(Class81.pf.anInt1695);
+								.writeShort(Class81.activePlayer.anInt1695);
 						client.secureBuf
-								.writeShort(Class81.pf.anInt1694);
+								.writeShort(Class81.activePlayer.anInt1694);
 						client.secureBuf.writebyte(client.anInt1850);
 						client.secureBuf.writebyte(63);
 					}
@@ -232,11 +232,11 @@ public class Class84 {
 				var0.anInt1719 = -1;
 		}
 
-		if ((var0.anInt1727 != -1) && (client.anInt1799 >= var0.anInt1730)) {
+		if ((var0.gfxId != -1) && (client.currentTime >= var0.gfxDelay)) {
 			if (var0.anInt1728 < 0)
 				var0.anInt1728 = 0;
 
-			final int var2 = Class71.method330(var0.anInt1727).anInt1316;
+			final int var2 = Class71.method330(var0.gfxId).anInt1316;
 			if (var2 != -1) {
 				final Def var3 = Class70.forId(var2);
 				if ((var3 != null) && (var3.anIntArray1262 != null)) {
@@ -250,17 +250,17 @@ public class Class84 {
 
 					if ((var0.anInt1728 >= var3.anIntArray1262.length)
 							&& ((var0.anInt1728 < 0) || (var0.anInt1728 >= var3.anIntArray1262.length)))
-						var0.anInt1727 = -1;
+						var0.gfxId = -1;
 				} else
-					var0.anInt1727 = -1;
+					var0.gfxId = -1;
 			} else
-				var0.anInt1727 = -1;
+				var0.gfxId = -1;
 		}
 
 		if ((var0.anInt1722 != -1) && (var0.anInt1707 <= 1)) {
 			var1 = Class70.forId(var0.anInt1722);
-			if ((var1.anInt1273 == 1) && (var0.anInt1735 > 0) && (var0.anInt1708 <= client.anInt1799)
-					&& (var0.anInt1737 < client.anInt1799)) {
+			if ((var1.anInt1273 == 1) && (var0.anInt1735 > 0) && (var0.anInt1708 <= client.currentTime)
+					&& (var0.anInt1737 < client.currentTime)) {
 				var0.anInt1707 = 1;
 				return;
 			}

@@ -16,25 +16,25 @@ public class Class91 {
 
 	}
 
-	public static int method410(final byte[] var0, final int var1, final CharSequence var2) {
-		final int var3 = var2.length();
-		int var4 = var1;
+	public static int writeCompactStrBytes(final byte[] src, final int start, final CharSequence seq) {
+		final int len = seq.length();
+		int caret = start;
 
-		for (int var5 = 0; var5 < var3; ++var5) {
-			final char var6 = var2.charAt(var5);
-			if (var6 <= 127)
-				var0[var4++] = (byte) var6;
-			else if (var6 <= 2047) {
-				var0[var4++] = (byte) (192 | (var6 >> 6));
-				var0[var4++] = (byte) (128 | (var6 & 63));
+		for (int i = 0; i < len; ++i) {
+			final char c = seq.charAt(i);
+			if (c <= 127)
+				src[caret++] = (byte) c;
+			else if (c <= 2047) {
+				src[caret++] = (byte) (192 | (c >> 6));
+				src[caret++] = (byte) (128 | (c & 63));
 			} else {
-				var0[var4++] = (byte) (224 | (var6 >> 12));
-				var0[var4++] = (byte) (128 | ((var6 >> 6) & 63));
-				var0[var4++] = (byte) (128 | (var6 & 63));
+				src[caret++] = (byte) (224 | (c >> 12));
+				src[caret++] = (byte) (128 | ((c >> 6) & 63));
+				src[caret++] = (byte) (128 | (c & 63));
 			}
 		}
 
-		return var4 - var1;
+		return caret - start;
 	}
 
 	public static void method411(final Component var0) {

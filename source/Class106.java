@@ -36,7 +36,7 @@ public class Class106 {
 				}
 
 				if (var7 <= 49) {
-					Class76.aByteArrayArrayArray602[var1][var2][var3] = var0.method565();
+					Class76.aByteArrayArrayArray602[var1][var2][var3] = var0.readByte();
 					Class76.aByteArrayArrayArray609[var1][var2][var3] = (byte) ((var7 - 2) / 4);
 					Class76.aByteArrayArrayArray604[var1][var2][var3] = (byte) (((var7 - 2) + var6) & 3);
 				} else if (var7 <= 81)

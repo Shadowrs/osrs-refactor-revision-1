@@ -74,7 +74,7 @@ public class Class19 {
 			int var9;
 			int var11;
 			for (var9 = 0; var9 < '\u8000'; ++var9) {
-				final Class104_Sub18_Sub16_Sub7_Sub2 var10 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var9];
+				final Class104_Sub18_Sub16_Sub7_Sub2 var10 = client.localNpcs[var9];
 				if (var10 != null) {
 					for (var11 = 0; var11 < 10; ++var11) {
 						var10.stepx[var11] -= var7;
@@ -87,7 +87,7 @@ public class Class19 {
 			}
 
 			for (var9 = 0; var9 < 2048; ++var9) {
-				final Player var23 = client.localNpcs[var9];
+				final Player var23 = client.localPlayers[var9];
 				if (null != var23) {
 					for (var11 = 0; var11 < 10; ++var11) {
 						var23.stepx[var11] -= var7;
@@ -100,7 +100,7 @@ public class Class19 {
 			}
 
 			Class12.myplayerHeight = var2;
-			Class81.pf.placeEntity(var3, var4, false);
+			Class81.activePlayer.placeEntity(var3, var4, false);
 			byte var22 = 0;
 			byte var12 = 104;
 			byte var24 = 1;

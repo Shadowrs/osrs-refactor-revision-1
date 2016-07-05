@@ -6,7 +6,7 @@ import java.net.URL;
 
 public class Class70 {
 	static byte[][] landscapedata;
-	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array575;
+	static Sprite[] prayers;
 	DataInputStream aDataInputStream568;
 	int anInt567;
 	int anInt570;
@@ -104,9 +104,9 @@ public class Class70 {
 					if (var10 == 1)
 						var5 = var8.method616();
 				} else {
-					dir = var8.method581();
+					dir = var8.readStr();
 					if (var10 == 1)
-						var5 = var8.method581();
+						var5 = var8.readStr();
 				}
 
 				var7.close();
@@ -209,7 +209,7 @@ public class Class70 {
 				final RSBuf var31 = new RSBuf(500);
 				var31.writebyte(3);
 				var31.writebyte(null != var8 ? 1 : 0);
-				var31.method564(var26.getPath());
+				var31.writeSpecialString(var26.getPath());
 				var33.method417(var31.backing, 0, var31.pos);
 				var33.close();
 			} catch (final IOException var21) {

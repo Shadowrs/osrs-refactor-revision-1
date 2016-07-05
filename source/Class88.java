@@ -182,10 +182,10 @@ public class Class88 {
 		}
 	}
 
-	public static Class104_Sub18_Sub17_Sub1 method402(final Class61 var0, final String var1, final String var2) {
+	public static Sprite method402(final Class61 var0, final String var1, final String var2) {
 		final int var3 = var0.getArchiveIDForName(var1);
 		final int var4 = var0.method273(var3, var2);
-		Class104_Sub18_Sub17_Sub1 var5;
+		Sprite var5;
 		if (!Class39.method181(var0, var3, var4))
 			var5 = null;
 		else
@@ -220,31 +220,31 @@ public class Class88 {
 	static final void method405() {
 		for (Class104_Sub18_Sub16_Sub2 var0 = (Class104_Sub18_Sub16_Sub2) client.aClass59_1923
 				.method251(); null != var0; var0 = (Class104_Sub18_Sub16_Sub2) client.aClass59_1923.method252())
-			if ((var0.anInt1506 == Class12.myplayerHeight) && (client.anInt1799 <= var0.anInt1496)) {
-				if (client.anInt1799 >= var0.anInt1495) {
+			if ((var0.anInt1506 == Class12.myplayerHeight) && (client.currentTime <= var0.anInt1496)) {
+				if (client.currentTime >= var0.anInt1495) {
 					if (var0.anInt1505 > 0) {
-						final Class104_Sub18_Sub16_Sub7_Sub2 var1 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0.anInt1505
+						final Class104_Sub18_Sub16_Sub7_Sub2 var1 = client.localNpcs[var0.anInt1505
 								- 1];
 						if ((var1 != null) && (var1.anInt1695 >= 0) && (var1.anInt1695 < 13312) && (var1.anInt1694 >= 0)
 								&& (var1.anInt1694 < 13312))
 							var0.method808(var1.anInt1695, var1.anInt1694,
 									Class47.method211(var1.anInt1695, var1.anInt1694, var0.anInt1506) - var0.anInt1494,
-									client.anInt1799);
+									client.currentTime);
 					}
 
 					if (var0.anInt1505 < 0) {
 						final int var2 = -var0.anInt1505 - 1;
 						Player var3;
 						if (client.anInt1874 == var2)
-							var3 = Class81.pf;
+							var3 = Class81.activePlayer;
 						else
-							var3 = client.localNpcs[var2];
+							var3 = client.localPlayers[var2];
 
 						if ((var3 != null) && (var3.anInt1695 >= 0) && (var3.anInt1695 < 13312) && (var3.anInt1694 >= 0)
 								&& (var3.anInt1694 < 13312))
 							var0.method808(var3.anInt1695, var3.anInt1694,
 									Class47.method211(var3.anInt1695, var3.anInt1694, var0.anInt1506) - var0.anInt1494,
-									client.anInt1799);
+									client.currentTime);
 					}
 
 					var0.method807(client.anInt1867);

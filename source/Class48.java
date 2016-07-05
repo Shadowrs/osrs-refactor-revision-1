@@ -5,17 +5,17 @@ public class Class48 {
 	static Class104_Sub18_Sub17_Sub3[] aClass104_Sub18_Sub17_Sub3Array409;
 	static int[] anIntArray411;
 
-	public static Class104_Sub18_Sub17_Sub1[] method215(final Class61 var0, final String var1, final String var2) {
+	public static Sprite[] method215(final Class61 var0, final String var1, final String var2) {
 		final int var3 = var0.getArchiveIDForName(var1);
 		final int var4 = var0.method273(var3, var2);
-		Class104_Sub18_Sub17_Sub1[] var5;
+		Sprite[] var5;
 		if (!Class39.method181(var0, var3, var4))
 			var5 = null;
 		else {
-			final Class104_Sub18_Sub17_Sub1[] var6 = new Class104_Sub18_Sub17_Sub1[Class12.anInt67];
+			final Sprite[] var6 = new Sprite[Class12.anInt67];
 
 			for (int var7 = 0; var7 < Class12.anInt67; ++var7) {
-				final Class104_Sub18_Sub17_Sub1 var8 = var6[var7] = new Class104_Sub18_Sub17_Sub1();
+				final Sprite var8 = var6[var7] = new Sprite();
 				var8.anInt1590 = Class12.anInt72;
 				var8.anInt1591 = Class12.anInt69;
 				var8.anInt1589 = Class12.anIntArray70[var7];

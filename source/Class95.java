@@ -34,9 +34,9 @@ public class Class95 {
 				System.out.printf("region %d/%d xteas: "+Arrays.toString(Class13.xteakeys[var4])+" \n", (var4+1), count);
 			}
 
-			var4 = client.gamecon.readByteN(); // HEIGHT
+			var4 = client.gamecon.readUByteN(); // HEIGHT
 			cx = client.gamecon.readLEShort(); // C X
-			cz = client.gamecon.readShortN(); // C Y
+			cz = client.gamecon.readLEShortA(); // C Y
 			Class47.mapCoordinates = new int[count];
 			Class40.mapFileIds = new int[count];
 			Class75.landscapeFileIds = new int[count];
@@ -68,7 +68,7 @@ public class Class95 {
 			
 			Class19.method120(cx, cz, var4, var2, var1);
 		} else {
-			var1 = client.gamecon.readShortN();
+			var1 = client.gamecon.readLEShortA();
 			client.gamecon.initbits();
 
 			for (var2 = 0; var2 < 4; ++var2)
@@ -90,10 +90,10 @@ public class Class95 {
 				for (var4 = 0; var4 < 4; ++var4)
 					Class13.xteakeys[count][var4] = client.gamecon.readIntV1();
 
-			count = client.gamecon.readShortN();
-			var4 = client.gamecon.readByteN();
+			count = client.gamecon.readLEShortA();
+			var4 = client.gamecon.readUByteN();
 			cx = client.gamecon.readShort();
-			cz = client.gamecon.readShortN();
+			cz = client.gamecon.readLEShortA();
 			Class47.mapCoordinates = new int[var2];
 			Class40.mapFileIds = new int[var2];
 			Class75.landscapeFileIds = new int[var2];
@@ -161,12 +161,12 @@ public class Class95 {
 
 		} else if (var1 == 327) {
 			var0.anInt1043 = 150;
-			var0.anInt1019 = (int) (Math.sin(client.anInt1799 / 40.0D) * 256.0D) & 2047;
+			var0.anInt1019 = (int) (Math.sin(client.currentTime / 40.0D) * 256.0D) & 2047;
 			var0.anInt1010 = 5;
 			var0.anInt1011 = 0;
 		} else if (var1 == 328) {
 			var0.anInt1043 = 150;
-			var0.anInt1019 = (int) (Math.sin(client.anInt1799 / 40.0D) * 256.0D) & 2047;
+			var0.anInt1019 = (int) (Math.sin(client.currentTime / 40.0D) * 256.0D) & 2047;
 			var0.anInt1010 = 5;
 			var0.anInt1011 = 1;
 		}

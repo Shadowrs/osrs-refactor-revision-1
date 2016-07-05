@@ -156,7 +156,7 @@ public class Class11 implements Runnable {
 	}
 
 	static final void method49(final int var0, final int var1, final int var2, final int var3,
-			final Class104_Sub18_Sub17_Sub1 var4) {
+			final Sprite var4) {
 		final int var5 = (var3 * var3) + (var2 * var2);
 		if ((var5 > 4225) && (var5 < 90000)) {
 			final int var6 = (client.anInt1862 + client.anInt1866) & 2047;

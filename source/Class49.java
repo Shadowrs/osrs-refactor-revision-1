@@ -308,7 +308,7 @@ public class Class49 {
 						var3 = (Class104_Sub18_Sub13) Class87.aClass58_681.method245();
 						var4 = new RSBuf(4);
 						var4.writebyte(1);
-						var4.method587((int) var3.nodeId);
+						var4.writeTribyte((int) var3.nodeId);
 						Class66.aClass13_547.flushbytes(var4.backing, 0, 4);
 						Class87.aClass58_683.method242(var3, var3.nodeId);
 						--Class87.anInt682;
@@ -319,7 +319,7 @@ public class Class49 {
 						var3 = (Class104_Sub18_Sub13) Class87.aClass63_685.method293();
 						var4 = new RSBuf(4);
 						var4.writebyte(0);
-						var4.method587((int) var3.nodeId);
+						var4.writeTribyte((int) var3.nodeId);
 						Class66.aClass13_547.flushbytes(var4.backing, 0, 4);
 						var3.method555();
 						Class87.aClass58_694.method242(var3, var3.nodeId);

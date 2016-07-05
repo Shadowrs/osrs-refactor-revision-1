@@ -130,8 +130,8 @@ public class Widget extends Class104 {
 		anInt980 = var1.readUByte();
 		anInt981 = var1.readUByte();
 		anInt982 = var1.readLEShort();
-		anInt985 = anInt983 = var1.method572();
-		anInt975 = anInt1005 = var1.method572();
+		anInt985 = anInt983 = var1.readUShort();
+		anInt975 = anInt1005 = var1.readUShort();
 		anInt987 = var1.readLEShort();
 		anInt988 = var1.readLEShort();
 		anInt1000 = var1.readUByte();
@@ -215,8 +215,8 @@ public class Widget extends Class104 {
 			for (var8 = 0; var8 < 20; ++var8) {
 				final int var9 = var1.readUByte();
 				if (var9 == 1) {
-					anIntArray1049[var8] = var1.method572();
-					anIntArray1057[var8] = var1.method572();
+					anIntArray1049[var8] = var1.readUShort();
+					anIntArray1057[var8] = var1.readUShort();
 					anIntArray1035[var8] = var1.readLEInt();
 				} else
 					anIntArray1035[var8] = -1;
@@ -300,8 +300,8 @@ public class Widget extends Class104 {
 
 			aBool1030 = var1.readUByte() == 1;
 			anInt1017 = var1.readLEInt();
-			anInt1038 = var1.method572();
-			anInt1032 = var1.method572();
+			anInt1038 = var1.readUShort();
+			anInt1032 = var1.readUShort();
 			var4 = var1.readUByte();
 			if (var4 == 1)
 				anInt1037 |= 1073741824;
@@ -357,11 +357,11 @@ public class Widget extends Class104 {
 		isHeaderless = true;
 		anInt980 = var1.readUByte();
 		anInt982 = var1.readLEShort();
-		anInt985 = anInt983 = var1.method572();
-		anInt975 = anInt1005 = var1.method572();
+		anInt985 = anInt983 = var1.readUShort();
+		anInt975 = anInt1005 = var1.readUShort();
 		anInt987 = var1.readLEShort();
 		if (anInt980 == 9)
-			anInt988 = var1.method572();
+			anInt988 = var1.readUShort();
 		else
 			anInt988 = var1.readLEShort();
 
@@ -394,8 +394,8 @@ public class Widget extends Class104 {
 			if (anInt1011 == '\uffff')
 				anInt1011 = -1;
 
-			anInt1016 = var1.method572();
-			anInt993 = var1.method572();
+			anInt1016 = var1.readUShort();
+			anInt993 = var1.readUShort();
 			anInt1043 = var1.readLEShort();
 			anInt1019 = var1.readLEShort();
 			anInt1012 = var1.readLEShort();
@@ -591,19 +591,19 @@ public class Widget extends Class104 {
 		}
 	}
 
-	public Class104_Sub18_Sub17_Sub1 method533(final int var1, final int var2) {
+	public Sprite method533(final int var1, final int var2) {
 		aBool1065 = false;
 		if ((var1 >= 0) && (var1 < anIntArray1035.length)) {
 			final int var3 = anIntArray1035[var1];
 			if (var3 == -1)
 				return null;
 			else {
-				final Class104_Sub18_Sub17_Sub1 var4 = (Class104_Sub18_Sub17_Sub1) aClass56_973.method236(var3);
+				final Sprite var4 = (Sprite) aClass56_973.method236(var3);
 				if (var4 != null)
 					return var4;
 				else {
 					final Class61 var5 = Class1_Sub1.aClass61_837;
-					Class104_Sub18_Sub17_Sub1 var6;
+					Sprite var6;
 					if (!Class39.method181(var5, var3, 0))
 						var6 = null;
 					else
@@ -637,7 +637,7 @@ public class Widget extends Class104 {
 		}
 	}
 
-	public Class104_Sub18_Sub17_Sub1 method535(final boolean var1) {
+	public Sprite method535(final boolean var1) {
 		aBool1065 = false;
 		int var2;
 		if (var1)
@@ -650,12 +650,12 @@ public class Widget extends Class104 {
 		else {
 			final long var3 = ((long) anInt1007 << 40) + ((aBool1009 ? 1L : 0L) << 39) + ((aBool1044 ? 1L : 0L) << 38)
 					+ var2 + ((long) anInt1006 << 36);
-			final Class104_Sub18_Sub17_Sub1 var5 = (Class104_Sub18_Sub17_Sub1) aClass56_973.method236(var3);
+			final Sprite var5 = (Sprite) aClass56_973.method236(var3);
 			if (var5 != null)
 				return var5;
 			else {
 				final Class61 var6 = Class1_Sub1.aClass61_837;
-				Class104_Sub18_Sub17_Sub1 var7;
+				Sprite var7;
 				if (!Class39.method181(var6, var2, 0))
 					var7 = null;
 				else
@@ -704,14 +704,14 @@ public class Widget extends Class104 {
 	}
 
 	static final void method537() {
-		for (int var0 = -1; var0 < client.toUpdate; ++var0) {
+		for (int var0 = -1; var0 < client.localPlrSize; ++var0) {
 			int var1;
 			if (var0 == -1)
 				var1 = 2047;
 			else
 				var1 = client.localPlayerIndexs[var0];
 
-			final Player var2 = client.localNpcs[var1];
+			final Player var2 = client.localPlayers[var1];
 			if (var2 != null)
 				Class30.method144(var2);
 		}
@@ -1075,12 +1075,12 @@ public class Widget extends Class104 {
 
 	}
 
-	public static final Class104_Sub18_Sub17_Sub1 method539(final int var0, final int var1, final int var2,
+	public static final Sprite method539(final int var0, final int var1, final int var2,
 			final int var3, final boolean var4) {
 		final long var5 = ((long) var2 << 38) + var0 + ((long) var1 << 16) + ((long) var3 << 40);
-		Class104_Sub18_Sub17_Sub1 var7;
+		Sprite var7;
 		if (!var4) {
-			var7 = (Class104_Sub18_Sub17_Sub1) ItemDef.aClass56_1417.method236(var5);
+			var7 = (Sprite) ItemDef.aClass56_1417.method236(var5);
 			if (null != var7)
 				return var7;
 		}
@@ -1101,7 +1101,7 @@ public class Widget extends Class104 {
 		if (null == var11)
 			return null;
 		else {
-			Class104_Sub18_Sub17_Sub1 var12 = null;
+			Sprite var12 = null;
 			if (var8.anInt1433 != -1) {
 				var12 = method539(var8.anInt1442, 10, 1, 0, true);
 				if (var12 == null)
@@ -1113,7 +1113,7 @@ public class Widget extends Class104 {
 			final int var15 = Class104_Sub18_Sub17.anInt1468;
 			final int[] var16 = new int[4];
 			Class104_Sub18_Sub17.method793(var16);
-			var7 = new Class104_Sub18_Sub17_Sub1(36, 32);
+			var7 = new Sprite(36, 32);
 			Class104_Sub18_Sub17.method790(var7.anIntArray1592, 36, 32);
 			Class104_Sub18_Sub17.method794();
 			Class104_Sub18_Sub17_Sub4.method931();
@@ -1141,7 +1141,7 @@ public class Widget extends Class104 {
 
 			Class104_Sub18_Sub17.method790(var7.anIntArray1592, 36, 32);
 			if (var8.anInt1433 != -1)
-				var12.method841(0, 0);
+				var12.draw(0, 0);
 
 			if (!var4 && ((var8.anInt1431 == 1) || (var1 != 1)) && (var1 != -1))
 				client.aClass104_Sub18_Sub17_Sub2_Sub1_290.drawstr(Class27.method136(var1), 0, 9, 16776960, 1);

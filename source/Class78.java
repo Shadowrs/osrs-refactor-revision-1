@@ -17,10 +17,10 @@ public class Class78 {
 
 			Player var5;
 			if (var3 == 45) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -34,7 +34,7 @@ public class Class78 {
 			if (var3 == 35) {
 				client.secureBuf.putOpcode(76);
 				client.secureBuf.writeLEShort(var1);
-				client.secureBuf.writeLEIntA(var2);
+				client.secureBuf.writeIntV1(var2);
 				client.secureBuf.writeLEShort(var4);
 				client.anInt1899 = 0;
 				Class30.aClass104_Sub12_288 = Class47.method210(var2);
@@ -43,10 +43,10 @@ public class Class78 {
 
 			Class104_Sub18_Sub16_Sub7_Sub2 var11;
 			if (var3 == 8) {
-				var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
+				var11 = client.localNpcs[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var11.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var11.stepx[0],
 							var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -60,10 +60,10 @@ public class Class78 {
 			}
 
 			if (var3 == 51) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -103,7 +103,7 @@ public class Class78 {
 				client.secureBuf.writeShort(Class7.anInt44);
 				client.secureBuf.writeInt(var2);
 				client.secureBuf.writeLEShort(var1);
-				client.secureBuf.method598(Class14.anInt105);
+				client.secureBuf.writeLEInt(Class14.anInt105);
 				client.anInt1899 = 0;
 				Class30.aClass104_Sub12_288 = Class47.method210(var2);
 				client.anInt1900 = var1;
@@ -119,10 +119,10 @@ public class Class78 {
 			}
 
 			if (var3 == 47) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -138,18 +138,18 @@ public class Class78 {
 				client.secureBuf.writeLEShort(client.anInt1970);
 				client.secureBuf.writeShort(var1);
 				client.secureBuf.writeShort(var4);
-				client.secureBuf.writeLEIntA(var2);
-				client.secureBuf.writeLEIntA(anInt628);
+				client.secureBuf.writeIntV1(var2);
+				client.secureBuf.writeIntV1(anInt628);
 				client.anInt1899 = 0;
 				Class30.aClass104_Sub12_288 = Class47.method210(var2);
 				client.anInt1900 = var1;
 			}
 
 			if (var3 == 46) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -162,12 +162,12 @@ public class Class78 {
 
 			boolean var7;
 			if (var3 == 20) {
-				var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
-						Class81.pf.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -181,10 +181,10 @@ public class Class78 {
 			}
 
 			if (var3 == 12) {
-				var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
+				var11 = client.localNpcs[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var11.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var11.stepx[0],
 							var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -196,10 +196,10 @@ public class Class78 {
 			}
 
 			if (var3 == 14) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -209,7 +209,7 @@ public class Class78 {
 					client.secureBuf.writeShortA(Class7.anInt42);
 					client.secureBuf.writeLEShort(Class7.anInt44);
 					client.secureBuf.writeShortA(var4);
-					client.secureBuf.writeLEIntA(Class14.anInt105);
+					client.secureBuf.writeIntV1(Class14.anInt105);
 				}
 			}
 
@@ -225,7 +225,7 @@ public class Class78 {
 			if (var3 == 41) {
 				client.secureBuf.putOpcode(6);
 				client.secureBuf.writeLEShort(var1);
-				client.secureBuf.method598(var2);
+				client.secureBuf.writeLEInt(var2);
 				client.secureBuf.writeLEShortA(var4);
 				client.anInt1899 = 0;
 				Class30.aClass104_Sub12_288 = Class47.method210(var2);
@@ -233,10 +233,10 @@ public class Class78 {
 			}
 
 			if (var3 == 50) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -261,10 +261,10 @@ public class Class78 {
 			}
 
 			if (var3 == 48) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -277,7 +277,7 @@ public class Class78 {
 
 			if (var3 == 33) {
 				client.secureBuf.putOpcode(135);
-				client.secureBuf.writeLEIntA(var2);
+				client.secureBuf.writeIntV1(var2);
 				client.secureBuf.writeLEShortA(var4);
 				client.secureBuf.writeLEShortA(var1);
 				client.anInt1899 = 0;
@@ -287,7 +287,7 @@ public class Class78 {
 
 			if ((var3 == 1) && Class97.method442(var1, var2, var4)) {
 				client.secureBuf.putOpcode(241);
-				client.secureBuf.method598(Class14.anInt105);
+				client.secureBuf.writeLEInt(Class14.anInt105);
 				client.secureBuf.writeShort(Class7.anInt44);
 				client.secureBuf.writeShort((var4 >> 14) & 32767);
 				client.secureBuf.writeShortA(var1 + Class53.anInt436);
@@ -304,10 +304,10 @@ public class Class78 {
 			}
 
 			if (var3 == 15) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (null != var5) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -321,12 +321,12 @@ public class Class78 {
 			}
 
 			if (var3 == 18) {
-				var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
-						Class81.pf.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -348,12 +348,12 @@ public class Class78 {
 			}
 
 			if (var3 == 16) {
-				var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
-						Class81.pf.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -405,10 +405,10 @@ public class Class78 {
 				Class29.method143(var4, var2, var1, client.aStringArray1936[var0]);
 
 			if (var3 == 44) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -420,12 +420,12 @@ public class Class78 {
 			}
 
 			if (var3 == 22) {
-				var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
-						Class81.pf.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
+				var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0, 0, 0,
 						2);
 				if (!var7)
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var1, var2, false, 0, 0, 1,
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 1,
 							1, 0, 2);
 
 				client.anInt1895 = Class14.anInt101;
@@ -451,10 +451,10 @@ public class Class78 {
 			}
 
 			if (var3 == 9) {
-				var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
+				var11 = client.localNpcs[var4];
 				if (null != var11) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var11.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var11.stepx[0],
 							var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -466,10 +466,10 @@ public class Class78 {
 			}
 
 			if (var3 == 49) {
-				var5 = client.localNpcs[var4];
+				var5 = client.localPlayers[var4];
 				if (var5 != null) {
-					Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var5.stepx[0],
+					Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var5.stepx[0],
 							var5.stepy[0], false, 0, 0, 1, 1, 0, 2);
 					client.anInt1895 = Class14.anInt101;
 					client.anInt1896 = Class14.anInt102;
@@ -530,10 +530,10 @@ public class Class78 {
 				}
 
 				if (var3 == 10) {
-					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
+					var11 = client.localNpcs[var4];
 					if (var11 != null) {
-						Class104_Sub13.method543(Class81.pf.stepx[0],
-								Class81.pf.stepy[0], var11.stepx[0],
+						Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+								Class81.activePlayer.stepy[0], var11.stepx[0],
 								var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
 						client.anInt1896 = Class14.anInt102;
@@ -548,7 +548,7 @@ public class Class78 {
 					client.secureBuf.putOpcode(179);
 					client.secureBuf.writeLEShortA(var1);
 					client.secureBuf.writeShortA(var4);
-					client.secureBuf.method598(var2);
+					client.secureBuf.writeLEInt(var2);
 					client.anInt1899 = 0;
 					Class30.aClass104_Sub12_288 = Class47.method210(var2);
 					client.anInt1900 = var1;
@@ -557,7 +557,7 @@ public class Class78 {
 				if (var3 == 43) {
 					client.secureBuf.putOpcode(40);
 					client.secureBuf.writeLEShort(var4);
-					client.secureBuf.method598(var2);
+					client.secureBuf.writeLEInt(var2);
 					client.secureBuf.writeShortA(var1);
 					client.anInt1899 = 0;
 					Class30.aClass104_Sub12_288 = Class47.method210(var2);
@@ -569,7 +569,7 @@ public class Class78 {
 					client.anInt1896 = Class14.anInt102;
 					client.anInt1898 = 2;
 					client.anInt1897 = 0;
-					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
+					var11 = client.localNpcs[var4];
 					if (null != var11) {
 						Class104_Sub18_Sub2 var10 = var11.aClass104_Sub18_Sub2_1788;
 						if (null != var10.anIntArray1230)
@@ -583,10 +583,10 @@ public class Class78 {
 				}
 
 				if (var3 == 13) {
-					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
+					var11 = client.localNpcs[var4];
 					if (null != var11) {
-						Class104_Sub13.method543(Class81.pf.stepx[0],
-								Class81.pf.stepy[0], var11.stepx[0],
+						Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+								Class81.activePlayer.stepy[0], var11.stepx[0],
 								var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
 						client.anInt1896 = Class14.anInt102;
@@ -598,10 +598,10 @@ public class Class78 {
 				}
 
 				if (var3 == 11) {
-					var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
+					var11 = client.localNpcs[var4];
 					if (null != var11) {
-						Class104_Sub13.method543(Class81.pf.stepx[0],
-								Class81.pf.stepy[0], var11.stepx[0],
+						Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+								Class81.activePlayer.stepy[0], var11.stepx[0],
 								var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 						client.anInt1895 = Class14.anInt101;
 						client.anInt1896 = Class14.anInt102;
@@ -613,12 +613,12 @@ public class Class78 {
 				}
 
 				if (var3 == 17) {
-					var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
-							Class81.pf.stepy[0], var1, var2, false, 0, 0, 0,
+					var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+							Class81.activePlayer.stepy[0], var1, var2, false, 0, 0, 0,
 							0, 0, 2);
 					if (!var7)
-						Class104_Sub13.method543(Class81.pf.stepx[0],
-								Class81.pf.stepy[0], var1, var2, false, 0, 0,
+						Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+								Class81.activePlayer.stepy[0], var1, var2, false, 0, 0,
 								1, 1, 0, 2);
 
 					client.anInt1895 = Class14.anInt101;
@@ -660,7 +660,7 @@ public class Class78 {
 						client.secureBuf.writeShortA(client.anInt1970);
 						client.secureBuf.writeShortA(var1);
 						client.secureBuf.writeInt(anInt628);
-						client.secureBuf.writeLEIntA(var2);
+						client.secureBuf.writeIntV1(var2);
 					}
 
 					if ((var3 == 30) && (client.aClass104_Sub12_1951 == null)) {
@@ -693,12 +693,12 @@ public class Class78 {
 					}
 
 					if (var3 == 19) {
-						var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
-								Class81.pf.stepy[0], var1, var2, false, 0, 0,
+						var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+								Class81.activePlayer.stepy[0], var1, var2, false, 0, 0,
 								0, 0, 0, 2);
 						if (!var7)
-							Class104_Sub13.method543(Class81.pf.stepx[0],
-									Class81.pf.stepy[0], var1, var2, false, 0,
+							Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+									Class81.activePlayer.stepy[0], var1, var2, false, 0,
 									0, 1, 1, 0, 2);
 
 						client.anInt1895 = Class14.anInt101;
@@ -714,7 +714,7 @@ public class Class78 {
 					if (var3 == 40) {
 						client.secureBuf.putOpcode(202);
 						client.secureBuf.writeLEShort(var4);
-						client.secureBuf.writeLEIntA(var2);
+						client.secureBuf.writeIntV1(var2);
 						client.secureBuf.writeLEShort(var1);
 						client.anInt1899 = 0;
 						Class30.aClass104_Sub12_288 = Class47.method210(var2);
@@ -724,7 +724,7 @@ public class Class78 {
 					if (var3 == 1005) {
 						var12 = Class47.method210(var2);
 						if ((null != var12) && (var12.anIntArray1081[var1] >= 100000))
-							Class15.method60(0, "",
+							Class15.chat(0, "",
 									var12.anIntArray1081[var1] + " x " + Class27.forId(var4).aString1444);
 						else {
 							client.secureBuf.putOpcode(49);
@@ -737,10 +737,10 @@ public class Class78 {
 					}
 
 					if (var3 == 7) {
-						var11 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var4];
+						var11 = client.localNpcs[var4];
 						if (null != var11) {
-							Class104_Sub13.method543(Class81.pf.stepx[0],
-									Class81.pf.stepy[0],
+							Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+									Class81.activePlayer.stepy[0],
 									var11.stepx[0], var11.stepy[0], false, 0, 0, 1, 1, 0, 2);
 							client.anInt1895 = Class14.anInt101;
 							client.anInt1896 = Class14.anInt102;
@@ -755,12 +755,12 @@ public class Class78 {
 					}
 
 					if (var3 == 21) {
-						var7 = Class104_Sub13.method543(Class81.pf.stepx[0],
-								Class81.pf.stepy[0], var1, var2, false, 0, 0,
+						var7 = Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+								Class81.activePlayer.stepy[0], var1, var2, false, 0, 0,
 								0, 0, 0, 2);
 						if (!var7)
-							Class104_Sub13.method543(Class81.pf.stepx[0],
-									Class81.pf.stepy[0], var1, var2, false, 0,
+							Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+									Class81.activePlayer.stepy[0], var1, var2, false, 0,
 									0, 1, 1, 0, 2);
 
 						client.anInt1895 = Class14.anInt101;
@@ -776,7 +776,7 @@ public class Class78 {
 					if (var3 == 39) {
 						client.secureBuf.putOpcode(21);
 						client.secureBuf.writeShort(var1);
-						client.secureBuf.writeLEIntA(var2);
+						client.secureBuf.writeIntV1(var2);
 						client.secureBuf.writeLEShort(var4);
 						client.anInt1899 = 0;
 						Class30.aClass104_Sub12_288 = Class47.method210(var2);

@@ -3,11 +3,11 @@ public abstract class Class104_Sub18_Sub16_Sub7 extends Class104_Sub18_Sub16 {
 	int anInt1697;
 	int anInt1698;
 	int anInt1708;
-	int anInt1709;
+	int gfxHeight;
 	int anInt1715;
 	int anInt1721;
 	int anInt1725;
-	int anInt1730;
+	int gfxDelay;
 	int anInt1733;
 	int anInt1734;
 	int anInt1737;
@@ -20,22 +20,22 @@ public abstract class Class104_Sub18_Sub16_Sub7 extends Class104_Sub18_Sub16 {
 	int anInt1694;
 	boolean aBool1696 = false;
 	int anInt1736 = 1;
-	int anInt1702 = -1;
-	int anInt1699 = -1;
-	int anInt1700 = -1;
-	int anInt1701 = -1;
-	int anInt1743 = -1;
-	int anInt1703 = -1;
-	int anInt1704 = -1;
-	int anInt1705 = -1;
-	String aString1723 = null;
+	int stand = -1;
+	int turn = -1;
+	int walk = -1;
+	int walkAnim = -1;
+	int turn180 = -1;
+	int turn90c = -1;
+	int turn90cc = -1;
+	int runAnim = -1;
+	String forceChat = null;
 	int anInt1713 = 100;
 	int anInt1731 = 0;
 	int anInt1749 = 0;
-	int[] anIntArray1710 = new int[4];
-	int[] anIntArray1711 = new int[4];
-	int[] anIntArray1712 = new int[4];
-	int anInt1714 = -1000;
+	int[] hitDmg = new int[4];
+	int[] hitType = new int[4];
+	int[] hitTimes = new int[4];
+	int hitTime = -1000;
 	int anInt1716 = -1;
 	int anInt1717 = 0;
 	int anInt1718 = 0;
@@ -46,7 +46,7 @@ public abstract class Class104_Sub18_Sub16_Sub7 extends Class104_Sub18_Sub16 {
 	int anInt1724 = 0;
 	int anInt1707 = 0;
 	int anInt1726 = 0;
-	int anInt1727 = -1;
+	int gfxId = -1;
 	int anInt1728 = 0;
 	int anInt1729 = 0;
 	int anInt1739 = 0;
@@ -147,18 +147,18 @@ public abstract class Class104_Sub18_Sub16_Sub7 extends Class104_Sub18_Sub16 {
 		aBoolArray1747[0] = run;
 	}
 
-	final void hits(final int var1, final int var2, final int var3) {
-		for (int var4 = 0; var4 < 4; ++var4)
-			if (anIntArray1712[var4] <= var3) {
-				anIntArray1710[var4] = var1;
-				anIntArray1711[var4] = var2;
-				anIntArray1712[var4] = var3 + 70;
+	final void hits(final int dmg, final int type, final int time) {
+		for (int i = 0; i < 4; ++i)
+			if (hitTimes[i] <= time) {
+				hitDmg[i] = dmg;
+				hitType[i] = type;
+				hitTimes[i] = time + 70;
 				return;
 			}
 
 	}
 
-	boolean method936(final int var1) {
+	boolean forcefalse(final int var1) {
 		return false;
 	}
 }

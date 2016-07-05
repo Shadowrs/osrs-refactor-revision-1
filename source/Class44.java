@@ -17,7 +17,7 @@ public final class Class44 {
 	int anInt391;
 	int anInt392;
 	int anInt393;
-	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array394;
+	static Sprite[] aClass104_Sub18_Sub17_Sub1Array394;
 	static int anInt395;
 
 	public static String method189(final CharSequence var0) {

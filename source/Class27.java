@@ -38,7 +38,7 @@ public class Class27 {
 				var1.aString1444 = "Members object";
 				var1.aStringArray1434 = null;
 				var1.aStringArray1435 = null;
-				var1.anInt1420 = 0;
+				var1.looksConfig = 0;
 			}
 
 			ItemDef.aClass56_1415.method238(var1, var0);

@@ -11,17 +11,17 @@ public class Class7 {
 	static final void method33() {
 		for (int var0 = 0; var0 < client.anInt1910; ++var0) {
 			final int var1 = client.updates[var0];
-			final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var1];
+			final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.localNpcs[var1];
 			final int var3 = client.gamecon.readUByte();
 			int var4;
 			int var5;
 			if ((var3 & 128) != 0) {
 				var4 = client.gamecon.readUByte();
-				var5 = client.gamecon.readByteN();
-				var2.hits(var4, var5, client.anInt1799);
-				var2.anInt1714 = 300 + client.anInt1799;
-				var2.anInt1693 = client.gamecon.method576();
-				var2.anInt1715 = client.gamecon.method576();
+				var5 = client.gamecon.readUByteN();
+				var2.hits(var4, var5, client.currentTime);
+				var2.hitTime = 300 + client.currentTime;
+				var2.anInt1693 = client.gamecon.readUByteA();
+				var2.anInt1715 = client.gamecon.readUByteA();
 			}
 
 			if ((var3 & 4) != 0) {
@@ -31,30 +31,30 @@ public class Class7 {
 			}
 
 			if ((var3 & 2) != 0) {
-				var2.anInt1717 = client.gamecon.readShortN();
-				var2.anInt1718 = client.gamecon.readShortN();
+				var2.anInt1717 = client.gamecon.readLEShortA();
+				var2.anInt1718 = client.gamecon.readLEShortA();
 			}
 
 			if ((var3 & 1) != 0) {
-				var2.anInt1727 = client.gamecon.readShort();
+				var2.gfxId = client.gamecon.readShort();
 				var4 = client.gamecon.readLEInt();
-				var2.anInt1709 = var4 >> 16;
-				var2.anInt1730 = (var4 & '\uffff') + client.anInt1799;
+				var2.gfxHeight = var4 >> 16;
+				var2.gfxDelay = (var4 & '\uffff') + client.currentTime;
 				var2.anInt1728 = 0;
 				var2.anInt1729 = 0;
-				if (var2.anInt1730 > client.anInt1799)
+				if (var2.gfxDelay > client.currentTime)
 					var2.anInt1728 = -1;
 
-				if (var2.anInt1727 == '\uffff')
-					var2.anInt1727 = -1;
+				if (var2.gfxId == '\uffff')
+					var2.gfxId = -1;
 			}
 
 			if ((var3 & 8) != 0) {
-				var4 = client.gamecon.readShortN();
+				var4 = client.gamecon.readLEShortA();
 				if (var4 == '\uffff')
 					var4 = -1;
 
-				var5 = client.gamecon.method576();
+				var5 = client.gamecon.readUByteA();
 				if ((var2.anInt1722 == var4) && (var4 != -1)) {
 					final int var6 = Class70.forId(var4).anInt1275;
 					if (var6 == 1) {
@@ -81,27 +81,27 @@ public class Class7 {
 				var2.aClass104_Sub18_Sub2_1788 = Class64.method296(client.gamecon.readLEShort());
 				var2.anInt1736 = var2.aClass104_Sub18_Sub2_1788.anInt1240;
 				var2.anInt1740 = var2.aClass104_Sub18_Sub2_1788.anInt1253;
-				var2.anInt1701 = var2.aClass104_Sub18_Sub2_1788.anInt1236;
-				var2.anInt1743 = var2.aClass104_Sub18_Sub2_1788.anInt1237;
-				var2.anInt1703 = var2.aClass104_Sub18_Sub2_1788.anInt1251;
-				var2.anInt1704 = var2.aClass104_Sub18_Sub2_1788.anInt1239;
-				var2.anInt1702 = var2.aClass104_Sub18_Sub2_1788.anInt1233;
-				var2.anInt1699 = var2.aClass104_Sub18_Sub2_1788.anInt1244;
-				var2.anInt1700 = var2.aClass104_Sub18_Sub2_1788.anInt1235;
+				var2.walkAnim = var2.aClass104_Sub18_Sub2_1788.anInt1236;
+				var2.turn180 = var2.aClass104_Sub18_Sub2_1788.anInt1237;
+				var2.turn90c = var2.aClass104_Sub18_Sub2_1788.anInt1251;
+				var2.turn90cc = var2.aClass104_Sub18_Sub2_1788.anInt1239;
+				var2.stand = var2.aClass104_Sub18_Sub2_1788.anInt1233;
+				var2.turn = var2.aClass104_Sub18_Sub2_1788.anInt1244;
+				var2.walk = var2.aClass104_Sub18_Sub2_1788.anInt1235;
 			}
 
 			if ((var3 & 32) != 0) {
-				var2.aString1723 = client.gamecon.readString();
+				var2.forceChat = client.gamecon.readString();
 				var2.anInt1713 = 100;
 			}
 
 			if ((var3 & 16) != 0) {
 				var4 = client.gamecon.readUByteS();
 				var5 = client.gamecon.readUByteS();
-				var2.hits(var4, var5, client.anInt1799);
-				var2.anInt1714 = 300 + client.anInt1799;
+				var2.hits(var4, var5, client.currentTime);
+				var2.hitTime = 300 + client.currentTime;
 				var2.anInt1693 = client.gamecon.readUByteS();
-				var2.anInt1715 = client.gamecon.method576();
+				var2.anInt1715 = client.gamecon.readUByteA();
 			}
 		}
 

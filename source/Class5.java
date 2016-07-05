@@ -42,17 +42,17 @@ public class Class5 {
 					var11 = 128;
 
 				if ((var9 & 1) != 0)
-					anIntArray20[var7] = var4.method578();
+					anIntArray20[var7] = var4.readCompact();
 				else
 					anIntArray20[var7] = var11;
 
 				if ((var9 & 2) != 0)
-					anIntArray21[var7] = var4.method578();
+					anIntArray21[var7] = var4.readCompact();
 				else
 					anIntArray21[var7] = var11;
 
 				if ((var9 & 4) != 0)
-					anIntArray29[var7] = var4.method578();
+					anIntArray29[var7] = var4.readCompact();
 				else
 					anIntArray29[var7] = var11;
 

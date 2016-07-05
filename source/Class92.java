@@ -65,7 +65,7 @@ public class Class92 {
 				break;
 
 			anIntArray734[var3] = var4;
-			anIntArray726[var3] = var1.method578();
+			anIntArray726[var3] = var1.readCompact();
 			anIntArray727[var3] = var1.readsmart();
 		}
 

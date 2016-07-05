@@ -156,74 +156,74 @@ public final class Class33 {
 		}
 	}
 
-	public static int method156(final CharSequence var0, final int var1, final int var2, final byte[] var3,
-			final int var4) {
-		final int var5 = var2 - var1;
+	public static int writeInto(final CharSequence seq, final int offset, final int length, final byte[] to,
+			final int start) {
+		final int max = length - offset;
 
-		for (int var6 = 0; var6 < var5; ++var6) {
-			final char var7 = var0.charAt(var6 + var1);
-			if (((var7 <= 0) || (var7 >= 128)) && ((var7 < 160) || (var7 > 255))) {
-				if (var7 == 8364)
-					var3[var4 + var6] = -128;
-				else if (var7 == 8218)
-					var3[var4 + var6] = -126;
-				else if (var7 == 402)
-					var3[var4 + var6] = -125;
-				else if (var7 == 8222)
-					var3[var4 + var6] = -124;
-				else if (var7 == 8230)
-					var3[var4 + var6] = -123;
-				else if (var7 == 8224)
-					var3[var4 + var6] = -122;
-				else if (var7 == 8225)
-					var3[var4 + var6] = -121;
-				else if (var7 == 710)
-					var3[var4 + var6] = -120;
-				else if (var7 == 8240)
-					var3[var6 + var4] = -119;
-				else if (var7 == 352)
-					var3[var6 + var4] = -118;
-				else if (var7 == 8249)
-					var3[var4 + var6] = -117;
-				else if (var7 == 338)
-					var3[var4 + var6] = -116;
-				else if (var7 == 381)
-					var3[var6 + var4] = -114;
-				else if (var7 == 8216)
-					var3[var4 + var6] = -111;
-				else if (var7 == 8217)
-					var3[var6 + var4] = -110;
-				else if (var7 == 8220)
-					var3[var4 + var6] = -109;
-				else if (var7 == 8221)
-					var3[var6 + var4] = -108;
-				else if (var7 == 8226)
-					var3[var4 + var6] = -107;
-				else if (var7 == 8211)
-					var3[var6 + var4] = -106;
-				else if (var7 == 8212)
-					var3[var6 + var4] = -105;
-				else if (var7 == 732)
-					var3[var4 + var6] = -104;
-				else if (var7 == 8482)
-					var3[var4 + var6] = -103;
-				else if (var7 == 353)
-					var3[var6 + var4] = -102;
-				else if (var7 == 8250)
-					var3[var4 + var6] = -101;
-				else if (var7 == 339)
-					var3[var6 + var4] = -100;
-				else if (var7 == 382)
-					var3[var6 + var4] = -98;
-				else if (var7 == 376)
-					var3[var6 + var4] = -97;
+		for (int i = 0; i < max; ++i) {
+			final char c = seq.charAt(i + offset);
+			if (((c <= 0) || (c >= 128)) && ((c < 160) || (c > 255))) {
+				if (c == 8364)
+					to[start + i] = -128;
+				else if (c == 8218)
+					to[start + i] = -126;
+				else if (c == 402)
+					to[start + i] = -125;
+				else if (c == 8222)
+					to[start + i] = -124;
+				else if (c == 8230)
+					to[start + i] = -123;
+				else if (c == 8224)
+					to[start + i] = -122;
+				else if (c == 8225)
+					to[start + i] = -121;
+				else if (c == 710)
+					to[start + i] = -120;
+				else if (c == 8240)
+					to[i + start] = -119;
+				else if (c == 352)
+					to[i + start] = -118;
+				else if (c == 8249)
+					to[start + i] = -117;
+				else if (c == 338)
+					to[start + i] = -116;
+				else if (c == 381)
+					to[i + start] = -114;
+				else if (c == 8216)
+					to[start + i] = -111;
+				else if (c == 8217)
+					to[i + start] = -110;
+				else if (c == 8220)
+					to[start + i] = -109;
+				else if (c == 8221)
+					to[i + start] = -108;
+				else if (c == 8226)
+					to[start + i] = -107;
+				else if (c == 8211)
+					to[i + start] = -106;
+				else if (c == 8212)
+					to[i + start] = -105;
+				else if (c == 732)
+					to[start + i] = -104;
+				else if (c == 8482)
+					to[start + i] = -103;
+				else if (c == 353)
+					to[i + start] = -102;
+				else if (c == 8250)
+					to[start + i] = -101;
+				else if (c == 339)
+					to[i + start] = -100;
+				else if (c == 382)
+					to[i + start] = -98;
+				else if (c == 376)
+					to[i + start] = -97;
 				else
-					var3[var6 + var4] = 63;
+					to[i + start] = 63;
 			} else
-				var3[var4 + var6] = (byte) var7;
+				to[start + i] = (byte) c;
 		}
 
-		return var5;
+		return max;
 	}
 
 	public static boolean method157(final int var0) {

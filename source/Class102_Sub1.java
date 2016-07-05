@@ -49,18 +49,18 @@ public class Class102_Sub1 extends Class102 {
 		client.anInt2013 = -1;
 		client.anInt2018 = 0;
 		client.anInt1880 = 0;
-		client.toUpdate = 0;
-		client.anInt1832 = 0;
+		client.localPlrSize = 0;
+		client.localNpcSize = 0;
 
 		for (var0 = 0; var0 < 2048; ++var0) {
-			client.localNpcs[var0] = null;
+			client.localPlayers[var0] = null;
 			client.cachedAppearances[var0] = null;
 		}
 
 		for (var0 = 0; var0 < '\u8000'; ++var0)
-			client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0] = null;
+			client.localNpcs[var0] = null;
 
-		Class81.pf = client.localNpcs[2047] = new Player();
+		Class81.activePlayer = client.localPlayers[2047] = new Player();
 		client.aClass59_1923.method247();
 		client.aClass59_1869.method247();
 

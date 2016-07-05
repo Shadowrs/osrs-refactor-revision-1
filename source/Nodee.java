@@ -116,7 +116,7 @@ public class Nodee extends Class104 {
 				return;
 
 			final URL var15 = new URL(RuntimeException_Sub1.anApplet1476.getCodeBase(),
-					"clienterror.ws?c=" + RuntimeException_Sub1.anInt1477 + "&u=" + RuntimeException_Sub1.aString1478
+					"clienterror.ws?c=" + RuntimeException_Sub1.anInt1477 + "&u=" + RuntimeException_Sub1.playerName
 							+ "&v1=" + Class11.aString64 + "&v2=" + Class11.aString59 + "&e=" + var2);
 			final DataInputStream var17 = new DataInputStream(var15.openStream());
 			var17.read();

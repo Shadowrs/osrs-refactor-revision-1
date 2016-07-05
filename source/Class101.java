@@ -1,7 +1,7 @@
 public class Class101 {
 	static int[] anIntArray811;
 	static Class41 aClass41_812;
-	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array813;
+	static Sprite[] aClass104_Sub18_Sub17_Sub1Array813;
 	public int anInt809;
 	String aString801;
 	public static Class101 aClass101_810 = new Class101(6, 0, "", "");

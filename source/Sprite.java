@@ -4,7 +4,7 @@ import java.awt.MediaTracker;
 import java.awt.Toolkit;
 import java.awt.image.PixelGrabber;
 
-public final class Class104_Sub18_Sub17_Sub1 extends Class104_Sub18_Sub17 {
+public final class Sprite extends Class104_Sub18_Sub17 {
 	public int[] anIntArray1592;
 	public int anInt1590;
 	int anInt1593;
@@ -13,7 +13,7 @@ public final class Class104_Sub18_Sub17_Sub1 extends Class104_Sub18_Sub17 {
 	int anInt1587;
 	int anInt1589;
 
-	public Class104_Sub18_Sub17_Sub1(final int var1, final int var2) {
+	public Sprite(final int var1, final int var2) {
 		anIntArray1592 = new int[var1 * var2];
 		anInt1593 = anInt1590 = var1;
 		anInt1588 = anInt1591 = var2;
@@ -220,7 +220,7 @@ public final class Class104_Sub18_Sub17_Sub1 extends Class104_Sub18_Sub17 {
 
 	}
 
-	Class104_Sub18_Sub17_Sub1() {
+	Sprite() {
 	}
 
 	static void method840(final int[] var0, final int[] var1, int var2, int var3, final int var4, final int var5,
@@ -242,7 +242,7 @@ public final class Class104_Sub18_Sub17_Sub1 extends Class104_Sub18_Sub17 {
 
 	}
 
-	public void method841(int var1, int var2) {
+	public void draw(int var1, int var2) {
 		var1 += anInt1589;
 		var2 += anInt1587;
 		int var3 = var1 + (var2 * anInt1469);
@@ -308,7 +308,7 @@ public final class Class104_Sub18_Sub17_Sub1 extends Class104_Sub18_Sub17 {
 
 	}
 
-	public Class104_Sub18_Sub17_Sub1(final byte[] var1, final Component var2) {
+	public Sprite(final byte[] var1, final Component var2) {
 		try {
 			final Image var3 = Toolkit.getDefaultToolkit().createImage(var1);
 			final MediaTracker var4 = new MediaTracker(var2);
@@ -1156,8 +1156,8 @@ public final class Class104_Sub18_Sub17_Sub1 extends Class104_Sub18_Sub17 {
 		anIntArray1592 = var2;
 	}
 
-	public Class104_Sub18_Sub17_Sub1 method856() {
-		final Class104_Sub18_Sub17_Sub1 var1 = new Class104_Sub18_Sub17_Sub1(anInt1593, anInt1588);
+	public Sprite method856() {
+		final Sprite var1 = new Sprite(anInt1593, anInt1588);
 		var1.anInt1590 = anInt1590;
 		var1.anInt1591 = anInt1591;
 		var1.anInt1589 = anInt1590 - anInt1593 - anInt1589;

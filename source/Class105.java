@@ -48,7 +48,7 @@ public class Class105 {
 			int var2;
 			int var3;
 			if ((var0.anInt1716 != -1) && (var0.anInt1716 < '\u8000')) {
-				final Class104_Sub18_Sub16_Sub7_Sub2 var1 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[var0.anInt1716];
+				final Class104_Sub18_Sub16_Sub7_Sub2 var1 = client.localNpcs[var0.anInt1716];
 				if (var1 != null) {
 					var2 = var0.anInt1695 - var1.anInt1695;
 					var3 = var0.anInt1694 - var1.anInt1694;
@@ -63,7 +63,7 @@ public class Class105 {
 				if (client.anInt1874 == var4)
 					var4 = 2047;
 
-				final Player var5 = client.localNpcs[var4];
+				final Player var5 = client.localPlayers[var4];
 				if (null != var5) {
 					var3 = var0.anInt1695 - var5.anInt1695;
 					final int var6 = var0.anInt1694 - var5.anInt1694;
@@ -94,11 +94,11 @@ public class Class105 {
 						var7 = false;
 					}
 
-					if ((var0.anInt1719 == var0.anInt1702) && ((var0.anInt1742 > 25) || var7))
-						if (var0.anInt1699 != -1)
-							var0.anInt1719 = var0.anInt1699;
+					if ((var0.anInt1719 == var0.stand) && ((var0.anInt1742 > 25) || var7))
+						if (var0.turn != -1)
+							var0.anInt1719 = var0.turn;
 						else
-							var0.anInt1719 = var0.anInt1701;
+							var0.anInt1719 = var0.walkAnim;
 				} else {
 					var0.anInt1725 += var0.anInt1740;
 					var7 = true;
@@ -107,11 +107,11 @@ public class Class105 {
 						var7 = false;
 					}
 
-					if ((var0.anInt1702 == var0.anInt1719) && ((var0.anInt1742 > 25) || var7))
-						if (var0.anInt1700 != -1)
-							var0.anInt1719 = var0.anInt1700;
+					if ((var0.stand == var0.anInt1719) && ((var0.anInt1742 > 25) || var7))
+						if (var0.walk != -1)
+							var0.anInt1719 = var0.walk;
 						else
-							var0.anInt1719 = var0.anInt1701;
+							var0.anInt1719 = var0.walkAnim;
 				}
 
 				var0.anInt1725 &= 2047;

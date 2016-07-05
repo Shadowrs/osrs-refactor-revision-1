@@ -1,6 +1,6 @@
 public class Class42 {
 	static int[] anIntArray371;
-	static Class104_Sub18_Sub17_Sub1[] aClass104_Sub18_Sub17_Sub1Array372;
+	static Sprite[] aClass104_Sub18_Sub17_Sub1Array372;
 	static int[] anIntArray373;
 
 	static CS2 getCS(final int var0) {

@@ -139,8 +139,8 @@ public class Class97 {
 			final int var5 = var4 & 31;
 			final int var6 = (var4 >> 6) & 3;
 			if ((var5 != 10) && (var5 != 11) && (var5 != 22))
-				Class104_Sub13.method543(Class81.pf.stepx[0],
-						Class81.pf.stepy[0], var0, var1, true, 1 + var5, var6,
+				Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class81.activePlayer.stepy[0], var0, var1, true, 1 + var5, var6,
 						0, 0, 0, 2);
 			else {
 				final ObjectDefinition var7 = ItemDef.forId(var3);
@@ -158,8 +158,8 @@ public class Class97 {
 				if (var6 != 0)
 					var10 = (var10 >> (4 - var6)) + ((var10 << var6) & 15);
 
-				Class104_Sub13.method543(Class81.pf.stepx[0],
-						Class81.pf.stepy[0], var0, var1, true, 0, 0, var8,
+				Class104_Sub13.method543(Class81.activePlayer.stepx[0],
+						Class81.activePlayer.stepy[0], var0, var1, true, 0, 0, var8,
 						var9, var10, 2);
 			}
 

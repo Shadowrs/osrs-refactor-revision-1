@@ -49,10 +49,10 @@ public class Class104_Sub7 extends Class104 {
 	}
 
 	static final void method510(final boolean var0) {
-		for (int var1 = 0; var1 < client.anInt1832; ++var1) {
-			final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.aClass104_Sub18_Sub16_Sub7_Sub2Array1828[client.anIntArray1830[var1]];
-			int var3 = 536870912 + (client.anIntArray1830[var1] << 14);
-			if ((var2 != null) && var2.method936(1531790724) && (var2.aClass104_Sub18_Sub2_1788.aBool1247 == var0)
+		for (int var1 = 0; var1 < client.localNpcSize; ++var1) {
+			final Class104_Sub18_Sub16_Sub7_Sub2 var2 = client.localNpcs[client.localNpcIndicies[var1]];
+			int var3 = 536870912 + (client.localNpcIndicies[var1] << 14);
+			if ((var2 != null) && var2.forcefalse(1531790724) && (var2.aClass104_Sub18_Sub2_1788.aBool1247 == var0)
 					&& var2.aClass104_Sub18_Sub2_1788.method679()) {
 				final int var4 = var2.anInt1695 >> 7;
 				final int var5 = var2.anInt1694 >> 7;

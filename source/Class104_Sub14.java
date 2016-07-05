@@ -62,7 +62,7 @@ public class Class104_Sub14 extends Class104 {
 		var14 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
 
 		for (var15 = 0; var15 < var14; ++var15)
-			var1.method580();
+			var1.length();
 
 		var4 += var1.pos - var13;
 		var15 = var1.pos;
@@ -181,8 +181,8 @@ public class Class104_Sub14 extends Class104 {
 
 			while (true)
 				while (true) {
-					final int var63 = var1.method580();
-					var51.method569(var63);
+					final int var63 = var1.length();
+					var51.writeCompact(var63);
 					final int var64 = var1.backing[var29++] & 255;
 					final boolean var65 = var64 != var62;
 					var62 = var64 & 15;

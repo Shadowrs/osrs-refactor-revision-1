@@ -194,9 +194,9 @@ public class ObjectDefinition extends Class104_Sub18 {
 		else if (var2 == 28)
 			anInt1348 = var1.readUByte();
 		else if (var2 == 29)
-			anInt1364 = var1.method565();
+			anInt1364 = var1.readByte();
 		else if (var2 == 39)
-			anInt1347 = var1.method565() * 25;
+			anInt1347 = var1.readByte() * 25;
 		else if ((var2 >= 30) && (var2 < 35)) {
 			aStringArray1349[var2 - 30] = var1.readString();
 			if (aStringArray1349[var2 - 30].equalsIgnoreCase("Hidden"))
@@ -236,11 +236,11 @@ public class ObjectDefinition extends Class104_Sub18 {
 		else if (var2 == 69)
 			anInt1335 = var1.readUByte();
 		else if (var2 == 70)
-			anInt1325 = var1.method572();
+			anInt1325 = var1.readUShort();
 		else if (var2 == 71)
-			anInt1371 = var1.method572();
+			anInt1371 = var1.readUShort();
 		else if (var2 == 72)
-			anInt1360 = var1.method572();
+			anInt1360 = var1.readUShort();
 		else if (var2 == 73)
 			aBool1362 = true;
 		else if (var2 == 74)

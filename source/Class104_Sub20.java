@@ -65,20 +65,20 @@ public final class Class104_Sub20 extends Class104 {
 		}
 	}
 
-	public static int method560(final CharSequence var0) {
-		final int var1 = var0.length();
-		int var2 = 0;
+	public static int actualLen(final CharSequence seq) {
+		final int reallen = seq.length();
+		int len = 0;
 
-		for (int var3 = 0; var3 < var1; ++var3) {
-			final char var4 = var0.charAt(var3);
-			if (var4 <= 127)
-				++var2;
-			else if (var4 <= 2047)
-				var2 += 2;
+		for (int i = 0; i < reallen; ++i) {
+			final char c = seq.charAt(i);
+			if (c <= 127)
+				++len;
+			else if (c <= 2047)
+				len += 2;
 			else
-				var2 += 3;
+				len += 3;
 		}
 
-		return var2;
+		return len;
 	}
 }

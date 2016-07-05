@@ -37,7 +37,7 @@ public class Class10 {
 				if (!Class103.aBool816) {
 					Class104_Sub18_Sub17.method794();
 					final byte[] var4 = var2.method272("title.jpg", "");
-					Class66.aClass104_Sub18_Sub17_Sub1_531 = new Class104_Sub18_Sub17_Sub1(var4, var1);
+					Class66.aClass104_Sub18_Sub17_Sub1_531 = new Sprite(var4, var1);
 					Class3.aClass104_Sub18_Sub17_Sub1_10 = Class66.aClass104_Sub18_Sub17_Sub1_531.method856();
 					Class66.aClass104_Sub18_Sub17_Sub3_520 = Class11.method48(var3, "logo", "");
 					Class66.aClass104_Sub18_Sub17_Sub3_523 = Class11.method48(var3, "titlebox", "");

@@ -519,7 +519,7 @@ public class Class46 {
 
 								if (var44 == 1202) {
 									var21.anInt1010 = 3;
-									var21.anInt1011 = Class81.pf.aClass85_1770
+									var21.anInt1011 = Class81.activePlayer.aClass85_1770
 											.method390();
 									continue;
 								}
@@ -913,13 +913,13 @@ public class Class46 {
 									if (var44 == 3100) {
 										--var5;
 										var80 = Class90.aStringArray712[var5];
-										Class15.method60(0, "", var80);
+										Class15.chat(0, "", var80);
 										continue;
 									}
 
 									if (var44 == 3101) {
 										var4 -= 2;
-										Class75.transform(Class81.pf,
+										Class75.transform(Class81.activePlayer,
 												Class90.anIntArray706[var4], Class90.anIntArray706[var4 + 1]);
 										continue;
 									}
@@ -959,7 +959,7 @@ public class Class46 {
 										var80 = Class90.aStringArray712[var5];
 										client.secureBuf.putOpcode(223);
 										client.secureBuf.writebyte(var80.length() + 1);
-										client.secureBuf.writeString(var80);
+										client.secureBuf.writeCompactedString(var80);
 										continue;
 									}
 
@@ -968,7 +968,7 @@ public class Class46 {
 										var80 = Class90.aStringArray712[var5];
 										client.secureBuf.putOpcode(127);
 										client.secureBuf.writebyte(var80.length() + 1);
-										client.secureBuf.writeString(var80);
+										client.secureBuf.writeCompactedString(var80);
 										continue;
 									}
 
@@ -1034,7 +1034,7 @@ public class Class46 {
 									}
 								} else if (var44 < 3400) {
 									if (var44 == 3300) {
-										Class90.anIntArray706[var4++] = client.anInt1799;
+										Class90.anIntArray706[var4++] = client.currentTime;
 										continue;
 									}
 
@@ -1121,8 +1121,8 @@ public class Class46 {
 									if (var44 == 3308) {
 										var15 = Class12.myplayerHeight;
 										var24 = Class53.anInt436
-												+ (Class81.pf.anInt1695 >> 7);
-										var17 = (Class81.pf.anInt1694 >> 7)
+												+ (Class81.activePlayer.anInt1695 >> 7);
+										var17 = (Class81.activePlayer.anInt1694 >> 7)
 												+ Class20.anInt206;
 										Class90.anIntArray706[var4++] = var17 + (var24 << 14) + (var15 << 28);
 										continue;
@@ -1336,7 +1336,7 @@ public class Class46 {
 											client.secureBuf.putOpcode(252);
 											client.secureBuf
 													.writebyte(GameBuf.lengthOf(var80) + 1);
-											client.secureBuf.writeString(var80);
+											client.secureBuf.writeCompactedString(var80);
 											client.secureBuf.writeByteA(var24);
 											continue;
 										}
@@ -1401,7 +1401,7 @@ public class Class46 {
 													client.secureBuf.putOpcode(248);
 													client.secureBuf
 															.writebyte(GameBuf.lengthOf(var80));
-													client.secureBuf.writeString(var80);
+													client.secureBuf.writeCompactedString(var80);
 													continue label2280;
 												}
 
@@ -1493,7 +1493,7 @@ public class Class46 {
 												client.secureBuf.putOpcode(245);
 												client.secureBuf
 														.writebyte(GameBuf.lengthOf(var80));
-												client.secureBuf.writeString(var80);
+												client.secureBuf.writeCompactedString(var80);
 											}
 											continue;
 										}
@@ -1553,7 +1553,7 @@ public class Class46 {
 													&& (var15 < Class89.anInt704)
 													&& Class104_Sub13.aClass104_Sub7Array1099[var15].aString947
 															.equalsIgnoreCase(
-																	Class81.pf.aString1780)) {
+																	Class81.activePlayer.myName)) {
 												Class90.anIntArray706[var4++] = 1;
 												continue;
 											}
@@ -1765,8 +1765,8 @@ public class Class46 {
 											var5 -= 2;
 											var80 = Class90.aStringArray712[var5];
 											var16 = Class90.aStringArray712[1 + var5];
-											if ((null != Class81.pf.aClass85_1770)
-													&& Class81.pf.aClass85_1770.aBool661) {
+											if ((null != Class81.activePlayer.aClass85_1770)
+													&& Class81.activePlayer.aClass85_1770.aBool661) {
 												Class90.aStringArray712[var5++] = var16;
 												continue;
 											}
@@ -2203,7 +2203,7 @@ public class Class46 {
 											client.secureBuf.putOpcode(96);
 											client.secureBuf
 													.writebyte(GameBuf.lengthOf(var80) + 2);
-											client.secureBuf.writeString(var80);
+											client.secureBuf.writeCompactedString(var80);
 											client.secureBuf.writebyte(var24 - 1);
 											client.secureBuf.writebyte(var17);
 											continue;
@@ -2379,7 +2379,7 @@ public class Class46 {
 											client.secureBuf.putOpcode(211);
 											client.secureBuf.writeShort(0);
 											var17 = client.secureBuf.pos;
-											client.secureBuf.writeString(var80);
+											client.secureBuf.writeCompactedString(var80);
 											Class41.method183(client.secureBuf, var16);
 											client.secureBuf
 													.writeShortLE(client.secureBuf.pos - var17);
@@ -2415,9 +2415,9 @@ public class Class46 {
 										}
 
 										if (var44 == 5015) {
-											if ((Class81.pf != null)
-													&& (null != Class81.pf.aString1780))
-												var80 = Class81.pf.aString1780;
+											if ((Class81.activePlayer != null)
+													&& (null != Class81.activePlayer.myName))
+												var80 = Class81.activePlayer.myName;
 											else
 												var80 = "";
 
@@ -2826,7 +2826,7 @@ public class Class46 {
 			for (var0 = 0; var0 < 4; ++var0)
 				client.aClass67Array1975[var0] = new Class67(104, 104);
 
-			Class104_Sub2.aClass104_Sub18_Sub17_Sub1_861 = new Class104_Sub18_Sub17_Sub1(512, 512);
+			Class104_Sub2.aClass104_Sub18_Sub17_Sub1_861 = new Sprite(512, 512);
 			Class66.aString540 = "Starting game engine...";
 			Class66.anInt534 = 5;
 			client.anInt1816 = 20;
@@ -3102,14 +3102,14 @@ public class Class46 {
 					else
 						++var0;
 
-					if (client.aClass104_Sub18_Sub17_Sub1Array291 == null)
-						client.aClass104_Sub18_Sub17_Sub1Array291 = Class48.method215(client.aClass61_Sub1_1820,
+					if (client.skulls == null)
+						client.skulls = Class48.method215(client.aClass61_Sub1_1820,
 								"headicons_pk", "");
 					else
 						++var0;
 
-					if (null == Class70.aClass104_Sub18_Sub17_Sub1Array575)
-						Class70.aClass104_Sub18_Sub17_Sub1Array575 = Class48.method215(client.aClass61_Sub1_1820,
+					if (null == Class70.prayers)
+						Class70.prayers = Class48.method215(client.aClass61_Sub1_1820,
 								"headicons_prayer", "");
 					else
 						++var0;

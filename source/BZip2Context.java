@@ -166,14 +166,14 @@ public final class BZip2Context {
 						;
 
 					var0.drawstr(client.fixed(var4)
-							+ ((Class66.anInt535 == 0) & ((client.anInt1799 % 40) < 20)
+							+ ((Class66.anInt535 == 0) & ((client.currentTime % 40) < 20)
 									? Class70.method326(16776960) + "|" : ""),
 							312, var21, 16777215, 0);
 					var21 += 15;
 					var6 = "Password: ";
 					var7 = Class66.aString522;
 					var8 = Class29.method140('\u002a', var7.length());
-					var0.drawstr(var6 + var8 + ((Class66.anInt535 == 1) & ((client.anInt1799 % 40) < 20)
+					var0.drawstr(var6 + var8 + ((Class66.anInt535 == 1) & ((client.currentTime % 40) < 20)
 							? Class70.method326(16776960) + "|" : ""), 274, var21, 16777215, 0);
 					var21 += 15;
 					short var10 = 302;
@@ -271,7 +271,7 @@ public final class BZip2Context {
 				}
 
 				Class66.anInt517 += var21;
-				var14 = ((client.anInt1799 & 1) + var21) / 2;
+				var14 = ((client.currentTime & 1) + var21) / 2;
 				if (var14 > 0) {
 					for (var15 = 0; var15 < (Class66.anInt517 * 100); ++var15) {
 						var24 = (int) (Math.random() * 124.0D) + 2;
@@ -451,7 +451,7 @@ public final class BZip2Context {
 				if (var0.equalsIgnoreCase(client.aClass86Array1972[var1].aString675))
 					return true;
 
-			if (var0.equalsIgnoreCase(Class81.pf.aString1780))
+			if (var0.equalsIgnoreCase(Class81.activePlayer.myName))
 				return true;
 			else
 				return false;

@@ -33,24 +33,24 @@ public final class Class9 {
 		if (client.pktOpc == 245) {
 			var0 = client.gamecon.readLEShort();
 			byte var1 = client.gamecon.readByteA();
-			var2 = client.gamecon.readByteN();
+			var2 = client.gamecon.readUByteN();
 			var3 = var2 >> 2;
 			var4 = var2 & 3;
 			var5 = client.anIntArray1849[var3];
-			var6 = client.gamecon.method594();
+			var6 = client.gamecon.readUShortA();
 			var7 = client.gamecon.readShort();
 			var8 = client.gamecon.readLEShort();
 			var9 = client.gamecon.readUByteS();
 			var10 = ((var9 >> 4) & 7) + Class19.anInt195;
 			var11 = Class93.anInt742 + (var9 & 7);
 			byte var12 = client.gamecon.readByteA();
-			byte var13 = client.gamecon.method565();
-			byte var14 = client.gamecon.method565();
+			byte var13 = client.gamecon.readByte();
+			byte var14 = client.gamecon.readByte();
 			Player var15;
 			if (var8 == client.anInt1874)
-				var15 = Class81.pf;
+				var15 = Class81.activePlayer;
 			else
-				var15 = client.localNpcs[var8];
+				var15 = client.localPlayers[var8];
 
 			if (null != var15) {
 				final ObjectDefinition var16 = ItemDef.forId(var6);
@@ -76,8 +76,8 @@ public final class Class9 {
 				final Class104_Sub18_Sub16_Sub4 var27 = var16.method750(var3, var4, var23, var25, var24, var26);
 				if (null != var27) {
 					JagFS2.method67(Class12.myplayerHeight, var10, var11, var5, -1, 0, 0, 1 + var7, var0 + 1);
-					var15.anInt1776 = var7 + client.anInt1799;
-					var15.anInt1777 = client.anInt1799 + var0;
+					var15.anInt1776 = var7 + client.currentTime;
+					var15.anInt1777 = client.currentTime + var0;
 					var15.aClass104_Sub18_Sub16_Sub4_1785 = var27;
 					var15.anInt1778 = (var17 * 64) + (var10 * 128);
 					var15.anInt1783 = (128 * var11) + (var18 * 64);
@@ -106,7 +106,7 @@ public final class Class9 {
 		Class104_Sub18_Sub16_Sub6 var30;
 		int var35;
 		if (client.pktOpc == 207) {
-			var0 = client.gamecon.readShortN();
+			var0 = client.gamecon.readLEShortA();
 			var35 = client.gamecon.readUByte();
 			var2 = Class19.anInt195 + ((var35 >> 4) & 7);
 			var3 = (var35 & 7) + Class93.anInt742;
@@ -139,10 +139,10 @@ public final class Class9 {
 				var7 = client.gamecon.readUByte();
 				if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104)) {
 					var8 = 1 + var5;
-					if ((Class81.pf.stepx[0] >= (var35 - var8))
-							&& (Class81.pf.stepx[0] <= (var8 + var35))
-							&& (Class81.pf.stepy[0] >= (var2 - var8))
-							&& (Class81.pf.stepy[0] <= (var2 + var8))
+					if ((Class81.activePlayer.stepx[0] >= (var35 - var8))
+							&& (Class81.activePlayer.stepx[0] <= (var8 + var35))
+							&& (Class81.activePlayer.stepy[0] >= (var2 - var8))
+							&& (Class81.activePlayer.stepy[0] <= (var2 + var8))
 							&& (client.anInt2026 != 0) && (var6 > 0) && (client.anInt2028 < 50)) {
 						client.anIntArray2029[client.anInt2028] = var3;
 						client.anIntArray1875[client.anInt2028] = var6;
@@ -155,8 +155,8 @@ public final class Class9 {
 			}
 
 			if (client.pktOpc == 6) {
-				var0 = client.gamecon.method594();
-				var35 = client.gamecon.readByteN();
+				var0 = client.gamecon.readUShortA();
+				var35 = client.gamecon.readUByteN();
 				var2 = ((var35 >> 4) & 7) + Class19.anInt195;
 				var3 = Class93.anInt742 + (var35 & 7);
 				var4 = client.gamecon.readUByteS();
@@ -225,11 +225,11 @@ public final class Class9 {
 				}
 
 			} else if (client.pktOpc == 173) {
-				var0 = client.gamecon.method576();
+				var0 = client.gamecon.readUByteA();
 				var35 = Class19.anInt195 + ((var0 >> 4) & 7);
 				var2 = (var0 & 7) + Class93.anInt742;
-				var3 = client.gamecon.method594();
-				var4 = client.gamecon.readShortN();
+				var3 = client.gamecon.readUShortA();
+				var4 = client.gamecon.readLEShortA();
 				if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104)) {
 					var30 = new Class104_Sub18_Sub16_Sub6();
 					var30.anInt1691 = var4;
@@ -243,12 +243,12 @@ public final class Class9 {
 
 			} else if (client.pktOpc != 106) {
 				if (client.pktOpc == 154) {
-					var0 = client.gamecon.readShortN();
-					var35 = client.gamecon.method576();
+					var0 = client.gamecon.readLEShortA();
+					var35 = client.gamecon.readUByteA();
 					var2 = var35 >> 2;
 					var3 = var35 & 3;
 					var4 = client.anIntArray1849[var2];
-					var5 = client.gamecon.readByteN();
+					var5 = client.gamecon.readUByteN();
 					var6 = ((var5 >> 4) & 7) + Class19.anInt195;
 					var7 = (var5 & 7) + Class93.anInt742;
 					if ((var6 >= 0) && (var7 >= 0) && (var6 < 104) && (var7 < 104))
@@ -266,7 +266,7 @@ public final class Class9 {
 						var2 = (128 * var2) + 64;
 						final Class104_Sub18_Sub16_Sub3 var41 = new Class104_Sub18_Sub16_Sub3(var3, Class12.myplayerHeight,
 								var35, var2, Class47.method211(var35, var2, Class12.myplayerHeight) - var4, var5,
-								client.anInt1799);
+								client.currentTime);
 						client.aClass59_1869.method248(var41);
 					}
 
@@ -274,9 +274,9 @@ public final class Class9 {
 					var0 = client.gamecon.readUByte();
 					var35 = ((var0 >> 4) & 7) + Class19.anInt195;
 					var2 = (var0 & 7) + Class93.anInt742;
-					var3 = var35 + client.gamecon.method565();
-					var4 = var2 + client.gamecon.method565();
-					var5 = client.gamecon.method572();
+					var3 = var35 + client.gamecon.readByte();
+					var4 = var2 + client.gamecon.readByte();
+					var5 = client.gamecon.readUShort();
 					var6 = client.gamecon.readLEShort();
 					var7 = client.gamecon.readUByte() * 4;
 					var8 = client.gamecon.readUByte() * 4;
@@ -292,18 +292,18 @@ public final class Class9 {
 						var4 = 64 + (var4 * 128);
 						final Class104_Sub18_Sub16_Sub2 var34 = new Class104_Sub18_Sub16_Sub2(var6, Class12.myplayerHeight,
 								var35, var2, Class47.method211(var35, var2, Class12.myplayerHeight) - var7,
-								client.anInt1799 + var9, var10 + client.anInt1799, var11, var36, var5, var8);
+								client.currentTime + var9, var10 + client.currentTime, var11, var36, var5, var8);
 						var34.method808(var3, var4, Class47.method211(var3, var4, Class12.myplayerHeight) - var8,
-								client.anInt1799 + var9);
+								client.currentTime + var9);
 						client.aClass59_1923.method248(var34);
 					}
 
 				} else if (client.pktOpc == 215) {
-					var0 = client.gamecon.readByteN();
+					var0 = client.gamecon.readUByteN();
 					var35 = ((var0 >> 4) & 7) + Class19.anInt195;
 					var2 = Class93.anInt742 + (var0 & 7);
 					var3 = client.gamecon.readLEShort();
-					var4 = client.gamecon.method594();
+					var4 = client.gamecon.readUShortA();
 					var5 = client.gamecon.readLEShort();
 					if ((var35 >= 0) && (var2 >= 0) && (var35 < 104) && (var2 < 104) && (var3 != client.anInt1874)) {
 						final Class104_Sub18_Sub16_Sub6 var40 = new Class104_Sub18_Sub16_Sub6();
@@ -321,7 +321,7 @@ public final class Class9 {
 					var35 = var0 >> 2;
 					var2 = var0 & 3;
 					var3 = client.anIntArray1849[var35];
-					var4 = client.gamecon.method576();
+					var4 = client.gamecon.readUByteA();
 					var5 = ((var4 >> 4) & 7) + Class19.anInt195;
 					var6 = Class93.anInt742 + (var4 & 7);
 					if ((var5 >= 0) && (var6 >= 0) && (var5 < 104) && (var6 < 104))
