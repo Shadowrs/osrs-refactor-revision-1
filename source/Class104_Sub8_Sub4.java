@@ -228,7 +228,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.secureBuf.writeInt(issackeys[3]);
 				client.secureBuf.writeLong(0L);
 				client.secureBuf.writeCompactedString(Class66.aString522);
-				client.secureBuf.doRSA(Class60.aBigInteger476, Class60.aBigInteger477);
+				client.secureBuf.doRSA(Class60.ex, Class60.mod);
 				client.loginbuf.pos = 0;
 				if (client.loadstage == 40)
 					client.loginbuf.writeByte(18); // reconnect
@@ -242,7 +242,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				final int var3 = client.loginbuf.pos;
 				client.loginbuf.writeCompactedString(Class66.aString543);
 				client.loginbuf.writeByte(client.lowmvm ? 1 : 0);
-				Class76.method343(client.loginbuf);
+				Class76.putmachine24(client.loginbuf);
 				client.loginbuf.writeInt(Class27.aClass61_Sub1_263.anInt489);
 				client.loginbuf.writeInt(Class104_Sub20.aClass61_Sub1_1171.anInt489);
 				client.loginbuf.writeInt(Class52.aClass61_Sub1_430.anInt489);
@@ -259,7 +259,7 @@ public class Class104_Sub8_Sub4 extends Class104_Sub8 {
 				client.loginbuf.writeInt(Class65.aClass61_Sub1_515.anInt489);
 				client.loginbuf.writeInt(ObjectDefinition.aClass61_Sub1_1374.anInt489);
 				client.loginbuf.writeInt(Class100.aClass61_Sub1_800.anInt489);
-				client.loginbuf.applyIsaac(issackeys, var3, client.loginbuf.pos);
+				//client.loginbuf.scramble(issackeys, var3, client.loginbuf.pos);
 				client.loginbuf.endVarShortPacket(client.loginbuf.pos - var2);
 				Class20.stream.flushbytes(client.loginbuf.backing, 0, client.loginbuf.pos);
 				client.secureBuf.setisaac(issackeys);

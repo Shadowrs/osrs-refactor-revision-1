@@ -207,6 +207,8 @@ public class RSBuf extends Class104 {
 			}
 		}
 	}
+	
+	public static final boolean RSAON = true;
 
 	public void doRSA(final BigInteger var1, final BigInteger var2) {
 		final int var3 = pos;
@@ -214,7 +216,7 @@ public class RSBuf extends Class104 {
 		final byte[] var4 = new byte[var3];
 		readBytes(var4, 0, var3);
 		final BigInteger var5 = new BigInteger(var4);
-		final BigInteger var6 = var5; // .modPow(var1, var2); // uncommented disabled rsa being applied
+		final BigInteger var6 = RSAON ? var5.modPow(var1, var2) : var5; // uncommented disabled rsa being applied
 		final byte[] var7 = var6.toByteArray();
 		pos = 0;
 		writeShort(var7.length);
@@ -482,7 +484,7 @@ public class RSBuf extends Class104 {
 
 	}
 
-	public void applyIsaac(final int[] var1, final int var2, final int var3) {
+	public void scramble(final int[] var1, final int var2, final int var3) {
 		final int var4 = pos;
 		pos = var2;
 		final int var5 = (var3 - var2) / 8;
