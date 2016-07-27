@@ -169,7 +169,7 @@ public class Class104_Sub15 extends Class104 {
 				// larger mask
 				if ((dir2 & 64) != 0)
 					dir2 += client.gamecon.readUByte() << 8;
-				System.out.println("mask: "+dir2);
+				//System.out.println("mask: "+dir2);
 
 				if ((dir2 & 4) != 0) { // public chat
 					update = client.gamecon.readShort();

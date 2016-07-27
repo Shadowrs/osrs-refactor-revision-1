@@ -3269,7 +3269,7 @@ final void method943(final byte var1) {
 
 													            try {
 													               if((null != Class20.stream) && (secureBuf.pos > 0)) {
-													            	   System.out.println("wrote up to "+secureBuf.pos);
+													            	  // System.out.println("wrote up to "+secureBuf.pos);
 													                  Class20.stream.flushbytes(secureBuf.backing, 0, secureBuf.pos);
 													                  secureBuf.pos = 0;
 													                  internalCycles = 0;

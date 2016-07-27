@@ -21,7 +21,7 @@ public final class Class20 {
 		if ((client.internalCycles >= 50) || var0) {
 			client.internalCycles = 0;
 			if (!client.aBool1840 && (stream != null)) {
-				client.secureBuf.putOpcode(228); // ping
+				//client.secureBuf.putOpcode(228); // ping
 				try {
 					stream.flushbytes(client.secureBuf.backing, 0, client.secureBuf.pos);
 					System.out.println("wrote 228 size="+client.secureBuf.pos);
